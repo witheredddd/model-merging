@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "full_gradient_norm": 6.755211353302002,
+  "stopped_relative_difference": 0.00024825811851769686,
+  "inner_ce": 0.05926871299743652,
+  "outer_ce": 0.1657557338476181,
+  "seconds": 2.6785223484039307,
+  "peak_gib": 27.45489263534546,
+  "batch": 2,
+  "test_used": false
+}

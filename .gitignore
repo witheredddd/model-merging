@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.pt
+*.pth
+*.safetensors
+*.tar.gz
+/datasets/
+/models/
+.venv/
+env/
+_support_extract/
+.env

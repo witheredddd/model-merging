@@ -1,0 +1,31 @@
+{
+  "release": "tfpml-0.2.0-audit.20261106",
+  "date_timezone": "Asia/Shanghai",
+  "repository_base_commit": "60da90bbaeb1e749a47727600bbef60c251846c6",
+  "v1": {
+    "version": "tfpml-0.1.0-dtd20",
+    "code": "tfpml/iterations/v1",
+    "evidence": "tfpml/results",
+    "train_sha256": "fd9389841c85b1fa63fc4c78c87aad69c3a0b065c085d47aa3f55682cb1681db",
+    "core_sha256": "97a040223eb33590347740f6e46249be5e99195b2b23e70493324351f84b0623",
+    "core_recovery": "Original function body restored and byte-for-byte matched to the previously recorded server SHA256",
+    "epochs": 20,
+    "frozen_validation_accuracy": 0.7313829787234043,
+    "test_accuracy": 0.7085106382978723
+  },
+  "v2": {
+    "version": "tfpml-0.2.0-audit.20261106",
+    "code": "tfpml",
+    "evidence": "tfpml/audit_results",
+    "full_meta_finite_difference_passed": true,
+    "real_clip_meta_backward_passed": true,
+    "new_20_epoch_performance_verified": false
+  },
+  "external_artifacts_not_uploaded": {
+    "v1_best_frozen_checkpoint_sha256": "df0a11f8bd178b8856c26a186e14486acfb2b24637b3be791d8a29b29f14ae65",
+    "migrated_pretrained_state_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+    "rebuilt_frozen_DTD_head_sha256": "55e21e76faf7f5e77e9f3d51a1e07f7429ebe1218ff412af3c4e7647fc1eb074",
+    "official_OpenAI_CLIP_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f"
+  },
+  "git_commit_identity": "Use git rev-parse HEAD; the enclosing commit hash is not embedded in a self-referential file"
+}

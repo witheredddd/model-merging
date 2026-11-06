@@ -1,0 +1,19 @@
+{
+  "selected_frozen_validation": {
+    "accuracy": 0.7313829787234043,
+    "ce": 0.9732183699912214,
+    "n": 376
+  },
+  "test": {
+    "accuracy": 0.7085106382978723,
+    "ce": 1.0085380320853374,
+    "n": 1880
+  },
+  "geometry_updates": 13,
+  "test_accuracy_gate_met": false,
+  "stage_B_gate_passed": true,
+  "test_accessed": true,
+  "seconds": 1018.4545879364014,
+  "peak_gib": 9.315666198730469,
+  "note": "No baselines scheduled per user instruction; nonlinear advantage is not established by this run"
+}
