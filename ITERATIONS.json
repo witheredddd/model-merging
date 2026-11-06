@@ -1,5 +1,5 @@
 {
-  "release": "tfpml-0.2.0-audit.20261106",
+  "release": "tfpml-0.3.0-expression",
   "date_timezone": "Asia/Shanghai",
   "repository_base_commit": "60da90bbaeb1e749a47727600bbef60c251846c6",
   "v1": {
@@ -25,7 +25,32 @@
     "v1_best_frozen_checkpoint_sha256": "df0a11f8bd178b8856c26a186e14486acfb2b24637b3be791d8a29b29f14ae65",
     "migrated_pretrained_state_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
     "rebuilt_frozen_DTD_head_sha256": "55e21e76faf7f5e77e9f3d51a1e07f7429ebe1218ff412af3c4e7647fc1eb074",
-    "official_OpenAI_CLIP_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f"
+    "official_OpenAI_CLIP_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+    "v3_selected_full_checkpoint_sha256": "dfccd589e9f317571cb04bf32f3c48653cc56ccb32dc21b066b41ae12c9be10c"
   },
-  "git_commit_identity": "Use git rev-parse HEAD; the enclosing commit hash is not embedded in a self-referential file"
+  "git_commit_identity": "Use git rev-parse HEAD; the enclosing commit hash is not embedded in a self-referential file",
+  "repository_previous_release_commit": "5c7f2301618c3b701e9d266061b19e852809b350",
+  "v3": {
+    "version": "tfpml-0.3.0-expression",
+    "code": [
+      "tfpml/dense_fourier.py",
+      "tfpml/train_expression.py"
+    ],
+    "evidence": "tfpml/results_v3",
+    "stage": "A_only",
+    "shared_output_dictionary": false,
+    "frequencies": 16,
+    "mapping_parameters": 2717909056,
+    "control_variables": 4,
+    "maximum_epoch_budget": 20,
+    "selected_epoch": 7,
+    "generator_updates": 371,
+    "validation_accuracy": 0.824468085106383,
+    "test_accuracy": 0.8191489361702128,
+    "test_ce": 0.7908344511021959,
+    "selection_policy": "validation performance gate; selected before any test access",
+    "geometry_learning_verified": false,
+    "control_dimension_verified": false,
+    "checkpoint_sha256": "dfccd589e9f317571cb04bf32f3c48653cc56ccb32dc21b066b41ae12c9be10c"
+  }
 }

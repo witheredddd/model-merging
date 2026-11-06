@@ -1,0 +1,52 @@
+{
+  "version": "tfpml-0.3.0-expression",
+  "stage": "A_only",
+  "status": "completed_validation_target",
+  "maximum_epoch_budget": 20,
+  "selected_epoch": 7,
+  "generator_updates": 371,
+  "selection": {
+    "policy": "validation performance gate; selected before any test access",
+    "checkpoint": "validation_target_candidate.pt",
+    "epoch": 7,
+    "generator_updates": 371,
+    "validation": {
+      "accuracy": 0.824468085106383,
+      "ce": 0.6861474919826427,
+      "n": 376
+    },
+    "target_val": 0.817,
+    "original_maximum_epoch_budget": 20,
+    "test_accessed": false,
+    "not_minimum_validation_CE_selection": true
+  },
+  "validation": {
+    "accuracy": 0.824468085106383,
+    "ce": 0.6861474919826427,
+    "n": 376
+  },
+  "test": {
+    "accuracy": 0.8191489361702128,
+    "ce": 0.7908344511021959,
+    "n": 1880
+  },
+  "q": [
+    2.4440176486968994,
+    -0.04248743876814842,
+    -0.08241624385118484,
+    0.012919262982904911
+  ],
+  "selected_checkpoint_sha256": "dfccd589e9f317571cb04bf32f3c48653cc56ccb32dc21b066b41ae12c9be10c",
+  "asset_hashes": {
+    "/home/shangxueyuan/merging/tsv/models/checkpoints/ViT-B-16/head_DTDVal.rebuilt.pt": "55e21e76faf7f5e77e9f3d51a1e07f7429ebe1218ff412af3c4e7647fc1eb074",
+    "/home/shangxueyuan/merging/tsv/models/checkpoints/ViT-B-16/pretrained.pt": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a"
+  },
+  "expression_validation_gate_met": true,
+  "test_80_percent_gate_met": true,
+  "mapping_parameters": 2717909056,
+  "control_variables": 4,
+  "shared_output_dictionary": false,
+  "geometry_learning_verified": false,
+  "control_dimension_verified": false,
+  "note": "Only task expression evaluated. No test-based selection or tuning. Early stop after validation gate; no claim of trained local geometry."
+}

@@ -1,0 +1,15 @@
+{
+  "policy": "validation performance gate; selected before any test access",
+  "checkpoint": "validation_target_candidate.pt",
+  "epoch": 7,
+  "generator_updates": 371,
+  "validation": {
+    "accuracy": 0.824468085106383,
+    "ce": 0.6861474919826427,
+    "n": 376
+  },
+  "target_val": 0.817,
+  "original_maximum_epoch_budget": 20,
+  "test_accessed": false,
+  "not_minimum_validation_CE_selection": true
+}

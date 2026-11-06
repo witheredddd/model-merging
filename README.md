@@ -1,16 +1,26 @@
 # model-merging — TFPML / DTD
 
-当前发布：**`tfpml-0.2.0-audit.20261106`**。文件校验：[SHA256SUMS](SHA256SUMS)。
+当前发布：**`tfpml-0.3.0-expression`**。文件校验：[SHA256SUMS](SHA256SUMS)。
 
 本仓库保存任务驱动傅里叶参数更新曲面的实现、DTD 原始实验结果与诊断证据。
-**v1 的最终测试准确率为70.85%，未达到80%目标；v2是通过实现检查的修正版，尚未完成新的20轮性能验证。**
+**v3任务表达阶段通过：锁定第7轮映射的Val为82.45%、Test为81.91%。这不证明局部几何或冻结后低维控制已经成立。**
 
 | 迭代 | 内容 | 验证状态 |
 |---|---|---|
 | `tfpml-0.1.0-dtd20` | [原始训练代码](tfpml/iterations/v1)、[原始结果](tfpml/results) | 20轮完成，冻结后Val 73.14%、Test 70.85% |
 | `tfpml-0.2.0-audit.20261106` | [当前代码](tfpml)、[诊断报告](tfpml/DIAGNOSIS.md)、[原始诊断](tfpml/audit_results) | 完整元梯度有限差分和真实CLIP更新通过；不能宣称已提升准确率 |
+| `tfpml-0.3.0-expression` | [逐权重傅里叶映射](tfpml/dense_fourier.py)、[任务训练入口](tfpml/train_expression.py)、[原始结果](tfpml/results_v3) | 持续更新完整映射；达到验证门槛后锁定第7轮模型，Test 81.91% |
 
 先阅读：[版本变更](CHANGELOG.md)、[迭代与哈希元数据](ITERATIONS.json)、[运行说明](RUNNING.md)。
+
+v3：[完整结果说明](tfpml/RESULT_V3.md)、[方法与资源配置](tfpml/V3_EXPRESSION.md)、
+[最终原始指标](tfpml/results_v3/expression_final_result.json)、
+[测试前选择依据](tfpml/results_v3/expression_selection_before_test.json)、
+[独立重建复核](tfpml/results_v3/reconstruction_verification.json)。
+训练映射约27.18亿参数、控制变量4个、峰值分配显存48.94GiB。
+移除跨4096输出块共享的129维输出字典；16组频率仍是明确的有限函数表示选择。
+上限20轮，达到验证性能要求后锁定7轮/371步的模型；并非跑完20轮。
+v3按验证性能门槛选定，v1按冻结阶段最小CE选定，不能隐去选择策略差异。
 
 ## 证据索引
 

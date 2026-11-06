@@ -1,0 +1,98 @@
+[
+  {
+    "epoch": 1,
+    "stage": "A_only",
+    "validation": {
+      "accuracy": 0.7313829787234043,
+      "ce": 1.009394087689988,
+      "n": 376
+    },
+    "train_ce": 1.594727436631002,
+    "generator_updates": 53,
+    "seconds": 47.060981035232544
+  },
+  {
+    "epoch": 2,
+    "stage": "A_only",
+    "validation": {
+      "accuracy": 0.7819148936170213,
+      "ce": 0.78081184752444,
+      "n": 376
+    },
+    "train_ce": 0.5971176478809217,
+    "generator_updates": 106,
+    "seconds": 161.2191722393036
+  },
+  {
+    "epoch": 3,
+    "stage": "A_only",
+    "validation": {
+      "accuracy": 0.8164893617021277,
+      "ce": 0.6637036952566593,
+      "n": 376
+    },
+    "train_ce": 0.20454440519530723,
+    "generator_updates": 159,
+    "seconds": 308.2658030986786
+  },
+  {
+    "epoch": 4,
+    "stage": "A_only",
+    "validation": {
+      "accuracy": 0.8058510638297872,
+      "ce": 0.7662096327923714,
+      "n": 376
+    },
+    "train_ce": 0.0697388026255665,
+    "generator_updates": 212,
+    "seconds": 447.81937289237976
+  },
+  {
+    "epoch": 5,
+    "stage": "A_only",
+    "validation": {
+      "accuracy": 0.800531914893617,
+      "ce": 0.8235353307521089,
+      "n": 376
+    },
+    "train_ce": 0.046068850392805984,
+    "generator_updates": 265,
+    "seconds": 552.537115573883
+  },
+  {
+    "epoch": 6,
+    "stage": "A_only",
+    "validation": {
+      "accuracy": 0.8297872340425532,
+      "ce": 0.6938216128247849,
+      "n": 376
+    },
+    "train_ce": 0.034761622900927075,
+    "generator_updates": 318,
+    "seconds": 686.7036507129669
+  },
+  {
+    "epoch": 7,
+    "stage": "A_only",
+    "validation": {
+      "accuracy": 0.824468085106383,
+      "ce": 0.6861474919826427,
+      "n": 376
+    },
+    "train_ce": 0.008776599366339496,
+    "generator_updates": 371,
+    "seconds": 792.6477530002594
+  },
+  {
+    "epoch": 8,
+    "stage": "A_only",
+    "validation": {
+      "accuracy": 0.8164893617021277,
+      "ce": 0.705024374292252,
+      "n": 376
+    },
+    "train_ce": 0.004901703727958904,
+    "generator_updates": 424,
+    "seconds": 899.5322911739349
+  }
+]

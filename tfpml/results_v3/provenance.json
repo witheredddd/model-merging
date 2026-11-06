@@ -1,0 +1,11 @@
+{
+  "assets": {
+    "/home/shangxueyuan/merging/tsv/models/checkpoints/ViT-B-16/head_DTDVal.rebuilt.pt": "55e21e76faf7f5e77e9f3d51a1e07f7429ebe1218ff412af3c4e7647fc1eb074",
+    "/home/shangxueyuan/merging/tsv/models/checkpoints/ViT-B-16/pretrained.pt": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a"
+  },
+  "source_sha256": {
+    "train_expression.py": "aa1228e8687f3fbf0f576dc6357994591686cd6ce206dd3289099b12de2b82d5",
+    "dense_fourier.py": "2cacccb13db5595c41c5c4207514f51b4a119fa46c262b18f47db5ea50d24346",
+    "runtime.py": "6243c7d08abff499034be66815d3382515a00c2a224caf0c17d4868830a3d9f5"
+  }
+}

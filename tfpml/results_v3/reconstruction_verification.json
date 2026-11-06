@@ -1,0 +1,14 @@
+{
+  "observed_validation": {
+    "accuracy": 0.824468085106383,
+    "ce": 0.6861474919826427,
+    "n": 376
+  },
+  "recorded_validation": {
+    "accuracy": 0.824468085106383,
+    "ce": 0.6861474919826427,
+    "n": 376
+  },
+  "tf32_matmul": false,
+  "tf32_cudnn": false
+}

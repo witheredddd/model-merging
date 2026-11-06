@@ -1,0 +1,19 @@
+{
+  "status": "smoke_complete",
+  "epoch": 1,
+  "step": 2,
+  "stage": "A_only",
+  "generator_updates": 2,
+  "ce": 2.160605788230896,
+  "rho": 0.9972361922264099,
+  "z": [
+    0.0446128286421299,
+    0.01244508195668459,
+    -0.0695750042796135
+  ],
+  "gradients": {},
+  "seconds": 4.314844846725464,
+  "step_seconds": 0.7956640720367432,
+  "peak_allocated_gib": 48.9373984336853,
+  "peak_reserved_gib": 52.98828125
+}

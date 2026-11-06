@@ -1,5 +1,26 @@
 # 运行与校验
 
+## v3任务表达阶段
+
+```bash
+python scripts/tfpml/test_dense_fourier.py
+bash scripts/tfpml/launch_expression.sh
+```
+
+v3默认16组频率，约27.18亿映射参数，FP32 Adam状态加参数梯度约40.5GiB，
+实测训练峰值48.94GiB。训练预检需要至少150GiB可用磁盘。
+所有被更新权重、数据与重建头沿用下述资产。
+
+实际发布结果采用验证性能门槛提前结束阶段A；不是把launch脚本完整20轮跑完。
+达到门槛后运行pin_expression.py锁定一个原子完成的resume状态，再停止训练进程，
+随后evaluate_expression.py复核验证并唯一测试。两个脚本的默认结果路径为k16、d3配置。
+结果锁定记录和变更说明见tfpml/RESULT_V3.md，不应在看过测试后换checkpoint。
+pin工具以不可变硬链接保留完整状态，不会移动或修改训练器正在保存的文件。
+
+完整映射/续训模型约31GiB，不随Git上传；模型哈希见ITERATIONS.json。
+
+## v1/v2环境与资产
+
 代码当前保留实际实验的服务器路径：`/home/shangxueyuan/merging/tsv`。
 在其他位置运行前，需要调整tfpml脚本的root以及scripts/dtd_grassmann4.py中的ROOT；
 并不是下载这个仓库后无需资产即可训练。
