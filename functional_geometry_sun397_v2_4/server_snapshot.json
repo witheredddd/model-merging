@@ -1,0 +1,546 @@
+{
+  "captured_at": 1794037560.692096,
+  "files": {
+    "status.json": {
+      "stage": "training",
+      "time": 1794037560.3780777,
+      "pid": 11171,
+      "epoch": 5,
+      "step": 1155,
+      "total_steps": 5600,
+      "basis_updates": 1153
+    },
+    "config.json": {
+      "identity": "4d382f47471b25ef4934e9f28bd65602b30f377480a488288ea06f63366ef4d3",
+      "protocol": {
+        "task": "SUN397",
+        "rank": 20,
+        "epochs": 20,
+        "seed": 42,
+        "effective_batch": 64,
+        "init_id": "c37c5bbe8e134d3605f2e999b5846336d06fbb2336f105c242b01f93b39cf9c9",
+        "reference_protocol": {
+          "task": "SUN397",
+          "rank": 20,
+          "D": 84934656,
+          "seed": 42,
+          "base_sha256": "fe4f550992d0b5de215d38a52a76b4b6e46cdedd4619e2f3dd93fc76ba524da1",
+          "head_sha256": "110d0f7d4a6be5270a176a2965741a16526a8694bf9dab022235977192b8488f",
+          "split_sha256": "fb58fbd54c037d7ff9da14bb7af393f009c8a720424ba5e567824d15b9a82048",
+          "parameter_layout": [
+            {
+              "name": "model.visual.transformer.resblocks.0.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.0.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.0.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.0.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.1.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.1.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.1.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.1.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.2.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.2.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.2.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.2.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.3.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.3.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.3.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.3.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.4.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.4.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.4.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.4.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.5.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.5.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.5.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.5.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.6.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.6.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.6.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.6.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.7.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.7.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.7.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.7.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.8.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.8.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.8.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.8.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.9.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.9.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.9.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.9.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.10.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.10.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.10.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.10.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.11.attn.in_proj_weight",
+              "shape": [
+                2304,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.11.attn.out_proj.weight",
+              "shape": [
+                768,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.11.mlp.c_fc.weight",
+              "shape": [
+                3072,
+                768
+              ]
+            },
+            {
+              "name": "model.visual.transformer.resblocks.11.mlp.c_proj.weight",
+              "shape": [
+                768,
+                3072
+              ]
+            }
+          ],
+          "initialization": "one warmup epoch SGD.001; first24 odd-step normalized gradients",
+          "geometry_sha256": "c163b6204587d91dfc0e0f76b1f6fe6e16c341fbfda9f91462ffcb28efeb8472",
+          "experiment_id": "rank20_angle002",
+          "angle_cap": 0.02,
+          "epochs": 20,
+          "batch": 64,
+          "lr_z": 0.01,
+          "lr_B": 0.1,
+          "selection": "minimum validation CE",
+          "test_policy": "deferred until both fixed experiments are locked",
+          "precision": "FP32; TF32 disabled",
+          "basis_updates": "every nonzero-z minibatch",
+          "rank_growth": false
+        },
+        "max_common_lr": 0.01,
+        "parameter_step_radius": 0.1,
+        "coordinate_damping": 0.05,
+        "selection": "minimum validation CE",
+        "test_policy": "one locked model",
+        "step_source_sha256": "c782913146986893a929cf17a9bac53755671ae44dba67349a2de20bde52b377"
+      },
+      "micro": 32,
+      "source_sha256": "12018be20a7ef48d9ce4fe0405481c5852499d1de1d7d9a4575776cd8a15b057"
+    },
+    "history.json": [
+      {
+        "epoch": 0,
+        "validation": {
+          "ce": 1.2262206687885207,
+          "accuracy": 0.652896725440806,
+          "n": 1985
+        }
+      },
+      {
+        "epoch": 1,
+        "step": 280,
+        "validation": {
+          "ce": 1.2571505554977531,
+          "accuracy": 0.6488664987405541,
+          "n": 1985
+        },
+        "train_ce": 1.1502495639103318,
+        "basis_updates": 279,
+        "max_parameter_step_norm": 0.08772834750514914,
+        "mean_angle": 0.9132720188935445,
+        "backtracked_fraction": 0.0035714285714285713,
+        "orthogonality_error": 2.886545210133509e-08,
+        "peak_gpu_bytes": 14281348608,
+        "seconds": 134.91307544708252
+      },
+      {
+        "epoch": 2,
+        "step": 560,
+        "validation": {
+          "ce": 1.2371261287546278,
+          "accuracy": 0.6493702770780856,
+          "n": 1985
+        },
+        "train_ce": 1.173821257627414,
+        "basis_updates": 559,
+        "max_parameter_step_norm": 0.0982293145640277,
+        "mean_angle": 1.2948112949768704,
+        "backtracked_fraction": 0.0035714285714285713,
+        "orthogonality_error": 3.621313293677986e-08,
+        "peak_gpu_bytes": 14281348608,
+        "seconds": 267.37524580955505
+      },
+      {
+        "epoch": 3,
+        "step": 840,
+        "validation": {
+          "ce": 1.195829815378117,
+          "accuracy": 0.6604534005037783,
+          "n": 1985
+        },
+        "train_ce": 1.173636928279961,
+        "basis_updates": 839,
+        "max_parameter_step_norm": 0.09867730593270899,
+        "mean_angle": 1.2931668889793924,
+        "backtracked_fraction": 0.0035714285714285713,
+        "orthogonality_error": 3.158220133728509e-08,
+        "peak_gpu_bytes": 14281348608,
+        "seconds": 404.83041548728943
+      },
+      {
+        "epoch": 4,
+        "step": 1120,
+        "validation": {
+          "ce": 1.2578520676351015,
+          "accuracy": 0.652896725440806,
+          "n": 1985
+        },
+        "train_ce": 1.174020389038543,
+        "basis_updates": 1119,
+        "max_parameter_step_norm": 0.09388885960343527,
+        "mean_angle": 1.2838720451111665,
+        "backtracked_fraction": 0.010714285714285714,
+        "orthogonality_error": 8.002000329021541e-08,
+        "peak_gpu_bytes": 14281348608,
+        "seconds": 544.9859290122986
+      }
+    ],
+    "validation_latest.json": {
+      "current": {
+        "ce": 1.2578520676351015,
+        "accuracy": 0.652896725440806,
+        "n": 1985
+      },
+      "best_epoch": 3,
+      "best_ce": 1.195829815378117,
+      "epoch": 4
+    }
+  },
+  "source_sha256": {
+    "functional_geometry_sun397_v2_3/evaluate_pair.py": "5ff4333a7627cfd280dd662996c262dea6d5cb8a49bbc2c152eb331fa426cbb3",
+    "functional_geometry_sun397_v2_3/supervise_pair.py": "0ff673ef2c97f657c506666288287ba15b75634b9f3abff412fecdfb78868681",
+    "functional_geometry_sun397_v2_3/train.py": "f6df85ac51a10dd8028247172682aca6e11433c08b8ce53854099f761e409011",
+    "functional_geometry_sun397_v2_4/metric_step.py": "c782913146986893a929cf17a9bac53755671ae44dba67349a2de20bde52b377",
+    "functional_geometry_sun397_v2_4/supervise_metric.py": "934466bf4ae783ee5b1781a248676a4745e0f690c814402b9f4d8e6aadf5d4f6",
+    "functional_geometry_sun397_v2_4/train_metric.py": "12018be20a7ef48d9ce4fe0405481c5852499d1de1d7d9a4575776cd8a15b057"
+  },
+  "previous_pair_result": {
+    "task": "SUN397",
+    "experiments": [
+      {
+        "experiment": "rank20_angle005",
+        "rank": 20,
+        "angle_cap": 0.05,
+        "selected_epoch": 3,
+        "validation": {
+          "ce": 0.8575643787155824,
+          "accuracy": 0.7481108312342569,
+          "n": 1985
+        },
+        "test": {
+          "ce": 0.9048674556290173,
+          "accuracy": 0.7420654911838791,
+          "n": 19850
+        },
+        "checkpoint_sha256": "e06f86c365f9b8ec8c6fdbc2f1bcd7a51a1ab9bad402539e308a06a820745023",
+        "last5_validation_ce_std": 0.045848050600379914,
+        "last5_validation_accuracy_std": 0.00911045203462552,
+        "mean_angle_cap_fraction": 0.9472907066052227,
+        "formal_steps": 5600,
+        "basis_updates": 5599,
+        "peak_gpu_bytes": 13946295808
+      },
+      {
+        "experiment": "rank20_angle002",
+        "rank": 20,
+        "angle_cap": 0.02,
+        "selected_epoch": 3,
+        "validation": {
+          "ce": 0.8258965827355758,
+          "accuracy": 0.7531486146095718,
+          "n": 1985
+        },
+        "test": {
+          "ce": 0.8592864539581222,
+          "accuracy": 0.7507304785894207,
+          "n": 19850
+        },
+        "checkpoint_sha256": "2f965a45d9ceaf34b5067c216fb442157c2e117f1ccb52cdc414480f40f3f13f",
+        "last5_validation_ce_std": 0.016809820149070762,
+        "last5_validation_accuracy_std": 0.004775010825621269,
+        "mean_angle_cap_fraction": 0.9267677931387608,
+        "formal_steps": 5600,
+        "basis_updates": 5599,
+        "peak_gpu_bytes": 13942494720
+      }
+    ],
+    "only_changed_learning_parameter": "maximum geodesic rotation angle",
+    "same_initialization": true,
+    "test_evaluated_only_after_both_selections_locked": true,
+    "selection": "minimum validation CE independently in each pre-registered arm",
+    "functional_control_or_EC_verified": false,
+    "time": 1794031579.696021
+  }
+}

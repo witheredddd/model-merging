@@ -1,5 +1,10 @@
 # 迭代记录
 
+## functional-geometry-v2.4.0-sun397-metric
+
+- SUN397 20 维参数度量训练，记录实际位移和同批 CE 抽查。
+- 发布两组旧角度实验结果，以及新实验的运行快照和源码校验。
+
 ## functional-geometry-ec-v2.2.0-dtd-first
 
 - 按源码核验意见纠正“追加字典即持续几何学习”的解释；保存旧版证据。

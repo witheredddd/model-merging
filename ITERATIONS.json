@@ -1,5 +1,5 @@
 {
-  "release": "functional-geometry-ec-v2.2.0-dtd-first",
+  "release": "functional-geometry-v2.4.0-sun397-metric",
   "date_timezone": "Asia/Shanghai",
   "repository_base_commit": "60da90bbaeb1e749a47727600bbef60c251846c6",
   "v1": {
@@ -29,7 +29,7 @@
     "v3_selected_full_checkpoint_sha256": "dfccd589e9f317571cb04bf32f3c48653cc56ccb32dc21b066b41ae12c9be10c"
   },
   "git_commit_identity": "Use git rev-parse HEAD; the enclosing commit hash is not embedded in a self-referential file",
-  "repository_previous_release_commit": "3e4b97638321e560b981a731571f33e9ca44effa",
+  "repository_previous_release_commit": "037b9bbcffb31fbcbf9816be4a0a58f15fea9275",
   "v3": {
     "version": "tfpml-0.3.0-expression",
     "code": [
@@ -101,5 +101,18 @@
     "geometry_sha256": "c163b6204587d91dfc0e0f76b1f6fe6e16c341fbfda9f91462ffcb28efeb8472",
     "date": "2026-11-07",
     "timezone": "Asia/Shanghai"
+  },
+  "sun397_parameter_metric_v2_4": {
+    "code": "functional_geometry_sun397_v2_4",
+    "evidence": "functional_geometry_sun397_v2_4/server_snapshot.json",
+    "rank": 20,
+    "epochs_budget": 20,
+    "completed_epochs_at_publication": 4,
+    "best_validation_at_publication": {
+      "ce": 1.195829815378117,
+      "accuracy": 0.6604534005037783,
+      "n": 1985
+    },
+    "completed": false
   }
 }

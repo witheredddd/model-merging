@@ -12,3 +12,5 @@ scripts/fetch_matched_eight.py -text
 
 functional_geometry_dtd_v2_2/** -text
 functional_geometry_dtd_v2_2/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+functional_geometry_sun397_v2_*/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

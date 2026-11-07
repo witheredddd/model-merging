@@ -1,6 +1,8 @@
 # model-merging — functional geometry / TFPML
 
-当前发布：**`functional-geometry-ec-v2.2.0-dtd-first`**。文件校验：[SHA256SUMS](SHA256SUMS)。
+当前发布 **`functional-geometry-v2.4.0-sun397-metric`**。文件校验见 [SHA256SUMS](SHA256SUMS)。
+
+[SUN397 参数度量改版](functional_geometry_sun397_v2_4)。归档时已完成 4/20 轮。最低验证 CE 对应第 3 轮，准确率 66.05%，CE 1.1958。本轮训练进行中，测试结果待完成后生成。
 
 DTD 连续几何修正版已完成：Val 82.45%、Test 78.78%；80% 最低门槛通过。本轮仅验证 DTD 任务学习，不验证多任务功能结构或 EC。
 
