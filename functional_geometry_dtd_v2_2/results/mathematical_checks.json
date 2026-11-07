@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "analytic_coordinate_gradient": true,
+  "analytic_horizontal_basis_gradient": true,
+  "joint_directional_derivative_relative_error": 5.755457611815006e-06,
+  "exact_geodesic_orthogonality": true,
+  "span_really_changes": true,
+  "zero_z_first_step_is_coordinate_only": true
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "signed_horizontal_CE_derivative": -7.79710247214291,
+  "finite_difference": -7.794380187988281,
+  "relative_error": 0.0003491404870405499,
+  "model": "actual CLIP ViT-B/16",
+  "data": "four training images; validation and test unused"
+}

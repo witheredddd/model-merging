@@ -1,0 +1,11 @@
+{
+  "epoch": 7,
+  "validation": {
+    "ce": 0.7081435081806589,
+    "accuracy": 0.824468085106383,
+    "n": 376
+  },
+  "minimum_gate_passed": true,
+  "selection": "validation CE only",
+  "time": 1794023460.8525186
+}

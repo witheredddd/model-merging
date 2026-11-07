@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "epoch": 7,
+  "validation": {
+    "ce": 0.7081435081806589,
+    "accuracy": 0.824468085106383,
+    "n": 376
+  },
+  "training_and_inference_precision_matched": true,
+  "test_not_accessed": true
+}

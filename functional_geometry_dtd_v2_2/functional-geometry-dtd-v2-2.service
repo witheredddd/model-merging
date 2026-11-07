@@ -1,0 +1,19 @@
+[Unit]
+Description=Corrected DTD continuous Grassmann task learning
+
+[Service]
+Type=simple
+WorkingDirectory=/home/shangxueyuan/merging/tsv/scripts/functional_geometry_dtd_v2_2
+ExecStart=/home/shangxueyuan/merging/afg_env/bin/python -u supervise.py
+Restart=on-failure
+RestartSec=20
+KillMode=control-group
+TimeoutStopSec=45
+Environment=PYTHONUNBUFFERED=1
+Environment=OPENBLAS_NUM_THREADS=8
+Environment=OMP_NUM_THREADS=8
+StandardOutput=append:/home/shangxueyuan/merging/functional_geometry_dtd_v2_2_service.log
+StandardError=inherit
+
+[Install]
+WantedBy=default.target

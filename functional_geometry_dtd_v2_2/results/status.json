@@ -1,0 +1,27 @@
+{
+  "stage": "completed",
+  "time": 1794023471.7091863,
+  "pid": 367485,
+  "version": "functional-geometry-ec-v2.2.0-dtd-first",
+  "best_epoch": 7,
+  "validation": {
+    "ce": 0.7081435081806589,
+    "accuracy": 0.824468085106383,
+    "n": 376
+  },
+  "test": {
+    "ce": 0.8736026941461766,
+    "accuracy": 0.7877659574468086,
+    "n": 1880
+  },
+  "minimum_80_gate_passed": true,
+  "primary_81_7_gate_passed": true,
+  "formal_steps": 1060,
+  "basis_updates": 1059,
+  "rank": 12,
+  "frozen_parameters_unchanged": true,
+  "base_unchanged": true,
+  "peak_gpu_bytes": 11217902592,
+  "seconds": 1507.09432721138,
+  "scope": "DTD task learning with continuous Grassmann updates; NOT multi-task functional structure or EC validation"
+}

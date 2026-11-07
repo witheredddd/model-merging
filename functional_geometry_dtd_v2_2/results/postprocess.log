@@ -1,0 +1,49 @@
+{
+  "source_matches": true,
+  "head_comparison": {
+    "weight_equal": true,
+    "bias_equal": true,
+    "normalization_equal": true,
+    "maximum_weight_difference": 0.0
+  },
+  "split_matches": true
+}
+{
+  "passed": true,
+  "epoch": 7,
+  "validation": {
+    "ce": 0.7081435081806589,
+    "accuracy": 0.824468085106383,
+    "n": 376
+  },
+  "training_and_inference_precision_matched": true,
+  "test_not_accessed": true
+}
+{
+  "time": 1794023511.37585,
+  "checkpoint_epoch": 7,
+  "checkpoint_validation": {
+    "ce": 0.7081435081806589,
+    "accuracy": 0.824468085106383,
+    "n": 376
+  },
+  "rank": 12,
+  "principal_angles_degrees": [
+    1.4458272134747945,
+    1.7380971991966556,
+    2.0108122940581246,
+    2.17092960965352,
+    2.533473938825132,
+    2.6414639709839984,
+    3.4713615979174617,
+    3.741212689309395,
+    4.912276092124429,
+    5.890841921735699,
+    10.786096278459286,
+    55.388664851065855
+  ],
+  "squared_projector_distance": 1.4929632027960267,
+  "initial_B_tensor_sha256": "0249b5dcd2b42cff51283bfd24f12dff702ec74414a911f56a0f289d9175e126",
+  "selected_B_tensor_sha256": "f6a038592d0c4ed0a5be4661c2f11dd82eaabc283c986ccd995ab265b655f111",
+  "interpretation": "Nonzero principal angles verify a genuinely changed parameter subspace; they do not establish functional task structure or frozen low-dimensional control."
+}

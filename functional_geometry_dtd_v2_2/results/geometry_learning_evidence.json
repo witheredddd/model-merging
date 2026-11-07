@@ -1,0 +1,32 @@
+{
+  "initial_B_sha256": "1614fe0a9dbf04c07838f0619e7e1873e95f1374745598b8d02ec78df0f1e4ed",
+  "selected_checkpoint_sha256": "24adf238f0704981ca71619a72ec29e56823ad7b6aa8bf984822d6ea124d06f4",
+  "initial_to_selected_principal_angles_degrees": [
+    1.4458272134747945,
+    1.7380971991966556,
+    2.0108122940581246,
+    2.17092960965352,
+    2.533473938825132,
+    2.6414639709839984,
+    3.4713615979174617,
+    3.741212689309395,
+    4.912276092124429,
+    5.890841921735699,
+    10.786096278459286,
+    55.388664851065855
+  ],
+  "selected_orthogonality_max_error": 3.5099921413817015e-08,
+  "basis_entry_max_change": 0.010481417179107666,
+  "nonzero_basis_updates_in_unique_step_log": 1059,
+  "formal_basis_updates": 1059,
+  "formal_steps": 1060,
+  "malformed_interrupted_log_lines": [],
+  "no_columns_appended": true,
+  "first_step_zero_z_behavior": true,
+  "training_B_elements": 1019215872,
+  "coordinate_variables": 12,
+  "basis_trainable_dimension": 1019215728,
+  "task_learning_only": true,
+  "frozen_coordinate_control_verified": false,
+  "multitask_functional_structure_verified": false
+}

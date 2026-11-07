@@ -1,8 +1,12 @@
 # model-merging — functional geometry / TFPML
 
-当前发布：**`functional-geometry-ec-v2.1.0`**。文件校验：[SHA256SUMS](SHA256SUMS)。
+当前发布：**`functional-geometry-ec-v2.2.0-dtd-first`**。文件校验：[SHA256SUMS](SHA256SUMS)。
 
-最新：[八任务在线功能几何代码](functional_geometry_v2)、[结果报告](functional_geometry_v2/evidence/run_report.md)、[完整原始证据](functional_geometry_v2/evidence/final_evidence.zip)。**八任务各 2,000 次更新已完成，但 DTD Val 59.31%、Test 57.82%，未达到 80% 验证底线；EC pilot 也未成功。** 旧 TFPML 迭代及其历史结果保持独立。
+DTD 连续几何修正版已完成：Val 82.45%、Test 78.78%；80% 最低门槛通过。本轮仅验证 DTD 任务学习，不验证多任务功能结构或 EC。
+
+[修正版代码](functional_geometry_dtd_v2_2)、[结果与曲线](functional_geometry_dtd_v2_2/results/REPORT.md)、[修正边界](functional_geometry_dtd_v2_2/CORRECTION_NOTE.md)。
+
+上一版（已失败归档）：[八任务在线功能几何代码](functional_geometry_v2)、[结果报告](functional_geometry_v2/evidence/run_report.md)、[完整原始证据](functional_geometry_v2/evidence/final_evidence.zip)。**八任务各 2,000 次更新已完成，但 DTD Val 59.31%、Test 57.82%，未达到 80% 验证底线；EC pilot 也未成功。** 旧 TFPML 迭代及其历史结果保持独立。
 
 本仓库保存任务驱动傅里叶参数更新曲面的实现、DTD 原始实验结果与诊断证据。
 **v3任务表达阶段通过：锁定第7轮映射的Val为82.45%、Test为81.91%。这不证明局部几何或冻结后低维控制已经成立。**
@@ -39,6 +43,8 @@ v3按验证性能门槛选定，v1按冻结阶段最小CE选定，不能隐去�
 Git提交哈希标识仓库快照；SHA256SUMS标识文件字节，两者用途不同。
 
 ## 已知限制
+
+以下保留旧 TFPML 迭代的历史限制；本轮 DTD 修正版的范围与限制见其独立报告。
 
 旧分类头缺失，目前使用按原函数和模板重建的冻结零样本头，尚未与旧头逐张量核对。
 本机缺少完整DTD专家权重，无法完成专家表示能力检查。
