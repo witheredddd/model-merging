@@ -1,0 +1,212 @@
+{
+  "version": "functional_geometry_ec_v2.1",
+  "rank": 48,
+  "D": 84934656,
+  "tasks": [
+    "Cars",
+    "DTD",
+    "EuroSAT",
+    "GTSRB",
+    "MNIST",
+    "RESISC45",
+    "SVHN",
+    "SUN397"
+  ],
+  "expert_validation": [
+    {
+      "ce": 0.9603996886082304,
+      "accuracy": 0.6646191646191646,
+      "n": 814
+    },
+    {
+      "ce": 1.4373373680926385,
+      "accuracy": 0.5930851063829787,
+      "n": 376
+    },
+    {
+      "ce": 0.3876574117607541,
+      "accuracy": 0.8937037037037037,
+      "n": 5400
+    },
+    {
+      "ce": 0.9312832190825775,
+      "accuracy": 0.7192192192192193,
+      "n": 2664
+    },
+    {
+      "ce": 0.44617535400390623,
+      "accuracy": 0.8658,
+      "n": 5000
+    },
+    {
+      "ce": 0.7392276370336139,
+      "accuracy": 0.7666666666666667,
+      "n": 1890
+    },
+    {
+      "ce": 0.9527440851211548,
+      "accuracy": 0.7202,
+      "n": 5000
+    },
+    {
+      "ce": 1.1011003713463656,
+      "accuracy": 0.6720403022670025,
+      "n": 1985
+    }
+  ],
+  "merge_validation": {
+    "Cars": {
+      "ce": 2.1637999888427135,
+      "accuracy": 0.3968058968058968,
+      "n": 814
+    },
+    "DTD": {
+      "ce": 2.0342013176451337,
+      "accuracy": 0.449468085106383,
+      "n": 376
+    },
+    "EuroSAT": {
+      "ce": 1.321018259436996,
+      "accuracy": 0.5320370370370371,
+      "n": 5400
+    },
+    "GTSRB": {
+      "ce": 1.856947182893037,
+      "accuracy": 0.4906156156156156,
+      "n": 2664
+    },
+    "MNIST": {
+      "ce": 1.3498772815704345,
+      "accuracy": 0.743,
+      "n": 5000
+    },
+    "RESISC45": {
+      "ce": 1.0213170702495271,
+      "accuracy": 0.6936507936507936,
+      "n": 1890
+    },
+    "SVHN": {
+      "ce": 1.6227434928894042,
+      "accuracy": 0.4828,
+      "n": 5000
+    },
+    "SUN397": {
+      "ce": 1.1219057650049629,
+      "accuracy": 0.6730478589420655,
+      "n": 1985
+    }
+  },
+  "tests": {
+    "Cars": {
+      "expert": {
+        "ce": 1.0312657457073446,
+        "accuracy": 0.6434523069269992,
+        "n": 8041
+      },
+      "merge": {
+        "ce": 2.1893568102985217,
+        "accuracy": 0.39609501305807737,
+        "n": 8041
+      }
+    },
+    "DTD": {
+      "expert": {
+        "ce": 1.4811815373441006,
+        "accuracy": 0.5781914893617022,
+        "n": 1880
+      },
+      "merge": {
+        "ce": 1.991389065600456,
+        "accuracy": 0.4654255319148936,
+        "n": 1880
+      }
+    },
+    "EuroSAT": {
+      "expert": {
+        "ce": 0.3804914066526625,
+        "accuracy": 0.8975925925925926,
+        "n": 5400
+      },
+      "merge": {
+        "ce": 1.306024059013084,
+        "accuracy": 0.527962962962963,
+        "n": 5400
+      }
+    },
+    "GTSRB": {
+      "expert": {
+        "ce": 0.9003450914686479,
+        "accuracy": 0.7377672209026128,
+        "n": 12630
+      },
+      "merge": {
+        "ce": 1.8338950265142904,
+        "accuracy": 0.4886777513855899,
+        "n": 12630
+      }
+    },
+    "MNIST": {
+      "expert": {
+        "ce": 0.42756014251708985,
+        "accuracy": 0.8752,
+        "n": 10000
+      },
+      "merge": {
+        "ce": 1.333472745513916,
+        "accuracy": 0.7391,
+        "n": 10000
+      }
+    },
+    "RESISC45": {
+      "expert": {
+        "ce": 0.7707339413960774,
+        "accuracy": 0.7544444444444445,
+        "n": 6300
+      },
+      "merge": {
+        "ce": 1.0770651116446843,
+        "accuracy": 0.6685714285714286,
+        "n": 6300
+      }
+    },
+    "SVHN": {
+      "expert": {
+        "ce": 0.7859828777670786,
+        "accuracy": 0.7870697602950215,
+        "n": 26032
+      },
+      "merge": {
+        "ce": 1.5045094179389076,
+        "accuracy": 0.5729486785494776,
+        "n": 26032
+      }
+    },
+    "SUN397": {
+      "expert": {
+        "ce": 1.1169243059230392,
+        "accuracy": 0.6737531486146096,
+        "n": 19850
+      },
+      "merge": {
+        "ce": 1.127048596831353,
+        "accuracy": 0.672544080604534,
+        "n": 19850
+      }
+    }
+  },
+  "DTD_validation_80_percent_gate_passed": false,
+  "common_structure_validated": true,
+  "geometry_conclusions": {
+    "final_pool_theta0": "stable approximate common blocks detected",
+    "common_intermediate": "no stable common block detected",
+    "baseline_mean_merge": "stable approximate common blocks detected"
+  },
+  "EC_is_exploratory_pilot": true,
+  "peak_gpu_bytes": 18621950464,
+  "time": 1794007568.0169516,
+  "limitations": [
+    "Functional matrices use 8 images/task/split; bootstrap/null cannot replace larger-sample replication.",
+    "No full-finetuning comparator was added; historical DTD comparison is not a new matched baseline.",
+    "Failure of the 80% DTD gate must be reported as failure, even if other tasks perform well."
+  ]
+}

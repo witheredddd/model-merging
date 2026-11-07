@@ -1,0 +1,77 @@
+{
+  "dataset": "EuroSAT",
+  "source": "blanchon/EuroSAT_RGB",
+  "splits": {
+    "train": {
+      "images": 16200,
+      "class_counts": {
+        "AnnualCrop": 1791,
+        "Forest": 1787,
+        "HerbaceousVegetation": 1799,
+        "Highway": 1505,
+        "Industrial": 1492,
+        "Pasture": 1195,
+        "PermanentCrop": 1481,
+        "Residential": 1863,
+        "River": 1460,
+        "SeaLake": 1827
+      },
+      "path_list_sha256": "d544ce77cd1cb15ab9f6a7dfdbe6d0f15b07ba8ac08b81c11aa3e51f1c0c0f90",
+      "content_list_sha256": "06f87300d68fc945b6f70ae35244baac444e88041ee24c9884811c353eb033af"
+    },
+    "val": {
+      "images": 5400,
+      "class_counts": {
+        "AnnualCrop": 613,
+        "Forest": 605,
+        "HerbaceousVegetation": 628,
+        "Highway": 499,
+        "Industrial": 507,
+        "Pasture": 409,
+        "PermanentCrop": 481,
+        "Residential": 583,
+        "River": 511,
+        "SeaLake": 564
+      },
+      "path_list_sha256": "e7344464f79b6b206f93a7e2f7bd5241b9487b320588bef53774e35d1709e217",
+      "content_list_sha256": "b3f09c2e620ce6cd2c159f9e4b2ebcd9abc9e760ddffe60d3c788693bdd8d0b7"
+    },
+    "test": {
+      "images": 5400,
+      "class_counts": {
+        "AnnualCrop": 596,
+        "Forest": 608,
+        "HerbaceousVegetation": 573,
+        "Highway": 496,
+        "Industrial": 501,
+        "Pasture": 396,
+        "PermanentCrop": 538,
+        "Residential": 554,
+        "River": 529,
+        "SeaLake": 609
+      },
+      "path_list_sha256": "152ff3bd107936d7dbeb555926601a434251523a704e86f316d5ecdb07ef1897",
+      "content_list_sha256": "e7b704883805acf10e82d7ca3f1d163066c81fa0b21e7e4e101d0f4713f31ac2"
+    }
+  },
+  "cross_split_identical_image_bytes": {
+    "train:val": 0,
+    "train:test": 0,
+    "val:test": 0
+  },
+  "source_parquet": {
+    "validation-00000-of-00001.parquet": {
+      "rows": 5400,
+      "sha256": "075bd0b1ee4f7cc5561c25b2864077287e5b30ae4b38e65491be5451c028a5b0"
+    },
+    "train-00000-of-00001.parquet": {
+      "rows": 16200,
+      "sha256": "e4ee70060419d04a605003d9dba17571f788d665a367bf822bbda70834f4da8b"
+    },
+    "test-00000-of-00001.parquet": {
+      "rows": 5400,
+      "sha256": "cbe940845d83b5dcade351576967ae21fcc9509ee64a5ebf003b5700c59e477a"
+    }
+  },
+  "correction": "Use explicit mirror train/validation/test splits. The legacy helper writes a generic seed-0 provenance sentence even when explicit validation already exists; that sentence does not describe this run."
+}

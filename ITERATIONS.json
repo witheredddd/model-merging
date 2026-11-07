@@ -1,5 +1,5 @@
 {
-  "release": "tfpml-0.3.0-expression",
+  "release": "functional-geometry-ec-v2.1.0",
   "date_timezone": "Asia/Shanghai",
   "repository_base_commit": "60da90bbaeb1e749a47727600bbef60c251846c6",
   "v1": {
@@ -29,7 +29,7 @@
     "v3_selected_full_checkpoint_sha256": "dfccd589e9f317571cb04bf32f3c48653cc56ccb32dc21b066b41ae12c9be10c"
   },
   "git_commit_identity": "Use git rev-parse HEAD; the enclosing commit hash is not embedded in a self-referential file",
-  "repository_previous_release_commit": "5c7f2301618c3b701e9d266061b19e852809b350",
+  "repository_previous_release_commit": "d6cedb7328bb5c9d4844a08c1e198951f4484412",
   "v3": {
     "version": "tfpml-0.3.0-expression",
     "code": [
@@ -52,5 +52,25 @@
     "geometry_learning_verified": false,
     "control_dimension_verified": false,
     "checkpoint_sha256": "dfccd589e9f317571cb04bf32f3c48653cc56ccb32dc21b066b41ae12c9be10c"
+  },
+  "functional_geometry_v2": {
+    "version": "functional-geometry-ec-v2.1.0",
+    "code": "functional_geometry_v2",
+    "evidence": "functional_geometry_v2/evidence",
+    "status": "completed; DTD validation performance gate FAILED",
+    "updates_per_task": 2000,
+    "tasks": 8,
+    "initial_rank": 12,
+    "final_rank": 48,
+    "DTD_validation_accuracy": 0.5930851063829787,
+    "DTD_test_accuracy": 0.5781914893617022,
+    "DTD_merge_test_accuracy": 0.4654255319148936,
+    "DTD_minimum_validation_accuracy": 0.8,
+    "expert_checkpoints_are_inputs": false,
+    "train_sha256": "e5cd64df4e8741fbe8a439d55cf7c138588dd23f0c09342525c15f528b663faf",
+    "evidence_zip_sha256": "a88f53ace8dfb7d0fbf90532dbf7b971bc42bef34ab4811c88b94cc6183dc07f",
+    "common_structure_scope": "small-sample local reference-specific tests; not global isolation",
+    "timezone": "Asia/Shanghai",
+    "date": "2026-11-07"
   }
 }

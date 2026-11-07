@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "test_kind": "synthetic small-tensor finalization integration test; NOT experiment results",
+  "fixture": "/tmp/functional_geometry_synthetic_test_svmb2jzb",
+  "verifies": [
+    "geometry gates",
+    "EC pilot execution",
+    "one-hot reconstruction",
+    "selection lock",
+    "cached-test resume",
+    "raw evidence archive",
+    "curves and report"
+  ]
+}

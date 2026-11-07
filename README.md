@@ -1,6 +1,8 @@
-# model-merging — TFPML / DTD
+# model-merging — functional geometry / TFPML
 
-当前发布：**`tfpml-0.3.0-expression`**。文件校验：[SHA256SUMS](SHA256SUMS)。
+当前发布：**`functional-geometry-ec-v2.1.0`**。文件校验：[SHA256SUMS](SHA256SUMS)。
+
+最新：[八任务在线功能几何代码](functional_geometry_v2)、[结果报告](functional_geometry_v2/evidence/run_report.md)、[完整原始证据](functional_geometry_v2/evidence/final_evidence.zip)。**八任务各 2,000 次更新已完成，但 DTD Val 59.31%、Test 57.82%，未达到 80% 验证底线；EC pilot 也未成功。** 旧 TFPML 迭代及其历史结果保持独立。
 
 本仓库保存任务驱动傅里叶参数更新曲面的实现、DTD 原始实验结果与诊断证据。
 **v3任务表达阶段通过：锁定第7轮映射的Val为82.45%、Test为81.91%。这不证明局部几何或冻结后低维控制已经成立。**

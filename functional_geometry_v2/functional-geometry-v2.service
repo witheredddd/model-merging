@@ -1,0 +1,19 @@
+[Unit]
+Description=Eight-task functional geometry training and hourly diagnosis
+
+[Service]
+Type=simple
+WorkingDirectory=/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2
+ExecStart=/home/shangxueyuan/merging/afg_env/bin/python -u supervise.py
+Restart=on-failure
+RestartSec=15
+KillMode=control-group
+TimeoutStopSec=45
+Environment=PYTHONUNBUFFERED=1
+Environment=OPENBLAS_NUM_THREADS=8
+Environment=OMP_NUM_THREADS=8
+StandardOutput=append:/home/shangxueyuan/merging/functional_geometry_v2_service.log
+StandardError=inherit
+
+[Install]
+WantedBy=default.target

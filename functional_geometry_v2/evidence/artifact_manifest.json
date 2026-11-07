@@ -1,0 +1,317 @@
+{
+  "time": 1793993296.1976056,
+  "files": {
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/test_pipeline.py": {
+      "bytes": 2878,
+      "sha256": "1d245abd7dea4e846be213d68dc36c9015c3da8ae250a79f29e55cd0234550d7"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/train.py": {
+      "bytes": 10631,
+      "sha256": "e5cd64df4e8741fbe8a439d55cf7c138588dd23f0c09342525c15f528b663faf"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/engine.py": {
+      "bytes": 10398,
+      "sha256": "324ccef082ac34b476efec5ee9e820e3616728db6214591946beb7cd7c28cc08"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/supervise.py": {
+      "bytes": 6294,
+      "sha256": "a46781f9809a323f91e33ac9b1b0c4c5fecc70c497a0d025049cac82dca537d8"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/report.py": {
+      "bytes": 3605,
+      "sha256": "250a9b4b8b4bd73032f84b1190022e8f4d6d4e45ca7a78cc8f4fd63e677c0319"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/finalize.py": {
+      "bytes": 7901,
+      "sha256": "944ca0383b9f60ef4131418d9238a6f68db1b3167dd6903bd587d2fd443f507e"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/verify_splits.py": {
+      "bytes": 1752,
+      "sha256": "65013a0a1603e658a3c209e3b8ad37991cce8b77d56c97286f51387c1e70f20d"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/initial_analysis.py": {
+      "bytes": 450,
+      "sha256": "f3ae60456e3f633cabb1c1d50e2033e7ec4fde258d42fc712cb44c45cee025d8"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/provenance.py": {
+      "bytes": 1780,
+      "sha256": "7c4cc071bde7d8923fe1686fc181e6d88c2d1197725e4cf909467f6768d290e1"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/prepare.py": {
+      "bytes": 4506,
+      "sha256": "bc83826f89d367a4fc34f08bc3811076e505240a9c56db4e07729a5538e17027"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/reconstruct.py": {
+      "bytes": 960,
+      "sha256": "1d9bf45ee98994540526d8a124479261239fbe41e51376dc174c7a488d8580eb"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/analyze.py": {
+      "bytes": 3170,
+      "sha256": "d2937d13fdfc9875391188b63c340ff1b3d8bf925566a39c304cc1d615b88940"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/verify.py": {
+      "bytes": 1792,
+      "sha256": "a57a3c9b5c37fed59e27e8545a035fb3560f316e9cd77261235a7be5bb39cc5c"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/functional_commutant_core.original.py": {
+      "bytes": 10826,
+      "sha256": "4b9052341230bbef8e8c4f4645dbf93c518b1300a61605bb07a54fcb77b04373"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/audit_images.py": {
+      "bytes": 1641,
+      "sha256": "2236fda216adbaff4e51d075b1acd439832dd5e9d250585361b65acd479f9af3"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/functional_commutant_core.py": {
+      "bytes": 10833,
+      "sha256": "f3161f2bc743416c2cf36ac13203bf42ccdebeb43b4b1a09fa0b5d3d3215e424"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/RUNNING.md": {
+      "bytes": 3143,
+      "sha256": "0c0d86bda0b5c5f8f9f66a6f8fd6329711f8584d6c993f7cf37cc751ce1ae90b"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/IMPLEMENTATION.md": {
+      "bytes": 6677,
+      "sha256": "569bf4716026ea171ff5930b6be8f52d44d77dd391b1ecfb6c0098d7f023f5e4"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/config.json": {
+      "bytes": 3288,
+      "sha256": "dbd78a102bdcaa02c2d6ba70e16a0b92197d6d8892805fa6ea5c437e7d7c12b2"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/source_handoff.zip": {
+      "bytes": 10545,
+      "sha256": "c90aadddf33800ed30cffdfa753d26f6e0a119cd60c1b3259eeb71b0559cbeec"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/functional_geometry_v2/functional-geometry-v2.service": {
+      "bytes": 565,
+      "sha256": "86c7ef308d8fa8ce0c071a9b3ab6f2b3164b364878d3a529b36553813eb3ac94"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/kmnist.py": {
+      "bytes": 998,
+      "sha256": "b2444919ba65c7900ae99b3b8d6d95db2dc7976c0cb74d003bef1b70bd4ce2f7"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/templates.py": {
+      "bytes": 9093,
+      "sha256": "48e6587ebfd3e69244bdc282791fe6fb57b7883466851087dac2e3a07bac8731"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/imagenet.py": {
+      "bytes": 21294,
+      "sha256": "36dcf1a759937b822ae140ce667877350b1ac44a5259a9ef9e210a6dedf4fab9"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/cars.py": {
+      "bytes": 6104,
+      "sha256": "2403250d487b429c094491badd243043a523012f67c78054f18706af8460e822"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/__init__.py": {
+      "bytes": 156,
+      "sha256": "169071c75de38376901f5aba33939fb31bc3fbb4731b10f2f3fcd3fcb6deb09f"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/oxfordpets.py": {
+      "bytes": 1032,
+      "sha256": "94d62392a589052266121197d11c64b93d2b85fb33b9aa9b55d0b26eaad5b6a5"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/registry.py": {
+      "bytes": 3826,
+      "sha256": "a0f4c053313c1fc4f8026314caa82f0e302b3b46be05f272d46cc00f994e6e12"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/sst2.py": {
+      "bytes": 1025,
+      "sha256": "5869f2494fc1da8fd7df6323e34f194aa5b0eb9b8db1f28b12b90295ae9b4cca"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/emnist.py": {
+      "bytes": 1600,
+      "sha256": "1f11eb6a2414cad8d4eb438e6a85b9e7f99b07144f0a4e53324c61782d3e35f5"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/food101.py": {
+      "bytes": 1005,
+      "sha256": "3d2e82a13d7edff3dbaa9968d4ecaee5cd2efc6b7b06b1cc5a82ba346663976f"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/country211.py": {
+      "bytes": 1018,
+      "sha256": "594be7636ef7d4da415210fe72278f33a3234de9053886ba81f3742c7b91b0fd"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/stl10.py": {
+      "bytes": 997,
+      "sha256": "95080c23894e4fb983a7b8ef6d18077e3e705fff89dab9b8e17ba55cdc43b904"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/pcam.py": {
+      "bytes": 1066,
+      "sha256": "a7705c2f831a2e52c15522feeaaa7c75c7aad9091f648bdc0f25013106b8649c"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/resisc45.py": {
+      "bytes": 9381,
+      "sha256": "ed3cda2c0ab95aa27d95ef1422daa3dfd0fd9e5d92e00784ca0c94c72301ec03"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/fashionmnist.py": {
+      "bytes": 1022,
+      "sha256": "eb4308d85f655aa834dabe71ac1de40e64d4c3fe469c4da084982d8097aef5e1"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/mnist.py": {
+      "bytes": 965,
+      "sha256": "831b4ec29ac2d23b0cd921da30ba3ea14b860b5f02400d9306690fb55e98329c"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/svhn.py": {
+      "bytes": 1800,
+      "sha256": "071cd2d14b5a3395a33f14beb1594c4dc60b311ed036b58fdb650ccbf9b22a81"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/common.py": {
+      "bytes": 4588,
+      "sha256": "e535efd497bb0d08f370b495556a7b3d8490689f553b266092b5f232303db25f"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/fer2013.py": {
+      "bytes": 2287,
+      "sha256": "aa6a41c75fabb7acde944218cb822d93c64083b6d93b8464ed9563c64de6bb9f"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/gtsrb.py": {
+      "bytes": 8538,
+      "sha256": "615caae5c436afec1e881676f18c01d6632a89601aac9825e025ffe01829d29f"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/cifar100.py": {
+      "bytes": 916,
+      "sha256": "b7b460f14827396e0250a9cd6547697fd1aee23589d5185365dfe67ce7dedaec"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/eurosat.py": {
+      "bytes": 2488,
+      "sha256": "0e454a021374b4e59a0cca6758c5d4699354b96024a8454ffb2b062ce9ea334c"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/flowers102.py": {
+      "bytes": 3836,
+      "sha256": "ba7b2ad1ead8d78273dfdc9abd5a94486321ddbf9859a11d26c5a0274421eb4c"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/sun397.py": {
+      "bytes": 1091,
+      "sha256": "df561c2b03f1a4b44dd8dfffacd06ae14104b917107659891b5b7e1697051bfa"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/cifar10.py": {
+      "bytes": 1991,
+      "sha256": "7c9fc6c2e9637ad584ebbd2ff11175c62411204e2de55e9ac26ba5b8040dbe03"
+    },
+    "/home/shangxueyuan/merging/tsv/src/datasets/dtd.py": {
+      "bytes": 2597,
+      "sha256": "48125a50acf5e1adbb600873827afad74990c3f80171702e7fd48be1266a652a"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/distributed.py": {
+      "bytes": 1534,
+      "sha256": "e17f6a7fa2cdc6fbea599b18c46fc64709d1f5dbc2e164ac357d6d2ade05cb18"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/TSVC_utils.py": {
+      "bytes": 2324,
+      "sha256": "61db0b76f3384f907626ace414d55fea144c4c41429b4b608844d612ed104e04"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/__init__.py": {
+      "bytes": 205,
+      "sha256": "5d37257045730fd967f78fda5d258b891b78820262886c11ac6a4599d39fdb0e"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/TSVM_utils.py": {
+      "bytes": 26759,
+      "sha256": "7fc885102af0801634599faed1a9acfcdc56b0afdcda77fc039deeeafd0eca7a"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/variables_and_paths.py": {
+      "bytes": 1201,
+      "sha256": "2d3fe02474aeb4e9d27f75713c425dd8fcfa71f1c0bf332ab1965086ede1db87"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/logging.py": {
+      "bytes": 2701,
+      "sha256": "a29a53ea0413b2a5c200a00cb69750bc3a4a3ee9793583affcb9db262e680723"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/args.py": {
+      "bytes": 3869,
+      "sha256": "ea9a4ca9484877cca711a29d169c4ab83106e8fe744832a5fa227d9b43663475"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/utils.py": {
+      "bytes": 10702,
+      "sha256": "72977903ed4445167ec437a90f2b99d17c03862fc23637a14883990a25a3c401"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/tallmask_utils.py": {
+      "bytes": 9003,
+      "sha256": "0503aae8964cca6bb8421be4f639e5e0feb7a7c650a456f58c6ee0415ae7e55b"
+    },
+    "/home/shangxueyuan/merging/tsv/src/utils/ties_utils.py": {
+      "bytes": 2051,
+      "sha256": "e8dc87a595fc402d606b03e7d289033d16cf1562b5c5b1d81e5851a4e26e2f39"
+    },
+    "/home/shangxueyuan/merging/tsv/src/eval/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/home/shangxueyuan/merging/tsv/src/eval/eval.py": {
+      "bytes": 9226,
+      "sha256": "41cd64a470b700b47cd01a0208f53e489df880f1fe4b7c27c89b9f64f251f813"
+    },
+    "/home/shangxueyuan/merging/tsv/src/eval/aggregation.py": {
+      "bytes": 12105,
+      "sha256": "0942bf59f6b4a7e0f4018198a10ebc035f79a5119077267cdf6eb00ef5d89638"
+    },
+    "/home/shangxueyuan/merging/tsv/src/eval/eval_my.py": {
+      "bytes": 9560,
+      "sha256": "72243f0956c435e36fa0a98b56d5825fd7678869adcbc3f511b3775bde032f36"
+    },
+    "/home/shangxueyuan/merging/tsv/src/eval/eval_utils.py": {
+      "bytes": 3752,
+      "sha256": "5b2839438cfd326e7089b551dec54927d80e7490a26674719b9accbcdc238e37"
+    },
+    "/home/shangxueyuan/merging/tsv/src/models/__init__.py": {
+      "bytes": 214,
+      "sha256": "6f2880c35ee233ee3ee473e7809d363e5e5bfa678e12ab9574977f3ceb00dea8"
+    },
+    "/home/shangxueyuan/merging/tsv/src/models/modeling.py": {
+      "bytes": 4964,
+      "sha256": "3ec0145b80f75aca5ae2e09f87719c5e4b82c3c5c349186af2fe5a762cfe5806"
+    },
+    "/home/shangxueyuan/merging/tsv/src/models/heads.py": {
+      "bytes": 3764,
+      "sha256": "aa30362419306bd7122e174a94d416f267d7c4e3d7f17a78b93a0f5b9b4e20c2"
+    },
+    "/home/shangxueyuan/merging/tsv/src/models/task_vectors_my.py": {
+      "bytes": 8166,
+      "sha256": "800cf89204672ab0e90148bafcea16b632171c577294984759640d79a402d279"
+    },
+    "/home/shangxueyuan/merging/tsv/src/models/task_vectors.py": {
+      "bytes": 6748,
+      "sha256": "411db4b6eeba3a1e5fc90bde33efa18938d4a8e3c2c4a9088081ef3597dc06dd"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/dtd_grassmann4.py": {
+      "bytes": 22678,
+      "sha256": "b356c25562d4218c6f7940cc188e5f9b3f35e0e112156f53b0b52a7f36b36bc2"
+    },
+    "/home/shangxueyuan/merging/tsv/scripts/tfpml/runtime.py": {
+      "bytes": 1572,
+      "sha256": "6243c7d08abff499034be66815d3382515a00c2a224caf0c17d4868830a3d9f5"
+    },
+    "/home/shangxueyuan/merging/tsv/results/functional_geometry_v2_no_expert/assets/heads/SUN397.pt": {
+      "bytes": 817117,
+      "sha256": "bf415f21964eca494ace178b6fff732e80692b92cdc3adecab3c425ea72911a0"
+    },
+    "/home/shangxueyuan/merging/tsv/results/functional_geometry_v2_no_expert/assets/heads/DTD.pt": {
+      "bytes": 98821,
+      "sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d"
+    },
+    "/home/shangxueyuan/merging/tsv/results/functional_geometry_v2_no_expert/assets/heads/RESISC45.pt": {
+      "bytes": 94893,
+      "sha256": "fedd6486f2dd655795374ea70be04aba61c463c3a6d0fe143a6e1c3fd70a6331"
+    },
+    "/home/shangxueyuan/merging/tsv/results/functional_geometry_v2_no_expert/assets/heads/SVHN.pt": {
+      "bytes": 22989,
+      "sha256": "90617d18e3ab39ebb00eed05f38aee2afd5281ace4e9f56d34a6fdb78a689a06"
+    },
+    "/home/shangxueyuan/merging/tsv/results/functional_geometry_v2_no_expert/assets/heads/EuroSAT.pt": {
+      "bytes": 23013,
+      "sha256": "0af49beadc08d0b5fc143b26ce0898e68927ec7ee9a091bfee34ca4554f109f8"
+    },
+    "/home/shangxueyuan/merging/tsv/results/functional_geometry_v2_no_expert/assets/heads/MNIST.pt": {
+      "bytes": 22997,
+      "sha256": "5a60eb3657c4350c1f37cedfccc60f33d5da9bb12302af1c8f06300a0d0ef6d2"
+    },
+    "/home/shangxueyuan/merging/tsv/results/functional_geometry_v2_no_expert/assets/heads/Cars.pt": {
+      "bytes": 404685,
+      "sha256": "2e516ac770aa7c415c7fc0e12cfe1d2ac6b64bdc3d4bd8bae7ce2da2153306c2"
+    },
+    "/home/shangxueyuan/merging/tsv/results/functional_geometry_v2_no_expert/assets/heads/GTSRB.pt": {
+      "bytes": 90709,
+      "sha256": "3edefcd56da050a971682c47f28b5a378359f506791744fee19516ebba6a0094"
+    },
+    "/home/shangxueyuan/merging/tsv/models/checkpoints/ViT-B-16/pretrained.pt": {
+      "bytes": 447228335,
+      "sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a"
+    }
+  }
+}

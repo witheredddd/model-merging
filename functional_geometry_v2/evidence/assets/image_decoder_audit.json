@@ -1,0 +1,21 @@
+{
+  "scanned": 159295,
+  "dataset": "all image datasets",
+  "decoder_failures": [
+    {
+      "path": "/home/shangxueyuan/merging/tsv/datasets/sun397/train/a_airport_terminal/005615.jpg",
+      "error": "image file is truncated (29 bytes not processed)",
+      "sha256": "493b338b69312e493531f22dd494c40460008afd727781f024cb1754b0f4411a",
+      "bytes": 360448,
+      "recoverable": true,
+      "size": [
+        1400,
+        1050
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "original_bytes_unchanged": true,
+  "policy": "Pillow truncated-JPEG decoding enabled per training process; no sample removed",
+  "time": 1793992179.043121
+}

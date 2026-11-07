@@ -1,0 +1,21 @@
+{"time": 1793991732.935571, "event": "launch", "stage": "training", "pid": 339986, "micro": 32, "lr": 0.02}
+{"time": 1793991732.9783905, "event": "diagnosis", "reason": "hourly", "stage": "training", "alerts": []}
+{"time": 1793991823.0348387, "event": "child_exit", "stage": "training", "code": 1}
+{"time": 1793991823.0797691, "event": "diagnosis", "reason": "failure_and_resume", "stage": "training", "alerts": ["DTD below required 80%; not a successful geometry result"]}
+{"time": 1793991838.0978, "event": "launch", "stage": "training", "pid": 340555, "micro": 32, "lr": 0.02}
+{"time": 1793991928.1778188, "event": "child_exit", "stage": "training", "code": 1}
+{"time": 1793991928.2220047, "event": "diagnosis", "reason": "failure_and_resume", "stage": "training", "alerts": ["DTD below required 80%; not a successful geometry result"]}
+{"time": 1793991948.2449496, "event": "launch", "stage": "training", "pid": 341385, "micro": 32, "lr": 0.02}
+{"time": 1793992401.854391, "event": "launch", "stage": "training", "pid": 343357, "micro": 32, "lr": 0.02}
+{"time": 1793992401.8902004, "event": "diagnosis", "reason": "hourly", "stage": "training", "alerts": ["DTD below required 80%; not a successful geometry result"]}
+{"time": 1793992957.2973878, "event": "child_exit", "stage": "training", "code": -15}
+{"time": 1793992957.346739, "event": "diagnosis", "reason": "failure_and_resume", "stage": "training", "alerts": ["DTD below required 80%; not a successful geometry result"]}
+{"time": 1793992972.364375, "event": "launch", "stage": "training", "pid": 345159, "micro": 32, "lr": 0.02}
+{"time": 1793993156.9810371, "event": "launch", "stage": "training", "pid": 346117, "micro": 32, "lr": 0.02}
+{"time": 1793993157.0269945, "event": "diagnosis", "reason": "hourly", "stage": "training", "alerts": ["DTD below required 80%; not a successful geometry result"]}
+{"time": 1793996760.5045767, "event": "diagnosis", "reason": "hourly", "stage": "training", "alerts": ["DTD below required 80%; not a successful geometry result"]}
+{"time": 1794000363.9682496, "event": "diagnosis", "reason": "hourly", "stage": "training", "alerts": ["DTD below required 80%; not a successful geometry result"]}
+{"time": 1794003967.2817607, "event": "diagnosis", "reason": "hourly", "stage": "training", "alerts": ["DTD below required 80%; not a successful geometry result"]}
+{"time": 1794005813.9757931, "event": "child_exit", "stage": "training", "code": 0}
+{"time": 1794005813.9785511, "event": "launch", "stage": "final_analysis", "pid": 363221, "micro": 32, "lr": 0.02}
+{"time": 1794007570.7516727, "event": "diagnosis", "reason": "hourly", "stage": "final_analysis", "alerts": ["DTD below required 80%; not a successful geometry result"]}

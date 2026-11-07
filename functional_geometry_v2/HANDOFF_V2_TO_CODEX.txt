@@ -1,0 +1,7 @@
+请忽略此前 Functional Geometry EC v1.0：它错误地把八个完整专家 ckpt / delta 作为必要输入。
+
+请读取 functional_geometry_ec_v2_no_expert.md 并按此实现新的独立入口。目标：从预训练 CLIP ViT-B/16 和八任务数据直接冷启动任务梯度子空间，再在线训练任务专家、学习功能小矩阵、检验共同块；训练完成后才生成 tau_k。仅复用旧 functional_commutant_core.py 的纯数学共同块分析函数，不复用旧 v1 的 checkpoint / expert delta 入口。
+
+优先跑通 8 个任务×4 批次的冷启动梯度，形成 B0 与第一批 G_k，然后继续在线任务训练。若缺少任何已完成微调专家，不算错误；只有缺少预训练模型、任务数据或必要的任务 head 才需要报告阻塞。
+
+严禁覆盖旧实验、混用 val/test 训练、虚构结果或在任务准确率不足时声称已发现有效几何。记录是否发生了真正的子空间增长、任务专用 val CE/Acc、块稳定性、显存与运行成本。

@@ -1,0 +1,26 @@
+{
+  "hourly_seconds": 3600,
+  "poll_seconds": 15,
+  "automatic_resume": true,
+  "effective_batch": 64,
+  "oom_microbatch_sequence": [
+    32,
+    16,
+    8,
+    4,
+    2,
+    1
+  ],
+  "nonfinite_response": "resume and halve coordinate learning rate; record change",
+  "trained_tasks": [
+    "Cars",
+    "DTD",
+    "EuroSAT",
+    "GTSRB",
+    "MNIST",
+    "RESISC45",
+    "SVHN",
+    "SUN397"
+  ],
+  "stop_at_hourly_diagnosis": false
+}
