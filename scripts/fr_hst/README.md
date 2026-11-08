@@ -1,5 +1,7 @@
 # DTD 局部功能更新图谱
 
+在线训练实验见 [DTD 动态概率统计流形与水平提升](STATISTICAL_BUNDLE.md)。
+
 后续实验见 [DTD 任务更新的 V/O 商空间](QUOTIENT.md)。
 
 [原在线 Fisher 投影基线](BASELINE.md)保留在 `train.py`。修订版入口为 `train_atlas.py`。它在冻结的 OpenAI CLIP ViT-B/16 和 DTD 零样本分类头上学习参数更新映射，最终把模型变化写成冻结图谱和一组可重用坐标。
