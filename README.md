@@ -1,5 +1,7 @@
 # model-merging — functional geometry / TFPML
 
+[DTD 在线 FR-HST](scripts/fr_hst/README.md)完成首轮复核，验证准确率为 75.27%，53 步中有 38 步发生更新截断。
+
 当前发布 **`functional-geometry-v2.4.0-sun397-metric`**。文件校验见 [SHA256SUMS](SHA256SUMS)。
 
 [SUN397 参数度量改版](functional_geometry_sun397_v2_4)。归档时已完成 4/20 轮。最低验证 CE 对应第 3 轮，准确率 66.05%，CE 1.1958。本轮训练进行中，测试结果待完成后生成。
