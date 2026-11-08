@@ -1,6 +1,6 @@
 # model-merging — functional geometry / TFPML
 
-[DTD 在线 FR-HST](scripts/fr_hst/README.md)完成首轮复核，验证准确率为 75.27%，53 步中有 38 步发生更新截断。
+[DTD 局部功能更新图谱](scripts/fr_hst/README.md)学习可冻结的非线性坐标映射，并保留[原在线 Fisher 投影基线](scripts/fr_hst/BASELINE.md)。
 
 当前发布 **`functional-geometry-v2.4.0-sun397-metric`**。文件校验见 [SHA256SUMS](SHA256SUMS)。
 
