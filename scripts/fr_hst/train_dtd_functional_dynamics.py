@@ -86,7 +86,7 @@ def birth_frame(first, second, axes):
     return orthonormal(torch.stack((first,second,third/third.norm())))
 
 
-def dynamics(op, x, y, raw, batch_gradient, state, step, adaptive, max_components):
+def dynamics(op, x, y, raw, batch_gradient, state, step, adaptive, max_components, birth_penalty):
     frames, z, q, scale = (state[k] for k in ('frames','z','q','scale'))
     with probe_mode(op.model):
         gradient = op.gradient(x, y)
@@ -133,9 +133,13 @@ def dynamics(op, x, y, raw, batch_gradient, state, step, adaptive, max_component
                 original_ce = ce(op,x,y,torch.zeros_like(raw))
                 current_ce = ce(op,x,y,structured)
                 alternative_ce = ce(op,x,y,alternative)
-                margin = max(1e-5,.02*abs(original_ce-current_ce))
+                base_margin = max(1e-5,.02*abs(original_ce-current_ce))
+                margin = base_margin + birth_penalty
                 passed = alternative_ce < min(original_ce,current_ce-margin)
-                birth = dict(marginal_ce_gain=current_ce-alternative_ce, margin=margin, passed=passed, added=False)
+                birth = dict(marginal_ce_gain=current_ce-alternative_ce,
+                             penalized_ce_gain=current_ce-alternative_ce-birth_penalty,
+                             base_margin=base_margin, birth_penalty=birth_penalty,
+                             margin=margin, passed=passed, added=False)
                 if passed and state['pending_step']==step-1:
                     new_axes = birth_frame(state['pending'],w,next_frames.flatten(0,1))
                     if new_axes is not None:
@@ -165,7 +169,7 @@ def to_disk(state):
     return dict(**{k:v for k,v in state.items() if k not in ('z','q')},z=state['z'].tolist(),q=state['q'].tolist())
 
 
-def train(arm, output, max_components):
+def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0.):
     output.mkdir(parents=True,exist_ok=True)
     done = output/'complete.json'
     final = output/'epoch08.pt'
@@ -187,6 +191,11 @@ def train(arm, output, max_components):
     assert len(full)==3760
     data = existing.EpochData(full,SEED)
     batches = (len(data)+BATCH_SIZE-1)//BATCH_SIZE
+    if warmup == WARMUP:
+        windows = {step for step in range(1,warmup+1) if step%INTERVAL==0 or step%batches==0}
+    else:
+        windows = {round(warmup*i/5) for i in range(1,6)}
+    assert len(windows)==5 and max(windows)==warmup
     schedule = cosine_lr(shadow.optimizer,LEARNING_RATE,500,TASKS['DTD'][0]*batches)
     history,records = [],[]
     window = torch.zeros(sum(op.sizes),device='cuda')
@@ -194,14 +203,18 @@ def train(arm, output, max_components):
     state = None
     resume = output/'resume.pt'
     provenance = dict(arm=arm,seed=SEED,steps=STEPS,train_n=len(full),batch_size=BATCH_SIZE,
-                      geometry_batch_prefix=32,warmup=WARMUP,max_components=max_components,
+                      geometry_batch_prefix=32,warmup=warmup,warmup_window_ends=sorted(windows),
+                      max_components=max_components,birth_penalty=birth_penalty,
                       base_sha256=existing.sha(BASE),head_sha256=existing.sha(HEADS/'DTD.pt'))
     if resume.exists():
         saved = torch.load(resume,weights_only=True,map_location='cpu',mmap=True)
-        assert saved['provenance']==provenance
+        saved_provenance = {'birth_penalty': 0., 'warmup_window_ends': sorted(windows), **saved['provenance']}
+        assert saved_provenance==provenance
         visual.load_state_dict(saved['visual'])
         shadow.optimizer.load_state_dict(saved['optimizer'])
         history = [a.cuda() for a in saved['history']]
+        if 'window' in saved:
+            window = saved['window'].cuda()
         backlog,records = saved['backlog'].cuda(),saved['records']
         state = saved['dynamics']
         if state is not None:
@@ -227,16 +240,16 @@ def train(arm, output, max_components):
             torch.nn.utils.clip_grad_norm_(op.params,1.,error_if_nonfinite=True)
             decay,raw=shadow.propose()
             info=dict(step=step,training_ce=float(loss.detach()))
-            if step<=WARMUP:
+            if step<=warmup:
                 shadow.apply(shadow.shadows,decay,window)
-                if boundary:
+                if step in windows:
                     history.append(window)
                     window=torch.zeros_like(window)
             else:
                 if state is None:
                     assert len(history)==5
                     state=dict(frames=initialize(history).unsqueeze(0),z=np.zeros((1,2)),q=np.array([[.08,0.,.08]]),
-                               scale=16*float(raw.norm()),pending=None,pending_step=-1,last_birth=WARMUP)
+                               scale=16*float(raw.norm()),pending=None,pending_step=-1,last_birth=warmup)
                     history.clear()
                 g=torch.cat([p.grad.detach().flatten() for p in op.params])
                 x,y=images[:32],labels[:32]
@@ -247,7 +260,8 @@ def train(arm, output, max_components):
                     info.update(old)
                     delay=old['delay']
                 else:
-                    structured,details=dynamics(op,x,y,raw,g,state,step,arm=='adaptive_dynamics',max_components)
+                    structured,details=dynamics(op,x,y,raw,g,state,step,arm=='adaptive_dynamics',
+                                                max_components,birth_penalty)
                     innovation=proposal-structured
                     c_gain=(-g@structured).clamp_min(0)
                     r_gain=(-g@innovation).clamp_min(0)
@@ -260,7 +274,8 @@ def train(arm, output, max_components):
             if step%10==0 or step==STEPS:
                 print(f'{arm} step {step}/{STEPS} CE={info["training_ce"]:.5f} M={0 if state is None else len(state["frames"])}',flush=True)
         save(resume,dict(provenance=provenance,visual=visual.state_dict(),optimizer=shadow.optimizer.state_dict(),
-                         history=history,backlog=backlog,records=records,dynamics=to_disk(state) if state is not None else None))
+                         history=history,window=window,backlog=backlog,records=records,
+                         dynamics=to_disk(state) if state is not None else None))
         existing.write(output/'progress.json',dict(step=len(records),last=records[-1]))
     assert len(records)==STEPS
     # Use a training minibatch to report final rank. No test-dependent fitting.
@@ -308,8 +323,12 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--max-components',type=int,default=3)
+    parser.add_argument('--warmup',type=int,default=WARMUP)
+    parser.add_argument('--birth-penalty',type=float,default=0.)
+    parser.add_argument('--arm',choices=ARMS,action='append',help='Limit training to selected arm(s)')
     args=parser.parse_args()
-    assert args.max_components>=2
+    assert args.max_components>=2 and 5<=args.warmup<STEPS and 0<=args.birth_penalty<.01
+    selected=tuple(dict.fromkeys(args.arm)) if args.arm else ARMS
     args.output.mkdir(parents=True,exist_ok=True)
     existing.ROOT=ROOT
     torch.set_num_threads(8)
@@ -318,15 +337,15 @@ def main():
     with (args.output/'queue.lock').open('a') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         arms,results=[],{}
-        for arm in ARMS:
+        for arm in selected:
             folder=args.output/arm
-            results[arm]=train(arm,folder,args.max_components)
+            results[arm]=train(arm,folder,args.max_components,args.warmup,args.birth_penalty)
             arms.append(folder)
             if arm!='previous_nonlinear':
                 arms.append(folder/'frozen_decoder')
             gc.collect()
             torch.cuda.empty_cache()
-        existing.write(args.output/'training_complete.json',dict(arms=list(ARMS)))
+        existing.write(args.output/'training_complete.json',dict(arms=list(selected)))
         expected=read(ROOT/'datasets/DTD_test_provenance.json')
         for row in expected['files']:
             assert existing.sha(ROOT/'datasets/_downloads/tanganke__dtd'/row['path'])==row['sha256']
