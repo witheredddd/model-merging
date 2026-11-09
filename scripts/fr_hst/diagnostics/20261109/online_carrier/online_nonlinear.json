@@ -1,0 +1,5334 @@
+{
+  "provenance": {
+    "seed": 42,
+    "arm": "online_nonlinear",
+    "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+    "head_sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d",
+    "probe_groups": [
+      [
+        2024,
+        1168,
+        2777,
+        3666,
+        2303,
+        1906,
+        3708,
+        2396,
+        1286,
+        1068,
+        2363,
+        1161,
+        1231,
+        1391,
+        2634,
+        814,
+        3010,
+        1922,
+        330,
+        3530,
+        2515,
+        2176,
+        2710,
+        155,
+        1266,
+        2383,
+        80,
+        3425,
+        2267,
+        984,
+        3376,
+        3484
+      ],
+      [
+        1053,
+        755,
+        3516,
+        1023,
+        3109,
+        2818,
+        3234,
+        482,
+        2785,
+        124,
+        3320,
+        550,
+        718,
+        965,
+        2709,
+        1657,
+        924,
+        2527,
+        2157,
+        3534,
+        3330,
+        3243,
+        575,
+        291,
+        2100,
+        160,
+        1183,
+        398,
+        2366,
+        43,
+        3107,
+        3726
+      ],
+      [
+        2457,
+        1643,
+        558,
+        2589,
+        496,
+        1898,
+        723,
+        406,
+        13,
+        2987,
+        3217,
+        1850,
+        1739,
+        3331,
+        953,
+        3053,
+        2180,
+        1346,
+        3315,
+        2869,
+        1567,
+        1258,
+        1330,
+        3199,
+        785,
+        3496,
+        773,
+        2050,
+        1659,
+        3253,
+        791,
+        1207
+      ]
+    ],
+    "trace_sha256": "c314d3c218ef427df2c6cbe583c3df785a2e0b40a78d0d334f572be17cce5a4b",
+    "epochs": 8,
+    "steps_per_epoch": 27,
+    "warmup_steps": 75,
+    "rank": 3,
+    "task_weight": 0.05,
+    "ridge": 0.01,
+    "frame_rate": 0.04,
+    "bend_rate": 0.035,
+    "delay_range": [
+      0.02,
+      0.125
+    ],
+    "scheduler_steps": 2052
+  },
+  "checkpoint_sha256": "4b8132db5192d47a22f329e3271590f01b003993fc9277a417d74806fa7f4684",
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 8.325198254082352,
+      "ce": 1.9230291082503947,
+      "accuracy": 0.48936170212765956,
+      "n": 376
+    },
+    {
+      "epoch": 2,
+      "seconds": 8.657762432005256,
+      "ce": 1.6268948494119848,
+      "accuracy": 0.5319148936170213,
+      "n": 376
+    },
+    {
+      "epoch": 3,
+      "seconds": 18.331101776100695,
+      "ce": 1.3220364996727476,
+      "accuracy": 0.625,
+      "n": 376
+    },
+    {
+      "epoch": 4,
+      "seconds": 50.538036574143916,
+      "ce": 1.0749842461119308,
+      "accuracy": 0.6835106382978723,
+      "n": 376
+    },
+    {
+      "epoch": 5,
+      "seconds": 52.64972786279395,
+      "ce": 0.913727029840997,
+      "accuracy": 0.726063829787234,
+      "n": 376
+    },
+    {
+      "epoch": 6,
+      "seconds": 52.48651278670877,
+      "ce": 0.8173590315149185,
+      "accuracy": 0.7898936170212766,
+      "n": 376
+    },
+    {
+      "epoch": 7,
+      "seconds": 52.68499707104638,
+      "ce": 0.8248943369439308,
+      "accuracy": 0.7925531914893617,
+      "n": 376
+    },
+    {
+      "epoch": 8,
+      "seconds": 52.84394852910191,
+      "ce": 0.7691420291332488,
+      "accuracy": 0.8085106382978723,
+      "n": 376
+    }
+  ],
+  "records": [
+    {
+      "step": 1,
+      "epoch": 1,
+      "training_ce": 2.110682964324951,
+      "boundary": false
+    },
+    {
+      "step": 2,
+      "epoch": 1,
+      "training_ce": 2.0124564170837402,
+      "boundary": false
+    },
+    {
+      "step": 3,
+      "epoch": 1,
+      "training_ce": 1.842260479927063,
+      "boundary": false
+    },
+    {
+      "step": 4,
+      "epoch": 1,
+      "training_ce": 1.9300999641418457,
+      "boundary": false
+    },
+    {
+      "step": 5,
+      "epoch": 1,
+      "training_ce": 2.1223578453063965,
+      "boundary": false
+    },
+    {
+      "step": 6,
+      "epoch": 1,
+      "training_ce": 1.807159185409546,
+      "boundary": false
+    },
+    {
+      "step": 7,
+      "epoch": 1,
+      "training_ce": 1.9292538166046143,
+      "boundary": false
+    },
+    {
+      "step": 8,
+      "epoch": 1,
+      "training_ce": 1.8405606746673584,
+      "boundary": false
+    },
+    {
+      "step": 9,
+      "epoch": 1,
+      "training_ce": 1.8983914852142334,
+      "boundary": false
+    },
+    {
+      "step": 10,
+      "epoch": 1,
+      "training_ce": 1.7776236534118652,
+      "boundary": false
+    },
+    {
+      "step": 11,
+      "epoch": 1,
+      "training_ce": 1.9453752040863037,
+      "boundary": false
+    },
+    {
+      "step": 12,
+      "epoch": 1,
+      "training_ce": 1.95021653175354,
+      "boundary": false
+    },
+    {
+      "step": 13,
+      "epoch": 1,
+      "training_ce": 2.128024101257324,
+      "boundary": false
+    },
+    {
+      "step": 14,
+      "epoch": 1,
+      "training_ce": 2.035787582397461,
+      "boundary": false
+    },
+    {
+      "step": 15,
+      "epoch": 1,
+      "training_ce": 1.8651220798492432,
+      "boundary": false
+    },
+    {
+      "step": 16,
+      "epoch": 1,
+      "training_ce": 2.078258752822876,
+      "boundary": false
+    },
+    {
+      "step": 17,
+      "epoch": 1,
+      "training_ce": 1.8311779499053955,
+      "boundary": false
+    },
+    {
+      "step": 18,
+      "epoch": 1,
+      "training_ce": 1.701737642288208,
+      "boundary": false
+    },
+    {
+      "step": 19,
+      "epoch": 1,
+      "training_ce": 2.0671486854553223,
+      "boundary": false
+    },
+    {
+      "step": 20,
+      "epoch": 1,
+      "training_ce": 1.8553472757339478,
+      "boundary": false
+    },
+    {
+      "step": 21,
+      "epoch": 1,
+      "training_ce": 1.99769127368927,
+      "boundary": false
+    },
+    {
+      "step": 22,
+      "epoch": 1,
+      "training_ce": 1.91836678981781,
+      "boundary": false
+    },
+    {
+      "step": 23,
+      "epoch": 1,
+      "training_ce": 1.6080734729766846,
+      "boundary": false
+    },
+    {
+      "step": 24,
+      "epoch": 1,
+      "training_ce": 1.9213470220565796,
+      "boundary": false
+    },
+    {
+      "step": 25,
+      "epoch": 1,
+      "training_ce": 1.8900783061981201,
+      "boundary": true
+    },
+    {
+      "step": 26,
+      "epoch": 1,
+      "training_ce": 1.894089698791504,
+      "boundary": false
+    },
+    {
+      "step": 27,
+      "epoch": 1,
+      "training_ce": 2.2813026905059814,
+      "boundary": true
+    },
+    {
+      "step": 28,
+      "epoch": 2,
+      "training_ce": 1.8163321018218994,
+      "boundary": false
+    },
+    {
+      "step": 29,
+      "epoch": 2,
+      "training_ce": 1.6545376777648926,
+      "boundary": false
+    },
+    {
+      "step": 30,
+      "epoch": 2,
+      "training_ce": 1.8720464706420898,
+      "boundary": false
+    },
+    {
+      "step": 31,
+      "epoch": 2,
+      "training_ce": 1.7959671020507812,
+      "boundary": false
+    },
+    {
+      "step": 32,
+      "epoch": 2,
+      "training_ce": 1.8692758083343506,
+      "boundary": false
+    },
+    {
+      "step": 33,
+      "epoch": 2,
+      "training_ce": 1.7620410919189453,
+      "boundary": false
+    },
+    {
+      "step": 34,
+      "epoch": 2,
+      "training_ce": 1.9848353862762451,
+      "boundary": false
+    },
+    {
+      "step": 35,
+      "epoch": 2,
+      "training_ce": 2.0121681690216064,
+      "boundary": false
+    },
+    {
+      "step": 36,
+      "epoch": 2,
+      "training_ce": 1.6777878999710083,
+      "boundary": false
+    },
+    {
+      "step": 37,
+      "epoch": 2,
+      "training_ce": 1.7511996030807495,
+      "boundary": false
+    },
+    {
+      "step": 38,
+      "epoch": 2,
+      "training_ce": 1.7759101390838623,
+      "boundary": false
+    },
+    {
+      "step": 39,
+      "epoch": 2,
+      "training_ce": 1.81929612159729,
+      "boundary": false
+    },
+    {
+      "step": 40,
+      "epoch": 2,
+      "training_ce": 1.780088186264038,
+      "boundary": false
+    },
+    {
+      "step": 41,
+      "epoch": 2,
+      "training_ce": 1.6457386016845703,
+      "boundary": false
+    },
+    {
+      "step": 42,
+      "epoch": 2,
+      "training_ce": 1.6447632312774658,
+      "boundary": false
+    },
+    {
+      "step": 43,
+      "epoch": 2,
+      "training_ce": 1.4550530910491943,
+      "boundary": false
+    },
+    {
+      "step": 44,
+      "epoch": 2,
+      "training_ce": 1.5929220914840698,
+      "boundary": false
+    },
+    {
+      "step": 45,
+      "epoch": 2,
+      "training_ce": 1.6706278324127197,
+      "boundary": false
+    },
+    {
+      "step": 46,
+      "epoch": 2,
+      "training_ce": 1.6459698677062988,
+      "boundary": false
+    },
+    {
+      "step": 47,
+      "epoch": 2,
+      "training_ce": 1.9926021099090576,
+      "boundary": false
+    },
+    {
+      "step": 48,
+      "epoch": 2,
+      "training_ce": 1.7856394052505493,
+      "boundary": false
+    },
+    {
+      "step": 49,
+      "epoch": 2,
+      "training_ce": 1.6864670515060425,
+      "boundary": false
+    },
+    {
+      "step": 50,
+      "epoch": 2,
+      "training_ce": 1.708267092704773,
+      "boundary": true
+    },
+    {
+      "step": 51,
+      "epoch": 2,
+      "training_ce": 1.7402803897857666,
+      "boundary": false
+    },
+    {
+      "step": 52,
+      "epoch": 2,
+      "training_ce": 1.4486643075942993,
+      "boundary": false
+    },
+    {
+      "step": 53,
+      "epoch": 2,
+      "training_ce": 1.4875617027282715,
+      "boundary": false
+    },
+    {
+      "step": 54,
+      "epoch": 2,
+      "training_ce": 1.4919999837875366,
+      "boundary": true
+    },
+    {
+      "step": 55,
+      "epoch": 3,
+      "training_ce": 1.378915786743164,
+      "boundary": false
+    },
+    {
+      "step": 56,
+      "epoch": 3,
+      "training_ce": 1.295302152633667,
+      "boundary": false
+    },
+    {
+      "step": 57,
+      "epoch": 3,
+      "training_ce": 1.697454810142517,
+      "boundary": false
+    },
+    {
+      "step": 58,
+      "epoch": 3,
+      "training_ce": 1.3205432891845703,
+      "boundary": false
+    },
+    {
+      "step": 59,
+      "epoch": 3,
+      "training_ce": 1.6541332006454468,
+      "boundary": false
+    },
+    {
+      "step": 60,
+      "epoch": 3,
+      "training_ce": 1.6439189910888672,
+      "boundary": false
+    },
+    {
+      "step": 61,
+      "epoch": 3,
+      "training_ce": 1.7179028987884521,
+      "boundary": false
+    },
+    {
+      "step": 62,
+      "epoch": 3,
+      "training_ce": 1.3777339458465576,
+      "boundary": false
+    },
+    {
+      "step": 63,
+      "epoch": 3,
+      "training_ce": 1.4997719526290894,
+      "boundary": false
+    },
+    {
+      "step": 64,
+      "epoch": 3,
+      "training_ce": 1.480339527130127,
+      "boundary": false
+    },
+    {
+      "step": 65,
+      "epoch": 3,
+      "training_ce": 1.1647329330444336,
+      "boundary": false
+    },
+    {
+      "step": 66,
+      "epoch": 3,
+      "training_ce": 1.2887279987335205,
+      "boundary": false
+    },
+    {
+      "step": 67,
+      "epoch": 3,
+      "training_ce": 1.570226788520813,
+      "boundary": false
+    },
+    {
+      "step": 68,
+      "epoch": 3,
+      "training_ce": 1.2759636640548706,
+      "boundary": false
+    },
+    {
+      "step": 69,
+      "epoch": 3,
+      "training_ce": 1.298058032989502,
+      "boundary": false
+    },
+    {
+      "step": 70,
+      "epoch": 3,
+      "training_ce": 1.2640653848648071,
+      "boundary": false
+    },
+    {
+      "step": 71,
+      "epoch": 3,
+      "training_ce": 1.4589648246765137,
+      "boundary": false
+    },
+    {
+      "step": 72,
+      "epoch": 3,
+      "training_ce": 1.492857575416565,
+      "boundary": false
+    },
+    {
+      "step": 73,
+      "epoch": 3,
+      "training_ce": 1.455775260925293,
+      "boundary": false
+    },
+    {
+      "step": 74,
+      "epoch": 3,
+      "training_ce": 1.4402519464492798,
+      "boundary": false
+    },
+    {
+      "step": 75,
+      "epoch": 3,
+      "training_ce": 1.3437191247940063,
+      "boundary": true
+    },
+    {
+      "step": 76,
+      "epoch": 3,
+      "training_ce": 1.0223033428192139,
+      "boundary": false,
+      "latent": [
+        0.6025667575423501,
+        -0.2263607541259141
+      ],
+      "decoder_coefficients": [
+        0.6025667575423501,
+        -0.2263607541259141,
+        0.03314607106428431
+      ],
+      "function_explained": 0.4474524037983273,
+      "nonlinear_relative_norm": 0.03314607106428431,
+      "bend_coefficients": [
+        0.08044123952220221,
+        -0.00016575642407360894,
+        0.08006226820295821
+      ],
+      "frame_overlap": 0.9994679689407349,
+      "frame_gradient_outside_fraction": 0.9999862909317017,
+      "carrier_reassessment_delta": null,
+      "delay": 0.04825872734189034,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.032837312668561935,
+      "reinjected_norm": 0.0,
+      "retained_norm": 0.00014355036546476185,
+      "raw_norm": 0.004371562507003546,
+      "terminal_drain": false,
+      "applied_delay": 0.04825872734189034
+    },
+    {
+      "step": 77,
+      "epoch": 3,
+      "training_ce": 1.1864391565322876,
+      "boundary": false,
+      "latent": [
+        0.6308099511382634,
+        -0.258401356575136
+      ],
+      "decoder_coefficients": [
+        0.6308099511382634,
+        -0.258401356575136,
+        0.037382151379968635
+      ],
+      "function_explained": 0.6200660303699694,
+      "nonlinear_relative_norm": 0.037382151379968635,
+      "bend_coefficients": [
+        0.08018838865723822,
+        -6.21800515068915e-05,
+        0.08001983977402795
+      ],
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9999929070472717,
+      "carrier_reassessment_delta": null,
+      "delay": 0.050731471478939055,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.016773777082562447,
+      "reinjected_norm": 0.00014355036546476185,
+      "retained_norm": 0.0001609848695807159,
+      "raw_norm": 0.004430394619703293,
+      "terminal_drain": false,
+      "applied_delay": 0.050731471478939055
+    },
+    {
+      "step": 78,
+      "epoch": 3,
+      "training_ce": 1.3121293783187866,
+      "boundary": false,
+      "latent": [
+        0.6654616462739891,
+        -0.2663496263859086
+      ],
+      "decoder_coefficients": [
+        0.6654616462739891,
+        -0.2663496263859086,
+        0.041198360581354364
+      ],
+      "function_explained": 0.7329070809801842,
+      "nonlinear_relative_norm": 0.041198360581354364,
+      "bend_coefficients": [
+        0.07857167487774691,
+        0.0005849062434757123,
+        0.07976084484340636
+      ],
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.99981290102005,
+      "carrier_reassessment_delta": null,
+      "delay": 0.05604675501585006,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.017040414735674858,
+      "reinjected_norm": 0.0001609848695807159,
+      "retained_norm": 0.00017692822439130396,
+      "raw_norm": 0.004357925616204739,
+      "terminal_drain": false,
+      "applied_delay": 0.05604675501585006
+    },
+    {
+      "step": 79,
+      "epoch": 3,
+      "training_ce": 1.1424931287765503,
+      "boundary": false,
+      "latent": [
+        0.6294867829257554,
+        -0.3011519332603037
+      ],
+      "decoder_coefficients": [
+        0.6294867829257554,
+        -0.3011519332603037,
+        0.03825713782506422
+      ],
+      "function_explained": 0.8059280587197576,
+      "nonlinear_relative_norm": 0.03825713782506422,
+      "bend_coefficients": [
+        0.07878069632536236,
+        0.0004849085711660712,
+        0.07980868459660595
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999945759773254,
+      "carrier_reassessment_delta": null,
+      "delay": 0.05150062397122383,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.016335468739271164,
+      "reinjected_norm": 0.00017692822439130396,
+      "retained_norm": 0.0001652601786190644,
+      "raw_norm": 0.004310606513172388,
+      "terminal_drain": false,
+      "applied_delay": 0.05150062397122383
+    },
+    {
+      "step": 80,
+      "epoch": 3,
+      "training_ce": 1.2106651067733765,
+      "boundary": false,
+      "latent": [
+        0.5624685370283502,
+        -0.11787308144945323
+      ],
+      "decoder_coefficients": [
+        0.5624685370283502,
+        -0.11787308144945323,
+        0.0260006337939953
+      ],
+      "function_explained": 0.7196568147775526,
+      "nonlinear_relative_norm": 0.0260006337939953,
+      "bend_coefficients": [
+        0.07815638995399182,
+        0.0006157406282812273,
+        0.07978126692484423
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999706149101257,
+      "carrier_reassessment_delta": null,
+      "delay": 0.042364856004714964,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.019701531156897545,
+      "reinjected_norm": 0.0001652601786190644,
+      "retained_norm": 0.00014003078103996813,
+      "raw_norm": 0.0043532089330255985,
+      "terminal_drain": false,
+      "applied_delay": 0.042364856004714964
+    },
+    {
+      "step": 81,
+      "epoch": 3,
+      "training_ce": 1.5033410787582397,
+      "boundary": true,
+      "latent": [
+        0.5189147368389582,
+        -0.053475258562147736
+      ],
+      "decoder_coefficients": [
+        0.5189147368389582,
+        -0.053475258562147736,
+        0.021256423359349044
+      ],
+      "function_explained": 0.5780263833204727,
+      "nonlinear_relative_norm": 0.021256423359349044,
+      "bend_coefficients": [
+        0.07716323455123772,
+        0.0007180873881327435,
+        0.07977071987528576
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9998772740364075,
+      "carrier_reassessment_delta": 0.005147176235040042,
+      "delay": 0.03756211757659912,
+      "probe_gain_vs_raw": [
+        4.892057687952719e-05,
+        -4.5780827790581374e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013019909150898457,
+      "reinjected_norm": 0.00014003078103996813,
+      "retained_norm": 0.0001245413877768442,
+      "raw_norm": 0.004250907339155674,
+      "terminal_drain": false,
+      "applied_delay": 0.03756211757659912
+    },
+    {
+      "step": 82,
+      "epoch": 4,
+      "training_ce": 1.0883402824401855,
+      "boundary": false,
+      "latent": [
+        0.5432705314815268,
+        -0.06530479594025151
+      ],
+      "decoder_coefficients": [
+        0.5432705314815268,
+        -0.06530479594025151,
+        0.02308890160079603
+      ],
+      "function_explained": 0.7266367062923744,
+      "nonlinear_relative_norm": 0.02308890160079603,
+      "bend_coefficients": [
+        0.07641782808487155,
+        0.000807690291949075,
+        0.07975994899961647
+      ],
+      "frame_overlap": 0.9994680881500244,
+      "frame_gradient_outside_fraction": 0.9999200701713562,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03975093446671962,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012814153917133808,
+      "reinjected_norm": 0.0001245413877768442,
+      "retained_norm": 0.00013588587171398103,
+      "raw_norm": 0.004349480848759413,
+      "terminal_drain": false,
+      "applied_delay": 0.03975093446671962
+    },
+    {
+      "step": 83,
+      "epoch": 4,
+      "training_ce": 1.1868966817855835,
+      "boundary": false,
+      "latent": [
+        0.4865990411814326,
+        -0.08430696708213226
+      ],
+      "decoder_coefficients": [
+        0.4865990411814326,
+        -0.08430696708213226,
+        0.018627880941227803
+      ],
+      "function_explained": 0.6717702177073568,
+      "nonlinear_relative_norm": 0.018627880941227803,
+      "bend_coefficients": [
+        0.07649612523506372,
+        0.0007941247180263461,
+        0.07976229933798001
+      ],
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999986886978149,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03869853846728802,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013038733042776585,
+      "reinjected_norm": 0.00013588587171398103,
+      "retained_norm": 0.00014353945152834058,
+      "raw_norm": 0.004580683074891567,
+      "terminal_drain": false,
+      "applied_delay": 0.03869853846728802
+    },
+    {
+      "step": 84,
+      "epoch": 4,
+      "training_ce": 1.218729019165039,
+      "boundary": false,
+      "latent": [
+        0.43398610113261005,
+        -0.08833052235665272
+      ],
+      "decoder_coefficients": [
+        0.43398610113261005,
+        -0.08833052235665272,
+        0.01499946704982793
+      ],
+      "function_explained": 0.7306951189075298,
+      "nonlinear_relative_norm": 0.01499946704982793,
+      "bend_coefficients": [
+        0.07597844855014817,
+        0.0008994890416097834,
+        0.07974085421401039
+      ],
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9998850226402283,
+      "carrier_reassessment_delta": null,
+      "delay": 0.035212164968252184,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01320620346814394,
+      "reinjected_norm": 0.00014353945152834058,
+      "retained_norm": 0.00013684517762158066,
+      "raw_norm": 0.004696407355368137,
+      "terminal_drain": false,
+      "applied_delay": 0.035212164968252184
+    },
+    {
+      "step": 85,
+      "epoch": 4,
+      "training_ce": 1.1696553230285645,
+      "boundary": false,
+      "latent": [
+        0.35988863589405906,
+        -0.15689861750729636
+      ],
+      "decoder_coefficients": [
+        0.35988863589405906,
+        -0.15689861750729636,
+        0.01175291984043897
+      ],
+      "function_explained": 0.5816140368165388,
+      "nonlinear_relative_norm": 0.01175291984043897,
+      "bend_coefficients": [
+        0.07534209833722223,
+        0.0011769150526048742,
+        0.07961990636169058
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9998534917831421,
+      "carrier_reassessment_delta": null,
+      "delay": 0.037170796245336535,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012379910796880722,
+      "reinjected_norm": 0.00013684517762158066,
+      "retained_norm": 0.0001491441944381222,
+      "raw_norm": 0.004778888542205095,
+      "terminal_drain": false,
+      "applied_delay": 0.037170796245336535
+    },
+    {
+      "step": 86,
+      "epoch": 4,
+      "training_ce": 1.2295457124710083,
+      "boundary": false,
+      "latent": [
+        0.43332293336809813,
+        -0.08191731860196105
+      ],
+      "decoder_coefficients": [
+        0.43332293336809813,
+        -0.08191731860196105,
+        0.01463940134957194
+      ],
+      "function_explained": 0.7086902935897774,
+      "nonlinear_relative_norm": 0.01463940134957194,
+      "bend_coefficients": [
+        0.07469323972815256,
+        0.001299578205910988,
+        0.07959671756683037
+      ],
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9998143315315247,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03925492584705353,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012123390100896358,
+      "reinjected_norm": 0.0001491441944381222,
+      "retained_norm": 0.00015486738993786275,
+      "raw_norm": 0.004740335047245026,
+      "terminal_drain": false,
+      "applied_delay": 0.03925492584705353
+    },
+    {
+      "step": 87,
+      "epoch": 4,
+      "training_ce": 1.0977632999420166,
+      "boundary": false,
+      "latent": [
+        0.46471053693151676,
+        -0.0861099961744529
+      ],
+      "decoder_coefficients": [
+        0.46471053693151676,
+        -0.0861099961744529,
+        0.016668644542702078
+      ],
+      "function_explained": 0.8397301995344296,
+      "nonlinear_relative_norm": 0.016668644542702078,
+      "bend_coefficients": [
+        0.07450822299740116,
+        0.0013338614612088146,
+        0.07959036494353494
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999701976776123,
+      "carrier_reassessment_delta": null,
+      "delay": 0.05012134402990341,
+      "conservation_error": 1.859424615148486e-13,
+      "relative_intervention": 0.0139128677546978,
+      "reinjected_norm": 0.00015486738993786275,
+      "retained_norm": 0.00019141097436659038,
+      "raw_norm": 0.0046439580619335175,
+      "terminal_drain": false,
+      "applied_delay": 0.05012134402990341
+    },
+    {
+      "step": 88,
+      "epoch": 4,
+      "training_ce": 1.200917363166809,
+      "boundary": false,
+      "latent": [
+        0.3130155401247851,
+        -0.07795529911115624
+      ],
+      "decoder_coefficients": [
+        0.3130155401247851,
+        -0.07795529911115624,
+        0.007751346023362064
+      ],
+      "function_explained": 0.5446143245031425,
+      "nonlinear_relative_norm": 0.007751346023362064,
+      "bend_coefficients": [
+        0.07432520072815708,
+        0.0013794424433454726,
+        0.07957901317775735
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999844431877136,
+      "carrier_reassessment_delta": null,
+      "delay": 0.028505175262689593,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.02176894061267376,
+      "reinjected_norm": 0.00019141097436659038,
+      "retained_norm": 0.00011606622865656391,
+      "raw_norm": 0.004671453032642603,
+      "terminal_drain": false,
+      "applied_delay": 0.028505175262689593
+    },
+    {
+      "step": 89,
+      "epoch": 4,
+      "training_ce": 1.1190534830093384,
+      "boundary": false,
+      "latent": [
+        0.36884729242421616,
+        -0.12252791315409
+      ],
+      "decoder_coefficients": [
+        0.36884729242421616,
+        -0.12252791315409,
+        0.011244203276655368
+      ],
+      "function_explained": 0.5775102147693655,
+      "nonlinear_relative_norm": 0.011244203276655368,
+      "bend_coefficients": [
+        0.07469517821162702,
+        0.0012565390904005996,
+        0.07961984061953414
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999362230300903,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03601274758577347,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013314609415829182,
+      "reinjected_norm": 0.00011606622865656391,
+      "retained_norm": 0.0001464769011363387,
+      "raw_norm": 0.004844577517360449,
+      "terminal_drain": false,
+      "applied_delay": 0.03601274758577347
+    },
+    {
+      "step": 90,
+      "epoch": 4,
+      "training_ce": 0.9899775385856628,
+      "boundary": false,
+      "latent": [
+        0.3597255697068527,
+        -0.1582792397851746
+      ],
+      "decoder_coefficients": [
+        0.3597255697068527,
+        -0.1582792397851746,
+        0.011588859582775246
+      ],
+      "function_explained": 0.5477270377737358,
+      "nonlinear_relative_norm": 0.011588859582775246,
+      "bend_coefficients": [
+        0.07497683184493416,
+        0.0011326115002687253,
+        0.07967436875544193
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999688267707825,
+      "carrier_reassessment_delta": null,
+      "delay": 0.035300117060542105,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011889374814927578,
+      "reinjected_norm": 0.0001464769011363387,
+      "retained_norm": 0.00014679261948913336,
+      "raw_norm": 0.004910749848932028,
+      "terminal_drain": false,
+      "applied_delay": 0.035300117060542105
+    },
+    {
+      "step": 91,
+      "epoch": 4,
+      "training_ce": 0.9452707767486572,
+      "boundary": false,
+      "latent": [
+        0.2949944975583509,
+        -0.22719988289875268
+      ],
+      "decoder_coefficients": [
+        0.2949944975583509,
+        -0.22719988289875268,
+        0.0105614786153379
+      ],
+      "function_explained": 0.3985294238525575,
+      "nonlinear_relative_norm": 0.0105614786153379,
+      "bend_coefficients": [
+        0.0754082916916615,
+        0.0008003082625360465,
+        0.07993030321294756
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9998405575752258,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0345128259062767,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012680791318416595,
+      "reinjected_norm": 0.00014679261948913336,
+      "retained_norm": 0.00015181164781097323,
+      "raw_norm": 0.005074222106486559,
+      "terminal_drain": false,
+      "applied_delay": 0.0345128259062767
+    },
+    {
+      "step": 92,
+      "epoch": 4,
+      "training_ce": 1.0879554748535156,
+      "boundary": false,
+      "latent": [
+        0.2872123514372745,
+        -0.32750125061945373
+      ],
+      "decoder_coefficients": [
+        0.2872123514372745,
+        -0.32750125061945373,
+        0.0147183116148123
+      ],
+      "function_explained": 0.5441119388007738,
+      "nonlinear_relative_norm": 0.0147183116148123,
+      "bend_coefficients": [
+        0.07555179644277961,
+        0.000636673289228569,
+        0.08011689218843938
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999744296073914,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03746129646897316,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013532973825931549,
+      "reinjected_norm": 0.00015181164781097323,
+      "retained_norm": 0.00016880067414604127,
+      "raw_norm": 0.005146961659193039,
+      "terminal_drain": false,
+      "applied_delay": 0.03746129646897316
+    },
+    {
+      "step": 93,
+      "epoch": 4,
+      "training_ce": 0.9753214120864868,
+      "boundary": false,
+      "latent": [
+        0.28667090878168366,
+        -0.3933528750796736
+      ],
+      "decoder_coefficients": [
+        0.28667090878168366,
+        -0.3933528750796736,
+        0.018533274477739357
+      ],
+      "function_explained": 0.5595692988616001,
+      "nonlinear_relative_norm": 0.018533274477739357,
+      "bend_coefficients": [
+        0.07517321221771658,
+        0.00115614418364626,
+        0.0794041049345537
+      ],
+      "frame_overlap": 0.9994679689407349,
+      "frame_gradient_outside_fraction": 0.9999094605445862,
+      "carrier_reassessment_delta": null,
+      "delay": 0.042675367742776874,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014148841612040997,
+      "reinjected_norm": 0.00016880067414604127,
+      "retained_norm": 0.0001910270075313747,
+      "raw_norm": 0.00508879404515028,
+      "terminal_drain": false,
+      "applied_delay": 0.042675367742776874
+    },
+    {
+      "step": 94,
+      "epoch": 4,
+      "training_ce": 0.9247008562088013,
+      "boundary": false,
+      "latent": [
+        0.32715334159569814,
+        -0.49220941868284673
+      ],
+      "decoder_coefficients": [
+        0.32715334159569814,
+        -0.49220941868284673,
+        0.02709680680097403
+      ],
+      "function_explained": 0.6950133022648204,
+      "nonlinear_relative_norm": 0.02709680680097403,
+      "bend_coefficients": [
+        0.0749272267494389,
+        0.0015262347465450914,
+        0.0788472955193237
+      ],
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999270439147949,
+      "carrier_reassessment_delta": null,
+      "delay": 0.04371506527066231,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.016278693452477455,
+      "reinjected_norm": 0.0001910270075313747,
+      "retained_norm": 0.00019891296688001603,
+      "raw_norm": 0.005100050941109657,
+      "terminal_drain": false,
+      "applied_delay": 0.04371506527066231
+    },
+    {
+      "step": 95,
+      "epoch": 4,
+      "training_ce": 0.8613145351409912,
+      "boundary": false,
+      "latent": [
+        0.34419595271153786,
+        -0.36800094811850764
+      ],
+      "decoder_coefficients": [
+        0.34419595271153786,
+        -0.36800094811850764,
+        0.019361244035111747
+      ],
+      "function_explained": 0.702675770783898,
+      "nonlinear_relative_norm": 0.019361244035111747,
+      "bend_coefficients": [
+        0.0744483008813347,
+        0.002038283688876887,
+        0.07829983267213822
+      ],
+      "frame_overlap": 0.9994692802429199,
+      "frame_gradient_outside_fraction": 0.999725878238678,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03636232636868954,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01620587520301342,
+      "reinjected_norm": 0.00019891296688001603,
+      "retained_norm": 0.00016106912516988814,
+      "raw_norm": 0.005096588749438524,
+      "terminal_drain": false,
+      "applied_delay": 0.03636232636868954
+    },
+    {
+      "step": 96,
+      "epoch": 4,
+      "training_ce": 0.8024423122406006,
+      "boundary": false,
+      "latent": [
+        0.3618607670876866,
+        -0.41403135821786435
+      ],
+      "decoder_coefficients": [
+        0.3618607670876866,
+        -0.41403135821786435,
+        0.02286543193516524
+      ],
+      "function_explained": 0.6980146200672916,
+      "nonlinear_relative_norm": 0.02286543193516524,
+      "bend_coefficients": [
+        0.074272462603475,
+        0.002239473117603487,
+        0.07806963713835556
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999586939811707,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03831770166754722,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01453577820211649,
+      "reinjected_norm": 0.00016106912516988814,
+      "retained_norm": 0.0001751306263031438,
+      "raw_norm": 0.005243913736194372,
+      "terminal_drain": false,
+      "applied_delay": 0.03831770166754722
+    },
+    {
+      "step": 97,
+      "epoch": 4,
+      "training_ce": 1.1101973056793213,
+      "boundary": false,
+      "latent": [
+        0.3196177858237362,
+        -0.29909306069556474
+      ],
+      "decoder_coefficients": [
+        0.3196177858237362,
+        -0.29909306069556474,
+        0.014357108145919261
+      ],
+      "function_explained": 0.7120873503781886,
+      "nonlinear_relative_norm": 0.014357108145919261,
+      "bend_coefficients": [
+        0.07398748222665003,
+        0.002506153061346561,
+        0.07782008243852974
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9997833371162415,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0387614331394434,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014650442637503147,
+      "reinjected_norm": 0.0001751306263031438,
+      "retained_norm": 0.00017623028543312103,
+      "raw_norm": 0.005242412909865379,
+      "terminal_drain": false,
+      "applied_delay": 0.0387614331394434
+    },
+    {
+      "step": 98,
+      "epoch": 4,
+      "training_ce": 0.9080462455749512,
+      "boundary": false,
+      "latent": [
+        0.3176397680090451,
+        -0.2050695002168469
+      ],
+      "decoder_coefficients": [
+        0.3176397680090451,
+        -0.2050695002168469,
+        0.010574329123159388
+      ],
+      "function_explained": 0.6019983462123546,
+      "nonlinear_relative_norm": 0.010574329123159388,
+      "bend_coefficients": [
+        0.07367833184872052,
+        0.0027057417774926013,
+        0.07769122716790183
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9998865127563477,
+      "carrier_reassessment_delta": null,
+      "delay": 0.034058117046952247,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012162000872194767,
+      "reinjected_norm": 0.00017623028543312103,
+      "retained_norm": 0.00015158111636992544,
+      "raw_norm": 0.005110756028443575,
+      "terminal_drain": false,
+      "applied_delay": 0.034058117046952247
+    },
+    {
+      "step": 99,
+      "epoch": 4,
+      "training_ce": 0.990917444229126,
+      "boundary": false,
+      "latent": [
+        0.24405677160989792,
+        -0.10041601940374797
+      ],
+      "decoder_coefficients": [
+        0.24405677160989792,
+        -0.10041601940374797,
+        0.005105634375954669
+      ],
+      "function_explained": 0.3264058662468553,
+      "nonlinear_relative_norm": 0.005105634375954669,
+      "bend_coefficients": [
+        0.07351058209491453,
+        0.002774761630627765,
+        0.07766282927151917
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999772906303406,
+      "carrier_reassessment_delta": null,
+      "delay": 0.027473523020744323,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013202868402004242,
+      "reinjected_norm": 0.00015158111636992544,
+      "retained_norm": 0.00012784433783963323,
+      "raw_norm": 0.005157759878784418,
+      "terminal_drain": false,
+      "applied_delay": 0.027473523020744323
+    },
+    {
+      "step": 100,
+      "epoch": 4,
+      "training_ce": 0.9931743144989014,
+      "boundary": true,
+      "latent": [
+        0.2329902492757599,
+        -0.12192875190713955
+      ],
+      "decoder_coefficients": [
+        0.2329902492757599,
+        -0.12192875190713955,
+        0.0050662397792327115
+      ],
+      "function_explained": 0.3562665036562861,
+      "nonlinear_relative_norm": 0.0050662397792327115,
+      "bend_coefficients": [
+        0.07364701332468002,
+        0.0027033642669261884,
+        0.0777001930301857
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999644160270691,
+      "carrier_reassessment_delta": 0.0026216204528045203,
+      "delay": 0.028244305849075318,
+      "probe_gain_vs_raw": [
+        5.911359830714505e-07,
+        8.8232693033592e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01124428492039442,
+      "reinjected_norm": 0.00012784433783963323,
+      "retained_norm": 0.00013567169662564993,
+      "raw_norm": 0.0053238654509186745,
+      "terminal_drain": false,
+      "applied_delay": 0.028244305849075318
+    },
+    {
+      "step": 101,
+      "epoch": 4,
+      "training_ce": 0.953445553779602,
+      "boundary": false,
+      "latent": [
+        0.25859208854503807,
+        -0.12764981960005292
+      ],
+      "decoder_coefficients": [
+        0.25859208854503807,
+        -0.12764981960005292,
+        0.00610161406144678
+      ],
+      "function_explained": 0.4098515229435298,
+      "nonlinear_relative_norm": 0.00610161406144678,
+      "bend_coefficients": [
+        0.07382560365328611,
+        0.002615206027603595,
+        0.07774371092514182
+      ],
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 0.9999609589576721,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03060429472476244,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008384790271520615,
+      "reinjected_norm": 0.00013567169662564993,
+      "retained_norm": 0.0001406090595992282,
+      "raw_norm": 0.005115155596286058,
+      "terminal_drain": false,
+      "applied_delay": 0.03060429472476244
+    },
+    {
+      "step": 102,
+      "epoch": 4,
+      "training_ce": 0.8030762672424316,
+      "boundary": false,
+      "latent": [
+        0.37837891791438877,
+        -0.10707877039058637
+      ],
+      "decoder_coefficients": [
+        0.37837891791438877,
+        -0.10707877039058637,
+        0.011355096521134079
+      ],
+      "function_explained": 0.56997727936138,
+      "nonlinear_relative_norm": 0.011355096521134079,
+      "bend_coefficients": [
+        0.07340474549780329,
+        0.0027343061456713406,
+        0.0777100063671121
+      ],
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 0.9999232888221741,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03368659600615501,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013157370500266552,
+      "reinjected_norm": 0.0001406090595992282,
+      "retained_norm": 0.0001551164750708267,
+      "raw_norm": 0.005234254524111748,
+      "terminal_drain": false,
+      "applied_delay": 0.03368659600615501
+    },
+    {
+      "step": 103,
+      "epoch": 4,
+      "training_ce": 0.8823670744895935,
+      "boundary": false,
+      "latent": [
+        0.32673797185879444,
+        -0.11433741789666355
+      ],
+      "decoder_coefficients": [
+        0.32673797185879444,
+        -0.11433741789666355,
+        0.008750279147129182
+      ],
+      "function_explained": 0.5926907512836603,
+      "nonlinear_relative_norm": 0.008750279147129182,
+      "bend_coefficients": [
+        0.07321538428708052,
+        0.002800570472895555,
+        0.07768681808559595
+      ],
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999640583992004,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0297725909948349,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011574159376323223,
+      "reinjected_norm": 0.0001551164750708267,
+      "retained_norm": 0.00013987238344270736,
+      "raw_norm": 0.005253245588392019,
+      "terminal_drain": false,
+      "applied_delay": 0.0297725909948349
+    },
+    {
+      "step": 104,
+      "epoch": 4,
+      "training_ce": 0.888582706451416,
+      "boundary": false,
+      "latent": [
+        0.24448788631875445,
+        -0.13421364247938783
+      ],
+      "decoder_coefficients": [
+        0.24448788631875445,
+        -0.13421364247938783,
+        0.005683899564927558
+      ],
+      "function_explained": 0.42521630112550357,
+      "nonlinear_relative_norm": 0.005683899564927558,
+      "bend_coefficients": [
+        0.07336895891037752,
+        0.002716264416282928,
+        0.07773309859098795
+      ],
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999693632125854,
+      "carrier_reassessment_delta": null,
+      "delay": 0.029477702789008617,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012521091848611832,
+      "reinjected_norm": 0.00013987238344270736,
+      "retained_norm": 0.00014386909606400877,
+      "raw_norm": 0.005392938386648893,
+      "terminal_drain": false,
+      "applied_delay": 0.029477702789008617
+    },
+    {
+      "step": 105,
+      "epoch": 4,
+      "training_ce": 1.0704851150512695,
+      "boundary": false,
+      "latent": [
+        0.35742397352530003,
+        -0.22093608038101153
+      ],
+      "decoder_coefficients": [
+        0.35742397352530003,
+        -0.22093608038101153,
+        0.012952892538748742
+      ],
+      "function_explained": 0.5076781378783487,
+      "nonlinear_relative_norm": 0.012952892538748742,
+      "bend_coefficients": [
+        0.07347203426655098,
+        0.002652549985064927,
+        0.07777248267750618
+      ],
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.9999950528144836,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03364172421395779,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013122313655912876,
+      "reinjected_norm": 0.00014386909606400877,
+      "retained_norm": 0.00016182650870177895,
+      "raw_norm": 0.00545739708468318,
+      "terminal_drain": false,
+      "applied_delay": 0.03364172421395779
+    },
+    {
+      "step": 106,
+      "epoch": 4,
+      "training_ce": 0.834202766418457,
+      "boundary": false,
+      "latent": [
+        0.3266241577392309,
+        -0.16983880653139463
+      ],
+      "decoder_coefficients": [
+        0.3266241577392309,
+        -0.16983880653139463,
+        0.009934460313675566
+      ],
+      "function_explained": 0.5617059977860669,
+      "nonlinear_relative_norm": 0.009934460313675566,
+      "bend_coefficients": [
+        0.0739747218205865,
+        0.002391161314898838,
+        0.0779084001800238
+      ],
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9997742176055908,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03209671247750521,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01266510784626007,
+      "reinjected_norm": 0.00016182650870177895,
+      "retained_norm": 0.0001599035895196721,
+      "raw_norm": 0.005575994960963726,
+      "terminal_drain": false,
+      "applied_delay": 0.03209671247750521
+    },
+    {
+      "step": 107,
+      "epoch": 4,
+      "training_ce": 0.9786850214004517,
+      "boundary": false,
+      "latent": [
+        0.3245374542581875,
+        -0.12728970302555456
+      ],
+      "decoder_coefficients": [
+        0.3245374542581875,
+        -0.12728970302555456,
+        0.008954899415811493
+      ],
+      "function_explained": 0.4306828010043723,
+      "nonlinear_relative_norm": 0.008954899415811493,
+      "bend_coefficients": [
+        0.074563045543997,
+        0.002160409668045053,
+        0.07799890532269775
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9997885823249817,
+      "carrier_reassessment_delta": null,
+      "delay": 0.027884169779717922,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01127837598323822,
+      "reinjected_norm": 0.0001599035895196721,
+      "retained_norm": 0.00013856231817044318,
+      "raw_norm": 0.005515106953680515,
+      "terminal_drain": false,
+      "applied_delay": 0.027884169779717922
+    },
+    {
+      "step": 108,
+      "epoch": 4,
+      "training_ce": 0.8691098093986511,
+      "boundary": true,
+      "latent": [
+        0.381030596089997,
+        -0.13548075195449508
+      ],
+      "decoder_coefficients": [
+        0.381030596089997,
+        -0.13548075195449508,
+        0.012145531932944235
+      ],
+      "function_explained": 0.5595938556588638,
+      "nonlinear_relative_norm": 0.012145531932944235,
+      "bend_coefficients": [
+        0.07498608046244931,
+        0.0020099936924172276,
+        0.0780523878243476
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9998940229415894,
+      "carrier_reassessment_delta": 0.0025417734288338814,
+      "delay": 0.02929420940577984,
+      "probe_gain_vs_raw": [
+        -3.716253517742235e-05,
+        -1.0309169488207844e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008923321962356567,
+      "reinjected_norm": 0.00013856231817044318,
+      "retained_norm": 0.00013966683764010668,
+      "raw_norm": 0.0053413198329508305,
+      "terminal_drain": false,
+      "applied_delay": 0.02929420940577984
+    },
+    {
+      "step": 109,
+      "epoch": 5,
+      "training_ce": 0.7902263402938843,
+      "boundary": false,
+      "latent": [
+        0.3485834334224733,
+        -0.0557159233216101
+      ],
+      "decoder_coefficients": [
+        0.3485834334224733,
+        -0.0557159233216101,
+        0.00931484722220529
+      ],
+      "function_explained": 0.4322156156089787,
+      "nonlinear_relative_norm": 0.00931484722220529,
+      "bend_coefficients": [
+        0.07546264675663802,
+        0.0019338215954131175,
+        0.07806456281119152
+      ],
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9998757839202881,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02890939299017191,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011122051626443863,
+      "reinjected_norm": 0.00013966683764010668,
+      "retained_norm": 0.00014546078455168754,
+      "raw_norm": 0.005522978957742453,
+      "terminal_drain": false,
+      "applied_delay": 0.02890939299017191
+    },
+    {
+      "step": 110,
+      "epoch": 5,
+      "training_ce": 0.7668758630752563,
+      "boundary": false,
+      "latent": [
+        0.3964278094678009,
+        0.04966461874417203
+      ],
+      "decoder_coefficients": [
+        0.3964278094678009,
+        0.04966461874417203,
+        0.012089958835167698
+      ],
+      "function_explained": 0.5275741944055514,
+      "nonlinear_relative_norm": 0.012089958835167698,
+      "bend_coefficients": [
+        0.07591082354696396,
+        0.001989969345116666,
+        0.07807159702149608
+      ],
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.999929666519165,
+      "carrier_reassessment_delta": null,
+      "delay": 0.029983395636081697,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011880360543727875,
+      "reinjected_norm": 0.00014546078455168754,
+      "retained_norm": 0.00015877856640145183,
+      "raw_norm": 0.005676896311342716,
+      "terminal_drain": false,
+      "applied_delay": 0.029983395636081697
+    },
+    {
+      "step": 111,
+      "epoch": 5,
+      "training_ce": 0.7431891560554504,
+      "boundary": false,
+      "latent": [
+        0.38632986919104095,
+        0.19128357404246685
+      ],
+      "decoder_coefficients": [
+        0.38632986919104095,
+        0.19128357404246685,
+        0.014333397903218345
+      ],
+      "function_explained": 0.6335684514641421,
+      "nonlinear_relative_norm": 0.014333397903218345,
+      "bend_coefficients": [
+        0.07579883832913287,
+        0.001934522085106687,
+        0.07804414341018774
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999932646751404,
+      "carrier_reassessment_delta": null,
+      "delay": 0.029572002552449704,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011894697323441505,
+      "reinjected_norm": 0.00015877856640145183,
+      "retained_norm": 0.0001693267549853772,
+      "raw_norm": 0.005834842100739479,
+      "terminal_drain": false,
+      "applied_delay": 0.029572002552449704
+    },
+    {
+      "step": 112,
+      "epoch": 5,
+      "training_ce": 0.7199440598487854,
+      "boundary": false,
+      "latent": [
+        0.3704686314479524,
+        0.148779803941258
+      ],
+      "decoder_coefficients": [
+        0.3704686314479524,
+        0.148779803941258,
+        0.012237331836890861
+      ],
+      "function_explained": 0.6285932243301233,
+      "nonlinear_relative_norm": 0.012237331836890861,
+      "bend_coefficients": [
+        0.07630348293167322,
+        0.0021371868147290543,
+        0.07812553334763311
+      ],
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.9998779296875,
+      "carrier_reassessment_delta": null,
+      "delay": 0.024739609844982625,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010675330646336079,
+      "reinjected_norm": 0.0001693267549853772,
+      "retained_norm": 0.00014136845129542053,
+      "raw_norm": 0.0058574858121573925,
+      "terminal_drain": false,
+      "applied_delay": 0.024739609844982625
+    },
+    {
+      "step": 113,
+      "epoch": 5,
+      "training_ce": 0.6220067739486694,
+      "boundary": false,
+      "latent": [
+        0.3795350409092712,
+        0.15369411294251148
+      ],
+      "decoder_coefficients": [
+        0.3795350409092712,
+        0.15369411294251148,
+        0.012961415179422068
+      ],
+      "function_explained": 0.5718976763059282,
+      "nonlinear_relative_norm": 0.012961415179422068,
+      "bend_coefficients": [
+        0.07645140555193172,
+        0.002197088624718185,
+        0.07814979080625373
+      ],
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999935030937195,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02503811936825514,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00971139408648014,
+      "reinjected_norm": 0.00014136845129542053,
+      "retained_norm": 0.00014591365470550954,
+      "raw_norm": 0.0059667243622243404,
+      "terminal_drain": false,
+      "applied_delay": 0.02503811936825514
+    },
+    {
+      "step": 114,
+      "epoch": 5,
+      "training_ce": 0.7437115907669067,
+      "boundary": false,
+      "latent": [
+        0.38522304232729143,
+        0.16275803475546843
+      ],
+      "decoder_coefficients": [
+        0.38522304232729143,
+        0.16275803475546843,
+        0.013553098595182464
+      ],
+      "function_explained": 0.5722006993404376,
+      "nonlinear_relative_norm": 0.013553098595182464,
+      "bend_coefficients": [
+        0.07680072527819765,
+        0.002344677387334453,
+        0.0782121475562817
+      ],
+      "frame_overlap": 0.9994679689407349,
+      "frame_gradient_outside_fraction": 0.9999799728393555,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0247493108920753,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009516621008515358,
+      "reinjected_norm": 0.00014591365470550954,
+      "retained_norm": 0.00014897978689987212,
+      "raw_norm": 0.0060965451411902905,
+      "terminal_drain": false,
+      "applied_delay": 0.0247493108920753
+    },
+    {
+      "step": 115,
+      "epoch": 5,
+      "training_ce": 0.6399950981140137,
+      "boundary": false,
+      "latent": [
+        0.3559372685639788,
+        0.11809631977655839
+      ],
+      "decoder_coefficients": [
+        0.3559372685639788,
+        0.11809631977655839,
+        0.010919349514564913
+      ],
+      "function_explained": 0.5634542322535747,
+      "nonlinear_relative_norm": 0.010919349514564913,
+      "bend_coefficients": [
+        0.07659759083419293,
+        0.002277279470972397,
+        0.07818978562178948
+      ],
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9999780058860779,
+      "carrier_reassessment_delta": null,
+      "delay": 0.024648026265203953,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009398207068443298,
+      "reinjected_norm": 0.00014897978689987212,
+      "retained_norm": 0.00014916079817339778,
+      "raw_norm": 0.00618703430518508,
+      "terminal_drain": false,
+      "applied_delay": 0.024648026265203953
+    },
+    {
+      "step": 116,
+      "epoch": 5,
+      "training_ce": 0.6564124822616577,
+      "boundary": false,
+      "latent": [
+        0.2189621767306642,
+        0.16312939161704984
+      ],
+      "decoder_coefficients": [
+        0.2189621767306642,
+        0.16312939161704984,
+        0.005834494626306213
+      ],
+      "function_explained": 0.5140206493214075,
+      "nonlinear_relative_norm": 0.005834494626306213,
+      "bend_coefficients": [
+        0.0763246446663912,
+        0.0020739313723988706,
+        0.07803828890166148
+      ],
+      "frame_overlap": 0.9994680881500244,
+      "frame_gradient_outside_fraction": 0.9997260570526123,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009402806870639324,
+      "reinjected_norm": 0.00014916079817339778,
+      "retained_norm": 0.00012376654194667935,
+      "raw_norm": 0.00610083993524313,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 117,
+      "epoch": 5,
+      "training_ce": 0.5916478633880615,
+      "boundary": false,
+      "latent": [
+        0.2539895478315538,
+        0.07133293254484191
+      ],
+      "decoder_coefficients": [
+        0.2539895478315538,
+        0.07133293254484191,
+        0.0053584196718235765
+      ],
+      "function_explained": 0.5546048275010406,
+      "nonlinear_relative_norm": 0.0053584196718235765,
+      "bend_coefficients": [
+        0.07594156781426849,
+        0.001966344286689017,
+        0.0780080730821793
+      ],
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9996098875999451,
+      "carrier_reassessment_delta": null,
+      "delay": 0.024190959911793472,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008626745082437992,
+      "reinjected_norm": 0.00012376654194667935,
+      "retained_norm": 0.00014442829706240445,
+      "raw_norm": 0.006110855843871832,
+      "terminal_drain": false,
+      "applied_delay": 0.024190959911793472
+    },
+    {
+      "step": 118,
+      "epoch": 5,
+      "training_ce": 0.6469299793243408,
+      "boundary": false,
+      "latent": [
+        0.26498444743085925,
+        0.021074314860978507
+      ],
+      "decoder_coefficients": [
+        0.26498444743085925,
+        0.021074314860978507,
+        0.0053779968995626894
+      ],
+      "function_explained": 0.550474457328177,
+      "nonlinear_relative_norm": 0.0053779968995626894,
+      "bend_coefficients": [
+        0.07535107058997137,
+        0.00191938181568355,
+        0.07800433813882615
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9992194175720215,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025036727245897054,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008956094272434711,
+      "reinjected_norm": 0.00014442829706240445,
+      "retained_norm": 0.0001487374393036589,
+      "raw_norm": 0.006153099704533815,
+      "terminal_drain": false,
+      "applied_delay": 0.025036727245897054
+    },
+    {
+      "step": 119,
+      "epoch": 5,
+      "training_ce": 0.769015371799469,
+      "boundary": false,
+      "latent": [
+        0.26235254433078226,
+        -0.09092059514238739
+      ],
+      "decoder_coefficients": [
+        0.26235254433078226,
+        -0.09092059514238739,
+        0.005785371730008045
+      ],
+      "function_explained": 0.4363419365160237,
+      "nonlinear_relative_norm": 0.005785371730008045,
+      "bend_coefficients": [
+        0.07503458618260846,
+        0.00202906228683782,
+        0.0779663274012582
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9998137354850769,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025869194902479648,
+      "conservation_error": 7.042847885831496e-14,
+      "relative_intervention": 0.009766662493348122,
+      "reinjected_norm": 0.0001487374393036589,
+      "retained_norm": 0.0001507287088315934,
+      "raw_norm": 0.0061722793616354465,
+      "terminal_drain": false,
+      "applied_delay": 0.025869194902479648
+    },
+    {
+      "step": 120,
+      "epoch": 5,
+      "training_ce": 0.6893528699874878,
+      "boundary": false,
+      "latent": [
+        0.21302985735283425,
+        -0.15729224530436675
+      ],
+      "decoder_coefficients": [
+        0.21302985735283425,
+        -0.15729224530436675,
+        0.005266162128121627
+      ],
+      "function_explained": 0.3884757834533733,
+      "nonlinear_relative_norm": 0.005266162128121627,
+      "bend_coefficients": [
+        0.07480710318896407,
+        0.00219702611727696,
+        0.0778423100060067
+      ],
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.999876856803894,
+      "carrier_reassessment_delta": null,
+      "delay": 0.028371867910027503,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009435070678591728,
+      "reinjected_norm": 0.0001507287088315934,
+      "retained_norm": 0.0001624748983886093,
+      "raw_norm": 0.0060761235654354095,
+      "terminal_drain": false,
+      "applied_delay": 0.028371867910027503
+    },
+    {
+      "step": 121,
+      "epoch": 5,
+      "training_ce": 0.732219934463501,
+      "boundary": false,
+      "latent": [
+        0.14217986091478216,
+        -0.15414916601301845
+      ],
+      "decoder_coefficients": [
+        0.14217986091478216,
+        -0.15414916601301845,
+        0.0033137682915313654
+      ],
+      "function_explained": 0.2932952283582029,
+      "nonlinear_relative_norm": 0.0033137682915313654,
+      "bend_coefficients": [
+        0.07479709987853556,
+        0.002207871548901403,
+        0.0778305515598442
+      ],
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999991059303284,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021753253526985646,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01188268605619669,
+      "reinjected_norm": 0.0001624748983886093,
+      "retained_norm": 0.00012676505139097571,
+      "raw_norm": 0.006072922609746456,
+      "terminal_drain": false,
+      "applied_delay": 0.021753253526985646
+    },
+    {
+      "step": 122,
+      "epoch": 5,
+      "training_ce": 0.5375571846961975,
+      "boundary": false,
+      "latent": [
+        0.13022793741100241,
+        -0.16993205701991615
+      ],
+      "decoder_coefficients": [
+        0.13022793741100241,
+        -0.16993205701991615,
+        0.0034671530154294005
+      ],
+      "function_explained": 0.4933870054926446,
+      "nonlinear_relative_norm": 0.0034671530154294005,
+      "bend_coefficients": [
+        0.07475099753699538,
+        0.002268029652355283,
+        0.07775205234938622
+      ],
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.9999675750732422,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0232497001811862,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009794404730200768,
+      "reinjected_norm": 0.00012676505139097571,
+      "retained_norm": 0.00013726043107453734,
+      "raw_norm": 0.006165357306599617,
+      "terminal_drain": false,
+      "applied_delay": 0.0232497001811862
+    },
+    {
+      "step": 123,
+      "epoch": 5,
+      "training_ce": 0.6326782703399658,
+      "boundary": false,
+      "latent": [
+        0.06537608820122542,
+        -0.11671679269003887
+      ],
+      "decoder_coefficients": [
+        0.06537608820122542,
+        -0.11671679269003887,
+        0.0013613834644990927
+      ],
+      "function_explained": 0.25773235187585686,
+      "nonlinear_relative_norm": 0.0013613834644990927,
+      "bend_coefficients": [
+        0.07470339406658719,
+        0.002353016756047659,
+        0.0776003237520364
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9997134208679199,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02250874608755112,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009280812926590443,
+      "reinjected_norm": 0.00013726043107453734,
+      "retained_norm": 0.00013664562720805407,
+      "raw_norm": 0.00619575846940279,
+      "terminal_drain": false,
+      "applied_delay": 0.02250874608755112
+    },
+    {
+      "step": 124,
+      "epoch": 5,
+      "training_ce": 0.7414156794548035,
+      "boundary": false,
+      "latent": [
+        0.19103920213876358,
+        -0.02725225671076642
+      ],
+      "decoder_coefficients": [
+        0.19103920213876358,
+        -0.02725225671076642,
+        0.0027717555761838006
+      ],
+      "function_explained": 0.2784027568719948,
+      "nonlinear_relative_norm": 0.0027717555761838006,
+      "bend_coefficients": [
+        0.07471793466452861,
+        0.0023509425005891387,
+        0.07760061965016415
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999995231628418,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02362592564895749,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00977279432117939,
+      "reinjected_norm": 0.00013664562720805407,
+      "retained_norm": 0.0001413598220096901,
+      "raw_norm": 0.006179440766572952,
+      "terminal_drain": false,
+      "applied_delay": 0.02362592564895749
+    },
+    {
+      "step": 125,
+      "epoch": 5,
+      "training_ce": 0.784183144569397,
+      "boundary": true,
+      "latent": [
+        0.1412462082985697,
+        -0.17505278413139633
+      ],
+      "decoder_coefficients": [
+        0.1412462082985697,
+        -0.17505278413139633,
+        0.003810484003754111
+      ],
+      "function_explained": 0.3706246681247978,
+      "nonlinear_relative_norm": 0.003810484003754111,
+      "bend_coefficients": [
+        0.0747071839422202,
+        0.0023642663546888758,
+        0.0775841067980061
+      ],
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 0.9999979734420776,
+      "carrier_reassessment_delta": 0.0014815774880373154,
+      "delay": 0.027891993671655655,
+      "probe_gain_vs_raw": [
+        -0.0001581785003855426,
+        -9.600330812742881e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011553517542779446,
+      "reinjected_norm": 0.0001413598220096901,
+      "retained_norm": 0.00016667267482262105,
+      "raw_norm": 0.006253470201045275,
+      "terminal_drain": false,
+      "applied_delay": 0.027891993671655655
+    },
+    {
+      "step": 126,
+      "epoch": 5,
+      "training_ce": 0.6700466275215149,
+      "boundary": false,
+      "latent": [
+        0.09040243106515593,
+        -0.184918979945226
+      ],
+      "decoder_coefficients": [
+        0.09040243106515593,
+        -0.184918979945226,
+        0.0032240189533929145
+      ],
+      "function_explained": 0.4355145401107028,
+      "nonlinear_relative_norm": 0.0032240189533929145,
+      "bend_coefficients": [
+        0.07467646664243408,
+        0.0024270988656755334,
+        0.0774555823357527
+      ],
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.999930739402771,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021556789330206813,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011517945677042007,
+      "reinjected_norm": 0.00016667267482262105,
+      "retained_norm": 0.00013055438466835767,
+      "raw_norm": 0.006234419532120228,
+      "terminal_drain": false,
+      "applied_delay": 0.021556789330206813
+    },
+    {
+      "step": 127,
+      "epoch": 5,
+      "training_ce": 0.6100056171417236,
+      "boundary": false,
+      "latent": [
+        0.040441931830371085,
+        -0.32349589924459565
+      ],
+      "decoder_coefficients": [
+        0.040441931830371085,
+        -0.32349589924459565,
+        0.008196079300481536
+      ],
+      "function_explained": 0.678335172816974,
+      "nonlinear_relative_norm": 0.008196079300481536,
+      "bend_coefficients": [
+        0.0746735620354732,
+        0.0024503328804278655,
+        0.07726973294243258
+      ],
+      "frame_overlap": 0.9994692802429199,
+      "frame_gradient_outside_fraction": 0.9999518990516663,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025154927000403404,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010881183668971062,
+      "reinjected_norm": 0.00013055438466835767,
+      "retained_norm": 0.00015705925761722028,
+      "raw_norm": 0.006350600626319647,
+      "terminal_drain": false,
+      "applied_delay": 0.025154927000403404
+    },
+    {
+      "step": 128,
+      "epoch": 5,
+      "training_ce": 0.5188050270080566,
+      "boundary": false,
+      "latent": [
+        0.08705240185148379,
+        -0.31933340809727667
+      ],
+      "decoder_coefficients": [
+        0.08705240185148379,
+        -0.31933340809727667,
+        0.008377259362349846
+      ],
+      "function_explained": 0.6087735596354577,
+      "nonlinear_relative_norm": 0.008377259362349846,
+      "bend_coefficients": [
+        0.07468570796794635,
+        0.0024057780843662474,
+        0.07743317283117579
+      ],
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.999962329864502,
+      "carrier_reassessment_delta": null,
+      "delay": 0.024448436442762615,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009179727174341679,
+      "reinjected_norm": 0.00015705925761722028,
+      "retained_norm": 0.00015080701268743724,
+      "raw_norm": 0.006297712214291096,
+      "terminal_drain": false,
+      "applied_delay": 0.024448436442762615
+    },
+    {
+      "step": 129,
+      "epoch": 5,
+      "training_ce": 0.5556808114051819,
+      "boundary": false,
+      "latent": [
+        0.059964738966880225,
+        -0.3668672748061137
+      ],
+      "decoder_coefficients": [
+        0.059964738966880225,
+        -0.3668672748061137,
+        0.010637482085760945
+      ],
+      "function_explained": 0.5750406815709027,
+      "nonlinear_relative_norm": 0.010637482085760945,
+      "bend_coefficients": [
+        0.07469454821127813,
+        0.0023516930331239586,
+        0.07776406788214844
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9998992681503296,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025980946458876133,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008689258247613907,
+      "reinjected_norm": 0.00015080701268743724,
+      "retained_norm": 0.000162588941748254,
+      "raw_norm": 0.0062961881048977375,
+      "terminal_drain": false,
+      "applied_delay": 0.025980946458876133
+    },
+    {
+      "step": 130,
+      "epoch": 5,
+      "training_ce": 0.6505333781242371,
+      "boundary": false,
+      "latent": [
+        -0.060201213669682396,
+        -0.38136562556941206
+      ],
+      "decoder_coefficients": [
+        -0.060201213669682396,
+        -0.38136562556941206,
+        0.011634684540538166
+      ],
+      "function_explained": 0.5852185555525301,
+      "nonlinear_relative_norm": 0.011634684540538166,
+      "bend_coefficients": [
+        0.07470485830254299,
+        0.0024170059091479577,
+        0.07817781511919415
+      ],
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9998192191123962,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010214170441031456,
+      "reinjected_norm": 0.000162588941748254,
+      "retained_norm": 0.00013297901023179293,
+      "raw_norm": 0.006381377577781677,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 131,
+      "epoch": 5,
+      "training_ce": 0.5075188279151917,
+      "boundary": false,
+      "latent": [
+        -0.10042352360374056,
+        -0.4055660400797963
+      ],
+      "decoder_coefficients": [
+        -0.10042352360374056,
+        -0.4055660400797963,
+        0.013710815662394023
+      ],
+      "function_explained": 0.6591086013103751,
+      "nonlinear_relative_norm": 0.013710815662394023,
+      "bend_coefficients": [
+        0.07473314295677638,
+        0.0025312350737979653,
+        0.07863913601599448
+      ],
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.9997592568397522,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020633459384553136,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00786247756332159,
+      "reinjected_norm": 0.00013297901023179293,
+      "retained_norm": 0.00013808054791297764,
+      "raw_norm": 0.006330100819468498,
+      "terminal_drain": false,
+      "applied_delay": 0.020633459384553136
+    },
+    {
+      "step": 132,
+      "epoch": 5,
+      "training_ce": 0.48653075098991394,
+      "boundary": false,
+      "latent": [
+        -0.1139338603574989,
+        -0.3749255793324358
+      ],
+      "decoder_coefficients": [
+        -0.1139338603574989,
+        -0.3749255793324358,
+        0.012132471000453142
+      ],
+      "function_explained": 0.6847089888334559,
+      "nonlinear_relative_norm": 0.012132471000453142,
+      "bend_coefficients": [
+        0.0747693242891351,
+        0.0026502980718658624,
+        0.0790309402029815
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9997816681861877,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022778953947126868,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009175991639494896,
+      "reinjected_norm": 0.00013808054791297764,
+      "retained_norm": 0.00015347576118074358,
+      "raw_norm": 0.006378320511430502,
+      "terminal_drain": false,
+      "applied_delay": 0.022778953947126868
+    },
+    {
+      "step": 133,
+      "epoch": 5,
+      "training_ce": 0.5633995532989502,
+      "boundary": false,
+      "latent": [
+        -0.17851759066674422,
+        -0.39570616895398053
+      ],
+      "decoder_coefficients": [
+        -0.17851759066674422,
+        -0.39570616895398053,
+        0.0149449380009523
+      ],
+      "function_explained": 0.7100245202277935,
+      "nonlinear_relative_norm": 0.0149449380009523,
+      "bend_coefficients": [
+        0.07488894906674026,
+        0.00291546108622941,
+        0.0796187065971514
+      ],
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9996199011802673,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00861700065433979,
+      "reinjected_norm": 0.00015347576118074358,
+      "retained_norm": 0.0001401542394887656,
+      "raw_norm": 0.006421768572181463,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 134,
+      "epoch": 5,
+      "training_ce": 0.49748504161834717,
+      "boundary": false,
+      "latent": [
+        -0.1587268279495287,
+        -0.2989763006789078
+      ],
+      "decoder_coefficients": [
+        -0.1587268279495287,
+        -0.2989763006789078,
+        0.009141986102728622
+      ],
+      "function_explained": 0.6207755130395665,
+      "nonlinear_relative_norm": 0.009141986102728622,
+      "bend_coefficients": [
+        0.07507172071232102,
+        0.003259727970225274,
+        0.08026716433270235
+      ],
+      "frame_overlap": 0.9994692802429199,
+      "frame_gradient_outside_fraction": 0.9990832805633545,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022469022292643786,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009098667651414871,
+      "reinjected_norm": 0.0001401542394887656,
+      "retained_norm": 0.0001526483683846891,
+      "raw_norm": 0.006406906060874462,
+      "terminal_drain": false,
+      "applied_delay": 0.022469022292643786
+    },
+    {
+      "step": 135,
+      "epoch": 5,
+      "training_ce": 0.8614016175270081,
+      "boundary": true,
+      "latent": [
+        -0.1680646480691656,
+        -0.3019420354157994
+      ],
+      "decoder_coefficients": [
+        -0.1680646480691656,
+        -0.3019420354157994,
+        0.009603749216267811
+      ],
+      "function_explained": 0.6500559338904752,
+      "nonlinear_relative_norm": 0.009603749216267811,
+      "bend_coefficients": [
+        0.07518734348669913,
+        0.0034674538437937746,
+        0.0806403610388174
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9996866583824158,
+      "carrier_reassessment_delta": 0.0007741177925270148,
+      "delay": 0.020063645904592704,
+      "probe_gain_vs_raw": [
+        7.820808674195449e-05,
+        7.65510699597484e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008928091265261173,
+      "reinjected_norm": 0.0001526483683846891,
+      "retained_norm": 0.0001363507326459512,
+      "raw_norm": 0.006360233761370182,
+      "terminal_drain": false,
+      "applied_delay": 0.020063645904592704
+    },
+    {
+      "step": 136,
+      "epoch": 6,
+      "training_ce": 0.38086622953414917,
+      "boundary": false,
+      "latent": [
+        -0.16186278932811693,
+        -0.15394422228061702
+      ],
+      "decoder_coefficients": [
+        -0.16186278932811693,
+        -0.15394422228061702,
+        0.003967358663566477
+      ],
+      "function_explained": 0.3062494709586706,
+      "nonlinear_relative_norm": 0.003967358663566477,
+      "bend_coefficients": [
+        0.07547570304215215,
+        0.0037417064233129173,
+        0.08090119677652943
+      ],
+      "frame_overlap": 0.999469518661499,
+      "frame_gradient_outside_fraction": 0.9993269443511963,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008419351652264595,
+      "reinjected_norm": 0.0001363507326459512,
+      "retained_norm": 0.00013647237210534513,
+      "raw_norm": 0.006438417360186577,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 137,
+      "epoch": 6,
+      "training_ce": 0.45401084423065186,
+      "boundary": false,
+      "latent": [
+        -0.14539657297290431,
+        -0.11820142656206228
+      ],
+      "decoder_coefficients": [
+        -0.14539657297290431,
+        -0.11820142656206228,
+        0.0027901912918466415
+      ],
+      "function_explained": 0.19356991772268617,
+      "nonlinear_relative_norm": 0.0027901912918466415,
+      "bend_coefficients": [
+        0.0756940562967861,
+        0.003919218627792544,
+        0.08104550688902142
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9995126724243164,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.0079133166000247,
+      "reinjected_norm": 0.00013647237210534513,
+      "retained_norm": 0.0001373887062072754,
+      "raw_norm": 0.006512519437819719,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 138,
+      "epoch": 6,
+      "training_ce": 0.4653902053833008,
+      "boundary": false,
+      "latent": [
+        -0.10450240120026122,
+        -0.13066270578972466
+      ],
+      "decoder_coefficients": [
+        -0.10450240120026122,
+        -0.13066270578972466,
+        0.0022638203220629823
+      ],
+      "function_explained": 0.14340489377511156,
+      "nonlinear_relative_norm": 0.0022638203220629823,
+      "bend_coefficients": [
+        0.07579041684658071,
+        0.004039701315490985,
+        0.0811961502598405
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9996150732040405,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.007898390293121338,
+      "reinjected_norm": 0.0001373887062072754,
+      "retained_norm": 0.00013649922038894147,
+      "raw_norm": 0.006555861793458462,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 139,
+      "epoch": 6,
+      "training_ce": 0.400049090385437,
+      "boundary": false,
+      "latent": [
+        -0.09958456130373944,
+        -0.14090640639609014
+      ],
+      "decoder_coefficients": [
+        -0.09958456130373944,
+        -0.14090640639609014,
+        0.002420423830689972
+      ],
+      "function_explained": 0.16815955292750717,
+      "nonlinear_relative_norm": 0.002420423830689972,
+      "bend_coefficients": [
+        0.07587903353074198,
+        0.00416508880877739,
+        0.08137356632569144
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9995642304420471,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.007808350957930088,
+      "reinjected_norm": 0.00013649922038894147,
+      "retained_norm": 0.0001408175303367898,
+      "raw_norm": 0.006774588022381067,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 140,
+      "epoch": 6,
+      "training_ce": 0.4020295739173889,
+      "boundary": false,
+      "latent": [
+        0.03976834892692242,
+        -0.1441033609363635
+      ],
+      "decoder_coefficients": [
+        0.03976834892692242,
+        -0.1441033609363635,
+        0.0017859206995328068
+      ],
+      "function_explained": 0.06622548901950831,
+      "nonlinear_relative_norm": 0.0017859206995328068,
+      "bend_coefficients": [
+        0.07588762840356646,
+        0.004133944693061033,
+        0.08148641918152322
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9998500943183899,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02042480438714847,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008663609623908997,
+      "reinjected_norm": 0.0001408175303367898,
+      "retained_norm": 0.0001415559381712228,
+      "raw_norm": 0.0069323135539889336,
+      "terminal_drain": false,
+      "applied_delay": 0.02042480438714847
+    },
+    {
+      "step": 141,
+      "epoch": 6,
+      "training_ce": 0.36817753314971924,
+      "boundary": false,
+      "latent": [
+        0.07913781838523973,
+        -0.14675434628783457
+      ],
+      "decoder_coefficients": [
+        0.07913781838523973,
+        -0.14675434628783457,
+        0.002182217543594993
+      ],
+      "function_explained": 0.06395193761387474,
+      "nonlinear_relative_norm": 0.002182217543594993,
+      "bend_coefficients": [
+        0.07591784796828319,
+        0.004077905083231022,
+        0.08159033986666005
+      ],
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9998830556869507,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02121737618930638,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008182995952665806,
+      "reinjected_norm": 0.0001415559381712228,
+      "retained_norm": 0.00014874537009745836,
+      "raw_norm": 0.007056424859911203,
+      "terminal_drain": false,
+      "applied_delay": 0.02121737618930638
+    },
+    {
+      "step": 142,
+      "epoch": 6,
+      "training_ce": 0.353555291891098,
+      "boundary": false,
+      "latent": [
+        0.35796142386349833,
+        -0.2612620304851203
+      ],
+      "decoder_coefficients": [
+        0.35796142386349833,
+        -0.2612620304851203,
+        0.01491564662190104
+      ],
+      "function_explained": 0.33610657185281967,
+      "nonlinear_relative_norm": 0.01491564662190104,
+      "bend_coefficients": [
+        0.07621820272551547,
+        0.003858687903643832,
+        0.08175033790454363
+      ],
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999582171440125,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02636856785044074,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01280187163501978,
+      "reinjected_norm": 0.00014874537009745836,
+      "retained_norm": 0.00018891443323809654,
+      "raw_norm": 0.007167041301727295,
+      "terminal_drain": false,
+      "applied_delay": 0.02636856785044074
+    },
+    {
+      "step": 143,
+      "epoch": 6,
+      "training_ce": 0.41036516427993774,
+      "boundary": false,
+      "latent": [
+        0.35331841391435165,
+        -0.2896178517369718
+      ],
+      "decoder_coefficients": [
+        0.35331841391435165,
+        -0.2896178517369718,
+        0.01597686214962249
+      ],
+      "function_explained": 0.6481654482963726,
+      "nonlinear_relative_norm": 0.01597686214962249,
+      "bend_coefficients": [
+        0.07641740659466226,
+        0.0036953989428426745,
+        0.08188418713565405
+      ],
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9999520778656006,
+      "carrier_reassessment_delta": null,
+      "delay": 0.027886864840984345,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011326469480991364,
+      "reinjected_norm": 0.00018891443323809654,
+      "retained_norm": 0.00020510811009444296,
+      "raw_norm": 0.007300909608602524,
+      "terminal_drain": false,
+      "applied_delay": 0.027886864840984345
+    },
+    {
+      "step": 144,
+      "epoch": 6,
+      "training_ce": 0.4737898111343384,
+      "boundary": false,
+      "latent": [
+        0.21850426535213377,
+        -0.1960012956620315
+      ],
+      "decoder_coefficients": [
+        0.21850426535213377,
+        -0.1960012956620315,
+        0.006635922601659037
+      ],
+      "function_explained": 0.7297915716385168,
+      "nonlinear_relative_norm": 0.006635922601659037,
+      "bend_coefficients": [
+        0.07644738033463115,
+        0.0036685120907243825,
+        0.08190830500741718
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999918341636658,
+      "carrier_reassessment_delta": null,
+      "delay": 0.023106945250183343,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012611044570803642,
+      "reinjected_norm": 0.00020510811009444296,
+      "retained_norm": 0.00016716182290110737,
+      "raw_norm": 0.007300960831344128,
+      "terminal_drain": false,
+      "applied_delay": 0.023106945250183343
+    },
+    {
+      "step": 145,
+      "epoch": 6,
+      "training_ce": 0.4076012969017029,
+      "boundary": false,
+      "latent": [
+        0.08225695248924637,
+        0.09181884774379655
+      ],
+      "decoder_coefficients": [
+        0.08225695248924637,
+        0.09181884774379655,
+        0.0012355104667965237
+      ],
+      "function_explained": 0.25822648388659475,
+      "nonlinear_relative_norm": 0.0012355104667965237,
+      "bend_coefficients": [
+        0.07638335815766319,
+        0.0035970477057531945,
+        0.08182853330078081
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9997606873512268,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011230383068323135,
+      "reinjected_norm": 0.00016716182290110737,
+      "retained_norm": 0.00014826501137576997,
+      "raw_norm": 0.007261074148118496,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 146,
+      "epoch": 6,
+      "training_ce": 0.41017377376556396,
+      "boundary": false,
+      "latent": [
+        0.01941429235472005,
+        0.26047555027854136
+      ],
+      "decoder_coefficients": [
+        0.01941429235472005,
+        0.26047555027854136,
+        0.005598842518142703
+      ],
+      "function_explained": 0.4644640541060394,
+      "nonlinear_relative_norm": 0.005598842518142703,
+      "bend_coefficients": [
+        0.07638095703878743,
+        0.0035648326371315884,
+        0.08139631369817275
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9995962381362915,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02043983052717522,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008450726047158241,
+      "reinjected_norm": 0.00014826501137576997,
+      "retained_norm": 0.0001578559895278886,
+      "raw_norm": 0.007151609752327204,
+      "terminal_drain": false,
+      "applied_delay": 0.02043983052717522
+    },
+    {
+      "step": 147,
+      "epoch": 6,
+      "training_ce": 0.3973495364189148,
+      "boundary": false,
+      "latent": [
+        -0.09752713521679554,
+        0.4564310318079276
+      ],
+      "decoder_coefficients": [
+        -0.09752713521679554,
+        0.4564310318079276,
+        0.01752505024445322
+      ],
+      "function_explained": 0.7560574000295068,
+      "nonlinear_relative_norm": 0.01752505024445322,
+      "bend_coefficients": [
+        0.07635546308356037,
+        0.003684145403402132,
+        0.08083792501080214
+      ],
+      "frame_overlap": 0.9994692206382751,
+      "frame_gradient_outside_fraction": 0.9994304180145264,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021872218577191235,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009990093298256397,
+      "reinjected_norm": 0.0001578559895278886,
+      "retained_norm": 0.00018679276399780065,
+      "raw_norm": 0.007162431254982948,
+      "terminal_drain": false,
+      "applied_delay": 0.021872218577191235
+    },
+    {
+      "step": 148,
+      "epoch": 6,
+      "training_ce": 0.5184141397476196,
+      "boundary": false,
+      "latent": [
+        -0.11082710523295516,
+        0.5366096456392218
+      ],
+      "decoder_coefficients": [
+        -0.11082710523295516,
+        0.5366096456392218,
+        0.023996021175852287
+      ],
+      "function_explained": 0.8418857348718356,
+      "nonlinear_relative_norm": 0.023996021175852287,
+      "bend_coefficients": [
+        0.07633394032667494,
+        0.003788355640791179,
+        0.08033335333188142
+      ],
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9994367957115173,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008165610022842884,
+      "reinjected_norm": 0.00018679276399780065,
+      "retained_norm": 0.00017623532039579004,
+      "raw_norm": 0.0070601291954517365,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 149,
+      "epoch": 6,
+      "training_ce": 0.4357031583786011,
+      "boundary": false,
+      "latent": [
+        -0.09362136665436308,
+        0.4987415281831821
+      ],
+      "decoder_coefficients": [
+        -0.09362136665436308,
+        0.4987415281831821,
+        0.020474543083237845
+      ],
+      "function_explained": 0.8770869685904914,
+      "nonlinear_relative_norm": 0.020474543083237845,
+      "bend_coefficients": [
+        0.07632335907942035,
+        0.0038447242627674206,
+        0.08003306533491379
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9996588230133057,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.007731583900749683,
+      "reinjected_norm": 0.00017623532039579004,
+      "retained_norm": 0.00016720608982723206,
+      "raw_norm": 0.006833425257354975,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 150,
+      "epoch": 6,
+      "training_ce": 0.37069934606552124,
+      "boundary": true,
+      "latent": [
+        -0.07363221665917692,
+        0.38470977265404793
+      ],
+      "decoder_coefficients": [
+        -0.07363221665917692,
+        0.38470977265404793,
+        0.01214991543456639
+      ],
+      "function_explained": 0.8471243005568369,
+      "nonlinear_relative_norm": 0.01214991543456639,
+      "bend_coefficients": [
+        0.07631786331432171,
+        0.0038734382501711506,
+        0.07988304198824189
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9998988509178162,
+      "carrier_reassessment_delta": 0.0006097452380094099,
+      "delay": 0.02,
+      "probe_gain_vs_raw": [
+        -5.359825316142086e-05,
+        -1.5047796906119283e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009071475826203823,
+      "reinjected_norm": 0.00016720608982723206,
+      "retained_norm": 0.00015860154235269874,
+      "raw_norm": 0.006869415286928415,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 151,
+      "epoch": 6,
+      "training_ce": 0.42305541038513184,
+      "boundary": false,
+      "latent": [
+        -0.0297098735626957,
+        0.2990773922324935
+      ],
+      "decoder_coefficients": [
+        -0.0297098735626957,
+        0.2990773922324935,
+        0.007178267702813988
+      ],
+      "function_explained": 0.7374334057037253,
+      "nonlinear_relative_norm": 0.007178267702813988,
+      "bend_coefficients": [
+        0.07631579208562364,
+        0.0038942884795209786,
+        0.07967315108418817
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9998977780342102,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008451882749795914,
+      "reinjected_norm": 0.00015860154235269874,
+      "retained_norm": 0.00015160121256485581,
+      "raw_norm": 0.006854067090898752,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 152,
+      "epoch": 6,
+      "training_ce": 0.37408703565597534,
+      "boundary": false,
+      "latent": [
+        0.0020019854358557044,
+        0.2715488078596949
+      ],
+      "decoder_coefficients": [
+        0.0020019854358557044,
+        0.2715488078596949,
+        0.005877421919775433
+      ],
+      "function_explained": 0.5960010464865746,
+      "nonlinear_relative_norm": 0.005877421919775433,
+      "bend_coefficients": [
+        0.07631578892435757,
+        0.0038938596861752242,
+        0.07961498966114663
+      ],
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999919533729553,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008899581618607044,
+      "reinjected_norm": 0.00015160121256485581,
+      "retained_norm": 0.00015118041483219713,
+      "raw_norm": 0.006946409121155739,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 153,
+      "epoch": 6,
+      "training_ce": 0.32647573947906494,
+      "boundary": false,
+      "latent": [
+        0.10718991112718915,
+        0.2280827861720257
+      ],
+      "decoder_coefficients": [
+        0.10718991112718915,
+        0.2280827861720257,
+        0.005113753199279333
+      ],
+      "function_explained": 0.4672536078863454,
+      "nonlinear_relative_norm": 0.005113753199279333,
+      "bend_coefficients": [
+        0.07631213977887949,
+        0.003886094895076544,
+        0.07959846744213174
+      ],
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999991655349731,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008899079635739326,
+      "reinjected_norm": 0.00015118041483219713,
+      "retained_norm": 0.00015016930410638452,
+      "raw_norm": 0.007068145554512739,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 154,
+      "epoch": 6,
+      "training_ce": 0.32487133145332336,
+      "boundary": false,
+      "latent": [
+        0.30666874891925416,
+        0.036429671769137605
+      ],
+      "decoder_coefficients": [
+        0.30666874891925416,
+        0.036429671769137605,
+        0.007325881883747579
+      ],
+      "function_explained": 0.24856136754421754,
+      "nonlinear_relative_norm": 0.007325881883747579,
+      "bend_coefficients": [
+        0.07649522508805105,
+        0.003907843892137301,
+        0.07960105104032042
+      ],
+      "frame_overlap": 0.9994677305221558,
+      "frame_gradient_outside_fraction": 0.9999735355377197,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02888334047049284,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014033501036465168,
+      "reinjected_norm": 0.00015016930410638452,
+      "retained_norm": 0.00020567563478834927,
+      "raw_norm": 0.007053430657833815,
+      "terminal_drain": false,
+      "applied_delay": 0.02888334047049284
+    },
+    {
+      "step": 155,
+      "epoch": 6,
+      "training_ce": 0.3753741383552551,
+      "boundary": false,
+      "latent": [
+        0.4135446564874543,
+        -0.09962249751510392
+      ],
+      "decoder_coefficients": [
+        0.4135446564874543,
+        -0.09962249751510392,
+        0.013711166099982325
+      ],
+      "function_explained": 0.49889319464037163,
+      "nonlinear_relative_norm": 0.013711166099982325,
+      "bend_coefficients": [
+        0.0767468746684802,
+        0.0038472217578461284,
+        0.07961565485233453
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999746084213257,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021903115753084422,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014032519422471523,
+      "reinjected_norm": 0.00020567563478834927,
+      "retained_norm": 0.00015863776206970215,
+      "raw_norm": 0.007086645346134901,
+      "terminal_drain": false,
+      "applied_delay": 0.021903115753084422
+    },
+    {
+      "step": 156,
+      "epoch": 6,
+      "training_ce": 0.34980708360671997,
+      "boundary": false,
+      "latent": [
+        0.4426512024516376,
+        -0.14186948457948703
+      ],
+      "decoder_coefficients": [
+        0.4426512024516376,
+        -0.14186948457948703,
+        0.01639860914145295
+      ],
+      "function_explained": 0.8408004552185688,
+      "nonlinear_relative_norm": 0.01639860914145295,
+      "bend_coefficients": [
+        0.07690626293411182,
+        0.0037961379000187073,
+        0.0796320272027092
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.999948263168335,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025989959463477135,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009970185346901417,
+      "reinjected_norm": 0.00015863776206970215,
+      "retained_norm": 0.00018463873129803687,
+      "raw_norm": 0.006932410411536694,
+      "terminal_drain": false,
+      "applied_delay": 0.025989959463477135
+    },
+    {
+      "step": 157,
+      "epoch": 6,
+      "training_ce": 0.28669559955596924,
+      "boundary": false,
+      "latent": [
+        0.36948923720319365,
+        -0.13728698762800196
+      ],
+      "decoder_coefficients": [
+        0.36948923720319365,
+        -0.13728698762800196,
+        0.01180773839927318
+      ],
+      "function_explained": 0.9178442600237003,
+      "nonlinear_relative_norm": 0.01180773839927318,
+      "bend_coefficients": [
+        0.07704345192772051,
+        0.003745164118452514,
+        0.07965096696120448
+      ],
+      "frame_overlap": 0.9994692206382751,
+      "frame_gradient_outside_fraction": 0.9997503161430359,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0264847719296813,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012482374906539917,
+      "reinjected_norm": 0.00018463873129803687,
+      "retained_norm": 0.00019005143258254975,
+      "raw_norm": 0.007118775974959135,
+      "terminal_drain": false,
+      "applied_delay": 0.0264847719296813
+    },
+    {
+      "step": 158,
+      "epoch": 6,
+      "training_ce": 0.3047480583190918,
+      "boundary": false,
+      "latent": [
+        0.35519567243528777,
+        -0.1486773271685512
+      ],
+      "decoder_coefficients": [
+        0.35519567243528777,
+        -0.1486773271685512,
+        0.011283007473487427
+      ],
+      "function_explained": 0.9307076799833641,
+      "nonlinear_relative_norm": 0.011283007473487427,
+      "bend_coefficients": [
+        0.0771808900748617,
+        0.003687635443545379,
+        0.07967504723662591
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9996716976165771,
+      "carrier_reassessment_delta": null,
+      "delay": 0.029230644293129444,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012414515018463135,
+      "reinjected_norm": 0.00019005143258254975,
+      "retained_norm": 0.00021368441230151802,
+      "raw_norm": 0.007295419927686453,
+      "terminal_drain": false,
+      "applied_delay": 0.029230644293129444
+    },
+    {
+      "step": 159,
+      "epoch": 6,
+      "training_ce": 0.325756311416626,
+      "boundary": false,
+      "latent": [
+        0.4065451220135515,
+        -0.22679759715598885
+      ],
+      "decoder_coefficients": [
+        0.4065451220135515,
+        -0.22679759715598885,
+        0.016514620035748325
+      ],
+      "function_explained": 0.9402699013679721,
+      "nonlinear_relative_norm": 0.016514620035748325,
+      "bend_coefficients": [
+        0.07726433484977918,
+        0.0036410844620632416,
+        0.07970101643456663
+      ],
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9999040961265564,
+      "carrier_reassessment_delta": null,
+      "delay": 0.027707363590598107,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008267859928309917,
+      "reinjected_norm": 0.00021368441230151802,
+      "retained_norm": 0.00019598958897404373,
+      "raw_norm": 0.006924443878233433,
+      "terminal_drain": false,
+      "applied_delay": 0.027707363590598107
+    },
+    {
+      "step": 160,
+      "epoch": 6,
+      "training_ce": 0.44706234335899353,
+      "boundary": false,
+      "latent": [
+        0.2837465466114465,
+        -0.23955267453495896
+      ],
+      "decoder_coefficients": [
+        0.2837465466114465,
+        -0.23955267453495896,
+        0.010546902775166468
+      ],
+      "function_explained": 0.8376044984412827,
+      "nonlinear_relative_norm": 0.010546902775166468,
+      "bend_coefficients": [
+        0.07742560459679805,
+        0.0035049326756140206,
+        0.07981596241356136
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9998971223831177,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022369621861726047,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012735174968838692,
+      "reinjected_norm": 0.00019598958897404373,
+      "retained_norm": 0.00015728981816209853,
+      "raw_norm": 0.00700270663946867,
+      "terminal_drain": false,
+      "applied_delay": 0.022369621861726047
+    },
+    {
+      "step": 161,
+      "epoch": 6,
+      "training_ce": 0.3583472967147827,
+      "boundary": false,
+      "latent": [
+        0.1530503239985624,
+        -0.2988587599210142
+      ],
+      "decoder_coefficients": [
+        0.1530503239985624,
+        -0.2988587599210142,
+        0.008782218400947315
+      ],
+      "function_explained": 0.6492307226703294,
+      "nonlinear_relative_norm": 0.008782218400947315,
+      "bend_coefficients": [
+        0.07745211389046365,
+        0.0034531684295523177,
+        0.0799170415748599
+      ],
+      "frame_overlap": 0.9994680881500244,
+      "frame_gradient_outside_fraction": 0.9999905228614807,
+      "carrier_reassessment_delta": null,
+      "delay": 0.024382903426885604,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010833177715539932,
+      "reinjected_norm": 0.00015728981816209853,
+      "retained_norm": 0.0001699088461464271,
+      "raw_norm": 0.006933126132935286,
+      "terminal_drain": false,
+      "applied_delay": 0.024382903426885604
+    },
+    {
+      "step": 162,
+      "epoch": 6,
+      "training_ce": 0.3653920590877533,
+      "boundary": true,
+      "latent": [
+        0.12843234559589572,
+        -0.04641463897672211
+      ],
+      "decoder_coefficients": [
+        0.12843234559589572,
+        -0.04641463897672211,
+        0.001429144302380005
+      ],
+      "function_explained": 0.09793478581201487,
+      "nonlinear_relative_norm": 0.001429144302380005,
+      "bend_coefficients": [
+        0.07747073211912563,
+        0.0034464399192403535,
+        0.07991947321601332
+      ],
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9999976754188538,
+      "carrier_reassessment_delta": 0.001127154750465072,
+      "delay": 0.02,
+      "probe_gain_vs_raw": [
+        -0.00014086017779231757,
+        -8.380714890214964e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012598661705851555,
+      "reinjected_norm": 0.0001699088461464271,
+      "retained_norm": 0.00014053794438950717,
+      "raw_norm": 0.007028853055089712,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 163,
+      "epoch": 7,
+      "training_ce": 0.20647495985031128,
+      "boundary": false,
+      "latent": [
+        0.02827403295497195,
+        0.08686031627005905
+      ],
+      "decoder_coefficients": [
+        0.02827403295497195,
+        0.08686031627005905,
+        0.0006733654195743314
+      ],
+      "function_explained": 0.04656979485951451,
+      "nonlinear_relative_norm": 0.0006733654195743314,
+      "bend_coefficients": [
+        0.07747006182078796,
+        0.003444380703786426,
+        0.07991314712500674
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999985694885254,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02020061665447429,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009136195294559002,
+      "reinjected_norm": 0.00014053794438950717,
+      "retained_norm": 0.00014935950457584113,
+      "raw_norm": 0.007197248749434948,
+      "terminal_drain": false,
+      "applied_delay": 0.02020061665447429
+    },
+    {
+      "step": 164,
+      "epoch": 7,
+      "training_ce": 0.2978512644767761,
+      "boundary": false,
+      "latent": [
+        0.07626668422569294,
+        0.05821593538427422
+      ],
+      "decoder_coefficients": [
+        0.07626668422569294,
+        0.05821593538427422,
+        0.000736739002473876
+      ],
+      "function_explained": 0.052002884424369955,
+      "nonlinear_relative_norm": 0.000736739002473876,
+      "bend_coefficients": [
+        0.07749399415132348,
+        0.003462648746014777,
+        0.0799270914989724
+      ],
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.999957263469696,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020168125947820956,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008721156977117062,
+      "reinjected_norm": 0.00014935950457584113,
+      "retained_norm": 0.00015095471462700516,
+      "raw_norm": 0.007361872587352991,
+      "terminal_drain": false,
+      "applied_delay": 0.020168125947820956
+    },
+    {
+      "step": 165,
+      "epoch": 7,
+      "training_ce": 0.21131788194179535,
+      "boundary": false,
+      "latent": [
+        -0.055555535638234434,
+        0.15300636077201862
+      ],
+      "decoder_coefficients": [
+        -0.055555535638234434,
+        0.15300636077201862,
+        0.002080913953314177
+      ],
+      "function_explained": 0.20834068404190842,
+      "nonlinear_relative_norm": 0.002080913953314177,
+      "bend_coefficients": [
+        0.07750075650056795,
+        0.0034440244552707625,
+        0.07997838494643833
+      ],
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9999825358390808,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020831623151898383,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008341572247445583,
+      "reinjected_norm": 0.00015095471462700516,
+      "retained_norm": 0.00015707226702943444,
+      "raw_norm": 0.007134848739951849,
+      "terminal_drain": false,
+      "applied_delay": 0.020831623151898383
+    },
+    {
+      "step": 166,
+      "epoch": 7,
+      "training_ce": 0.24913381040096283,
+      "boundary": false,
+      "latent": [
+        -0.11348479911294106,
+        0.18665550139534556
+      ],
+      "decoder_coefficients": [
+        -0.11348479911294106,
+        0.18665550139534556,
+        0.0037116324739510033
+      ],
+      "function_explained": 0.38696804037341037,
+      "nonlinear_relative_norm": 0.0037116324739510033,
+      "bend_coefficients": [
+        0.07753659046491118,
+        0.0033850861072827598,
+        0.08007532450998434
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999579191207886,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021156817302107812,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.005597451701760292,
+      "reinjected_norm": 0.00015707226702943444,
+      "retained_norm": 0.00015389641339424998,
+      "raw_norm": 0.006729321088641882,
+      "terminal_drain": false,
+      "applied_delay": 0.021156817302107812
+    },
+    {
+      "step": 167,
+      "epoch": 7,
+      "training_ce": 0.25565338134765625,
+      "boundary": false,
+      "latent": [
+        -0.15933121629403962,
+        0.05391453219467692
+      ],
+      "decoder_coefficients": [
+        -0.15933121629403962,
+        0.05391453219467692,
+        0.002172060026404054
+      ],
+      "function_explained": 0.18722530021480732,
+      "nonlinear_relative_norm": 0.002172060026404054,
+      "bend_coefficients": [
+        0.07742494544206212,
+        0.003422864574797017,
+        0.08006254102379476
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999517798423767,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010852253064513206,
+      "reinjected_norm": 0.00015389641339424998,
+      "retained_norm": 0.00014666673087049276,
+      "raw_norm": 0.006904982030391693,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 168,
+      "epoch": 7,
+      "training_ce": 0.13100089132785797,
+      "boundary": false,
+      "latent": [
+        -0.29966942274482367,
+        0.03245185223931923
+      ],
+      "decoder_coefficients": [
+        -0.29966942274482367,
+        0.03245185223931923,
+        0.007003925507124872
+      ],
+      "function_explained": 0.4034650514947732,
+      "nonlinear_relative_norm": 0.007003925507124872,
+      "bend_coefficients": [
+        0.07696505606872266,
+        0.00347266699325315,
+        0.08005714781180104
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9998853206634521,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009754132479429245,
+      "reinjected_norm": 0.00014666673087049276,
+      "retained_norm": 0.00015982882177922875,
+      "raw_norm": 0.0072300308384001255,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 169,
+      "epoch": 7,
+      "training_ce": 0.23516133427619934,
+      "boundary": false,
+      "latent": [
+        -0.3850960288721495,
+        0.03555019279683266
+      ],
+      "decoder_coefficients": [
+        -0.3850960288721495,
+        0.03555019279683266,
+        0.011467472996601363
+      ],
+      "function_explained": 0.4988845026140032,
+      "nonlinear_relative_norm": 0.011467472996601363,
+      "bend_coefficients": [
+        0.07660872937073097,
+        0.0035055613413183923,
+        0.08005411116554148
+      ],
+      "frame_overlap": 0.9994694590568542,
+      "frame_gradient_outside_fraction": 0.9999561309814453,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009703706949949265,
+      "reinjected_norm": 0.00015982882177922875,
+      "retained_norm": 0.0001689523342065513,
+      "raw_norm": 0.007373083382844925,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 170,
+      "epoch": 7,
+      "training_ce": 0.18833547830581665,
+      "boundary": false,
+      "latent": [
+        -0.34527561909962157,
+        0.028141372752345375
+      ],
+      "decoder_coefficients": [
+        -0.34527561909962157,
+        0.028141372752345375,
+        0.009162264974890349
+      ],
+      "function_explained": 0.5718799028115402,
+      "nonlinear_relative_norm": 0.009162264974890349,
+      "bend_coefficients": [
+        0.07626717309670153,
+        0.0035333995722610515,
+        0.0800518422360533
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999057650566101,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009277453646063805,
+      "reinjected_norm": 0.0001689523342065513,
+      "retained_norm": 0.00016871612751856446,
+      "raw_norm": 0.007506644818931818,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 171,
+      "epoch": 7,
+      "training_ce": 0.2605075240135193,
+      "boundary": false,
+      "latent": [
+        -0.27411700096441993,
+        -0.05864426510876264
+      ],
+      "decoder_coefficients": [
+        -0.27411700096441993,
+        -0.05864426510876264,
+        0.006062836373869467
+      ],
+      "function_explained": 0.4182184295737925,
+      "nonlinear_relative_norm": 0.006062836373869467,
+      "bend_coefficients": [
+        0.07598503713128436,
+        0.003473039739436277,
+        0.08003892892522017
+      ],
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 0.9999033212661743,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009570318274199963,
+      "reinjected_norm": 0.00016871612751856446,
+      "retained_norm": 0.00016542538651265204,
+      "raw_norm": 0.007599361706525087,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 172,
+      "epoch": 7,
+      "training_ce": 0.2163315862417221,
+      "boundary": false,
+      "latent": [
+        -0.33877565499986284,
+        0.0894945681833502
+      ],
+      "decoder_coefficients": [
+        -0.33877565499986284,
+        0.0894945681833502,
+        0.0092564788781356
+      ],
+      "function_explained": 0.5649886758956937,
+      "nonlinear_relative_norm": 0.0092564788781356,
+      "bend_coefficients": [
+        0.07576188386551069,
+        0.003531990271637675,
+        0.08002335592773444
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999512434005737,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020221472624689343,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009476488456130028,
+      "reinjected_norm": 0.00016542538651265204,
+      "retained_norm": 0.00017727942031342536,
+      "raw_norm": 0.007814583368599415,
+      "terminal_drain": false,
+      "applied_delay": 0.020221472624689343
+    },
+    {
+      "step": 173,
+      "epoch": 7,
+      "training_ce": 0.22581510245800018,
+      "boundary": false,
+      "latent": [
+        -0.35879928409950207,
+        0.022833717512482272
+      ],
+      "decoder_coefficients": [
+        -0.35879928409950207,
+        0.022833717512482272,
+        0.00976613791438685
+      ],
+      "function_explained": 0.624635161465076,
+      "nonlinear_relative_norm": 0.00976613791438685,
+      "bend_coefficients": [
+        0.0756254043332483,
+        0.003540675726776574,
+        0.08002280319187932
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999869465827942,
+      "carrier_reassessment_delta": null,
+      "delay": 0.023275529546663166,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009827869944274426,
+      "reinjected_norm": 0.00017727942031342536,
+      "retained_norm": 0.0002032068296102807,
+      "raw_norm": 0.0077867330983281136,
+      "terminal_drain": false,
+      "applied_delay": 0.023275529546663166
+    },
+    {
+      "step": 174,
+      "epoch": 7,
+      "training_ce": 0.149364173412323,
+      "boundary": false,
+      "latent": [
+        -0.35566240106550867,
+        0.06530551251657904
+      ],
+      "decoder_coefficients": [
+        -0.35566240106550867,
+        0.06530551251657904,
+        0.009825335532128086
+      ],
+      "function_explained": 0.6524286245696789,
+      "nonlinear_relative_norm": 0.009825335532128086,
+      "bend_coefficients": [
+        0.07572378123158406,
+        0.0035226120974855353,
+        0.0800261199736511
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999925494194031,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009960277006030083,
+      "reinjected_norm": 0.0002032068296102807,
+      "retained_norm": 0.00018144468776881695,
+      "raw_norm": 0.008047469891607761,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 175,
+      "epoch": 7,
+      "training_ce": 0.1421264410018921,
+      "boundary": true,
+      "latent": [
+        -0.27589156992089486,
+        0.12433106762432854
+      ],
+      "decoder_coefficients": [
+        -0.27589156992089486,
+        0.12433106762432854,
+        0.006880031976836132
+      ],
+      "function_explained": 0.6044173228423515,
+      "nonlinear_relative_norm": 0.006880031976836132,
+      "bend_coefficients": [
+        0.07574732403579962,
+        0.003512002487399118,
+        0.08003090121488113
+      ],
+      "frame_overlap": 0.9994693994522095,
+      "frame_gradient_outside_fraction": 0.9999989867210388,
+      "carrier_reassessment_delta": 0.0012222060431016954,
+      "delay": 0.02,
+      "probe_gain_vs_raw": [
+        -2.085052631774862e-06,
+        2.18133905820705e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009387635625898838,
+      "reinjected_norm": 0.00018144468776881695,
+      "retained_norm": 0.0001796520227799192,
+      "raw_norm": 0.008154183626174927,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 176,
+      "epoch": 7,
+      "training_ce": 0.23989027738571167,
+      "boundary": false,
+      "latent": [
+        -0.2953136853201409,
+        0.0921362930173074
+      ],
+      "decoder_coefficients": [
+        -0.2953136853201409,
+        0.0921362930173074,
+        0.007189768800399418
+      ],
+      "function_explained": 0.5733878038059881,
+      "nonlinear_relative_norm": 0.007189768800399418,
+      "bend_coefficients": [
+        0.07538057532499581,
+        0.0036264261269460213,
+        0.07999520165029789
+      ],
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.999918520450592,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008851906284689903,
+      "reinjected_norm": 0.0001796520227799192,
+      "retained_norm": 0.0001818696764530614,
+      "raw_norm": 0.008255155757069588,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 177,
+      "epoch": 7,
+      "training_ce": 0.15855932235717773,
+      "boundary": false,
+      "latent": [
+        -0.19636687091433347,
+        0.14317766683324315
+      ],
+      "decoder_coefficients": [
+        -0.19636687091433347,
+        0.14317766683324315,
+        0.004444601999819381
+      ],
+      "function_explained": 0.3872458949259293,
+      "nonlinear_relative_norm": 0.004444601999819381,
+      "bend_coefficients": [
+        0.07522308968584529,
+        0.0037412541845930356,
+        0.07991147666499696
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999821782112122,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.0089870011433959,
+      "reinjected_norm": 0.0001818696764530614,
+      "retained_norm": 0.00017837801715359092,
+      "raw_norm": 0.008261383511126041,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 178,
+      "epoch": 7,
+      "training_ce": 0.1981191635131836,
+      "boundary": false,
+      "latent": [
+        -0.156283878963548,
+        0.16076282282975052
+      ],
+      "decoder_coefficients": [
+        -0.156283878963548,
+        0.16076282282975052,
+        0.0038085870027284776
+      ],
+      "function_explained": 0.42772268531481095,
+      "nonlinear_relative_norm": 0.0038085870027284776,
+      "bend_coefficients": [
+        0.07523067240806307,
+        0.0037334541489364628,
+        0.07991950024208398
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999996423721313,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008501198142766953,
+      "reinjected_norm": 0.00017837801715359092,
+      "retained_norm": 0.00017521022527944297,
+      "raw_norm": 0.00815653894096613,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 179,
+      "epoch": 7,
+      "training_ce": 0.1598222851753235,
+      "boundary": false,
+      "latent": [
+        -0.04292959830781482,
+        -0.03730613446910098
+      ],
+      "decoder_coefficients": [
+        -0.04292959830781482,
+        -0.03730613446910098,
+        0.00025585344312434565
+      ],
+      "function_explained": 0.07636592249036722,
+      "nonlinear_relative_norm": 0.00025585344312434565,
+      "bend_coefficients": [
+        0.07523984647545942,
+        0.0037414264805073934,
+        0.07992642825644565
+      ],
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999688863754272,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009914029389619827,
+      "reinjected_norm": 0.00017521022527944297,
+      "retained_norm": 0.00016340191359631717,
+      "raw_norm": 0.007980149239301682,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 180,
+      "epoch": 7,
+      "training_ce": 0.16439303755760193,
+      "boundary": false,
+      "latent": [
+        -0.039798044097125035,
+        0.009129409945680532
+      ],
+      "decoder_coefficients": [
+        -0.039798044097125035,
+        0.009129409945680532,
+        0.0001244733883398327
+      ],
+      "function_explained": 0.027600885456017243,
+      "nonlinear_relative_norm": 0.0001244733883398327,
+      "bend_coefficients": [
+        0.07524751309032984,
+        0.003739667809405946,
+        0.0799268316840464
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.999981701374054,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020287556949770077,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008431069552898407,
+      "reinjected_norm": 0.00016340191359631717,
+      "retained_norm": 0.0001631611812626943,
+      "raw_norm": 0.00784354843199253,
+      "terminal_drain": false,
+      "applied_delay": 0.020287556949770077
+    },
+    {
+      "step": 181,
+      "epoch": 7,
+      "training_ce": 0.23077407479286194,
+      "boundary": false,
+      "latent": [
+        -0.059112211844661665,
+        -0.003893423905183991
+      ],
+      "decoder_coefficients": [
+        -0.059112211844661665,
+        -0.003893423905183991,
+        0.0002650061639558917
+      ],
+      "function_explained": 0.046606976241727605,
+      "nonlinear_relative_norm": 0.0002650061639558917,
+      "bend_coefficients": [
+        0.07525658656236452,
+        0.003740265433345575,
+        0.0799268710465277
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999967217445374,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008404144085943699,
+      "reinjected_norm": 0.0001631611812626943,
+      "retained_norm": 0.00015925346815492958,
+      "raw_norm": 0.0077414922416210175,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 182,
+      "epoch": 7,
+      "training_ce": 0.25035691261291504,
+      "boundary": false,
+      "latent": [
+        -0.09155900588760892,
+        0.14642405832608674
+      ],
+      "decoder_coefficients": [
+        -0.09155900588760892,
+        0.14642405832608674,
+        0.0022943687000598783
+      ],
+      "function_explained": 0.3728814325993254,
+      "nonlinear_relative_norm": 0.0022943687000598783,
+      "bend_coefficients": [
+        0.07531801074284385,
+        0.0036420339410096047,
+        0.08008396595623998
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9997195601463318,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009765238501131535,
+      "reinjected_norm": 0.00015925346815492958,
+      "retained_norm": 0.00016533931193407625,
+      "raw_norm": 0.007873045280575752,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 183,
+      "epoch": 7,
+      "training_ce": 0.19796623289585114,
+      "boundary": false,
+      "latent": [
+        -0.11989941285963593,
+        0.15016320287451268
+      ],
+      "decoder_coefficients": [
+        -0.11989941285963593,
+        0.15016320287451268,
+        0.002823001291518817
+      ],
+      "function_explained": 0.5006944977281907,
+      "nonlinear_relative_norm": 0.002823001291518817,
+      "bend_coefficients": [
+        0.07534278298602752,
+        0.00361100894021831,
+        0.0801228219721027
+      ],
+      "frame_overlap": 0.9994692802429199,
+      "frame_gradient_outside_fraction": 0.9999881982803345,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0206641089101322,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008772236295044422,
+      "reinjected_norm": 0.00016533931193407625,
+      "retained_norm": 0.00017312874842900783,
+      "raw_norm": 0.00793186854571104,
+      "terminal_drain": false,
+      "applied_delay": 0.0206641089101322
+    },
+    {
+      "step": 184,
+      "epoch": 7,
+      "training_ce": 0.20112398266792297,
+      "boundary": false,
+      "latent": [
+        -0.09324710307413539,
+        0.20886498581649354
+      ],
+      "decoder_coefficients": [
+        -0.09324710307413539,
+        0.20886498581649354,
+        0.004080103606079944
+      ],
+      "function_explained": 0.6904445150662151,
+      "nonlinear_relative_norm": 0.004080103606079944,
+      "bend_coefficients": [
+        0.07534994570929705,
+        0.003594965094942928,
+        0.08015875871871905
+      ],
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999837279319763,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02198940347880125,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008801901713013649,
+      "reinjected_norm": 0.00017312874842900783,
+      "retained_norm": 0.00018439287669025362,
+      "raw_norm": 0.00788084976375103,
+      "terminal_drain": false,
+      "applied_delay": 0.02198940347880125
+    },
+    {
+      "step": 185,
+      "epoch": 7,
+      "training_ce": 0.22637878358364105,
+      "boundary": false,
+      "latent": [
+        -0.11528478698826403,
+        0.1490889067159152
+      ],
+      "decoder_coefficients": [
+        -0.11528478698826403,
+        0.1490889067159152,
+        0.002721384498798178
+      ],
+      "function_explained": 0.6634347307356664,
+      "nonlinear_relative_norm": 0.002721384498798178,
+      "bend_coefficients": [
+        0.0753913247888266,
+        0.0035414527288351663,
+        0.08022796212679405
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9998229146003723,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009825202636420727,
+      "reinjected_norm": 0.00018439287669025362,
+      "retained_norm": 0.00016522551595699042,
+      "raw_norm": 0.007821702398359776,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 186,
+      "epoch": 7,
+      "training_ce": 0.19701729714870453,
+      "boundary": false,
+      "latent": [
+        -0.12201739218367173,
+        0.055976559601441093
+      ],
+      "decoder_coefficients": [
+        -0.12201739218367173,
+        0.055976559601441093,
+        0.0013496402222033675
+      ],
+      "function_explained": 0.32419025489541275,
+      "nonlinear_relative_norm": 0.0013496402222033675,
+      "bend_coefficients": [
+        0.07542500002137605,
+        0.003526003917578333,
+        0.08023504940581726
+      ],
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.999981164932251,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009156692773103714,
+      "reinjected_norm": 0.00016522551595699042,
+      "retained_norm": 0.00016564878751523793,
+      "raw_norm": 0.007939294911921024,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 187,
+      "epoch": 7,
+      "training_ce": 0.20098653435707092,
+      "boundary": false,
+      "latent": [
+        -0.08583208643960727,
+        0.045648263567632824
+      ],
+      "decoder_coefficients": [
+        -0.08583208643960727,
+        0.045648263567632824,
+        0.0007090427866307795
+      ],
+      "function_explained": 0.2666233520841851,
+      "nonlinear_relative_norm": 0.0007090427866307795,
+      "bend_coefficients": [
+        0.07546549142577261,
+        0.00350446928668691,
+        0.08024650221498851
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.999898374080658,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.007717217784374952,
+      "reinjected_norm": 0.00016564878751523793,
+      "retained_norm": 0.00016132695600390434,
+      "raw_norm": 0.00778537942096591,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 188,
+      "epoch": 7,
+      "training_ce": 0.1929645836353302,
+      "boundary": false,
+      "latent": [
+        -0.02633640598974491,
+        0.006644584520291987
+      ],
+      "decoder_coefficients": [
+        -0.02633640598974491,
+        0.006644584520291987,
+        5.5272999518403464e-05
+      ],
+      "function_explained": 0.040849596608249716,
+      "nonlinear_relative_norm": 5.5272999518403464e-05,
+      "bend_coefficients": [
+        0.07547012582814099,
+        0.003503300042931717,
+        0.0802467972111607
+      ],
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 0.9999459981918335,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009813053533434868,
+      "reinjected_norm": 0.00016132695600390434,
+      "retained_norm": 0.00016390226664952934,
+      "raw_norm": 0.008025035262107849,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 189,
+      "epoch": 7,
+      "training_ce": 0.14138473570346832,
+      "boundary": true,
+      "latent": [
+        -0.05334024630239127,
+        -0.023516358868713762
+      ],
+      "decoder_coefficients": [
+        -0.05334024630239127,
+        -0.023516358868713762,
+        0.00026349867727009106
+      ],
+      "function_explained": 0.1330955712473174,
+      "nonlinear_relative_norm": 0.00026349867727009106,
+      "bend_coefficients": [
+        0.0754706911878709,
+        0.003503549295667133,
+        0.08024690710035659
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": 0.00039439781719322856,
+      "delay": 0.020077944580989424,
+      "probe_gain_vs_raw": [
+        2.8104700179014693e-05,
+        -6.748744377040013e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009387580677866936,
+      "reinjected_norm": 0.00016390226664952934,
+      "retained_norm": 0.00016556763148400933,
+      "raw_norm": 0.008052096702158451,
+      "terminal_drain": false,
+      "applied_delay": 0.020077944580989424
+    },
+    {
+      "step": 190,
+      "epoch": 8,
+      "training_ce": 0.14170224964618683,
+      "boundary": false,
+      "latent": [
+        0.04297000029377129,
+        0.023632964906070704
+      ],
+      "decoder_coefficients": [
+        0.04297000029377129,
+        0.023632964906070704,
+        0.00018772781181398038
+      ],
+      "function_explained": 0.056449546681645923,
+      "nonlinear_relative_norm": 0.00018772781181398038,
+      "bend_coefficients": [
+        0.07545725670670236,
+        0.0034961604983709564,
+        0.0802428433538822
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999121427536011,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020539358670357614,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009633622132241726,
+      "reinjected_norm": 0.00016556763148400933,
+      "retained_norm": 0.00017139058036264032,
+      "raw_norm": 0.008211989887058735,
+      "terminal_drain": false,
+      "applied_delay": 0.020539358670357614
+    },
+    {
+      "step": 191,
+      "epoch": 8,
+      "training_ce": 0.1006913036108017,
+      "boundary": false,
+      "latent": [
+        0.1595510545671226,
+        0.019081556938085737
+      ],
+      "decoder_coefficients": [
+        0.1595510545671226,
+        0.019081556938085737,
+        0.001960741484663501
+      ],
+      "function_explained": 0.5273753929873335,
+      "nonlinear_relative_norm": 0.001960741484663501,
+      "bend_coefficients": [
+        0.07536504776257465,
+        0.0034851327416297205,
+        0.0802415244859579
+      ],
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.999880313873291,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020151426603551955,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008512487635016441,
+      "reinjected_norm": 0.00017139058036264032,
+      "retained_norm": 0.00017018466314766556,
+      "raw_norm": 0.008295315317809582,
+      "terminal_drain": false,
+      "applied_delay": 0.020151426603551955
+    },
+    {
+      "step": 192,
+      "epoch": 8,
+      "training_ce": 0.07712694257497787,
+      "boundary": false,
+      "latent": [
+        0.1950938955437039,
+        0.04167332629747075
+      ],
+      "decoder_coefficients": [
+        0.1950938955437039,
+        0.04167332629747075,
+        0.003036204021950733
+      ],
+      "function_explained": 0.6059735840692422,
+      "nonlinear_relative_norm": 0.003036204021950733,
+      "bend_coefficients": [
+        0.07519965926948417,
+        0.0034498046827009764,
+        0.08023397818255823
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9996733665466309,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02104762419592589,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00933134090155363,
+      "reinjected_norm": 0.00017018466314766556,
+      "retained_norm": 0.00018227136752102524,
+      "raw_norm": 0.008448335342109203,
+      "terminal_drain": false,
+      "applied_delay": 0.02104762419592589
+    },
+    {
+      "step": 193,
+      "epoch": 8,
+      "training_ce": 0.14393508434295654,
+      "boundary": false,
+      "latent": [
+        0.1874186966268557,
+        0.14492638484644216
+      ],
+      "decoder_coefficients": [
+        0.1874186966268557,
+        0.14492638484644216,
+        0.00442035603165892
+      ],
+      "function_explained": 0.6519144590157049,
+      "nonlinear_relative_norm": 0.00442035603165892,
+      "bend_coefficients": [
+        0.07519352651150968,
+        0.0034450623679886357,
+        0.08023031106428544
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999995231628418,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021230286373756825,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009634268470108509,
+      "reinjected_norm": 0.00018227136752102524,
+      "retained_norm": 0.0001917643385240808,
+      "raw_norm": 0.008648140355944633,
+      "terminal_drain": false,
+      "applied_delay": 0.021230286373756825
+    },
+    {
+      "step": 194,
+      "epoch": 8,
+      "training_ce": 0.10259387642145157,
+      "boundary": false,
+      "latent": [
+        0.2502200356220453,
+        0.1528395727914138
+      ],
+      "decoder_coefficients": [
+        0.2502200356220453,
+        0.1528395727914138,
+        0.006713797850190164
+      ],
+      "function_explained": 0.8042102732173118,
+      "nonlinear_relative_norm": 0.006713797850190164,
+      "bend_coefficients": [
+        0.07497717321093697,
+        0.003312909297394833,
+        0.08014958923558607
+      ],
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.9996842741966248,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022938482603058218,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010416806675493717,
+      "reinjected_norm": 0.0001917643385240808,
+      "retained_norm": 0.00021150689281057566,
+      "raw_norm": 0.008741897530853748,
+      "terminal_drain": false,
+      "applied_delay": 0.022938482603058218
+    },
+    {
+      "step": 195,
+      "epoch": 8,
+      "training_ce": 0.11944670975208282,
+      "boundary": false,
+      "latent": [
+        0.26166947882263664,
+        0.08356237090465507
+      ],
+      "decoder_coefficients": [
+        0.26166947882263664,
+        0.08356237090465507,
+        0.005765853012480569
+      ],
+      "function_explained": 0.7873871273587112,
+      "nonlinear_relative_norm": 0.005765853012480569,
+      "bend_coefficients": [
+        0.07482661409595073,
+        0.0032648292665629426,
+        0.08013423520428078
+      ],
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9998874664306641,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021980269216001033,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00893750973045826,
+      "reinjected_norm": 0.00021150689281057566,
+      "retained_norm": 0.00019448601233307272,
+      "raw_norm": 0.008467423729598522,
+      "terminal_drain": false,
+      "applied_delay": 0.021980269216001033
+    },
+    {
+      "step": 196,
+      "epoch": 8,
+      "training_ce": 0.09027813374996185,
+      "boundary": false,
+      "latent": [
+        0.22290177362118932,
+        0.05250277532893596
+      ],
+      "decoder_coefficients": [
+        0.22290177362118932,
+        0.05250277532893596,
+        0.00397687684809854
+      ],
+      "function_explained": 0.7541806377634224,
+      "nonlinear_relative_norm": 0.00397687684809854,
+      "bend_coefficients": [
+        0.07468802904648435,
+        0.003232186638386963,
+        0.0801265464876527
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9998863339424133,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.007755840662866831,
+      "reinjected_norm": 0.00019448601233307272,
+      "retained_norm": 0.0001665534364292398,
+      "raw_norm": 0.008061698637902737,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 197,
+      "epoch": 8,
+      "training_ce": 0.08672308921813965,
+      "boundary": false,
+      "latent": [
+        0.17762738254429672,
+        -0.0415699431371454
+      ],
+      "decoder_coefficients": [
+        0.17762738254429672,
+        -0.0415699431371454,
+        0.0024711155359903605
+      ],
+      "function_explained": 0.6640311945243413,
+      "nonlinear_relative_norm": 0.0024711155359903605,
+      "bend_coefficients": [
+        0.07476728676582696,
+        0.00321363804053533,
+        0.0801308873958332
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999435544013977,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020396022946806626,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009865865111351013,
+      "reinjected_norm": 0.0001665534364292398,
+      "retained_norm": 0.0001691907673375681,
+      "raw_norm": 0.008194133639335632,
+      "terminal_drain": false,
+      "applied_delay": 0.020396022946806626
+    },
+    {
+      "step": 198,
+      "epoch": 8,
+      "training_ce": 0.08249785006046295,
+      "boundary": false,
+      "latent": [
+        0.15565210648121539,
+        -0.12635737351104562
+      ],
+      "decoder_coefficients": [
+        0.15565210648121539,
+        -0.12635737351104562,
+        0.003027609768070287
+      ],
+      "function_explained": 0.8018849922380218,
+      "nonlinear_relative_norm": 0.003027609768070287,
+      "bend_coefficients": [
+        0.0748020079120865,
+        0.003185451638527483,
+        0.08015376893471471
+      ],
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999402165412903,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025706323627382517,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011546977795660496,
+      "reinjected_norm": 0.0001691907673375681,
+      "retained_norm": 0.00021575680875685066,
+      "raw_norm": 0.008324004709720612,
+      "terminal_drain": false,
+      "applied_delay": 0.025706323627382517
+    },
+    {
+      "step": 199,
+      "epoch": 8,
+      "training_ce": 0.12013071775436401,
+      "boundary": false,
+      "latent": [
+        0.043103289538466476,
+        -0.2006439665227548
+      ],
+      "decoder_coefficients": [
+        0.043103289538466476,
+        -0.2006439665227548,
+        0.0033382555959047817
+      ],
+      "function_explained": 0.7831469449433537,
+      "nonlinear_relative_norm": 0.0033382555959047817,
+      "bend_coefficients": [
+        0.07480514475092523,
+        0.0031708497880960033,
+        0.08022173992302012
+      ],
+      "frame_overlap": 0.9994693994522095,
+      "frame_gradient_outside_fraction": 0.9999613761901855,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02197309679351747,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01221443060785532,
+      "reinjected_norm": 0.00021575680875685066,
+      "retained_norm": 0.00018811119662132114,
+      "raw_norm": 0.008391475304961205,
+      "terminal_drain": false,
+      "applied_delay": 0.02197309679351747
+    },
+    {
+      "step": 200,
+      "epoch": 8,
+      "training_ce": 0.06641978770494461,
+      "boundary": true,
+      "latent": [
+        0.021379647615963823,
+        -0.24620605492856792
+      ],
+      "decoder_coefficients": [
+        0.021379647615963823,
+        -0.24620605492856792,
+        0.004880336939733046
+      ],
+      "function_explained": 0.7900347665488855,
+      "nonlinear_relative_norm": 0.004880336939733046,
+      "bend_coefficients": [
+        0.07480590626266657,
+        0.0031620802889448674,
+        0.08032272866841406
+      ],
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999477863311768,
+      "carrier_reassessment_delta": 0.0005536052284799525,
+      "delay": 0.022554376134648918,
+      "probe_gain_vs_raw": [
+        -1.2838889071774726e-05,
+        -1.7561358926920646e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010603662580251694,
+      "reinjected_norm": 0.00018811119662132114,
+      "retained_norm": 0.00020249997032806277,
+      "raw_norm": 0.008745021186769009,
+      "terminal_drain": false,
+      "applied_delay": 0.022554376134648918
+    },
+    {
+      "step": 201,
+      "epoch": 8,
+      "training_ce": 0.13389010727405548,
+      "boundary": false,
+      "latent": [
+        -0.144288658790276,
+        -0.27894177635367984
+      ],
+      "decoder_coefficients": [
+        -0.144288658790276,
+        -0.27894177635367984,
+        0.007934460439138242
+      ],
+      "function_explained": 0.5785552658489259,
+      "nonlinear_relative_norm": 0.007934460439138242,
+      "bend_coefficients": [
+        0.07476031423908631,
+        0.003073940859611596,
+        0.08015233572699267
+      ],
+      "frame_overlap": 0.9994693994522095,
+      "frame_gradient_outside_fraction": 0.9999721646308899,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02609896119683981,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011754460632801056,
+      "reinjected_norm": 0.00020249997032806277,
+      "retained_norm": 0.00024075167311821133,
+      "raw_norm": 0.008704902604222298,
+      "terminal_drain": false,
+      "applied_delay": 0.02609896119683981
+    },
+    {
+      "step": 202,
+      "epoch": 8,
+      "training_ce": 0.09307755529880524,
+      "boundary": false,
+      "latent": [
+        -0.13662123982332486,
+        -0.26227140238509716
+      ],
+      "decoder_coefficients": [
+        -0.13662123982332486,
+        -0.26227140238509716,
+        0.0070189550758822635
+      ],
+      "function_explained": 0.6591914728326064,
+      "nonlinear_relative_norm": 0.0070189550758822635,
+      "bend_coefficients": [
+        0.07471439684891397,
+        0.002985793377346479,
+        0.07998311925801402
+      ],
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.9999523758888245,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020020877216375084,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01195479091256857,
+      "reinjected_norm": 0.00024075167311821133,
+      "retained_norm": 0.00018615956651046872,
+      "raw_norm": 0.00876330491155386,
+      "terminal_drain": false,
+      "applied_delay": 0.020020877216375084
+    },
+    {
+      "step": 203,
+      "epoch": 8,
+      "training_ce": 0.09411530941724777,
+      "boundary": false,
+      "latent": [
+        -0.1435505138520769,
+        -0.23010966271064193
+      ],
+      "decoder_coefficients": [
+        -0.1435505138520769,
+        -0.23010966271064193,
+        0.005873391408816999
+      ],
+      "function_explained": 0.6888313232257279,
+      "nonlinear_relative_norm": 0.005873391408816999,
+      "bend_coefficients": [
+        0.07469693833532,
+        0.002957807600307203,
+        0.07993825841048101
+      ],
+      "frame_overlap": 0.9994693994522095,
+      "frame_gradient_outside_fraction": 0.999993622303009,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008944197557866573,
+      "reinjected_norm": 0.00018615956651046872,
+      "retained_norm": 0.0001875605812529102,
+      "raw_norm": 0.008911559358239174,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 204,
+      "epoch": 8,
+      "training_ce": 0.09475217759609222,
+      "boundary": false,
+      "latent": [
+        -0.14348349248714623,
+        -0.21971561887029542
+      ],
+      "decoder_coefficients": [
+        -0.14348349248714623,
+        -0.21971561887029542,
+        0.005490086395916471
+      ],
+      "function_explained": 0.7802614937168393,
+      "nonlinear_relative_norm": 0.005490086395916471,
+      "bend_coefficients": [
+        0.07472214736731107,
+        0.002996410076236876,
+        0.07999737020614331
+      ],
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999854564666748,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008635202422738075,
+      "reinjected_norm": 0.0001875605812529102,
+      "retained_norm": 0.00018509183428250253,
+      "raw_norm": 0.008787658996880054,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 205,
+      "epoch": 8,
+      "training_ce": 0.1053064838051796,
+      "boundary": false,
+      "latent": [
+        -0.19762345278739635,
+        -0.17131867472232704
+      ],
+      "decoder_coefficients": [
+        -0.19762345278739635,
+        -0.17131867472232704,
+        0.005367653740732175
+      ],
+      "function_explained": 0.6100858038846257,
+      "nonlinear_relative_norm": 0.005367653740732175,
+      "bend_coefficients": [
+        0.07505006497321275,
+        0.003280680029366525,
+        0.08024380225126065
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9994062185287476,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02099470799788833,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009902359917759895,
+      "reinjected_norm": 0.00018509183428250253,
+      "retained_norm": 0.0002026333095273003,
+      "raw_norm": 0.00910411961376667,
+      "terminal_drain": false,
+      "applied_delay": 0.02099470799788833
+    },
+    {
+      "step": 206,
+      "epoch": 8,
+      "training_ce": 0.12100104242563248,
+      "boundary": false,
+      "latent": [
+        -0.15488654811772393,
+        -0.04385648992167364
+      ],
+      "decoder_coefficients": [
+        -0.15488654811772393,
+        -0.04385648992167364,
+        0.0019770644626057876
+      ],
+      "function_explained": 0.4286697182096134,
+      "nonlinear_relative_norm": 0.0019770644626057876,
+      "bend_coefficients": [
+        0.07491892715110762,
+        0.0032435480470001015,
+        0.0802332882432321
+      ],
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9998960494995117,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020677912102546544,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010556218214333057,
+      "reinjected_norm": 0.0002026333095273003,
+      "retained_norm": 0.0001946305565070361,
+      "raw_norm": 0.009029516950249672,
+      "terminal_drain": false,
+      "applied_delay": 0.020677912102546544
+    },
+    {
+      "step": 207,
+      "epoch": 8,
+      "training_ce": 0.07082392275333405,
+      "boundary": false,
+      "latent": [
+        -0.14102406857006985,
+        -0.06360824006823727
+      ],
+      "decoder_coefficients": [
+        -0.14102406857006985,
+        -0.06360824006823727,
+        0.0018436918523137551
+      ],
+      "function_explained": 0.4406468731450597,
+      "nonlinear_relative_norm": 0.0018436918523137551,
+      "bend_coefficients": [
+        0.07470343334593113,
+        0.003146350583958016,
+        0.08018944778659308
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9998047351837158,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020620200778357686,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009929091669619083,
+      "reinjected_norm": 0.0001946305565070361,
+      "retained_norm": 0.00019692980276886374,
+      "raw_norm": 0.009223148226737976,
+      "terminal_drain": false,
+      "applied_delay": 0.020620200778357686
+    },
+    {
+      "step": 208,
+      "epoch": 8,
+      "training_ce": 0.10032526403665543,
+      "boundary": false,
+      "latent": [
+        -0.2100620856748036,
+        -0.06965155894994773
+      ],
+      "decoder_coefficients": [
+        -0.2100620856748036,
+        -0.06965155894994773,
+        0.00373143064552515
+      ],
+      "function_explained": 0.5834307476003657,
+      "nonlinear_relative_norm": 0.00373143064552515,
+      "bend_coefficients": [
+        0.07436147316282636,
+        0.003032964773398516,
+        0.08015185176614559
+      ],
+      "frame_overlap": 0.9994692802429199,
+      "frame_gradient_outside_fraction": 0.9998235702514648,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009271827526390553,
+      "reinjected_norm": 0.00019692980276886374,
+      "retained_norm": 0.00019419289310462773,
+      "raw_norm": 0.009204343892633915,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 209,
+      "epoch": 8,
+      "training_ce": 0.1056513786315918,
+      "boundary": false,
+      "latent": [
+        -0.17077177714880254,
+        -0.09155121931348124
+      ],
+      "decoder_coefficients": [
+        -0.17077177714880254,
+        -0.09155121931348124,
+        0.002887824934066799
+      ],
+      "function_explained": 0.4844152635415331,
+      "nonlinear_relative_norm": 0.002887824934066799,
+      "bend_coefficients": [
+        0.07426339243922793,
+        0.0029803834277774507,
+        0.08012366276217125
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.99997478723526,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009258328936994076,
+      "reinjected_norm": 0.00019419289310462773,
+      "retained_norm": 0.00019418842566665262,
+      "raw_norm": 0.009280548430979252,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 210,
+      "epoch": 8,
+      "training_ce": 0.11323787271976471,
+      "boundary": false,
+      "latent": [
+        -0.12866030542343698,
+        -0.13161508978625025
+      ],
+      "decoder_coefficients": [
+        -0.12866030542343698,
+        -0.13161508978625025,
+        0.0026677305840449857
+      ],
+      "function_explained": 0.3786189839024,
+      "nonlinear_relative_norm": 0.0026677305840449857,
+      "bend_coefficients": [
+        0.07434508707587661,
+        0.0030639542455380975,
+        0.0802091528490079
+      ],
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999586939811707,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 9.64051158781204e-14,
+      "relative_intervention": 0.007907534018158913,
+      "reinjected_norm": 0.00019418842566665262,
+      "retained_norm": 0.00018854071095120162,
+      "raw_norm": 0.009035483002662659,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 211,
+      "epoch": 8,
+      "training_ce": 0.09299825131893158,
+      "boundary": false,
+      "latent": [
+        -0.1284736753335507,
+        -0.2020976911495756
+      ],
+      "decoder_coefficients": [
+        -0.1284736753335507,
+        -0.2020976911495756,
+        0.004582675631803117
+      ],
+      "function_explained": 0.44339164774792217,
+      "nonlinear_relative_norm": 0.004582675631803117,
+      "bend_coefficients": [
+        0.07436863344576776,
+        0.003100994261538255,
+        0.08026741927358352
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999901652336121,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009672637097537518,
+      "reinjected_norm": 0.00018854071095120162,
+      "retained_norm": 0.00019411693210713565,
+      "raw_norm": 0.00917060486972332,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 212,
+      "epoch": 8,
+      "training_ce": 0.11757662147283554,
+      "boundary": false,
+      "latent": [
+        -0.11927669012839713,
+        -0.1931969498771205
+      ],
+      "decoder_coefficients": [
+        -0.11927669012839713,
+        -0.1931969498771205,
+        0.0041254825888445475
+      ],
+      "function_explained": 0.5237283814882243,
+      "nonlinear_relative_norm": 0.0041254825888445475,
+      "bend_coefficients": [
+        0.07439365535500043,
+        0.0031415231908592384,
+        0.08033306550771503
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999817609786987,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009278801269829273,
+      "reinjected_norm": 0.00019411693210713565,
+      "retained_norm": 0.00019687713938765228,
+      "raw_norm": 0.009349382482469082,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 213,
+      "epoch": 8,
+      "training_ce": 0.11132217943668365,
+      "boundary": false,
+      "latent": [
+        -0.08827824062424983,
+        -0.10434122253413469
+      ],
+      "decoder_coefficients": [
+        -0.08827824062424983,
+        -0.10434122253413469,
+        0.0014832834389762733
+      ],
+      "function_explained": 0.3601289989957013,
+      "nonlinear_relative_norm": 0.0014832834389762733,
+      "bend_coefficients": [
+        0.07435789026386233,
+        0.003099250335090868,
+        0.08028310074380843
+      ],
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999451637268066,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020405694608343766,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009275263175368309,
+      "reinjected_norm": 0.00019687713938765228,
+      "retained_norm": 0.00019470960251055658,
+      "raw_norm": 0.009230208583176136,
+      "terminal_drain": false,
+      "applied_delay": 0.020405694608343766
+    },
+    {
+      "step": 214,
+      "epoch": 8,
+      "training_ce": 0.10345517098903656,
+      "boundary": false,
+      "latent": [
+        -0.056203878890384334,
+        -0.007608437824217216
+      ],
+      "decoder_coefficients": [
+        -0.056203878890384334,
+        -0.007608437824217216,
+        0.00024086012240756986
+      ],
+      "function_explained": 0.10578628126965972,
+      "nonlinear_relative_norm": 0.00024086012240756986,
+      "bend_coefficients": [
+        0.07436890976836556,
+        0.003100742068695768,
+        0.08028330268293803
+      ],
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 0.9999894499778748,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009185428731143475,
+      "reinjected_norm": 0.00019470960251055658,
+      "retained_norm": 0.0001857346505858004,
+      "raw_norm": 0.009061085991561413,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 215,
+      "epoch": 8,
+      "training_ce": 0.08495974540710449,
+      "boundary": false,
+      "latent": [
+        -0.04606538325997523,
+        0.0678610389652992
+      ],
+      "decoder_coefficients": [
+        -0.04606538325997523,
+        0.0678610389652992,
+        0.0005178335125748542
+      ],
+      "function_explained": 0.16341953142517895,
+      "nonlinear_relative_norm": 0.0005178335125748542,
+      "bend_coefficients": [
+        0.07436695454439077,
+        0.0031036223992379065,
+        0.08027905953527875
+      ],
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999989867210388,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02049072234891355,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009202168323099613,
+      "reinjected_norm": 0.0001857346505858004,
+      "retained_norm": 0.00019273848738521338,
+      "raw_norm": 0.009156922809779644,
+      "terminal_drain": false,
+      "applied_delay": 0.02049072234891355
+    },
+    {
+      "step": 216,
+      "epoch": 8,
+      "training_ce": 0.09077943861484528,
+      "boundary": true,
+      "latent": [
+        -0.26893226860556446,
+        -0.1747827626392735
+      ],
+      "decoder_coefficients": [
+        -0.26893226860556446,
+        -0.1747827626392735,
+        0.007976888684959793
+      ],
+      "function_explained": 0.23412398877093488,
+      "nonlinear_relative_norm": 0.007976888684959793,
+      "bend_coefficients": [
+        0.07440836795651913,
+        0.0031305375426665697,
+        0.0802965520554203
+      ],
+      "frame_overlap": 0.9994679689407349,
+      "frame_gradient_outside_fraction": 0.9999987483024597,
+      "carrier_reassessment_delta": 0.0005237900761315634,
+      "delay": 0.02127888871356845,
+      "probe_gain_vs_raw": [
+        2.1233816761424923e-05,
+        -8.785839178823983e-06
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.02058907225728035,
+      "reinjected_norm": 0.00019273848738521338,
+      "retained_norm": 2.564015346706583e-07,
+      "raw_norm": 0.009361211210489273,
+      "terminal_drain": true,
+      "applied_delay": 0.0
+    }
+  ]
+}

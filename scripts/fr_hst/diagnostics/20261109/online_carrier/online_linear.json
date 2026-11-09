@@ -1,0 +1,4911 @@
+{
+  "provenance": {
+    "seed": 42,
+    "arm": "online_linear",
+    "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+    "head_sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d",
+    "probe_groups": [
+      [
+        2024,
+        1168,
+        2777,
+        3666,
+        2303,
+        1906,
+        3708,
+        2396,
+        1286,
+        1068,
+        2363,
+        1161,
+        1231,
+        1391,
+        2634,
+        814,
+        3010,
+        1922,
+        330,
+        3530,
+        2515,
+        2176,
+        2710,
+        155,
+        1266,
+        2383,
+        80,
+        3425,
+        2267,
+        984,
+        3376,
+        3484
+      ],
+      [
+        1053,
+        755,
+        3516,
+        1023,
+        3109,
+        2818,
+        3234,
+        482,
+        2785,
+        124,
+        3320,
+        550,
+        718,
+        965,
+        2709,
+        1657,
+        924,
+        2527,
+        2157,
+        3534,
+        3330,
+        3243,
+        575,
+        291,
+        2100,
+        160,
+        1183,
+        398,
+        2366,
+        43,
+        3107,
+        3726
+      ],
+      [
+        2457,
+        1643,
+        558,
+        2589,
+        496,
+        1898,
+        723,
+        406,
+        13,
+        2987,
+        3217,
+        1850,
+        1739,
+        3331,
+        953,
+        3053,
+        2180,
+        1346,
+        3315,
+        2869,
+        1567,
+        1258,
+        1330,
+        3199,
+        785,
+        3496,
+        773,
+        2050,
+        1659,
+        3253,
+        791,
+        1207
+      ]
+    ],
+    "trace_sha256": "c314d3c218ef427df2c6cbe583c3df785a2e0b40a78d0d334f572be17cce5a4b",
+    "epochs": 8,
+    "steps_per_epoch": 27,
+    "warmup_steps": 75,
+    "rank": 3,
+    "task_weight": 0.05,
+    "ridge": 0.01,
+    "frame_rate": 0.04,
+    "bend_rate": 0.035,
+    "delay_range": [
+      0.02,
+      0.125
+    ],
+    "scheduler_steps": 2052
+  },
+  "checkpoint_sha256": "95f22935a52bc98628b783cdd7cbae068ac939fd4215f391d982a3dd124bb375",
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 10.200235617812723,
+      "ce": 1.9230291082503947,
+      "accuracy": 0.48936170212765956,
+      "n": 376
+    },
+    {
+      "epoch": 2,
+      "seconds": 7.568508344236761,
+      "ce": 1.6268948494119848,
+      "accuracy": 0.5319148936170213,
+      "n": 376
+    },
+    {
+      "epoch": 3,
+      "seconds": 17.71954783797264,
+      "ce": 1.3221850293747923,
+      "accuracy": 0.625,
+      "n": 376
+    },
+    {
+      "epoch": 4,
+      "seconds": 46.75963453296572,
+      "ce": 1.0767504509459151,
+      "accuracy": 0.6835106382978723,
+      "n": 376
+    },
+    {
+      "epoch": 5,
+      "seconds": 47.02685614395887,
+      "ce": 0.9172120804482318,
+      "accuracy": 0.7287234042553191,
+      "n": 376
+    },
+    {
+      "epoch": 6,
+      "seconds": 47.738886919338256,
+      "ce": 0.8213980248633851,
+      "accuracy": 0.7872340425531915,
+      "n": 376
+    },
+    {
+      "epoch": 7,
+      "seconds": 49.522084155119956,
+      "ce": 0.8366798238551363,
+      "accuracy": 0.7952127659574468,
+      "n": 376
+    },
+    {
+      "epoch": 8,
+      "seconds": 51.1362940329127,
+      "ce": 0.7629167881417782,
+      "accuracy": 0.8111702127659575,
+      "n": 376
+    }
+  ],
+  "records": [
+    {
+      "step": 1,
+      "epoch": 1,
+      "training_ce": 2.110682964324951,
+      "boundary": false
+    },
+    {
+      "step": 2,
+      "epoch": 1,
+      "training_ce": 2.0124564170837402,
+      "boundary": false
+    },
+    {
+      "step": 3,
+      "epoch": 1,
+      "training_ce": 1.842260479927063,
+      "boundary": false
+    },
+    {
+      "step": 4,
+      "epoch": 1,
+      "training_ce": 1.9300999641418457,
+      "boundary": false
+    },
+    {
+      "step": 5,
+      "epoch": 1,
+      "training_ce": 2.1223578453063965,
+      "boundary": false
+    },
+    {
+      "step": 6,
+      "epoch": 1,
+      "training_ce": 1.807159185409546,
+      "boundary": false
+    },
+    {
+      "step": 7,
+      "epoch": 1,
+      "training_ce": 1.9292538166046143,
+      "boundary": false
+    },
+    {
+      "step": 8,
+      "epoch": 1,
+      "training_ce": 1.8405606746673584,
+      "boundary": false
+    },
+    {
+      "step": 9,
+      "epoch": 1,
+      "training_ce": 1.8983914852142334,
+      "boundary": false
+    },
+    {
+      "step": 10,
+      "epoch": 1,
+      "training_ce": 1.7776236534118652,
+      "boundary": false
+    },
+    {
+      "step": 11,
+      "epoch": 1,
+      "training_ce": 1.9453752040863037,
+      "boundary": false
+    },
+    {
+      "step": 12,
+      "epoch": 1,
+      "training_ce": 1.95021653175354,
+      "boundary": false
+    },
+    {
+      "step": 13,
+      "epoch": 1,
+      "training_ce": 2.128024101257324,
+      "boundary": false
+    },
+    {
+      "step": 14,
+      "epoch": 1,
+      "training_ce": 2.035787582397461,
+      "boundary": false
+    },
+    {
+      "step": 15,
+      "epoch": 1,
+      "training_ce": 1.8651220798492432,
+      "boundary": false
+    },
+    {
+      "step": 16,
+      "epoch": 1,
+      "training_ce": 2.078258752822876,
+      "boundary": false
+    },
+    {
+      "step": 17,
+      "epoch": 1,
+      "training_ce": 1.8311779499053955,
+      "boundary": false
+    },
+    {
+      "step": 18,
+      "epoch": 1,
+      "training_ce": 1.701737642288208,
+      "boundary": false
+    },
+    {
+      "step": 19,
+      "epoch": 1,
+      "training_ce": 2.0671486854553223,
+      "boundary": false
+    },
+    {
+      "step": 20,
+      "epoch": 1,
+      "training_ce": 1.8553472757339478,
+      "boundary": false
+    },
+    {
+      "step": 21,
+      "epoch": 1,
+      "training_ce": 1.99769127368927,
+      "boundary": false
+    },
+    {
+      "step": 22,
+      "epoch": 1,
+      "training_ce": 1.91836678981781,
+      "boundary": false
+    },
+    {
+      "step": 23,
+      "epoch": 1,
+      "training_ce": 1.6080734729766846,
+      "boundary": false
+    },
+    {
+      "step": 24,
+      "epoch": 1,
+      "training_ce": 1.9213470220565796,
+      "boundary": false
+    },
+    {
+      "step": 25,
+      "epoch": 1,
+      "training_ce": 1.8900783061981201,
+      "boundary": true
+    },
+    {
+      "step": 26,
+      "epoch": 1,
+      "training_ce": 1.894089698791504,
+      "boundary": false
+    },
+    {
+      "step": 27,
+      "epoch": 1,
+      "training_ce": 2.2813026905059814,
+      "boundary": true
+    },
+    {
+      "step": 28,
+      "epoch": 2,
+      "training_ce": 1.8163321018218994,
+      "boundary": false
+    },
+    {
+      "step": 29,
+      "epoch": 2,
+      "training_ce": 1.6545376777648926,
+      "boundary": false
+    },
+    {
+      "step": 30,
+      "epoch": 2,
+      "training_ce": 1.8720464706420898,
+      "boundary": false
+    },
+    {
+      "step": 31,
+      "epoch": 2,
+      "training_ce": 1.7959671020507812,
+      "boundary": false
+    },
+    {
+      "step": 32,
+      "epoch": 2,
+      "training_ce": 1.8692758083343506,
+      "boundary": false
+    },
+    {
+      "step": 33,
+      "epoch": 2,
+      "training_ce": 1.7620410919189453,
+      "boundary": false
+    },
+    {
+      "step": 34,
+      "epoch": 2,
+      "training_ce": 1.9848353862762451,
+      "boundary": false
+    },
+    {
+      "step": 35,
+      "epoch": 2,
+      "training_ce": 2.0121681690216064,
+      "boundary": false
+    },
+    {
+      "step": 36,
+      "epoch": 2,
+      "training_ce": 1.6777878999710083,
+      "boundary": false
+    },
+    {
+      "step": 37,
+      "epoch": 2,
+      "training_ce": 1.7511996030807495,
+      "boundary": false
+    },
+    {
+      "step": 38,
+      "epoch": 2,
+      "training_ce": 1.7759101390838623,
+      "boundary": false
+    },
+    {
+      "step": 39,
+      "epoch": 2,
+      "training_ce": 1.81929612159729,
+      "boundary": false
+    },
+    {
+      "step": 40,
+      "epoch": 2,
+      "training_ce": 1.780088186264038,
+      "boundary": false
+    },
+    {
+      "step": 41,
+      "epoch": 2,
+      "training_ce": 1.6457386016845703,
+      "boundary": false
+    },
+    {
+      "step": 42,
+      "epoch": 2,
+      "training_ce": 1.6447632312774658,
+      "boundary": false
+    },
+    {
+      "step": 43,
+      "epoch": 2,
+      "training_ce": 1.4550530910491943,
+      "boundary": false
+    },
+    {
+      "step": 44,
+      "epoch": 2,
+      "training_ce": 1.5929220914840698,
+      "boundary": false
+    },
+    {
+      "step": 45,
+      "epoch": 2,
+      "training_ce": 1.6706278324127197,
+      "boundary": false
+    },
+    {
+      "step": 46,
+      "epoch": 2,
+      "training_ce": 1.6459698677062988,
+      "boundary": false
+    },
+    {
+      "step": 47,
+      "epoch": 2,
+      "training_ce": 1.9926021099090576,
+      "boundary": false
+    },
+    {
+      "step": 48,
+      "epoch": 2,
+      "training_ce": 1.7856394052505493,
+      "boundary": false
+    },
+    {
+      "step": 49,
+      "epoch": 2,
+      "training_ce": 1.6864670515060425,
+      "boundary": false
+    },
+    {
+      "step": 50,
+      "epoch": 2,
+      "training_ce": 1.708267092704773,
+      "boundary": true
+    },
+    {
+      "step": 51,
+      "epoch": 2,
+      "training_ce": 1.7402803897857666,
+      "boundary": false
+    },
+    {
+      "step": 52,
+      "epoch": 2,
+      "training_ce": 1.4486643075942993,
+      "boundary": false
+    },
+    {
+      "step": 53,
+      "epoch": 2,
+      "training_ce": 1.4875617027282715,
+      "boundary": false
+    },
+    {
+      "step": 54,
+      "epoch": 2,
+      "training_ce": 1.4919999837875366,
+      "boundary": true
+    },
+    {
+      "step": 55,
+      "epoch": 3,
+      "training_ce": 1.378915786743164,
+      "boundary": false
+    },
+    {
+      "step": 56,
+      "epoch": 3,
+      "training_ce": 1.295302152633667,
+      "boundary": false
+    },
+    {
+      "step": 57,
+      "epoch": 3,
+      "training_ce": 1.697454810142517,
+      "boundary": false
+    },
+    {
+      "step": 58,
+      "epoch": 3,
+      "training_ce": 1.3205432891845703,
+      "boundary": false
+    },
+    {
+      "step": 59,
+      "epoch": 3,
+      "training_ce": 1.6541332006454468,
+      "boundary": false
+    },
+    {
+      "step": 60,
+      "epoch": 3,
+      "training_ce": 1.6439189910888672,
+      "boundary": false
+    },
+    {
+      "step": 61,
+      "epoch": 3,
+      "training_ce": 1.7179028987884521,
+      "boundary": false
+    },
+    {
+      "step": 62,
+      "epoch": 3,
+      "training_ce": 1.3777339458465576,
+      "boundary": false
+    },
+    {
+      "step": 63,
+      "epoch": 3,
+      "training_ce": 1.4997719526290894,
+      "boundary": false
+    },
+    {
+      "step": 64,
+      "epoch": 3,
+      "training_ce": 1.480339527130127,
+      "boundary": false
+    },
+    {
+      "step": 65,
+      "epoch": 3,
+      "training_ce": 1.1647329330444336,
+      "boundary": false
+    },
+    {
+      "step": 66,
+      "epoch": 3,
+      "training_ce": 1.2887279987335205,
+      "boundary": false
+    },
+    {
+      "step": 67,
+      "epoch": 3,
+      "training_ce": 1.570226788520813,
+      "boundary": false
+    },
+    {
+      "step": 68,
+      "epoch": 3,
+      "training_ce": 1.2759636640548706,
+      "boundary": false
+    },
+    {
+      "step": 69,
+      "epoch": 3,
+      "training_ce": 1.298058032989502,
+      "boundary": false
+    },
+    {
+      "step": 70,
+      "epoch": 3,
+      "training_ce": 1.2640653848648071,
+      "boundary": false
+    },
+    {
+      "step": 71,
+      "epoch": 3,
+      "training_ce": 1.4589648246765137,
+      "boundary": false
+    },
+    {
+      "step": 72,
+      "epoch": 3,
+      "training_ce": 1.492857575416565,
+      "boundary": false
+    },
+    {
+      "step": 73,
+      "epoch": 3,
+      "training_ce": 1.455775260925293,
+      "boundary": false
+    },
+    {
+      "step": 74,
+      "epoch": 3,
+      "training_ce": 1.4402519464492798,
+      "boundary": false
+    },
+    {
+      "step": 75,
+      "epoch": 3,
+      "training_ce": 1.3437191247940063,
+      "boundary": true
+    },
+    {
+      "step": 76,
+      "epoch": 3,
+      "training_ce": 1.0223033428192139,
+      "boundary": false,
+      "latent": [
+        0.5963489806409995,
+        -0.24004421618221222,
+        0.09375411501304624
+      ],
+      "decoder_coefficients": [
+        0.5963489806409995,
+        -0.24004421618221222,
+        0.09375411501304624
+      ],
+      "function_explained": 0.449716097851261,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999995231628418,
+      "carrier_reassessment_delta": null,
+      "delay": 0.04786227405071258,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.03303235396742821,
+      "reinjected_norm": 0.0,
+      "retained_norm": 0.00014440300583373755,
+      "raw_norm": 0.004371562507003546,
+      "terminal_drain": false,
+      "applied_delay": 0.04786227405071258
+    },
+    {
+      "step": 77,
+      "epoch": 3,
+      "training_ce": 1.187110424041748,
+      "boundary": false,
+      "latent": [
+        0.6315979011235845,
+        -0.2558646657422053,
+        0.02476431414507395
+      ],
+      "decoder_coefficients": [
+        0.6315979011235845,
+        -0.2558646657422053,
+        0.02476431414507395
+      ],
+      "function_explained": 0.6200245987224758,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999992251396179,
+      "carrier_reassessment_delta": null,
+      "delay": 0.05081930935382843,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.017067812383174896,
+      "reinjected_norm": 0.00014440300583373755,
+      "retained_norm": 0.00016101957589853555,
+      "raw_norm": 0.004431798122823238,
+      "terminal_drain": false,
+      "applied_delay": 0.05081930935382843
+    },
+    {
+      "step": 78,
+      "epoch": 3,
+      "training_ce": 1.3095000982284546,
+      "boundary": false,
+      "latent": [
+        0.6898814155921504,
+        -0.2371005821748125,
+        -0.10698588589151273
+      ],
+      "decoder_coefficients": [
+        0.6898814155921504,
+        -0.2371005821748125,
+        -0.10698588589151273
+      ],
+      "function_explained": 0.744671038406467,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994680881500244,
+      "frame_gradient_outside_fraction": 0.9999991059303284,
+      "carrier_reassessment_delta": null,
+      "delay": 0.05779731348156929,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01919260248541832,
+      "reinjected_norm": 0.00016101957589853555,
+      "retained_norm": 0.00018195882148575038,
+      "raw_norm": 0.004356049932539463,
+      "terminal_drain": false,
+      "applied_delay": 0.05779731348156929
+    },
+    {
+      "step": 79,
+      "epoch": 3,
+      "training_ce": 1.1375148296356201,
+      "boundary": false,
+      "latent": [
+        0.637861550731053,
+        -0.30205973453981133,
+        0.02020715457508015
+      ],
+      "decoder_coefficients": [
+        0.637861550731053,
+        -0.30205973453981133,
+        0.02020715457508015
+      ],
+      "function_explained": 0.8132235751366244,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.999998927116394,
+      "carrier_reassessment_delta": null,
+      "delay": 0.052687812149524685,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.018430029973387718,
+      "reinjected_norm": 0.00018195882148575038,
+      "retained_norm": 0.0001680783461779356,
+      "raw_norm": 0.0043007382191717625,
+      "terminal_drain": false,
+      "applied_delay": 0.052687812149524685
+    },
+    {
+      "step": 80,
+      "epoch": 3,
+      "training_ce": 1.2103849649429321,
+      "boundary": false,
+      "latent": [
+        0.5689847243202583,
+        -0.08689359730940023,
+        -0.08276909714764127
+      ],
+      "decoder_coefficients": [
+        0.5689847243202583,
+        -0.08689359730940023,
+        -0.08276909714764127
+      ],
+      "function_explained": 0.7155606989891816,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994679689407349,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.04242207422852516,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.021282076835632324,
+      "reinjected_norm": 0.0001680783461779356,
+      "retained_norm": 0.0001402737107127905,
+      "raw_norm": 0.004348592832684517,
+      "terminal_drain": false,
+      "applied_delay": 0.04242207422852516
+    },
+    {
+      "step": 81,
+      "epoch": 3,
+      "training_ce": 1.503716230392456,
+      "boundary": true,
+      "latent": [
+        0.5332631785436227,
+        -0.012160691242577305,
+        -0.1698336207889615
+      ],
+      "decoder_coefficients": [
+        0.5332631785436227,
+        -0.012160691242577305,
+        -0.1698336207889615
+      ],
+      "function_explained": 0.594229644615478,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 0.9999996423721313,
+      "carrier_reassessment_delta": 0.005586597698953221,
+      "delay": 0.039221308380365374,
+      "probe_gain_vs_raw": [
+        4.37704716407169e-05,
+        -4.882299791839794e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013513261452317238,
+      "reinjected_norm": 0.0001402737107127905,
+      "retained_norm": 0.00013237980601843446,
+      "raw_norm": 0.0042482404969632626,
+      "terminal_drain": false,
+      "applied_delay": 0.039221308380365374
+    },
+    {
+      "step": 82,
+      "epoch": 4,
+      "training_ce": 1.0879371166229248,
+      "boundary": false,
+      "latent": [
+        0.5504772311373769,
+        -0.010454597547949937,
+        -0.16900994293069693
+      ],
+      "decoder_coefficients": [
+        0.5504772311373769,
+        -0.010454597547949937,
+        -0.16900994293069693
+      ],
+      "function_explained": 0.7219116677140793,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999995827674866,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0385177792608738,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012467409484088421,
+      "reinjected_norm": 0.00013237980601843446,
+      "retained_norm": 0.00013493980804923922,
+      "raw_norm": 0.004339262377470732,
+      "terminal_drain": false,
+      "applied_delay": 0.0385177792608738
+    },
+    {
+      "step": 83,
+      "epoch": 4,
+      "training_ce": 1.1862367391586304,
+      "boundary": false,
+      "latent": [
+        0.5092084105903998,
+        -0.059897706004784994,
+        -0.10335180037225859
+      ],
+      "decoder_coefficients": [
+        0.5092084105903998,
+        -0.059897706004784994,
+        -0.10335180037225859
+      ],
+      "function_explained": 0.734031800589891,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9999995827674866,
+      "carrier_reassessment_delta": null,
+      "delay": 0.04338180080056191,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010447371751070023,
+      "reinjected_norm": 0.00013493980804923922,
+      "retained_norm": 0.0001487549889134243,
+      "raw_norm": 0.004276145249605179,
+      "terminal_drain": false,
+      "applied_delay": 0.04338180080056191
+    },
+    {
+      "step": 84,
+      "epoch": 4,
+      "training_ce": 1.2204616069793701,
+      "boundary": false,
+      "latent": [
+        0.43184421530711337,
+        -0.0294335100378458,
+        -0.19567403892276047
+      ],
+      "decoder_coefficients": [
+        0.43184421530711337,
+        -0.0294335100378458,
+        -0.19567403892276047
+      ],
+      "function_explained": 0.7528870467559767,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999996423721313,
+      "carrier_reassessment_delta": null,
+      "delay": 0.033520808666944506,
+      "conservation_error": 9.766638181789994e-14,
+      "relative_intervention": 0.015452594496309757,
+      "reinjected_norm": 0.0001487549889134243,
+      "retained_norm": 0.00012615625746548176,
+      "raw_norm": 0.004431099630892277,
+      "terminal_drain": false,
+      "applied_delay": 0.033520808666944506
+    },
+    {
+      "step": 85,
+      "epoch": 4,
+      "training_ce": 1.1692991256713867,
+      "boundary": false,
+      "latent": [
+        0.34112786080034024,
+        -0.11473971586996842,
+        -0.16966343330450293
+      ],
+      "decoder_coefficients": [
+        0.34112786080034024,
+        -0.11473971586996842,
+        -0.16966343330450293
+      ],
+      "function_explained": 0.5447002150965148,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03531856864690781,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012651355937123299,
+      "reinjected_norm": 0.00012615625746548176,
+      "retained_norm": 0.00013778333959635347,
+      "raw_norm": 0.004566579591482878,
+      "terminal_drain": false,
+      "applied_delay": 0.03531856864690781
+    },
+    {
+      "step": 86,
+      "epoch": 4,
+      "training_ce": 1.225865125656128,
+      "boundary": false,
+      "latent": [
+        0.4141054026741189,
+        -0.0023929225796575065,
+        -0.28530144267594465
+      ],
+      "decoder_coefficients": [
+        0.4141054026741189,
+        -0.0023929225796575065,
+        -0.28530144267594465
+      ],
+      "function_explained": 0.7040201624704894,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.999999463558197,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03551878392696381,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012839320115745068,
+      "reinjected_norm": 0.00013778333959635347,
+      "retained_norm": 0.00014415846089832485,
+      "raw_norm": 0.004569650627672672,
+      "terminal_drain": false,
+      "applied_delay": 0.03551878392696381
+    },
+    {
+      "step": 87,
+      "epoch": 4,
+      "training_ce": 1.0916697978973389,
+      "boundary": false,
+      "latent": [
+        0.41755762277692987,
+        0.025066269083520196,
+        -0.2321821099665887
+      ],
+      "decoder_coefficients": [
+        0.41755762277692987,
+        0.025066269083520196,
+        -0.2321821099665887
+      ],
+      "function_explained": 0.8221211788238644,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994677305221558,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.043103815987706184,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012543581426143646,
+      "reinjected_norm": 0.00014415846089832485,
+      "retained_norm": 0.00017127511091530323,
+      "raw_norm": 0.00452085118740797,
+      "terminal_drain": false,
+      "applied_delay": 0.043103815987706184
+    },
+    {
+      "step": 88,
+      "epoch": 4,
+      "training_ce": 1.200814962387085,
+      "boundary": false,
+      "latent": [
+        0.3323172976371475,
+        -0.051766000915521734,
+        -0.13764720994433455
+      ],
+      "decoder_coefficients": [
+        0.3323172976371475,
+        -0.051766000915521734,
+        -0.13764720994433455
+      ],
+      "function_explained": 0.5344021486233569,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994679689407349,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.029440614208579064,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.018366528674960136,
+      "reinjected_norm": 0.00017127511091530323,
+      "retained_norm": 0.00011780564091168344,
+      "raw_norm": 0.00457377452403307,
+      "terminal_drain": false,
+      "applied_delay": 0.029440614208579064
+    },
+    {
+      "step": 89,
+      "epoch": 4,
+      "training_ce": 1.1228723526000977,
+      "boundary": false,
+      "latent": [
+        0.3690379357665507,
+        -0.058107710339765715,
+        -0.17179456383642758
+      ],
+      "decoder_coefficients": [
+        0.3690379357665507,
+        -0.058107710339765715,
+        -0.17179456383642758
+      ],
+      "function_explained": 0.5736844291532442,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.035536060482263564,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01323846448212862,
+      "reinjected_norm": 0.00011780564091168344,
+      "retained_norm": 0.00014559543342329562,
+      "raw_norm": 0.004762432537972927,
+      "terminal_drain": false,
+      "applied_delay": 0.035536060482263564
+    },
+    {
+      "step": 90,
+      "epoch": 4,
+      "training_ce": 0.9949474334716797,
+      "boundary": false,
+      "latent": [
+        0.3620568841097396,
+        -0.12906035318916043,
+        -0.12592707541789527
+      ],
+      "decoder_coefficients": [
+        0.3620568841097396,
+        -0.12906035318916043,
+        -0.12592707541789527
+      ],
+      "function_explained": 0.5370152314714576,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994677305221558,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03565423168241978,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012165145017206669,
+      "reinjected_norm": 0.00014559543342329562,
+      "retained_norm": 0.0001467434922233224,
+      "raw_norm": 0.004827854689210653,
+      "terminal_drain": false,
+      "applied_delay": 0.03565423168241978
+    },
+    {
+      "step": 91,
+      "epoch": 4,
+      "training_ce": 0.9532113075256348,
+      "boundary": false,
+      "latent": [
+        0.29652891351093286,
+        -0.18760842083241533,
+        -0.09159367711698113
+      ],
+      "decoder_coefficients": [
+        0.29652891351093286,
+        -0.18760842083241533,
+        -0.09159367711698113
+      ],
+      "function_explained": 0.3775626693922043,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.034437254667282105,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012836211360991001,
+      "reinjected_norm": 0.0001467434922233224,
+      "retained_norm": 0.00014950700278859586,
+      "raw_norm": 0.005006772931665182,
+      "terminal_drain": false,
+      "applied_delay": 0.034437254667282105
+    },
+    {
+      "step": 92,
+      "epoch": 4,
+      "training_ce": 1.0876996517181396,
+      "boundary": false,
+      "latent": [
+        0.289314201025466,
+        -0.28111853431950246,
+        -0.14514057762403543
+      ],
+      "decoder_coefficients": [
+        0.289314201025466,
+        -0.28111853431950246,
+        -0.14514057762403543
+      ],
+      "function_explained": 0.5339754246545183,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03759279981255531,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013932300731539726,
+      "reinjected_norm": 0.00014950700278859586,
+      "retained_norm": 0.00016775124822743237,
+      "raw_norm": 0.005108235403895378,
+      "terminal_drain": false,
+      "applied_delay": 0.03759279981255531
+    },
+    {
+      "step": 93,
+      "epoch": 4,
+      "training_ce": 0.9760829210281372,
+      "boundary": false,
+      "latent": [
+        0.288788841297017,
+        -0.3726560867838466,
+        -0.2618340675011961
+      ],
+      "decoder_coefficients": [
+        0.288788841297017,
+        -0.3726560867838466,
+        -0.2618340675011961
+      ],
+      "function_explained": 0.6291954063368135,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.04453782953321934,
+      "conservation_error": 1.9146537382896262e-13,
+      "relative_intervention": 0.016104424372315407,
+      "reinjected_norm": 0.00016775124822743237,
+      "retained_norm": 0.00020164587476756424,
+      "raw_norm": 0.005046170204877853,
+      "terminal_drain": false,
+      "applied_delay": 0.04453782953321934
+    },
+    {
+      "step": 94,
+      "epoch": 4,
+      "training_ce": 0.9257484674453735,
+      "boundary": false,
+      "latent": [
+        0.32561181112437115,
+        -0.4412380719291414,
+        -0.05648408055790046
+      ],
+      "decoder_coefficients": [
+        0.32561181112437115,
+        -0.4412380719291414,
+        -0.05648408055790046
+      ],
+      "function_explained": 0.673525963019752,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.04227894574403763,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.018906980752944946,
+      "reinjected_norm": 0.00020164587476756424,
+      "retained_norm": 0.00018826243467628956,
+      "raw_norm": 0.005073525942862034,
+      "terminal_drain": false,
+      "applied_delay": 0.04227894574403763
+    },
+    {
+      "step": 95,
+      "epoch": 4,
+      "training_ce": 0.8625918626785278,
+      "boundary": false,
+      "latent": [
+        0.32165533754521886,
+        -0.27655986140404,
+        -0.27106759186254714
+      ],
+      "decoder_coefficients": [
+        0.32165533754521886,
+        -0.27655986140404,
+        -0.27106759186254714
+      ],
+      "function_explained": 0.6358888652100516,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03634893007576466,
+      "conservation_error": 1.70333392572955e-13,
+      "relative_intervention": 0.017647268250584602,
+      "reinjected_norm": 0.00018826243467628956,
+      "retained_norm": 0.00016322624287568033,
+      "raw_norm": 0.00506998598575592,
+      "terminal_drain": false,
+      "applied_delay": 0.03634893007576466
+    },
+    {
+      "step": 96,
+      "epoch": 4,
+      "training_ce": 0.800545334815979,
+      "boundary": false,
+      "latent": [
+        0.34956199443391756,
+        -0.30252761553281105,
+        -0.28186941463397025
+      ],
+      "decoder_coefficients": [
+        0.34956199443391756,
+        -0.30252761553281105,
+        -0.28186941463397025
+      ],
+      "function_explained": 0.6631828309120746,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.9999992847442627,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03779697045683861,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014244594611227512,
+      "reinjected_norm": 0.00016322624287568033,
+      "retained_norm": 0.00017416874470654875,
+      "raw_norm": 0.005208555143326521,
+      "terminal_drain": false,
+      "applied_delay": 0.03779697045683861
+    },
+    {
+      "step": 97,
+      "epoch": 4,
+      "training_ce": 1.1141884326934814,
+      "boundary": false,
+      "latent": [
+        0.30862438180074525,
+        -0.1956756943743238,
+        -0.2527142859361388
+      ],
+      "decoder_coefficients": [
+        0.30862438180074525,
+        -0.1956756943743238,
+        -0.2527142859361388
+      ],
+      "function_explained": 0.7052818778890586,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994697570800781,
+      "frame_gradient_outside_fraction": 0.9999993443489075,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03787860617041588,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01411275565624237,
+      "reinjected_norm": 0.00017416874470654875,
+      "retained_norm": 0.0001747124915709719,
+      "raw_norm": 0.005190225318074226,
+      "terminal_drain": false,
+      "applied_delay": 0.03787860617041588
+    },
+    {
+      "step": 98,
+      "epoch": 4,
+      "training_ce": 0.9143685102462769,
+      "boundary": false,
+      "latent": [
+        0.3098125761047573,
+        -0.13633208999324967,
+        -0.1452416266502395
+      ],
+      "decoder_coefficients": [
+        0.3098125761047573,
+        -0.13633208999324967,
+        -0.1452416266502395
+      ],
+      "function_explained": 0.5646616081933516,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994693994522095,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03302812486886978,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012569190934300423,
+      "reinjected_norm": 0.0001747124915709719,
+      "retained_norm": 0.00014764817024115473,
+      "raw_norm": 0.005075785331428051,
+      "terminal_drain": false,
+      "applied_delay": 0.03302812486886978
+    },
+    {
+      "step": 99,
+      "epoch": 4,
+      "training_ce": 0.9929160475730896,
+      "boundary": false,
+      "latent": [
+        0.2661949523851435,
+        -0.09155941796377948,
+        -0.002941290988250634
+      ],
+      "decoder_coefficients": [
+        0.2661949523851435,
+        -0.09155941796377948,
+        -0.002941290988250634
+      ],
+      "function_explained": 0.3280973201670002,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.029025318175554274,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013173151761293411,
+      "reinjected_norm": 0.00014764817024115473,
+      "retained_norm": 0.00013294194650370628,
+      "raw_norm": 0.005115005653351545,
+      "terminal_drain": false,
+      "applied_delay": 0.029025318175554274
+    },
+    {
+      "step": 100,
+      "epoch": 4,
+      "training_ce": 1.0002028942108154,
+      "boundary": true,
+      "latent": [
+        0.2714958498864945,
+        -0.11495192238614028,
+        0.021023573178491285
+      ],
+      "decoder_coefficients": [
+        0.2714958498864945,
+        -0.11495192238614028,
+        0.021023573178491285
+      ],
+      "function_explained": 0.4074690749179163,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": 0.0034276779694527313,
+      "delay": 0.02856318440288305,
+      "probe_gain_vs_raw": [
+        3.670279487904358e-05,
+        8.828932617124885e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011773325502872467,
+      "reinjected_norm": 0.00013294194650370628,
+      "retained_norm": 0.0001347733341390267,
+      "raw_norm": 0.00526973232626915,
+      "terminal_drain": false,
+      "applied_delay": 0.02856318440288305
+    },
+    {
+      "step": 101,
+      "epoch": 4,
+      "training_ce": 0.9581516981124878,
+      "boundary": false,
+      "latent": [
+        0.2388675838948858,
+        -0.030961528976676422,
+        0.022452251996547466
+      ],
+      "decoder_coefficients": [
+        0.2388675838948858,
+        -0.030961528976676422,
+        0.022452251996547466
+      ],
+      "function_explained": 0.2740046073176793,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02804119758307934,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010495205409824848,
+      "reinjected_norm": 0.0001347733341390267,
+      "retained_norm": 0.00013634127390105277,
+      "raw_norm": 0.005270404741168022,
+      "terminal_drain": false,
+      "applied_delay": 0.02804119758307934
+    },
+    {
+      "step": 102,
+      "epoch": 4,
+      "training_ce": 0.7998713254928589,
+      "boundary": false,
+      "latent": [
+        0.3662738787325081,
+        -0.16396681193509,
+        0.17994458716236064
+      ],
+      "decoder_coefficients": [
+        0.3662738787325081,
+        -0.16396681193509,
+        0.17994458716236064
+      ],
+      "function_explained": 0.42380845090445185,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.032610719725489616,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014239893294870853,
+      "reinjected_norm": 0.00013634127390105277,
+      "retained_norm": 0.00015849129704292864,
+      "raw_norm": 0.005374064669013023,
+      "terminal_drain": false,
+      "applied_delay": 0.032610719725489616
+    },
+    {
+      "step": 103,
+      "epoch": 4,
+      "training_ce": 0.8912488222122192,
+      "boundary": false,
+      "latent": [
+        0.3270709053184186,
+        -0.13007395988952894,
+        0.1545574149105957
+      ],
+      "decoder_coefficients": [
+        0.3270709053184186,
+        -0.13007395988952894,
+        0.1545574149105957
+      ],
+      "function_explained": 0.5331238177456157,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999997615814209,
+      "carrier_reassessment_delta": null,
+      "delay": 0.030204213857650757,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011210886761546135,
+      "reinjected_norm": 0.00015849129704292864,
+      "retained_norm": 0.00014941957488190383,
+      "raw_norm": 0.005390974227339029,
+      "terminal_drain": false,
+      "applied_delay": 0.030204213857650757
+    },
+    {
+      "step": 104,
+      "epoch": 4,
+      "training_ce": 0.887549877166748,
+      "boundary": false,
+      "latent": [
+        0.23856084177947134,
+        -0.17036993419101887,
+        0.19112337864561676
+      ],
+      "decoder_coefficients": [
+        0.23856084177947134,
+        -0.17036993419101887,
+        0.19112337864561676
+      ],
+      "function_explained": 0.4591519885357048,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994698762893677,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.030582887567579747,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012694976292550564,
+      "reinjected_norm": 0.00014941957488190383,
+      "retained_norm": 0.00015734067710582167,
+      "raw_norm": 0.005493368487805128,
+      "terminal_drain": false,
+      "applied_delay": 0.030582887567579747
+    },
+    {
+      "step": 105,
+      "epoch": 4,
+      "training_ce": 1.070223331451416,
+      "boundary": false,
+      "latent": [
+        0.32181044401066444,
+        -0.3143228875167877,
+        0.38390197508703117
+      ],
+      "decoder_coefficients": [
+        0.32181044401066444,
+        -0.3143228875167877,
+        0.38390197508703117
+      ],
+      "function_explained": 0.6018125190946579,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999995231628418,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03366195477545261,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01524450071156025,
+      "reinjected_norm": 0.00015734067710582167,
+      "retained_norm": 0.00018576272123027593,
+      "raw_norm": 0.005537960212677717,
+      "terminal_drain": false,
+      "applied_delay": 0.03366195477545261
+    },
+    {
+      "step": 106,
+      "epoch": 4,
+      "training_ce": 0.8294180631637573,
+      "boundary": false,
+      "latent": [
+        0.28079885549545164,
+        -0.23317600074949987,
+        0.3554487943573272
+      ],
+      "decoder_coefficients": [
+        0.28079885549545164,
+        -0.23317600074949987,
+        0.3554487943573272
+      ],
+      "function_explained": 0.6876277875212896,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999994039535522,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03449250303208828,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013350924476981163,
+      "reinjected_norm": 0.00018576272123027593,
+      "retained_norm": 0.0001925048272823915,
+      "raw_norm": 0.005656267516314983,
+      "terminal_drain": false,
+      "applied_delay": 0.03449250303208828
+    },
+    {
+      "step": 107,
+      "epoch": 4,
+      "training_ce": 0.9730832576751709,
+      "boundary": false,
+      "latent": [
+        0.27673092193611404,
+        -0.22792986646621957,
+        0.5103564950494198
+      ],
+      "decoder_coefficients": [
+        0.27673092193611404,
+        -0.22792986646621957,
+        0.5103564950494198
+      ],
+      "function_explained": 0.6637243360506948,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999993443489075,
+      "carrier_reassessment_delta": null,
+      "delay": 0.033218631669878956,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012619256973266602,
+      "reinjected_norm": 0.0001925048272823915,
+      "retained_norm": 0.00019746758334804326,
+      "raw_norm": 0.0055977278389036655,
+      "terminal_drain": false,
+      "applied_delay": 0.033218631669878956
+    },
+    {
+      "step": 108,
+      "epoch": 4,
+      "training_ce": 0.8736080527305603,
+      "boundary": true,
+      "latent": [
+        0.3182612444299326,
+        -0.2173646838874254,
+        0.4837516035008678
+      ],
+      "decoder_coefficients": [
+        0.3182612444299326,
+        -0.2173646838874254,
+        0.4837516035008678
+      ],
+      "function_explained": 0.7396313310571421,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999989867210388,
+      "carrier_reassessment_delta": 0.004418264109126351,
+      "delay": 0.02610689578577876,
+      "probe_gain_vs_raw": [
+        8.535523716812306e-05,
+        2.7385258217004348e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012926531955599785,
+      "reinjected_norm": 0.00019746758334804326,
+      "retained_norm": 0.0001481640647398308,
+      "raw_norm": 0.0054220110177993774,
+      "terminal_drain": false,
+      "applied_delay": 0.02610689578577876
+    },
+    {
+      "step": 109,
+      "epoch": 5,
+      "training_ce": 0.7841430902481079,
+      "boundary": false,
+      "latent": [
+        0.2790162993333295,
+        -0.14472696974790303,
+        0.5064756235899354
+      ],
+      "decoder_coefficients": [
+        0.2790162993333295,
+        -0.14472696974790303,
+        0.5064756235899354
+      ],
+      "function_explained": 0.6635377064318126,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999994039535522,
+      "carrier_reassessment_delta": null,
+      "delay": 0.031012915298342707,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012474073097109795,
+      "reinjected_norm": 0.0001481640647398308,
+      "retained_norm": 0.00018321974494028836,
+      "raw_norm": 0.0055998931638896465,
+      "terminal_drain": false,
+      "applied_delay": 0.031012915298342707
+    },
+    {
+      "step": 110,
+      "epoch": 5,
+      "training_ce": 0.7720078825950623,
+      "boundary": false,
+      "latent": [
+        0.3282466593260707,
+        -0.05341670360510059,
+        0.4644872176302603
+      ],
+      "decoder_coefficients": [
+        0.3282466593260707,
+        -0.05341670360510059,
+        0.4644872176302603
+      ],
+      "function_explained": 0.7092350815438968,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.999999463558197,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03287930585443974,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01278278511017561,
+      "reinjected_norm": 0.00018321974494028836,
+      "retained_norm": 0.00019566566334106028,
+      "raw_norm": 0.005745017901062965,
+      "terminal_drain": false,
+      "applied_delay": 0.03287930585443974
+    },
+    {
+      "step": 111,
+      "epoch": 5,
+      "training_ce": 0.7455469965934753,
+      "boundary": false,
+      "latent": [
+        0.33999484247473855,
+        0.09346172893413666,
+        0.36290987156738913
+      ],
+      "decoder_coefficients": [
+        0.33999484247473855,
+        0.09346172893413666,
+        0.36290987156738913
+      ],
+      "function_explained": 0.7262939261132539,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999995827674866,
+      "carrier_reassessment_delta": null,
+      "delay": 0.029423055239021778,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013102642260491848,
+      "reinjected_norm": 0.00019566566334106028,
+      "retained_norm": 0.0001774615520844236,
+      "raw_norm": 0.005886989179998636,
+      "terminal_drain": false,
+      "applied_delay": 0.029423055239021778
+    },
+    {
+      "step": 112,
+      "epoch": 5,
+      "training_ce": 0.7210012674331665,
+      "boundary": false,
+      "latent": [
+        0.29481529440714765,
+        0.030153651875020067,
+        0.3958332166403278
+      ],
+      "decoder_coefficients": [
+        0.29481529440714765,
+        0.030153651875020067,
+        0.3958332166403278
+      ],
+      "function_explained": 0.7442850695268567,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999996423721313,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021414920073002577,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011878660880029202,
+      "reinjected_norm": 0.0001774615520844236,
+      "retained_norm": 0.00012956703722011298,
+      "raw_norm": 0.005852114409208298,
+      "terminal_drain": false,
+      "applied_delay": 0.021414920073002577
+    },
+    {
+      "step": 113,
+      "epoch": 5,
+      "training_ce": 0.6284024715423584,
+      "boundary": false,
+      "latent": [
+        0.28418405764312393,
+        0.0059097983265841,
+        0.3703173082776083
+      ],
+      "decoder_coefficients": [
+        0.28418405764312393,
+        0.0059097983265841,
+        0.3703173082776083
+      ],
+      "function_explained": 0.6203904825286934,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02526157045736909,
+      "conservation_error": 3.660677175883892e-14,
+      "relative_intervention": 0.009872899390757084,
+      "reinjected_norm": 0.00012956703722011298,
+      "retained_norm": 0.00015268728020600975,
+      "raw_norm": 0.005961495917290449,
+      "terminal_drain": false,
+      "applied_delay": 0.02526157045736909
+    },
+    {
+      "step": 114,
+      "epoch": 5,
+      "training_ce": 0.7542440891265869,
+      "boundary": false,
+      "latent": [
+        0.2535565054114435,
+        -0.025898994503116897,
+        0.4340701584557506
+      ],
+      "decoder_coefficients": [
+        0.2535565054114435,
+        -0.025898994503116897,
+        0.4340701584557506
+      ],
+      "function_explained": 0.6829645316522015,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999995231628418,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022702951459214093,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009385604411363602,
+      "reinjected_norm": 0.00015268728020600975,
+      "retained_norm": 0.00014551666390616447,
+      "raw_norm": 0.006105463020503521,
+      "terminal_drain": false,
+      "applied_delay": 0.022702951459214093
+    },
+    {
+      "step": 115,
+      "epoch": 5,
+      "training_ce": 0.6412280797958374,
+      "boundary": false,
+      "latent": [
+        0.19386713804080263,
+        -0.08110875620548097,
+        0.3799642562928771
+      ],
+      "decoder_coefficients": [
+        0.19386713804080263,
+        -0.08110875620548097,
+        0.3799642562928771
+      ],
+      "function_explained": 0.7066251874633374,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994680881500244,
+      "frame_gradient_outside_fraction": 0.999999463558197,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020638915221206845,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008619323372840881,
+      "reinjected_norm": 0.00014551666390616447,
+      "retained_norm": 0.00013230387412477285,
+      "raw_norm": 0.006188665051013231,
+      "terminal_drain": false,
+      "applied_delay": 0.020638915221206845
+    },
+    {
+      "step": 116,
+      "epoch": 5,
+      "training_ce": 0.6513522863388062,
+      "boundary": false,
+      "latent": [
+        0.21119191142038465,
+        -0.007254196366497193,
+        0.24625965749924955
+      ],
+      "decoder_coefficients": [
+        0.21119191142038465,
+        -0.007254196366497193,
+        0.24625965749924955
+      ],
+      "function_explained": 0.6162385394996004,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008025620132684708,
+      "reinjected_norm": 0.00013230387412477285,
+      "retained_norm": 0.0001222643186338246,
+      "raw_norm": 0.006100189872086048,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 117,
+      "epoch": 5,
+      "training_ce": 0.5923483371734619,
+      "boundary": false,
+      "latent": [
+        0.20694791074382343,
+        -0.11295776867982694,
+        0.21631996159823452
+      ],
+      "decoder_coefficients": [
+        0.20694791074382343,
+        -0.11295776867982694,
+        0.21631996159823452
+      ],
+      "function_explained": 0.6830519813144049,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02517603961750865,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.0094392579048872,
+      "reinjected_norm": 0.0001222643186338246,
+      "retained_norm": 0.00015089602675288916,
+      "raw_norm": 0.006121571641415358,
+      "terminal_drain": false,
+      "applied_delay": 0.02517603961750865
+    },
+    {
+      "step": 118,
+      "epoch": 5,
+      "training_ce": 0.6479820013046265,
+      "boundary": false,
+      "latent": [
+        0.16765814381651142,
+        -0.20235952675351976,
+        0.21782965830714346
+      ],
+      "decoder_coefficients": [
+        0.16765814381651142,
+        -0.20235952675351976,
+        0.21782965830714346
+      ],
+      "function_explained": 0.6610377923469961,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999997615814209,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025933523941785098,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009536204859614372,
+      "reinjected_norm": 0.00015089602675288916,
+      "retained_norm": 0.00015755418280605227,
+      "raw_norm": 0.006169512402266264,
+      "terminal_drain": false,
+      "applied_delay": 0.025933523941785098
+    },
+    {
+      "step": 119,
+      "epoch": 5,
+      "training_ce": 0.7658522129058838,
+      "boundary": false,
+      "latent": [
+        0.10051663854577263,
+        -0.3312215306024575,
+        0.1903657885458005
+      ],
+      "decoder_coefficients": [
+        0.10051663854577263,
+        -0.3312215306024575,
+        0.1903657885458005
+      ],
+      "function_explained": 0.6324305488816191,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.030857740007340907,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012427208013832569,
+      "reinjected_norm": 0.00015755418280605227,
+      "retained_norm": 0.0001898413320304826,
+      "raw_norm": 0.006191664841026068,
+      "terminal_drain": false,
+      "applied_delay": 0.030857740007340907
+    },
+    {
+      "step": 120,
+      "epoch": 5,
+      "training_ce": 0.6925538778305054,
+      "boundary": false,
+      "latent": [
+        0.10215720589023637,
+        -0.36669339148758295,
+        0.11135913355929335
+      ],
+      "decoder_coefficients": [
+        0.10215720589023637,
+        -0.36669339148758295,
+        0.11135913355929335
+      ],
+      "function_explained": 0.6008741139312797,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.030231864638626576,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01054773386567831,
+      "reinjected_norm": 0.0001898413320304826,
+      "retained_norm": 0.00018170288240071386,
+      "raw_norm": 0.006105931010097265,
+      "terminal_drain": false,
+      "applied_delay": 0.030231864638626576
+    },
+    {
+      "step": 121,
+      "epoch": 5,
+      "training_ce": 0.7288607954978943,
+      "boundary": false,
+      "latent": [
+        0.10887514390768015,
+        -0.2840545730099186,
+        0.04539547504803893
+      ],
+      "decoder_coefficients": [
+        0.10887514390768015,
+        -0.2840545730099186,
+        0.04539547504803893
+      ],
+      "function_explained": 0.47180967689748676,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014493393711745739,
+      "reinjected_norm": 0.00018170288240071386,
+      "retained_norm": 0.00011846236156998202,
+      "raw_norm": 0.0060904305428266525,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 122,
+      "epoch": 5,
+      "training_ce": 0.541074275970459,
+      "boundary": false,
+      "latent": [
+        0.08427245556981698,
+        -0.2570311435136189,
+        0.03356806009047759
+      ],
+      "decoder_coefficients": [
+        0.08427245556981698,
+        -0.2570311435136189,
+        0.03356806009047759
+      ],
+      "function_explained": 0.6110282898867083,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.023436506651341914,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009937897324562073,
+      "reinjected_norm": 0.00011846236156998202,
+      "retained_norm": 0.000140073083457537,
+      "raw_norm": 0.006174744106829166,
+      "terminal_drain": false,
+      "applied_delay": 0.023436506651341914
+    },
+    {
+      "step": 123,
+      "epoch": 5,
+      "training_ce": 0.6266378164291382,
+      "boundary": false,
+      "latent": [
+        0.13798311338946728,
+        -0.16612817361834012,
+        -0.04359417934097717
+      ],
+      "decoder_coefficients": [
+        0.13798311338946728,
+        -0.16612817361834012,
+        -0.04359417934097717
+      ],
+      "function_explained": 0.4687643514409827,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025691720619797707,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009674408473074436,
+      "reinjected_norm": 0.000140073083457537,
+      "retained_norm": 0.00014989588817115873,
+      "raw_norm": 0.006109896581619978,
+      "terminal_drain": false,
+      "applied_delay": 0.025691720619797707
+    },
+    {
+      "step": 124,
+      "epoch": 5,
+      "training_ce": 0.7493072748184204,
+      "boundary": false,
+      "latent": [
+        0.20835820175275227,
+        -0.16193640030638035,
+        0.1461428755138124
+      ],
+      "decoder_coefficients": [
+        0.20835820175275227,
+        -0.16193640030638035,
+        0.1461428755138124
+      ],
+      "function_explained": 0.3915525941522441,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025727589968591928,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011291412636637688,
+      "reinjected_norm": 0.00014989588817115873,
+      "retained_norm": 0.0001513555325800553,
+      "raw_norm": 0.006098583806306124,
+      "terminal_drain": false,
+      "applied_delay": 0.025727589968591928
+    },
+    {
+      "step": 125,
+      "epoch": 5,
+      "training_ce": 0.7873733043670654,
+      "boundary": true,
+      "latent": [
+        0.1615330176121329,
+        -0.25218372880061435,
+        -0.0382050993631529
+      ],
+      "decoder_coefficients": [
+        0.1615330176121329,
+        -0.25218372880061435,
+        -0.0382050993631529
+      ],
+      "function_explained": 0.48774674785951966,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": 0.0024517485488142403,
+      "delay": 0.030257405526936055,
+      "probe_gain_vs_raw": [
+        -0.00020066266809357926,
+        -0.00011062274083162689
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013427754864096642,
+      "reinjected_norm": 0.0001513555325800553,
+      "retained_norm": 0.00017868498980533332,
+      "raw_norm": 0.006241923198103905,
+      "terminal_drain": false,
+      "applied_delay": 0.030257405526936055
+    },
+    {
+      "step": 126,
+      "epoch": 5,
+      "training_ce": 0.6720776557922363,
+      "boundary": false,
+      "latent": [
+        0.18705646109937288,
+        -0.20165508462821077,
+        -0.12685032672465468
+      ],
+      "decoder_coefficients": [
+        0.18705646109937288,
+        -0.20165508462821077,
+        -0.12685032672465468
+      ],
+      "function_explained": 0.5511201630435454,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025092644486576318,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011376452632248402,
+      "reinjected_norm": 0.00017868498980533332,
+      "retained_norm": 0.00014501075202133507,
+      "raw_norm": 0.006078529637306929,
+      "terminal_drain": false,
+      "applied_delay": 0.025092644486576318
+    },
+    {
+      "step": 127,
+      "epoch": 5,
+      "training_ce": 0.6169055700302124,
+      "boundary": false,
+      "latent": [
+        0.16516325307913035,
+        -0.2365108394380206,
+        -0.2969411438132742
+      ],
+      "decoder_coefficients": [
+        0.16516325307913035,
+        -0.2365108394380206,
+        -0.2969411438132742
+      ],
+      "function_explained": 0.7030405912595681,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.027540464587509632,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012546372599899769,
+      "reinjected_norm": 0.00014501075202133507,
+      "retained_norm": 0.00016841628530528396,
+      "raw_norm": 0.006271045655012131,
+      "terminal_drain": false,
+      "applied_delay": 0.027540464587509632
+    },
+    {
+      "step": 128,
+      "epoch": 5,
+      "training_ce": 0.5188154578208923,
+      "boundary": false,
+      "latent": [
+        0.2609988999210802,
+        -0.19756442115798173,
+        -0.25481718626050404
+      ],
+      "decoder_coefficients": [
+        0.2609988999210802,
+        -0.19756442115798173,
+        -0.25481718626050404
+      ],
+      "function_explained": 0.6491948326435838,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.027084568180143834,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010755960829555988,
+      "reinjected_norm": 0.00016841628530528396,
+      "retained_norm": 0.00016341522859875113,
+      "raw_norm": 0.0062644523568451405,
+      "terminal_drain": false,
+      "applied_delay": 0.027084568180143834
+    },
+    {
+      "step": 129,
+      "epoch": 5,
+      "training_ce": 0.5609090328216553,
+      "boundary": false,
+      "latent": [
+        0.31805275640785924,
+        -0.11425023698366589,
+        -0.37228443971149794
+      ],
+      "decoder_coefficients": [
+        0.31805275640785924,
+        -0.11425023698366589,
+        -0.37228443971149794
+      ],
+      "function_explained": 0.684896430836194,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999993443489075,
+      "carrier_reassessment_delta": null,
+      "delay": 0.0294667449593544,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010231352411210537,
+      "reinjected_norm": 0.00016341522859875113,
+      "retained_norm": 0.00018274541071150452,
+      "raw_norm": 0.006211291998624802,
+      "terminal_drain": false,
+      "applied_delay": 0.0294667449593544
+    },
+    {
+      "step": 130,
+      "epoch": 5,
+      "training_ce": 0.6392463445663452,
+      "boundary": false,
+      "latent": [
+        0.21216138557258762,
+        0.0010237432265440356,
+        -0.48828775341445146
+      ],
+      "decoder_coefficients": [
+        0.21216138557258762,
+        0.0010237432265440356,
+        -0.48828775341445146
+      ],
+      "function_explained": 0.7123961071295618,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999988079071045,
+      "carrier_reassessment_delta": null,
+      "delay": 0.023567307479679583,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011760176159441471,
+      "reinjected_norm": 0.00018274541071150452,
+      "retained_norm": 0.0001598035596543923,
+      "raw_norm": 0.0063244495540857315,
+      "terminal_drain": false,
+      "applied_delay": 0.023567307479679583
+    },
+    {
+      "step": 131,
+      "epoch": 5,
+      "training_ce": 0.5077839493751526,
+      "boundary": false,
+      "latent": [
+        0.23527661124689112,
+        0.0990640628876959,
+        -0.5663362274252399
+      ],
+      "decoder_coefficients": [
+        0.23527661124689112,
+        0.0990640628876959,
+        -0.5663362274252399
+      ],
+      "function_explained": 0.7954390455881457,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999971389770508,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02325560702010989,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009685256518423557,
+      "reinjected_norm": 0.0001598035596543923,
+      "retained_norm": 0.0001647418102947995,
+      "raw_norm": 0.006301955785602331,
+      "terminal_drain": false,
+      "applied_delay": 0.02325560702010989
+    },
+    {
+      "step": 132,
+      "epoch": 5,
+      "training_ce": 0.4913490414619446,
+      "boundary": false,
+      "latent": [
+        0.19865356907157963,
+        0.09983702820655331,
+        -0.5241171467573491
+      ],
+      "decoder_coefficients": [
+        0.19865356907157963,
+        0.09983702820655331,
+        -0.5241171467573491
+      ],
+      "function_explained": 0.843973913876415,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994679689407349,
+      "frame_gradient_outside_fraction": 0.9999973773956299,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02566338883712888,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009791548363864422,
+      "reinjected_norm": 0.0001647418102947995,
+      "retained_norm": 0.0001788914087228477,
+      "raw_norm": 0.006281434558331966,
+      "terminal_drain": false,
+      "applied_delay": 0.02566338883712888
+    },
+    {
+      "step": 133,
+      "epoch": 5,
+      "training_ce": 0.5694481730461121,
+      "boundary": false,
+      "latent": [
+        0.15525058072452996,
+        0.10332244639040793,
+        -0.5851937500303328
+      ],
+      "decoder_coefficients": [
+        0.15525058072452996,
+        0.10332244639040793,
+        -0.5851937500303328
+      ],
+      "function_explained": 0.8569450447571478,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9999977946281433,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02208664981648326,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009627820923924446,
+      "reinjected_norm": 0.0001788914087228477,
+      "retained_norm": 0.00016081103240139782,
+      "raw_norm": 0.006315026897937059,
+      "terminal_drain": false,
+      "applied_delay": 0.02208664981648326
+    },
+    {
+      "step": 134,
+      "epoch": 5,
+      "training_ce": 0.49572744965553284,
+      "boundary": false,
+      "latent": [
+        0.09090319419284408,
+        0.07701371194089902,
+        -0.4421245325943452
+      ],
+      "decoder_coefficients": [
+        0.09090319419284408,
+        0.07701371194089902,
+        -0.4421245325943452
+      ],
+      "function_explained": 0.6949594954660897,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999995827674866,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009819364175200462,
+      "reinjected_norm": 0.00016081103240139782,
+      "retained_norm": 0.00013930203567724675,
+      "raw_norm": 0.006348694674670696,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 135,
+      "epoch": 5,
+      "training_ce": 0.8588978052139282,
+      "boundary": true,
+      "latent": [
+        0.12110660102103789,
+        0.10617196218510837,
+        -0.4356064771540335
+      ],
+      "decoder_coefficients": [
+        0.12110660102103789,
+        0.10617196218510837,
+        -0.4356064771540335
+      ],
+      "function_explained": 0.7285733441041483,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999996423721313,
+      "carrier_reassessment_delta": 0.0014771095353226771,
+      "delay": 0.023936339598149062,
+      "probe_gain_vs_raw": [
+        2.791820197092971e-05,
+        4.396701160044795e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009862836450338364,
+      "reinjected_norm": 0.00013930203567724675,
+      "retained_norm": 0.00016506259271409363,
+      "raw_norm": 0.0063187070190906525,
+      "terminal_drain": false,
+      "applied_delay": 0.023936339598149062
+    },
+    {
+      "step": 136,
+      "epoch": 6,
+      "training_ce": 0.38078323006629944,
+      "boundary": false,
+      "latent": [
+        0.05852261616601509,
+        0.1873032291454831,
+        -0.3008117388743014
+      ],
+      "decoder_coefficients": [
+        0.05852261616601509,
+        0.1873032291454831,
+        -0.3008117388743014
+      ],
+      "function_explained": 0.4389670795251912,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010119277983903885,
+      "reinjected_norm": 0.00016506259271409363,
+      "retained_norm": 0.00013993418542668223,
+      "raw_norm": 0.006408067420125008,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 137,
+      "epoch": 6,
+      "training_ce": 0.4592440128326416,
+      "boundary": false,
+      "latent": [
+        0.13035174127615304,
+        0.21698569126879527,
+        -0.24602354832791395
+      ],
+      "decoder_coefficients": [
+        0.13035174127615304,
+        0.21698569126879527,
+        -0.24602354832791395
+      ],
+      "function_explained": 0.3545802689318752,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008307535201311111,
+      "reinjected_norm": 0.00013993418542668223,
+      "retained_norm": 0.00013977433263789862,
+      "raw_norm": 0.00650376733392477,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 138,
+      "epoch": 6,
+      "training_ce": 0.4628709554672241,
+      "boundary": false,
+      "latent": [
+        0.2664109857138626,
+        0.1869648565997615,
+        -0.21156018902451104
+      ],
+      "decoder_coefficients": [
+        0.2664109857138626,
+        0.1869648565997615,
+        -0.21156018902451104
+      ],
+      "function_explained": 0.3625209397446487,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022003507958725094,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009153180755674839,
+      "reinjected_norm": 0.00013977433263789862,
+      "retained_norm": 0.0001512886956334114,
+      "raw_norm": 0.006568010430783033,
+      "terminal_drain": false,
+      "applied_delay": 0.022003507958725094
+    },
+    {
+      "step": 139,
+      "epoch": 6,
+      "training_ce": 0.3976020812988281,
+      "boundary": false,
+      "latent": [
+        0.30582360348158155,
+        0.1643406393513243,
+        -0.19765964746371778
+      ],
+      "decoder_coefficients": [
+        0.30582360348158155,
+        0.1643406393513243,
+        -0.19765964746371778
+      ],
+      "function_explained": 0.4376305950820032,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022411124827340246,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.0090575460344553,
+      "reinjected_norm": 0.0001512886956334114,
+      "retained_norm": 0.0001593608467373997,
+      "raw_norm": 0.00682943407446146,
+      "terminal_drain": false,
+      "applied_delay": 0.022411124827340246
+    },
+    {
+      "step": 140,
+      "epoch": 6,
+      "training_ce": 0.4017142057418823,
+      "boundary": false,
+      "latent": [
+        0.4294400163256211,
+        0.05248875145933336,
+        -0.06932057385694777
+      ],
+      "decoder_coefficients": [
+        0.4294400163256211,
+        0.05248875145933336,
+        -0.06932057385694777
+      ],
+      "function_explained": 0.4374541187200285,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022639421550557016,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010402567684650421,
+      "reinjected_norm": 0.0001593608467373997,
+      "retained_norm": 0.0001618815294932574,
+      "raw_norm": 0.007017727475613356,
+      "terminal_drain": false,
+      "applied_delay": 0.022639421550557016
+    },
+    {
+      "step": 141,
+      "epoch": 6,
+      "training_ce": 0.37069666385650635,
+      "boundary": false,
+      "latent": [
+        0.4945846562027689,
+        0.1147960322789465,
+        0.0014345098136408093
+      ],
+      "decoder_coefficients": [
+        0.4945846562027689,
+        0.1147960322789465,
+        0.0014345098136408093
+      ],
+      "function_explained": 0.5250141185336603,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994677901268005,
+      "frame_gradient_outside_fraction": 0.9999995827674866,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02452970016747713,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009956036694347858,
+      "reinjected_norm": 0.0001618815294932574,
+      "retained_norm": 0.00018332419858779758,
+      "raw_norm": 0.0071403528563678265,
+      "terminal_drain": false,
+      "applied_delay": 0.02452970016747713
+    },
+    {
+      "step": 142,
+      "epoch": 6,
+      "training_ce": 0.35197094082832336,
+      "boundary": false,
+      "latent": [
+        0.6493711891411311,
+        0.06139576977880395,
+        0.163750834231452
+      ],
+      "decoder_coefficients": [
+        0.6493711891411311,
+        0.06139576977880395,
+        0.163750834231452
+      ],
+      "function_explained": 0.7539043589547065,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.9999978542327881,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03132147829979658,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.015504292212426662,
+      "reinjected_norm": 0.00018332419858779758,
+      "retained_norm": 0.00025091980933211744,
+      "raw_norm": 0.007263984531164169,
+      "terminal_drain": false,
+      "applied_delay": 0.03132147829979658
+    },
+    {
+      "step": 143,
+      "epoch": 6,
+      "training_ce": 0.41541755199432373,
+      "boundary": false,
+      "latent": [
+        0.49497030325163693,
+        0.018601831874333355,
+        0.10427439796536633
+      ],
+      "decoder_coefficients": [
+        0.49497030325163693,
+        0.018601831874333355,
+        0.10427439796536633
+      ],
+      "function_explained": 0.8566980573209715,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999970197677612,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025909237880259752,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013840480707585812,
+      "reinjected_norm": 0.00025091980933211744,
+      "retained_norm": 0.000199477348360233,
+      "raw_norm": 0.0073484014719724655,
+      "terminal_drain": false,
+      "applied_delay": 0.025909237880259752
+    },
+    {
+      "step": 144,
+      "epoch": 6,
+      "training_ce": 0.4714966416358948,
+      "boundary": false,
+      "latent": [
+        0.3261855330959451,
+        -0.026544792181429428,
+        0.06805113837623192
+      ],
+      "decoder_coefficients": [
+        0.3261855330959451,
+        -0.026544792181429428,
+        0.06805113837623192
+      ],
+      "function_explained": 0.8465796692968004,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999992847442627,
+      "carrier_reassessment_delta": null,
+      "delay": 0.023942702524363993,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01200020220130682,
+      "reinjected_norm": 0.000199477348360233,
+      "retained_norm": 0.00017543535795994103,
+      "raw_norm": 0.00734080420807004,
+      "terminal_drain": false,
+      "applied_delay": 0.023942702524363993
+    },
+    {
+      "step": 145,
+      "epoch": 6,
+      "training_ce": 0.4046618342399597,
+      "boundary": false,
+      "latent": [
+        -0.03789423622489025,
+        -0.11358706010160652,
+        0.08332899265642124
+      ],
+      "decoder_coefficients": [
+        -0.03789423622489025,
+        -0.11358706010160652,
+        0.08332899265642124
+      ],
+      "function_explained": 0.18244365145947805,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021127911205403506,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01234759297221899,
+      "reinjected_norm": 0.00017543535795994103,
+      "retained_norm": 0.0001588169252499938,
+      "raw_norm": 0.007308113854378462,
+      "terminal_drain": false,
+      "applied_delay": 0.021127911205403506
+    },
+    {
+      "step": 146,
+      "epoch": 6,
+      "training_ce": 0.40921202301979065,
+      "boundary": false,
+      "latent": [
+        -0.22550246410350921,
+        -0.11656129952542202,
+        0.16423187981457732
+      ],
+      "decoder_coefficients": [
+        -0.22550246410350921,
+        -0.11656129952542202,
+        0.16423187981457732
+      ],
+      "function_explained": 0.5100264864598115,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994677305221558,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02067776199663058,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.0087595758959651,
+      "reinjected_norm": 0.0001588169252499938,
+      "retained_norm": 0.00016436113219242543,
+      "raw_norm": 0.007185612339526415,
+      "terminal_drain": false,
+      "applied_delay": 0.02067776199663058
+    },
+    {
+      "step": 147,
+      "epoch": 6,
+      "training_ce": 0.3963342308998108,
+      "boundary": false,
+      "latent": [
+        -0.4472164925388275,
+        -0.21058312766433807,
+        0.14049691015985025
+      ],
+      "decoder_coefficients": [
+        -0.4472164925388275,
+        -0.21058312766433807,
+        0.14049691015985025
+      ],
+      "function_explained": 0.7824986359606163,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999977350234985,
+      "carrier_reassessment_delta": null,
+      "delay": 0.026460249219089745,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013680713251233101,
+      "reinjected_norm": 0.00016436113219242543,
+      "retained_norm": 0.0002297814207850024,
+      "raw_norm": 0.007192336488515139,
+      "terminal_drain": false,
+      "applied_delay": 0.026460249219089745
+    },
+    {
+      "step": 148,
+      "epoch": 6,
+      "training_ce": 0.5204099416732788,
+      "boundary": false,
+      "latent": [
+        -0.5160184714219301,
+        -0.3533914423743265,
+        0.17296008249595576
+      ],
+      "decoder_coefficients": [
+        -0.5160184714219301,
+        -0.3533914423743265,
+        0.17296008249595576
+      ],
+      "function_explained": 0.8752152133459035,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999872446060181,
+      "carrier_reassessment_delta": null,
+      "delay": 0.027564883641898633,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01053239218890667,
+      "reinjected_norm": 0.0002297814207850024,
+      "retained_norm": 0.00024649364058859646,
+      "raw_norm": 0.00702359015122056,
+      "terminal_drain": false,
+      "applied_delay": 0.027564883641898633
+    },
+    {
+      "step": 149,
+      "epoch": 6,
+      "training_ce": 0.4348081946372986,
+      "boundary": false,
+      "latent": [
+        -0.4720987925509085,
+        -0.29747945503488704,
+        0.18740072447353337
+      ],
+      "decoder_coefficients": [
+        -0.4720987925509085,
+        -0.29747945503488704,
+        0.18740072447353337
+      ],
+      "function_explained": 0.9038759237584165,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.999989926815033,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014534431509673595,
+      "reinjected_norm": 0.00024649364058859646,
+      "retained_norm": 0.00016980849613901228,
+      "raw_norm": 0.0068233925849199295,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 150,
+      "epoch": 6,
+      "training_ce": 0.3785778284072876,
+      "boundary": true,
+      "latent": [
+        -0.3635556069035967,
+        -0.21874375823521724,
+        0.12821220942984113
+      ],
+      "decoder_coefficients": [
+        -0.3635556069035967,
+        -0.21874375823521724,
+        0.12821220942984113
+      ],
+      "function_explained": 0.8581210689796785,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.9999982118606567,
+      "carrier_reassessment_delta": 0.0008805136507676133,
+      "delay": 0.02,
+      "probe_gain_vs_raw": [
+        -7.382250823719931e-05,
+        -7.607488863023914e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009451119229197502,
+      "reinjected_norm": 0.00016980849613901228,
+      "retained_norm": 0.00015974926645867527,
+      "raw_norm": 0.006899210158735514,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 151,
+      "epoch": 6,
+      "training_ce": 0.4160809814929962,
+      "boundary": false,
+      "latent": [
+        -0.2555750114972166,
+        -0.19353663475771293,
+        0.10561687090555197
+      ],
+      "decoder_coefficients": [
+        -0.2555750114972166,
+        -0.19353663475771293,
+        0.10561687090555197
+      ],
+      "function_explained": 0.7198647275364054,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008515839464962482,
+      "reinjected_norm": 0.00015974926645867527,
+      "retained_norm": 0.00015148647071328014,
+      "raw_norm": 0.006876724306493998,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 152,
+      "epoch": 6,
+      "training_ce": 0.3752531409263611,
+      "boundary": false,
+      "latent": [
+        -0.23094950763513422,
+        -0.16259466593922922,
+        0.12157317880467065
+      ],
+      "decoder_coefficients": [
+        -0.23094950763513422,
+        -0.16259466593922922,
+        0.12157317880467065
+      ],
+      "function_explained": 0.5714664134274889,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008887016214430332,
+      "reinjected_norm": 0.00015148647071328014,
+      "retained_norm": 0.00015133514534682035,
+      "raw_norm": 0.006954257842153311,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 153,
+      "epoch": 6,
+      "training_ce": 0.33313244581222534,
+      "boundary": false,
+      "latent": [
+        -0.13787729738131005,
+        -0.1963714163087277,
+        0.1755871384956674
+      ],
+      "decoder_coefficients": [
+        -0.13787729738131005,
+        -0.1963714163087277,
+        0.1755871384956674
+      ],
+      "function_explained": 0.442747337557187,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994693994522095,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020576762082055212,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009096793830394745,
+      "reinjected_norm": 0.00015133514534682035,
+      "retained_norm": 0.00015512830577790737,
+      "raw_norm": 0.0070832883939146996,
+      "terminal_drain": false,
+      "applied_delay": 0.020576762082055212
+    },
+    {
+      "step": 154,
+      "epoch": 6,
+      "training_ce": 0.3309113681316376,
+      "boundary": false,
+      "latent": [
+        0.09174072925661621,
+        -0.20951937611412552,
+        0.20439170318488353
+      ],
+      "decoder_coefficients": [
+        0.09174072925661621,
+        -0.20951937611412552,
+        0.20439170318488353
+      ],
+      "function_explained": 0.1998678166102119,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02465957121923566,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01102502178400755,
+      "reinjected_norm": 0.00015512830577790737,
+      "retained_norm": 0.00017882755491882563,
+      "raw_norm": 0.007089872844517231,
+      "terminal_drain": false,
+      "applied_delay": 0.02465957121923566
+    },
+    {
+      "step": 155,
+      "epoch": 6,
+      "training_ce": 0.378179132938385,
+      "boundary": false,
+      "latent": [
+        0.30032402624983723,
+        -0.20363458217864,
+        0.2466811585036531
+      ],
+      "decoder_coefficients": [
+        0.30032402624983723,
+        -0.20363458217864,
+        0.2466811585036531
+      ],
+      "function_explained": 0.3499221817537056,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021965374210849403,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012057473883032799,
+      "reinjected_norm": 0.00017882755491882563,
+      "retained_norm": 0.0001623636344447732,
+      "raw_norm": 0.007114552427083254,
+      "terminal_drain": false,
+      "applied_delay": 0.021965374210849403
+    },
+    {
+      "step": 156,
+      "epoch": 6,
+      "training_ce": 0.34121978282928467,
+      "boundary": false,
+      "latent": [
+        0.4345724881423457,
+        -0.17970104311090446,
+        0.3014175085559408
+      ],
+      "decoder_coefficients": [
+        0.4345724881423457,
+        -0.17970104311090446,
+        0.3014175085559408
+      ],
+      "function_explained": 0.7613537384453996,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999983906745911,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02896032143384218,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.014354988932609558,
+      "reinjected_norm": 0.0001623636344447732,
+      "retained_norm": 0.00022288245963864028,
+      "raw_norm": 0.007153608836233616,
+      "terminal_drain": false,
+      "applied_delay": 0.02896032143384218
+    },
+    {
+      "step": 157,
+      "epoch": 6,
+      "training_ce": 0.27914121747016907,
+      "boundary": false,
+      "latent": [
+        0.3915933292446316,
+        -0.1784856361850546,
+        0.22882191062221702
+      ],
+      "decoder_coefficients": [
+        0.3915933292446316,
+        -0.1784856361850546,
+        0.22882191062221702
+      ],
+      "function_explained": 0.895579077384401,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999946355819702,
+      "carrier_reassessment_delta": null,
+      "delay": 0.027885084301233293,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013125634752213955,
+      "reinjected_norm": 0.00022288245963864028,
+      "retained_norm": 0.00021266685507725924,
+      "raw_norm": 0.007278417702764273,
+      "terminal_drain": false,
+      "applied_delay": 0.027885084301233293
+    },
+    {
+      "step": 158,
+      "epoch": 6,
+      "training_ce": 0.3061721920967102,
+      "boundary": false,
+      "latent": [
+        0.4017407744839985,
+        -0.2042718567338239,
+        0.19634515140229686
+      ],
+      "decoder_coefficients": [
+        0.4017407744839985,
+        -0.2042718567338239,
+        0.19634515140229686
+      ],
+      "function_explained": 0.9415512231673092,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994678497314453,
+      "frame_gradient_outside_fraction": 0.9999873042106628,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03242724277079105,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.013752267695963383,
+      "reinjected_norm": 0.00021266685507725924,
+      "retained_norm": 0.00024969305377453566,
+      "raw_norm": 0.007433964870870113,
+      "terminal_drain": false,
+      "applied_delay": 0.03242724277079105
+    },
+    {
+      "step": 159,
+      "epoch": 6,
+      "training_ce": 0.32620859146118164,
+      "boundary": false,
+      "latent": [
+        0.5270426371277668,
+        -0.24217818124127324,
+        0.12690503910725054
+      ],
+      "decoder_coefficients": [
+        0.5270426371277668,
+        -0.24217818124127324,
+        0.12690503910725054
+      ],
+      "function_explained": 0.9549065687957214,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999735355377197,
+      "carrier_reassessment_delta": null,
+      "delay": 0.030986619479954243,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010792086832225323,
+      "reinjected_norm": 0.00024969305377453566,
+      "retained_norm": 0.00023719199816696346,
+      "raw_norm": 0.007155120372772217,
+      "terminal_drain": false,
+      "applied_delay": 0.030986619479954243
+    },
+    {
+      "step": 160,
+      "epoch": 6,
+      "training_ce": 0.4495178759098053,
+      "boundary": false,
+      "latent": [
+        0.3912698030409903,
+        -0.10667385437348505,
+        0.09512181693305813
+      ],
+      "decoder_coefficients": [
+        0.3912698030409903,
+        -0.10667385437348505,
+        0.09512181693305813
+      ],
+      "function_explained": 0.8671864124190171,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999987483024597,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021923841712996363,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01606607623398304,
+      "reinjected_norm": 0.00023719199816696346,
+      "retained_norm": 0.0001613433996681124,
+      "raw_norm": 0.007167703937739134,
+      "terminal_drain": false,
+      "applied_delay": 0.021923841712996363
+    },
+    {
+      "step": 161,
+      "epoch": 6,
+      "training_ce": 0.36284545063972473,
+      "boundary": false,
+      "latent": [
+        0.3899342754940451,
+        -0.04414910810575857,
+        -0.02793544928768097
+      ],
+      "decoder_coefficients": [
+        0.3899342754940451,
+        -0.04414910810575857,
+        -0.02793544928768097
+      ],
+      "function_explained": 0.7403811497733056,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999997615814209,
+      "carrier_reassessment_delta": null,
+      "delay": 0.028324130512773993,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011730005964636803,
+      "reinjected_norm": 0.0001613433996681124,
+      "retained_norm": 0.00019929683185182512,
+      "raw_norm": 0.006956075318157673,
+      "terminal_drain": false,
+      "applied_delay": 0.028324130512773993
+    },
+    {
+      "step": 162,
+      "epoch": 6,
+      "training_ce": 0.3662834167480469,
+      "boundary": true,
+      "latent": [
+        0.18871400457821105,
+        -0.28854270824790856,
+        -0.0097980098217828
+      ],
+      "decoder_coefficients": [
+        0.18871400457821105,
+        -0.28854270824790856,
+        -0.0097980098217828
+      ],
+      "function_explained": 0.446311502612626,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": 0.001121313204010708,
+      "delay": 0.021283592064864933,
+      "probe_gain_vs_raw": [
+        -0.00028887133322561703,
+        -6.742928196164137e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.015495154075324535,
+      "reinjected_norm": 0.00019929683185182512,
+      "retained_norm": 0.00015150909894146025,
+      "raw_norm": 0.007057074457406998,
+      "terminal_drain": false,
+      "applied_delay": 0.021283592064864933
+    },
+    {
+      "step": 163,
+      "epoch": 7,
+      "training_ce": 0.21109835803508759,
+      "boundary": false,
+      "latent": [
+        -0.03451971355799149,
+        -0.29676715893604344,
+        -0.09726264595672601
+      ],
+      "decoder_coefficients": [
+        -0.03451971355799149,
+        -0.29676715893604344,
+        -0.09726264595672601
+      ],
+      "function_explained": 0.6050275974532681,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.024902945812791587,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012060299515724182,
+      "reinjected_norm": 0.00015150909894146025,
+      "retained_norm": 0.00018545710190664977,
+      "raw_norm": 0.007225740235298872,
+      "terminal_drain": false,
+      "applied_delay": 0.024902945812791587
+    },
+    {
+      "step": 164,
+      "epoch": 7,
+      "training_ce": 0.29279661178588867,
+      "boundary": false,
+      "latent": [
+        0.026142757707508568,
+        -0.27332001794884847,
+        -0.05548387938232971
+      ],
+      "decoder_coefficients": [
+        0.026142757707508568,
+        -0.27332001794884847,
+        -0.05548387938232971
+      ],
+      "function_explained": 0.48577854259786757,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010600500740110874,
+      "reinjected_norm": 0.00018545710190664977,
+      "retained_norm": 0.00015047754277475178,
+      "raw_norm": 0.007351589854806662,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 165,
+      "epoch": 7,
+      "training_ce": 0.2097984254360199,
+      "boundary": false,
+      "latent": [
+        -0.0952752841257261,
+        -0.24202542132430996,
+        -0.05448767829625795
+      ],
+      "decoder_coefficients": [
+        -0.0952752841257261,
+        -0.24202542132430996,
+        -0.05448767829625795
+      ],
+      "function_explained": 0.4875623571043892,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02025806644232944,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.007587739732116461,
+      "reinjected_norm": 0.00015047754277475178,
+      "retained_norm": 0.00014975460362620652,
+      "raw_norm": 0.007105814293026924,
+      "terminal_drain": false,
+      "applied_delay": 0.02025806644232944
+    },
+    {
+      "step": 166,
+      "epoch": 7,
+      "training_ce": 0.2489166259765625,
+      "boundary": false,
+      "latent": [
+        -0.18320641515421796,
+        -0.1833359098474046,
+        -0.09174090465975278
+      ],
+      "decoder_coefficients": [
+        -0.18320641515421796,
+        -0.1833359098474046,
+        -0.09174090465975278
+      ],
+      "function_explained": 0.46444151216304685,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009064504876732826,
+      "reinjected_norm": 0.00014975460362620652,
+      "retained_norm": 0.0001560676610097289,
+      "raw_norm": 0.007343863602727652,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 167,
+      "epoch": 7,
+      "training_ce": 0.24543264508247375,
+      "boundary": false,
+      "latent": [
+        -0.13858883575256986,
+        -0.09897628464172109,
+        -0.13147336234616183
+      ],
+      "decoder_coefficients": [
+        -0.13858883575256986,
+        -0.09897628464172109,
+        -0.13147336234616183
+      ],
+      "function_explained": 0.24189010248460796,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009354116395115852,
+      "reinjected_norm": 0.0001560676610097289,
+      "retained_norm": 0.00015707426064182073,
+      "raw_norm": 0.0074639893136918545,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 168,
+      "epoch": 7,
+      "training_ce": 0.12784075736999512,
+      "boundary": false,
+      "latent": [
+        -0.15720307122256258,
+        -0.1398834938948034,
+        -0.20502925924949045
+      ],
+      "decoder_coefficients": [
+        -0.15720307122256258,
+        -0.1398834938948034,
+        -0.20502925924949045
+      ],
+      "function_explained": 0.42031480383414765,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025514997355639935,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008347722701728344,
+      "reinjected_norm": 0.00015707426064182073,
+      "retained_norm": 0.00019324244931340218,
+      "raw_norm": 0.007077326066792011,
+      "terminal_drain": false,
+      "applied_delay": 0.025514997355639935
+    },
+    {
+      "step": 169,
+      "epoch": 7,
+      "training_ce": 0.23607265949249268,
+      "boundary": false,
+      "latent": [
+        -0.16943985963406216,
+        -0.11983720697012834,
+        -0.3536113919415218
+      ],
+      "decoder_coefficients": [
+        -0.16943985963406216,
+        -0.11983720697012834,
+        -0.3536113919415218
+      ],
+      "function_explained": 0.5601105344437259,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994694590568542,
+      "frame_gradient_outside_fraction": 0.9999997019767761,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.012218666262924671,
+      "reinjected_norm": 0.00019324244931340218,
+      "retained_norm": 0.00016121713269967586,
+      "raw_norm": 0.00722136627882719,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 170,
+      "epoch": 7,
+      "training_ce": 0.1901857554912567,
+      "boundary": false,
+      "latent": [
+        -0.20029078323489433,
+        -0.029743627661210536,
+        -0.26698769988762316
+      ],
+      "decoder_coefficients": [
+        -0.20029078323489433,
+        -0.029743627661210536,
+        -0.26698769988762316
+      ],
+      "function_explained": 0.5356785462346414,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009824879467487335,
+      "reinjected_norm": 0.00016121713269967586,
+      "retained_norm": 0.00016151666932273656,
+      "raw_norm": 0.007400432135909796,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 171,
+      "epoch": 7,
+      "training_ce": 0.253220796585083,
+      "boundary": false,
+      "latent": [
+        -0.10881711608716459,
+        0.060026830516370346,
+        -0.22277898263427592
+      ],
+      "decoder_coefficients": [
+        -0.10881711608716459,
+        0.060026830516370346,
+        -0.22277898263427592
+      ],
+      "function_explained": 0.2859794816166956,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994696974754333,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009921801276504993,
+      "reinjected_norm": 0.00016151666932273656,
+      "retained_norm": 0.00016106932889670134,
+      "raw_norm": 0.0075750392861664295,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 172,
+      "epoch": 7,
+      "training_ce": 0.20810678601264954,
+      "boundary": false,
+      "latent": [
+        -0.24873667816366085,
+        0.0855690248587025,
+        -0.26472191106337456
+      ],
+      "decoder_coefficients": [
+        -0.24873667816366085,
+        0.0855690248587025,
+        -0.26472191106337456
+      ],
+      "function_explained": 0.5328864129762103,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009354537352919579,
+      "reinjected_norm": 0.00016106932889670134,
+      "retained_norm": 0.0001736247941153124,
+      "raw_norm": 0.007796040736138821,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 173,
+      "epoch": 7,
+      "training_ce": 0.23093163967132568,
+      "boundary": false,
+      "latent": [
+        -0.2680341469198146,
+        0.13955732452816175,
+        -0.2463659221497771
+      ],
+      "decoder_coefficients": [
+        -0.2680341469198146,
+        0.13955732452816175,
+        -0.2463659221497771
+      ],
+      "function_explained": 0.5974118300110685,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020730479194317013,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008311271667480469,
+      "reinjected_norm": 0.0001736247941153124,
+      "retained_norm": 0.00017896355711854994,
+      "raw_norm": 0.0076713645830750465,
+      "terminal_drain": false,
+      "applied_delay": 0.020730479194317013
+    },
+    {
+      "step": 174,
+      "epoch": 7,
+      "training_ce": 0.14661526679992676,
+      "boundary": false,
+      "latent": [
+        -0.25186266317551786,
+        0.16753329094828145,
+        -0.2024826799128413
+      ],
+      "decoder_coefficients": [
+        -0.25186266317551786,
+        0.16753329094828145,
+        -0.2024826799128413
+      ],
+      "function_explained": 0.7070776069229455,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999997615814209,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008957956917583942,
+      "reinjected_norm": 0.00017896355711854994,
+      "retained_norm": 0.00017650562222115695,
+      "raw_norm": 0.007886865176260471,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 175,
+      "epoch": 7,
+      "training_ce": 0.14457601308822632,
+      "boundary": true,
+      "latent": [
+        -0.18326729437905548,
+        0.03206056672152542,
+        -0.0848881512216141
+      ],
+      "decoder_coefficients": [
+        -0.18326729437905548,
+        0.03206056672152542,
+        -0.0848881512216141
+      ],
+      "function_explained": 0.44721325524876954,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": 0.0007586848691784529,
+      "delay": 0.02036000046064146,
+      "probe_gain_vs_raw": [
+        -2.439410878176609e-05,
+        7.110331546899975e-06
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010100692510604858,
+      "reinjected_norm": 0.00017650562222115695,
+      "retained_norm": 0.00017283379565924406,
+      "raw_norm": 0.008011987432837486,
+      "terminal_drain": false,
+      "applied_delay": 0.02036000046064146
+    },
+    {
+      "step": 176,
+      "epoch": 7,
+      "training_ce": 0.23227103054523468,
+      "boundary": false,
+      "latent": [
+        -0.189839315616816,
+        0.13444494737499685,
+        -0.08464586448837831
+      ],
+      "decoder_coefficients": [
+        -0.189839315616816,
+        0.13444494737499685,
+        -0.08464586448837831
+      ],
+      "function_explained": 0.50370389034799,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009132214821875095,
+      "reinjected_norm": 0.00017283379565924406,
+      "retained_norm": 0.00017494516214355826,
+      "raw_norm": 0.008128528483211994,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 177,
+      "epoch": 7,
+      "training_ce": 0.16240423917770386,
+      "boundary": false,
+      "latent": [
+        -0.2581783342753183,
+        0.09298770181932288,
+        0.02832578187875083
+      ],
+      "decoder_coefficients": [
+        -0.2581783342753183,
+        0.09298770181932288,
+        0.02832578187875083
+      ],
+      "function_explained": 0.6090434622593444,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009019826538860798,
+      "reinjected_norm": 0.00017494516214355826,
+      "retained_norm": 0.00017701352771837264,
+      "raw_norm": 0.008111702278256416,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 178,
+      "epoch": 7,
+      "training_ce": 0.19414520263671875,
+      "boundary": false,
+      "latent": [
+        -0.25537351456774876,
+        0.13304500862977162,
+        0.0791384079382616
+      ],
+      "decoder_coefficients": [
+        -0.25537351456774876,
+        0.13304500862977162,
+        0.0791384079382616
+      ],
+      "function_explained": 0.6000336437872739,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468982219696,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008555601350963116,
+      "reinjected_norm": 0.00017701352771837264,
+      "retained_norm": 0.00017713618581183255,
+      "raw_norm": 0.008033648133277893,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 179,
+      "epoch": 7,
+      "training_ce": 0.16398534178733826,
+      "boundary": false,
+      "latent": [
+        -0.020546788342230417,
+        0.1450581509714674,
+        0.003387203952753271
+      ],
+      "decoder_coefficients": [
+        -0.020546788342230417,
+        0.1450581509714674,
+        0.003387203952753271
+      ],
+      "function_explained": 0.16665266434944404,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010123897343873978,
+      "reinjected_norm": 0.00017713618581183255,
+      "retained_norm": 0.00016415970458183438,
+      "raw_norm": 0.007863289676606655,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 180,
+      "epoch": 7,
+      "training_ce": 0.16063851118087769,
+      "boundary": false,
+      "latent": [
+        -0.008631470371345231,
+        0.06441253658725865,
+        0.0803428729611092
+      ],
+      "decoder_coefficients": [
+        -0.008631470371345231,
+        0.06441253658725865,
+        0.0803428729611092
+      ],
+      "function_explained": 0.12025546040074397,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009279155172407627,
+      "reinjected_norm": 0.00016415970458183438,
+      "retained_norm": 0.00016012015112210065,
+      "raw_norm": 0.00777280330657959,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 181,
+      "epoch": 7,
+      "training_ce": 0.23444537818431854,
+      "boundary": false,
+      "latent": [
+        0.057015625399196065,
+        0.1189407826815801,
+        0.16547126552390481
+      ],
+      "decoder_coefficients": [
+        0.057015625399196065,
+        0.1189407826815801,
+        0.16547126552390481
+      ],
+      "function_explained": 0.3927563773197865,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021699298517778517,
+      "conservation_error": 5.6141448776100486e-14,
+      "relative_intervention": 0.009590585716068745,
+      "reinjected_norm": 0.00016012015112210065,
+      "retained_norm": 0.00017538454267196357,
+      "raw_norm": 0.00776577228680253,
+      "terminal_drain": false,
+      "applied_delay": 0.021699298517778517
+    },
+    {
+      "step": 182,
+      "epoch": 7,
+      "training_ce": 0.24803289771080017,
+      "boundary": false,
+      "latent": [
+        -0.1168586426172754,
+        0.10514274029405374,
+        0.2521320268937872
+      ],
+      "decoder_coefficients": [
+        -0.1168586426172754,
+        0.10514274029405374,
+        0.2521320268937872
+      ],
+      "function_explained": 0.6476125359281835,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021047095060348513,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009970719926059246,
+      "reinjected_norm": 0.00017538454267196357,
+      "retained_norm": 0.00017767288954928517,
+      "raw_norm": 0.007794839330017567,
+      "terminal_drain": false,
+      "applied_delay": 0.021047095060348513
+    },
+    {
+      "step": 183,
+      "epoch": 7,
+      "training_ce": 0.19814641773700714,
+      "boundary": false,
+      "latent": [
+        -0.05763325627433366,
+        0.13324400557345628,
+        0.343670744477246
+      ],
+      "decoder_coefficients": [
+        -0.05763325627433366,
+        0.13324400557345628,
+        0.343670744477246
+      ],
+      "function_explained": 0.7383988223076576,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994680285453796,
+      "frame_gradient_outside_fraction": 0.9999997615814209,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009312830865383148,
+      "reinjected_norm": 0.00017767288954928517,
+      "retained_norm": 0.0001748499198583886,
+      "raw_norm": 0.007916978560388088,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 184,
+      "epoch": 7,
+      "training_ce": 0.1928481161594391,
+      "boundary": false,
+      "latent": [
+        -0.15327234455955274,
+        0.06056061232602339,
+        0.2978155220074524
+      ],
+      "decoder_coefficients": [
+        -0.15327234455955274,
+        0.06056061232602339,
+        0.2978155220074524
+      ],
+      "function_explained": 0.7826906315118916,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999995231628418,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020894923941232265,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00932007934898138,
+      "reinjected_norm": 0.0001748499198583886,
+      "retained_norm": 0.00018455057579558343,
+      "raw_norm": 0.008040453307330608,
+      "terminal_drain": false,
+      "applied_delay": 0.020894923941232265
+    },
+    {
+      "step": 185,
+      "epoch": 7,
+      "training_ce": 0.22284546494483948,
+      "boundary": false,
+      "latent": [
+        -0.10580585656016032,
+        0.1291083730866143,
+        0.28286028062324486
+      ],
+      "decoder_coefficients": [
+        -0.10580585656016032,
+        0.1291083730866143,
+        0.28286028062324486
+      ],
+      "function_explained": 0.8394182927504089,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 0.9999992847442627,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021657353742048146,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009846492670476437,
+      "reinjected_norm": 0.00018455057579558343,
+      "retained_norm": 0.0001898273330880329,
+      "raw_norm": 0.008029724471271038,
+      "terminal_drain": false,
+      "applied_delay": 0.021657353742048146
+    },
+    {
+      "step": 186,
+      "epoch": 7,
+      "training_ce": 0.194051131606102,
+      "boundary": false,
+      "latent": [
+        0.04825333387522359,
+        0.185042294911735,
+        0.2778269080498337
+      ],
+      "decoder_coefficients": [
+        0.04825333387522359,
+        0.185042294911735,
+        0.2778269080498337
+      ],
+      "function_explained": 0.7600219600452457,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999997615814209,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009886378422379494,
+      "reinjected_norm": 0.0001898273330880329,
+      "retained_norm": 0.00017470319289714098,
+      "raw_norm": 0.008074436336755753,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 187,
+      "epoch": 7,
+      "training_ce": 0.2004585862159729,
+      "boundary": false,
+      "latent": [
+        0.036738742998613134,
+        0.1680288123995719,
+        0.21418865369455203
+      ],
+      "decoder_coefficients": [
+        0.036738742998613134,
+        0.1680288123995719,
+        0.21418865369455203
+      ],
+      "function_explained": 0.7903447108817863,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999995827674866,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02361952790990472,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008464970625936985,
+      "reinjected_norm": 0.00017470319289714098,
+      "retained_norm": 0.00019738033006433398,
+      "raw_norm": 0.007858728989958763,
+      "terminal_drain": false,
+      "applied_delay": 0.02361952790990472
+    },
+    {
+      "step": 188,
+      "epoch": 7,
+      "training_ce": 0.18525058031082153,
+      "boundary": false,
+      "latent": [
+        0.06336602345582708,
+        0.07171882676426751,
+        0.14307015537889883
+      ],
+      "decoder_coefficients": [
+        0.06336602345582708,
+        0.07171882676426751,
+        0.14307015537889883
+      ],
+      "function_explained": 0.6975634576908865,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022585738198831678,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010870538651943207,
+      "reinjected_norm": 0.00019738033006433398,
+      "retained_norm": 0.00018377287779003382,
+      "raw_norm": 0.007877896539866924,
+      "terminal_drain": false,
+      "applied_delay": 0.022585738198831678
+    },
+    {
+      "step": 189,
+      "epoch": 7,
+      "training_ce": 0.14386887848377228,
+      "boundary": true,
+      "latent": [
+        0.10535136543884918,
+        0.09608252436915786,
+        0.13488541657733774
+      ],
+      "decoder_coefficients": [
+        0.10535136543884918,
+        0.09608252436915786,
+        0.13488541657733774
+      ],
+      "function_explained": 0.681479342982597,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": 0.0005050088777742294,
+      "delay": 0.02,
+      "probe_gain_vs_raw": [
+        3.021856566436567e-05,
+        -0.00013573595469879588
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01039126142859459,
+      "reinjected_norm": 0.00018377287779003382,
+      "retained_norm": 0.000164285404025577,
+      "raw_norm": 0.007955094799399376,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 190,
+      "epoch": 8,
+      "training_ce": 0.1386367380619049,
+      "boundary": false,
+      "latent": [
+        0.03455243425723742,
+        -0.002333960471449992,
+        0.049682759322132466
+      ],
+      "decoder_coefficients": [
+        0.03455243425723742,
+        -0.002333960471449992,
+        0.049682759322132466
+      ],
+      "function_explained": 0.08171051923875028,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009532627649605274,
+      "reinjected_norm": 0.000164285404025577,
+      "retained_norm": 0.00016484434308949858,
+      "raw_norm": 0.00810799840837717,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 191,
+      "epoch": 8,
+      "training_ce": 0.10372805595397949,
+      "boundary": false,
+      "latent": [
+        0.10986174749729077,
+        -0.21258588996177166,
+        0.030242877275225517
+      ],
+      "decoder_coefficients": [
+        0.10986174749729077,
+        -0.21258588996177166,
+        0.030242877275225517
+      ],
+      "function_explained": 0.3364653750448099,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994691610336304,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.024718922805041076,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011431941762566566,
+      "reinjected_norm": 0.00016484434308949858,
+      "retained_norm": 0.0002079238765873015,
+      "raw_norm": 0.008236016146838665,
+      "terminal_drain": false,
+      "applied_delay": 0.024718922805041076
+    },
+    {
+      "step": 192,
+      "epoch": 8,
+      "training_ce": 0.079613097012043,
+      "boundary": false,
+      "latent": [
+        0.07489623085611591,
+        -0.28033555855938597,
+        0.04456787172013322
+      ],
+      "decoder_coefficients": [
+        0.07489623085611591,
+        -0.28033555855938597,
+        0.04456787172013322
+      ],
+      "function_explained": 0.4517601601043776,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994677901268005,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02305796867236495,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01120127271860838,
+      "reinjected_norm": 0.0002079238765873015,
+      "retained_norm": 0.00020006770500913262,
+      "raw_norm": 0.008395185694098473,
+      "terminal_drain": false,
+      "applied_delay": 0.02305796867236495
+    },
+    {
+      "step": 193,
+      "epoch": 8,
+      "training_ce": 0.1364569365978241,
+      "boundary": false,
+      "latent": [
+        -0.004804154546900132,
+        -0.3291645017565211,
+        0.13737783139674892
+      ],
+      "decoder_coefficients": [
+        -0.004804154546900132,
+        -0.3291645017565211,
+        0.13737783139674892
+      ],
+      "function_explained": 0.5871778197173221,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.999468207359314,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022554790563881398,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010819695889949799,
+      "reinjected_norm": 0.00020006770500913262,
+      "retained_norm": 0.0002057860983768478,
+      "raw_norm": 0.008658495731651783,
+      "terminal_drain": false,
+      "applied_delay": 0.022554790563881398
+    },
+    {
+      "step": 194,
+      "epoch": 8,
+      "training_ce": 0.09991800040006638,
+      "boundary": false,
+      "latent": [
+        0.006704484367589322,
+        -0.3510774794413713,
+        0.1321490338014573
+      ],
+      "decoder_coefficients": [
+        0.006704484367589322,
+        -0.3510774794413713,
+        0.1321490338014573
+      ],
+      "function_explained": 0.7784866994321806,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999995231628418,
+      "carrier_reassessment_delta": null,
+      "delay": 0.026860072314739226,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011854794807732105,
+      "reinjected_norm": 0.0002057860983768478,
+      "retained_norm": 0.00024788928567431867,
+      "raw_norm": 0.008772925473749638,
+      "terminal_drain": false,
+      "applied_delay": 0.026860072314739226
+    },
+    {
+      "step": 195,
+      "epoch": 8,
+      "training_ce": 0.09107069671154022,
+      "boundary": false,
+      "latent": [
+        0.06936592002319156,
+        -0.32730476968951017,
+        0.040535853063188715
+      ],
+      "decoder_coefficients": [
+        0.06936592002319156,
+        -0.32730476968951017,
+        0.040535853063188715
+      ],
+      "function_explained": 0.7739242987556548,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.9999998211860657,
+      "carrier_reassessment_delta": null,
+      "delay": 0.025739065296947958,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.011457276530563831,
+      "reinjected_norm": 0.00024788928567431867,
+      "retained_norm": 0.00023088407760951668,
+      "raw_norm": 0.00867671612650156,
+      "terminal_drain": false,
+      "applied_delay": 0.025739065296947958
+    },
+    {
+      "step": 196,
+      "epoch": 8,
+      "training_ce": 0.08836056292057037,
+      "boundary": false,
+      "latent": [
+        -0.11625129433049512,
+        0.19602975110726328,
+        -0.5055722203095756
+      ],
+      "decoder_coefficients": [
+        -0.11625129433049512,
+        0.19602975110726328,
+        -0.5055722203095756
+      ],
+      "function_explained": 0.6181139447488204,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994690418243408,
+      "frame_gradient_outside_fraction": 0.9999992251396179,
+      "carrier_reassessment_delta": null,
+      "delay": 0.03296628475189209,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.028565768152475357,
+      "reinjected_norm": 0.00023088407760951668,
+      "retained_norm": 0.00034040017635561526,
+      "raw_norm": 0.008761265315115452,
+      "terminal_drain": false,
+      "applied_delay": 0.03296628475189209
+    },
+    {
+      "step": 197,
+      "epoch": 8,
+      "training_ce": 0.08665842562913895,
+      "boundary": false,
+      "latent": [
+        -0.0764258843483929,
+        0.13322997581480842,
+        -0.5204710109655366
+      ],
+      "decoder_coefficients": [
+        -0.0764258843483929,
+        0.13322997581480842,
+        -0.5204710109655366
+      ],
+      "function_explained": 0.7074486130258505,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.9999988079071045,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020618827235884964,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.018103498965501785,
+      "reinjected_norm": 0.00034040017635561526,
+      "retained_norm": 0.00021814553474541754,
+      "raw_norm": 0.008925148285925388,
+      "terminal_drain": false,
+      "applied_delay": 0.020618827235884964
+    },
+    {
+      "step": 198,
+      "epoch": 8,
+      "training_ce": 0.08140918612480164,
+      "boundary": false,
+      "latent": [
+        -0.09341221935314639,
+        0.080353191557037,
+        -0.5487560719321944
+      ],
+      "decoder_coefficients": [
+        -0.09341221935314639,
+        0.080353191557037,
+        -0.5487560719321944
+      ],
+      "function_explained": 0.8092921511994253,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999977350234985,
+      "carrier_reassessment_delta": null,
+      "delay": 0.021942634778097273,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009931297972798347,
+      "reinjected_norm": 0.00021814553474541754,
+      "retained_norm": 0.00023741519544273615,
+      "raw_norm": 0.009206756018102169,
+      "terminal_drain": false,
+      "applied_delay": 0.021942634778097273
+    },
+    {
+      "step": 199,
+      "epoch": 8,
+      "training_ce": 0.1165425032377243,
+      "boundary": false,
+      "latent": [
+        -0.07987425421936148,
+        0.22678280941689252,
+        -0.4785256329301085
+      ],
+      "decoder_coefficients": [
+        -0.07987425421936148,
+        0.22678280941689252,
+        -0.4785256329301085
+      ],
+      "function_explained": 0.7955600178224562,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685053825378,
+      "frame_gradient_outside_fraction": 0.999998927116394,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010312817059457302,
+      "reinjected_norm": 0.00023741519544273615,
+      "retained_norm": 0.00021635438315570354,
+      "raw_norm": 0.00919976457953453,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 200,
+      "epoch": 8,
+      "training_ce": 0.06518247723579407,
+      "boundary": true,
+      "latent": [
+        -0.026713327636503494,
+        0.13831912337260557,
+        -0.47598093324365237
+      ],
+      "decoder_coefficients": [
+        -0.026713327636503494,
+        0.13831912337260557,
+        -0.47598093324365237
+      ],
+      "function_explained": 0.8099428017578245,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999992847442627,
+      "carrier_reassessment_delta": 0.0019113407090022613,
+      "delay": 0.02,
+      "probe_gain_vs_raw": [
+        3.1920558060836745e-06,
+        7.07658128962042e-07
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.008783441968262196,
+      "reinjected_norm": 0.00021635438315570354,
+      "retained_norm": 0.00021013688819948584,
+      "raw_norm": 0.00917065143585205,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 201,
+      "epoch": 8,
+      "training_ce": 0.11977072805166245,
+      "boundary": false,
+      "latent": [
+        -0.033041620832061004,
+        0.3422214911002047,
+        -0.43948567602612987
+      ],
+      "decoder_coefficients": [
+        -0.033041620832061004,
+        0.3422214911002047,
+        -0.43948567602612987
+      ],
+      "function_explained": 0.8090536560185235,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994685649871826,
+      "frame_gradient_outside_fraction": 0.9999994039535522,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009056748822331429,
+      "reinjected_norm": 0.00021013688819948584,
+      "retained_norm": 0.0002140567812602967,
+      "raw_norm": 0.009020810946822166,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 202,
+      "epoch": 8,
+      "training_ce": 0.08791554719209671,
+      "boundary": false,
+      "latent": [
+        -0.020056483377644457,
+        0.19958613298572325,
+        -0.32940950250931716
+      ],
+      "decoder_coefficients": [
+        -0.020056483377644457,
+        0.19958613298572325,
+        -0.32940950250931716
+      ],
+      "function_explained": 0.8158481781046572,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994687438011169,
+      "frame_gradient_outside_fraction": 0.9999995231628418,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009261362254619598,
+      "reinjected_norm": 0.0002140567812602967,
+      "retained_norm": 0.00019744221935980022,
+      "raw_norm": 0.0089395297691226,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 203,
+      "epoch": 8,
+      "training_ce": 0.08402934670448303,
+      "boundary": false,
+      "latent": [
+        -0.08706276544437491,
+        0.16108496049838053,
+        -0.2413237170093634
+      ],
+      "decoder_coefficients": [
+        -0.08706276544437491,
+        0.16108496049838053,
+        -0.2413237170093634
+      ],
+      "function_explained": 0.6133386310522895,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994693994522095,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009049477986991405,
+      "reinjected_norm": 0.00019744221935980022,
+      "retained_norm": 0.00019558555504772812,
+      "raw_norm": 0.009070239961147308,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 204,
+      "epoch": 8,
+      "training_ce": 0.09381383657455444,
+      "boundary": false,
+      "latent": [
+        -0.03917382033762202,
+        0.15568390622024852,
+        -0.14877262255929927
+      ],
+      "decoder_coefficients": [
+        -0.03917382033762202,
+        0.15568390622024852,
+        -0.14877262255929927
+      ],
+      "function_explained": 0.5178019272221145,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00943647138774395,
+      "reinjected_norm": 0.00019558555504772812,
+      "retained_norm": 0.00019129036809317768,
+      "raw_norm": 0.009070045314729214,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 205,
+      "epoch": 8,
+      "training_ce": 0.09594924747943878,
+      "boundary": false,
+      "latent": [
+        -0.056129665551793356,
+        0.2136401103935272,
+        -0.1346233205321878
+      ],
+      "decoder_coefficients": [
+        -0.056129665551793356,
+        0.2136401103935272,
+        -0.1346233205321878
+      ],
+      "function_explained": 0.40730677171557683,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994684457778931,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.00906185619533062,
+      "reinjected_norm": 0.00019129036809317768,
+      "retained_norm": 0.00019943973165936768,
+      "raw_norm": 0.009328031912446022,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 206,
+      "epoch": 8,
+      "training_ce": 0.1321680098772049,
+      "boundary": false,
+      "latent": [
+        0.0026075715832803424,
+        0.12639548773055367,
+        0.09793958769532445
+      ],
+      "decoder_coefficients": [
+        0.0026075715832803424,
+        0.12639548773055367,
+        0.09793958769532445
+      ],
+      "function_explained": 0.3780174698423542,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.0108115179464221,
+      "reinjected_norm": 0.00019943973165936768,
+      "retained_norm": 0.00019166751008015126,
+      "raw_norm": 0.009213069453835487,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 207,
+      "epoch": 8,
+      "training_ce": 0.06806552410125732,
+      "boundary": false,
+      "latent": [
+        0.03365541237745566,
+        0.08150623983324959,
+        0.14040077515824154
+      ],
+      "decoder_coefficients": [
+        0.03365541237745566,
+        0.08150623983324959,
+        0.14040077515824154
+      ],
+      "function_explained": 0.36088714603189875,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994682669639587,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009464782662689686,
+      "reinjected_norm": 0.00019166751008015126,
+      "retained_norm": 0.00019547331612557173,
+      "raw_norm": 0.00942513719201088,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 208,
+      "epoch": 8,
+      "training_ce": 0.1032593697309494,
+      "boundary": false,
+      "latent": [
+        0.044018217171927616,
+        0.12899274418348186,
+        0.24428687580166783
+      ],
+      "decoder_coefficients": [
+        0.044018217171927616,
+        0.12899274418348186,
+        0.24428687580166783
+      ],
+      "function_explained": 0.6323918188058713,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994688034057617,
+      "frame_gradient_outside_fraction": 0.9999998807907104,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022099720081314445,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010297943837940693,
+      "reinjected_norm": 0.00019547331612557173,
+      "retained_norm": 0.000221576658077538,
+      "raw_norm": 0.009432261809706688,
+      "terminal_drain": false,
+      "applied_delay": 0.022099720081314445
+    },
+    {
+      "step": 209,
+      "epoch": 8,
+      "training_ce": 0.114229217171669,
+      "boundary": false,
+      "latent": [
+        0.032341824494056516,
+        0.07570862458512573,
+        0.1801361512526654
+      ],
+      "decoder_coefficients": [
+        0.032341824494056516,
+        0.07570862458512573,
+        0.1801361512526654
+      ],
+      "function_explained": 0.3918678379119994,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01027866080403328,
+      "reinjected_norm": 0.000221576658077538,
+      "retained_norm": 0.00019499995687510818,
+      "raw_norm": 0.009334615431725979,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 210,
+      "epoch": 8,
+      "training_ce": 0.11015517264604568,
+      "boundary": false,
+      "latent": [
+        0.02746301117060169,
+        0.013692650359957306,
+        0.09612640203047569
+      ],
+      "decoder_coefficients": [
+        0.02746301117060169,
+        0.013692650359957306,
+        0.09612640203047569
+      ],
+      "function_explained": 0.08910714953339771,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020324256892781705,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.0080782575532794,
+      "reinjected_norm": 0.00019499995687510818,
+      "retained_norm": 0.00018795675714500248,
+      "raw_norm": 0.009028449654579163,
+      "terminal_drain": false,
+      "applied_delay": 0.020324256892781705
+    },
+    {
+      "step": 211,
+      "epoch": 8,
+      "training_ce": 0.09016554057598114,
+      "boundary": false,
+      "latent": [
+        0.04082447657722312,
+        -0.07884992986079158,
+        0.10658226190211902
+      ],
+      "decoder_coefficients": [
+        0.04082447657722312,
+        -0.07884992986079158,
+        0.10658226190211902
+      ],
+      "function_explained": 0.12632686044073183,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.01012407522648573,
+      "reinjected_norm": 0.00018795675714500248,
+      "retained_norm": 0.00018886735779233277,
+      "raw_norm": 0.009233071468770504,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 212,
+      "epoch": 8,
+      "training_ce": 0.12088833749294281,
+      "boundary": false,
+      "latent": [
+        0.06701743277735928,
+        -0.23265509348656246,
+        0.09364432518909543
+      ],
+      "decoder_coefficients": [
+        0.06701743277735928,
+        -0.23265509348656246,
+        0.09364432518909543
+      ],
+      "function_explained": 0.43095708499093277,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994683265686035,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.022544140769168736,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.010797243565320969,
+      "reinjected_norm": 0.00018886735779233277,
+      "retained_norm": 0.0002205728815170005,
+      "raw_norm": 0.009406287223100662,
+      "terminal_drain": false,
+      "applied_delay": 0.022544140769168736
+    },
+    {
+      "step": 213,
+      "epoch": 8,
+      "training_ce": 0.11853278428316116,
+      "boundary": false,
+      "latent": [
+        0.057975413933926134,
+        -0.1976157035379556,
+        0.0762268864165471
+      ],
+      "decoder_coefficients": [
+        0.057975413933926134,
+        -0.1976157035379556,
+        0.0762268864165471
+      ],
+      "function_explained": 0.5884503733735436,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994686841964722,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02306538595817983,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009891330264508724,
+      "reinjected_norm": 0.0002205728815170005,
+      "retained_norm": 0.00022073568834457546,
+      "raw_norm": 0.009236312471330166,
+      "terminal_drain": false,
+      "applied_delay": 0.02306538595817983
+    },
+    {
+      "step": 214,
+      "epoch": 8,
+      "training_ce": 0.08982968330383301,
+      "boundary": false,
+      "latent": [
+        0.029426731199541468,
+        -0.2379852753304919,
+        0.08421195714190714
+      ],
+      "decoder_coefficients": [
+        0.029426731199541468,
+        -0.2379852753304919,
+        0.08421195714190714
+      ],
+      "function_explained": 0.7481891481783677,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994692802429199,
+      "frame_gradient_outside_fraction": 0.9999999403953552,
+      "carrier_reassessment_delta": null,
+      "delay": 0.020407701627118514,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009862085804343224,
+      "reinjected_norm": 0.00022073568834457546,
+      "retained_norm": 0.00019132225133944303,
+      "raw_norm": 0.008982756175100803,
+      "terminal_drain": false,
+      "applied_delay": 0.020407701627118514
+    },
+    {
+      "step": 215,
+      "epoch": 8,
+      "training_ce": 0.085427425801754,
+      "boundary": false,
+      "latent": [
+        -0.05608691777437127,
+        -0.16552497175735476,
+        0.061672045761623856
+      ],
+      "decoder_coefficients": [
+        -0.05608691777437127,
+        -0.16552497175735476,
+        0.061672045761623856
+      ],
+      "function_explained": 0.6985255314033433,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994689226150513,
+      "frame_gradient_outside_fraction": 1.0,
+      "carrier_reassessment_delta": null,
+      "delay": 0.02,
+      "conservation_error": 0.0,
+      "relative_intervention": 0.009443530812859535,
+      "reinjected_norm": 0.00019132225133944303,
+      "retained_norm": 0.0001872951106633991,
+      "raw_norm": 0.009071162901818752,
+      "terminal_drain": false,
+      "applied_delay": 0.02
+    },
+    {
+      "step": 216,
+      "epoch": 8,
+      "training_ce": 0.0989295095205307,
+      "boundary": true,
+      "latent": [
+        0.260658539564042,
+        0.42985571874820394,
+        -0.18598574650903102
+      ],
+      "decoder_coefficients": [
+        0.260658539564042,
+        0.42985571874820394,
+        -0.18598574650903102
+      ],
+      "function_explained": 0.6552379386594367,
+      "nonlinear_relative_norm": 0.0,
+      "bend_coefficients": null,
+      "frame_overlap": 0.9994694590568542,
+      "frame_gradient_outside_fraction": 0.9999988079071045,
+      "carrier_reassessment_delta": 0.0004601098210348876,
+      "delay": 0.0322598696872592,
+      "probe_gain_vs_raw": [
+        -1.9230166974496276e-05,
+        -3.606369215145721e-05
+      ],
+      "conservation_error": 0.0,
+      "relative_intervention": 0.020336873829364777,
+      "reinjected_norm": 0.0001872951106633991,
+      "retained_norm": 2.588824088434194e-07,
+      "raw_norm": 0.009209640324115753,
+      "terminal_drain": true,
+      "applied_delay": 0.0
+    }
+  ]
+}

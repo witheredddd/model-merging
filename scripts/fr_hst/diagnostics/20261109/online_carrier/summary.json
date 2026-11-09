@@ -1,0 +1,101 @@
+{
+  "baseline": {
+    "final_validation": {
+      "epoch": 8,
+      "seconds": 11.292832945939153,
+      "ce": 0.769533745785977,
+      "accuracy": 0.8138297872340425,
+      "n": 376
+    },
+    "historical_test": {
+      "checkpoint_sha256": "f273dd5bcbe0722fa5155f7735a17a4810a46eae940a74d90f28c1ebffd27274",
+      "split": "historical_dtd_test",
+      "provenance": {
+        "n": 1880,
+        "files": [
+          {
+            "path": "data/test-00000-of-00001.parquet",
+            "sha256": "3e137d5255ddd649a004f19e6b36f170572e2d6504b047f2f4fdb616180fdce3"
+          }
+        ]
+      },
+      "ce": 0.8035859250007792,
+      "accuracy": 0.773936170212766,
+      "n": 1880
+    }
+  },
+  "arms": [
+    {
+      "arm": "online_linear",
+      "final_validation": {
+        "epoch": 8,
+        "seconds": 51.1362940329127,
+        "ce": 0.7629167881417782,
+        "accuracy": 0.8111702127659575,
+        "n": 376
+      },
+      "intervened_steps": 141,
+      "max_conservation_error": 1.9146537382896262e-13,
+      "median_function_explained": 0.6200245987224758,
+      "median_frame_overlap": 0.9994686841964722,
+      "median_applied_delay": 0.023436506651341914,
+      "median_nonlinear_relative_norm": 0.0,
+      "median_reinjected_norm": 0.00017127511091530323,
+      "median_carrier_reassessment_delta": 0.0014771095353226771,
+      "terminal_retained_norm": 2.588824088434194e-07,
+      "checkpoint_sha256": "95f22935a52bc98628b783cdd7cbae068ac939fd4215f391d982a3dd124bb375",
+      "historical_test": {
+        "checkpoint_sha256": "95f22935a52bc98628b783cdd7cbae068ac939fd4215f391d982a3dd124bb375",
+        "split": "historical_dtd_test",
+        "provenance": {
+          "n": 1880,
+          "files": [
+            {
+              "path": "data/test-00000-of-00001.parquet",
+              "sha256": "3e137d5255ddd649a004f19e6b36f170572e2d6504b047f2f4fdb616180fdce3"
+            }
+          ]
+        },
+        "ce": 0.8080327216615069,
+        "accuracy": 0.775,
+        "n": 1880
+      }
+    },
+    {
+      "arm": "online_nonlinear",
+      "final_validation": {
+        "epoch": 8,
+        "seconds": 52.84394852910191,
+        "ce": 0.7691420291332488,
+        "accuracy": 0.8085106382978723,
+        "n": 376
+      },
+      "intervened_steps": 141,
+      "max_conservation_error": 1.859424615148486e-13,
+      "median_function_explained": 0.5617059977860669,
+      "median_frame_overlap": 0.9994685053825378,
+      "median_applied_delay": 0.02197309679351747,
+      "median_nonlinear_relative_norm": 0.006880031976836132,
+      "median_reinjected_norm": 0.00016132695600390434,
+      "median_carrier_reassessment_delta": 0.001127154750465072,
+      "terminal_retained_norm": 2.564015346706583e-07,
+      "checkpoint_sha256": "4b8132db5192d47a22f329e3271590f01b003993fc9277a417d74806fa7f4684",
+      "historical_test": {
+        "checkpoint_sha256": "4b8132db5192d47a22f329e3271590f01b003993fc9277a417d74806fa7f4684",
+        "split": "historical_dtd_test",
+        "provenance": {
+          "n": 1880,
+          "files": [
+            {
+              "path": "data/test-00000-of-00001.parquet",
+              "sha256": "3e137d5255ddd649a004f19e6b36f170572e2d6504b047f2f4fdb616180fdce3"
+            }
+          ]
+        },
+        "ce": 0.8057060647518077,
+        "accuracy": 0.7792553191489362,
+        "n": 1880
+      }
+    }
+  ]
+}
