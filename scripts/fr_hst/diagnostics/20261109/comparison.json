@@ -1,0 +1,58 @@
+{
+  "source": {
+    "task": "DTD",
+    "status": "complete",
+    "epoch_budget": 76,
+    "train_n": 3384,
+    "validation_n": 376,
+    "validation_split": "train_holdout_seed_0",
+    "head_sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d",
+    "reference_split": "test",
+    "reference_accuracy": 0.8095744680851064,
+    "threshold_99": 0.8014787234042553,
+    "threshold_98": 0.7933829787234042,
+    "epoch": 8,
+    "best": {
+      "epoch": 8,
+      "seconds": 8.5,
+      "ce": 0.769533745785977,
+      "accuracy": 0.8138297872340425,
+      "n": 376
+    },
+    "gate": "target_99",
+    "ratio": 1.0052562417871223,
+    "qualified": false,
+    "best_checkpoint": "/home/shangxueyuan/merging/tsv/results/EXPERTS8_99_20261109/DTD/best.pt",
+    "checkpoint_sha256": "5869832d393de9160777110dcd6af04a2e9ac8a094da7c12cd9862157017be84"
+  },
+  "replay": {
+    "task": "DTD",
+    "status": "complete",
+    "epoch_budget": 76,
+    "train_n": 3384,
+    "validation_n": 376,
+    "validation_split": "train_holdout_seed_0",
+    "head_sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d",
+    "reference_split": "test",
+    "reference_accuracy": 0.8095744680851064,
+    "threshold_99": 0.8014787234042553,
+    "threshold_98": 0.7933829787234042,
+    "epoch": 8,
+    "best": {
+      "epoch": 8,
+      "seconds": 15.4,
+      "ce": 0.769533745785977,
+      "accuracy": 0.8138297872340425,
+      "n": 376
+    },
+    "gate": "target_99",
+    "ratio": 1.0052562417871223,
+    "qualified": false,
+    "best_checkpoint": "/home/shangxueyuan/merging/tsv/results/DTD_DYNAMIC_TRACE_20261109/DTD/best.pt",
+    "checkpoint_sha256": "67fe906cee4a0fa8166896b257e2e23f4551ee24d83c821174ecadb2c9004697"
+  },
+  "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+  "final_step": 216,
+  "exact_tensor_match": true,
+  "max_abs_difference": 0.0
+}
