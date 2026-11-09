@@ -1,0 +1,2339 @@
+{
+  "forecast_plan_sha256": "9f2d1241a61ef00f1feecf93d99275fcb29aef7ba483658a8f9075284c0fce3d",
+  "trace_sha256": "c314d3c218ef427df2c6cbe583c3df785a2e0b40a78d0d334f572be17cce5a4b",
+  "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+  "expert_sha256": "5869832d393de9160777110dcd6af04a2e9ac8a094da7c12cd9862157017be84",
+  "image_indices": [
+    [
+      2024,
+      1168,
+      2777,
+      3666,
+      2303,
+      1906,
+      3708,
+      2396,
+      1286,
+      1068,
+      2363,
+      1161,
+      1231,
+      1391,
+      2634,
+      814,
+      3010,
+      1922,
+      330,
+      3530,
+      2515,
+      2176,
+      2710,
+      155,
+      1266,
+      2383,
+      80,
+      3425,
+      2267,
+      984,
+      3376,
+      3484
+    ],
+    [
+      1053,
+      755,
+      3516,
+      1023,
+      3109,
+      2818,
+      3234,
+      482,
+      2785,
+      124,
+      3320,
+      550,
+      718,
+      965,
+      2709,
+      1657,
+      924,
+      2527,
+      2157,
+      3534,
+      3330,
+      3243,
+      575,
+      291,
+      2100,
+      160,
+      1183,
+      398,
+      2366,
+      43,
+      3107,
+      3726
+    ]
+  ],
+  "methods": [
+    "A_fixed",
+    "B_rolling",
+    "C_quadratic",
+    "D_atlas_innovation"
+  ],
+  "common_scoring_budget": {
+    "forward_per_main_method": 2,
+    "jvp_per_main_method_upper_bound": 4
+  },
+  "rows": [
+    {
+      "start": 125,
+      "end": 135,
+      "fit_group": 0,
+      "audit_group": 1,
+      "true_full_update": {
+        "ce_gain": 0.09604483160678312,
+        "kl_from_start": 0.045254986970114076,
+        "accuracy_gain": 0.0
+      },
+      "carrier_only": {
+        "ce_gain": -0.006141343443429315,
+        "kl_from_start": 0.00757722717368688,
+        "accuracy_gain": -0.0625
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9052834336803551,
+          "residual_relative_error": 0.9725913312246827,
+          "parameter_energy_capture": 0.3387686458266395,
+          "full_forecast": {
+            "ce_gain": 0.0570764734900675,
+            "kl_from_start": 0.01909202237199245,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": 0.05222111281244929,
+            "kl_from_start": 0.02209088306726144,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.5942690776297483,
+          "future_functional_angles": {
+            "degrees": [
+              37.059960315770425,
+              70.79753230199577,
+              89.68587806739028
+            ],
+            "mean_squared_overlap": 0.24834083134783091
+          },
+          "forecast_response_angle_deg": 67.37656907472467,
+          "next_response_energy_capture": 0.20747330228426406,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9052834336803551,
+          "residual_relative_error": 0.9725913312246827,
+          "parameter_energy_capture": 0.3387686458266395,
+          "full_forecast": {
+            "ce_gain": 0.0570764734900675,
+            "kl_from_start": 0.01909202237199245,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": 0.05222111281244929,
+            "kl_from_start": 0.02209088306726144,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.5942690776297483,
+          "future_functional_angles": {
+            "degrees": [
+              37.059960315770425,
+              70.79753230199577,
+              89.68587806739028
+            ],
+            "mean_squared_overlap": 0.24834083134783091
+          },
+          "forecast_response_angle_deg": 67.37656907472467,
+          "next_response_energy_capture": 0.20747330228426406,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.340036408280388,
+          "residual_relative_error": 1.4403733280593678,
+          "parameter_energy_capture": 0.3387686458266395,
+          "full_forecast": {
+            "ce_gain": 0.03162563593213252,
+            "kl_from_start": 0.04305123020941363,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.03186750147661899,
+            "kl_from_start": 0.043366182755210654,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": 0.3292799352453545,
+          "future_functional_angles": {
+            "degrees": [
+              37.059960315770425,
+              70.79753230199577,
+              89.68587806739028
+            ],
+            "mean_squared_overlap": 0.24834083134783091
+          },
+          "forecast_response_angle_deg": 80.06801545075433,
+          "next_response_energy_capture": 0.20747330228426406,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 0.8714619075934049,
+          "residual_relative_error": 0.9361884082398535,
+          "parameter_energy_capture": 0.3513158589307967,
+          "full_forecast": {
+            "ce_gain": 0.03752426190838165,
+            "kl_from_start": 0.014514337944212521,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.03608501610466286,
+            "kl_from_start": 0.015581598713958787,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": 0.39069527511911967,
+          "future_functional_angles": {
+            "degrees": [
+              29.99600155807335,
+              50.93725113442698,
+              85.08303094085055
+            ],
+            "mean_squared_overlap": 0.3848408755555223
+          },
+          "forecast_response_angle_deg": 84.60529670731735,
+          "next_response_energy_capture": 0.4652437136288037,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": 0.03043391091776515,
+            "kl_from_start": 0.015530784885273523,
+            "accuracy_gain": -0.0625
+          }
+        }
+      },
+      "feedback": null
+    },
+    {
+      "start": 125,
+      "end": 135,
+      "fit_group": 1,
+      "audit_group": 0,
+      "true_full_update": {
+        "ce_gain": 0.17366001967968603,
+        "kl_from_start": 0.08018503450681103,
+        "accuracy_gain": 0.03125
+      },
+      "carrier_only": {
+        "ce_gain": 0.03407735219783692,
+        "kl_from_start": 0.006598549107795176,
+        "accuracy_gain": -0.03125
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9416405832022982,
+          "residual_relative_error": 1.0108729812871273,
+          "parameter_energy_capture": 0.3387686458266395,
+          "full_forecast": {
+            "ce_gain": 0.2151582417051694,
+            "kl_from_start": 0.04642513226266054,
+            "accuracy_gain": 0.09375
+          },
+          "residual_only": {
+            "ce_gain": 0.17363880723736846,
+            "kl_from_start": 0.03874079711742137,
+            "accuracy_gain": 0.0625
+          },
+          "ce_retention": 1.2389624399561072,
+          "future_functional_angles": {
+            "degrees": [
+              38.225112235244154,
+              66.00222321788527,
+              88.7096939769706
+            ],
+            "mean_squared_overlap": 0.2610193133735458
+          },
+          "forecast_response_angle_deg": 78.45870154926567,
+          "next_response_energy_capture": 0.2617647665191888,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9416405832022982,
+          "residual_relative_error": 1.0108729812871273,
+          "parameter_energy_capture": 0.3387686458266395,
+          "full_forecast": {
+            "ce_gain": 0.2151582417051694,
+            "kl_from_start": 0.04642513226266054,
+            "accuracy_gain": 0.09375
+          },
+          "residual_only": {
+            "ce_gain": 0.17363880723736846,
+            "kl_from_start": 0.03874079711742137,
+            "accuracy_gain": 0.0625
+          },
+          "ce_retention": 1.2389624399561072,
+          "future_functional_angles": {
+            "degrees": [
+              38.225112235244154,
+              66.00222321788527,
+              88.7096939769706
+            ],
+            "mean_squared_overlap": 0.2610193133735458
+          },
+          "forecast_response_angle_deg": 78.45870154926567,
+          "next_response_energy_capture": 0.2617647665191888,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.5980313616402244,
+          "residual_relative_error": 1.7173963611916983,
+          "parameter_energy_capture": 0.3387686458266395,
+          "full_forecast": {
+            "ce_gain": 0.08436631606436973,
+            "kl_from_start": 0.12909383206261293,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.04721298643963712,
+            "kl_from_start": 0.11623105772430795,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.48581312048669845,
+          "future_functional_angles": {
+            "degrees": [
+              38.225112235244154,
+              66.00222321788527,
+              88.7096939769706
+            ],
+            "mean_squared_overlap": 0.2610193133735458
+          },
+          "forecast_response_angle_deg": 94.66050413532838,
+          "next_response_energy_capture": 0.2617647665191888,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 0.8778572784820893,
+          "residual_relative_error": 0.9421626425166483,
+          "parameter_energy_capture": 0.35184999705689257,
+          "full_forecast": {
+            "ce_gain": 0.19023045882648404,
+            "kl_from_start": 0.03348032810325958,
+            "accuracy_gain": 0.09375
+          },
+          "residual_only": {
+            "ce_gain": 0.14785698669525582,
+            "kl_from_start": 0.028120449138831483,
+            "accuracy_gain": 0.03125
+          },
+          "ce_retention": 1.0954188487215537,
+          "future_functional_angles": {
+            "degrees": [
+              39.94681648492206,
+              45.61646702137222,
+              84.31654030929771
+            ],
+            "mean_squared_overlap": 0.36226231649104035
+          },
+          "forecast_response_angle_deg": 77.98459651065502,
+          "next_response_energy_capture": 0.5186711446970071,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": 0.1875389454423423,
+            "kl_from_start": 0.032686438647528314,
+            "accuracy_gain": 0.09375
+          }
+        }
+      },
+      "feedback": null
+    },
+    {
+      "start": 135,
+      "end": 150,
+      "fit_group": 0,
+      "audit_group": 1,
+      "true_full_update": {
+        "ce_gain": 0.13650722327762582,
+        "kl_from_start": 0.04632265354305064,
+        "accuracy_gain": 0.0
+      },
+      "carrier_only": {
+        "ce_gain": 0.0021113752246207373,
+        "kl_from_start": 0.007599418211204476,
+        "accuracy_gain": -0.03125
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9109776311986247,
+          "residual_relative_error": 0.9468930955154933,
+          "parameter_energy_capture": 0.24733277204059673,
+          "full_forecast": {
+            "ce_gain": 0.06622485836708064,
+            "kl_from_start": 0.02926740542150034,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.051872840994243885,
+            "kl_from_start": 0.030130964230917386,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.4851381251261244,
+          "future_functional_angles": {
+            "degrees": [
+              36.15797236083297,
+              55.11516533315915,
+              83.54795020703422
+            ],
+            "mean_squared_overlap": 0.33053795941635816
+          },
+          "forecast_response_angle_deg": 58.00143999491518,
+          "next_response_energy_capture": 0.31102647759628027,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9095740039048728,
+          "residual_relative_error": 0.9454274971623118,
+          "parameter_energy_capture": 0.3771248630899694,
+          "full_forecast": {
+            "ce_gain": 0.01282226418080673,
+            "kl_from_start": 0.0982854137015238,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.005072295284913486,
+            "kl_from_start": 0.09111626386255264,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.09393103070252225,
+          "future_functional_angles": {
+            "degrees": [
+              35.31947676167612,
+              65.74657777711211,
+              76.02876325706337
+            ],
+            "mean_squared_overlap": 0.2975951174049261
+          },
+          "forecast_response_angle_deg": 85.15718667142019,
+          "next_response_energy_capture": 0.28971486709212774,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 0.888919346289315,
+          "residual_relative_error": 0.9238597053822988,
+          "parameter_energy_capture": 0.3771248630899694,
+          "full_forecast": {
+            "ce_gain": 0.02841229917931526,
+            "kl_from_start": 0.07416682470164124,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.021423835976485173,
+            "kl_from_start": 0.06607619164678764,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.20813769775047625,
+          "future_functional_angles": {
+            "degrees": [
+              35.31947676167612,
+              65.74657777711211,
+              76.02876325706337
+            ],
+            "mean_squared_overlap": 0.2975951174049261
+          },
+          "forecast_response_angle_deg": 87.77069832824492,
+          "next_response_energy_capture": 0.28971486709212774,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 1.3909875696222938,
+          "residual_relative_error": 1.4477017433088688,
+          "parameter_energy_capture": 0.37358945338313765,
+          "full_forecast": {
+            "ce_gain": -0.33499960701760795,
+            "kl_from_start": 0.3772546961593356,
+            "accuracy_gain": -0.125
+          },
+          "residual_only": {
+            "ce_gain": -0.32299674650245663,
+            "kl_from_start": 0.3507802377916972,
+            "accuracy_gain": -0.1875
+          },
+          "ce_retention": -2.4540797107585437,
+          "future_functional_angles": {
+            "degrees": [
+              36.22810082148788,
+              52.67280068104843,
+              86.65279888586178
+            ],
+            "mean_squared_overlap": 0.3406020103340106
+          },
+          "forecast_response_angle_deg": 99.49430096984123,
+          "next_response_energy_capture": 0.3402776326540662,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": -0.4932361838622746,
+            "kl_from_start": 0.4920376768291119,
+            "accuracy_gain": -0.1875
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 0.9839870981753833,
+          "residual_relative_error": 1.0231128676656271,
+          "parameter_energy_capture": 0.25152828212006517,
+          "full_forecast": {
+            "ce_gain": 0.040521071245510465,
+            "kl_from_start": 0.03717280524423636,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.02653456732949966,
+            "kl_from_start": 0.038559885487880044,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.296841956583495
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            1.2622737150024483,
+            9.66025149871061,
+            76.87176102371397
+          ],
+          "mean_squared_overlap": 0.6743148883750628
+        },
+        "functional_angles": {
+          "degrees": [
+            1.5498322588491604,
+            10.843290345138522,
+            67.01697238870571
+          ],
+          "mean_squared_overlap": 0.7054452852951457
+        },
+        "ce_gain_delta": -0.3755206782631184
+      }
+    },
+    {
+      "start": 135,
+      "end": 150,
+      "fit_group": 1,
+      "audit_group": 0,
+      "true_full_update": {
+        "ce_gain": 0.200101640850198,
+        "kl_from_start": 0.1234264355977163,
+        "accuracy_gain": 0.0625
+      },
+      "carrier_only": {
+        "ce_gain": 0.033977964609932854,
+        "kl_from_start": 0.009471043387774873,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9670642881045647,
+          "residual_relative_error": 1.0051298977461385,
+          "parameter_energy_capture": 0.24733277204059673,
+          "full_forecast": {
+            "ce_gain": 0.21095625883240654,
+            "kl_from_start": 0.11220164631568486,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.179197440000043,
+            "kl_from_start": 0.08790420192892007,
+            "accuracy_gain": 0.0625
+          },
+          "ce_retention": 1.0542455221061113,
+          "future_functional_angles": {
+            "degrees": [
+              42.1280998687165,
+              72.88372319692454,
+              87.99850408620911
+            ],
+            "mean_squared_overlap": 0.21262648499935863
+          },
+          "forecast_response_angle_deg": 60.61212126125421,
+          "next_response_energy_capture": 0.3252851684880862,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9190277618805164,
+          "residual_relative_error": 0.9549635387100384,
+          "parameter_energy_capture": 0.3771248630899694,
+          "full_forecast": {
+            "ce_gain": -0.2903337425136444,
+            "kl_from_start": 0.43234020538000695,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": -0.2850315081671123,
+            "kl_from_start": 0.38382489649014817,
+            "accuracy_gain": -0.0625
+          },
+          "ce_retention": -1.4509313430917683,
+          "future_functional_angles": {
+            "degrees": [
+              36.190242808348444,
+              67.91498643803317,
+              89.85166389260267
+            ],
+            "mean_squared_overlap": 0.2642387852802131
+          },
+          "forecast_response_angle_deg": 100.79998565988076,
+          "next_response_energy_capture": 0.5437046846272416,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 0.7761323839948713,
+          "residual_relative_error": 0.8056422733156158,
+          "parameter_energy_capture": 0.3771248630899694,
+          "full_forecast": {
+            "ce_gain": -0.19452831307585805,
+            "kl_from_start": 0.28016668292840685,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.1843912993123097,
+            "kl_from_start": 0.22524003714735358,
+            "accuracy_gain": -0.0625
+          },
+          "ce_retention": -0.9721475158791312,
+          "future_functional_angles": {
+            "degrees": [
+              36.190242808348444,
+              67.91498643803317,
+              89.85166389260267
+            ],
+            "mean_squared_overlap": 0.2642387852802131
+          },
+          "forecast_response_angle_deg": 107.50608398167093,
+          "next_response_energy_capture": 0.5437046846272416,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 0.8642478317192943,
+          "residual_relative_error": 0.8977380725709041,
+          "parameter_energy_capture": 0.37300925869752505,
+          "full_forecast": {
+            "ce_gain": 0.18406060549536962,
+            "kl_from_start": 0.05859831180503686,
+            "accuracy_gain": 0.0625
+          },
+          "residual_only": {
+            "ce_gain": 0.13872302770659484,
+            "kl_from_start": 0.051843425013612665,
+            "accuracy_gain": 0.09375
+          },
+          "ce_retention": 0.9198355631334519,
+          "future_functional_angles": {
+            "degrees": [
+              31.42601866087231,
+              62.05233095899712,
+              89.36182879289295
+            ],
+            "mean_squared_overlap": 0.3159719483867333
+          },
+          "forecast_response_angle_deg": 63.13049033887673,
+          "next_response_energy_capture": 0.5443071699484306,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": 0.011411562924922403,
+            "kl_from_start": 0.17004541442079874,
+            "accuracy_gain": 0.0
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.0170550700232497,
+          "residual_relative_error": 1.0573248112180338,
+          "parameter_energy_capture": 0.2350074456083417,
+          "full_forecast": {
+            "ce_gain": 0.11325660317539221,
+            "kl_from_start": 0.1912578038063122,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.07297914643336767,
+            "kl_from_start": 0.16989878986198273,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.5659953746215377
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.3992750208988667,
+            6.680614619452972,
+            80.10456633859783
+          ],
+          "mean_squared_overlap": 0.6719834334758558
+        },
+        "functional_angles": {
+          "degrees": [
+            0.31881244106116247,
+            2.6194381396552036,
+            79.99234543440456
+          ],
+          "mean_squared_overlap": 0.6760265915591698
+        },
+        "ce_gain_delta": 0.07080400231997741
+      }
+    },
+    {
+      "start": 150,
+      "end": 162,
+      "fit_group": 0,
+      "audit_group": 1,
+      "true_full_update": {
+        "ce_gain": 0.10563555853711348,
+        "kl_from_start": 0.0887156257520651,
+        "accuracy_gain": 0.0
+      },
+      "carrier_only": {
+        "ce_gain": -0.002870514030031801,
+        "kl_from_start": 0.003198684874762866,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9316677422032817,
+          "residual_relative_error": 0.9583205314042403,
+          "parameter_energy_capture": 0.19503111149172664,
+          "full_forecast": {
+            "ce_gain": 0.048306523980789495,
+            "kl_from_start": 0.014963444481401703,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.04316793813299069,
+            "kl_from_start": 0.01623415959980808,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.45729415974846876,
+          "future_functional_angles": {
+            "degrees": [
+              43.43861259252106,
+              54.84593304739462,
+              71.20994156907595
+            ],
+            "mean_squared_overlap": 0.32083546498045795
+          },
+          "forecast_response_angle_deg": 45.03308684409502,
+          "next_response_energy_capture": 0.5096541196103844,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9973032636444371,
+          "residual_relative_error": 1.0258893189468365,
+          "parameter_energy_capture": 0.3105987698543325,
+          "full_forecast": {
+            "ce_gain": 0.05715637912885185,
+            "kl_from_start": 0.02126179682897109,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.054322827570112586,
+            "kl_from_start": 0.02106532228458481,
+            "accuracy_gain": 0.03125
+          },
+          "ce_retention": 0.5410713960372615,
+          "future_functional_angles": {
+            "degrees": [
+              42.71249501604628,
+              50.30253897564096,
+              88.38278297793188
+            ],
+            "mean_squared_overlap": 0.31621977716220145
+          },
+          "forecast_response_angle_deg": 83.74653126991802,
+          "next_response_energy_capture": 0.45771920295177076,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.648318126297218,
+          "residual_relative_error": 1.6959637013545168,
+          "parameter_energy_capture": 0.3105987698543325,
+          "full_forecast": {
+            "ce_gain": -0.14753658542593406,
+            "kl_from_start": 0.2079221142905851,
+            "accuracy_gain": -0.09375
+          },
+          "residual_only": {
+            "ce_gain": -0.14590922480920554,
+            "kl_from_start": 0.20475489104731084,
+            "accuracy_gain": -0.0625
+          },
+          "ce_retention": -1.3966564617926385,
+          "future_functional_angles": {
+            "degrees": [
+              42.71249501604628,
+              50.30253897564096,
+              88.38278297793188
+            ],
+            "mean_squared_overlap": 0.31621977716220145
+          },
+          "forecast_response_angle_deg": 98.09975628498678,
+          "next_response_energy_capture": 0.45771920295177076,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 0.9441834025821495,
+          "residual_relative_error": 0.9712051234589956,
+          "parameter_energy_capture": 0.3104173050635165,
+          "full_forecast": {
+            "ce_gain": 0.0358239777938103,
+            "kl_from_start": 0.019843501090204607,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.03545800553963291,
+            "kl_from_start": 0.01883224236425309,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.3391280198629714,
+          "future_functional_angles": {
+            "degrees": [
+              41.30938493604544,
+              55.96081074030196,
+              78.77735363687886
+            ],
+            "mean_squared_overlap": 0.3051480543861376
+          },
+          "forecast_response_angle_deg": 97.02028731979027,
+          "next_response_energy_capture": 0.5412890526434838,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": 0.04167692283908808,
+            "kl_from_start": 0.02314815866922209,
+            "accuracy_gain": -0.03125
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.4392379966442703,
+          "residual_relative_error": 1.4807772586639505,
+          "parameter_energy_capture": 0.2523870655905205,
+          "full_forecast": {
+            "ce_gain": -0.143437846799647,
+            "kl_from_start": 0.2068498458780724,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": -0.133985250590912,
+            "kl_from_start": 0.19438356719819333,
+            "accuracy_gain": -0.0625
+          },
+          "ce_retention": -1.3578557143639491
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.26618810418409516,
+            7.336071646615898,
+            50.96065790985406
+          ],
+          "mean_squared_overlap": 0.793463273102866
+        },
+        "functional_angles": {
+          "degrees": [
+            0.6082221360479999,
+            7.897336037438806,
+            58.11960222111188
+          ],
+          "mean_squared_overlap": 0.7533163741619067
+        },
+        "ce_gain_delta": 0.1792618245934573
+      }
+    },
+    {
+      "start": 150,
+      "end": 162,
+      "fit_group": 1,
+      "audit_group": 0,
+      "true_full_update": {
+        "ce_gain": 0.19657203550772784,
+        "kl_from_start": 0.12208923655976399,
+        "accuracy_gain": 0.0625
+      },
+      "carrier_only": {
+        "ce_gain": 0.02616870494489154,
+        "kl_from_start": 0.005691479915479816,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.91306059706717,
+          "residual_relative_error": 0.9375852619583991,
+          "parameter_energy_capture": 0.19503111149172664,
+          "full_forecast": {
+            "ce_gain": 0.09890864565722124,
+            "kl_from_start": 0.041982323754677614,
+            "accuracy_gain": 0.0625
+          },
+          "residual_only": {
+            "ce_gain": 0.07635760013619397,
+            "kl_from_start": 0.03253277425943604,
+            "accuracy_gain": 0.0625
+          },
+          "ce_retention": 0.5031674286820561,
+          "future_functional_angles": {
+            "degrees": [
+              41.53102834590867,
+              62.2038885696988,
+              88.20771548956283
+            ],
+            "mean_squared_overlap": 0.25961194204945137
+          },
+          "forecast_response_angle_deg": 76.68594552068748,
+          "next_response_energy_capture": 0.07406773661425192,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9227649099584264,
+          "residual_relative_error": 0.9475924711098288,
+          "parameter_energy_capture": 0.3105987698543325,
+          "full_forecast": {
+            "ce_gain": 0.08817881446120279,
+            "kl_from_start": 0.05724142882341175,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.07173561342642687,
+            "kl_from_start": 0.04119606113362306,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.44858270014574997,
+          "future_functional_angles": {
+            "degrees": [
+              44.257855006114916,
+              57.98107424108566,
+              73.21379918250754
+            ],
+            "mean_squared_overlap": 0.29248964487080936
+          },
+          "forecast_response_angle_deg": 95.83723079376898,
+          "next_response_energy_capture": 0.29318263958176016,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.1665248362442089,
+          "residual_relative_error": 1.1988457184792465,
+          "parameter_energy_capture": 0.3105987698543325,
+          "full_forecast": {
+            "ce_gain": -0.004396563526176012,
+            "kl_from_start": 0.052437988731326955,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.02565123508999312,
+            "kl_from_start": 0.04005553627043929,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": -0.022366169810573943,
+          "future_functional_angles": {
+            "degrees": [
+              44.257855006114916,
+              57.98107424108566,
+              73.21379918250754
+            ],
+            "mean_squared_overlap": 0.29248964487080936
+          },
+          "forecast_response_angle_deg": 106.76259659957552,
+          "next_response_energy_capture": 0.29318263958176016,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 0.977184017076165,
+          "residual_relative_error": 1.0037023754859693,
+          "parameter_energy_capture": 0.3129499462149136,
+          "full_forecast": {
+            "ce_gain": -0.04826654749585435,
+            "kl_from_start": 0.15052869627247395,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.053613209171550213,
+            "kl_from_start": 0.12526372304696884,
+            "accuracy_gain": -0.0625
+          },
+          "ce_retention": -0.24554127127587713,
+          "future_functional_angles": {
+            "degrees": [
+              35.67849393755341,
+              42.489754085102845,
+              84.88001670701053
+            ],
+            "mean_squared_overlap": 0.4038518158153174
+          },
+          "forecast_response_angle_deg": 95.24209554333267,
+          "next_response_energy_capture": 0.5269875297738602,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": 0.05055722935968743,
+            "kl_from_start": 0.05014891830762579,
+            "accuracy_gain": 0.0
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 0.9935684283063007,
+          "residual_relative_error": 1.0205934787027928,
+          "parameter_energy_capture": 0.25088798976380255,
+          "full_forecast": {
+            "ce_gain": -0.044723283348286236,
+            "kl_from_start": 0.18219474517035145,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.05185078783594721,
+            "kl_from_start": 0.15732028250983104,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": -0.22751600059881372
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.35681753617123524,
+            4.183951506394353,
+            87.74524621437261
+          ],
+          "mean_squared_overlap": 0.6653953577533024
+        },
+        "functional_angles": {
+          "degrees": [
+            0.5092165418837031,
+            1.8474119416204495,
+            65.76231594063253
+          ],
+          "mean_squared_overlap": 0.722470250687536
+        },
+        "ce_gain_delta": -0.003543264147568115
+      }
+    },
+    {
+      "start": 162,
+      "end": 175,
+      "fit_group": 0,
+      "audit_group": 1,
+      "true_full_update": {
+        "ce_gain": -0.009367580999738195,
+        "kl_from_start": 0.04599352445420392,
+        "accuracy_gain": 0.0
+      },
+      "carrier_only": {
+        "ce_gain": -0.0012188444807307852,
+        "kl_from_start": 0.0014524164632429327,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9292484981519167,
+          "residual_relative_error": 0.9450375775066155,
+          "parameter_energy_capture": 0.11087018703645009,
+          "full_forecast": {
+            "ce_gain": 0.008785700348283743,
+            "kl_from_start": 0.003918037636862506,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.007678609829116834,
+            "kl_from_start": 0.0034644797292239134,
+            "accuracy_gain": 0.0
+          },
+          "future_functional_angles": {
+            "degrees": [
+              53.45386482090855,
+              68.44319625416371,
+              89.23581300117165
+            ],
+            "mean_squared_overlap": 0.16325408448493842
+          },
+          "forecast_response_angle_deg": 80.74341960458146,
+          "next_response_energy_capture": 0.23306112449482674,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9758989283860023,
+          "residual_relative_error": 0.9925461117045211,
+          "parameter_energy_capture": 0.27729102874790423,
+          "full_forecast": {
+            "ce_gain": 0.0417158171438792,
+            "kl_from_start": 0.02595370083567515,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.043502769003420316,
+            "kl_from_start": 0.02476529294480907,
+            "accuracy_gain": 0.03125
+          },
+          "future_functional_angles": {
+            "degrees": [
+              40.61511809101523,
+              48.65665262565028,
+              82.81516846982876
+            ],
+            "mean_squared_overlap": 0.3427424435534716
+          },
+          "forecast_response_angle_deg": 103.91786454922556,
+          "next_response_energy_capture": 0.48706288102329504,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.0476088403773243,
+          "residual_relative_error": 1.0655695288065208,
+          "parameter_energy_capture": 0.27729102874790423,
+          "full_forecast": {
+            "ce_gain": -0.09966796507590897,
+            "kl_from_start": 0.09410051914154435,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": -0.09071825670407802,
+            "kl_from_start": 0.08739777013500967,
+            "accuracy_gain": 0.0
+          },
+          "future_functional_angles": {
+            "degrees": [
+              40.61511809101523,
+              48.65665262565028,
+              82.81516846982876
+            ],
+            "mean_squared_overlap": 0.3427424435534716
+          },
+          "forecast_response_angle_deg": 124.55975029338445,
+          "next_response_energy_capture": 0.48706288102329504,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 0.9344172305905039,
+          "residual_relative_error": 0.9503015426264045,
+          "parameter_energy_capture": 0.27694695650476275,
+          "full_forecast": {
+            "ce_gain": -0.02163770376555621,
+            "kl_from_start": 0.04082499741867013,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": -0.016879950207174033,
+            "kl_from_start": 0.037441427346551565,
+            "accuracy_gain": 0.0
+          },
+          "future_functional_angles": {
+            "degrees": [
+              40.79951545560252,
+              48.22877244070233,
+              79.22703468222906
+            ],
+            "mean_squared_overlap": 0.3505848883135277
+          },
+          "forecast_response_angle_deg": 119.19945617959229,
+          "next_response_energy_capture": 0.4594768518374329,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": -0.013955329311128417,
+            "kl_from_start": 0.03844028036443665,
+            "accuracy_gain": 0.0
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.1632618741467176,
+          "residual_relative_error": 1.1833296515209442,
+          "parameter_energy_capture": 0.1688406905230037,
+          "full_forecast": {
+            "ce_gain": 0.043878757348850994,
+            "kl_from_start": 0.024043025174474094,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.04248107870971923,
+            "kl_from_start": 0.025570353873703582,
+            "accuracy_gain": 0.0
+          }
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            4.046351375748003,
+            7.919971289632825,
+            85.12805437372788
+          ],
+          "mean_squared_overlap": 0.661082571837137
+        },
+        "functional_angles": {
+          "degrees": [
+            2.8829021032105095,
+            6.917473703771726,
+            66.40147518860597
+          ],
+          "mean_squared_overlap": 0.7144083942517954
+        },
+        "ce_gain_delta": -0.0655164611144072
+      }
+    },
+    {
+      "start": 162,
+      "end": 175,
+      "fit_group": 1,
+      "audit_group": 0,
+      "true_full_update": {
+        "ce_gain": 0.15339012272214136,
+        "kl_from_start": 0.10232509704137453,
+        "accuracy_gain": 0.09375
+      },
+      "carrier_only": {
+        "ce_gain": 0.014651703503342828,
+        "kl_from_start": 0.0025466704621967093,
+        "accuracy_gain": 0.03125
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9293895984496923,
+          "residual_relative_error": 0.9451596610418171,
+          "parameter_energy_capture": 0.11087018703645009,
+          "full_forecast": {
+            "ce_gain": 0.06508142745792034,
+            "kl_from_start": 0.013466009394507785,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.048924198314199585,
+            "kl_from_start": 0.011536045487780568,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.42428695083458623,
+          "future_functional_angles": {
+            "degrees": [
+              52.93670709730652,
+              78.19528935152938,
+              82.82588626160559
+            ],
+            "mean_squared_overlap": 0.14023044989782002
+          },
+          "forecast_response_angle_deg": 65.48971210527769,
+          "next_response_energy_capture": 0.19468908019124992,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 1.0556852894817095,
+          "residual_relative_error": 1.0737745148404008,
+          "parameter_energy_capture": 0.27729102874790423,
+          "full_forecast": {
+            "ce_gain": 0.04908601152890002,
+            "kl_from_start": 0.046204386227800494,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.03290785040439148,
+            "kl_from_start": 0.04444445656904318,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.3200076423292059,
+          "future_functional_angles": {
+            "degrees": [
+              46.870186453685484,
+              57.459511219727325,
+              89.09846697483535
+            ],
+            "mean_squared_overlap": 0.2523204542936761
+          },
+          "forecast_response_angle_deg": 87.9182970862274,
+          "next_response_energy_capture": 0.18029757273710764,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.1501439961942566,
+          "residual_relative_error": 1.169955910680586,
+          "parameter_energy_capture": 0.27729102874790423,
+          "full_forecast": {
+            "ce_gain": -0.37082678738105224,
+            "kl_from_start": 0.2858352262672127,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": -0.36909452360971284,
+            "kl_from_start": 0.2727140374960203,
+            "accuracy_gain": -0.0625
+          },
+          "ce_retention": -2.4175401962014638,
+          "future_functional_angles": {
+            "degrees": [
+              46.870186453685484,
+              57.459511219727325,
+              89.09846697483535
+            ],
+            "mean_squared_overlap": 0.2523204542936761
+          },
+          "forecast_response_angle_deg": 105.09006559172776,
+          "next_response_energy_capture": 0.18029757273710764,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 1.0779360715446986,
+          "residual_relative_error": 1.096431882426179,
+          "parameter_energy_capture": 0.28409925469652336,
+          "full_forecast": {
+            "ce_gain": -0.07433473165558013,
+            "kl_from_start": 0.07452967681235595,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.08594009633904187,
+            "kl_from_start": 0.07049529850144577,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": -0.484612244493955,
+          "future_functional_angles": {
+            "degrees": [
+              40.14634529699266,
+              64.52943425810523,
+              86.9121770347483
+            ],
+            "mean_squared_overlap": 0.25738330173293844
+          },
+          "forecast_response_angle_deg": 87.57708084347323,
+          "next_response_energy_capture": 0.25597110344058593,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": -0.10542105633737187,
+            "kl_from_start": 0.1295378892192408,
+            "accuracy_gain": -0.03125
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.1262679065252268,
+          "residual_relative_error": 1.145645171480315,
+          "parameter_energy_capture": 0.1693865195111394,
+          "full_forecast": {
+            "ce_gain": 0.08793282821229731,
+            "kl_from_start": 0.06677584123914729,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.07043532095733818,
+            "kl_from_start": 0.06338097712432773,
+            "accuracy_gain": 0.03125
+          },
+          "ce_retention": 0.573262649848604
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.3446225715996639,
+            8.889129991306461,
+            73.24954867131872
+          ],
+          "mean_squared_overlap": 0.6863826390620628
+        },
+        "functional_angles": {
+          "degrees": [
+            0.2115801535971487,
+            10.63782841718826,
+            52.538029101571574
+          ],
+          "mean_squared_overlap": 0.7786195256717675
+        },
+        "ce_gain_delta": -0.16226755986787744
+      }
+    },
+    {
+      "start": 175,
+      "end": 189,
+      "fit_group": 0,
+      "audit_group": 1,
+      "true_full_update": {
+        "ce_gain": 0.06085235618128326,
+        "kl_from_start": 0.06407751226271058,
+        "accuracy_gain": 0.03125
+      },
+      "carrier_only": {
+        "ce_gain": -0.00632823582502548,
+        "kl_from_start": 0.0018959208828392387,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9506517475949168,
+          "residual_relative_error": 0.9576142624736397,
+          "parameter_energy_capture": 0.093741126904846,
+          "full_forecast": {
+            "ce_gain": 0.0037619201638254274,
+            "kl_from_start": 0.004636486050220815,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.008344897040320404,
+            "kl_from_start": 0.0029654103072737715,
+            "accuracy_gain": 0.03125
+          },
+          "ce_retention": 0.06182045199069062,
+          "future_functional_angles": {
+            "degrees": [
+              41.24587882195369,
+              69.1597674447525,
+              79.7632233759194
+            ],
+            "mean_squared_overlap": 0.24116168821282735
+          },
+          "forecast_response_angle_deg": 87.24007687908068,
+          "next_response_energy_capture": 0.16736381053861868,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9943027567979593,
+          "residual_relative_error": 1.0018389397017038,
+          "parameter_energy_capture": 0.27524875088819045,
+          "full_forecast": {
+            "ce_gain": -0.014826271785406797,
+            "kl_from_start": 0.021198843084551718,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.0058537567230275145,
+            "kl_from_start": 0.01663927018906885,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": -0.243643347863776,
+          "future_functional_angles": {
+            "degrees": [
+              34.643988475716,
+              66.11378859483388,
+              82.46685722411976
+            ],
+            "mean_squared_overlap": 0.285994718188079
+          },
+          "forecast_response_angle_deg": 102.51966616630914,
+          "next_response_energy_capture": 0.3395211278436918,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.21070907382566,
+          "residual_relative_error": 1.2209565039812638,
+          "parameter_energy_capture": 0.27524875088819045,
+          "full_forecast": {
+            "ce_gain": -0.10597398827129317,
+            "kl_from_start": 0.04430553275800406,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": -0.09586814817436484,
+            "kl_from_start": 0.03830048912019442,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": -1.7414935907426417,
+          "future_functional_angles": {
+            "degrees": [
+              34.643988475716,
+              66.11378859483388,
+              82.46685722411976
+            ],
+            "mean_squared_overlap": 0.285994718188079
+          },
+          "forecast_response_angle_deg": 120.3531502470617,
+          "next_response_energy_capture": 0.3395211278436918,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 1.0531467424305352,
+          "residual_relative_error": 1.0614398906095077,
+          "parameter_energy_capture": 0.2829207227659647,
+          "full_forecast": {
+            "ce_gain": 0.006848841047432552,
+            "kl_from_start": 0.04780123641105649,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.014832488028825419,
+            "kl_from_start": 0.04186854118135301,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.11254849404728708,
+          "future_functional_angles": {
+            "degrees": [
+              41.0363737077459,
+              62.29030209232106,
+              88.95835600353963
+            ],
+            "mean_squared_overlap": 0.2618352600759466
+          },
+          "forecast_response_angle_deg": 83.45887470408583,
+          "next_response_energy_capture": 0.34970399803363345,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": -0.013532307564362245,
+            "kl_from_start": 0.018062413807408362,
+            "accuracy_gain": -0.03125
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.1503458330635998,
+          "residual_relative_error": 1.1598553532246205,
+          "parameter_energy_capture": 0.1951983844937243,
+          "full_forecast": {
+            "ce_gain": -0.0031755957142660385,
+            "kl_from_start": 0.1096482634355839,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.009794202452904022,
+            "kl_from_start": 0.09892562081519309,
+            "accuracy_gain": 0.03125
+          },
+          "ce_retention": -0.05218525482901147
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.09780026696935834,
+            3.202824444452427,
+            76.24863124800049
+          ],
+          "mean_squared_overlap": 0.6844603877715141
+        },
+        "functional_angles": {
+          "degrees": [
+            0.09817970461117005,
+            2.604795120380393,
+            58.279545028539864
+          ],
+          "mean_squared_overlap": 0.7581238010128769
+        },
+        "ce_gain_delta": 0.01002443676169859
+      }
+    },
+    {
+      "start": 175,
+      "end": 189,
+      "fit_group": 1,
+      "audit_group": 0,
+      "true_full_update": {
+        "ce_gain": 0.09503671866349139,
+        "kl_from_start": 0.07779437797139548,
+        "accuracy_gain": 0.03125
+      },
+      "carrier_only": {
+        "ce_gain": 0.007048961077618543,
+        "kl_from_start": 0.0026676832893843495,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9489189975867445,
+          "residual_relative_error": 0.9568356829607604,
+          "parameter_energy_capture": 0.093741126904846,
+          "full_forecast": {
+            "ce_gain": 0.03882219860335934,
+            "kl_from_start": 0.010516619815855853,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.031796411888836584,
+            "kl_from_start": 0.0072145144569309445,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": 0.40849683311165275,
+          "future_functional_angles": {
+            "degrees": [
+              57.263718852496396,
+              65.8354528147785,
+              85.37588197873654
+            ],
+            "mean_squared_overlap": 0.15550309962783168
+          },
+          "forecast_response_angle_deg": 62.47783196786356,
+          "next_response_energy_capture": 0.2374497723727673,
+          "future_functional_reference_rank": 3
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9357354470080138,
+          "residual_relative_error": 0.943490275024821,
+          "parameter_energy_capture": 0.27524875088819045,
+          "full_forecast": {
+            "ce_gain": 0.0633135194398208,
+            "kl_from_start": 0.03337400987076342,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.06084963936672086,
+            "kl_from_start": 0.025442704573195793,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.6662006046736845,
+          "future_functional_angles": {
+            "degrees": [
+              40.057394453012115,
+              52.907550508153356,
+              81.07070013151328
+            ],
+            "mean_squared_overlap": 0.3245541230753625
+          },
+          "forecast_response_angle_deg": 86.24250445789137,
+          "next_response_energy_capture": 0.5143274048695798,
+          "future_functional_reference_rank": 3
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.0377861775676411,
+          "residual_relative_error": 1.0467765319981472,
+          "parameter_energy_capture": 0.27524875088819045,
+          "full_forecast": {
+            "ce_gain": -0.00039776442324845895,
+            "kl_from_start": 0.0630692059519577,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.004033213285984327,
+            "kl_from_start": 0.047837801208693465,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": -0.00418537622975888,
+          "future_functional_angles": {
+            "degrees": [
+              40.057394453012115,
+              52.907550508153356,
+              81.07070013151328
+            ],
+            "mean_squared_overlap": 0.3245541230753625
+          },
+          "forecast_response_angle_deg": 103.85633963236683,
+          "next_response_energy_capture": 0.5143274048695798,
+          "future_functional_reference_rank": 3
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 0.9370134807464391,
+          "residual_relative_error": 0.944784031759887,
+          "parameter_energy_capture": 0.2728131750293073,
+          "full_forecast": {
+            "ce_gain": 0.036922660434192345,
+            "kl_from_start": 0.04119640314448035,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.037617030812067215,
+            "kl_from_start": 0.02978516576821095,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.38850941986885207,
+          "future_functional_angles": {
+            "degrees": [
+              49.16265881592817,
+              59.04660312836903,
+              74.51564222608664
+            ],
+            "mean_squared_overlap": 0.25447514862680526
+          },
+          "forecast_response_angle_deg": 96.19438059999598,
+          "next_response_energy_capture": 0.342749370217029,
+          "future_functional_reference_rank": 3,
+          "chart_only": {
+            "ce_gain": 0.03637958766925217,
+            "kl_from_start": 0.04229368249575335,
+            "accuracy_gain": 0.0
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.0633494321809673,
+          "residual_relative_error": 1.0726437059416243,
+          "parameter_energy_capture": 0.1957045259379282,
+          "full_forecast": {
+            "ce_gain": -0.04547233161514036,
+            "kl_from_start": 0.11020879815421467,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.044282870139184916,
+            "kl_from_start": 0.10010589502559823,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": -0.4784711872907779
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            3.193674209360892,
+            20.20850993118273,
+            73.9142670532615
+          ],
+          "mean_squared_overlap": 0.6514466359523354
+        },
+        "functional_angles": {
+          "degrees": [
+            6.872170474030902,
+            15.348840768280663,
+            78.16099059278517
+          ],
+          "mean_squared_overlap": 0.6525702900310529
+        },
+        "ce_gain_delta": 0.0823949920493327
+      }
+    },
+    {
+      "start": 189,
+      "end": 200,
+      "fit_group": 0,
+      "audit_group": 1,
+      "true_full_update": {
+        "ce_gain": 0.0561010701127565,
+        "kl_from_start": 0.07633095943674024,
+        "accuracy_gain": 0.03125
+      },
+      "carrier_only": {
+        "ce_gain": -0.008814889058046754,
+        "kl_from_start": 0.0012832753242545795,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.962656546068613,
+          "residual_relative_error": 0.9700922889290753,
+          "parameter_energy_capture": 0.060875841184078155,
+          "full_forecast": {
+            "ce_gain": 0.0085687320241572,
+            "kl_from_start": 0.0013334594504915047,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.01483741131651628,
+            "kl_from_start": 0.0023761907709916206,
+            "accuracy_gain": 0.03125
+          },
+          "ce_retention": 0.1527374078058594,
+          "future_functional_angles": {
+            "degrees": [
+              44.22419739576951,
+              75.06113568460599
+            ],
+            "mean_squared_overlap": 0.2899967149388189
+          },
+          "forecast_response_angle_deg": 53.27568327631697,
+          "next_response_energy_capture": 0.49909786555125596,
+          "future_functional_reference_rank": 2
+        },
+        "B_rolling": {
+          "update_relative_error": 1.013723703937048,
+          "residual_relative_error": 1.021671702980829,
+          "parameter_energy_capture": 0.23664766494917702,
+          "full_forecast": {
+            "ce_gain": -0.08887076827786472,
+            "kl_from_start": 0.05252717728751609,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.06899292153034584,
+            "kl_from_start": 0.040440046313517095,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": -1.5841189499459638,
+          "future_functional_angles": {
+            "degrees": [
+              39.64629998441589,
+              76.66994692054251
+            ],
+            "mean_squared_overlap": 0.32302737500672274
+          },
+          "forecast_response_angle_deg": 131.61174997368033,
+          "next_response_energy_capture": 0.5928554033337634,
+          "future_functional_reference_rank": 2
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.5301916657354762,
+          "residual_relative_error": 1.5431048127575502,
+          "parameter_energy_capture": 0.23664766494917702,
+          "full_forecast": {
+            "ce_gain": -0.531342538805416,
+            "kl_from_start": 0.43113133248683755,
+            "accuracy_gain": -0.1875
+          },
+          "residual_only": {
+            "ce_gain": -0.504284178758512,
+            "kl_from_start": 0.41048390338132124,
+            "accuracy_gain": -0.1875
+          },
+          "ce_retention": -9.471165839394516,
+          "future_functional_angles": {
+            "degrees": [
+              39.64629998441589,
+              76.66994692054251
+            ],
+            "mean_squared_overlap": 0.32302737500672274
+          },
+          "forecast_response_angle_deg": 129.47085764075266,
+          "next_response_energy_capture": 0.5928554033337634,
+          "future_functional_reference_rank": 2
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 1.4687922974515373,
+          "residual_relative_error": 1.4811286301974793,
+          "parameter_energy_capture": 0.25360340151711064,
+          "full_forecast": {
+            "ce_gain": -0.4875401372933054,
+            "kl_from_start": 0.37664471142971834,
+            "accuracy_gain": -0.15625
+          },
+          "residual_only": {
+            "ce_gain": -0.45910417835090017,
+            "kl_from_start": 0.35506138965613276,
+            "accuracy_gain": -0.15625
+          },
+          "ce_retention": -8.690389261976778,
+          "future_functional_angles": {
+            "degrees": [
+              40.95196762753515,
+              68.64990442945049
+            ],
+            "mean_squared_overlap": 0.3514802252192613
+          },
+          "forecast_response_angle_deg": 133.5125171777771,
+          "next_response_energy_capture": 0.5671495187814607,
+          "future_functional_reference_rank": 2,
+          "chart_only": {
+            "ce_gain": -0.4989437552916402,
+            "kl_from_start": 0.3750014499195653,
+            "accuracy_gain": -0.15625
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.2464920030554865,
+          "residual_relative_error": 1.256715246076151,
+          "parameter_energy_capture": 0.1406859608012097,
+          "full_forecast": {
+            "ce_gain": 0.008289767200945458,
+            "kl_from_start": 0.06394025885109282,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.014035580085324378,
+            "kl_from_start": 0.06382330233541472,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.14776486766266683
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.5167473400509134,
+            7.416827803183743,
+            68.98497916057988
+          ],
+          "mean_squared_overlap": 0.7039527689704449
+        },
+        "functional_angles": {
+          "degrees": [
+            0.6028154362464931,
+            6.130501953816737,
+            64.38508088353977
+          ],
+          "mean_squared_overlap": 0.7251285154828219
+        },
+        "ce_gain_delta": -0.4958299044942509
+      }
+    },
+    {
+      "start": 189,
+      "end": 200,
+      "fit_group": 1,
+      "audit_group": 0,
+      "true_full_update": {
+        "ce_gain": 0.04235280239536979,
+        "kl_from_start": 0.07806039934062574,
+        "accuracy_gain": -0.03125
+      },
+      "carrier_only": {
+        "ce_gain": 0.006679915723030422,
+        "kl_from_start": 0.0008931693639735367,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9621610904255083,
+          "residual_relative_error": 0.9695619536921627,
+          "parameter_energy_capture": 0.060875841184078155,
+          "full_forecast": {
+            "ce_gain": 0.023439377526532607,
+            "kl_from_start": 0.007748288486749488,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.018172624520454178,
+            "kl_from_start": 0.005172019892899622,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.5534315606254927,
+          "future_functional_angles": {
+            "degrees": [
+              46.45031297966335,
+              78.92929991802015
+            ],
+            "mean_squared_overlap": 0.2557849019745302
+          },
+          "forecast_response_angle_deg": 103.165185730602,
+          "next_response_energy_capture": 0.15475151240839233,
+          "future_functional_reference_rank": 2
+        },
+        "B_rolling": {
+          "update_relative_error": 0.9766848515058378,
+          "residual_relative_error": 0.984232477423878,
+          "parameter_energy_capture": 0.23664766494917702,
+          "full_forecast": {
+            "ce_gain": 0.03159229942598138,
+            "kl_from_start": 0.011514913115134952,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.024508172120393162,
+            "kl_from_start": 0.01113874639075597,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": 0.7459317362535425,
+          "future_functional_angles": {
+            "degrees": [
+              42.6478720987963,
+              49.01444654193319
+            ],
+            "mean_squared_overlap": 0.4855850203315102
+          },
+          "forecast_response_angle_deg": 75.61412730119062,
+          "next_response_energy_capture": 0.4419325538660428,
+          "future_functional_reference_rank": 2
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.0530671001683938,
+          "residual_relative_error": 1.0613786556626772,
+          "parameter_energy_capture": 0.23664766494917702,
+          "full_forecast": {
+            "ce_gain": -0.03853012983261808,
+            "kl_from_start": 0.04038355068248968,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": -0.044154635536607034,
+            "kl_from_start": 0.03929341081890783,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": -0.9097421576247428,
+          "future_functional_angles": {
+            "degrees": [
+              42.6478720987963,
+              49.01444654193319
+            ],
+            "mean_squared_overlap": 0.4855850203315102
+          },
+          "forecast_response_angle_deg": 113.53287076977149,
+          "next_response_energy_capture": 0.4419325538660428,
+          "future_functional_reference_rank": 2
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 1.033636509211069,
+          "residual_relative_error": 1.0417549053015778,
+          "parameter_energy_capture": 0.2222553758305098,
+          "full_forecast": {
+            "ce_gain": -0.013087670663429779,
+            "kl_from_start": 0.029619330784043295,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": -0.01927575986823224,
+            "kl_from_start": 0.029146160450995724,
+            "accuracy_gain": -0.0625
+          },
+          "ce_retention": -0.30901545879430603,
+          "future_functional_angles": {
+            "degrees": [
+              49.43831875978535,
+              61.669755226147515
+            ],
+            "mean_squared_overlap": 0.32402335491427103
+          },
+          "forecast_response_angle_deg": 96.9534011117182,
+          "next_response_energy_capture": 0.4012957838531982,
+          "future_functional_reference_rank": 2,
+          "chart_only": {
+            "ce_gain": -0.020287317767295504,
+            "kl_from_start": 0.03379125681122569,
+            "accuracy_gain": -0.03125
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.0886682259615106,
+          "residual_relative_error": 1.0973318281752233,
+          "parameter_energy_capture": 0.14693510496501846,
+          "full_forecast": {
+            "ce_gain": 0.04524588487939521,
+            "kl_from_start": 0.027951652741075406,
+            "accuracy_gain": -0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.04023580150119355,
+            "kl_from_start": 0.02495880896913614,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": 1.0683091158176043
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.05890791055376043,
+            0.18471510780811567,
+            67.67840095339452
+          ],
+          "mean_squared_overlap": 0.7147467738236098
+        },
+        "functional_angles": {
+          "degrees": [
+            0.033718423055692864,
+            0.26148150297124784,
+            88.78724626948888
+          ],
+          "mean_squared_overlap": 0.6668089273622052
+        },
+        "ce_gain_delta": -0.05833355554282499
+      }
+    },
+    {
+      "start": 200,
+      "end": 216,
+      "fit_group": 0,
+      "audit_group": 1,
+      "true_full_update": {
+        "ce_gain": 0.021617526863915867,
+        "kl_from_start": 0.052963101242517824,
+        "accuracy_gain": 0.0
+      },
+      "carrier_only": {
+        "ce_gain": -0.00266750100100685,
+        "kl_from_start": 0.0006688385870587544,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9711803751761844,
+          "residual_relative_error": 0.9784419030716861,
+          "parameter_energy_capture": 0.043439279078358935,
+          "full_forecast": {
+            "ce_gain": 0.003173776979045015,
+            "kl_from_start": 0.0013501807219789652,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.004765280034085592,
+            "kl_from_start": 0.001321242470113745,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.14681498947702046,
+          "future_functional_angles": {
+            "degrees": [
+              63.96195133344496
+            ],
+            "mean_squared_overlap": 0.19269283153989625
+          },
+          "forecast_response_angle_deg": 69.84845203250498,
+          "next_response_energy_capture": 0.19269283153989641,
+          "future_functional_reference_rank": 1
+        },
+        "B_rolling": {
+          "update_relative_error": 1.165524102339471,
+          "residual_relative_error": 1.1744220123419975,
+          "parameter_energy_capture": 0.2187837697419983,
+          "full_forecast": {
+            "ce_gain": -0.044035185938597135,
+            "kl_from_start": 0.028115005786934565,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": -0.03953582545616334,
+            "kl_from_start": 0.024758032084302953,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": -2.0370131243875536,
+          "future_functional_angles": {
+            "degrees": [
+              55.758762559681486
+            ],
+            "mean_squared_overlap": 0.31660710132016157
+          },
+          "forecast_response_angle_deg": 106.72701033773498,
+          "next_response_energy_capture": 0.31660710132016184,
+          "future_functional_reference_rank": 1
+        },
+        "C_quadratic": {
+          "update_relative_error": 1.1018384203388594,
+          "residual_relative_error": 1.1102033339488242,
+          "parameter_energy_capture": 0.2187837697419983,
+          "full_forecast": {
+            "ce_gain": -0.031602800245373,
+            "kl_from_start": 0.019296409143676585,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": -0.030067186887852357,
+            "kl_from_start": 0.018594635925792784,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": -1.461906370895952,
+          "future_functional_angles": {
+            "degrees": [
+              55.758762559681486
+            ],
+            "mean_squared_overlap": 0.31660710132016157
+          },
+          "forecast_response_angle_deg": 94.39318069717258,
+          "next_response_energy_capture": 0.31660710132016184,
+          "future_functional_reference_rank": 1
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 1.1277944892392098,
+          "residual_relative_error": 1.1363769619289965,
+          "parameter_energy_capture": 0.21301257458590422,
+          "full_forecast": {
+            "ce_gain": -0.11202843629591804,
+            "kl_from_start": 0.07070172591508767,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": -0.1083275350920624,
+            "kl_from_start": 0.06710464448101135,
+            "accuracy_gain": -0.0625
+          },
+          "ce_retention": -5.182296615202395,
+          "future_functional_angles": {
+            "degrees": [
+              56.361470295547896
+            ],
+            "mean_squared_overlap": 0.306862307328079
+          },
+          "forecast_response_angle_deg": 109.6983051102884,
+          "next_response_energy_capture": 0.306862307328079,
+          "future_functional_reference_rank": 1,
+          "chart_only": {
+            "ce_gain": -0.02176995745690441,
+            "kl_from_start": 0.02286259129338434,
+            "accuracy_gain": 0.0
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.639950273960245,
+          "residual_relative_error": 1.6527598968626227,
+          "parameter_energy_capture": 0.14135349186995155,
+          "full_forecast": {
+            "ce_gain": -0.39069033088888705,
+            "kl_from_start": 0.365332511591548,
+            "accuracy_gain": -0.125
+          },
+          "residual_only": {
+            "ce_gain": -0.3554558191928686,
+            "kl_from_start": 0.3312212175480469,
+            "accuracy_gain": -0.125
+          },
+          "ce_retention": -18.072850486011433
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.5402664936659489,
+            2.025405375764227,
+            62.81433414993161
+          ],
+          "mean_squared_overlap": 0.7357990394382093
+        },
+        "functional_angles": {
+          "degrees": [
+            0.6213282005761563,
+            2.4712942766635613,
+            82.18393405446766
+          ],
+          "mean_squared_overlap": 0.6721724568982487
+        },
+        "ce_gain_delta": 0.27866189459296903
+      }
+    },
+    {
+      "start": 200,
+      "end": 216,
+      "fit_group": 1,
+      "audit_group": 0,
+      "true_full_update": {
+        "ce_gain": 0.04953922578282677,
+        "kl_from_start": 0.11869956504351195,
+        "accuracy_gain": 0.03125
+      },
+      "carrier_only": {
+        "ce_gain": 0.0030961881696604243,
+        "kl_from_start": 0.0014832566956119726,
+        "accuracy_gain": 0.0
+      },
+      "methods": {
+        "A_fixed": {
+          "update_relative_error": 0.9708797409823664,
+          "residual_relative_error": 0.9785032094265256,
+          "parameter_energy_capture": 0.043439279078358935,
+          "full_forecast": {
+            "ce_gain": 0.03329237359034151,
+            "kl_from_start": 0.00791559528375726,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": 0.029494751684080903,
+            "kl_from_start": 0.006187344452394731,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.6720406519127036,
+          "future_functional_angles": {
+            "degrees": [
+              47.4044460235382
+            ],
+            "mean_squared_overlap": 0.4580837532348775
+          },
+          "forecast_response_angle_deg": 53.56192467565055,
+          "next_response_energy_capture": 0.4580837532348776,
+          "future_functional_reference_rank": 1
+        },
+        "B_rolling": {
+          "update_relative_error": 1.052032044983035,
+          "residual_relative_error": 1.060314453743897,
+          "parameter_energy_capture": 0.2187837697419983,
+          "full_forecast": {
+            "ce_gain": 0.00035140217095092074,
+            "kl_from_start": 0.025875908164409062,
+            "accuracy_gain": 0.0
+          },
+          "residual_only": {
+            "ce_gain": -0.0021065958105534743,
+            "kl_from_start": 0.020958982080839874,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.007093412652257024,
+          "future_functional_angles": {
+            "degrees": [
+              57.92608685055965
+            ],
+            "mean_squared_overlap": 0.2819746241661802
+          },
+          "forecast_response_angle_deg": 96.19684275296002,
+          "next_response_energy_capture": 0.28197462416618047,
+          "future_functional_reference_rank": 1
+        },
+        "C_quadratic": {
+          "update_relative_error": 0.9825596243017621,
+          "residual_relative_error": 0.9902780371599804,
+          "parameter_energy_capture": 0.2187837697419983,
+          "full_forecast": {
+            "ce_gain": -0.05418960318542845,
+            "kl_from_start": 0.04852916129279858,
+            "accuracy_gain": -0.0625
+          },
+          "residual_only": {
+            "ce_gain": -0.059361824101889116,
+            "kl_from_start": 0.04802420702759249,
+            "accuracy_gain": -0.03125
+          },
+          "ce_retention": -1.0938726298022563,
+          "future_functional_angles": {
+            "degrees": [
+              57.92608685055965
+            ],
+            "mean_squared_overlap": 0.2819746241661802
+          },
+          "forecast_response_angle_deg": 108.70958544116388,
+          "next_response_energy_capture": 0.28197462416618047,
+          "future_functional_reference_rank": 1
+        },
+        "D_atlas_innovation": {
+          "update_relative_error": 1.282555840021733,
+          "residual_relative_error": 1.2927028572066213,
+          "parameter_energy_capture": 0.22564306509904053,
+          "full_forecast": {
+            "ce_gain": -0.5347413304914954,
+            "kl_from_start": 0.44385367543892784,
+            "accuracy_gain": -0.15625
+          },
+          "residual_only": {
+            "ce_gain": -0.5286370297096555,
+            "kl_from_start": 0.4320245749042225,
+            "accuracy_gain": -0.15625
+          },
+          "ce_retention": -10.794301324686193,
+          "future_functional_angles": {
+            "degrees": [
+              46.356421241155935
+            ],
+            "mean_squared_overlap": 0.4763348278512532
+          },
+          "forecast_response_angle_deg": 123.14945627292218,
+          "next_response_energy_capture": 0.4763348278512528,
+          "future_functional_reference_rank": 1,
+          "chart_only": {
+            "ce_gain": -0.4896841598838435,
+            "kl_from_start": 0.4053029292260285,
+            "accuracy_gain": -0.125
+          }
+        }
+      },
+      "feedback": {
+        "no_real_feedback": {
+          "update_relative_error": 1.1352890463305376,
+          "residual_relative_error": 1.144245935831633,
+          "parameter_energy_capture": 0.1100275147615116,
+          "full_forecast": {
+            "ce_gain": 0.010062598963004765,
+            "kl_from_start": 0.05840044611183941,
+            "accuracy_gain": 0.03125
+          },
+          "residual_only": {
+            "ce_gain": 0.00674030548774554,
+            "kl_from_start": 0.05459693114791078,
+            "accuracy_gain": 0.0
+          },
+          "ce_retention": 0.2031238640490231
+        },
+        "with_real_feedback_chart": 1,
+        "no_real_feedback_chart": 1,
+        "parameter_angles": {
+          "degrees": [
+            0.30098347164477607,
+            5.705040237585803,
+            79.8415765336998
+          ],
+          "mean_squared_overlap": 0.6737323850600047
+        },
+        "functional_angles": {
+          "degrees": [
+            0.695650114556002,
+            4.31590113457937,
+            84.27641283619064
+          ],
+          "mean_squared_overlap": 0.6680450524671747
+        },
+        "ce_gain_delta": -0.5448039294545002
+      }
+    }
+  ]
+}
