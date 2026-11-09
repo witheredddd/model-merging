@@ -1,0 +1,1057 @@
+{
+  "fit_steps": [
+    0,
+    25,
+    27,
+    50,
+    54
+  ],
+  "rank": 3,
+  "windows": [
+    {
+      "start": 54,
+      "end": 75,
+      "carrier_energy_fraction": 0.7582868337631226,
+      "cosine_to_prior_residuals": [],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.17219639952682764,
+              "kl_from_start": 0.04910263182911034,
+              "accuracy_gain": 0.0625
+            },
+            "residual": {
+              "ce_gain": 0.08582477042370318,
+              "kl_from_start": 0.026164788297014067,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.20704983640978014,
+              "kl_from_start": 0.045724947817169126,
+              "accuracy_gain": 0.09375
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.23816555789644678,
+              "kl_from_start": 0.04641982862939303,
+              "accuracy_gain": 0.09375
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.26531623145016625,
+              "kl_from_start": 0.051147233228263936,
+              "accuracy_gain": 0.09375
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.28852430582701594,
+              "kl_from_start": 0.059719193026118014,
+              "accuracy_gain": 0.09375
+            }
+          },
+          "ce_interaction": 0.03050313587648512
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.09317517861540514,
+              "kl_from_start": 0.047273763748128875,
+              "accuracy_gain": 0.0625
+            },
+            "residual": {
+              "ce_gain": 0.0735181752659737,
+              "kl_from_start": 0.027204813733098493,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.12466760036868285,
+              "kl_from_start": 0.04188656537014578,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.15442461645645222,
+              "kl_from_start": 0.03916486283100375,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.18160955426722958,
+              "kl_from_start": 0.03907089681947417,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.20698345552822106,
+              "kl_from_start": 0.04205172253472635,
+              "accuracy_gain": 0.0625
+            }
+          },
+          "ce_interaction": 0.040290101646842214
+        }
+      ]
+    },
+    {
+      "start": 75,
+      "end": 81,
+      "carrier_energy_fraction": 0.49795326590538025,
+      "cosine_to_prior_residuals": [
+        0.4043194055557251
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.042362047700355676,
+              "kl_from_start": 0.003898710404665528,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.05875370548471581,
+              "kl_from_start": 0.004768178476617655,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.0590721078016998,
+              "kl_from_start": 0.003903828027116759,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.07496184303894493,
+              "kl_from_start": 0.004561523315519385,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.09019262832630548,
+              "kl_from_start": 0.005828593396028744,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.10480943111450469,
+              "kl_from_start": 0.007674424711158274,
+              "accuracy_gain": 0.03125
+            }
+          },
+          "ce_interaction": 0.0036936779294332034
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.01198837291383259,
+              "kl_from_start": 0.00509063058507011,
+              "accuracy_gain": 0.03125
+            },
+            "residual": {
+              "ce_gain": 0.02361396414393724,
+              "kl_from_start": 0.005993355866460254,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.019520846254742485,
+              "kl_from_start": 0.004619727585483362,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.026468266872645252,
+              "kl_from_start": 0.004842122231219699,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.032831143365386506,
+              "kl_from_start": 0.005767471051130466,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.03861872968955993,
+              "kl_from_start": 0.00740954472686381,
+              "accuracy_gain": 0.03125
+            }
+          },
+          "ce_interaction": 0.003016392631790099
+        }
+      ]
+    },
+    {
+      "start": 81,
+      "end": 100,
+      "carrier_energy_fraction": 0.4073370099067688,
+      "cosine_to_prior_residuals": [
+        0.3863174319267273,
+        0.6570504903793335
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.08803157562457087,
+              "kl_from_start": 0.03175746934586053,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.16084429153632174,
+              "kl_from_start": 0.034006409088284714,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.14524901346228813,
+              "kl_from_start": 0.02954732372120992,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.20070964661814839,
+              "kl_from_start": 0.03191989736294583,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.25332528221675976,
+              "kl_from_start": 0.039199221769209404,
+              "accuracy_gain": 0.09375
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.30066860438839527,
+              "kl_from_start": 0.05140714917783955,
+              "accuracy_gain": 0.125
+            }
+          },
+          "ce_interaction": 0.05179273722750266
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": -0.00043993439983858185,
+              "kl_from_start": 0.037157147653219015,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.1447869653255638,
+              "kl_from_start": 0.06454501976009412,
+              "accuracy_gain": 0.09375
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.06169010869721714,
+              "kl_from_start": 0.028811815238625374,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.11987995417131447,
+              "kl_from_start": 0.026879477373397295,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.17210192246434008,
+              "kl_from_start": 0.03275623344488472,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.2163904195696711,
+              "kl_from_start": 0.04774355988399957,
+              "accuracy_gain": 0.125
+            }
+          },
+          "ce_interaction": 0.07204338864394588
+        }
+      ]
+    },
+    {
+      "start": 100,
+      "end": 108,
+      "carrier_energy_fraction": 0.25847575068473816,
+      "cosine_to_prior_residuals": [
+        0.3755594491958618,
+        0.44249868392944336,
+        0.5347776412963867
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.029297298336674382,
+              "kl_from_start": 0.005115882786070315,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.12800283564005732,
+              "kl_from_start": 0.02107815757250014,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.07167303955077386,
+              "kl_from_start": 0.005234500270179491,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.11087875472082964,
+              "kl_from_start": 0.00811312627709277,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.1460613833570672,
+              "kl_from_start": 0.013909358206084885,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.17663375541715776,
+              "kl_from_start": 0.022910139553903856,
+              "accuracy_gain": 0.03125
+            }
+          },
+          "ce_interaction": 0.019333621440426052
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.0038908783233273514,
+              "kl_from_start": 0.006799299934646921,
+              "accuracy_gain": -0.0625
+            },
+            "residual": {
+              "ce_gain": 0.04450725705859515,
+              "kl_from_start": 0.017628270548517,
+              "accuracy_gain": -0.03125
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.020303239129878747,
+              "kl_from_start": 0.006155869022485492,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.03442061641771976,
+              "kl_from_start": 0.00798733786477075,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.04637418662085124,
+              "kl_from_start": 0.011957928245856179,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.056511853381358335,
+              "kl_from_start": 0.017865265753581563,
+              "accuracy_gain": 0.0
+            }
+          },
+          "ce_interaction": 0.008113717999435832
+        }
+      ]
+    },
+    {
+      "start": 108,
+      "end": 125,
+      "carrier_energy_fraction": 0.18979227542877197,
+      "cosine_to_prior_residuals": [
+        0.33119797706604004,
+        0.41692718863487244,
+        0.49051982164382935,
+        0.6724891662597656
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.049140682302568184,
+              "kl_from_start": 0.018397545981968483,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.2640517931265034,
+              "kl_from_start": 0.0863358481748229,
+              "accuracy_gain": 0.09375
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.15027106637260346,
+              "kl_from_start": 0.02209325740459957,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.23520474699616312,
+              "kl_from_start": 0.03965806298600906,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.3053705308567096,
+              "kl_from_start": 0.06852532061666919,
+              "accuracy_gain": 0.09375
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.3629652809660441,
+              "kl_from_start": 0.10775175231599059,
+              "accuracy_gain": 0.09375
+            }
+          },
+          "ce_interaction": 0.0497728055369725
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": -0.013306458248655173,
+              "kl_from_start": 0.023209045455090255,
+              "accuracy_gain": -0.03125
+            },
+            "residual": {
+              "ce_gain": 0.1387454620781925,
+              "kl_from_start": 0.06571390294708171,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.043596193333567346,
+              "kl_from_start": 0.017463424328631294,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.09343647160348534,
+              "kl_from_start": 0.021158842750929878,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.13458787678369932,
+              "kl_from_start": 0.03422558263828757,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.16689433920915442,
+              "kl_from_start": 0.056324674704714646,
+              "accuracy_gain": 0.0625
+            }
+          },
+          "ce_interaction": 0.0414553353796171
+        }
+      ]
+    },
+    {
+      "start": 125,
+      "end": 135,
+      "carrier_energy_fraction": 0.13517966866493225,
+      "cosine_to_prior_residuals": [
+        0.2657034695148468,
+        0.2949272096157074,
+        0.4612499177455902,
+        0.4967496395111084,
+        0.5338387489318848
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.033715348807842105,
+              "kl_from_start": 0.0059792168252603365,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.12821271266537348,
+              "kl_from_start": 0.07779208686440832,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.08922949915286293,
+              "kl_from_start": 0.008997802342898424,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.1310164398378889,
+              "kl_from_start": 0.022057195034120736,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.16027525254288244,
+              "kl_from_start": 0.045480717109983644,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.17365980173935636,
+              "kl_from_start": 0.08018508215024636,
+              "accuracy_gain": 0.03125
+            }
+          },
+          "ce_interaction": 0.011731740266140767
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.001717865313259903,
+              "kl_from_start": 0.00587477541424148,
+              "accuracy_gain": -0.03125
+            },
+            "residual": {
+              "ce_gain": 0.08421311015057514,
+              "kl_from_start": 0.041383417775770336,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.035037994772317615,
+              "kl_from_start": 0.007235203688217662,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.06170801173778073,
+              "kl_from_start": 0.014734705994062526,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.08197571361085049,
+              "kl_from_start": 0.02757943477568004,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.09604504627869004,
+              "kl_from_start": 0.045254975054139876,
+              "accuracy_gain": 0.0
+            }
+          },
+          "ce_interaction": 0.010114070814854992
+        }
+      ]
+    },
+    {
+      "start": 135,
+      "end": 150,
+      "carrier_energy_fraction": 0.07860689610242844,
+      "cosine_to_prior_residuals": [
+        0.2195763885974884,
+        0.2712954878807068,
+        0.39001384377479553,
+        0.41715845465660095,
+        0.4616234302520752,
+        0.5811187624931335
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.03905315860151093,
+              "kl_from_start": 0.007701129098262672,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.15531265908199943,
+              "kl_from_start": 0.10800083218842266,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.1048006829811573,
+              "kl_from_start": 0.015719815191612523,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.1526326861645061,
+              "kl_from_start": 0.039659462848300416,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.18381824134700808,
+              "kl_from_start": 0.07629973210318167,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.2001016630300102,
+              "kl_from_start": 0.12342644809885045,
+              "accuracy_gain": 0.0625
+            }
+          },
+          "ce_interaction": 0.005735845346499846
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": -0.009794512175866632,
+              "kl_from_start": 0.00925654319866877,
+              "accuracy_gain": -0.03125
+            },
+            "residual": {
+              "ce_gain": 0.13319011936243225,
+              "kl_from_start": 0.051092741537822,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.03920767982005896,
+              "kl_from_start": 0.007894893941197832,
+              "accuracy_gain": -0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.08009230702730114,
+              "kl_from_start": 0.014180167400204679,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.11255102014586188,
+              "kl_from_start": 0.02731664711601292,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.1365070044281918,
+              "kl_from_start": 0.04632264073003427,
+              "accuracy_gain": 0.0
+            }
+          },
+          "ce_interaction": 0.013111397241626188
+        }
+      ]
+    },
+    {
+      "start": 150,
+      "end": 162,
+      "carrier_energy_fraction": 0.055654849857091904,
+      "cosine_to_prior_residuals": [
+        0.19307200610637665,
+        0.23806151747703552,
+        0.3412788212299347,
+        0.3578532636165619,
+        0.42429614067077637,
+        0.4451315999031067,
+        0.5031858086585999
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.022776473583422607,
+              "kl_from_start": 0.00365846960361793,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.16905258119862382,
+              "kl_from_start": 0.11699931228460765,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.09299092964611178,
+              "kl_from_start": 0.010595229055009227,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.14671052898083037,
+              "kl_from_start": 0.03212058672441341,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.18213097475044204,
+              "kl_from_start": 0.06887022865322817,
+              "accuracy_gain": 0.09375
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.19657204519179894,
+              "kl_from_start": 0.1220890022650917,
+              "accuracy_gain": 0.0625
+            }
+          },
+          "ce_interaction": 0.004742990409752512
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": -0.0014144493973516914,
+              "kl_from_start": 0.0025048083670263983,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.10081807926465486,
+              "kl_from_start": 0.08691273058290794,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.044230097638534804,
+              "kl_from_start": 0.008220405947345067,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.07497875603018311,
+              "kl_from_start": 0.027156001565077748,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.09434167519706532,
+              "kl_from_start": 0.05512352522850868,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.10563565987231427,
+              "kl_from_start": 0.08871550858787572,
+              "accuracy_gain": 0.0
+            }
+          },
+          "ce_interaction": 0.006232030005011102
+        }
+      ]
+    },
+    {
+      "start": 162,
+      "end": 175,
+      "carrier_energy_fraction": 0.03450050204992294,
+      "cosine_to_prior_residuals": [
+        0.11947812885046005,
+        0.17525067925453186,
+        0.2450994849205017,
+        0.2680833041667938,
+        0.32437828183174133,
+        0.3612331748008728,
+        0.3379000425338745,
+        0.5081071853637695
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.020064586612326574,
+              "kl_from_start": 0.0031431469541554225,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.13774358542224585,
+              "kl_from_start": 0.0883405401802149,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.0715765703171769,
+              "kl_from_start": 0.012911614314173845,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.10857428841523353,
+              "kl_from_start": 0.03549087338608728,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.1352911284633746,
+              "kl_from_start": 0.06634599577288071,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.15339014201452594,
+              "kl_from_start": 0.10232520916323502,
+              "accuracy_gain": 0.09375
+            }
+          },
+          "ce_interaction": -0.004418030020046482
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": -0.0014956256700300874,
+              "kl_from_start": 0.0017604411668947183,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": -0.0036920661307508484,
+              "kl_from_start": 0.03856541757938757,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.00663520646597357,
+              "kl_from_start": 0.004172001989500455,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.008376320646811153,
+              "kl_from_start": 0.011763609378961924,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.0037382997300242082,
+              "kl_from_start": 0.025267998850192874,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": -0.009367332638468395,
+              "kl_from_start": 0.04599355484731994,
+              "accuracy_gain": 0.0
+            }
+          },
+          "ce_interaction": -0.004179640837687459
+        }
+      ]
+    },
+    {
+      "start": 175,
+      "end": 189,
+      "carrier_energy_fraction": 0.020275117829442024,
+      "cosine_to_prior_residuals": [
+        0.1023445650935173,
+        0.13349777460098267,
+        0.19837909936904907,
+        0.2453232705593109,
+        0.30648767948150635,
+        0.30696040391921997,
+        0.3625502586364746,
+        0.38604679703712463,
+        0.4801653325557709
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.007698461305151616,
+              "kl_from_start": 0.002049857634647595,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.08235766071366352,
+              "kl_from_start": 0.07902956827206276,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.044648416051218276,
+              "kl_from_start": 0.008673283297786919,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.06919033894364213,
+              "kl_from_start": 0.025902808433626457,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.08559826617382701,
+              "kl_from_start": 0.04978639086205271,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.09503656124106102,
+              "kl_from_start": 0.0777943515392219,
+              "accuracy_gain": 0.03125
+            }
+          },
+          "ce_interaction": 0.0049804392222458915
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": -0.013228883964519877,
+              "kl_from_start": 0.002603439469543916,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.07152821560387551,
+              "kl_from_start": 0.06046006089581486,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.017914380403095786,
+              "kl_from_start": 0.0059071968507713405,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.04021347845321219,
+              "kl_from_start": 0.01769607933039769,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.0546971920971544,
+              "kl_from_start": 0.03721512237337947,
+              "accuracy_gain": 0.0625
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.06085240701312766,
+              "kl_from_start": 0.06407755096583181,
+              "accuracy_gain": 0.03125
+            }
+          },
+          "ce_interaction": 0.002553075373772029
+        }
+      ]
+    },
+    {
+      "start": 189,
+      "end": 200,
+      "carrier_energy_fraction": 0.017578542232513428,
+      "cosine_to_prior_residuals": [
+        0.10183503478765488,
+        0.1237882599234581,
+        0.18758589029312134,
+        0.20007310807704926,
+        0.23913180828094482,
+        0.2803010642528534,
+        0.2776542603969574,
+        0.3477715253829956,
+        0.27749913930892944,
+        0.4683322012424469
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.008125363060382723,
+              "kl_from_start": 0.0009791690684772584,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.037346463130305596,
+              "kl_from_start": 0.07231222905481544,
+              "accuracy_gain": -0.03125
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.03080311941150629,
+              "kl_from_start": 0.006903009262109657,
+              "accuracy_gain": -0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.04365533972679611,
+              "kl_from_start": 0.02255810533271898,
+              "accuracy_gain": -0.03125
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.04730486514631149,
+              "kl_from_start": 0.04697900603504728,
+              "accuracy_gain": -0.03125
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.04235273214595742,
+              "kl_from_start": 0.07806039909043384,
+              "accuracy_gain": -0.03125
+            }
+          },
+          "ce_interaction": -0.0031190940447309023
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": -0.00048190408958492803,
+              "kl_from_start": 0.0009235739389870917,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.054611832625649614,
+              "kl_from_start": 0.07481310543347461,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.02744143228751686,
+              "kl_from_start": 0.007154827955234529,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.04378995727835787,
+              "kl_from_start": 0.02485603373041459,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.052497158017537154,
+              "kl_from_start": 0.04866226761332627,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.05610113073192316,
+              "kl_from_start": 0.07633063978125937,
+              "accuracy_gain": 0.03125
+            }
+          },
+          "ce_interaction": 0.0019712021958584736
+        }
+      ]
+    },
+    {
+      "start": 200,
+      "end": 216,
+      "carrier_energy_fraction": 0.01579313538968563,
+      "cosine_to_prior_residuals": [
+        0.07938926666975021,
+        0.09810756891965866,
+        0.14319747686386108,
+        0.16895291209220886,
+        0.20634759962558746,
+        0.2322702556848526,
+        0.25981247425079346,
+        0.27266812324523926,
+        0.2746133804321289,
+        0.3144840896129608,
+        0.4379388093948364
+      ],
+      "groups": [
+        {
+          "probe_group": 0,
+          "conditions": {
+            "carrier": {
+              "ce_gain": 0.0029459192365955122,
+              "kl_from_start": 0.0019026525818073045,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.04070387087618221,
+              "kl_from_start": 0.11860522731124651,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.0368878295602893,
+              "kl_from_start": 0.007988415068426614,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.055651173010361155,
+              "kl_from_start": 0.03300707252776529,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.059175625219358235,
+              "kl_from_start": 0.07421720704897777,
+              "accuracy_gain": 0.03125
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.04953933099103412,
+              "kl_from_start": 0.11869949546664899,
+              "accuracy_gain": 0.03125
+            }
+          },
+          "ce_interaction": 0.005889540878256397
+        },
+        {
+          "probe_group": 1,
+          "conditions": {
+            "carrier": {
+              "ce_gain": -0.004466238808417761,
+              "kl_from_start": 0.0013560935506984667,
+              "accuracy_gain": 0.0
+            },
+            "residual": {
+              "ce_gain": 0.026960166616489104,
+              "kl_from_start": 0.047766902768718936,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.25": {
+              "ce_gain": 0.014265174597944089,
+              "kl_from_start": 0.003911447525772362,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.5": {
+              "ce_gain": 0.02480300896523352,
+              "kl_from_start": 0.013826313668113188,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_0.75": {
+              "ce_gain": 0.0275410609010467,
+              "kl_from_start": 0.030321026948685277,
+              "accuracy_gain": 0.0
+            },
+            "carrier_plus_1": {
+              "ce_gain": 0.021617470976781752,
+              "kl_from_start": 0.052963174472525354,
+              "accuracy_gain": 0.0
+            }
+          },
+          "ce_interaction": -0.0008764568312895904
+        }
+      ]
+    }
+  ],
+  "residual_recurrence_rank3_later_six": [
+    0.3449108302593231,
+    0.24319899082183838,
+    0.1475430727005005,
+    0.11896173655986786,
+    0.08400982618331909,
+    0.059656772762537
+  ]
+}

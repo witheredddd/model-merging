@@ -1,0 +1,1357 @@
+{
+  "provenance": {
+    "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+    "expert_sha256": "5869832d393de9160777110dcd6af04a2e9ac8a094da7c12cd9862157017be84",
+    "head_sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d",
+    "trace_sha256": "c314d3c218ef427df2c6cbe583c3df785a2e0b40a78d0d334f572be17cce5a4b",
+    "raw_train_indices": [
+      [
+        2024,
+        1168,
+        2777,
+        3666,
+        2303,
+        1906,
+        3708,
+        2396,
+        1286,
+        1068,
+        2363,
+        1161,
+        1231,
+        1391,
+        2634,
+        814,
+        3010,
+        1922,
+        330,
+        3530,
+        2515,
+        2176,
+        2710,
+        155,
+        1266,
+        2383,
+        80,
+        3425,
+        2267,
+        984,
+        3376,
+        3484
+      ],
+      [
+        1053,
+        755,
+        3516,
+        1023,
+        3109,
+        2818,
+        3234,
+        482,
+        2785,
+        124,
+        3320,
+        550,
+        718,
+        965,
+        2709,
+        1657,
+        924,
+        2527,
+        2157,
+        3534,
+        3330,
+        3243,
+        575,
+        291,
+        2100,
+        160,
+        1183,
+        398,
+        2366,
+        43,
+        3107,
+        3726
+      ]
+    ],
+    "rank": 3
+  },
+  "anchors": [
+    {
+      "step": 0,
+      "groups": [
+        {
+          "fit_group": 0,
+          "audit_group": 1,
+          "future_step": 27,
+          "equal_norm_radius": 0.005854653660207987,
+          "full_future": {
+            "ce_gain": 0.10569835689413987,
+            "kl_from_start": 0.017524028896304764,
+            "accuracy_gain": 0.03125
+          },
+          "geometry": {
+            "pca_to_ggn_angles_deg": [
+              32.7264289855957,
+              60.45633316040039,
+              76.70343780517578
+            ],
+            "krylov_to_ggn_angles_deg": [
+              2.387615203857422,
+              34.95353698730469,
+              88.29627227783203
+            ],
+            "gradient_energy_in_ggn_top3": 0.2257331907749176
+          },
+          "spectrum": {
+            "ritz_values": [
+              13282.932345068915,
+              4516.843711638112,
+              3755.6221504764962,
+              3278.1298273631432,
+              2772.381666417349,
+              2238.963246367606,
+              1742.5783996512343,
+              1139.1142843402872,
+              635.5784332604478,
+              326.33323846273885,
+              84.75205911751873,
+              5.834766880392002e-05
+            ],
+            "top_relative_residual": [
+              1.0622452464303933e-06,
+              0.001146236783824861,
+              0.04007846489548683
+            ],
+            "trace_samples": [
+              164355.71875,
+              141666.21875,
+              143425.828125,
+              204665.953125,
+              113685.421875,
+              127737.65625
+            ],
+            "squared_trace_samples": [
+              337682400.0,
+              302334912.0,
+              260975328.0,
+              1122720640.0,
+              166683728.0,
+              208568416.0
+            ],
+            "participation_ratio": 55.717501284360246,
+            "ggn_products": 21
+          },
+          "budget": {
+            "gradient_pca": {
+              "vjp": 7,
+              "jvp": 0
+            },
+            "krylov": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "ggn_sketch": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "past_checkpoints": 0,
+            "bootstrap_gradients": 6,
+            "basis_generation_seconds": {
+              "common_gradient": 0.34021508786827326,
+              "gradient_pca": 1.5223151589743793,
+              "krylov": 1.7525097378529608,
+              "ggn_sketch": 1.5137310419231653
+            },
+            "last_krylov_fit_curvature": 6368.71630859375
+          },
+          "methods": {
+            "gradient_pca": {
+              "future_parameter_energy": 0.00808012392371893,
+              "equal_norm_fit_descent": {
+                "ce_gain": 0.006362443547571317,
+                "kl_from_start": 0.007796817715509132,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": 0.0056609327781781925,
+                "quadratic_curvature": 0.020898620477199883,
+                "quadratic_error": -0.0007015107693931245
+              },
+              "future_projection": {
+                "ce_gain": 0.003866486666130209,
+                "kl_from_start": 0.0008771675985759517,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": 0.0036536749904839856,
+                "quadratic_curvature": 0.0017397297659026286,
+                "quadratic_error": -0.00021281167564622325
+              },
+              "future_ce_retention": 0.036580385729199305
+            },
+            "krylov": {
+              "future_parameter_energy": 0.009950503706932068,
+              "equal_norm_fit_descent": {
+                "ce_gain": 0.009287075836971859,
+                "kl_from_start": 0.00868717677332036,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": 0.008920527541820641,
+                "quadratic_curvature": 0.024110604649005857,
+                "quadratic_error": -0.00036654829515121723
+              },
+              "future_projection": {
+                "ce_gain": 0.0055890924780841456,
+                "kl_from_start": 0.0003519845267120552,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": 0.002830462084722636,
+                "quadratic_curvature": 0.0006323907613379521,
+                "quadratic_error": -0.0027586303933615094
+              },
+              "future_ce_retention": 0.05287776122841524
+            },
+            "ggn_sketch": {
+              "future_parameter_energy": 0.0017730677500367165,
+              "equal_norm_fit_descent": {
+                "ce_gain": -0.5640154509112445,
+                "kl_from_start": 0.33882374032997653,
+                "accuracy_gain": -0.15625,
+                "quadratic_ce_gain": -0.11044736184022455,
+                "quadratic_curvature": 0.3272356456632075,
+                "quadratic_error": 0.45356808907102
+              },
+              "future_projection": {
+                "ce_gain": -0.00019954984138981224,
+                "kl_from_start": 0.0002251463418552809,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.0010803566102981664,
+                "quadratic_curvature": 0.00044553894875877585,
+                "quadratic_error": -0.0008808067689083541
+              },
+              "future_ce_retention": -0.001887918102545979
+            },
+            "ggn_ritz": {
+              "future_parameter_energy": 0.00025896960869431496,
+              "equal_norm_fit_descent": {
+                "ce_gain": -0.030475067796588817,
+                "kl_from_start": 0.040957786115828586,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": -0.027159870440199765,
+                "quadratic_curvature": 0.09495338154599758,
+                "quadratic_error": 0.0033151973563890526
+              },
+              "future_projection": {
+                "ce_gain": -0.0002790834372505824,
+                "kl_from_start": 4.948190719240004e-05,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.00021357787317613866,
+                "quadratic_curvature": 0.00010206922521560806,
+                "quadratic_error": 6.550556407444372e-05
+              },
+              "future_ce_retention": -0.0026403763071746987
+            }
+          }
+        },
+        {
+          "fit_group": 1,
+          "audit_group": 0,
+          "future_step": 27,
+          "equal_norm_radius": 0.005854653660207987,
+          "full_future": {
+            "ce_gain": 0.13013072790930824,
+            "kl_from_start": 0.01701361131700565,
+            "accuracy_gain": 0.03125
+          },
+          "geometry": {
+            "pca_to_ggn_angles_deg": [
+              55.35826110839844,
+              66.45158386230469,
+              84.18225860595703
+            ],
+            "krylov_to_ggn_angles_deg": [
+              1.1064143180847168,
+              63.045379638671875,
+              89.76364135742188
+            ],
+            "gradient_energy_in_ggn_top3": 0.09382189810276031
+          },
+          "spectrum": {
+            "ritz_values": [
+              19544.122563063618,
+              7001.936543903865,
+              6360.801160162948,
+              6043.587014754867,
+              4459.296758019664,
+              3665.228046836013,
+              2768.29952654901,
+              1618.211266299395,
+              1121.9313973364276,
+              564.4756383321425,
+              134.2129358623866,
+              8.039195170050094e-05
+            ],
+            "top_relative_residual": [
+              1.4202897773429868e-06,
+              0.0008751842542551458,
+              0.03201695904135704
+            ],
+            "trace_samples": [
+              100701.7421875,
+              116947.578125,
+              123933.671875,
+              148560.6875,
+              136490.46875,
+              182047.90625
+            ],
+            "squared_trace_samples": [
+              140899872.0,
+              548836480.0,
+              380825408.0,
+              472850240.0,
+              284041920.0,
+              1458477824.0
+            ],
+            "participation_ratio": 33.17002687633006,
+            "ggn_products": 21
+          },
+          "budget": {
+            "gradient_pca": {
+              "vjp": 7,
+              "jvp": 0
+            },
+            "krylov": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "ggn_sketch": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "past_checkpoints": 0,
+            "bootstrap_gradients": 6,
+            "basis_generation_seconds": {
+              "common_gradient": 0.08506625797599554,
+              "gradient_pca": 1.701274309772998,
+              "krylov": 1.5229408629238605,
+              "ggn_sketch": 1.5256531746126711
+            },
+            "last_krylov_fit_curvature": 4438.31982421875
+          },
+          "methods": {
+            "gradient_pca": {
+              "future_parameter_energy": 0.010457733646035194,
+              "equal_norm_fit_descent": {
+                "ce_gain": -0.03596256887488769,
+                "kl_from_start": 0.01720476844433627,
+                "accuracy_gain": 0.03125,
+                "quadratic_ce_gain": 0.01645858440654417,
+                "quadratic_curvature": 0.02398148490776089,
+                "quadratic_error": 0.05242115328143186
+              },
+              "future_projection": {
+                "ce_gain": 0.004246862088882253,
+                "kl_from_start": 0.001318107533858347,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.00864743575491419,
+                "quadratic_curvature": 0.00267946217748852,
+                "quadratic_error": 0.004400573666031938
+              },
+              "future_ce_retention": 0.03263535182744855
+            },
+            "krylov": {
+              "future_parameter_energy": 0.010705685243010521,
+              "equal_norm_fit_descent": {
+                "ce_gain": -0.041214817229402456,
+                "kl_from_start": 0.01998571273164986,
+                "accuracy_gain": 0.03125,
+                "quadratic_ce_gain": 0.012739472317427787,
+                "quadratic_curvature": 0.026953781126886872,
+                "quadratic_error": 0.05395428954683024
+              },
+              "future_projection": {
+                "ce_gain": 0.0036717527050647014,
+                "kl_from_start": 0.0004090417543435133,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.005886347242020706,
+                "quadratic_curvature": 0.0008677854393063492,
+                "quadratic_error": 0.0022145945369560043
+              },
+              "future_ce_retention": 0.028215877710479335
+            },
+            "ggn_sketch": {
+              "future_parameter_energy": 0.001102773705497384,
+              "equal_norm_fit_descent": {
+                "ce_gain": -0.2290407531897083,
+                "kl_from_start": 0.23200897286807248,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": -0.0407887194253754,
+                "quadratic_curvature": 0.18661807694969407,
+                "quadratic_error": 0.1882520337643329
+              },
+              "future_projection": {
+                "ce_gain": 0.003967568576277891,
+                "kl_from_start": 0.0005721218721109523,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.003990671852106483,
+                "quadratic_curvature": 0.0010778222078252821,
+                "quadratic_error": 2.310327582859175e-05
+              },
+              "future_ce_retention": 0.030489098462916468
+            },
+            "ggn_ritz": {
+              "future_parameter_energy": 7.337760325754061e-05,
+              "equal_norm_fit_descent": {
+                "ce_gain": -0.4127627038428736,
+                "kl_from_start": 0.42419791417220876,
+                "accuracy_gain": -0.09375,
+                "quadratic_ce_gain": -0.08347433045549878,
+                "quadratic_curvature": 0.2669951399143335,
+                "quadratic_error": 0.3292883733873748
+              },
+              "future_projection": {
+                "ce_gain": 0.0019378851919507056,
+                "kl_from_start": 0.00016871532750504034,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.0016806277754655887,
+                "quadratic_curvature": 0.0003155234296528128,
+                "quadratic_error": -0.0002572574164851169
+              },
+              "future_ce_retention": 0.014891833951019411
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 54,
+      "groups": [
+        {
+          "fit_group": 0,
+          "audit_group": 1,
+          "future_step": 81,
+          "equal_norm_radius": 0.02282358519732952,
+          "full_future": {
+            "ce_gain": 0.2456019796822294,
+            "kl_from_start": 0.07214299395623831,
+            "accuracy_gain": 0.09375
+          },
+          "geometry": {
+            "pca_to_ggn_angles_deg": [
+              32.16443634033203,
+              44.57113265991211,
+              73.96131896972656
+            ],
+            "krylov_to_ggn_angles_deg": [
+              0.6743467450141907,
+              24.243995666503906,
+              86.3574447631836
+            ],
+            "gradient_energy_in_ggn_top3": 0.43809595704078674
+          },
+          "spectrum": {
+            "ritz_values": [
+              19686.03313580455,
+              8925.939825685684,
+              6428.294539666961,
+              6287.652700295759,
+              3581.6586601441068,
+              3187.5179804357836,
+              2317.1222484772397,
+              1634.7469862985324,
+              966.632703789807,
+              463.576539162644,
+              122.45596275038326,
+              8.090673675429787e-05
+            ],
+            "top_relative_residual": [
+              2.0658678749896353e-06,
+              7.860659025027417e-06,
+              0.011590216308832169
+            ],
+            "trace_samples": [
+              130709.03125,
+              157432.625,
+              187964.859375,
+              182587.8125,
+              162449.375,
+              110915.921875
+            ],
+            "squared_trace_samples": [
+              195154672.0,
+              736000960.0,
+              1475641344.0,
+              761993856.0,
+              891013120.0,
+              153011920.0
+            ],
+            "participation_ratio": 34.36874412706118,
+            "ggn_products": 21
+          },
+          "budget": {
+            "gradient_pca": {
+              "vjp": 7,
+              "jvp": 0
+            },
+            "krylov": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "ggn_sketch": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "past_checkpoints": 4,
+            "bootstrap_gradients": 2,
+            "basis_generation_seconds": {
+              "common_gradient": 0.08117206301540136,
+              "gradient_pca": 1.8821443147026002,
+              "krylov": 1.541442775633186,
+              "ggn_sketch": 1.5449830358847976
+            },
+            "last_krylov_fit_curvature": 7265.6640625
+          },
+          "methods": {
+            "gradient_pca": {
+              "future_parameter_energy": 0.005901680327951908,
+              "equal_norm_fit_descent": {
+                "ce_gain": -0.9541903215820815,
+                "kl_from_start": 0.7287461582246413,
+                "accuracy_gain": -0.28125,
+                "quadratic_ce_gain": -0.9131474984782,
+                "quadratic_curvature": 1.242968438594801,
+                "quadratic_error": 0.04104282310388152
+              },
+              "future_projection": {
+                "ce_gain": 0.0013379624094609355,
+                "kl_from_start": 0.007057513411717176,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.015777625557310066,
+                "quadratic_curvature": 0.019220127752910328,
+                "quadratic_error": 0.01443966314784913
+              },
+              "future_ce_retention": 0.005447685768624706
+            },
+            "krylov": {
+              "future_parameter_energy": 0.005460076965391636,
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.51925531030649,
+                "kl_from_start": 1.2102681809351923,
+                "accuracy_gain": -0.34375,
+                "quadratic_ce_gain": -1.4950213044622278,
+                "quadratic_curvature": 2.196531084713684,
+                "quadratic_error": 0.024234005844262274
+              },
+              "future_projection": {
+                "ce_gain": -0.006954116508859354,
+                "kl_from_start": 0.004562758435985181,
+                "accuracy_gain": 0.03125,
+                "quadratic_ce_gain": 0.010478157375804967,
+                "quadratic_curvature": 0.011971546535647037,
+                "quadratic_error": 0.01743227388466432
+              },
+              "future_ce_retention": -0.028314578399803187
+            },
+            "ggn_sketch": {
+              "future_parameter_energy": 0.0006444833124987781,
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.1244202422126213,
+                "kl_from_start": 1.794363962766955,
+                "accuracy_gain": -0.46875,
+                "quadratic_ce_gain": -3.3725371936659214,
+                "quadratic_curvature": 5.496633018812739,
+                "quadratic_error": -1.2481169514533001
+              },
+              "future_projection": {
+                "ce_gain": -0.014719019209971096,
+                "kl_from_start": 0.0040259144282165996,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.041818224872972404,
+                "quadratic_curvature": 0.01835712148842583,
+                "quadratic_error": -0.027099205663001308
+              },
+              "future_ce_retention": -0.05993037690093218
+            },
+            "ggn_ritz": {
+              "future_parameter_energy": 0.00035404253867454827,
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.6813290369866083,
+                "kl_from_start": 1.369554026205528,
+                "accuracy_gain": -0.375,
+                "quadratic_ce_gain": -2.9235144934621724,
+                "quadratic_curvature": 4.580468761628858,
+                "quadratic_error": -1.242185456475564
+              },
+              "future_projection": {
+                "ce_gain": -0.0037486320087887215,
+                "kl_from_start": 0.00039866321207240516,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.005656290556787912,
+                "quadratic_curvature": 0.0009100636670337601,
+                "quadratic_error": -0.0019076585479991907
+              },
+              "future_ce_retention": -0.015263036615742534
+            }
+          }
+        },
+        {
+          "fit_group": 1,
+          "audit_group": 0,
+          "future_step": 81,
+          "equal_norm_radius": 0.02282358519732952,
+          "full_future": {
+            "ce_gain": 0.3933338653166647,
+            "kl_from_start": 0.09534830515807169,
+            "accuracy_gain": 0.125
+          },
+          "geometry": {
+            "pca_to_ggn_angles_deg": [
+              29.815128326416016,
+              61.873863220214844,
+              89.6236572265625
+            ],
+            "krylov_to_ggn_angles_deg": [
+              0.3769049048423767,
+              41.30818557739258,
+              88.94293212890625
+            ],
+            "gradient_energy_in_ggn_top3": 0.7237731218338013
+          },
+          "spectrum": {
+            "ritz_values": [
+              81672.18893152603,
+              13634.942669623622,
+              6807.9528963285775,
+              4818.765781693084,
+              4397.400661043863,
+              3687.599265197563,
+              2813.531039316265,
+              1972.3061713375473,
+              1160.495857763138,
+              571.4132936398896,
+              157.9979912434819,
+              6.3972967493215e-05
+            ],
+            "top_relative_residual": [
+              5.313193469191901e-06,
+              4.584065663948422e-06,
+              0.0010105511173605919
+            ],
+            "trace_samples": [
+              150551.671875,
+              167693.4375,
+              480064.90625,
+              126687.046875,
+              190893.453125,
+              108381.9765625
+            ],
+            "squared_trace_samples": [
+              4083081216.0,
+              732179584.0,
+              25795012608.0,
+              402569088.0,
+              4290813184.0,
+              321869312.0
+            ],
+            "participation_ratio": 7.012028292745954,
+            "ggn_products": 21
+          },
+          "budget": {
+            "gradient_pca": {
+              "vjp": 7,
+              "jvp": 0
+            },
+            "krylov": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "ggn_sketch": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "past_checkpoints": 4,
+            "bootstrap_gradients": 2,
+            "basis_generation_seconds": {
+              "common_gradient": 0.08266301918774843,
+              "gradient_pca": 1.8851549327373505,
+              "krylov": 1.5540677290409803,
+              "ggn_sketch": 1.5552638289518654
+            },
+            "last_krylov_fit_curvature": 8607.703125
+          },
+          "methods": {
+            "gradient_pca": {
+              "future_parameter_energy": 0.006048034410923719,
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.5190662675228377,
+                "kl_from_start": 1.5605233977781365,
+                "accuracy_gain": -0.28125,
+                "quadratic_ce_gain": -1.1414342103758077,
+                "quadratic_curvature": 1.7256107879639422,
+                "quadratic_error": 0.37763205714702996
+              },
+              "future_projection": {
+                "ce_gain": -0.05458067142390721,
+                "kl_from_start": 0.04027239277080911,
+                "accuracy_gain": 0.03125,
+                "quadratic_ce_gain": -0.08458234406939703,
+                "quadratic_curvature": 0.06083943502892309,
+                "quadratic_error": -0.03000167264548982
+              },
+              "future_ce_retention": -0.13876423119571837
+            },
+            "krylov": {
+              "future_parameter_energy": 0.004870422184467316,
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.588425601797871,
+                "kl_from_start": 1.687926872186946,
+                "accuracy_gain": -0.28125,
+                "quadratic_ce_gain": -1.4963628637519912,
+                "quadratic_curvature": 2.3049702381445836,
+                "quadratic_error": 0.09206273804587983
+              },
+              "future_projection": {
+                "ce_gain": 0.0052879073327583015,
+                "kl_from_start": 0.007907193160558598,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.008354416589188462,
+                "quadratic_curvature": 0.012452354669124338,
+                "quadratic_error": 0.0030665092564301603
+              },
+              "future_ce_retention": 0.01344381401916949
+            },
+            "ggn_sketch": {
+              "future_parameter_energy": 0.0002020825195359066,
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.5570236500058456,
+                "kl_from_start": 1.6805616585536118,
+                "accuracy_gain": -0.21875,
+                "quadratic_ce_gain": -1.7284635800352623,
+                "quadratic_curvature": 2.7661981558943465,
+                "quadratic_error": -0.1714399300294167
+              },
+              "future_projection": {
+                "ce_gain": -3.0123444981544623e-05,
+                "kl_from_start": 0.0007766861726187648,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.009049449972773505,
+                "quadratic_curvature": 0.002029219018156438,
+                "quadratic_error": 0.00907957341775505
+              },
+              "future_ce_retention": -7.658492603298442e-05
+            },
+            "ggn_ritz": {
+              "future_parameter_energy": 2.8705320801236667e-05,
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.5805854208015653,
+                "kl_from_start": 1.7390253455490996,
+                "accuracy_gain": -0.25,
+                "quadratic_ce_gain": -1.9749937102663369,
+                "quadratic_curvature": 3.165536126550262,
+                "quadratic_error": -0.3944082894647716
+              },
+              "future_projection": {
+                "ce_gain": -9.424884069186845e-05,
+                "kl_from_start": 3.924631346339518e-05,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.0002941657751634422,
+                "quadratic_curvature": 7.719753654911483e-05,
+                "quadratic_error": -0.00019991693447157376
+              },
+              "future_ce_retention": -0.0002396153725944516
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 108,
+      "groups": [
+        {
+          "fit_group": 0,
+          "audit_group": 1,
+          "future_step": 135,
+          "equal_norm_radius": 0.0320388600230217,
+          "full_future": {
+            "ce_gain": 0.26293920412436644,
+            "kl_from_start": 0.09045172225997541,
+            "accuracy_gain": 0.0625
+          },
+          "geometry": {
+            "pca_to_ggn_angles_deg": [
+              56.013916015625,
+              67.25403594970703,
+              76.97611999511719
+            ],
+            "krylov_to_ggn_angles_deg": [
+              3.2762610912323,
+              53.33106994628906,
+              89.66284942626953
+            ],
+            "gradient_energy_in_ggn_top3": 0.18233774602413177
+          },
+          "spectrum": {
+            "ritz_values": [
+              15017.932258956102,
+              13200.551322255267,
+              7038.329113088928,
+              5714.0343649624065,
+              5210.1673731919545,
+              4041.069494049661,
+              3198.948589753876,
+              2177.9566916360122,
+              1305.4104879526892,
+              592.3456865150918,
+              157.50029260745893,
+              7.505710277564675e-05
+            ],
+            "top_relative_residual": [
+              1.683565415078192e-06,
+              2.424021431579604e-06,
+              0.0013161044334992766
+            ],
+            "trace_samples": [
+              234553.0625,
+              146177.21875,
+              195647.1875,
+              153390.390625,
+              155353.96875,
+              242755.28125
+            ],
+            "squared_trace_samples": [
+              769233664.0,
+              346757376.0,
+              1184025344.0,
+              410724224.0,
+              406458432.0,
+              1530885120.0
+            ],
+            "participation_ratio": 45.61401823714345,
+            "ggn_products": 21
+          },
+          "budget": {
+            "gradient_pca": {
+              "vjp": 7,
+              "jvp": 0
+            },
+            "krylov": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "ggn_sketch": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "past_checkpoints": 6,
+            "bootstrap_gradients": 0,
+            "basis_generation_seconds": {
+              "common_gradient": 0.08434482384473085,
+              "gradient_pca": 1.9711502618156374,
+              "krylov": 1.5624184617772698,
+              "ggn_sketch": 1.567666465882212
+            },
+            "last_krylov_fit_curvature": 6430.29150390625
+          },
+          "methods": {
+            "gradient_pca": {
+              "future_parameter_energy": 0.005099506117403507,
+              "equal_norm_fit_descent": {
+                "ce_gain": -0.37422652699549397,
+                "kl_from_start": 0.31643181700828316,
+                "accuracy_gain": -0.15625,
+                "quadratic_ce_gain": -0.14732799742741667,
+                "quadratic_curvature": 0.22039096765707328,
+                "quadratic_error": 0.2268985295680773
+              },
+              "future_projection": {
+                "ce_gain": 0.0063958447206501345,
+                "kl_from_start": 0.006979028989799043,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.00893239077424716,
+                "quadratic_curvature": 0.01574359056462312,
+                "quadratic_error": -0.015328235494897294
+              },
+              "future_ce_retention": 0.024324424126669953
+            },
+            "krylov": {
+              "future_parameter_energy": 0.006547218654304743,
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.2031314208454078,
+                "kl_from_start": 0.9567367339554927,
+                "accuracy_gain": -0.3125,
+                "quadratic_ce_gain": -0.29409755263898774,
+                "quadratic_curvature": 0.31530617315079884,
+                "quadratic_error": 0.9090338682064201
+              },
+              "future_projection": {
+                "ce_gain": 0.009241568456416882,
+                "kl_from_start": 0.006886829780443577,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.018219719713838095,
+                "quadratic_curvature": 0.013627317878390064,
+                "quadratic_error": 0.008978151257421213
+              },
+              "future_ce_retention": 0.03514716828626953
+            },
+            "ggn_sketch": {
+              "future_parameter_energy": 2.5971014110837132e-05,
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.8676220849576937,
+                "kl_from_start": 1.535430773213323,
+                "accuracy_gain": -0.5,
+                "quadratic_ce_gain": -0.9683040021577198,
+                "quadratic_curvature": 1.0842291286932197,
+                "quadratic_error": 0.8993180827999738
+              },
+              "future_projection": {
+                "ce_gain": 0.008206665737233831,
+                "kl_from_start": 0.0002657185912327117,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": 0.00798948122860985,
+                "quadratic_curvature": 0.0004647603082025979,
+                "quadratic_error": -0.00021718450862398195
+              },
+              "future_ce_retention": 0.031211267123757616
+            },
+            "ggn_ritz": {
+              "future_parameter_energy": 0.00015674841415602714,
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.390046248797473,
+                "kl_from_start": 2.0687722596903906,
+                "accuracy_gain": -0.65625,
+                "quadratic_ce_gain": -1.629471727210293,
+                "quadratic_curvature": 2.143400837158918,
+                "quadratic_error": 0.7605745215871802
+              },
+              "future_projection": {
+                "ce_gain": -0.004404145217265509,
+                "kl_from_start": 0.0009248003867910744,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.01449614334039118,
+                "quadratic_curvature": 0.0019661284777726857,
+                "quadratic_error": -0.01009199812312567
+              },
+              "future_ce_retention": -0.016749671209860408
+            }
+          }
+        },
+        {
+          "fit_group": 1,
+          "audit_group": 0,
+          "future_step": 135,
+          "equal_norm_radius": 0.0320388600230217,
+          "full_future": {
+            "ce_gain": 0.5366250204000115,
+            "kl_from_start": 0.14200639640234758,
+            "accuracy_gain": 0.125
+          },
+          "geometry": {
+            "pca_to_ggn_angles_deg": [
+              44.89988327026367,
+              82.25860595703125,
+              85.50411224365234
+            ],
+            "krylov_to_ggn_angles_deg": [
+              1.534676194190979,
+              57.4488639831543,
+              88.45713806152344
+            ],
+            "gradient_energy_in_ggn_top3": 0.5300701856613159
+          },
+          "spectrum": {
+            "ritz_values": [
+              14740.86029699011,
+              9382.00388250407,
+              6892.292932346968,
+              5845.816398493333,
+              5355.680186449243,
+              4415.961713532607,
+              3227.966160389445,
+              2213.1829853006066,
+              1314.6038442055662,
+              604.5862005492221,
+              165.1650214624388,
+              5.088298050687472e-05
+            ],
+            "top_relative_residual": [
+              2.208007572335191e-06,
+              8.29625059850514e-05,
+              0.04450216889381409
+            ],
+            "trace_samples": [
+              176197.65625,
+              148966.375,
+              103650.4296875,
+              183828.46875,
+              138248.28125,
+              110730.046875
+            ],
+            "squared_trace_samples": [
+              531284352.0,
+              546548608.0,
+              326564544.0,
+              970285376.0,
+              390238944.0,
+              364054016.0
+            ],
+            "participation_ratio": 39.54388644914106,
+            "ggn_products": 21
+          },
+          "budget": {
+            "gradient_pca": {
+              "vjp": 7,
+              "jvp": 0
+            },
+            "krylov": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "ggn_sketch": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "past_checkpoints": 6,
+            "bootstrap_gradients": 0,
+            "basis_generation_seconds": {
+              "common_gradient": 0.0811734339222312,
+              "gradient_pca": 1.9860303401947021,
+              "krylov": 1.5768775530159473,
+              "ggn_sketch": 1.577940907329321
+            },
+            "last_krylov_fit_curvature": 5410.4248046875
+          },
+          "methods": {
+            "gradient_pca": {
+              "future_parameter_energy": 0.0021621044725179672,
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.2146706681840223,
+                "kl_from_start": 2.1383970573369986,
+                "accuracy_gain": -0.5,
+                "quadratic_ce_gain": -1.6103726499448547,
+                "quadratic_curvature": 3.0617443945969867,
+                "quadratic_error": 0.6042980182391675
+              },
+              "future_projection": {
+                "ce_gain": -0.017627822568081708,
+                "kl_from_start": 0.019256992283749975,
+                "accuracy_gain": -0.0625,
+                "quadratic_ce_gain": -0.03425219840624564,
+                "quadratic_curvature": 0.04896659106978386,
+                "quadratic_error": -0.01662437583816393
+              },
+              "future_ce_retention": -0.03284942352285691
+            },
+            "krylov": {
+              "future_parameter_energy": 0.0021323130931705236,
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.196272531275656,
+                "kl_from_start": 2.1428215125250003,
+                "accuracy_gain": -0.46875,
+                "quadratic_ce_gain": -2.0112369081177928,
+                "quadratic_curvature": 3.7848546891273442,
+                "quadratic_error": 0.18503562315786315
+              },
+              "future_projection": {
+                "ce_gain": 0.00392198537155819,
+                "kl_from_start": 0.0031947766811195417,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.0007488607984198936,
+                "quadratic_curvature": 0.0062225469259227255,
+                "quadratic_error": -0.004670846169978083
+              },
+              "future_ce_retention": 0.007308614437386203
+            },
+            "ggn_sketch": {
+              "future_parameter_energy": 0.0001306212943745777,
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.243115803474354,
+                "kl_from_start": 2.130507311118782,
+                "accuracy_gain": -0.5,
+                "quadratic_ce_gain": -1.5330491539785236,
+                "quadratic_curvature": 2.7456911965170914,
+                "quadratic_error": 0.7100666494958305
+              },
+              "future_projection": {
+                "ce_gain": 0.008138363578933605,
+                "kl_from_start": 0.0016320963123043525,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.008244259249753465,
+                "quadratic_curvature": 0.004580681188941257,
+                "quadratic_error": -0.01638262282868707
+              },
+              "future_ce_retention": 0.015165829526299574
+            },
+            "ggn_ritz": {
+              "future_parameter_energy": 5.59039726795163e-05,
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.482177539213217,
+                "kl_from_start": 2.449415432171171,
+                "accuracy_gain": -0.5625,
+                "quadratic_ce_gain": -4.174174121719941,
+                "quadratic_curvature": 7.972410471305409,
+                "quadratic_error": -1.6919965825067238
+              },
+              "future_projection": {
+                "ce_gain": 0.012475618074197836,
+                "kl_from_start": 0.0025506246808118483,
+                "accuracy_gain": 0.0,
+                "quadratic_ce_gain": -0.009380104352099516,
+                "quadratic_curvature": 0.006470997742243394,
+                "quadratic_error": -0.021855722426297353
+              },
+              "future_ce_retention": 0.023248297414269373
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 216,
+      "groups": [
+        {
+          "fit_group": 0,
+          "audit_group": 1,
+          "future_step": null,
+          "equal_norm_radius": 0.04109453409910202,
+          "full_future": null,
+          "geometry": {
+            "pca_to_ggn_angles_deg": [
+              23.284854888916016,
+              63.162818908691406,
+              81.94564056396484
+            ],
+            "krylov_to_ggn_angles_deg": [
+              0.2654082179069519,
+              6.939750671386719,
+              69.17887115478516
+            ],
+            "gradient_energy_in_ggn_top3": 0.8683852553367615
+          },
+          "spectrum": {
+            "ritz_values": [
+              27056.627614657336,
+              17256.250095109353,
+              7454.691731907364,
+              5413.6212371220345,
+              4420.549785668956,
+              4110.38481395959,
+              2851.337449628568,
+              2198.057197869326,
+              1095.087949077354,
+              508.2185101443158,
+              139.957562291715,
+              3.1545520181856625e-05
+            ],
+            "top_relative_residual": [
+              1.8501345948607195e-06,
+              3.0945564049034147e-06,
+              0.0005944704171270132
+            ],
+            "trace_samples": [
+              53813.34375,
+              208160.5625,
+              233316.4375,
+              68645.34375,
+              150248.6875,
+              111409.734375
+            ],
+            "squared_trace_samples": [
+              376789568.0,
+              2510897920.0,
+              4715083264.0,
+              235396288.0,
+              2511035392.0,
+              981441728.0
+            ],
+            "participation_ratio": 10.025991223590172,
+            "ggn_products": 21
+          },
+          "budget": {
+            "gradient_pca": {
+              "vjp": 7,
+              "jvp": 0
+            },
+            "krylov": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "ggn_sketch": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "past_checkpoints": 6,
+            "bootstrap_gradients": 0,
+            "basis_generation_seconds": {
+              "common_gradient": 0.09840428596362472,
+              "gradient_pca": 2.251920589711517,
+              "krylov": 1.5901185907423496,
+              "ggn_sketch": 1.5940982452593744
+            },
+            "last_krylov_fit_curvature": 16674.74609375
+          },
+          "methods": {
+            "gradient_pca": {
+              "equal_norm_fit_descent": {
+                "ce_gain": -3.1217090419979168,
+                "kl_from_start": 2.9151035761749333,
+                "accuracy_gain": -0.78125,
+                "quadratic_ce_gain": -0.7817435161309624,
+                "quadratic_curvature": 1.7442237226143744,
+                "quadratic_error": 2.3399655258669543
+              }
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "ce_gain": -3.026094326826491,
+                "kl_from_start": 2.814903259062758,
+                "accuracy_gain": -0.75,
+                "quadratic_ce_gain": -0.7407523848707968,
+                "quadratic_curvature": 1.661213206529197,
+                "quadratic_error": 2.285341941955694
+              }
+            },
+            "ggn_sketch": {
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.9594997214621195,
+                "kl_from_start": 2.7847100540941185,
+                "accuracy_gain": -0.8125,
+                "quadratic_ce_gain": -0.730623238012337,
+                "quadratic_curvature": 1.4769086277296486,
+                "quadratic_error": 2.2288764834497825
+              }
+            },
+            "ggn_ritz": {
+              "equal_norm_fit_descent": {
+                "ce_gain": -3.8828308819489696,
+                "kl_from_start": 3.652015844246111,
+                "accuracy_gain": -0.78125,
+                "quadratic_ce_gain": -1.519597400237976,
+                "quadratic_curvature": 3.3468377012344375,
+                "quadratic_error": 2.363233481710994
+              }
+            }
+          }
+        },
+        {
+          "fit_group": 1,
+          "audit_group": 0,
+          "future_step": null,
+          "equal_norm_radius": 0.04109453409910202,
+          "full_future": null,
+          "geometry": {
+            "pca_to_ggn_angles_deg": [
+              26.159086227416992,
+              69.23873138427734,
+              86.35904693603516
+            ],
+            "krylov_to_ggn_angles_deg": [
+              0.5177552103996277,
+              26.546497344970703,
+              89.71336364746094
+            ],
+            "gradient_energy_in_ggn_top3": 0.8601692318916321
+          },
+          "spectrum": {
+            "ritz_values": [
+              23444.17188937263,
+              20430.201984129326,
+              19826.348999199665,
+              8695.455474337863,
+              5851.8775754019725,
+              5274.077818416078,
+              4156.856589123907,
+              2525.473112709138,
+              1996.2138607963495,
+              703.7317479049809,
+              193.1741714767628,
+              2.906537142906751e-05
+            ],
+            "top_relative_residual": [
+              3.411316811252618e-06,
+              5.569172571995296e-06,
+              3.122725956927752e-06
+            ],
+            "trace_samples": [
+              99096.203125,
+              228290.234375,
+              119571.5546875,
+              106772.84375,
+              163830.015625,
+              153814.59375
+            ],
+            "squared_trace_samples": [
+              929111360.0,
+              2403539968.0,
+              1446219904.0,
+              591621248.0,
+              2124761600.0,
+              1792741760.0
+            ],
+            "participation_ratio": 13.625027038010199,
+            "ggn_products": 21
+          },
+          "budget": {
+            "gradient_pca": {
+              "vjp": 7,
+              "jvp": 0
+            },
+            "krylov": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "ggn_sketch": {
+              "vjp": 4,
+              "jvp": 3
+            },
+            "past_checkpoints": 6,
+            "bootstrap_gradients": 0,
+            "basis_generation_seconds": {
+              "common_gradient": 0.19097303180024028,
+              "gradient_pca": 2.4336947090923786,
+              "krylov": 1.6093671461567283,
+              "ggn_sketch": 1.6507154782302678
+            },
+            "last_krylov_fit_curvature": 17056.421875
+          },
+          "methods": {
+            "gradient_pca": {
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.00516759631364,
+                "kl_from_start": 1.8617556144363179,
+                "accuracy_gain": -0.5625,
+                "quadratic_ce_gain": -0.2461575221889079,
+                "quadratic_curvature": 0.6327176813947132,
+                "quadratic_error": 1.759010074124732
+              }
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.4854324142290225,
+                "kl_from_start": 2.327860589230952,
+                "accuracy_gain": -0.65625,
+                "quadratic_ce_gain": -0.3381627626442927,
+                "quadratic_curvature": 0.8727951823068281,
+                "quadratic_error": 2.14726965158473
+              }
+            },
+            "ggn_sketch": {
+              "equal_norm_fit_descent": {
+                "ce_gain": -1.184087582617602,
+                "kl_from_start": 1.1138994818469117,
+                "accuracy_gain": -0.375,
+                "quadratic_ce_gain": -0.16165704983602788,
+                "quadratic_curvature": 0.42888719221885885,
+                "quadratic_error": 1.0224305327815741
+              }
+            },
+            "ggn_ritz": {
+              "equal_norm_fit_descent": {
+                "ce_gain": -2.936360555199485,
+                "kl_from_start": 2.774730482044234,
+                "accuracy_gain": -0.78125,
+                "quadratic_ce_gain": -0.5030952310278494,
+                "quadratic_curvature": 1.2583644519209578,
+                "quadratic_error": 2.4332653241716358
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

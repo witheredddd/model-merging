@@ -1,0 +1,1403 @@
+{
+  "provenance": {
+    "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+    "expert_sha256": "5869832d393de9160777110dcd6af04a2e9ac8a094da7c12cd9862157017be84",
+    "head_sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d",
+    "trace_sha256": "c314d3c218ef427df2c6cbe583c3df785a2e0b40a78d0d334f572be17cce5a4b",
+    "raw_train_indices": [
+      [
+        2024,
+        1168,
+        2777,
+        3666,
+        2303,
+        1906,
+        3708,
+        2396,
+        1286,
+        1068,
+        2363,
+        1161,
+        1231,
+        1391,
+        2634,
+        814,
+        3010,
+        1922,
+        330,
+        3530,
+        2515,
+        2176,
+        2710,
+        155,
+        1266,
+        2383,
+        80,
+        3425,
+        2267,
+        984,
+        3376,
+        3484
+      ],
+      [
+        1053,
+        755,
+        3516,
+        1023,
+        3109,
+        2818,
+        3234,
+        482,
+        2785,
+        124,
+        3320,
+        550,
+        718,
+        965,
+        2709,
+        1657,
+        924,
+        2527,
+        2157,
+        3534,
+        3330,
+        3243,
+        575,
+        291,
+        2100,
+        160,
+        1183,
+        398,
+        2366,
+        43,
+        3107,
+        3726
+      ]
+    ],
+    "rank": 3
+  },
+  "anchors": [
+    {
+      "step": 0,
+      "groups": [
+        {
+          "fit_group": 0,
+          "audit_group": 1,
+          "past_checkpoints": 0,
+          "bootstrap_gradients": 4,
+          "pca_fit_vjp": 5,
+          "comparable_krylov_fit_sweeps": {
+            "vjp": 3,
+            "jvp": 2
+          },
+          "ggn_variance_relative_error": 7.690906182617004e-08,
+          "ggn_bilinear_symmetry_error": 1.9423323765544987e-07,
+          "methods": {
+            "normalized": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": 0.004861225259519042,
+                "kl_from_start": 0.008211934317945953,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": 0.005504677810468206,
+                "quadratic_curvature": 0.02197175544413671
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.0007378438025169576,
+                  "kl_from_start": 1.681174983072328e-05,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0006420412674884054,
+                  "quadratic_curvature": 3.5154777045401686e-05
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": 0.002112865647940554,
+                  "kl_from_start": 0.0001525371563474292,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0018206618348447852,
+                  "quadratic_curvature": 0.00031639319527732024
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": 0.004788742990517347,
+                  "kl_from_start": 0.001649906239345,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": 0.004838474072001061,
+                  "quadratic_curvature": 0.0035154816618057205
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": 0.004861225259519042,
+                  "kl_from_start": 0.008211934317945953,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": 0.005504677810468206,
+                  "quadratic_curvature": 0.02197175544413671
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.0034198930427269403,
+                "kl_from_start": 0.0010025448560099985,
+                "accuracy_gain": -0.03125
+              },
+              "future_parameter_energy": 0.008051264099776745,
+              "future_ce_retention": 0.032355214813339694
+            },
+            "raw": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": 0.004514180381075095,
+                "kl_from_start": 0.008386484535207333,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": 0.00537016545926117,
+                "quadratic_curvature": 0.022429273711147085
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.0007394808517584561,
+                  "kl_from_start": 1.714595873608922e-05,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0006454505799336025,
+                  "quadratic_curvature": 3.5886857302394265e-05
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": 0.0021076252173768406,
+                  "kl_from_start": 0.00015571092784719202,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0018286935835762955,
+                  "quadratic_curvature": 0.0003229814780432623
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": 0.004856188670776751,
+                  "kl_from_start": 0.0016806795978355658,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": 0.0048396083765106564,
+                  "quadratic_curvature": 0.0035886858936529254
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": 0.004514180381075095,
+                  "kl_from_start": 0.008386484535207333,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": 0.00537016545926117,
+                  "quadratic_curvature": 0.022429273711147085
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.003055857701701692,
+                "kl_from_start": 0.0008391834476652014,
+                "accuracy_gain": -0.03125
+              },
+              "future_parameter_energy": 0.007680512964725494,
+              "future_ce_retention": 0.02891111831343061
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": 0.009287356403366198,
+                "kl_from_start": 0.008687195127980638,
+                "accuracy_gain": -0.03125,
+                "quadratic_ce_gain": 0.008920458654951662,
+                "quadratic_curvature": 0.024110590109011842
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.0009469024180794872,
+                  "kl_from_start": 1.843628639602753e-05,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0008197410866716701,
+                  "quadratic_curvature": 3.8576934545920174e-05
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": 0.0027199286164834025,
+                  "kl_from_start": 0.00016590939120689262,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0023435062891839268,
+                  "quadratic_curvature": 0.0003471924395386718
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": 0.007078854171519877,
+                  "kl_from_start": 0.0017632881322243584,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": 0.0064614442472087094,
+                  "quadratic_curvature": 0.003857694277830995
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": 0.009287356403366198,
+                  "kl_from_start": 0.008687195127980638,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": 0.008920458654951662,
+                  "quadratic_curvature": 0.024110590109011842
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.0055890924780841456,
+                "kl_from_start": 0.0003519845267120552,
+                "accuracy_gain": -0.03125
+              },
+              "future_parameter_energy": 0.009950503706932068,
+              "future_ce_retention": 0.05287776122841524
+            }
+          }
+        },
+        {
+          "fit_group": 1,
+          "audit_group": 0,
+          "past_checkpoints": 0,
+          "bootstrap_gradients": 4,
+          "pca_fit_vjp": 5,
+          "comparable_krylov_fit_sweeps": {
+            "vjp": 3,
+            "jvp": 2
+          },
+          "ggn_variance_relative_error": 7.853826863295733e-08,
+          "ggn_bilinear_symmetry_error": 5.54682186965376e-08,
+          "methods": {
+            "normalized": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -0.03793032423376452,
+                "kl_from_start": 0.015580065520237753,
+                "accuracy_gain": 0.03125,
+                "quadratic_ce_gain": 0.012623390090692523,
+                "quadratic_curvature": 0.023608709392946178
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.0010404887491199943,
+                  "kl_from_start": 1.9434791839236457e-05,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0009582269974373072,
+                  "quadratic_curvature": 3.777387612590589e-05
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": 0.0026460616669856662,
+                  "kl_from_start": 0.0001702141766644949,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.002761360589627982,
+                  "quadratic_curvature": 0.0003399653976854693
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": 0.0022882215385156,
+                  "kl_from_start": 0.001924310154111477,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.007882396677368708,
+                  "quadratic_curvature": 0.003777390800366996
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -0.03793032423376452,
+                  "kl_from_start": 0.015580065520237753,
+                  "accuracy_gain": 0.03125,
+                  "quadratic_ce_gain": 0.012623390090692523,
+                  "quadratic_curvature": 0.023608709392946178
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.006789524391932478,
+                "kl_from_start": 0.001398356388379515,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.013214183039963245,
+              "future_ce_retention": 0.05217464392164384
+            },
+            "raw": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -0.034252860944246066,
+                "kl_from_start": 0.013807659172065815,
+                "accuracy_gain": 0.03125,
+                "quadratic_ce_gain": 0.013198592454750219,
+                "quadratic_curvature": 0.021990039400945904
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.0010259146421836007,
+                  "kl_from_start": 1.8140543884971015e-05,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0009501543785664196,
+                  "quadratic_curvature": 3.5184035768478234e-05
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": 0.0026406753690140228,
+                  "kl_from_start": 0.00015845026553891145,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0027449190139759447,
+                  "quadratic_curvature": 0.00031665680088113714
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": 0.0030714794152526537,
+                  "kl_from_start": 0.0017720861245832976,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.007918273386652219,
+                  "quadratic_curvature": 0.0035184050594547793
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -0.034252860944246066,
+                  "kl_from_start": 0.013807659172065815,
+                  "accuracy_gain": 0.03125,
+                  "quadratic_ce_gain": 0.013198592454750219,
+                  "quadratic_curvature": 0.021990039400945904
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.006883984334746351,
+                "kl_from_start": 0.0012995198889727646,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.013246932066977024,
+              "future_ce_retention": 0.0529005289169211
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -0.041214333798066605,
+                "kl_from_start": 0.019985731065046843,
+                "accuracy_gain": 0.03125,
+                "quadratic_ce_gain": 0.012739430011685504,
+                "quadratic_curvature": 0.0269537870760385
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.0011224756220205023,
+                  "kl_from_start": 2.1880676530871062e-05,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0010270904095372384,
+                  "quadratic_curvature": 4.31260239206738e-05
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": 0.0027632905321999246,
+                  "kl_from_start": 0.00019085543802657787,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.002951891736168945,
+                  "quadratic_curvature": 0.0003881340346455778
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": 0.0022526330424268437,
+                  "kl_from_start": 0.002318382094490831,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.008330257520776123,
+                  "quadratic_curvature": 0.0043126027488844
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -0.041214333798066605,
+                  "kl_from_start": 0.019985731065046843,
+                  "accuracy_gain": 0.03125,
+                  "quadratic_ce_gain": 0.012739430011685504,
+                  "quadratic_curvature": 0.0269537870760385
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.0036717527050647014,
+                "kl_from_start": 0.0004090417543435133,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.010705685243010521,
+              "future_ce_retention": 0.028215877710479335
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 54,
+      "groups": [
+        {
+          "fit_group": 0,
+          "audit_group": 1,
+          "past_checkpoints": 4,
+          "bootstrap_gradients": 0,
+          "pca_fit_vjp": 5,
+          "comparable_krylov_fit_sweeps": {
+            "vjp": 3,
+            "jvp": 2
+          },
+          "ggn_variance_relative_error": 6.5256347600874e-08,
+          "ggn_bilinear_symmetry_error": 3.832275051313071e-07,
+          "methods": {
+            "normalized": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -1.5197454061965936,
+                "kl_from_start": 1.2111697897734057,
+                "accuracy_gain": -0.34375,
+                "quadratic_ce_gain": -1.4972848408903765,
+                "quadratic_curvature": 2.2022958309081426
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.006475022936121455,
+                  "kl_from_start": 0.000667328537090301,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.01760734982397912,
+                  "quadratic_curvature": 0.0035236853245442087
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.017446924880122783,
+                  "kl_from_start": 0.00444400850768702,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.06339311519950576,
+                  "quadratic_curvature": 0.031713187016354075
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.10922089054570683,
+                  "kl_from_start": 0.07336908273217893,
+                  "accuracy_gain": -0.0625,
+                  "quadratic_ce_gain": -0.33463939435041196,
+                  "quadratic_curvature": 0.35236863901640203
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -1.5197454061965936,
+                  "kl_from_start": 1.2111697897734057,
+                  "accuracy_gain": -0.34375,
+                  "quadratic_ce_gain": -1.4972848408903765,
+                  "quadratic_curvature": 2.2022958309081426
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.001123186853598579,
+                "kl_from_start": 0.007776357127182256,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.006027425639331341,
+              "future_ce_retention": 0.004573199511876114
+            },
+            "raw": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -1.519597124400346,
+                "kl_from_start": 1.2108950414427775,
+                "accuracy_gain": -0.34375,
+                "quadratic_ce_gain": -1.4966149070415393,
+                "quadratic_curvature": 2.20055337267784
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.006481071138597194,
+                  "kl_from_start": 0.0006664283279038144,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.017613994227848127,
+                  "quadratic_curvature": 0.0035209010377890127
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.017435055501984875,
+                  "kl_from_start": 0.0044389956824105355,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.06340463079474254,
+                  "quadratic_curvature": 0.03168796885363674
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.10935579641316195,
+                  "kl_from_start": 0.07329610302103978,
+                  "accuracy_gain": -0.0625,
+                  "quadratic_ce_gain": -0.3345805517368332,
+                  "quadratic_curvature": 0.3520897845845023
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -1.519597124400346,
+                  "kl_from_start": 1.2108950414427775,
+                  "accuracy_gain": -0.34375,
+                  "quadratic_ce_gain": -1.4966149070415393,
+                  "quadratic_curvature": 2.20055337267784
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.0011140803601379368,
+                "kl_from_start": 0.007776587339142802,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.006027583964169025,
+              "future_ce_retention": 0.004536121254313108
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -1.5192559193342117,
+                "kl_from_start": 1.2102684144823248,
+                "accuracy_gain": -0.34375,
+                "quadratic_ce_gain": -1.4950227076233977,
+                "quadratic_curvature": 2.196533275883279
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.006493794054748259,
+                  "kl_from_start": 0.0006643293134037705,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.017627435322162592,
+                  "quadratic_curvature": 0.003514448241710667
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.01740823068574371,
+                  "kl_from_start": 0.004427456744235033,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.06342576879487385,
+                  "quadratic_curvature": 0.0316300409519189
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.10962755783880884,
+                  "kl_from_start": 0.07311939881337462,
+                  "accuracy_gain": -0.0625,
+                  "quadratic_ce_gain": -0.33442357462889255,
+                  "quadratic_curvature": 0.35144326398376535
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -1.5192559193342117,
+                  "kl_from_start": 1.2102684144823248,
+                  "accuracy_gain": -0.34375,
+                  "quadratic_ce_gain": -1.4950227076233977,
+                  "quadratic_curvature": 2.196533275883279
+                }
+              ],
+              "future_projection": {
+                "ce_gain": -0.006954116508859354,
+                "kl_from_start": 0.004562758435985181,
+                "accuracy_gain": 0.03125
+              },
+              "future_parameter_energy": 0.005460076965391636,
+              "future_ce_retention": -0.028314578399803187
+            }
+          }
+        },
+        {
+          "fit_group": 1,
+          "audit_group": 0,
+          "past_checkpoints": 4,
+          "bootstrap_gradients": 0,
+          "pca_fit_vjp": 5,
+          "comparable_krylov_fit_sweeps": {
+            "vjp": 3,
+            "jvp": 2
+          },
+          "ggn_variance_relative_error": 7.352750924379199e-07,
+          "ggn_bilinear_symmetry_error": 4.0102911392248976e-07,
+          "methods": {
+            "normalized": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -1.5887461262789575,
+                "kl_from_start": 1.678309438137532,
+                "accuracy_gain": -0.28125,
+                "quadratic_ce_gain": -1.4681083075191386,
+                "quadratic_curvature": 2.2584649672999637
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.0069304413647430785,
+                  "kl_from_start": 0.0010285537896077821,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.015361751246022539,
+                  "quadratic_curvature": 0.0036135404763561725
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.013578661171510298,
+                  "kl_from_start": 0.014921672555495953,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.056925996972461645,
+                  "quadratic_curvature": 0.03252187350798521
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.3454875425264401,
+                  "kl_from_start": 0.3564357652041614,
+                  "accuracy_gain": -0.125,
+                  "quadratic_ce_gain": -0.31622749239894876,
+                  "quadratic_curvature": 0.3613544970520054
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -1.5887461262789575,
+                  "kl_from_start": 1.678309438137532,
+                  "accuracy_gain": -0.28125,
+                  "quadratic_ce_gain": -1.4681083075191386,
+                  "quadratic_curvature": 2.2584649672999637
+                }
+              ],
+              "future_projection": {
+                "ce_gain": -0.008582230363453291,
+                "kl_from_start": 0.018222757583307814,
+                "accuracy_gain": 0.03125
+              },
+              "future_parameter_energy": 0.006024579983204603,
+              "future_ce_retention": -0.021819200227124916
+            },
+            "raw": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -1.5888296281461876,
+                "kl_from_start": 1.6854159059275213,
+                "accuracy_gain": -0.28125,
+                "quadratic_ce_gain": -1.4876037997261995,
+                "quadratic_curvature": 2.2905440298279665
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.007029275202021346,
+                  "kl_from_start": 0.0010459710422955567,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.015525705415216638,
+                  "quadratic_curvature": 0.0036648672050228503
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.014360522981536228,
+                  "kl_from_start": 0.01531687241396722,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.057571846776003556,
+                  "quadratic_curvature": 0.032983858375459696
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.3601409748833788,
+                  "kl_from_start": 0.3695127899395422,
+                  "accuracy_gain": -0.125,
+                  "quadratic_ce_gain": -0.3201771218604229,
+                  "quadratic_curvature": 0.36648774467138723
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -1.5888296281461876,
+                  "kl_from_start": 1.6854159059275213,
+                  "accuracy_gain": -0.28125,
+                  "quadratic_ce_gain": -1.4876037997261995,
+                  "quadratic_curvature": 2.2905440298279665
+                }
+              ],
+              "future_projection": {
+                "ce_gain": -0.007693008067074736,
+                "kl_from_start": 0.017667139571215004,
+                "accuracy_gain": 0.03125
+              },
+              "future_parameter_energy": 0.006031320430338383,
+              "future_ce_retention": -0.019558468632954497
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -1.5884257010980525,
+                "kl_from_start": 1.6879268719752925,
+                "accuracy_gain": -0.28125,
+                "quadratic_ce_gain": -1.496360113470679,
+                "quadratic_curvature": 2.3049662853422266
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.007074224446748545,
+                  "kl_from_start": 0.0010538635031259814,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.015598997170609967,
+                  "quadratic_curvature": 0.0036879453722248176
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.01472124190733215,
+                  "kl_from_start": 0.015497098627935482,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.05786099583334619,
+                  "quadratic_curvature": 0.033191532375413516
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.3654510384472882,
+                  "kl_from_start": 0.37556194872811355,
+                  "accuracy_gain": -0.125,
+                  "quadratic_ce_gain": -0.3219482450417184,
+                  "quadratic_curvature": 0.36879498287513945
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -1.5884257010980525,
+                  "kl_from_start": 1.6879268719752925,
+                  "accuracy_gain": -0.28125,
+                  "quadratic_ce_gain": -1.496360113470679,
+                  "quadratic_curvature": 2.3049662853422266
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.0052879073327583015,
+                "kl_from_start": 0.007907193160558598,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.004870422184467316,
+              "future_ce_retention": 0.01344381401916949
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 108,
+      "groups": [
+        {
+          "fit_group": 0,
+          "audit_group": 1,
+          "past_checkpoints": 4,
+          "bootstrap_gradients": 0,
+          "pca_fit_vjp": 5,
+          "comparable_krylov_fit_sweeps": {
+            "vjp": 3,
+            "jvp": 2
+          },
+          "ggn_variance_relative_error": 2.3718120882597584e-07,
+          "ggn_bilinear_symmetry_error": 3.541309913125033e-07,
+          "methods": {
+            "normalized": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -0.9232906828215978,
+                "kl_from_start": 0.7606094364921958,
+                "accuracy_gain": -0.28125,
+                "quadratic_ce_gain": -0.24448631966613765,
+                "quadratic_curvature": 0.2741962808217116
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.0017781966589717202,
+                  "kl_from_start": 0.00024187146546691734,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.004514899017497907,
+                  "quadratic_curvature": 0.00043871344367716556
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.005030274405252277,
+                  "kl_from_start": 0.0024212299301074373,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.014860885434905173,
+                  "quadratic_curvature": 0.003948426159990384
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.0318799308562806,
+                  "kl_from_start": 0.041098161387370255,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": -0.06489103836936588,
+                  "quadratic_curvature": 0.04387135020090009
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -0.9232906828215978,
+                  "kl_from_start": 0.7606094364921958,
+                  "accuracy_gain": -0.28125,
+                  "quadratic_ce_gain": -0.24448631966613765,
+                  "quadratic_curvature": 0.2741962808217116
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.003981688859181487,
+                "kl_from_start": 0.01098536525589755,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.005102616269141436,
+              "future_ce_retention": 0.015143001867831796
+            },
+            "raw": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -0.8950164399029673,
+                "kl_from_start": 0.7391750778445687,
+                "accuracy_gain": -0.25,
+                "quadratic_ce_gain": -0.2412258501899943,
+                "quadratic_curvature": 0.27188660273757037
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.0017393320451731809,
+                  "kl_from_start": 0.00023991990308711074,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.0044287899277787755,
+                  "quadratic_curvature": 0.00043501889404813453
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.004925273747080183,
+                  "kl_from_start": 0.0023937222248495062,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.014591469193863947,
+                  "quadratic_curvature": 0.003915172178310787
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.030391472334411973,
+                  "kl_from_start": 0.04017108714724976,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": -0.06386399449616675,
+                  "quadratic_curvature": 0.0435019496058001
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -0.8950164399029673,
+                  "kl_from_start": 0.7391750778445687,
+                  "accuracy_gain": -0.25,
+                  "quadratic_ce_gain": -0.2412258501899943,
+                  "quadratic_curvature": 0.27188660273757037
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.004274591406129624,
+                "kl_from_start": 0.010769236466347216,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.00509833637624979,
+              "future_ce_retention": 0.016256957270273795
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -1.2031312197661324,
+                "kl_from_start": 0.9567365227007165,
+                "accuracy_gain": -0.3125,
+                "quadratic_ce_gain": -0.2940981644562126,
+                "quadratic_curvature": 0.3153064681830462
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.002323944191239824,
+                  "kl_from_start": 0.0002799149066818698,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.005710032803650328,
+                  "quadratic_curvature": 0.0005044907509770652
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.005213271748898074,
+                  "kl_from_start": 0.0029106894118551465,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.018643610157260616,
+                  "quadratic_curvature": 0.004540417214430785
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.0509826732877402,
+                  "kl_from_start": 0.061068030236731276,
+                  "accuracy_gain": -0.03125,
+                  "quadratic_ce_gain": -0.07980216716158885,
+                  "quadratic_curvature": 0.050449014405065294
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -1.2031312197661324,
+                  "kl_from_start": 0.9567365227007165,
+                  "accuracy_gain": -0.3125,
+                  "quadratic_ce_gain": -0.2940981644562126,
+                  "quadratic_curvature": 0.3153064681830462
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.009241568456416882,
+                "kl_from_start": 0.006886829780443577,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.006547218654304743,
+              "future_ce_retention": 0.03514716828626953
+            }
+          }
+        },
+        {
+          "fit_group": 1,
+          "audit_group": 0,
+          "past_checkpoints": 4,
+          "bootstrap_gradients": 0,
+          "pca_fit_vjp": 5,
+          "comparable_krylov_fit_sweeps": {
+            "vjp": 3,
+            "jvp": 2
+          },
+          "ggn_variance_relative_error": 3.990941413034631e-07,
+          "ggn_bilinear_symmetry_error": 2.6815836407985015e-07,
+          "methods": {
+            "normalized": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -2.192341669542637,
+                "kl_from_start": 2.134989910973343,
+                "accuracy_gain": -0.46875,
+                "quadratic_ce_gain": -1.908933471214642,
+                "quadratic_curvature": 3.5931374312394766
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.010674168152657204,
+                  "kl_from_start": 0.0021393426874246847,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.007369081560229035,
+                  "quadratic_curvature": 0.005749020629643303
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.028557766253251238,
+                  "kl_from_start": 0.021704255331668608,
+                  "accuracy_gain": -0.0625,
+                  "quadratic_ce_gain": -0.03935438273080593,
+                  "quadratic_curvature": 0.05174116701480734
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -1.2317120773520989,
+                  "kl_from_start": 1.0489313078814115,
+                  "accuracy_gain": -0.40625,
+                  "quadratic_ce_gain": -0.33239618305510404,
+                  "quadratic_curvature": 0.5749014992642696
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -2.192341669542637,
+                  "kl_from_start": 2.134989910973343,
+                  "accuracy_gain": -0.46875,
+                  "quadratic_ce_gain": -1.908933471214642,
+                  "quadratic_curvature": 3.5931374312394766
+                }
+              ],
+              "future_projection": {
+                "ce_gain": -0.03671857464331851,
+                "kl_from_start": 0.02590782808194416,
+                "accuracy_gain": -0.09375
+              },
+              "future_parameter_energy": 0.0018794079078361392,
+              "future_ce_retention": -0.06842501420442104
+            },
+            "raw": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -2.191606127984494,
+                "kl_from_start": 2.1350720324267796,
+                "accuracy_gain": -0.46875,
+                "quadratic_ce_gain": -1.927702901727909,
+                "quadratic_curvature": 3.6283011030013976
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.010810504170033486,
+                  "kl_from_start": 0.0021603191757819957,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.007444764354237497,
+                  "quadratic_curvature": 0.0058052797426716585
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.03001048517080762,
+                  "kl_from_start": 0.022124754519662292,
+                  "accuracy_gain": -0.0625,
+                  "quadratic_ce_gain": -0.039750271308520414,
+                  "quadratic_curvature": 0.05224748758701439
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -1.2466387037434563,
+                  "kl_from_start": 1.0641727032695314,
+                  "accuracy_gain": -0.40625,
+                  "quadratic_ce_gain": -0.33568553006328433,
+                  "quadratic_curvature": 0.5805277485445074
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -2.191606127984494,
+                  "kl_from_start": 2.1350720324267796,
+                  "accuracy_gain": -0.46875,
+                  "quadratic_ce_gain": -1.927702901727909,
+                  "quadratic_curvature": 3.6283011030013976
+                }
+              ],
+              "future_projection": {
+                "ce_gain": -0.03434662070408301,
+                "kl_from_start": 0.02507043430629536,
+                "accuracy_gain": -0.09375
+              },
+              "future_parameter_energy": 0.0018865863094106317,
+              "future_ce_retention": -0.0640048812455303
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -2.1962724525972983,
+                "kl_from_start": 2.1428211284237997,
+                "accuracy_gain": -0.46875,
+                "quadratic_ce_gain": -2.0112363962405695,
+                "quadratic_curvature": 3.7848539992450227
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.011369100959548906,
+                  "kl_from_start": 0.0022582291012752716,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.007780276806594678,
+                  "quadratic_curvature": 0.006055764402977788
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.03708884513776778,
+                  "kl_from_start": 0.024238141368199365,
+                  "accuracy_gain": -0.0625,
+                  "quadratic_ce_gain": -0.04150809886015503,
+                  "quadratic_curvature": 0.054501867038250024
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -1.3068736257392355,
+                  "kl_from_start": 1.1139234379425504,
+                  "accuracy_gain": -0.40625,
+                  "quadratic_ce_gain": -0.3503122118468085,
+                  "quadratic_curvature": 0.6055768270136489
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -2.1962724525972983,
+                  "kl_from_start": 2.1428211284237997,
+                  "accuracy_gain": -0.46875,
+                  "quadratic_ce_gain": -2.0112363962405695,
+                  "quadratic_curvature": 3.7848539992450227
+                }
+              ],
+              "future_projection": {
+                "ce_gain": 0.00392198537155819,
+                "kl_from_start": 0.0031947766811195417,
+                "accuracy_gain": 0.0
+              },
+              "future_parameter_energy": 0.0021323130931705236,
+              "future_ce_retention": 0.007308614437386203
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 216,
+      "groups": [
+        {
+          "fit_group": 0,
+          "audit_group": 1,
+          "past_checkpoints": 4,
+          "bootstrap_gradients": 0,
+          "pca_fit_vjp": 5,
+          "comparable_krylov_fit_sweeps": {
+            "vjp": 3,
+            "jvp": 2
+          },
+          "ggn_variance_relative_error": 9.73378952302881e-07,
+          "ggn_bilinear_symmetry_error": 1.35648151498908e-06,
+          "methods": {
+            "normalized": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -3.12264947588378,
+                "kl_from_start": 2.9092858976079548,
+                "accuracy_gain": -0.75,
+                "quadratic_ce_gain": -0.8259587503206729,
+                "quadratic_curvature": 1.8416842384406253
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.00013092745670018058,
+                  "kl_from_start": 0.0009927313328182753,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0023219762471480016,
+                  "quadratic_curvature": 0.0029466862642568
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.015151853319089456,
+                  "kl_from_start": 0.010137695055488363,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.0018741767710818424,
+                  "quadratic_curvature": 0.026520208324811504
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -1.1515561815667577,
+                  "kl_from_start": 1.0566338127874033,
+                  "accuracy_gain": -0.34375,
+                  "quadratic_ce_gain": -0.1093813586406411,
+                  "quadratic_curvature": 0.29466899274234243
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -3.12264947588378,
+                  "kl_from_start": 2.9092858976079548,
+                  "accuracy_gain": -0.75,
+                  "quadratic_ce_gain": -0.8259587503206729,
+                  "quadratic_curvature": 1.8416842384406253
+                }
+              ]
+            },
+            "raw": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -3.164828596417039,
+                "kl_from_start": 2.949762581069436,
+                "accuracy_gain": -0.78125,
+                "quadratic_ce_gain": -0.870774037464287,
+                "quadratic_curvature": 1.9389147764617904
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 4.8806905234857756e-05,
+                  "kl_from_start": 0.0010340061516963667,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0023962116772063076,
+                  "quadratic_curvature": 0.0031022656977863034
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.016201910506245823,
+                  "kl_from_start": 0.010555038725914356,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.002118148853629426,
+                  "quadratic_curvature": 0.027920477393509
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -1.18271079483075,
+                  "kl_from_start": 1.084097255339055,
+                  "accuracy_gain": -0.40625,
+                  "quadratic_ce_gain": -0.11563972614632698,
+                  "quadratic_curvature": 0.31022650416176634
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -3.164828596417039,
+                  "kl_from_start": 2.949762581069436,
+                  "accuracy_gain": -0.78125,
+                  "quadratic_ce_gain": -0.870774037464287,
+                  "quadratic_curvature": 1.9389147764617904
+                }
+              ]
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -3.0260944237603202,
+                "kl_from_start": 2.8149033690636847,
+                "accuracy_gain": -0.75,
+                "quadratic_ce_gain": -0.7407526351595118,
+                "quadratic_curvature": 1.6612135991533399
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": 0.0004177064252603724,
+                  "kl_from_start": 0.0009103267483963192,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0022651898459983676,
+                  "quadratic_curvature": 0.0026579427391281297
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.012337192583559448,
+                  "kl_from_start": 0.009073430478086484,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": -0.0011782022938892946,
+                  "quadratic_curvature": 0.02392145606584592
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -1.0335009920777327,
+                  "kl_from_start": 0.9502707371402488,
+                  "accuracy_gain": -0.3125,
+                  "quadratic_ce_gain": -0.09695520733705448,
+                  "quadratic_curvature": 0.26579348993731905
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -3.0260944237603202,
+                  "kl_from_start": 2.8149033690636847,
+                  "accuracy_gain": -0.75,
+                  "quadratic_ce_gain": -0.7407526351595118,
+                  "quadratic_curvature": 1.6612135991533399
+                }
+              ]
+            }
+          }
+        },
+        {
+          "fit_group": 1,
+          "audit_group": 0,
+          "past_checkpoints": 4,
+          "bootstrap_gradients": 0,
+          "pca_fit_vjp": 5,
+          "comparable_krylov_fit_sweeps": {
+            "vjp": 3,
+            "jvp": 2
+          },
+          "ggn_variance_relative_error": 2.6603185158546513e-06,
+          "ggn_bilinear_symmetry_error": 1.4423622018618447e-06,
+          "methods": {
+            "normalized": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -2.34772739454041,
+                "kl_from_start": 2.19247418229942,
+                "accuracy_gain": -0.625,
+                "quadratic_ce_gain": -0.3230051130962771,
+                "quadratic_curvature": 0.8224141598473089
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.0005210595244065225,
+                  "kl_from_start": 0.0003674582503026638,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.00287016038313824,
+                  "quadratic_curvature": 0.0013158656534006338
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.00492016509561756,
+                  "kl_from_start": 0.002495434666703366,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.004662854462704594,
+                  "quadratic_curvature": 0.011842773814934218
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.4366767649518592,
+                  "kl_from_start": 0.4013355483896448,
+                  "accuracy_gain": -0.0625,
+                  "quadratic_ce_gain": -0.03051242395645079,
+                  "quadratic_curvature": 0.1315864122580397
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -2.34772739454041,
+                  "kl_from_start": 2.19247418229942,
+                  "accuracy_gain": -0.625,
+                  "quadratic_ce_gain": -0.3230051130962771,
+                  "quadratic_curvature": 0.8224141598473089
+                }
+              ]
+            },
+            "raw": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -1.9475789010252262,
+                "kl_from_start": 1.8040037931980248,
+                "accuracy_gain": -0.5625,
+                "quadratic_ce_gain": -0.21035384767365067,
+                "quadratic_curvature": 0.527686626929057
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.0008943761883452445,
+                  "kl_from_start": 0.0002936766255728965,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0017174204532364895,
+                  "quadratic_curvature": 0.0008442963979829997
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.004082185053203055,
+                  "kl_from_start": 0.001742753830172372,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0026193929396247356,
+                  "quadratic_curvature": 0.007598677322932349
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.22145405522385425,
+                  "kl_from_start": 0.1784589698539591,
+                  "accuracy_gain": -0.09375,
+                  "quadratic_ce_gain": -0.020819005263505014,
+                  "quadratic_curvature": 0.08442965033403375
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -1.9475789010252262,
+                  "kl_from_start": 1.8040037931980248,
+                  "accuracy_gain": -0.5625,
+                  "quadratic_ce_gain": -0.21035384767365067,
+                  "quadratic_curvature": 0.527686626929057
+                }
+              ]
+            },
+            "krylov": {
+              "equal_norm_fit_descent": {
+                "scale": 0.25,
+                "ce_gain": -2.4854333647160636,
+                "kl_from_start": 2.3278614718446766,
+                "accuracy_gain": -0.65625,
+                "quadratic_ce_gain": -0.3381632712568995,
+                "quadratic_curvature": 0.8727964766015408
+              },
+              "scale_sweep": [
+                {
+                  "scale": 0.01,
+                  "ce_gain": -0.000303106568458833,
+                  "kl_from_start": 0.000381292394946001,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.003231137867500437,
+                  "quadratic_curvature": 0.0013964681295961338
+                },
+                {
+                  "scale": 0.03,
+                  "ce_gain": -0.004808922104881361,
+                  "kl_from_start": 0.0026712965462379057,
+                  "accuracy_gain": 0.0,
+                  "quadratic_ce_gain": 0.0055040335345788146,
+                  "quadratic_curvature": 0.012568250823827383
+                },
+                {
+                  "scale": 0.1,
+                  "ce_gain": -0.46916551160778036,
+                  "kl_from_start": 0.4308940336299515,
+                  "accuracy_gain": -0.09375,
+                  "quadratic_ce_gain": -0.030529745224630922,
+                  "quadratic_curvature": 0.13964734385273886
+                },
+                {
+                  "scale": 0.25,
+                  "ce_gain": -2.4854333647160636,
+                  "kl_from_start": 2.3278614718446766,
+                  "accuracy_gain": -0.65625,
+                  "quadratic_ce_gain": -0.3381632712568995,
+                  "quadratic_curvature": 0.8727964766015408
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
