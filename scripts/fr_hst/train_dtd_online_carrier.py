@@ -28,6 +28,8 @@ FRAME_RATE = .04
 BEND_RATE = .035
 DELAY_MIN = .02
 DELAY_MAX = .125
+AUDIT_ANCHORS = (76, 100, 125, 150, 175, 200, 216)
+AUDIT_STEPS = frozenset(AUDIT_ANCHORS) | {s + 4 for s in AUDIT_ANCHORS[:-1]}
 
 
 def orthonormal(rows):
@@ -162,7 +164,7 @@ def commit(op, shadow, decay_point, raw, backlog, innovation, delay):
                              raw_norm=float(raw.norm()))
 
 
-def train(arm, output, trace, base_hash):
+def train(arm, output, trace, base_hash, record_carrier=False):
     output.mkdir(parents=True, exist_ok=True)
     complete = output / 'complete.json'
     final_path = output / 'epoch08.pt'
@@ -191,6 +193,8 @@ def train(arm, output, trace, base_hash):
                       epochs=EPOCHS, steps_per_epoch=steps, warmup_steps=WARMUP_STEPS, rank=3,
                       task_weight=TASK_WEIGHT, ridge=RIDGE, frame_rate=FRAME_RATE, bend_rate=BEND_RATE,
                       delay_range=[DELAY_MIN, DELAY_MAX], scheduler_steps=TASKS['DTD'][0] * steps)
+    if record_carrier:
+        provenance['recorded_steps'] = sorted(AUDIT_STEPS)
     resume = output / 'resume.pt'
     records, epochs, history = [], [], []
     frame = None
@@ -238,9 +242,13 @@ def train(arm, output, trace, base_hash):
                     history.clear()
                 gradient = torch.cat([p.grad.detach().flatten() for p in op.params])
                 proposal = raw + backlog
-                innovation, frame, bend, info = learn(op, fit_x, frame, bend, proposal, gradient, backlog, boundary)
+                innovation, next_frame, next_bend, info = learn(op, fit_x, frame, bend, proposal, gradient, backlog, boundary)
                 drain = step == EPOCHS * steps
                 delay = 0. if drain else info['delay']
+                if record_carrier and step in AUDIT_STEPS:
+                    save(output / f'carrier_step{step:03d}.pt', dict(
+                        step=step, visual=visual.state_dict(), frame=frame, bend=bend.tolist() if bend is not None else None,
+                        proposal=proposal, innovation=innovation, delay=delay))
                 if boundary:
                     with probe_mode(model):
                         selected = [s + d for s, d in zip(shadow.shadows, op.parts(backlog - delay * innovation))]
@@ -248,6 +256,7 @@ def train(arm, output, trace, base_hash):
                         trial = loss_at(op, selected, probe_x, probe_y)
                     info['probe_gain_vs_raw'] = (control - trial).reshape(2, 32).mean(1).cpu().tolist()
                 backlog, balance = commit(op, shadow, decay, raw, backlog, innovation, delay)
+                frame, bend = next_frame, next_bend
                 row.update(**info, **balance, terminal_drain=drain, applied_delay=delay)
             records.append(row)
             if boundary:
@@ -303,7 +312,11 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--trace', type=Path, required=True)
     parser.add_argument('--baseline', type=Path, required=True, help='Completed seed-42 AdamW directory from 497767c')
+    parser.add_argument('--record-carrier', action='store_true', help='Record selected pre-update states for read-only diagnostics')
+    parser.add_argument('--replay-reference', type=Path, help='Verify replay against the existing online run and skip test rescoring')
     args = parser.parse_args()
+    if args.replay_reference is not None and not args.record_carrier:
+        parser.error('--replay-reference requires --record-carrier')
     args.output.mkdir(parents=True, exist_ok=True)
     existing.ROOT = ROOT
     torch.set_num_threads(8)
@@ -319,11 +332,27 @@ def main():
             raise ValueError('Baseline provenance differs')
         arms = [args.output / arm for arm in ARMS]
         for name, path in zip(ARMS, arms):
-            train(name, path, args.trace, base_hash)
+            train(name, path, args.trace, base_hash, args.record_carrier)
             gc.collect()
             torch.cuda.empty_cache()
         overview = verify_training(arms, baseline)
         existing.write(args.output / 'training_complete.json', dict(arms=list(ARMS)))
+        if args.replay_reference is not None:
+            for row, folder in zip(overview, arms):
+                name = folder.name
+                ref_folder = args.replay_reference / name
+                ref_path = ref_folder / 'epoch08.pt'
+                assert existing.sha(ref_path) == read(ref_folder / 'complete.json')['checkpoint_sha256']
+                expected = torch.load(ref_path, map_location='cpu', mmap=True, weights_only=True)
+                replay = torch.load(folder / 'epoch08.pt', map_location='cpu', mmap=True, weights_only=True)
+                row['exact_visual_replay'] = all(torch.equal(v, replay['visual'][k]) for k,v in expected['visual'].items())
+                row['exact_frame_replay'] = torch.equal(expected['frame'], replay['frame'])
+                row['exact_backlog_replay'] = torch.equal(expected['backlog'], replay['backlog'])
+                row['exact_bend_replay'] = expected['bend'] == replay['bend']
+                assert all(row[k] for k in ('exact_visual_replay', 'exact_frame_replay', 'exact_backlog_replay', 'exact_bend_replay'))
+                print(f'{name}: replay endpoint exactly matches original', flush=True)
+            existing.write(args.output / 'complete.json', dict(arms=overview, recorded_steps=sorted(AUDIT_STEPS)))
+            return
         expected = read(ROOT / 'datasets/DTD_test_provenance.json')
         for row in expected['files']:
             assert existing.sha(ROOT / 'datasets/_downloads/tanganke__dtd' / row['path']) == row['sha256']
