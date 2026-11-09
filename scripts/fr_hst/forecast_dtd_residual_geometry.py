@@ -3,6 +3,7 @@
 import argparse
 import time
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 import torch
@@ -272,18 +273,7 @@ def evaluate_window(op, states, images, bank, gram, residual, plan):
                 methods=results, feedback=feedback)
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--bank', type=Path, required=True)
-    parser.add_argument('--replay', type=Path, required=True)
-    parser.add_argument('--trace', type=Path, required=True)
-    parser.add_argument('--queue', type=Path, required=True)
-    parser.add_argument('--output', type=Path, required=True)
-    args = parser.parse_args()
-    args.output.mkdir(parents=True, exist_ok=True)
-    plan = forecast(args)
-    existing.write(args.output / 'forecast_plan.json', plan)
-    print('Locked 14 forecasts after strict prefix checks', flush=True)
+def replay_context(trace, queue, steps, gram):
     existing.ROOT = ROOT
     torch.set_num_threads(8)
     torch.backends.mha.set_fastpath_enabled(False)
@@ -292,14 +282,14 @@ def main():
     torch.backends.cuda.enable_cudnn_sdp(False)
     torch.backends.cuda.matmul.allow_tf32 = False
     torch.backends.cudnn.allow_tf32 = False
-    manifest, states = load_trace(args.trace)
-    assert [s['step'] for s in states] == plan['steps']
+    manifest, states = load_trace(trace)
+    assert [s['step'] for s in states] == list(steps)
     head = existing.ClassificationHead.load(str(HEADS / 'DTD.pt')).cuda().eval()
     encoder, model, found, flat = build_model(existing, head)
     del flat
     model.requires_grad_(False).eval()
     base_hash = existing.sha(BASE)
-    expert, expert_manifest = load_expert(args.queue, 'DTD', [name for name, _ in found], base_hash)
+    expert, expert_manifest = load_expert(queue, 'DTD', [name for name, _ in found], base_hash)
     visual = encoder.model.visual
     for key, value in visual.state_dict().items():
         if not torch.equal(value.cpu(), states[0]['visual'][key]) or not torch.equal(expert[key], states[-1]['visual'][key]):
@@ -312,21 +302,38 @@ def main():
         batch = [fit[lookup[i]] for i in ids]
         assert [y for _, y in batch] == labels
         images.append((torch.stack([x for x, _ in batch]).cuda(), torch.tensor(labels, device='cuda')))
-    with np.load(args.bank) as source:
-        gram = source['parameter_gram']
-    _, residual = coefficients(gram)
     bank = torch.stack([torch.cat([s['delta_visual'][key].flatten().cuda() for key in op.keys]) for s in states[1:]])
     measured_norms = bank.norm(dim=1).double().cpu().numpy() ** 2
     np.testing.assert_allclose(measured_norms, np.diag(gram), rtol=5e-5)
+    return SimpleNamespace(op=op, states=states, images=images, bank=bank, base_sha256=base_hash,
+                           expert_sha256=expert_manifest['checkpoint_sha256'], image_indices=manifest['raw_train_indices'])
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--bank', type=Path, required=True)
+    parser.add_argument('--replay', type=Path, required=True)
+    parser.add_argument('--trace', type=Path, required=True)
+    parser.add_argument('--queue', type=Path, required=True)
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    args.output.mkdir(parents=True, exist_ok=True)
+    plan = forecast(args)
+    existing.write(args.output / 'forecast_plan.json', plan)
+    print('Locked 14 forecasts after strict prefix checks', flush=True)
+    with np.load(args.bank) as source:
+        gram = source['parameter_gram']
+    context = replay_context(args.trace, args.queue, plan['steps'], gram)
+    _, residual = coefficients(gram)
     records = []
     for row in plan['forecasts']:
-        result = evaluate_window(op, states, images, bank, gram, residual, row)
+        result = evaluate_window(context.op, context.states, context.images, context.bank, gram, residual, row)
         records.append(result)
         print(f'Window {row["start"]}–{row["end"]}, fit group {row["fit_group"]} measured', flush=True)
     existing.write(args.output / 'results.json', dict(
         forecast_plan_sha256=existing.sha(args.output / 'forecast_plan.json'), trace_sha256=existing.sha(args.trace / 'trace.json'),
-        base_sha256=base_hash, expert_sha256=expert_manifest['checkpoint_sha256'],
-        image_indices=manifest['raw_train_indices'], methods=METHODS,
+        base_sha256=context.base_sha256, expert_sha256=context.expert_sha256,
+        image_indices=context.image_indices, methods=METHODS,
         common_scoring_budget=dict(forward_per_main_method=2, jvp_per_main_method_upper_bound=4),
         rows=records))
 
