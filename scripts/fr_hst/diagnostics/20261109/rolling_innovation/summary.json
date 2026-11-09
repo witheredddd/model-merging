@@ -1,0 +1,170 @@
+{
+  "seeds": [
+    42
+  ],
+  "seed42_adamw_tensor_exact": true,
+  "all_warmup_training_losses_identical": true,
+  "arms": [
+    {
+      "seed": 42,
+      "arm": "adamw",
+      "final_validation": {
+        "accuracy": 0.8138297872340425,
+        "ce": 0.769533745785977
+      },
+      "historical_test": {
+        "accuracy": 0.773936170212766,
+        "ce": 0.8035859250007792,
+        "n": 1880
+      },
+      "historical_test_target_met": false,
+      "beta_counts": {
+        "1.0": 216,
+        "0.875": 0,
+        "0.75": 0
+      },
+      "gate_diagnostics": {},
+      "gated_steps_by_epoch": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_intervention": null,
+      "candidate_function_explained_median": 0.43810573603525227,
+      "executed_function_explained_median": 0.43810573603525227,
+      "first_three_executed_function_explained": 0.43810573603525227,
+      "last_three_executed_function_explained": 0.4758833936940542,
+      "functional_boundary_count": 11,
+      "norm_matched_scalar_strictly_beaten": 0,
+      "norm_matched_scalar_positive_both": 0,
+      "norm_matched_scalar_median_mean_gains": null,
+      "sum_epoch_seconds": 84.89077755063772
+    },
+    {
+      "seed": 42,
+      "arm": "fisher",
+      "final_validation": {
+        "accuracy": 0.8138297872340425,
+        "ce": 0.769533745785977
+      },
+      "historical_test": {
+        "accuracy": 0.773936170212766,
+        "ce": 0.8035859250007792,
+        "n": 1880
+      },
+      "historical_test_target_met": false,
+      "beta_counts": {
+        "1.0": 216,
+        "0.875": 0,
+        "0.75": 0
+      },
+      "gate_diagnostics": {
+        "0.875": {
+          "evaluated": 141,
+          "both_mean_positive": 8,
+          "mean_sign_disagreement": 30,
+          "passed": 0,
+          "best_min_lower_bound": -0.0001642073421402651
+        },
+        "0.75": {
+          "evaluated": 141,
+          "both_mean_positive": 8,
+          "mean_sign_disagreement": 28,
+          "passed": 0,
+          "best_min_lower_bound": -0.0004022030301216238
+        }
+      },
+      "gated_steps_by_epoch": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_intervention": null,
+      "candidate_function_explained_median": 0.43810573603525227,
+      "executed_function_explained_median": 0.43810573603525227,
+      "first_three_executed_function_explained": 0.43810573603525227,
+      "last_three_executed_function_explained": 0.4758833936940542,
+      "functional_boundary_count": 11,
+      "norm_matched_scalar_strictly_beaten": 0,
+      "norm_matched_scalar_positive_both": 0,
+      "norm_matched_scalar_median_mean_gains": null,
+      "sum_epoch_seconds": 390.3480755290948,
+      "no_gate_endpoint_tensor_exact_to_adamw": true
+    },
+    {
+      "seed": 42,
+      "arm": "euclidean",
+      "final_validation": {
+        "accuracy": 0.8138297872340425,
+        "ce": 0.769533745785977
+      },
+      "historical_test": {
+        "accuracy": 0.773936170212766,
+        "ce": 0.8035859250007792,
+        "n": 1880
+      },
+      "historical_test_target_met": false,
+      "beta_counts": {
+        "1.0": 216,
+        "0.875": 0,
+        "0.75": 0
+      },
+      "gate_diagnostics": {
+        "0.875": {
+          "evaluated": 141,
+          "both_mean_positive": 16,
+          "mean_sign_disagreement": 60,
+          "passed": 0,
+          "best_min_lower_bound": -0.00044386667477528465
+        },
+        "0.75": {
+          "evaluated": 141,
+          "both_mean_positive": 14,
+          "mean_sign_disagreement": 61,
+          "passed": 0,
+          "best_min_lower_bound": -0.0009227774359633381
+        }
+      },
+      "gated_steps_by_epoch": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_intervention": null,
+      "candidate_function_explained_median": 0.43810573603525227,
+      "executed_function_explained_median": 0.43810573603525227,
+      "first_three_executed_function_explained": 0.43810573603525227,
+      "last_three_executed_function_explained": 0.4758833936940542,
+      "functional_boundary_count": 11,
+      "norm_matched_scalar_strictly_beaten": 0,
+      "norm_matched_scalar_positive_both": 0,
+      "norm_matched_scalar_median_mean_gains": null,
+      "sum_epoch_seconds": 162.44897805387154,
+      "no_gate_endpoint_tensor_exact_to_adamw": true
+    }
+  ],
+  "paired": [
+    {
+      "seed": 42,
+      "fisher_minus_adamw_test": 0.0,
+      "fisher_minus_euclidean_test": 0.0,
+      "fisher_minus_adamw_val": 0.0,
+      "fisher_minus_euclidean_val": 0.0
+    }
+  ]
+}
