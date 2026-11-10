@@ -88,7 +88,7 @@ def birth_frame(first, second, axes):
     return orthonormal(torch.stack((first,second,third/third.norm())))
 
 
-def dynamics(op, x, y, raw, batch_gradient, state, step, adaptive, max_components, birth_penalty):
+def dynamics(op, x, y, raw, batch_gradient, state, step, adaptive, max_components, birth_penalty, capture=None):
     frames, z, q, scale = (state[k] for k in ('frames','z','q','scale'))
     with probe_mode(op.model):
         gradient = op.gradient(x, y)
@@ -135,6 +135,8 @@ def dynamics(op, x, y, raw, batch_gradient, state, step, adaptive, max_component
             w = complement(u,ru,metric,damping,direction,response(op,x,direction))
             if float(w.norm()) > 1e-8:
                 w = w / w.norm()
+                if capture is not None:
+                    capture['birth_direction'] = w.detach().cpu()
                 length = structured.norm()
                 alternative = structured + .3 * length * w
                 alternative *= length / alternative.norm().clamp_min(1e-12)
@@ -171,6 +173,9 @@ def dynamics(op, x, y, raw, batch_gradient, state, step, adaptive, max_component
             trial = dict(carrier_ce_gain=before-ce(op,x,y,structured),
                          raw_ce_gain=before-ce(op,x,y,raw))
     state.update(frames=next_frames,z=new_z,q=next_q)
+    if capture is not None:
+        capture['optimality'] = residual.detach().cpu()
+        capture['geometry_update'] = geometry_update.detach().cpu()
     info = dict(z=new_z.tolist(),q=next_q.tolist(),components=len(next_frames),effective_eta=eta,
                 damping=damping,fit_fisher_spectrum=np.linalg.eigvalsh(g).tolist(),
                 tangent_norm=float(c.norm()),exact_decoder_update_norm=float(structured.norm()),
@@ -184,7 +189,7 @@ def to_disk(state):
     return dict(**{k:v for k,v in state.items() if k not in ('z','q')},z=state['z'].tolist(),q=state['q'].tolist())
 
 
-def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0.):
+def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer=None, scratch=None):
     output.mkdir(parents=True,exist_ok=True)
     done = output/'complete.json'
     final = output/'epoch08.pt'
@@ -213,7 +218,7 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0.):
     window = torch.zeros(sum(op.sizes),device='cuda')
     backlog = torch.zeros_like(window)
     state = None
-    resume = output/'resume.pt'
+    resume = (scratch if scratch is not None else output)/'resume.pt'
     provenance = dict(task=TASK,arm=arm,seed=SEED,steps=STEPS,train_n=len(full),batch_size=BATCH_SIZE,
                       geometry_batch_prefix=32,warmup=warmup,warmup_window_ends=sorted(windows),
                       max_components=max_components,birth_penalty=birth_penalty,
@@ -225,7 +230,10 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0.):
             raise ValueError(f'{TASK}: completed run does not match the requested configuration')
         return result
     if resume.exists():
-        saved = torch.load(resume,weights_only=True,map_location='cpu',mmap=True)
+        numpy_core = np._core if hasattr(np, '_core') else np.core
+        # The cosine scheduler stores the current optimizer learning rate as a NumPy scalar.
+        with torch.serialization.safe_globals([numpy_core.multiarray.scalar, np.dtype, type(np.dtype('float64'))]):
+            saved = torch.load(resume,weights_only=True,map_location='cpu',mmap=True)
         saved_provenance = {'birth_penalty': 0., 'warmup_window_ends': sorted(windows), **saved['provenance']}
         if saved_provenance != provenance:
             raise ValueError(f'{TASK}: resume configuration mismatch')
@@ -279,13 +287,19 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0.):
                     info.update(old)
                     delay=old['delay']
                 else:
+                    capture = None
+                    if observer is not None and observer.sample(step,state,max_components):
+                        capture = dict(frames=state['frames'].detach().cpu(),z=state['z'].copy(),q=state['q'].copy())
                     structured,details=dynamics(op,x,y,raw,g,state,step,arm=='adaptive_dynamics',
-                                                max_components,birth_penalty)
+                                                max_components,birth_penalty,capture)
                     innovation=proposal-structured
                     c_gain=(-g@structured).clamp_min(0)
                     r_gain=(-g@innovation).clamp_min(0)
                     delay=DELAY_MIN+(DELAY_MAX-DELAY_MIN)*float(c_gain/(c_gain+r_gain+1e-12))
                     info.update(details)
+                    if capture is not None:
+                        observer.record(op,step,capture,state,proposal,structured,innovation,details,
+                                        0. if step==STEPS else delay)
                 applied=0. if step==STEPS else delay
                 backlog,balance=commit(op,shadow,decay,raw,backlog,innovation,applied)
                 info.update(**balance,applied_delay=applied)
@@ -297,6 +311,8 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0.):
                          dynamics=to_disk(state) if state is not None else None))
         existing.write(output/'progress.json',dict(step=len(records),last=records[-1]))
     assert len(records)==STEPS
+    if observer is not None:
+        return observer.finish(op,state,records,provenance,resume)
     # Use a training minibatch to report final rank. No test-dependent fitting.
     score_set=train_set(TASK,encoder.val_preprocess)
     indices=torch.randperm(len(score_set),generator=torch.Generator().manual_seed(SEED))[:32]
