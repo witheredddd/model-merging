@@ -16,6 +16,25 @@ For each block with row basis \(U\), use \(Ug\) for the latent AdamW step and li
 
 Per-step CE gains are evaluated in eval mode on the first 32 images of that training batch. Gradient cosine refers to the eligible 48 matrices. Per-epoch Train CE is sample weighted, with the first continuation epoch covering only steps 37–54. Timings are wall time and can be affected by the existing CE Surfaces process on the shared GPU. The logs retain actual ranks, local LTSA ranks, alignment eigenvalues, principal-angle cosines, basis memory, and sample-order fingerprints.
 
+## Results at the 270-step budget
+
+| Method | Total rank | Val accuracy at 216 | Val accuracy at 270 | Val CE at 270 | Locked step | Historical Test |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| AdamW | Ambient | 80.85% | 81.12% | 0.80093 | 81 | 78.94% |
+| PCA-4 | 192 | 77.13% | 76.86% | 0.84456 | 270 | 74.68% |
+| LTSA-4 | 192 | 76.86% | 76.86% | 0.84338 | 270 | 74.36% |
+| PCA-8 | 384 | 77.13% | 76.86% | 0.84098 | 270 | 74.63% |
+| LTSA-8 | 384 | 76.86% | 76.86% | 0.83772 | 270 | 74.68% |
+| CE Surfaces fixed benchmark | 4 | 77.39% | 79.26% | 0.79451 | 270 | 77.59% |
+
+CE Surfaces uses the historical full-visual training protocol. Its step-270 checkpoint was fixed before evaluating its benchmark Test and is separate from any later validation selection in its original continuation. The step-36 anchor is 76.33% on holdout with CE 0.85668. The 4- and 8-dimensional projection bases occupy 1.27 and 2.53 GiB of host memory, respectively. Per-arm peak allocated CUDA memory was 10.72 GiB for projected arms and 11.68 GiB for AdamW. Median actual step norms were 0.00557 for AdamW and 0.0000206–0.0000298 for the four projections. The fixed-rate comparison therefore includes a major displacement-scale difference. Concurrent processes reached the container memory limit during the first PCA-4 run. The completed AdamW arm was retained, and the projected arms were restarted serially after verifying the same anchor.
+
+## Two early diagnostic arms
+
+`--early` runs just early LTSA and early LTSA with task correction. Replay through step 36 still validates provenance, while both arms start from the same step-12 AdamW weights and moments. Geometry starts from snapshots at every step from 0 to 12. Both methods use rank 8 per block and the same data, 12-step refresh cadence, post-warmup snapshot stride, and schedule. A shadow AdamW step on the current arm supplies the displacement norm. The actual latent AdamW direction is lifted through its basis and rescaled to this budget, with CE choosing among fractions 1, 1/2, 1/4, 1/8, and zero on the first 32 training images. The next up to 32 images measure the actual CE gain.
+
+The task arm sums gradients from the preceding refresh window. At each refresh it removes the new trajectory basis's coverage of that sum, then rotates the axis with the smallest projected gradient magnitude by 15 degrees toward the residual. The new span has the same dimensionality. The initial refresh has no post-warmup gradient history, so both arms start with identical geometry. Neither correction nor refresh changes model weights directly. Comparing the two new arms isolates the addition of task correction. Comparing early LTSA against the original LTSA changes both intervention timing and step selection.
+
 ```bash
 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
@@ -23,3 +42,5 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
   --surface-best /dev/shm/dtd-ce-surfaces-20261110/best.pt \
   --output results/DTD_APML_20261110
 ```
+
+For the early experiments, add `--early` and use `--output results/DTD_APML_EARLY_20261110`.

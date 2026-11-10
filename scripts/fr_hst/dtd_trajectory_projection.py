@@ -68,10 +68,31 @@ def basis(snapshots, rank, method):
     return matrix,dict(rank=len(matrix),neighbors=ids.tolist(),**details)
 
 
-def refresh(snapshots, blocks, rank, method, warm_moments, previous):
+def correct_task_axis(u, gradient):
+    """Rotate one weakly activated axis toward the uncovered window gradient."""
+    local = u@gradient
+    residual = gradient-local@u
+    size = float(residual.norm())
+    total = float(gradient.norm())
+    fraction = size/max(total,1e-12)
+    if fraction<=1e-5 or size<=1e-12:
+        return u,dict(task_residual_fraction=fraction,rotation_degrees=0)
+    index = int(local.abs().argmin())
+    direction = residual/size
+    if float(local[index])<0:
+        direction.neg_()
+    angle = np.pi/12
+    u[index].mul_(np.cos(angle)).add_(direction,alpha=float(np.sin(angle)))
+    return u,dict(task_residual_fraction=fraction,rotation_degrees=15,rotated_axis=index)
+
+
+def refresh(snapshots, blocks, rank, method, warm_moments, previous, task_gradient=None):
     states,details = [],[]
     for i,(a,b) in enumerate(blocks):
         u,entry = basis([x[a:b] for x in snapshots],rank,method)
+        if task_gradient is not None:
+            u,extra = correct_task_axis(u,task_gradient[a:b])
+            entry.update(extra)
         if previous is None:
             m,v = warm_moments[i]
             m,v = u@m,u.square()@v
@@ -86,9 +107,10 @@ def refresh(snapshots, blocks, rank, method, warm_moments, previous):
 
 
 @torch.no_grad()
-def apply(params, states, step, lr, betas, eps, decay):
-    """AdamW in each block's low-dimensional coordinates. No ambient update."""
-    norm,projected,raw = 0.,0.,0.
+def direction(params, states, step, lr, betas, eps, decay):
+    """Compute latent AdamW directions while updating only latent moments."""
+    projected,raw = 0.,0.
+    deltas = []
     beta1,beta2 = betas
     for p,(basis_cpu,m,v) in zip(params,states):
         u = basis_cpu.to(p.device)
@@ -97,13 +119,21 @@ def apply(params, states, step, lr, betas, eps, decay):
         local_m = m.to(p.device).lerp_(small,1-beta1)
         local_v = v.to(p.device).mul_(beta2).addcmul_(small,small,value=1-beta2)
         z = local_m/(1-beta1**step)/(local_v.sqrt()/np.sqrt(1-beta2**step)+eps)
-        delta = -lr*((z+decay*(u@w))@u)
-        before = w.clone()
-        w.add_(delta)
-        norm += float((w-before).square().sum())
+        deltas.append((-lr*((z+decay*(u@w))@u)).view_as(p))
         projected += float(small.square().sum())
         raw += float(g.square().sum())
         m.copy_(local_m)
         v.copy_(local_v)
     cosine = float(np.sqrt(projected/raw)) if raw>0 else None
+    return deltas,cosine
+
+
+@torch.no_grad()
+def apply(params, states, step, lr, betas, eps, decay):
+    deltas,cosine = direction(params,states,step,lr,betas,eps,decay)
+    norm = 0.
+    for p,delta in zip(params,deltas):
+        before = p.clone()
+        p.add_(delta)
+        norm += float((p-before).square().sum())
     return float(np.sqrt(norm)),cosine
