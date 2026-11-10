@@ -44,3 +44,14 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 ```
 
 For the early experiments, add `--early` and use `--output results/DTD_APML_EARLY_20261110`.
+
+### Early diagnostic results
+
+| Method | Val accuracy at 216 | Val accuracy at 270 | Val CE at 270 | Locked step | Historical Test |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Early LTSA | 71.01% | 71.81% | 0.98686 | 270 | 71.33% |
+| Early LTSA with task correction | 81.65% | 80.59% | 0.68845 | 243 | 79.95% |
+
+The common step-12 anchor has holdout accuracy 53.46% and CE 1.58513. Both arms have identical data order and step records through step 24, excluding timing. The shared requested total rank is 384. Actual ranks over refreshes span 374–384 for early LTSA and 371–384 with task correction due to numerical truncation in the trajectory fit. No step exceeds its own shadow AdamW radius. Median realized norms are 0.00385 and 0.00559, respectively. The pure trajectory arm accepts 219 nonzero updates and the corrected arm accepts 239. The correction rotates one axis in each eligible block on all 21 refreshes after the initial chart, for 1,008 block rotations. The two early arms took 9.58 and 11.20 minutes, with peak allocated CUDA memory of 11.68 GiB each.
+
+Adding task correction improves the locked historical Test by 8.62 percentage points at the same requested rank. The pure early arm underperforms the original late LTSA-8 even with the larger CE-searched displacement. Since the timing and step-selection changes are combined in that comparison, it does not isolate the effect of timing alone. The two early runs use seed 42. They establish a within-run comparison, without a cross-seed uncertainty estimate.
