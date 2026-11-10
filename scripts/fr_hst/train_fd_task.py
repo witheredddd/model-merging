@@ -14,7 +14,7 @@ from run_dtd_carrier_diagnostics import Operator
 from train_dtd_online_carrier import (
     DELAY_MAX, DELAY_MIN, commit, decoder, features, functional_pullback, initialize, learn, orthonormal, response,
 )
-from train_dtd_rolling_innovation import INTERVAL, LEARNING_RATE, ShadowAdamW, probe_mode
+from train_dtd_rolling_innovation import DECAY, INTERVAL, LEARNING_RATE, ShadowAdamW, probe_mode
 from task_data import TASKS, test_protocol, test_set, train_set
 from train_eight_expert_queue import BASE, BATCH_SIZE, HEADS, ROOT, build_model, cosine_lr, existing, loader, read, save
 
@@ -189,7 +189,7 @@ def to_disk(state):
     return dict(**{k:v for k,v in state.items() if k not in ('z','q')},z=state['z'].tolist(),q=state['q'].tolist())
 
 
-def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer=None, scratch=None):
+def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer=None, scratch=None, ledger=None):
     output.mkdir(parents=True,exist_ok=True)
     done = output/'complete.json'
     final = output/'epoch08.pt'
@@ -247,6 +247,8 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
         if state is not None:
             state.update(frames=state['frames'].cuda(),z=np.array(state['z']),q=np.array(state['q']),
                          pending=state['pending'].cuda() if state['pending'] is not None else None)
+        if ledger is not None:
+            ledger.restore(saved['ledger'],len(records))
         del saved
     for epoch in range(len(records)//batches,(STEPS+batches-1)//batches):
         if len(records)==STEPS:
@@ -301,14 +303,23 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
                         observer.record(op,step,capture,state,proposal,structured,innovation,details,
                                         0. if step==STEPS else delay)
                 applied=0. if step==STEPS else delay
+                if ledger is not None and step==warmup+1:
+                    ledger.start(op)
                 backlog,balance=commit(op,shadow,decay,raw,backlog,innovation,applied)
+                if ledger is not None:
+                    ledger.advance(op,step,decay,1.-shadow.optimizer.param_groups[0]['lr']*DECAY,
+                                   structured,innovation,applied)
                 info.update(**balance,applied_delay=applied)
             records.append(info)
             if step%10==0 or step==STEPS:
                 print(f'{arm} step {step}/{STEPS} CE={info["training_ce"]:.5f} M={0 if state is None else len(state["frames"])}',flush=True)
-        save(resume,dict(provenance=provenance,visual=visual.state_dict(),optimizer=shadow.optimizer.state_dict(),
-                         history=history,window=window,backlog=backlog,records=records,
-                         dynamics=to_disk(state) if state is not None else None))
+        checkpoint = dict(provenance=provenance,visual=visual.state_dict(),optimizer=shadow.optimizer.state_dict(),
+                          history=history,window=window,backlog=backlog,records=records,
+                          dynamics=to_disk(state) if state is not None else None)
+        if ledger is not None:
+            checkpoint['ledger'] = ledger.snapshot()
+        save(resume,checkpoint)
+        del checkpoint
         existing.write(output/'progress.json',dict(step=len(records),last=records[-1]))
     assert len(records)==STEPS
     if observer is not None:
