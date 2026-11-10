@@ -1,0 +1,3052 @@
+{
+  "provenance": {
+    "task": "DTD",
+    "algorithm": "persistent_ce_surfaces_v1",
+    "seed": 42,
+    "warmup": 36,
+    "comparison_steps": 216,
+    "train_n": 3384,
+    "validation_n": 376,
+    "split": "train_holdout_seed_0",
+    "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+    "head_sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d",
+    "max_components": 6,
+    "geometry_window": 12,
+    "fit_batches": 6,
+    "confirmation_batches": 3,
+    "replay_images": 24,
+    "inner_rounds": 4,
+    "surface_rounds": 2,
+    "axis_cap": 0.15,
+    "bend_cap": 0.08,
+    "birth_margin": 0.0002,
+    "overfit_patience": 5,
+    "validation_margin": 0.003,
+    "train_margin": 0.005
+  },
+  "selection": "lowest_validation_ce_at_snapshot",
+  "warmup": {
+    "step": 36,
+    "correct": 287,
+    "ce": 0.8566821595205035
+  },
+  "selected": {
+    "epoch": 10,
+    "step": 270,
+    "correct": 298,
+    "ce": 0.7945069542348144
+  },
+  "n": 376,
+  "newly_correct": 15,
+  "newly_incorrect": 4,
+  "rows": [
+    {
+      "id": 180,
+      "label": 2,
+      "warmup_prediction": 2,
+      "selected_prediction": 2,
+      "warmup_ce": 0.003453621939611059,
+      "selected_ce": 0.003782089468635808
+    },
+    {
+      "id": 750,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.00837794799700706,
+      "selected_ce": 0.007872498384094023
+    },
+    {
+      "id": 2533,
+      "label": 31,
+      "warmup_prediction": 32,
+      "selected_prediction": 31,
+      "warmup_ce": 1.6148608042775396,
+      "selected_ce": 0.9849196929672177
+    },
+    {
+      "id": 48,
+      "label": 0,
+      "warmup_prediction": 0,
+      "selected_prediction": 0,
+      "warmup_ce": 0.021978201404108038,
+      "selected_ce": 0.010940043935824595
+    },
+    {
+      "id": 1981,
+      "label": 24,
+      "warmup_prediction": 24,
+      "selected_prediction": 24,
+      "warmup_ce": 0.22212053792758754,
+      "selected_ce": 0.14369583704502245
+    },
+    {
+      "id": 2756,
+      "label": 34,
+      "warmup_prediction": 34,
+      "selected_prediction": 34,
+      "warmup_ce": 0.08042025305697642,
+      "selected_ce": 0.1988102467204979
+    },
+    {
+      "id": 3474,
+      "label": 43,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 3.6553525034838263,
+      "selected_ce": 3.5819962939683156
+    },
+    {
+      "id": 3275,
+      "label": 40,
+      "warmup_prediction": 40,
+      "selected_prediction": 40,
+      "warmup_ce": 0.002584491842055784,
+      "selected_ce": 0.00359421895150143
+    },
+    {
+      "id": 2804,
+      "label": 35,
+      "warmup_prediction": 35,
+      "selected_prediction": 35,
+      "warmup_ce": 0.8743472993154756,
+      "selected_ce": 0.4616656904902291
+    },
+    {
+      "id": 1686,
+      "label": 21,
+      "warmup_prediction": 21,
+      "selected_prediction": 21,
+      "warmup_ce": 0.09632710759698111,
+      "selected_ce": 0.038201787293571675
+    },
+    {
+      "id": 3283,
+      "label": 41,
+      "warmup_prediction": 41,
+      "selected_prediction": 41,
+      "warmup_ce": 0.04473756266047818,
+      "selected_ce": 0.045949665836575206
+    },
+    {
+      "id": 354,
+      "label": 4,
+      "warmup_prediction": 40,
+      "selected_prediction": 40,
+      "warmup_ce": 3.352409621223114,
+      "selected_ce": 2.6681546914337426
+    },
+    {
+      "id": 2130,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.01054807106182629,
+      "selected_ce": 0.02505451087169102
+    },
+    {
+      "id": 535,
+      "label": 6,
+      "warmup_prediction": 6,
+      "selected_prediction": 6,
+      "warmup_ce": 0.14726969644832855,
+      "selected_ce": 0.14755803406143805
+    },
+    {
+      "id": 2817,
+      "label": 35,
+      "warmup_prediction": 41,
+      "selected_prediction": 35,
+      "warmup_ce": 1.3959654746160644,
+      "selected_ce": 1.1963090986605096
+    },
+    {
+      "id": 2018,
+      "label": 25,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 0.10573723939340218,
+      "selected_ce": 0.08505751596134112
+    },
+    {
+      "id": 420,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.000297180102835232,
+      "selected_ce": 0.00023835571900255467
+    },
+    {
+      "id": 1059,
+      "label": 13,
+      "warmup_prediction": 13,
+      "selected_prediction": 13,
+      "warmup_ce": 0.0036709717654859236,
+      "selected_ce": 0.0018993884705859512
+    },
+    {
+      "id": 629,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.005088576861554821,
+      "selected_ce": 0.002746281328615414
+    },
+    {
+      "id": 3541,
+      "label": 44,
+      "warmup_prediction": 44,
+      "selected_prediction": 44,
+      "warmup_ce": 0.5790598252991754,
+      "selected_ce": 0.5034214058740424
+    },
+    {
+      "id": 528,
+      "label": 6,
+      "warmup_prediction": 6,
+      "selected_prediction": 6,
+      "warmup_ce": 0.0057378783457715295,
+      "selected_ce": 0.003925162315188278
+    },
+    {
+      "id": 1995,
+      "label": 24,
+      "warmup_prediction": 24,
+      "selected_prediction": 24,
+      "warmup_ce": 0.38357302325484316,
+      "selected_ce": 0.24328622036343414
+    },
+    {
+      "id": 1300,
+      "label": 16,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 0.0022636166261657082,
+      "selected_ce": 0.00118026327644184
+    },
+    {
+      "id": 2749,
+      "label": 34,
+      "warmup_prediction": 34,
+      "selected_prediction": 34,
+      "warmup_ce": 0.12803706691288544,
+      "selected_ce": 0.17682742135827278
+    },
+    {
+      "id": 490,
+      "label": 6,
+      "warmup_prediction": 6,
+      "selected_prediction": 6,
+      "warmup_ce": 0.26889198255621527,
+      "selected_ce": 0.14493066984922368
+    },
+    {
+      "id": 3421,
+      "label": 42,
+      "warmup_prediction": 42,
+      "selected_prediction": 42,
+      "warmup_ce": 0.03492813620955196,
+      "selected_ce": 0.02052280223905675
+    },
+    {
+      "id": 2592,
+      "label": 32,
+      "warmup_prediction": 32,
+      "selected_prediction": 32,
+      "warmup_ce": 0.07102761540017277,
+      "selected_ce": 0.05726867411539922
+    },
+    {
+      "id": 2422,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.333849682441352,
+      "selected_ce": 0.44590122205335786
+    },
+    {
+      "id": 2836,
+      "label": 35,
+      "warmup_prediction": 35,
+      "selected_prediction": 35,
+      "warmup_ce": 0.052211871102950065,
+      "selected_ce": 0.03122311333257397
+    },
+    {
+      "id": 3506,
+      "label": 43,
+      "warmup_prediction": 43,
+      "selected_prediction": 43,
+      "warmup_ce": 0.0008854622744903494,
+      "selected_ce": 0.0007293885303300832
+    },
+    {
+      "id": 1835,
+      "label": 22,
+      "warmup_prediction": 0,
+      "selected_prediction": 22,
+      "warmup_ce": 0.8210904563103184,
+      "selected_ce": 0.6383117777665814
+    },
+    {
+      "id": 3300,
+      "label": 41,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 3.9100968490319166,
+      "selected_ce": 2.83184027622951
+    },
+    {
+      "id": 1173,
+      "label": 14,
+      "warmup_prediction": 2,
+      "selected_prediction": 14,
+      "warmup_ce": 1.6835783939480407,
+      "selected_ce": 0.780658453951165
+    },
+    {
+      "id": 2695,
+      "label": 33,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 0.026580317307468272,
+      "selected_ce": 0.05508084793169077
+    },
+    {
+      "id": 977,
+      "label": 12,
+      "warmup_prediction": 17,
+      "selected_prediction": 17,
+      "warmup_ce": 1.9977033604460264,
+      "selected_ce": 1.9565453777095128
+    },
+    {
+      "id": 1211,
+      "label": 15,
+      "warmup_prediction": 15,
+      "selected_prediction": 15,
+      "warmup_ce": 0.490455909396689,
+      "selected_ce": 0.45305005736894177
+    },
+    {
+      "id": 2639,
+      "label": 32,
+      "warmup_prediction": 32,
+      "selected_prediction": 32,
+      "warmup_ce": 0.07071515065619606,
+      "selected_ce": 0.05260792222534687
+    },
+    {
+      "id": 1126,
+      "label": 14,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 0.06783275625896575,
+      "selected_ce": 0.036388404959069684
+    },
+    {
+      "id": 2819,
+      "label": 35,
+      "warmup_prediction": 35,
+      "selected_prediction": 35,
+      "warmup_ce": 0.10360404199105021,
+      "selected_ce": 0.09259881709878887
+    },
+    {
+      "id": 3016,
+      "label": 37,
+      "warmup_prediction": 37,
+      "selected_prediction": 37,
+      "warmup_ce": 0.3494692211661846,
+      "selected_ce": 0.3368494880272756
+    },
+    {
+      "id": 2391,
+      "label": 29,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 0.2728112869319876,
+      "selected_ce": 0.3122231900702048
+    },
+    {
+      "id": 156,
+      "label": 1,
+      "warmup_prediction": 1,
+      "selected_prediction": 1,
+      "warmup_ce": 0.4403824447854563,
+      "selected_ce": 0.3970561228501224
+    },
+    {
+      "id": 780,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.0016714686184048152,
+      "selected_ce": 0.0010813731892492541
+    },
+    {
+      "id": 1724,
+      "label": 21,
+      "warmup_prediction": 21,
+      "selected_prediction": 21,
+      "warmup_ce": 0.02945139423106983,
+      "selected_ce": 0.029053797316886967
+    },
+    {
+      "id": 2057,
+      "label": 25,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 0.5048626505779882,
+      "selected_ce": 0.4667049738032885
+    },
+    {
+      "id": 2469,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.15042086651139772,
+      "selected_ce": 0.22389417696937036
+    },
+    {
+      "id": 2191,
+      "label": 27,
+      "warmup_prediction": 27,
+      "selected_prediction": 27,
+      "warmup_ce": 0.21704580666528428,
+      "selected_ce": 0.308547475754897
+    },
+    {
+      "id": 2080,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.003992291233131705,
+      "selected_ce": 0.0060890403079493964
+    },
+    {
+      "id": 865,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.4392612689420238,
+      "selected_ce": 0.17543905152015607
+    },
+    {
+      "id": 3205,
+      "label": 40,
+      "warmup_prediction": 40,
+      "selected_prediction": 40,
+      "warmup_ce": 0.010430823136082526,
+      "selected_ce": 0.013247529768320788
+    },
+    {
+      "id": 2257,
+      "label": 28,
+      "warmup_prediction": 28,
+      "selected_prediction": 28,
+      "warmup_ce": 1.64626498742476,
+      "selected_ce": 1.137167618541497
+    },
+    {
+      "id": 2274,
+      "label": 28,
+      "warmup_prediction": 17,
+      "selected_prediction": 17,
+      "warmup_ce": 1.1513064177291827,
+      "selected_ce": 0.9587418909195068
+    },
+    {
+      "id": 2874,
+      "label": 35,
+      "warmup_prediction": 35,
+      "selected_prediction": 35,
+      "warmup_ce": 1.004769954816459,
+      "selected_ce": 0.7165478082074613
+    },
+    {
+      "id": 1256,
+      "label": 15,
+      "warmup_prediction": 15,
+      "selected_prediction": 15,
+      "warmup_ce": 0.7327918938567978,
+      "selected_ce": 0.46551672483187045
+    },
+    {
+      "id": 1318,
+      "label": 16,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 0.028449783247426322,
+      "selected_ce": 0.020390339165309676
+    },
+    {
+      "id": 1888,
+      "label": 23,
+      "warmup_prediction": 45,
+      "selected_prediction": 45,
+      "warmup_ce": 3.6307032285483096,
+      "selected_ce": 2.4304744055139222
+    },
+    {
+      "id": 874,
+      "label": 10,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 1.33039266408755,
+      "selected_ce": 1.0657573524973365
+    },
+    {
+      "id": 1237,
+      "label": 15,
+      "warmup_prediction": 21,
+      "selected_prediction": 21,
+      "warmup_ce": 1.378529989963869,
+      "selected_ce": 1.4517746145253987
+    },
+    {
+      "id": 471,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.00041101440284650975,
+      "selected_ce": 0.00034956459333538594
+    },
+    {
+      "id": 1046,
+      "label": 13,
+      "warmup_prediction": 13,
+      "selected_prediction": 13,
+      "warmup_ce": 0.0015293398492749017,
+      "selected_ce": 0.0009273888642279808
+    },
+    {
+      "id": 251,
+      "label": 3,
+      "warmup_prediction": 3,
+      "selected_prediction": 3,
+      "warmup_ce": 0.0891171227294911,
+      "selected_ce": 0.047819959904775486
+    },
+    {
+      "id": 1265,
+      "label": 15,
+      "warmup_prediction": 29,
+      "selected_prediction": 15,
+      "warmup_ce": 1.0161322346190416,
+      "selected_ce": 0.780589385287893
+    },
+    {
+      "id": 430,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.00014089088443425518,
+      "selected_ce": 0.0001042383706218819
+    },
+    {
+      "id": 948,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.05370743312099531,
+      "selected_ce": 0.020701937219025194
+    },
+    {
+      "id": 897,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.6682131396704453,
+      "selected_ce": 0.4378015374960338
+    },
+    {
+      "id": 1345,
+      "label": 16,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 0.7300225753960463,
+      "selected_ce": 0.7741856142547722
+    },
+    {
+      "id": 2908,
+      "label": 36,
+      "warmup_prediction": 36,
+      "selected_prediction": 36,
+      "warmup_ce": 0.003311161869468491,
+      "selected_ce": 0.0021647172094594984
+    },
+    {
+      "id": 1554,
+      "label": 19,
+      "warmup_prediction": 21,
+      "selected_prediction": 21,
+      "warmup_ce": 2.7721916411390524,
+      "selected_ce": 2.669726921580824
+    },
+    {
+      "id": 454,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.0012993734669227367,
+      "selected_ce": 0.0010412411130681723
+    },
+    {
+      "id": 2507,
+      "label": 31,
+      "warmup_prediction": 31,
+      "selected_prediction": 31,
+      "warmup_ce": 0.5217963695848123,
+      "selected_ce": 0.48826012728602025
+    },
+    {
+      "id": 314,
+      "label": 3,
+      "warmup_prediction": 3,
+      "selected_prediction": 3,
+      "warmup_ce": 0.0889516247297587,
+      "selected_ce": 0.14379777275479644
+    },
+    {
+      "id": 2885,
+      "label": 36,
+      "warmup_prediction": 17,
+      "selected_prediction": 4,
+      "warmup_ce": 6.211119641235653,
+      "selected_ce": 6.12084417554756
+    },
+    {
+      "id": 402,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.0014830604715512575,
+      "selected_ce": 0.0011058759845259708
+    },
+    {
+      "id": 65,
+      "label": 0,
+      "warmup_prediction": 0,
+      "selected_prediction": 0,
+      "warmup_ce": 0.22739079388238834,
+      "selected_ce": 0.15667852723450015
+    },
+    {
+      "id": 1630,
+      "label": 20,
+      "warmup_prediction": 20,
+      "selected_prediction": 20,
+      "warmup_ce": 0.014778170873793453,
+      "selected_ce": 0.01678591983719354
+    },
+    {
+      "id": 1635,
+      "label": 20,
+      "warmup_prediction": 20,
+      "selected_prediction": 20,
+      "warmup_ce": 0.01949822225102175,
+      "selected_ce": 0.011606806893057015
+    },
+    {
+      "id": 743,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.3516278433693829,
+      "selected_ce": 0.2426888831754817
+    },
+    {
+      "id": 3064,
+      "label": 38,
+      "warmup_prediction": 38,
+      "selected_prediction": 38,
+      "warmup_ce": 0.9400428530385617,
+      "selected_ce": 0.5181460090725378
+    },
+    {
+      "id": 1421,
+      "label": 17,
+      "warmup_prediction": 28,
+      "selected_prediction": 17,
+      "warmup_ce": 1.3043033352679014,
+      "selected_ce": 0.8963930176398622
+    },
+    {
+      "id": 612,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.0016187496963034642,
+      "selected_ce": 0.0011996038702536088
+    },
+    {
+      "id": 1513,
+      "label": 18,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 5.930665544551857,
+      "selected_ce": 5.422837857318841
+    },
+    {
+      "id": 3119,
+      "label": 38,
+      "warmup_prediction": 28,
+      "selected_prediction": 38,
+      "warmup_ce": 2.178922240757303,
+      "selected_ce": 0.7646481314328025
+    },
+    {
+      "id": 1543,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 1.0814357465887792,
+      "selected_ce": 0.703469459934429
+    },
+    {
+      "id": 2089,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.03145663534969234,
+      "selected_ce": 0.06659812924228255
+    },
+    {
+      "id": 2405,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.08324000216003828,
+      "selected_ce": 0.10042172041135596
+    },
+    {
+      "id": 3345,
+      "label": 41,
+      "warmup_prediction": 41,
+      "selected_prediction": 41,
+      "warmup_ce": 0.43817176461721913,
+      "selected_ce": 0.4420536121660646
+    },
+    {
+      "id": 1488,
+      "label": 18,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 0.0023158620861696948,
+      "selected_ce": 0.0011940827058492095
+    },
+    {
+      "id": 593,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.003066576345065102,
+      "selected_ce": 0.0014056135975996566
+    },
+    {
+      "id": 1542,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 0.1733913453436786,
+      "selected_ce": 0.07380980710420453
+    },
+    {
+      "id": 3370,
+      "label": 42,
+      "warmup_prediction": 42,
+      "selected_prediction": 42,
+      "warmup_ce": 0.11319115159859269,
+      "selected_ce": 0.11662636086072727
+    },
+    {
+      "id": 2144,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.26278712163118884,
+      "selected_ce": 0.6286007065491925
+    },
+    {
+      "id": 108,
+      "label": 1,
+      "warmup_prediction": 37,
+      "selected_prediction": 37,
+      "warmup_ce": 1.6420806932979946,
+      "selected_ce": 1.4005355525496561
+    },
+    {
+      "id": 2669,
+      "label": 33,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 0.22717175583651195,
+      "selected_ce": 0.2220366656861804
+    },
+    {
+      "id": 3113,
+      "label": 38,
+      "warmup_prediction": 45,
+      "selected_prediction": 45,
+      "warmup_ce": 1.901329183074353,
+      "selected_ce": 1.8239685637370502
+    },
+    {
+      "id": 421,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.0006725586838394967,
+      "selected_ce": 0.0005800505104886023
+    },
+    {
+      "id": 2261,
+      "label": 28,
+      "warmup_prediction": 28,
+      "selected_prediction": 28,
+      "warmup_ce": 0.81564242342987,
+      "selected_ce": 0.5904650009430437
+    },
+    {
+      "id": 1861,
+      "label": 23,
+      "warmup_prediction": 23,
+      "selected_prediction": 23,
+      "warmup_ce": 0.14223645919648484,
+      "selected_ce": 0.011801329118081499
+    },
+    {
+      "id": 738,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.2798844859813587,
+      "selected_ce": 0.17833225440851794
+    },
+    {
+      "id": 164,
+      "label": 2,
+      "warmup_prediction": 20,
+      "selected_prediction": 2,
+      "warmup_ce": 0.7888833549778197,
+      "selected_ce": 0.7709617306659401
+    },
+    {
+      "id": 3638,
+      "label": 45,
+      "warmup_prediction": 45,
+      "selected_prediction": 7,
+      "warmup_ce": 1.3816712784778036,
+      "selected_ce": 1.3438808190284752
+    },
+    {
+      "id": 3757,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.03529315277060989,
+      "selected_ce": 0.018698178485272842
+    },
+    {
+      "id": 88,
+      "label": 1,
+      "warmup_prediction": 34,
+      "selected_prediction": 34,
+      "warmup_ce": 3.4062735775690145,
+      "selected_ce": 2.816572404918165
+    },
+    {
+      "id": 3041,
+      "label": 38,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 3.4729826341845342,
+      "selected_ce": 1.9663480737401455
+    },
+    {
+      "id": 2146,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.001205962926274811,
+      "selected_ce": 0.003255386356453308
+    },
+    {
+      "id": 144,
+      "label": 1,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 4.710277811766402,
+      "selected_ce": 5.167441042626924
+    },
+    {
+      "id": 220,
+      "label": 2,
+      "warmup_prediction": 2,
+      "selected_prediction": 2,
+      "warmup_ce": 0.04325516905109481,
+      "selected_ce": 0.04258173213903816
+    },
+    {
+      "id": 893,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.22972322884305524,
+      "selected_ce": 0.09282896753710349
+    },
+    {
+      "id": 2286,
+      "label": 28,
+      "warmup_prediction": 31,
+      "selected_prediction": 31,
+      "warmup_ce": 1.3078924178172713,
+      "selected_ce": 1.2084074706443304
+    },
+    {
+      "id": 1467,
+      "label": 18,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 0.15735806373076763,
+      "selected_ce": 0.465309842209316
+    },
+    {
+      "id": 576,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.044571208437984414,
+      "selected_ce": 0.023566290390047432
+    },
+    {
+      "id": 883,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.24619311886679157,
+      "selected_ce": 0.10694330669927124
+    },
+    {
+      "id": 2150,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.025289969312089204,
+      "selected_ce": 0.04748865627638009
+    },
+    {
+      "id": 1993,
+      "label": 24,
+      "warmup_prediction": 24,
+      "selected_prediction": 24,
+      "warmup_ce": 0.4908739696822754,
+      "selected_ce": 0.3727882178883202
+    },
+    {
+      "id": 1575,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 0.32862002802112117,
+      "selected_ce": 0.2396794126949443
+    },
+    {
+      "id": 2579,
+      "label": 32,
+      "warmup_prediction": 32,
+      "selected_prediction": 32,
+      "warmup_ce": 0.12917170433358305,
+      "selected_ce": 0.0956821363504445
+    },
+    {
+      "id": 2401,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.05808315493831893,
+      "selected_ce": 0.06888013181601459
+    },
+    {
+      "id": 599,
+      "label": 7,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 2.4975299687347268,
+      "selected_ce": 2.952499360072903
+    },
+    {
+      "id": 900,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.31644227592245194,
+      "selected_ce": 0.1584841202992612
+    },
+    {
+      "id": 1892,
+      "label": 23,
+      "warmup_prediction": 23,
+      "selected_prediction": 23,
+      "warmup_ce": 0.29168283268076267,
+      "selected_ce": 0.4835556824496616
+    },
+    {
+      "id": 3322,
+      "label": 41,
+      "warmup_prediction": 35,
+      "selected_prediction": 35,
+      "warmup_ce": 2.2983107128940716,
+      "selected_ce": 2.1296062290418307
+    },
+    {
+      "id": 125,
+      "label": 1,
+      "warmup_prediction": 37,
+      "selected_prediction": 45,
+      "warmup_ce": 2.8146106195495113,
+      "selected_ce": 2.355989233117991
+    },
+    {
+      "id": 1843,
+      "label": 23,
+      "warmup_prediction": 28,
+      "selected_prediction": 23,
+      "warmup_ce": 3.1817798382308933,
+      "selected_ce": 0.7245374062416574
+    },
+    {
+      "id": 2477,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.5124811773412327,
+      "selected_ce": 0.6614951644971696
+    },
+    {
+      "id": 1028,
+      "label": 12,
+      "warmup_prediction": 12,
+      "selected_prediction": 12,
+      "warmup_ce": 0.9507173783493812,
+      "selected_ce": 0.549392542726248
+    },
+    {
+      "id": 1565,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 1.2535433555009172,
+      "selected_ce": 0.7591946937048561
+    },
+    {
+      "id": 851,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.42336225662727467,
+      "selected_ce": 0.2621200493417412
+    },
+    {
+      "id": 3309,
+      "label": 41,
+      "warmup_prediction": 41,
+      "selected_prediction": 41,
+      "warmup_ce": 0.19109300369940285,
+      "selected_ce": 0.22906470303350085
+    },
+    {
+      "id": 1148,
+      "label": 14,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 0.021542195218817114,
+      "selected_ce": 0.016645137948454146
+    },
+    {
+      "id": 1135,
+      "label": 14,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 0.5931370049536823,
+      "selected_ce": 0.5282648593130301
+    },
+    {
+      "id": 1699,
+      "label": 21,
+      "warmup_prediction": 21,
+      "selected_prediction": 21,
+      "warmup_ce": 0.023802177174960675,
+      "selected_ce": 0.018186018186255728
+    },
+    {
+      "id": 2693,
+      "label": 33,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 0.003231468380646237,
+      "selected_ce": 0.004535418740310828
+    },
+    {
+      "id": 2769,
+      "label": 34,
+      "warmup_prediction": 41,
+      "selected_prediction": 41,
+      "warmup_ce": 1.36568804785286,
+      "selected_ce": 2.1845723730733857
+    },
+    {
+      "id": 1781,
+      "label": 22,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 3.3245804032220065,
+      "selected_ce": 3.5599136326663476
+    },
+    {
+      "id": 1416,
+      "label": 17,
+      "warmup_prediction": 17,
+      "selected_prediction": 17,
+      "warmup_ce": 0.4180706346586795,
+      "selected_ce": 0.3388682347776378
+    },
+    {
+      "id": 2034,
+      "label": 25,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 0.5229337242005831,
+      "selected_ce": 0.4900542943493481
+    },
+    {
+      "id": 797,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.0025730116916297557,
+      "selected_ce": 0.0017907484450528789
+    },
+    {
+      "id": 2681,
+      "label": 33,
+      "warmup_prediction": 33,
+      "selected_prediction": 25,
+      "warmup_ce": 0.3685702615371243,
+      "selected_ce": 0.9686901371449048
+    },
+    {
+      "id": 318,
+      "label": 3,
+      "warmup_prediction": 3,
+      "selected_prediction": 3,
+      "warmup_ce": 0.23990252850186358,
+      "selected_ce": 0.18982382437317932
+    },
+    {
+      "id": 2038,
+      "label": 25,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 0.20404724637763358,
+      "selected_ce": 0.13241848158979702
+    },
+    {
+      "id": 3535,
+      "label": 44,
+      "warmup_prediction": 44,
+      "selected_prediction": 44,
+      "warmup_ce": 0.7667915216615507,
+      "selected_ce": 1.1277005433779714
+    },
+    {
+      "id": 706,
+      "label": 8,
+      "warmup_prediction": 8,
+      "selected_prediction": 8,
+      "warmup_ce": 0.08541695933201264,
+      "selected_ce": 0.05414363437692804
+    },
+    {
+      "id": 1088,
+      "label": 13,
+      "warmup_prediction": 13,
+      "selected_prediction": 13,
+      "warmup_ce": 0.08249687415564745,
+      "selected_ce": 0.03829455972567515
+    },
+    {
+      "id": 3128,
+      "label": 39,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 8.39508280372345,
+      "selected_ce": 9.786088712529088
+    },
+    {
+      "id": 2998,
+      "label": 37,
+      "warmup_prediction": 45,
+      "selected_prediction": 45,
+      "warmup_ce": 1.9473703897954238,
+      "selected_ce": 3.2285096824167008
+    },
+    {
+      "id": 1074,
+      "label": 13,
+      "warmup_prediction": 13,
+      "selected_prediction": 13,
+      "warmup_ce": 0.027978000904554635,
+      "selected_ce": 0.007347309972541706
+    },
+    {
+      "id": 556,
+      "label": 6,
+      "warmup_prediction": 6,
+      "selected_prediction": 6,
+      "warmup_ce": 0.01343117695024244,
+      "selected_ce": 0.007840905765024378
+    },
+    {
+      "id": 2120,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.0029371008398779595,
+      "selected_ce": 0.01461413349429422
+    },
+    {
+      "id": 2243,
+      "label": 28,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 3.950083111239506,
+      "selected_ce": 3.5051545328596103
+    },
+    {
+      "id": 177,
+      "label": 2,
+      "warmup_prediction": 2,
+      "selected_prediction": 2,
+      "warmup_ce": 0.07175317689687592,
+      "selected_ce": 0.07190459005460623
+    },
+    {
+      "id": 1351,
+      "label": 16,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 0.9855572741039325,
+      "selected_ce": 1.0987391540557683
+    },
+    {
+      "id": 1803,
+      "label": 22,
+      "warmup_prediction": 22,
+      "selected_prediction": 22,
+      "warmup_ce": 0.592802830229891,
+      "selected_ce": 0.4712745911112119
+    },
+    {
+      "id": 449,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.0008895592794292422,
+      "selected_ce": 0.0009430353573716044
+    },
+    {
+      "id": 3367,
+      "label": 42,
+      "warmup_prediction": 28,
+      "selected_prediction": 28,
+      "warmup_ce": 3.855851869769581,
+      "selected_ce": 4.3257071668161045
+    },
+    {
+      "id": 3536,
+      "label": 44,
+      "warmup_prediction": 2,
+      "selected_prediction": 29,
+      "warmup_ce": 2.0854401774520563,
+      "selected_ce": 2.6911928738209716
+    },
+    {
+      "id": 1117,
+      "label": 13,
+      "warmup_prediction": 13,
+      "selected_prediction": 13,
+      "warmup_ce": 0.0013515175749604336,
+      "selected_ce": 0.0008986492729945628
+    },
+    {
+      "id": 573,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.007069822490560117,
+      "selected_ce": 0.0031615743758784927
+    },
+    {
+      "id": 2482,
+      "label": 31,
+      "warmup_prediction": 31,
+      "selected_prediction": 31,
+      "warmup_ce": 0.5304914835550437,
+      "selected_ce": 0.18740296688207125
+    },
+    {
+      "id": 2829,
+      "label": 35,
+      "warmup_prediction": 35,
+      "selected_prediction": 35,
+      "warmup_ce": 0.15765896502055174,
+      "selected_ce": 0.09546124968533183
+    },
+    {
+      "id": 843,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.104800918155974,
+      "selected_ce": 0.057977019530055386
+    },
+    {
+      "id": 2340,
+      "label": 29,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 0.11747266363016894,
+      "selected_ce": 0.10327966654931321
+    },
+    {
+      "id": 3497,
+      "label": 43,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 3.021920417370908,
+      "selected_ce": 3.0565422326529523
+    },
+    {
+      "id": 2608,
+      "label": 32,
+      "warmup_prediction": 32,
+      "selected_prediction": 32,
+      "warmup_ce": 0.10358254946910686,
+      "selected_ce": 0.06229087655615691
+    },
+    {
+      "id": 2332,
+      "label": 29,
+      "warmup_prediction": 15,
+      "selected_prediction": 15,
+      "warmup_ce": 2.6466293106931964,
+      "selected_ce": 2.8758623226275777
+    },
+    {
+      "id": 1901,
+      "label": 23,
+      "warmup_prediction": 23,
+      "selected_prediction": 23,
+      "warmup_ce": 0.04817893157942753,
+      "selected_ce": 0.03504296560072968
+    },
+    {
+      "id": 415,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.0010749743812829198,
+      "selected_ce": 0.0007847459340284402
+    },
+    {
+      "id": 1247,
+      "label": 15,
+      "warmup_prediction": 15,
+      "selected_prediction": 15,
+      "warmup_ce": 1.2452157368111154,
+      "selected_ce": 1.2421353612396917
+    },
+    {
+      "id": 2666,
+      "label": 33,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 0.006091733853462931,
+      "selected_ce": 0.005543957521141744
+    },
+    {
+      "id": 90,
+      "label": 1,
+      "warmup_prediction": 37,
+      "selected_prediction": 28,
+      "warmup_ce": 2.450699737869769,
+      "selected_ce": 2.818782502499044
+    },
+    {
+      "id": 3067,
+      "label": 38,
+      "warmup_prediction": 38,
+      "selected_prediction": 38,
+      "warmup_ce": 0.22226409183585805,
+      "selected_ce": 0.08133165049161302
+    },
+    {
+      "id": 3571,
+      "label": 44,
+      "warmup_prediction": 27,
+      "selected_prediction": 27,
+      "warmup_ce": 4.024035301132101,
+      "selected_ce": 4.97102604650316
+    },
+    {
+      "id": 233,
+      "label": 2,
+      "warmup_prediction": 2,
+      "selected_prediction": 2,
+      "warmup_ce": 0.6336040614277597,
+      "selected_ce": 0.6932042052501529
+    },
+    {
+      "id": 479,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.0027901171748847737,
+      "selected_ce": 0.0017082681921451067
+    },
+    {
+      "id": 2224,
+      "label": 27,
+      "warmup_prediction": 27,
+      "selected_prediction": 27,
+      "warmup_ce": 0.04142685243502859,
+      "selected_ce": 0.030511845428530932
+    },
+    {
+      "id": 2584,
+      "label": 32,
+      "warmup_prediction": 32,
+      "selected_prediction": 32,
+      "warmup_ce": 0.12970468758383252,
+      "selected_ce": 0.09258112758937555
+    },
+    {
+      "id": 3671,
+      "label": 45,
+      "warmup_prediction": 45,
+      "selected_prediction": 45,
+      "warmup_ce": 0.005344387702671206,
+      "selected_ce": 0.0025908643477714683
+    },
+    {
+      "id": 752,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.014499384250839189,
+      "selected_ce": 0.010302815939571152
+    },
+    {
+      "id": 842,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.3370941512815075,
+      "selected_ce": 0.24667163335024056
+    },
+    {
+      "id": 3153,
+      "label": 39,
+      "warmup_prediction": 39,
+      "selected_prediction": 39,
+      "warmup_ce": 0.010573391653608334,
+      "selected_ce": 0.011443475296327442
+    },
+    {
+      "id": 2447,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.08716751386290203,
+      "selected_ce": 0.09785059231819969
+    },
+    {
+      "id": 1234,
+      "label": 15,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 3.4347705939700495,
+      "selected_ce": 4.793674605859176
+    },
+    {
+      "id": 643,
+      "label": 8,
+      "warmup_prediction": 8,
+      "selected_prediction": 8,
+      "warmup_ce": 1.328880844970357,
+      "selected_ce": 1.212121898442286
+    },
+    {
+      "id": 668,
+      "label": 8,
+      "warmup_prediction": 44,
+      "selected_prediction": 44,
+      "warmup_ce": 1.8020799500636668,
+      "selected_ce": 1.9961918974156811
+    },
+    {
+      "id": 3611,
+      "label": 45,
+      "warmup_prediction": 45,
+      "selected_prediction": 45,
+      "warmup_ce": 0.2796942682007166,
+      "selected_ce": 0.06164378028061688
+    },
+    {
+      "id": 1375,
+      "label": 17,
+      "warmup_prediction": 22,
+      "selected_prediction": 17,
+      "warmup_ce": 1.5156080586828868,
+      "selected_ce": 1.055963710798033
+    },
+    {
+      "id": 1526,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 1.2962479043258923,
+      "selected_ce": 0.8815798382436741
+    },
+    {
+      "id": 1988,
+      "label": 24,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 1.555519075531609,
+      "selected_ce": 1.5510092596285818
+    },
+    {
+      "id": 2776,
+      "label": 34,
+      "warmup_prediction": 34,
+      "selected_prediction": 34,
+      "warmup_ce": 0.9490484025516599,
+      "selected_ce": 1.0250454485208105
+    },
+    {
+      "id": 394,
+      "label": 4,
+      "warmup_prediction": 3,
+      "selected_prediction": 4,
+      "warmup_ce": 1.5174384775145398,
+      "selected_ce": 0.8265524331359908
+    },
+    {
+      "id": 1436,
+      "label": 17,
+      "warmup_prediction": 17,
+      "selected_prediction": 17,
+      "warmup_ce": 0.43666468496497785,
+      "selected_ce": 0.21203850072439345
+    },
+    {
+      "id": 821,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.23373238777318586,
+      "selected_ce": 0.15241559356739057
+    },
+    {
+      "id": 1022,
+      "label": 12,
+      "warmup_prediction": 12,
+      "selected_prediction": 12,
+      "warmup_ce": 0.26138833607613077,
+      "selected_ce": 0.16622997290451696
+    },
+    {
+      "id": 631,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.6806202487176207,
+      "selected_ce": 0.5043770590645623
+    },
+    {
+      "id": 2135,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.017461681208014706,
+      "selected_ce": 0.03586092816850427
+    },
+    {
+      "id": 269,
+      "label": 3,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 4.4849848539140575,
+      "selected_ce": 4.462449922631769
+    },
+    {
+      "id": 815,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.4023923849440366,
+      "selected_ce": 0.2294146665099274
+    },
+    {
+      "id": 379,
+      "label": 4,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 3.313619140229423,
+      "selected_ce": 2.8226805633005423
+    },
+    {
+      "id": 11,
+      "label": 0,
+      "warmup_prediction": 0,
+      "selected_prediction": 0,
+      "warmup_ce": 0.4722384651361449,
+      "selected_ce": 0.42593469216375623
+    },
+    {
+      "id": 2462,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.2559531981858064,
+      "selected_ce": 0.3677814445983888
+    },
+    {
+      "id": 3499,
+      "label": 43,
+      "warmup_prediction": 43,
+      "selected_prediction": 43,
+      "warmup_ce": 0.0008156041320751656,
+      "selected_ce": 0.000961924177503797
+    },
+    {
+      "id": 3397,
+      "label": 42,
+      "warmup_prediction": 42,
+      "selected_prediction": 42,
+      "warmup_ce": 0.028384837015641744,
+      "selected_ce": 0.010599661372575597
+    },
+    {
+      "id": 1517,
+      "label": 18,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 0.001205727212859048,
+      "selected_ce": 0.0009145550406015469
+    },
+    {
+      "id": 3182,
+      "label": 39,
+      "warmup_prediction": 39,
+      "selected_prediction": 39,
+      "warmup_ce": 0.6672857745073146,
+      "selected_ce": 0.5897474152421358
+    },
+    {
+      "id": 3213,
+      "label": 40,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 6.86130473152435,
+      "selected_ce": 6.559957370613987
+    },
+    {
+      "id": 2116,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.005953552681144526,
+      "selected_ce": 0.018334787621931196
+    },
+    {
+      "id": 3142,
+      "label": 39,
+      "warmup_prediction": 39,
+      "selected_prediction": 39,
+      "warmup_ce": 0.013464154939464762,
+      "selected_ce": 0.008374933150269635
+    },
+    {
+      "id": 3557,
+      "label": 44,
+      "warmup_prediction": 44,
+      "selected_prediction": 44,
+      "warmup_ce": 0.15640402250072816,
+      "selected_ce": 0.08851408805321696
+    },
+    {
+      "id": 2883,
+      "label": 36,
+      "warmup_prediction": 36,
+      "selected_prediction": 36,
+      "warmup_ce": 0.002151300062343553,
+      "selected_ce": 0.0014615847175773493
+    },
+    {
+      "id": 3736,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.2733674834099971,
+      "selected_ce": 0.16958638074468682
+    },
+    {
+      "id": 1394,
+      "label": 17,
+      "warmup_prediction": 17,
+      "selected_prediction": 17,
+      "warmup_ce": 0.3129603908681093,
+      "selected_ce": 0.16547861360437707
+    },
+    {
+      "id": 586,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.0016942682205391892,
+      "selected_ce": 0.000873149356242085
+    },
+    {
+      "id": 1798,
+      "label": 22,
+      "warmup_prediction": 0,
+      "selected_prediction": 29,
+      "warmup_ce": 2.2017068533241657,
+      "selected_ce": 2.260027356070289
+    },
+    {
+      "id": 3476,
+      "label": 43,
+      "warmup_prediction": 43,
+      "selected_prediction": 43,
+      "warmup_ce": 0.001818947609839944,
+      "selected_ce": 0.0019473488704049317
+    },
+    {
+      "id": 1740,
+      "label": 21,
+      "warmup_prediction": 25,
+      "selected_prediction": 21,
+      "warmup_ce": 0.906235069436001,
+      "selected_ce": 0.7825634286532079
+    },
+    {
+      "id": 938,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 1.0658693082232993,
+      "selected_ce": 0.6688438236988803
+    },
+    {
+      "id": 2811,
+      "label": 35,
+      "warmup_prediction": 34,
+      "selected_prediction": 34,
+      "warmup_ce": 4.867604590588212,
+      "selected_ce": 4.805745150824298
+    },
+    {
+      "id": 329,
+      "label": 4,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 4.010797738165089,
+      "selected_ce": 3.9103279095126013
+    },
+    {
+      "id": 1166,
+      "label": 14,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 0.053698029078058686,
+      "selected_ce": 0.06592981308961209
+    },
+    {
+      "id": 417,
+      "label": 5,
+      "warmup_prediction": 5,
+      "selected_prediction": 5,
+      "warmup_ce": 0.0050208841273322435,
+      "selected_ce": 0.0034161658079783787
+    },
+    {
+      "id": 1040,
+      "label": 13,
+      "warmup_prediction": 13,
+      "selected_prediction": 13,
+      "warmup_ce": 0.0005327071198915416,
+      "selected_ce": 0.0002886021364280169
+    },
+    {
+      "id": 1884,
+      "label": 23,
+      "warmup_prediction": 23,
+      "selected_prediction": 23,
+      "warmup_ce": 0.3227668659260081,
+      "selected_ce": 0.18112749780872198
+    },
+    {
+      "id": 3758,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.009222483240789715,
+      "selected_ce": 0.003998009184541778
+    },
+    {
+      "id": 2397,
+      "label": 29,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 0.3896916066686265,
+      "selected_ce": 0.48211185845015153
+    },
+    {
+      "id": 2599,
+      "label": 32,
+      "warmup_prediction": 32,
+      "selected_prediction": 32,
+      "warmup_ce": 0.08869414188883246,
+      "selected_ce": 0.058488849934645856
+    },
+    {
+      "id": 2349,
+      "label": 29,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 0.19816740343398645,
+      "selected_ce": 0.18932520679856218
+    },
+    {
+      "id": 812,
+      "label": 10,
+      "warmup_prediction": 30,
+      "selected_prediction": 10,
+      "warmup_ce": 0.9090739492970722,
+      "selected_ce": 0.6035573811692879
+    },
+    {
+      "id": 1350,
+      "label": 16,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 0.260550316372683,
+      "selected_ce": 0.3059165343257058
+    },
+    {
+      "id": 1478,
+      "label": 18,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 0.0017639321701866477,
+      "selected_ce": 0.0018679479374691607
+    },
+    {
+      "id": 1268,
+      "label": 15,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 6.078136015441803,
+      "selected_ce": 6.0885381669686325
+    },
+    {
+      "id": 916,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.2686651600311522,
+      "selected_ce": 0.3836149550502384
+    },
+    {
+      "id": 3180,
+      "label": 39,
+      "warmup_prediction": 39,
+      "selected_prediction": 39,
+      "warmup_ce": 0.21161315224144897,
+      "selected_ce": 0.26494617438793894
+    },
+    {
+      "id": 2415,
+      "label": 30,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 1.544575045997422,
+      "selected_ce": 1.7110348361636525
+    },
+    {
+      "id": 2754,
+      "label": 34,
+      "warmup_prediction": 34,
+      "selected_prediction": 34,
+      "warmup_ce": 0.09657518051942178,
+      "selected_ce": 0.09435120831113011
+    },
+    {
+      "id": 1319,
+      "label": 16,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 0.03372738404743529,
+      "selected_ce": 0.030282560412272865
+    },
+    {
+      "id": 979,
+      "label": 12,
+      "warmup_prediction": 36,
+      "selected_prediction": 36,
+      "warmup_ce": 4.500342949185987,
+      "selected_ce": 4.642024806290825
+    },
+    {
+      "id": 885,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.19810805202575532,
+      "selected_ce": 0.13467306497771703
+    },
+    {
+      "id": 2839,
+      "label": 35,
+      "warmup_prediction": 24,
+      "selected_prediction": 11,
+      "warmup_ce": 6.046676875280001,
+      "selected_ce": 6.01468202324693
+    },
+    {
+      "id": 2702,
+      "label": 33,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 0.003877193309688264,
+      "selected_ce": 0.005917657452490934
+    },
+    {
+      "id": 84,
+      "label": 1,
+      "warmup_prediction": 37,
+      "selected_prediction": 23,
+      "warmup_ce": 1.7479771041018966,
+      "selected_ce": 2.068251317801117
+    },
+    {
+      "id": 1599,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 0.15465644723972438,
+      "selected_ce": 0.09956240472397657
+    },
+    {
+      "id": 3057,
+      "label": 38,
+      "warmup_prediction": 38,
+      "selected_prediction": 38,
+      "warmup_ce": 0.07702329036422113,
+      "selected_ce": 0.03194759357887447
+    },
+    {
+      "id": 3526,
+      "label": 44,
+      "warmup_prediction": 44,
+      "selected_prediction": 44,
+      "warmup_ce": 0.36672541261327,
+      "selected_ce": 0.3524529024261699
+    },
+    {
+      "id": 745,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.06034963861402198,
+      "selected_ce": 0.051586321276782476
+    },
+    {
+      "id": 1684,
+      "label": 21,
+      "warmup_prediction": 21,
+      "selected_prediction": 21,
+      "warmup_ce": 0.013549612451590832,
+      "selected_ce": 0.004780891477418602
+    },
+    {
+      "id": 1021,
+      "label": 12,
+      "warmup_prediction": 12,
+      "selected_prediction": 12,
+      "warmup_ce": 0.9430457360934847,
+      "selected_ce": 1.0559966972020924
+    },
+    {
+      "id": 2612,
+      "label": 32,
+      "warmup_prediction": 32,
+      "selected_prediction": 32,
+      "warmup_ce": 0.06706398293834334,
+      "selected_ce": 0.04605610020103273
+    },
+    {
+      "id": 151,
+      "label": 1,
+      "warmup_prediction": 24,
+      "selected_prediction": 24,
+      "warmup_ce": 1.9222629406716256,
+      "selected_ce": 1.7891759218893923
+    },
+    {
+      "id": 2496,
+      "label": 31,
+      "warmup_prediction": 28,
+      "selected_prediction": 38,
+      "warmup_ce": 4.912681848599036,
+      "selected_ce": 4.495347936085976
+    },
+    {
+      "id": 298,
+      "label": 3,
+      "warmup_prediction": 3,
+      "selected_prediction": 3,
+      "warmup_ce": 0.0006691994423609766,
+      "selected_ce": 0.0003559159076014395
+    },
+    {
+      "id": 722,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.0011267492757079656,
+      "selected_ce": 0.0007683863237651957
+    },
+    {
+      "id": 2031,
+      "label": 25,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 0.19376897905009235,
+      "selected_ce": 0.1690877108642005
+    },
+    {
+      "id": 1923,
+      "label": 24,
+      "warmup_prediction": 24,
+      "selected_prediction": 24,
+      "warmup_ce": 0.04298876337400172,
+      "selected_ce": 0.03270444222164081
+    },
+    {
+      "id": 3477,
+      "label": 43,
+      "warmup_prediction": 43,
+      "selected_prediction": 43,
+      "warmup_ce": 0.15966129038806554,
+      "selected_ce": 0.1726902543706403
+    },
+    {
+      "id": 960,
+      "label": 12,
+      "warmup_prediction": 28,
+      "selected_prediction": 28,
+      "warmup_ce": 1.693734673207812,
+      "selected_ce": 1.9890315240746765
+    },
+    {
+      "id": 2211,
+      "label": 27,
+      "warmup_prediction": 40,
+      "selected_prediction": 40,
+      "warmup_ce": 4.509389871327934,
+      "selected_ce": 4.207422449128222
+    },
+    {
+      "id": 808,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.44543853600377215,
+      "selected_ce": 0.4280622935048227
+    },
+    {
+      "id": 1298,
+      "label": 16,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 0.7773938360287769,
+      "selected_ce": 0.5974914925692131
+    },
+    {
+      "id": 369,
+      "label": 4,
+      "warmup_prediction": 4,
+      "selected_prediction": 4,
+      "warmup_ce": 0.1814846220112876,
+      "selected_ce": 0.1244024642237386
+    },
+    {
+      "id": 1656,
+      "label": 20,
+      "warmup_prediction": 20,
+      "selected_prediction": 20,
+      "warmup_ce": 0.027146223826002954,
+      "selected_ce": 0.031178047525244817
+    },
+    {
+      "id": 1116,
+      "label": 13,
+      "warmup_prediction": 13,
+      "selected_prediction": 13,
+      "warmup_ce": 0.7957947270058218,
+      "selected_ce": 0.8464534102841293
+    },
+    {
+      "id": 248,
+      "label": 3,
+      "warmup_prediction": 3,
+      "selected_prediction": 3,
+      "warmup_ce": 0.0008334058349244633,
+      "selected_ce": 0.0005415469860214962
+    },
+    {
+      "id": 342,
+      "label": 4,
+      "warmup_prediction": 33,
+      "selected_prediction": 4,
+      "warmup_ce": 1.9292326609095922,
+      "selected_ce": 1.1952180775674803
+    },
+    {
+      "id": 712,
+      "label": 8,
+      "warmup_prediction": 8,
+      "selected_prediction": 8,
+      "warmup_ce": 0.4974929777084874,
+      "selected_ce": 0.38854754910676864
+    },
+    {
+      "id": 2381,
+      "label": 29,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 0.03308594227131846,
+      "selected_ce": 0.02312556697081065
+    },
+    {
+      "id": 1379,
+      "label": 17,
+      "warmup_prediction": 17,
+      "selected_prediction": 17,
+      "warmup_ce": 0.6015055608267844,
+      "selected_ce": 0.321451837950895
+    },
+    {
+      "id": 287,
+      "label": 3,
+      "warmup_prediction": 3,
+      "selected_prediction": 3,
+      "warmup_ce": 0.007792155748305523,
+      "selected_ce": 0.005286804622116339
+    },
+    {
+      "id": 574,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.0014193260130594258,
+      "selected_ce": 0.0008300936420759801
+    },
+    {
+      "id": 1352,
+      "label": 16,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 0.18749248210299008,
+      "selected_ce": 0.128498545765712
+    },
+    {
+      "id": 1539,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 1.088050370407372,
+      "selected_ce": 0.46388166722564467
+    },
+    {
+      "id": 3011,
+      "label": 37,
+      "warmup_prediction": 37,
+      "selected_prediction": 37,
+      "warmup_ce": 0.0296494417909139,
+      "selected_ce": 0.04605098397736958
+    },
+    {
+      "id": 1401,
+      "label": 17,
+      "warmup_prediction": 28,
+      "selected_prediction": 28,
+      "warmup_ce": 1.8613949569733177,
+      "selected_ce": 1.7041527198257511
+    },
+    {
+      "id": 2386,
+      "label": 29,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 0.03360670759823698,
+      "selected_ce": 0.026750035260341278
+    },
+    {
+      "id": 67,
+      "label": 0,
+      "warmup_prediction": 0,
+      "selected_prediction": 0,
+      "warmup_ce": 1.021308369143186,
+      "selected_ce": 0.8385417412813195
+    },
+    {
+      "id": 3237,
+      "label": 40,
+      "warmup_prediction": 40,
+      "selected_prediction": 40,
+      "warmup_ce": 0.0222527059605178,
+      "selected_ce": 0.022220065052716644
+    },
+    {
+      "id": 2108,
+      "label": 26,
+      "warmup_prediction": 26,
+      "selected_prediction": 26,
+      "warmup_ce": 0.001560339521087475,
+      "selected_ce": 0.005447358177730221
+    },
+    {
+      "id": 3727,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.013393495966432592,
+      "selected_ce": 0.005984635716805423
+    },
+    {
+      "id": 3734,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.04976155300363293,
+      "selected_ce": 0.027092743101399645
+    },
+    {
+      "id": 2540,
+      "label": 31,
+      "warmup_prediction": 28,
+      "selected_prediction": 28,
+      "warmup_ce": 2.297495293267751,
+      "selected_ce": 1.518602526514996
+    },
+    {
+      "id": 2909,
+      "label": 36,
+      "warmup_prediction": 36,
+      "selected_prediction": 36,
+      "warmup_ce": 0.001725973766533707,
+      "selected_ce": 0.000981076916309322
+    },
+    {
+      "id": 20,
+      "label": 0,
+      "warmup_prediction": 0,
+      "selected_prediction": 0,
+      "warmup_ce": 0.4850506232931742,
+      "selected_ce": 0.38473368577826883
+    },
+    {
+      "id": 2238,
+      "label": 27,
+      "warmup_prediction": 27,
+      "selected_prediction": 27,
+      "warmup_ce": 1.0688595643523684,
+      "selected_ce": 0.8813105497276572
+    },
+    {
+      "id": 2866,
+      "label": 35,
+      "warmup_prediction": 35,
+      "selected_prediction": 35,
+      "warmup_ce": 0.09065800802786371,
+      "selected_ce": 0.06409922993170812
+    },
+    {
+      "id": 3650,
+      "label": 45,
+      "warmup_prediction": 45,
+      "selected_prediction": 45,
+      "warmup_ce": 0.029260807124010947,
+      "selected_ce": 0.019898058164765264
+    },
+    {
+      "id": 542,
+      "label": 6,
+      "warmup_prediction": 6,
+      "selected_prediction": 6,
+      "warmup_ce": 0.027091261784876364,
+      "selected_ce": 0.023622560749325245
+    },
+    {
+      "id": 3321,
+      "label": 41,
+      "warmup_prediction": 41,
+      "selected_prediction": 41,
+      "warmup_ce": 0.06961454936756947,
+      "selected_ce": 0.08749079604701097
+    },
+    {
+      "id": 2573,
+      "label": 32,
+      "warmup_prediction": 32,
+      "selected_prediction": 32,
+      "warmup_ce": 0.08378545112037468,
+      "selected_ce": 0.049027294522174227
+    },
+    {
+      "id": 1493,
+      "label": 18,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 0.0033247015387359276,
+      "selected_ce": 0.001425380534479316
+    },
+    {
+      "id": 1428,
+      "label": 17,
+      "warmup_prediction": 17,
+      "selected_prediction": 17,
+      "warmup_ce": 0.28419027317748907,
+      "selected_ce": 0.23702472268318361
+    },
+    {
+      "id": 1944,
+      "label": 24,
+      "warmup_prediction": 24,
+      "selected_prediction": 24,
+      "warmup_ce": 0.35812092076151686,
+      "selected_ce": 0.2475470604093646
+    },
+    {
+      "id": 1288,
+      "label": 16,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 1.7664316066976329,
+      "selected_ce": 2.14871180625039
+    },
+    {
+      "id": 2236,
+      "label": 27,
+      "warmup_prediction": 27,
+      "selected_prediction": 27,
+      "warmup_ce": 0.10395887429533063,
+      "selected_ce": 0.0972737996278961
+    },
+    {
+      "id": 345,
+      "label": 4,
+      "warmup_prediction": 4,
+      "selected_prediction": 4,
+      "warmup_ce": 1.1937527446982155,
+      "selected_ce": 0.7700995922423951
+    },
+    {
+      "id": 3411,
+      "label": 42,
+      "warmup_prediction": 42,
+      "selected_prediction": 42,
+      "warmup_ce": 0.039872313603037335,
+      "selected_ce": 0.02825597199886177
+    },
+    {
+      "id": 1863,
+      "label": 23,
+      "warmup_prediction": 23,
+      "selected_prediction": 23,
+      "warmup_ce": 0.08199606195942126,
+      "selected_ce": 0.053317286869238784
+    },
+    {
+      "id": 2449,
+      "label": 30,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 1.3907143334779497,
+      "selected_ce": 1.6743657821744993
+    },
+    {
+      "id": 3387,
+      "label": 42,
+      "warmup_prediction": 42,
+      "selected_prediction": 42,
+      "warmup_ce": 0.28537804312941467,
+      "selected_ce": 0.2051478366846804
+    },
+    {
+      "id": 760,
+      "label": 9,
+      "warmup_prediction": 12,
+      "selected_prediction": 12,
+      "warmup_ce": 7.429059230379664,
+      "selected_ce": 7.35954028738479
+    },
+    {
+      "id": 3517,
+      "label": 43,
+      "warmup_prediction": 20,
+      "selected_prediction": 20,
+      "warmup_ce": 5.7437878882678906,
+      "selected_ce": 5.760349970836283
+    },
+    {
+      "id": 3389,
+      "label": 42,
+      "warmup_prediction": 42,
+      "selected_prediction": 42,
+      "warmup_ce": 0.09768812934956592,
+      "selected_ce": 0.05585200377431776
+    },
+    {
+      "id": 3717,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.006459472300384645,
+      "selected_ce": 0.0030594266545199734
+    },
+    {
+      "id": 557,
+      "label": 6,
+      "warmup_prediction": 6,
+      "selected_prediction": 6,
+      "warmup_ce": 0.008422242401724256,
+      "selected_ce": 0.0042216276163653445
+    },
+    {
+      "id": 1139,
+      "label": 14,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 0.18234424185540882,
+      "selected_ce": 0.17674376412525258
+    },
+    {
+      "id": 1063,
+      "label": 13,
+      "warmup_prediction": 13,
+      "selected_prediction": 13,
+      "warmup_ce": 0.00015461215738056457,
+      "selected_ce": 9.796233869622343e-05
+    },
+    {
+      "id": 1536,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 0.8162107384891428,
+      "selected_ce": 0.7741531257877386
+    },
+    {
+      "id": 1645,
+      "label": 20,
+      "warmup_prediction": 20,
+      "selected_prediction": 20,
+      "warmup_ce": 0.19724727904261627,
+      "selected_ce": 0.23753878676986237
+    },
+    {
+      "id": 681,
+      "label": 8,
+      "warmup_prediction": 8,
+      "selected_prediction": 8,
+      "warmup_ce": 0.27377864575382177,
+      "selected_ce": 0.15272913141683506
+    },
+    {
+      "id": 3152,
+      "label": 39,
+      "warmup_prediction": 39,
+      "selected_prediction": 39,
+      "warmup_ce": 0.006932360286199959,
+      "selected_ce": 0.004175304303714236
+    },
+    {
+      "id": 2077,
+      "label": 25,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 0.3641966830405746,
+      "selected_ce": 0.27943723723150526
+    },
+    {
+      "id": 265,
+      "label": 3,
+      "warmup_prediction": 4,
+      "selected_prediction": 4,
+      "warmup_ce": 4.657405770316634,
+      "selected_ce": 3.9034304977061764
+    },
+    {
+      "id": 171,
+      "label": 2,
+      "warmup_prediction": 2,
+      "selected_prediction": 2,
+      "warmup_ce": 0.08235098824634804,
+      "selected_ce": 0.11507814206987058
+    },
+    {
+      "id": 2053,
+      "label": 25,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 0.5833443911755345,
+      "selected_ce": 0.6591502738589914
+    },
+    {
+      "id": 3023,
+      "label": 37,
+      "warmup_prediction": 37,
+      "selected_prediction": 37,
+      "warmup_ce": 0.2480647169789068,
+      "selected_ce": 0.5469549416021675
+    },
+    {
+      "id": 3293,
+      "label": 41,
+      "warmup_prediction": 26,
+      "selected_prediction": 41,
+      "warmup_ce": 0.9861673182611865,
+      "selected_ce": 0.20638177894138007
+    },
+    {
+      "id": 1308,
+      "label": 16,
+      "warmup_prediction": 16,
+      "selected_prediction": 16,
+      "warmup_ce": 0.7645641889922904,
+      "selected_ce": 0.614854488408261
+    },
+    {
+      "id": 367,
+      "label": 4,
+      "warmup_prediction": 4,
+      "selected_prediction": 4,
+      "warmup_ce": 0.3748077480034965,
+      "selected_ce": 0.1607831367855148
+    },
+    {
+      "id": 702,
+      "label": 8,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 1.963159557884922,
+      "selected_ce": 2.2080472977692276
+    },
+    {
+      "id": 957,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.128375302081198,
+      "selected_ce": 0.06920903960884607
+    },
+    {
+      "id": 999,
+      "label": 12,
+      "warmup_prediction": 12,
+      "selected_prediction": 12,
+      "warmup_ce": 0.239553645431175,
+      "selected_ce": 0.1550356748650123
+    },
+    {
+      "id": 1873,
+      "label": 23,
+      "warmup_prediction": 23,
+      "selected_prediction": 23,
+      "warmup_ce": 0.5034863512293645,
+      "selected_ce": 0.0952695469031739
+    },
+    {
+      "id": 1518,
+      "label": 18,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 0.00470225522782755,
+      "selected_ce": 0.0026362672018525853
+    },
+    {
+      "id": 127,
+      "label": 1,
+      "warmup_prediction": 34,
+      "selected_prediction": 34,
+      "warmup_ce": 1.9502701070368345,
+      "selected_ce": 1.8930050265155218
+    },
+    {
+      "id": 3687,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.01665167034414886,
+      "selected_ce": 0.007965339589711124
+    },
+    {
+      "id": 801,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.5756806011419271,
+      "selected_ce": 0.5800337496863001
+    },
+    {
+      "id": 3643,
+      "label": 45,
+      "warmup_prediction": 45,
+      "selected_prediction": 45,
+      "warmup_ce": 0.6910428768612379,
+      "selected_ce": 0.5264530612836108
+    },
+    {
+      "id": 3120,
+      "label": 39,
+      "warmup_prediction": 39,
+      "selected_prediction": 39,
+      "warmup_ce": 0.055097853160839594,
+      "selected_ce": 0.03524956679785777
+    },
+    {
+      "id": 37,
+      "label": 0,
+      "warmup_prediction": 22,
+      "selected_prediction": 22,
+      "warmup_ce": 2.1742615160272543,
+      "selected_ce": 1.960722758141811
+    },
+    {
+      "id": 2287,
+      "label": 28,
+      "warmup_prediction": 4,
+      "selected_prediction": 4,
+      "warmup_ce": 1.4060676132390482,
+      "selected_ce": 1.5585085927963305
+    },
+    {
+      "id": 2221,
+      "label": 27,
+      "warmup_prediction": 27,
+      "selected_prediction": 27,
+      "warmup_ce": 0.37927511829887417,
+      "selected_ce": 0.30507893570860245
+    },
+    {
+      "id": 983,
+      "label": 12,
+      "warmup_prediction": 28,
+      "selected_prediction": 4,
+      "warmup_ce": 2.9449540992514818,
+      "selected_ce": 3.257243062941332
+    },
+    {
+      "id": 384,
+      "label": 4,
+      "warmup_prediction": 4,
+      "selected_prediction": 4,
+      "warmup_ce": 0.6056553221208765,
+      "selected_ce": 0.28103830472788677
+    },
+    {
+      "id": 3296,
+      "label": 41,
+      "warmup_prediction": 41,
+      "selected_prediction": 35,
+      "warmup_ce": 0.6934916953715,
+      "selected_ce": 0.8321746367944983
+    },
+    {
+      "id": 1125,
+      "label": 14,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 0.0058444555322223115,
+      "selected_ce": 0.003461739052302891
+    },
+    {
+      "id": 333,
+      "label": 4,
+      "warmup_prediction": 45,
+      "selected_prediction": 45,
+      "warmup_ce": 3.931553490211072,
+      "selected_ce": 3.5711828623109456
+    },
+    {
+      "id": 3093,
+      "label": 38,
+      "warmup_prediction": 38,
+      "selected_prediction": 38,
+      "warmup_ce": 0.14757052447711472,
+      "selected_ce": 0.07666676131358842
+    },
+    {
+      "id": 55,
+      "label": 0,
+      "warmup_prediction": 0,
+      "selected_prediction": 0,
+      "warmup_ce": 0.464880333604305,
+      "selected_ce": 0.3449108263049062
+    },
+    {
+      "id": 2436,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.15757463732315763,
+      "selected_ce": 0.18657396411646926
+    },
+    {
+      "id": 1210,
+      "label": 15,
+      "warmup_prediction": 15,
+      "selected_prediction": 15,
+      "warmup_ce": 0.6842163821952706,
+      "selected_ce": 0.6139736064640858
+    },
+    {
+      "id": 2335,
+      "label": 29,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 0.07724684626069832,
+      "selected_ce": 0.057587795171591516
+    },
+    {
+      "id": 1341,
+      "label": 16,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 1.2400712372062286,
+      "selected_ce": 0.9857364569678024
+    },
+    {
+      "id": 2311,
+      "label": 28,
+      "warmup_prediction": 31,
+      "selected_prediction": 31,
+      "warmup_ce": 1.3826887032701296,
+      "selected_ce": 1.4663720604402477
+    },
+    {
+      "id": 3,
+      "label": 0,
+      "warmup_prediction": 0,
+      "selected_prediction": 0,
+      "warmup_ce": 0.09456441498564364,
+      "selected_ce": 0.06185900246124559
+    },
+    {
+      "id": 3037,
+      "label": 37,
+      "warmup_prediction": 36,
+      "selected_prediction": 36,
+      "warmup_ce": 1.5753158073199396,
+      "selected_ce": 2.7554395444825697
+    },
+    {
+      "id": 1853,
+      "label": 23,
+      "warmup_prediction": 23,
+      "selected_prediction": 23,
+      "warmup_ce": 0.2423258256761307,
+      "selected_ce": 0.1422033514798367
+    },
+    {
+      "id": 1621,
+      "label": 20,
+      "warmup_prediction": 20,
+      "selected_prediction": 20,
+      "warmup_ce": 0.03439457584849763,
+      "selected_ce": 0.04295996832444528
+    },
+    {
+      "id": 1249,
+      "label": 15,
+      "warmup_prediction": 15,
+      "selected_prediction": 15,
+      "warmup_ce": 0.23611097061276157,
+      "selected_ce": 0.2298259841517434
+    },
+    {
+      "id": 688,
+      "label": 8,
+      "warmup_prediction": 8,
+      "selected_prediction": 8,
+      "warmup_ce": 0.09364776604756912,
+      "selected_ce": 0.07595035979163402
+    },
+    {
+      "id": 2424,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.31026552069776026,
+      "selected_ce": 0.47879702979352223
+    },
+    {
+      "id": 824,
+      "label": 10,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 1.5128852454524329,
+      "selected_ce": 1.3996124240318242
+    },
+    {
+      "id": 3718,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.00960448334372196,
+      "selected_ce": 0.004874697822968406
+    },
+    {
+      "id": 811,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.22230691655779783,
+      "selected_ce": 0.1330396047359881
+    },
+    {
+      "id": 3684,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.10821234066518674,
+      "selected_ce": 0.09135504217840847
+    },
+    {
+      "id": 2476,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 10,
+      "warmup_ce": 0.580940933187274,
+      "selected_ce": 0.7090544482996822
+    },
+    {
+      "id": 129,
+      "label": 1,
+      "warmup_prediction": 34,
+      "selected_prediction": 12,
+      "warmup_ce": 1.3205664476543733,
+      "selected_ce": 1.3905790678036491
+    },
+    {
+      "id": 2370,
+      "label": 29,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 0.05562337935060836,
+      "selected_ce": 0.04164345802720227
+    },
+    {
+      "id": 1159,
+      "label": 14,
+      "warmup_prediction": 14,
+      "selected_prediction": 14,
+      "warmup_ce": 0.023748778634822238,
+      "selected_ce": 0.013416090492540349
+    },
+    {
+      "id": 266,
+      "label": 3,
+      "warmup_prediction": 3,
+      "selected_prediction": 3,
+      "warmup_ce": 0.012010685694536668,
+      "selected_ce": 0.009086367747682766
+    },
+    {
+      "id": 857,
+      "label": 10,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 0.5290966127046394,
+      "selected_ce": 0.2957887259486508
+    },
+    {
+      "id": 1605,
+      "label": 20,
+      "warmup_prediction": 20,
+      "selected_prediction": 20,
+      "warmup_ce": 0.07135242165234057,
+      "selected_ce": 0.07417750435389207
+    },
+    {
+      "id": 765,
+      "label": 9,
+      "warmup_prediction": 9,
+      "selected_prediction": 9,
+      "warmup_ce": 0.03912226221740782,
+      "selected_ce": 0.025996774814289508
+    },
+    {
+      "id": 1480,
+      "label": 18,
+      "warmup_prediction": 18,
+      "selected_prediction": 18,
+      "warmup_ce": 0.0010906563182411402,
+      "selected_ce": 0.0008256743304245633
+    },
+    {
+      "id": 2687,
+      "label": 33,
+      "warmup_prediction": 33,
+      "selected_prediction": 33,
+      "warmup_ce": 0.07426671889541255,
+      "selected_ce": 0.05349969620271363
+    },
+    {
+      "id": 1562,
+      "label": 19,
+      "warmup_prediction": 19,
+      "selected_prediction": 19,
+      "warmup_ce": 1.2334601523041955,
+      "selected_ce": 0.5265061925108817
+    },
+    {
+      "id": 3714,
+      "label": 46,
+      "warmup_prediction": 46,
+      "selected_prediction": 46,
+      "warmup_ce": 0.012423332985451063,
+      "selected_ce": 0.006417617695275672
+    },
+    {
+      "id": 2816,
+      "label": 35,
+      "warmup_prediction": 35,
+      "selected_prediction": 35,
+      "warmup_ce": 0.9598703528512801,
+      "selected_ce": 0.8876591745448302
+    },
+    {
+      "id": 717,
+      "label": 8,
+      "warmup_prediction": 37,
+      "selected_prediction": 37,
+      "warmup_ce": 6.616170194661146,
+      "selected_ce": 6.228397468071098
+    },
+    {
+      "id": 2890,
+      "label": 36,
+      "warmup_prediction": 10,
+      "selected_prediction": 10,
+      "warmup_ce": 1.4260679066030544,
+      "selected_ce": 1.0731556381397032
+    },
+    {
+      "id": 1402,
+      "label": 17,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 1.5249013801314897,
+      "selected_ce": 1.182803454886211
+    },
+    {
+      "id": 3624,
+      "label": 45,
+      "warmup_prediction": 29,
+      "selected_prediction": 29,
+      "warmup_ce": 1.486060238339505,
+      "selected_ce": 1.1414473523906983
+    },
+    {
+      "id": 2412,
+      "label": 30,
+      "warmup_prediction": 30,
+      "selected_prediction": 30,
+      "warmup_ce": 0.08968999730420035,
+      "selected_ce": 0.11470969884841373
+    },
+    {
+      "id": 2954,
+      "label": 36,
+      "warmup_prediction": 36,
+      "selected_prediction": 36,
+      "warmup_ce": 0.6885930212397643,
+      "selected_ce": 0.8509256992631342
+    },
+    {
+      "id": 1751,
+      "label": 21,
+      "warmup_prediction": 25,
+      "selected_prediction": 25,
+      "warmup_ce": 4.91247069573926,
+      "selected_ce": 3.725825955950054
+    },
+    {
+      "id": 922,
+      "label": 11,
+      "warmup_prediction": 11,
+      "selected_prediction": 11,
+      "warmup_ce": 0.04471705427202318,
+      "selected_ce": 0.0252567875701402
+    },
+    {
+      "id": 2965,
+      "label": 37,
+      "warmup_prediction": 37,
+      "selected_prediction": 37,
+      "warmup_ce": 0.12548043583010207,
+      "selected_ce": 0.10695239775480153
+    },
+    {
+      "id": 1633,
+      "label": 20,
+      "warmup_prediction": 20,
+      "selected_prediction": 20,
+      "warmup_ce": 0.5468889794976555,
+      "selected_ce": 0.6849781650960189
+    },
+    {
+      "id": 628,
+      "label": 7,
+      "warmup_prediction": 7,
+      "selected_prediction": 7,
+      "warmup_ce": 0.2796247589627718,
+      "selected_ce": 0.6679149472711581
+    },
+    {
+      "id": 87,
+      "label": 1,
+      "warmup_prediction": 34,
+      "selected_prediction": 12,
+      "warmup_ce": 2.5689228024381405,
+      "selected_ce": 2.431154356257108
+    },
+    {
+      "id": 2525,
+      "label": 31,
+      "warmup_prediction": 31,
+      "selected_prediction": 31,
+      "warmup_ce": 0.41054049087135686,
+      "selected_ce": 0.27870825844128844
+    }
+  ]
+}
