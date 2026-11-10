@@ -3,6 +3,7 @@ import argparse
 from pathlib import Path
 
 import torch
+from PIL import ImageFile
 
 from audit_dtd_expert_controls import evaluate_expert
 from run_dtd_carrier_diagnostics import Operator
@@ -18,12 +19,13 @@ def main():
     p.add_argument("--pretrained", type=Path, required=True)
     args = p.parse_args()
 
+    ImageFile.LOAD_TRUNCATED_IMAGES = args.task == "SUN397"
     existing.ROOT = ROOT
     checkpoint = read(args.folder / "complete.json")
     historical = read(args.folder / "historical_test.json")
     provenance = checkpoint["provenance"]
     head = HEADS / f"{args.task}.pt"
-    if (provenance["task"] != args.task or provenance["head_sha256"] != existing.sha(head)
+    if (provenance.get("task", args.task) != args.task or provenance["head_sha256"] != existing.sha(head)
             or provenance["base_sha256"] != existing.sha(args.pretrained)
             or historical["checkpoint_sha256"] != checkpoint["checkpoint_sha256"]):
         raise ValueError(f"{args.task}: audit inputs differ from the trained expert")

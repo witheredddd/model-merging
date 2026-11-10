@@ -7,6 +7,7 @@ from pathlib import Path
 
 import numpy as np
 import torch
+from PIL import ImageFile
 from torch.nn import functional as F
 
 from run_dtd_carrier_diagnostics import Operator
@@ -406,6 +407,7 @@ def main():
     global STEPS,TASK
     STEPS=args.steps
     TASK=args.task
+    ImageFile.LOAD_TRUNCATED_IMAGES = TASK == 'SUN397'
     assert args.max_components>=2 and 5<=args.warmup<STEPS and 0<=args.birth_penalty<.01
     selected=tuple(dict.fromkeys(args.arm)) if args.arm else ARMS
     args.output.mkdir(parents=True,exist_ok=True)
