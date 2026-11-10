@@ -7,6 +7,7 @@ from pathlib import Path
 
 import numpy as np
 import torch
+import dtd_projected_groups as projected_groups
 from PIL import ImageFile
 from torch.nn import functional as F
 
@@ -27,6 +28,7 @@ GEOMETRY_RATE = .002
 GEOMETRY_CAP = .25
 ARMS = ('previous_nonlinear', 'single_dynamics', 'adaptive_dynamics')
 ALLOCATION_ARM = 'adaptive_allocation'
+PROJECTED_ARM = 'projected_groups'
 
 
 def tensor(value, like):
@@ -413,8 +415,9 @@ def audit_coordinates(op, validation, state):
 def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer=None, scratch=None, ledger=None,
           heldout=False):
     allocation_arm = arm == ALLOCATION_ARM
-    if allocation_arm and (not heldout or observer is not None or ledger is not None):
-        raise ValueError('Allocation uses the DTD holdout and its own contribution accounting')
+    projected_arm = arm == PROJECTED_ARM
+    if (allocation_arm or projected_arm) and (not heldout or TASK!='DTD' or observer is not None or ledger is not None):
+        raise ValueError('This arm requires the DTD holdout and its own contribution accounting')
     output.mkdir(parents=True,exist_ok=True)
     done = output/'complete.json'
     final = output/'epoch08.pt'
@@ -442,9 +445,10 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
     windows = {round(warmup*i/5) for i in range(1,6)}
     lr_warmup = min(20, warmup)
     schedule = cosine_lr(shadow.optimizer,LEARNING_RATE,lr_warmup,STEPS)
-    history,records = [],[]
+    history,records,replay = [],[],[]
     window = torch.zeros(sum(op.sizes),device='cuda')
-    backlog = None if allocation_arm else torch.zeros_like(window)
+    keeps_backlog = not (allocation_arm or projected_arm)
+    backlog = torch.zeros_like(window) if keeps_backlog else None
     state = None
     resume = (scratch if scratch is not None else output)/'resume.pt'
     provenance = dict(task=TASK,arm=arm,seed=SEED,steps=STEPS,train_n=len(full),batch_size=BATCH_SIZE,
@@ -454,6 +458,10 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
                       base_sha256=existing.sha(BASE),head_sha256=head_sha)
     if heldout:
         provenance.update(validation_split='train_holdout_seed_0',validation_n=len(validation),allocation_protocol=1)
+    if projected_arm:
+        provenance.update(projected_protocol=1,projection_window=projected_groups.WINDOW,
+                          replay_batches=projected_groups.REPLAY,replay_images=projected_groups.REPLAY_IMAGES,
+                          replay_axis_cap=projected_groups.AXIS_CAP,post_warmup_decay='included_in_projected_reference')
     if done.exists():
         result = read(done)
         if result['provenance'] != provenance or existing.sha(final) != result['checkpoint_sha256']:
@@ -473,8 +481,10 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
         if 'window' in saved:
             window = saved['window'].cuda()
         records = saved['records']
-        if not allocation_arm:
+        if keeps_backlog:
             backlog = saved['backlog'].cuda()
+        if projected_arm:
+            replay = saved['replay']
         state = saved['dynamics']
         if state is not None:
             state.update(frames=state['frames'].cuda(),z=np.array(state['z']),q=np.array(state['q']),
@@ -491,6 +501,9 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
             step=epoch*batches+i+1
             if step>STEPS:
                 break
+            if projected_arm:
+                n = projected_groups.REPLAY_IMAGES
+                next_replay = images[:n].clone(),labels[:n].clone()
             boundary=step%INTERVAL==0 or i+1==batches
             schedule(step-1)
             shadow.clear()
@@ -506,6 +519,9 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
                 state=dict(frames=initialize(history).unsqueeze(0),z=np.zeros((1,2)),q=np.array([[.08,0.,.08]]),
                            scale=16*float(raw.norm()),pending=None,pending_step=-1,last_birth=warmup)
                 history.clear()
+                if projected_arm:
+                    anchor = torch.cat([p.detach().flatten().cpu() for p in op.params])
+                    state.update(warmup_anchor=anchor,cumulative=[torch.zeros_like(anchor)])
             if step<=warmup:
                 shadow.apply(shadow.shadows,decay,window)
                 if step in windows:
@@ -514,6 +530,10 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
             elif allocation_arm:
                 gradient = torch.cat([p.grad.detach().flatten() for p in op.params])
                 info.update(allocate(op,shadow,decay,raw,images,labels,gradient,state,step,max_components,birth_penalty))
+            elif projected_arm:
+                recent = [r['projection'] for r in records[-projected_groups.WINDOW:] if 'projection' in r]
+                info['projection'] = projected_groups.step(op,shadow,images,labels,state,replay,recent,
+                    step-warmup,max_components,birth_penalty)
             else:
                 g=torch.cat([p.grad.detach().flatten() for p in op.params])
                 x,y=images[:32],labels[:32]
@@ -550,14 +570,20 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
                     ledger.advance(op,step,decay,1.-shadow.optimizer.param_groups[0]['lr']*DECAY,
                                    structured,innovation,applied)
                 info.update(**balance,applied_delay=applied)
+            if projected_arm:
+                replay = [*replay,next_replay][-projected_groups.REPLAY:]
+                if info.get('projection',{}).get('geometry') is not None:
+                    print(f'Projected window {step}: {info["projection"]["geometry"]["policy"]}',flush=True)
             records.append(info)
             if step%10==0 or step==STEPS:
                 print(f'{arm} step {step}/{STEPS} CE={info["training_ce"]:.5f} M={0 if state is None else len(state["frames"])}',flush=True)
         checkpoint = dict(provenance=provenance,visual=visual.state_dict(),optimizer=shadow.optimizer.state_dict(),
                           history=history,window=window,records=records,
                           dynamics=to_disk(state) if state is not None else None)
-        if not allocation_arm:
+        if keeps_backlog:
             checkpoint['backlog'] = backlog
+        if projected_arm:
+            checkpoint['replay'] = replay
         if ledger is not None:
             checkpoint['ledger'] = ledger.snapshot()
         save(resume,checkpoint)
@@ -577,7 +603,7 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
     eig=np.linalg.eigvalsh(g)
     actual=torch.cat([(p.detach()-w).flatten() for p,w in zip(op.params,pretrained)])
     pure=None
-    if arm!='previous_nonlinear':
+    if arm!='previous_nonlinear' and not projected_arm:
         pure=state['scale']*decode(frames,z,q)
     gram=(frames.flatten(0,1)@frames.flatten(0,1).T).cpu().tolist()
     learned=dict(components=len(frames),coordinate_dimension=2*len(frames),
@@ -585,7 +611,7 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
                  pullback_fisher=g.tolist(),parameter_axes_gram=gram,z=z.tolist(),q=q.tolist(),
                  persistent_coordinates=arm!='previous_nonlinear',
                  birth_stats=state.get('birth_stats',{}),
-                 scale=state['scale'] if pure is not None else None,full_update_norm=float(actual.norm()),
+                 scale=state['scale'] if pure is not None or projected_arm else None,full_update_norm=float(actual.norm()),
                  direct_decoder_norm=float(pure.norm()) if pure is not None else None,
                  decoder_relative_endpoint_error=float((actual-pure).norm()/actual.norm()) if pure is not None else None)
     if pure is not None:
@@ -593,8 +619,18 @@ def train(arm, output, max_components, warmup=WARMUP, birth_penalty=0., observer
                                            for a,zi,qi in zip(frames,z,q)]
     final_state = dict(provenance=provenance,visual=visual.state_dict(),frames=frames,z=z.tolist(),q=q.tolist(),
                        scale=learned['scale'])
-    if not allocation_arm:
+    if keeps_backlog:
         final_state['backlog'] = backlog
+    if projected_arm:
+        actual_since_warmup = torch.cat([p.detach().flatten().cpu() for p in op.params])-state['warmup_anchor']
+        tracked = torch.zeros_like(actual_since_warmup)
+        for update in state['cumulative']:
+            tracked.add_(update)
+        learned.update(cumulative_group_norms=[float(d.norm()) for d in state['cumulative']],
+                       post_warmup_update_norm=float(actual_since_warmup.norm()),
+                       cumulative_write_error=float((actual_since_warmup-tracked).norm()),
+                       cumulative_relative_error=float((actual_since_warmup-tracked).norm()/actual_since_warmup.norm().clamp_min(1e-12)))
+        final_state.update(cumulative_group_updates=state['cumulative'])
     save(final,final_state)
     result=dict(provenance=provenance,records=records,learned=learned,checkpoint_sha256=existing.sha(final))
     if heldout:
@@ -675,7 +711,7 @@ def main():
     parser.add_argument('--max-components',type=int,default=3)
     parser.add_argument('--warmup',type=int,default=WARMUP)
     parser.add_argument('--birth-penalty',type=float,default=0.)
-    parser.add_argument('--arm',choices=(*ARMS,ALLOCATION_ARM),action='append',help='Limit training to selected arm(s)')
+    parser.add_argument('--arm',choices=(*ARMS,ALLOCATION_ARM,PROJECTED_ARM),action='append',help='Limit training to selected arm(s)')
     parser.add_argument('--heldout',action='store_true',help='Use the DTD seed-0 3384/376 split')
     parser.add_argument('--task',required=True,choices=TASKS)
     parser.add_argument('--steps',type=int,required=True)
@@ -686,8 +722,8 @@ def main():
     ImageFile.LOAD_TRUNCATED_IMAGES = TASK == 'SUN397'
     assert args.max_components>=2 and 5<=args.warmup<STEPS and 0<=args.birth_penalty<.01
     selected=tuple(dict.fromkeys(args.arm)) if args.arm else ARMS
-    if (args.heldout and TASK!='DTD') or (ALLOCATION_ARM in selected and not args.heldout):
-        parser.error('The allocation comparison requires --task DTD --heldout')
+    if (args.heldout and TASK!='DTD') or ((ALLOCATION_ARM in selected or PROJECTED_ARM in selected) and not args.heldout):
+        parser.error('The allocation and projected arms require --task DTD --heldout')
     args.output.mkdir(parents=True,exist_ok=True)
     existing.ROOT=ROOT
     torch.set_num_threads(8)
