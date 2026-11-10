@@ -182,7 +182,7 @@ def birth_response(op, frames, z, q, seed, previous, x):
     return novelty,overlap
 
 
-def refresh(op, state, replay, recent, radius, max_components):
+def refresh(op, state, replay, recent, radius, max_components, correction=None):
     frames = state['frames'].cpu()
     state['frames'] = frames  # Stage only one chart on the GPU at a time during replay.
     q,z,scale = state['q'],state['z'],state['scale']
@@ -211,8 +211,17 @@ def refresh(op, state, replay, recent, radius, max_components):
     if changed.mean()<start.mean() and np.all(changed<=start+BIRTH_MARGIN):
         frames,q,policy = adjusted,bend,'adapted'
     else:
+        del solutions
         solutions = replay_solutions(op,frames,z,q,scale,fit,radius,True)
+    del adjusted,bend
     held = changed if policy=='adapted' else start
+    correction_info = None
+    if correction is not None:
+        frames,held,correction_info = correction(frames,q,z,window_frames,held,validation)
+        if correction_info['chosen_angle']:
+            policy = 'task_adapted'
+            del solutions
+            solutions = replay_solutions(op,frames,z,q,scale,fit,radius,True)
     gaps = sum(r['reference_ce_gain']>r['coordinate_ce_gain']+BIRTH_MARGIN for r in recent)
     trial = None
     previous = state.get('pending_surface')
@@ -226,13 +235,16 @@ def refresh(op, state, replay, recent, radius, max_components):
                 state['pending_surface'] = seed[0].clone()
             if novelty>.10 and overlap is not None and overlap>.35:
                 # Both alternatives have the same CE coordinate and surface iteration budgets.
-                old,old_q,_,old_trace = fit_surface(op,frames,z,q,scale,fit,radius,(window_frames,window_q))
+                del solutions
+                old,old_q,old_solutions,old_trace = fit_surface(op,frames,z,q,scale,fit,radius,(window_frames,window_q))
+                del old_solutions
+                old_ce = validation(old,old_q,z)
                 expanded = torch.cat((frames,seed[None]),dim=0)
                 new_z = np.vstack((z,np.zeros(2)))
                 new_q = np.vstack((q,[.03,0.,.03]))
-                extended_reference = torch.cat((window_frames,seed[None]),dim=0),np.vstack((window_q,[.03,0.,.03]))
-                new,new_q,_,new_trace = fit_surface(op,expanded,new_z,new_q,scale,fit,radius,extended_reference)
-                old_ce = validation(old,old_q,z)
+                extended_reference = (*window_frames,seed),np.vstack((window_q,[.03,0.,.03]))
+                new,new_q,new_solutions,new_trace = fit_surface(op,expanded,new_z,new_q,scale,fit,radius,extended_reference)
+                del expanded,new_solutions
                 new_ce = validation(new,new_q,new_z)
                 gain = np.minimum(old_ce,held)-new_ce
                 trial.update(ce_marginal=gain.tolist(),old_trace=old_trace,new_trace=new_trace,
@@ -246,6 +258,7 @@ def refresh(op, state, replay, recent, radius, max_components):
     state.update(frames=frames.to(device),q=q,z=z)
     state['offset_coefficients'] = offset_coefficients(state)
     return dict(policy=policy,fit_ce_trace=trace,confirm_before=start.tolist(),confirm_after=held.tolist(),
+                task_correction=correction_info,
                 reference_gaps=gaps,birth=trial,q=q.tolist(),fit_images=[len(x) for x,_ in fit],
                 confirmation_images=[len(x) for x,_ in confirm])
 
@@ -258,13 +271,14 @@ def canonical_total(state):
 
 
 @torch.no_grad()
-def step(op, shadow, images, labels, state, replay, recent, since_warmup, max_components):
+def step(op, shadow, images, labels, state, replay, recent, since_warmup, max_components,
+         first_refresh=1, correction=None):
     raw = torch.cat([(p-w).flatten() for p,w in zip(shadow.shadows,op.params)])
     radius = float(raw.norm())
     boundary = None
     with probe_mode(op.model):
-        if (since_warmup-1)%WINDOW==0 and len(replay)==REPLAY and radius>0:
-            boundary = refresh(op,state,replay,recent,radius,max_components)
+        if since_warmup>=first_refresh and (since_warmup-first_refresh)%WINDOW==0 and len(replay)==REPLAY and radius>0:
+            boundary = refresh(op,state,replay,recent,radius,max_components,correction)
         x,y = images[:32],labels[:32]
         mx,my = images[32:64],labels[32:64]
         chart = Chart(op,state['frames'],state['z'],state['q'],state['scale'],x)
