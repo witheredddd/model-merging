@@ -57,16 +57,16 @@ def geometry(frames, z, q, responses):
 
 def evolve(frames, q, z, physical_dz, residual, rate):
     norm = residual.norm().clamp_min(1e-12)
-    axes, bends = [], []
-    for a, b, v, dz in zip(frames, q, z, physical_dz):
+    axes,bends = torch.empty_like(frames),[]
+    for i,(a,b,v,dz) in enumerate(zip(frames,q,z,physical_dz)):
         jac = decoder(v, b)[1]
         coeff = tensor(jac @ dz, a)
         dfeature = np.array([2*v[0]*dz[0], v[1]*dz[0]+v[0]*dz[1], 2*v[1]*dz[1]])
         outside = residual - (a @ residual) @ a
-        axes.append(orthonormal(a - rate * (coeff / coeff.norm().clamp_min(1e-12))[:, None] * outside / norm))
+        axes[i].copy_(orthonormal(a - rate * (coeff / coeff.norm().clamp_min(1e-12))[:, None] * outside / norm))
         signed = float((a[2] @ residual) / norm)
         bends.append(np.clip(b-rate*signed*dfeature/max(np.linalg.norm(dz),1e-12), -.5, .5))
-    return torch.stack(axes), np.stack(bends)
+    return axes,np.stack(bends)
 
 
 def ce(op, x, y, update):
@@ -84,8 +84,14 @@ def birth_frame(first, second, axes):
     if float(second.norm()) < .15:
         return None
     second = second / second.norm()
-    projected = axes - (axes @ first)[:, None] * first - (axes @ second)[:, None] * second
-    third = projected[projected.norm(dim=1).argmax()]
+    first_coeff,second_coeff = axes@first,axes@second
+    # Stream the same projection, without allocating one copy of all axes.
+    third,best_norm = None,-1.
+    for row,a,b in zip(axes,first_coeff,second_coeff):
+        projected = row-a*first-b*second
+        norm = float(projected.norm())
+        if norm > best_norm:
+            third,best_norm = projected,norm
     return orthonormal(torch.stack((first,second,third/third.norm())))
 
 
@@ -117,12 +123,14 @@ def dynamics(op, x, y, raw, batch_gradient, state, step, adaptive, max_component
             candidate, bend = evolve(frames,q,z,physical.reshape(-1,2),residual,rate)
             difference = scale * (decode(candidate,new_z,bend) - moved)
             if float(difference.norm()) > GEOMETRY_CAP * float(c.norm()):
+                del candidate,bend,difference
                 continue
             displacement = float(np.linalg.norm(response(op,x,difference)))
             if displacement <= GEOMETRY_CAP * np.linalg.norm(jvp) + 1e-12:
                 next_frames,next_q,geometry_update = candidate,bend,difference
                 accepted_rate,fisher_geo = rate,displacement
                 break
+            del candidate,bend,difference
         structured = scale * (decode(next_frames,new_z,next_q)-old_phi)
         birth = None
         stats = state.setdefault('birth_stats',dict(considered=0,evaluated=0,passed=0,added=0,
