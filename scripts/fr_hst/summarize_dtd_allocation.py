@@ -58,6 +58,10 @@ def summarize(arm):
         result['frozen_pure_reaches_safety_line'] = sum(
             row is not None and a['ce_limit'] is not None and row['loss']<=a['ce_limit']
             for a,row in zip(allocations,frozen))
+        ratios = [max(0.,a['ce_zero']-row['loss'])/(a['ce_zero']-a['ce_adamw'])
+                  for a,row in zip(allocations,frozen) if row is not None and a['ce_adamw']<a['ce_zero']]
+        result['frozen_pure_vs_positive_adamw_gain'] = dict(
+            n=len(ratios),quartiles=np.quantile(ratios,[.25,.5,.75]).tolist() if ratios else [])
     return result
 
 
