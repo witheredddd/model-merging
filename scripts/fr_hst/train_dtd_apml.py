@@ -20,6 +20,9 @@ from train_eight_expert_queue import BASE, BATCH_SIZE, HEADS, ROOT, build_model,
 
 FINAL_STEP = 270
 ARMS = ('adamw','pca4','ltsa4','pca8','ltsa8')
+EARLY_ARMS = ('early_ltsa','early_task')
+EARLY_WARMUP = 12
+STEP_FRACTIONS = (1.,.5,.25,.125)
 SUFFIXES = ('attn.in_proj_weight','attn.out_proj.weight','mlp.c_fc.weight','mlp.c_proj.weight')
 
 
@@ -80,10 +83,11 @@ def ce(model, x, y):
         model.train(training)
 
 
-def warmup(model, op, params, data, count, expected, output, val_loader):
+def warmup(model, op, params, data, count, expected, output, val_loader, early=False):
     shadow = ShadowAdamW(op)
     schedule = schedule_for(shadow.optimizer)
     snapshots = [block_snapshot(params)]
+    early_anchor = None
     model.train()
     for step,x,y,_ in minibatches(data,count,1,WARMUP):
         shadow.clear()
@@ -93,8 +97,17 @@ def warmup(model, op, params, data, count, expected, output, val_loader):
         with torch.no_grad():
             for p,w in zip(op.params,shadow.shadows):
                 p.copy_(w)
-        if step%projection.SNAPSHOT_EVERY==0:
+        if (early and step<=EARLY_WARMUP) or (not early and step%projection.SNAPSHOT_EVERY==0):
             snapshots.append(block_snapshot(params))
+        if early and step==EARLY_WARMUP:
+            optimizer = shadow.optimizer.state_dict()
+            optimizer = dict(optimizer,state={i:{k:v.detach().cpu().clone() if torch.is_tensor(v) else v
+                                                 for k,v in slot.items()} for i,slot in optimizer['state'].items()},
+                             param_groups=[g.copy() for g in optimizer['param_groups']])
+            early_anchor = (cpu_weights(op.visual),optimizer,snapshots.copy(),
+                dict(step=step,anchor_sha256=digest(block_snapshot(op.params)),snapshot_steps=list(range(step+1)),
+                     optimizer='shared replayed AdamW state at step 12',validation=existing.evaluate(model,val_loader)))
+            model.train()
     anchor = block_snapshot(op.params)
     if not torch.equal(anchor,expected):
         raise RuntimeError(f'Warmup did not exactly match the saved anchor, max difference {(anchor-expected).abs().max()}')
@@ -111,7 +124,37 @@ def warmup(model, op, params, data, count, expected, output, val_loader):
                     validation=existing.evaluate(model,val_loader))
     existing.write(output/'warmup.json',evidence)
     print(f'WARMUP_EXACT {evidence["validation"]}',flush=True)
+    if early:
+        existing.write(output/'early_anchor.json',early_anchor[-1])
+        return early_anchor
     return cpu_weights(op.visual),optimizer,snapshots,evidence
+
+
+@torch.no_grad()
+def search_step(model, op, selected, params, deltas, radius, x, y):
+    size = float(torch.stack([d.square().sum() for d in deltas]).sum().sqrt())
+    if size==0 or radius==0:
+        return 0.,0.
+    model.eval()
+    score = float(F.cross_entropy(model(x).float(),y))
+    scale = .99999*radius/size
+    chosen,best,best_norm = 0.,None,0.
+    names = [op.names[i] for i in sorted(selected)]
+    for fraction in STEP_FRACTIONS:
+        weights = {key:p+(fraction*scale)*d for key,p,d in zip(names,params,deltas)}
+        norm = float(torch.stack([(weights[k]-p).square().sum() for k,p in zip(names,params)]).sum().sqrt())
+        if norm>radius:
+            continue
+        logits = torch.func.functional_call(model,weights,(x,)).float()
+        candidate = float(F.cross_entropy(logits,y))
+        if candidate<score:
+            score,chosen,best,best_norm = candidate,fraction,weights,norm
+    model.train()
+    if best is None:
+        return 0.,0.
+    for key,p in zip(names,params):
+        p.copy_(best[key])
+    return best_norm,chosen
 
 
 def run_arm(name, model, op, params, selected, blocks, data, count, warm, val_loader, folder):
@@ -124,16 +167,18 @@ def run_arm(name, model, op, params, selected, blocks, data, count, warm, val_lo
     weights,initial_optimizer,initial_snapshots,anchor = warm
     op.visual.load_state_dict(weights)
     is_full = name=='adamw'
-    rank = None if is_full else int(name[-1])
-    method = name[:-1]
+    early = name in EARLY_ARMS
+    rank = None if is_full else (8 if early else int(name[-1]))
+    method = 'ltsa' if early else name[:-1]
+    warmup_step = anchor['step']
     snapshots = list(initial_snapshots)
     snapshots_at = list(anchor['snapshot_steps'])
     projected = None
     moments = [(initial_optimizer['state'][i]['exp_avg'].flatten(),
                 initial_optimizer['state'][i]['exp_avg_sq'].flatten()) for i in sorted(selected)]
-    shadow = ShadowAdamW(op) if is_full else None
+    shadow = ShadowAdamW(op) if is_full or early else None
     group = initial_optimizer['param_groups'][0]
-    if is_full:
+    if shadow:
         shadow.optimizer.load_state_dict(initial_optimizer)
         scheduler = schedule_for(shadow.optimizer)
     else:
@@ -142,19 +187,21 @@ def run_arm(name, model, op, params, selected, blocks, data, count, warm, val_lo
             param_groups = [{'lr':LEARNING_RATE}]
         scheduler = schedule_for(ScheduleState())
     records,epochs,refreshes = [],[],[]
-    best = dict(step=WARMUP,validation=anchor['validation'])
-    save(folder/'best.pt',dict(visual=weights,step=WARMUP))
+    best = dict(step=warmup_step,validation=anchor['validation'])
+    save(folder/'best.pt',dict(visual=weights,step=warmup_step))
     epoch_loss,epoch_n = 0.,0
+    task_gradient = None
     started = time.perf_counter()
     torch.cuda.reset_peak_memory_stats()
-    for step,x,y,ids in minibatches(data,count,WARMUP+1,FINAL_STEP):
+    for step,x,y,ids in minibatches(data,count,warmup_step+1,FINAL_STEP):
         model.train()
         tick = time.perf_counter()
         lr = scheduler(step)
-        if not is_full and (step-WARMUP-1)%projection.REFRESH==0:
+        if not is_full and (step-warmup_step-1)%projection.REFRESH==0:
             versions = [p._version for p in op.params]
             stamp = time.perf_counter()
-            projected,blocks_info = projection.refresh(snapshots,blocks,rank,method,moments,projected)
+            projected,blocks_info = projection.refresh(snapshots,blocks,rank,method,moments,projected,task_gradient)
+            task_gradient = None
             if versions!=[p._version for p in op.params]:
                 raise RuntimeError('Refreshing the geometry changed weights')
             refreshes.append(dict(step=step,fit_steps=snapshots_at.copy(),
@@ -167,8 +214,15 @@ def run_arm(name, model, op, params, selected, blocks, data, count, warm, val_lo
         value = gradient(model,op,x,y,selected)
         epoch_loss += value*len(y)
         epoch_n += len(y)
-        probe_x,probe_y = x[:32],y[:32]
+        if name=='early_task':
+            g = torch.cat([p.grad.flatten().cpu() for p in params])
+            if task_gradient is None:
+                task_gradient = g
+            else:
+                task_gradient.add_(g)
+        probe_x,probe_y = (x[32:64],y[32:64]) if early else (x[:32],y[:32])
         before = ce(model,probe_x,probe_y)
+        extra = {}
         if is_full:
             shadow.propose()
             with torch.no_grad():
@@ -178,14 +232,24 @@ def run_arm(name, model, op, params, selected, blocks, data, count, warm, val_lo
                     op.params[i].copy_(shadow.shadows[i])
             cosine = 1.
         else:
-            norm,cosine = projection.apply(params,projected,step,lr,group['betas'],group['eps'],group['weight_decay'])
+            if early:
+                shadow.propose()
+                with torch.no_grad():
+                    radius = float(torch.stack([(shadow.shadows[i]-op.params[i]).square().sum()
+                                                for i in sorted(selected)]).sum().sqrt())
+                deltas,cosine = projection.direction(params,projected,step,lr,group['betas'],group['eps'],group['weight_decay'])
+                norm,fraction = search_step(model,op,selected,params,deltas,radius,x[:32],y[:32])
+                extra = dict(reference_norm=radius,selected_fraction=fraction)
+                del deltas
+            else:
+                norm,cosine = projection.apply(params,projected,step,lr,group['betas'],group['eps'],group['weight_decay'])
             if step%projection.SNAPSHOT_EVERY==0:
                 snapshots = [*snapshots,block_snapshot(params)][-projection.SNAPSHOTS:]
                 snapshots_at = [*snapshots_at,step][-projection.SNAPSHOTS:]
         after = ce(model,probe_x,probe_y)
         records.append(dict(step=step,lr=lr,train_ce=value,update_norm=norm,gradient_projection_cosine=cosine,
                             train_probe_ce_gain=before-after,seconds=time.perf_counter()-tick,
-                            batch_ids_sha256=digest(ids)))
+                            batch_ids_sha256=digest(ids),**extra))
         if step%count==0 or step in (COMPARISON_STEPS,FINAL_STEP):
             val = existing.evaluate(model,val_loader)
             epochs.append(dict(step=step,train_ce=epoch_loss/epoch_n,train_n=epoch_n,validation=val))
@@ -242,10 +306,10 @@ def run(args):
     data = existing.EpochData(training,SEED)
     count = (len(training)+BATCH_SIZE-1)//BATCH_SIZE
     val_loader = loader(validation,2,64,SEED)
-    warm = warmup(model,op,params,data,count,source['surface']['warmup_anchor'],args.output,val_loader)
+    warm = warmup(model,op,params,data,count,source['surface']['warmup_anchor'],args.output,val_loader,args.early)
     del source
     results = {}
-    for name in args.arm or ARMS:
+    for name in args.arm or (EARLY_ARMS if args.early else ARMS):
         results[name] = run_arm(name,model,op,params,selected,blocks,data,count,warm,val_loader,args.output/name)
         gc.collect()
         torch.cuda.empty_cache()
@@ -266,6 +330,7 @@ def run(args):
         print(f'{name} LOCKED_TEST {row["test"]["accuracy"]:.6f}',flush=True)
     existing.write(args.output/'results.json',dict(warmup=warm[-1],parameters=[op.keys[i] for i in sorted(selected)],
         parameter_count=end,seed=SEED,train_n=len(training),validation_n=len(validation),final_step=FINAL_STEP,
+        early=args.early,step_fractions=STEP_FRACTIONS if args.early else None,
         geometry=dict(neighbors=projection.NEIGHBORS,refresh=projection.REFRESH,
                       snapshots=projection.SNAPSHOTS,stride=projection.SNAPSHOT_EVERY),arms=results))
 
@@ -275,7 +340,10 @@ def main():
     parser.add_argument('--surface-best',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--arm',choices=ARMS,action='append')
+    parser.add_argument('--early',action='store_true',help='Run only the two early LTSA diagnostics')
     args = parser.parse_args()
+    if args.early and args.arm:
+        parser.error('--early always runs both matched diagnostic arms')
     args.output.mkdir(parents=True,exist_ok=True)
     with (args.output/'queue.lock').open('a') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)

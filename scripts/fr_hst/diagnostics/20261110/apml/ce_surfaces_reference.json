@@ -1,0 +1,25 @@
+{
+  "selection": {
+    "epoch": 10,
+    "step": 270,
+    "train_ce": 0.4620667863681243,
+    "validation": {
+      "ce": 0.7945070672542491,
+      "accuracy": 0.7925531914893617,
+      "n": 376
+    },
+    "groups": 2,
+    "lr": 1.0000000000000002e-06
+  },
+  "checkpoint_sha256": "55b3d69198b55186e3a9c8fb2424c4f2237b508e3832f0f864f27a5cd2db3c43",
+  "test": {
+    "protocol": {
+      "task": "DTD",
+      "n": 1880,
+      "split": "dtd/val"
+    },
+    "ce": 0.8310121356172765,
+    "accuracy": 0.7585106382978724,
+    "n": 1880
+  }
+}
