@@ -245,7 +245,9 @@ def allocate(op, shadow, decay, raw, images, labels, gradient, state, step, max_
     # proposal can change the model or its committed coordinates.
     fit_x,fit_y = images[:32],labels[:32]
     select_x,select_y = images[32:64],labels[32:64]
-    proposed = dict(state,birth_stats=state.get('birth_stats',{}).copy())
+    proposed = state.copy()
+    if 'birth_stats' in state:
+        proposed['birth_stats'] = state['birth_stats'].copy()
     cache = {}
     with torch.enable_grad():
         unused,details = dynamics(op,fit_x,fit_y,raw,gradient,proposed,step,True,max_components,birth_penalty,
