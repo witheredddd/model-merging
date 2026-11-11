@@ -85,3 +85,5 @@ python scripts/fisher_rao_online_v5/runner.py --method adamw \
 - 长程冻结复用、跨种子功能身份和容量匹配的整套正式统计尚未验收。不能因 S 可随模型移动，就宣称整个训练只需一个固定低维空间。
 
 [DTD and SUN397 medium-run protocol, complete resume and historical checkpoints](MEDIUM_RUN.md): 46 CPU tests passed; this is not a claim that the real medium runs have completed.
+
+随后 [两个任务各 128 步的中程运行](evidence/20261112/medium_launch/REPORT.md)已完成，运行源码为 `98f36a1`，每任务保留 17 份历史 CKPT，且实际从第 8 步重启接续。两任务均接受 124/128 步，求解器回退及几何回滚均为 0。但 SUN397 的近相关方向导致坐标范数升到约 2.70e6，虽然参数重构仍有限准确，也不能据此放行百万长训。完整风险、数据追溯表、曲线及独立基座参照已归档；训练源码和最终坐标未事后修改。

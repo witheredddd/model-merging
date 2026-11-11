@@ -1,6 +1,6 @@
 # model-merging — functional geometry / TFPML
 
-[在线几何 v5 代码与运行记录](scripts/fisher_rao_online_v5/README.md)实现零预热、全局 `theta0+SΣZa` 状态、当前真实 JVP、在线字典与组候选、等成本前瞻及回滚。最新 42 项 CPU 测试通过；已修正跨窗口结构判据并取消默认“四组”硬上限。[A100 受控 DTD 核验](scripts/fisher_rao_online_v5/evidence/20261112/controlled_clip/REPORT.md)完成，暴露的坐标冗余求解问题随后修正，长跑停止保留。旧 v4 实验保持停止。
+[在线几何 v5 代码与运行记录](scripts/fisher_rao_online_v5/README.md)实现零预热、全局 `theta0+SΣZa` 状态、当前真实 JVP、在线字典与组候选、等成本前瞻及回滚。当前工程版 46 项测试通过；[DTD 与 SUN397 各 128 步中程结果](scripts/fisher_rao_online_v5/evidence/20261112/medium_launch/REPORT.md)已完成，历史 CKPT 每 8 步保留、真实重启恢复通过。SUN397 实际出现近相关坐标幅度放大，百万预算长训尚未放行；没有稳定功能组结论。此前的 [24 步受控 DTD 记录](scripts/fisher_rao_online_v5/evidence/20261112/controlled_clip/REPORT.md)另行保留。旧 v4 实验保持停止。
 
 最新 Fisher–Rao 单任务实现见 [v3：任务损失与组条件响应共同学习](scripts/fisher_rao_response_v3/README.md)。它替代 r2 的分组后学习逻辑，使用统一提升、窗口化方向更新与可恢复训练；旧版实验另行保留。秩 4、8 对照及独立干预用于检验组结构，不能把初始化簇直接称为已发现的功能模块。
 

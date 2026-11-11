@@ -1,0 +1,79 @@
+{
+  "stage": "manual_training",
+  "step": 128,
+  "actual_online_images": 223328,
+  "last_cost_checkpoint": {
+    "exact_online_image_cost": 221184,
+    "instant_validation": {
+      "CE": 1.5769861936569214,
+      "accuracy": 0.5390625,
+      "n": 128
+    },
+    "Vcal_selected": {
+      "CE": 1.5769861936569214,
+      "accuracy": 0.5390625,
+      "n": 128,
+      "model_online_cost": 212992
+    }
+  },
+  "elapsed_seconds": 1746.232691035606,
+  "latest_coordinate_event": {
+    "accepted": false,
+    "loss_before": 1.787510871887207,
+    "loss_after": 1.767113447189331,
+    "predicted_gain": 0.0227653389463326,
+    "actual_gain": 0.020397424697875977,
+    "ratio": 0.8959859875559603,
+    "tracking": {
+      "safe": false,
+      "error": 0.02190410227004832,
+      "amplitude": 0.13818512424346116,
+      "allowed": 0.020927768636519174,
+      "relative_error": 0.15851273709792832,
+      "max_angle": 0.181686396061486,
+      "reference": "current_local_J_not_global_target_graph"
+    },
+    "reason": "local_model_error",
+    "new_increment_near_null_energy": 0.0,
+    "solver": {
+      "condition": 3.0483703210948994,
+      "fallback": null,
+      "proposed_increment_near_null_energy": 1.6972257634912516e-33,
+      "coefficient_gradient": [
+        0.022821784379846687,
+        0.20675604889681687,
+        0.05082789591603289,
+        0.16625040586994735,
+        -0.17958936390009045,
+        -0.1961837801951708,
+        -0.1839700549371271,
+        -0.412132541278854
+      ],
+      "system_dimension": 8,
+      "effective_system_dimension": 5,
+      "coordinate_nullity": 3,
+      "minimum_retained_singular_value": 0.00047407758163027427,
+      "maximum_singular_value": 0.16277122123715862,
+      "unscaled_coordinate_step_norm": 75.31252963673313,
+      "parameter_step_reconstruction_relative_error": 2.7339119574586288e-14,
+      "solver_space": "represented_dictionary_subspace"
+    },
+    "radius_before": 0.008201335044217708,
+    "radius_after": 0.004100667522108854,
+    "step_shrunk": true,
+    "actual_parameter_step_norm": 0.0,
+    "actual_coordinate_step_norm": 0.0,
+    "coordinate_norm": 39.876991665008006,
+    "coordinate_maximum": 39.60456534653607,
+    "coordinate_accumulation_relative_error": 0.0,
+    "sample_sensitivity_median": 6.68648873867382,
+    "sample_sensitivity_max": 19.509018853315453,
+    "sensitivity_quantile": 1.0,
+    "iteration": 128,
+    "dictionary_version": 7,
+    "changed_parameters": false,
+    "total_rank": 8,
+    "groups": 6,
+    "online_images": 211904
+  }
+}

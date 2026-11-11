@@ -1,0 +1,873 @@
+[
+  {
+    "window": 1,
+    "iteration": 7,
+    "proposals": [
+      {
+        "accepted": false,
+        "initial_CE_old": 2.208846092224121,
+        "initial_CE_new": 2.208846092224121,
+        "future_CE_old": 2.1930906772613525,
+        "future_CE_new": 2.1930906772613525,
+        "future_CE_gain": 0.0,
+        "net_gain": -2.2807297676523675e-08,
+        "old_branch_cost": 768,
+        "new_branch_cost": 768,
+        "old_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "new_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "commit": "old_branch",
+        "old_accepted_steps": 2,
+        "new_accepted_steps": 2,
+        "future_parameter_difference": 0.0,
+        "reason": "capacity_or_continuity_cost",
+        "starting_parameter_move": 0.0,
+        "kind": "rotate_group",
+        "metadata": {
+          "continuity": 0.0022807297676523675
+        },
+        "committed": false
+      },
+      {
+        "accepted": true,
+        "initial_CE_old": 2.208846092224121,
+        "initial_CE_new": 2.208846092224121,
+        "future_CE_old": 2.1930906772613525,
+        "future_CE_new": 2.1930906772613525,
+        "future_CE_gain": 0.0,
+        "net_gain": 1.0000000000000026e-05,
+        "old_branch_cost": 768,
+        "new_branch_cost": 768,
+        "old_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "new_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "commit": "new_branch",
+        "old_accepted_steps": 2,
+        "new_accepted_steps": 2,
+        "future_parameter_difference": 0.0,
+        "reason": "accepted",
+        "starting_parameter_move": 0.0,
+        "kind": "merge_groups",
+        "metadata": {
+          "continuity": 0.0
+        },
+        "committed": false
+      },
+      {
+        "accepted": false,
+        "initial_CE_old": 2.208846092224121,
+        "initial_CE_new": 2.2075083255767822,
+        "future_CE_old": 2.1930906772613525,
+        "future_CE_new": 2.1891636848449707,
+        "future_CE_gain": 0.003926992416381836,
+        "net_gain": 0.004036992416381836,
+        "old_branch_cost": 768,
+        "new_branch_cost": 768,
+        "old_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "new_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "commit": "new_branch",
+        "old_accepted_steps": 2,
+        "new_accepted_steps": 2,
+        "future_parameter_difference": 0.004427431616932154,
+        "reason": "independent_confirmation_rejected",
+        "starting_parameter_move": 0.00292311143130064,
+        "kind": "retire_group",
+        "metadata": {},
+        "screening_accepted": true,
+        "committed": false
+      }
+    ],
+    "local_refresh": true,
+    "dictionary_version_before": 0,
+    "groups_before": [
+      "g0",
+      "g1",
+      "g2"
+    ],
+    "responsibility": {
+      "coverage": [
+        [
+          0.02773168110306296,
+          0.0872646278057412,
+          0.026596740462638453
+        ],
+        [
+          0.017773335231209508,
+          0.029008229499265775,
+          0.006128682598053979
+        ],
+        [
+          0.00544653355228238,
+          0.03646025326348912,
+          0.0024218535912378493
+        ]
+      ],
+      "conditional_novelty": [
+        [
+          0.034199890161100074,
+          0.09654749768343628,
+          0.033868449170316665
+        ],
+        [
+          0.020561155356969174,
+          0.032364181350245595,
+          0.008415117667910546
+        ],
+        [
+          0.0063756825549819915,
+          0.036835158865173474,
+          0.0013854364004330006
+        ]
+      ],
+      "unassigned": [
+        0.4637944401865694,
+        0.5200899842093016,
+        0.4729091425556168
+      ],
+      "masses": [
+        0.6601204852083864,
+        0.38687710889892857,
+        0.49620883894119705
+      ],
+      "conditional_gains": [
+        [
+          0.000561833381652832,
+          -0.007670044898986816,
+          -0.004404902458190918
+        ],
+        [
+          0.000561833381652832,
+          -0.007670044898986816,
+          -0.004404902458190918
+        ],
+        [
+          0.000561833381652832,
+          -0.007670044898986816,
+          0.0024573802947998047
+        ]
+      ],
+      "current_coordinate_magnitude_used": false,
+      "forced_group_assignment": false
+    },
+    "evidence": [
+      {
+        "ids": [
+          3366,
+          3082,
+          2036,
+          1194,
+          268,
+          1144,
+          1953,
+          1932,
+          568,
+          1896,
+          3662,
+          3645,
+          2390,
+          592,
+          1001,
+          1377,
+          2273,
+          2297,
+          27,
+          1234,
+          887,
+          298,
+          3132,
+          2933,
+          2800,
+          1094,
+          602,
+          2909,
+          179,
+          921,
+          2823,
+          2627
+        ],
+        "outside_fraction": 0.8471232811241896,
+        "independent_candidate_gain": 0.007833719253540039,
+        "group_conditional_gains": [
+          0.000561833381652832,
+          -0.007670044898986816,
+          -0.004404902458190918
+        ],
+        "candidate_probe_radius": 0.0031337793114205193,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.007439044304192066
+      },
+      {
+        "ids": [
+          1666,
+          1719,
+          2094,
+          452,
+          79,
+          348,
+          2375,
+          880,
+          631,
+          1257,
+          1556,
+          3046,
+          725,
+          2622,
+          3710,
+          1021,
+          3207,
+          2670,
+          3561,
+          3007,
+          984,
+          3326,
+          2651,
+          1806,
+          2699,
+          1905,
+          1408,
+          346,
+          3721,
+          3427,
+          1139,
+          713
+        ],
+        "outside_fraction": 0.9429610803776668,
+        "independent_candidate_gain": 0.006242632865905762,
+        "group_conditional_gains": [
+          0.000561833381652832,
+          -0.007670044898986816,
+          -0.004404902458190918
+        ],
+        "candidate_probe_radius": 0.003569761820716595,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.0034417801070958376
+      },
+      {
+        "ids": [
+          310,
+          1614,
+          3210,
+          1803,
+          852,
+          1102,
+          2035,
+          2406,
+          2149,
+          1935,
+          171,
+          2724,
+          279,
+          598,
+          3482,
+          920,
+          3224,
+          2121,
+          1881,
+          134,
+          1651,
+          3528,
+          2730,
+          339,
+          453,
+          165,
+          3154,
+          3733,
+          3716,
+          3415,
+          1406,
+          1982
+        ],
+        "outside_fraction": 0.9555448972350571,
+        "independent_candidate_gain": -0.0015834569931030273,
+        "group_conditional_gains": [
+          0.000561833381652832,
+          -0.007670044898986816,
+          0.0024573802947998047
+        ],
+        "candidate_probe_radius": 0.0030302583354988033,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.00531975831836462
+      }
+    ],
+    "persistent_outside": false,
+    "persistence": {
+      "kind": "insufficient_history",
+      "coherent": false,
+      "diverse": false,
+      "independent": true,
+      "candidate_indices": [
+        0,
+        1
+      ],
+      "weights": null,
+      "selected_index": null,
+      "structural_identity_proven": false,
+      "independent_windows": 1,
+      "current_residual_rank": 2,
+      "comparisons": []
+    },
+    "capacity_before": {
+      "dictionary_dimension": 3,
+      "stable_reachable_rank": 3,
+      "represented_reachable_rank": 3,
+      "remaining_reachable_rank": 0,
+      "coordinate_count": 3
+    },
+    "independent_confirmation": {
+      "accepted": false,
+      "reason": "fresh_training_CE",
+      "old_CE": 1.8113656640052795,
+      "new_CE": 1.8153434991836548,
+      "net_gain": -0.0038678351783752443,
+      "batches": 2,
+      "ids": [
+        [
+          1865,
+          3702,
+          2905,
+          3471,
+          1781,
+          2708,
+          2341,
+          718,
+          388,
+          3694,
+          2686,
+          2147,
+          2278,
+          3640,
+          1311,
+          3165,
+          599,
+          1946,
+          2116,
+          1049,
+          2252,
+          2689,
+          1334,
+          49,
+          2138,
+          2011,
+          20,
+          1133,
+          2151,
+          3012,
+          448,
+          535
+        ],
+        [
+          1592,
+          446,
+          3192,
+          3595,
+          122,
+          3534,
+          2154,
+          856,
+          172,
+          2839,
+          3135,
+          1933,
+          667,
+          930,
+          321,
+          3698,
+          32,
+          1335,
+          688,
+          2210,
+          3465,
+          3683,
+          3182,
+          1545,
+          2877,
+          1894,
+          1434,
+          916,
+          1087,
+          1054,
+          2258,
+          1609
+        ]
+      ],
+      "independent_from_candidate_screening": true
+    },
+    "full_local_tracking": {
+      "safe": true,
+      "error": 0.0015513311440473636,
+      "amplitude": 0.03762905800693752,
+      "allowed": 0.0058443587010406275,
+      "relative_error": 0.04122694604157646,
+      "max_angle": 0.039875628791946685,
+      "reference": "current_local_J_not_global_target_graph"
+    },
+    "dictionary_version_after": 0,
+    "groups_after": [
+      "g0",
+      "g1",
+      "g2"
+    ],
+    "total_rank": 3,
+    "online_images": 8320,
+    "actual_joint_parameter_rank": 3,
+    "actual_joint_functional_rank": 3,
+    "global_base_unchanged": true,
+    "capacity_after": {
+      "dictionary_dimension": 3,
+      "stable_reachable_rank": 3,
+      "represented_reachable_rank": 3,
+      "remaining_reachable_rank": 0,
+      "coordinate_count": 3
+    }
+  },
+  {
+    "window": 2,
+    "iteration": 8,
+    "proposals": [
+      {
+        "accepted": false,
+        "initial_CE_old": 2.128077507019043,
+        "initial_CE_new": 2.128077507019043,
+        "future_CE_old": 2.096615791320801,
+        "future_CE_new": 2.096615791320801,
+        "future_CE_gain": 0.0,
+        "net_gain": -3.622262338084159e-08,
+        "old_branch_cost": 768,
+        "new_branch_cost": 768,
+        "old_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "new_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "commit": "old_branch",
+        "old_accepted_steps": 2,
+        "new_accepted_steps": 2,
+        "future_parameter_difference": 0.0,
+        "reason": "capacity_or_continuity_cost",
+        "starting_parameter_move": 0.0,
+        "kind": "rotate_group",
+        "metadata": {
+          "continuity": 0.003622262338084159
+        },
+        "committed": false
+      },
+      {
+        "accepted": true,
+        "initial_CE_old": 2.128077507019043,
+        "initial_CE_new": 2.128077507019043,
+        "future_CE_old": 2.096615791320801,
+        "future_CE_new": 2.096615791320801,
+        "future_CE_gain": 0.0,
+        "net_gain": 9.999999999999999e-06,
+        "old_branch_cost": 768,
+        "new_branch_cost": 768,
+        "old_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "new_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "commit": "new_branch",
+        "old_accepted_steps": 2,
+        "new_accepted_steps": 2,
+        "future_parameter_difference": 0.0,
+        "reason": "accepted",
+        "starting_parameter_move": 0.0,
+        "kind": "merge_groups",
+        "metadata": {
+          "continuity": 2.6645352591003757e-15
+        },
+        "committed": true
+      },
+      {
+        "kind": "retire_group",
+        "accepted": false,
+        "reason": "parameter_step_trust_region",
+        "move": 0.008773733861744404,
+        "committed": false
+      }
+    ],
+    "local_refresh": true,
+    "dictionary_version_before": 0,
+    "groups_before": [
+      "g0",
+      "g1",
+      "g2"
+    ],
+    "responsibility": {
+      "coverage": [
+        [
+          0.08676679300458136,
+          0.00018098639820929795,
+          0.0435583772126726
+        ],
+        [
+          0.02885824133296481,
+          1.150311054200328e-05,
+          0.0012455124092108998
+        ],
+        [
+          0.07853823821076364,
+          0.09915100911828126,
+          0.03624728724756971
+        ]
+      ],
+      "conditional_novelty": [
+        [
+          0.0919605384744747,
+          0.00030041964983713187,
+          0.048731265379992714
+        ],
+        [
+          0.02960649834275715,
+          0.00027245906708065653,
+          0.0018200200135500902
+        ],
+        [
+          0.07199023059606764,
+          0.0824310099695849,
+          0.03429616461261936
+        ]
+      ],
+      "unassigned": [
+        0.34958824273928973,
+        0.46630741113315494,
+        0.31588429106765076
+      ],
+      "masses": [
+        1.037762649021155,
+        0.5328314039345432,
+        0.2976260021042065
+      ],
+      "conditional_gains": [
+        [
+          0.006599307060241699,
+          0.002289414405822754,
+          -0.008884906768798828
+        ],
+        [
+          0.006599307060241699,
+          -0.0075539350509643555,
+          -0.008884906768798828
+        ],
+        [
+          0.006599307060241699,
+          0.002289414405822754,
+          -0.008884906768798828
+        ]
+      ],
+      "current_coordinate_magnitude_used": false,
+      "forced_group_assignment": false
+    },
+    "evidence": [
+      {
+        "ids": [
+          3303,
+          1218,
+          747,
+          2923,
+          2226,
+          2790,
+          2980,
+          2999,
+          3394,
+          115,
+          743,
+          3054,
+          1193,
+          770,
+          1438,
+          3486,
+          3731,
+          2101,
+          3330,
+          2200,
+          1554,
+          3268,
+          2107,
+          2055,
+          977,
+          1966,
+          395,
+          3013,
+          3039,
+          1889,
+          3585,
+          3440
+        ],
+        "outside_fraction": 0.8644746313108747,
+        "independent_candidate_gain": 0.002591252326965332,
+        "group_conditional_gains": [
+          0.006599307060241699,
+          0.002289414405822754,
+          -0.008884906768798828
+        ],
+        "candidate_probe_radius": 0.0029364018434389935,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.011319432407617569
+      },
+      {
+        "ids": [
+          69,
+          1581,
+          32,
+          1652,
+          3122,
+          178,
+          2146,
+          394,
+          1192,
+          1681,
+          3308,
+          3547,
+          1682,
+          649,
+          1580,
+          458,
+          1117,
+          409,
+          2401,
+          636,
+          3411,
+          384,
+          1173,
+          1025,
+          252,
+          3714,
+          1807,
+          1196,
+          579,
+          701,
+          1760,
+          2527
+        ],
+        "outside_fraction": 0.969120482062364,
+        "independent_candidate_gain": 0.009623408317565918,
+        "group_conditional_gains": [
+          0.006599307060241699,
+          -0.0075539350509643555,
+          -0.008884906768798828
+        ],
+        "candidate_probe_radius": 0.004476024197599984,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.006122623570263386
+      },
+      {
+        "ids": [
+          2410,
+          265,
+          599,
+          3422,
+          337,
+          1836,
+          1590,
+          2436,
+          3358,
+          3474,
+          41,
+          2133,
+          104,
+          3446,
+          1538,
+          2877,
+          2914,
+          531,
+          590,
+          2059,
+          558,
+          623,
+          1838,
+          22,
+          2155,
+          2634,
+          2154,
+          1520,
+          1732,
+          2949,
+          2212,
+          2416
+        ],
+        "outside_fraction": 0.7985285288135564,
+        "independent_candidate_gain": 0.007611632347106934,
+        "group_conditional_gains": [
+          0.006599307060241699,
+          0.002289414405822754,
+          -0.008884906768798828
+        ],
+        "candidate_probe_radius": 0.0031893141378645765,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.009394098073244095
+      }
+    ],
+    "persistent_outside": false,
+    "persistence": {
+      "kind": "insufficient_history",
+      "coherent": false,
+      "diverse": false,
+      "independent": true,
+      "candidate_indices": [
+        0,
+        1,
+        2
+      ],
+      "weights": null,
+      "selected_index": null,
+      "structural_identity_proven": false,
+      "independent_windows": 2,
+      "current_residual_rank": 3,
+      "comparisons": [
+        {
+          "principal_cosines": [
+            0.453231702778718,
+            0.22208767315706093
+          ],
+          "projection_overlap": 0.08491397032400456
+        }
+      ]
+    },
+    "capacity_before": {
+      "dictionary_dimension": 3,
+      "stable_reachable_rank": 3,
+      "represented_reachable_rank": 3,
+      "remaining_reachable_rank": 0,
+      "coordinate_count": 3
+    },
+    "selected_operation": "merge_groups",
+    "independent_confirmation": {
+      "accepted": true,
+      "reason": "accepted",
+      "old_CE": 2.101271629333496,
+      "new_CE": 2.101271629333496,
+      "net_gain": 9.999999999999999e-06,
+      "batches": 2,
+      "ids": [
+        [
+          2341,
+          2287,
+          3632,
+          1673,
+          2443,
+          2753,
+          909,
+          1633,
+          628,
+          2542,
+          522,
+          2881,
+          2721,
+          2494,
+          3197,
+          0,
+          2493,
+          2211,
+          699,
+          1469,
+          125,
+          1118,
+          987,
+          2216,
+          1689,
+          681,
+          3643,
+          867,
+          3243,
+          3615,
+          974,
+          3700
+        ],
+        [
+          1843,
+          2108,
+          2051,
+          98,
+          2115,
+          1298,
+          751,
+          138,
+          2560,
+          1111,
+          2138,
+          2236,
+          3037,
+          140,
+          2984,
+          2858,
+          323,
+          704,
+          3694,
+          2733,
+          1003,
+          494,
+          2414,
+          1426,
+          1105,
+          3599,
+          3352,
+          1996,
+          2712,
+          986,
+          3118,
+          1334
+        ]
+      ],
+      "independent_from_candidate_screening": true
+    },
+    "full_local_tracking": {
+      "safe": true,
+      "error": 0.001318961142355413,
+      "amplitude": 0.03783155908886569,
+      "allowed": 0.005874733863329854,
+      "relative_error": 0.034864044044740417,
+      "max_angle": 0.040243143596279125,
+      "reference": "current_local_J_not_global_target_graph"
+    },
+    "dictionary_version_after": 0,
+    "groups_after": [
+      "g2",
+      "g0+g1"
+    ],
+    "total_rank": 3,
+    "online_images": 13536,
+    "actual_joint_parameter_rank": 3,
+    "actual_joint_functional_rank": 3,
+    "global_base_unchanged": true,
+    "capacity_after": {
+      "dictionary_dimension": 3,
+      "stable_reachable_rank": 3,
+      "represented_reachable_rank": 3,
+      "remaining_reachable_rank": 0,
+      "coordinate_count": 3
+    }
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "task": "SUN397",
+  "status": "passed",
+  "predeclared_primary_epsilon": 0.003,
+  "predeclared_relative_tolerance": 0.02,
+  "predeclared_cosine": 0.999,
+  "finite_difference": [
+    {
+      "epsilon": 0.001,
+      "relative_error": 0.0010790003960149054,
+      "cosine": 0.9999994184061014
+    },
+    {
+      "epsilon": 0.003,
+      "relative_error": 0.00597705614050895,
+      "cosine": 0.9999821479989592
+    },
+    {
+      "epsilon": 0.01,
+      "relative_error": 0.01630917270952602,
+      "cosine": 0.9998707289078395
+    }
+  ],
+  "probe_n": 128,
+  "classes": 397,
+  "calls": {
+    "images": 896,
+    "forwards": 14,
+    "jvp": 1,
+    "vjp": 0,
+    "training_images": 0
+  },
+  "seconds": 4.169257948175073,
+  "optimizer_updates": 0,
+  "trained_state_modified": false,
+  "scope": "One final-state dictionary direction; not a whole-trajectory proof"
+}

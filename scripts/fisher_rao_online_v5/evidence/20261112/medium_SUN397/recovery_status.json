@@ -1,0 +1,7 @@
+{
+  "iteration": 128,
+  "online_images": 227328,
+  "complete_committed_snapshot": true,
+  "task": "SUN397",
+  "archive_checkpoint": "/media/shangxueyuan/data1/fisher_rao_online_v5_SUN397_medium_seed11_98f36a1_20261112/checkpoints/step_000128_images_000227328.pt"
+}

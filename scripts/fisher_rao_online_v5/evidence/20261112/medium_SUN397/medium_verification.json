@@ -1,0 +1,678 @@
+{
+  "task": "SUN397",
+  "source_commit": "98f36a1b5135bce79be21b46e0024c22629d683d",
+  "source_hashes_match": true,
+  "status": "complete",
+  "stop_reason": "step_limit",
+  "main_attempts": 128,
+  "accepted": 124,
+  "base_validation": {
+    "CE": 1.265070915222168,
+    "accuracy": 0.6484375,
+    "n": 128
+  },
+  "final_validation": {
+    "CE": 1.2044099569320679,
+    "accuracy": 0.640625,
+    "n": 128
+  },
+  "selected_validation": {
+    "CE": 1.2002222537994385,
+    "accuracy": 0.6328125,
+    "n": 128,
+    "model_online_cost": 196608
+  },
+  "independent_final": {
+    "CE": 1.1133036613464355,
+    "accuracy": 0.689453125,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "independent_selected": {
+    "CE": 1.11806321144104,
+    "accuracy": 0.689453125,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "actual_online_images": 227328,
+  "seconds": 1941.6263619549572,
+  "peak_gpu_bytes": 13498717696,
+  "compute_counts": {
+    "images": {
+      "task_gradient": 6112,
+      "FR": 13184,
+      "JVP": 56960,
+      "task_loss": 12960,
+      "read_only_direction_probe": 1920,
+      "lookahead_old_FR": 14400,
+      "lookahead_old_JVP": 39296,
+      "lookahead_old_task_loss": 9600,
+      "lookahead_old_task_gradient": 4800,
+      "lookahead_new_FR": 14400,
+      "lookahead_new_JVP": 39296,
+      "lookahead_new_task_loss": 9600,
+      "lookahead_new_task_gradient": 4800
+    },
+    "operations": {
+      "forward": 3264,
+      "backward": 491,
+      "jvp": 1059
+    }
+  },
+  "solver_fallbacks": {},
+  "solver_condition": {
+    "min": 2.383967734361714,
+    "median": 3.4193614013701907,
+    "max": 4.854116598444529
+  },
+  "retained_minimum_singular": {
+    "min": 1.2768039126340833e-09,
+    "median": 0.10530672210364156,
+    "max": 0.11482809872139052
+  },
+  "coordinate_norm": {
+    "min": 0.009789353141173384,
+    "median": 346210.4463257039,
+    "max": 2701828.955488393
+  },
+  "coordinate_step": {
+    "min": 0.0,
+    "median": 0.02523346325829165,
+    "max": 1406142.6397141186
+  },
+  "parameter_step_reconstruction_error": {
+    "min": 4.6484845353060284e-17,
+    "median": 1.5887809624622794e-15,
+    "max": 1.071832330613365e-08
+  },
+  "coordinate_accumulation_error": {
+    "min": 0.0,
+    "median": 1.1183748214746827e-11,
+    "max": 2.906701703118179e-10
+  },
+  "shrunk_steps": 4,
+  "geometry_windows": 20,
+  "geometry_rollbacks": [],
+  "structural_classifications": {
+    "insufficient_history": 4,
+    "diverse_recurrence": 15,
+    "no_beneficial_outside_residual": 1
+  },
+  "committed_geometry_operations": [
+    {
+      "window": 1,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 9.999999999999964e-06,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 2,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 9.999999999999972e-06,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 3,
+      "kind": "dictionary_grow_with_capacity_evidence",
+      "future_CE_gain": 0.00013691186904907227,
+      "net_gain": 1.6911868691310767e-05,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 4,
+      "kind": "retire_group",
+      "future_CE_gain": 0.0008056163787841797,
+      "net_gain": 0.0009156163787841797,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 5,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.0047103166580200195,
+      "net_gain": 0.004590316658009928,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 7,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.009484052658081055,
+      "net_gain": 0.0093735606576663,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 8,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.0035088658332824707,
+      "net_gain": 0.0033769689685763473,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 9,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 9.999999999999955e-06,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 10,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.0010709166526794434,
+      "net_gain": 0.000923104249903871,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 11,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.003930449485778809,
+      "net_gain": 0.0038003582353875447,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 12,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.0029010772705078125,
+      "net_gain": 0.0028709679059665165,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 15,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 9.999999999999777e-06,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 16,
+      "kind": "retire_group",
+      "future_CE_gain": 0.0005666017532348633,
+      "net_gain": 0.0006766017532348634,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 17,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 9.999999999999918e-06,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 18,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 9.999999999999715e-06,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 19,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.005625724792480469,
+      "net_gain": 0.005505724792474872,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 20,
+      "kind": "dictionary_grow_with_capacity_evidence",
+      "future_CE_gain": 0.0001812577247619629,
+      "net_gain": 0.00017125772474196158,
+      "old_cost": 1024,
+      "new_cost": 1024
+    }
+  ],
+  "final_dictionary_dimension": 5,
+  "final_coordinate_count": 8,
+  "final_parameter_rank": 4,
+  "final_parameter_rank_relative_tolerance": 1e-08,
+  "final_G_singular_values": [
+    0.23238212737401773,
+    0.15376280165052636,
+    0.1523840098740389,
+    0.10834483746327117,
+    1.2559127767899607e-23
+  ],
+  "final_machine_precision_rank": 4,
+  "final_groups": [
+    {
+      "name": "g7_dictionary+g8_dictionary+g2+g0+g1+g5_dictionary+g11_dictionary",
+      "coordinates": 7
+    },
+    {
+      "name": "g19_dictionary",
+      "coordinates": 1
+    }
+  ],
+  "resume": {
+    "resumed_iteration": 8,
+    "resumed_online_images": 8416,
+    "source_checkpoint": "/media/shangxueyuan/data1/fisher_rao_online_v5_SUN397_medium_seed11_98f36a1_20261112/recovery_state.pt",
+    "args": {
+      "describe": false,
+      "root": "/home/shangxueyuan/merging/tsv",
+      "output": "/media/shangxueyuan/data1/fisher_rao_online_v5_SUN397_medium_seed11_98f36a1_20261112",
+      "method": "online",
+      "task": "SUN397",
+      "resume": "/media/shangxueyuan/data1/fisher_rao_online_v5_SUN397_medium_seed11_98f36a1_20261112/recovery_state.pt",
+      "checkpoint_every": 8,
+      "seed": 11,
+      "steps": 128,
+      "until_budget": false,
+      "budget_images": 1000000,
+      "probe_size": 128,
+      "batch_size": 32,
+      "geometry_every": 8,
+      "lookahead_steps": 2,
+      "cold_batches": 3,
+      "candidate_batches": 3,
+      "max_groups": null,
+      "max_proposals": null,
+      "recurrence_overlap": 0.7,
+      "functional_angle": 0.04,
+      "trust_cap_factor": 4.0,
+      "sensitivity_quantile": 1.0,
+      "initial_grouping": "responses",
+      "initial_group_similarity": 0.8,
+      "persistence_windows": 3,
+      "confirmation_batches": 2,
+      "fixed_dictionary": false,
+      "frozen_geometry": false,
+      "single_group": false,
+      "no_response_loss": false,
+      "allow_dictionary_growth": true,
+      "max_dictionary_rank": 8,
+      "max_total_rank": 8,
+      "random_initial_partition": false,
+      "report_every": 8,
+      "report_images": 4096,
+      "audit": false
+    },
+    "coefficient_reconstruction_error": 0.0,
+    "restored_window": 1,
+    "restored_persistence_windows": 1,
+    "recovery_scope": "Exact committed checkpoint; any work lost after that checkpoint is replayed and not included in restored ledger"
+  },
+  "checkpoint_headers": [
+    {
+      "file": "step_000000_images_000000992.pt",
+      "iteration": 0,
+      "online_images": 992,
+      "dictionary_version": 0,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g0",
+          "coordinates": 1
+        },
+        {
+          "name": "g1",
+          "coordinates": 1
+        },
+        {
+          "name": "g2",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2041305886
+    },
+    {
+      "file": "step_000008_images_000008416.pt",
+      "iteration": 8,
+      "online_images": 8416,
+      "dictionary_version": 0,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        }
+      ],
+      "bytes": 2042537990
+    },
+    {
+      "file": "step_000016_images_000014208.pt",
+      "iteration": 16,
+      "online_images": 14208,
+      "dictionary_version": 0,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        }
+      ],
+      "bytes": 2043362743
+    },
+    {
+      "file": "step_000024_images_000023744.pt",
+      "iteration": 24,
+      "online_images": 23744,
+      "dictionary_version": 1,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g3_growth",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2384738710
+    },
+    {
+      "file": "step_000032_images_000049824.pt",
+      "iteration": 32,
+      "online_images": 49824,
+      "dictionary_version": 2,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2724490948
+    },
+    {
+      "file": "step_000040_images_000065984.pt",
+      "iteration": 40,
+      "online_images": 65984,
+      "dictionary_version": 2,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2724502246
+    },
+    {
+      "file": "step_000048_images_000092256.pt",
+      "iteration": 48,
+      "online_images": 92256,
+      "dictionary_version": 4,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g7_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g8_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2725332284
+    },
+    {
+      "file": "step_000056_images_000106816.pt",
+      "iteration": 56,
+      "online_images": 106816,
+      "dictionary_version": 4,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g7_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g8_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1+g5_dictionary",
+          "coordinates": 4
+        }
+      ],
+      "bytes": 2725342756
+    },
+    {
+      "file": "step_000064_images_000117696.pt",
+      "iteration": 64,
+      "online_images": 117696,
+      "dictionary_version": 5,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g7_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g8_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1+g5_dictionary",
+          "coordinates": 4
+        },
+        {
+          "name": "g10_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2724540108
+    },
+    {
+      "file": "step_000072_images_000144352.pt",
+      "iteration": 72,
+      "online_images": 144352,
+      "dictionary_version": 7,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g7_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g8_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1+g5_dictionary",
+          "coordinates": 4
+        },
+        {
+          "name": "g10_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2723743913
+    },
+    {
+      "file": "step_000080_images_000171104.pt",
+      "iteration": 80,
+      "online_images": 171104,
+      "dictionary_version": 7,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g7_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g8_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1+g5_dictionary",
+          "coordinates": 4
+        },
+        {
+          "name": "g10_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2724572377
+    },
+    {
+      "file": "step_000088_images_000179744.pt",
+      "iteration": 88,
+      "online_images": 179744,
+      "dictionary_version": 7,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g2+g0+g1+g5_dictionary",
+          "coordinates": 4
+        },
+        {
+          "name": "g10_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g7_dictionary+g8_dictionary",
+          "coordinates": 2
+        }
+      ],
+      "bytes": 2721733845
+    },
+    {
+      "file": "step_000096_images_000188288.pt",
+      "iteration": 96,
+      "online_images": 188288,
+      "dictionary_version": 7,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g2+g0+g1+g5_dictionary",
+          "coordinates": 4
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g7_dictionary+g8_dictionary",
+          "coordinates": 2
+        }
+      ],
+      "bytes": 2722962949
+    },
+    {
+      "file": "step_000104_images_000194944.pt",
+      "iteration": 104,
+      "online_images": 194944,
+      "dictionary_version": 7,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g7_dictionary+g8_dictionary",
+          "coordinates": 2
+        },
+        {
+          "name": "g2+g0+g1+g5_dictionary+g11_dictionary",
+          "coordinates": 5
+        }
+      ],
+      "bytes": 2723376895
+    },
+    {
+      "file": "step_000112_images_000205728.pt",
+      "iteration": 112,
+      "online_images": 205728,
+      "dictionary_version": 7,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g7_dictionary+g8_dictionary+g2+g0+g1+g5_dictionary+g11_dictionary",
+          "coordinates": 7
+        }
+      ],
+      "bytes": 2724199093
+    },
+    {
+      "file": "step_000120_images_000214624.pt",
+      "iteration": 120,
+      "online_images": 214624,
+      "dictionary_version": 8,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g7_dictionary+g8_dictionary+g2+g0+g1+g5_dictionary+g11_dictionary",
+          "coordinates": 7
+        },
+        {
+          "name": "g19_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2724209185
+    },
+    {
+      "file": "step_000128_images_000227328.pt",
+      "iteration": 128,
+      "online_images": 227328,
+      "dictionary_version": 9,
+      "dictionary_dimension": 5,
+      "groups": [
+        {
+          "name": "g7_dictionary+g8_dictionary+g2+g0+g1+g5_dictionary+g11_dictionary",
+          "coordinates": 7
+        },
+        {
+          "name": "g19_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 3064771537
+    }
+  ],
+  "expected_periodic_checkpoints_preserved": true,
+  "probe_training_disjoint": true,
+  "official_test_opened": false,
+  "independent_functional_groups_established": false,
+  "million_budget_training_complete": false,
+  "long_training_stability_established": false,
+  "engineering_checks_scope": "Only source identity, exact resume, finite/reconstructed steps, no solver fallback/rollback and checkpoint coverage; not a coordinate-amplitude safety guarantee",
+  "engineering_medium_checks_passed": true
+}

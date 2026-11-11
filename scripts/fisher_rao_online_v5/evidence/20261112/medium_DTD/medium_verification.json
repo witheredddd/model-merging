@@ -1,0 +1,765 @@
+{
+  "task": "DTD",
+  "source_commit": "98f36a1b5135bce79be21b46e0024c22629d683d",
+  "source_hashes_match": true,
+  "status": "complete",
+  "stop_reason": "step_limit",
+  "main_attempts": 128,
+  "accepted": 124,
+  "base_validation": {
+    "CE": 1.9371068477630615,
+    "accuracy": 0.453125,
+    "n": 128
+  },
+  "final_validation": {
+    "CE": 1.5735373497009277,
+    "accuracy": 0.5390625,
+    "n": 128
+  },
+  "selected_validation": {
+    "CE": 1.5769861936569214,
+    "accuracy": 0.5390625,
+    "n": 128,
+    "model_online_cost": 212992
+  },
+  "independent_final": {
+    "CE": 1.7395514249801636,
+    "accuracy": 0.51171875,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "independent_selected": {
+    "CE": 1.7413302659988403,
+    "accuracy": 0.515625,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "actual_online_images": 223328,
+  "seconds": 1757.8245369088836,
+  "peak_gpu_bytes": 15852981760,
+  "compute_counts": {
+    "images": {
+      "task_gradient": 5920,
+      "FR": 12928,
+      "JVP": 52992,
+      "task_loss": 14848,
+      "read_only_direction_probe": 1728,
+      "lookahead_old_FR": 15168,
+      "lookahead_old_JVP": 37120,
+      "lookahead_old_task_loss": 10112,
+      "lookahead_old_task_gradient": 5056,
+      "lookahead_new_FR": 15168,
+      "lookahead_new_JVP": 37120,
+      "lookahead_new_task_loss": 10112,
+      "lookahead_new_task_gradient": 5056
+    },
+    "operations": {
+      "forward": 3316,
+      "backward": 501,
+      "jvp": 994
+    }
+  },
+  "solver_fallbacks": {},
+  "solver_condition": {
+    "min": 1.335019022738642,
+    "median": 2.5580541474653113,
+    "max": 3.280705230725437
+  },
+  "retained_minimum_singular": {
+    "min": 0.00047407758163027427,
+    "median": 0.08866216589938862,
+    "max": 0.10593660530510107
+  },
+  "coordinate_norm": {
+    "min": 0.01945536727935005,
+    "median": 0.6042688081150203,
+    "max": 39.876991665008006
+  },
+  "coordinate_step": {
+    "min": 0.0,
+    "median": 0.019042798535625856,
+    "max": 9.99353285208627
+  },
+  "parameter_step_reconstruction_error": {
+    "min": 0.0,
+    "median": 4.62166443231185e-16,
+    "max": 5.963856243474853e-14
+  },
+  "coordinate_accumulation_error": {
+    "min": 0.0,
+    "median": 1.1810805423809752e-16,
+    "max": 5.979426847225458e-16
+  },
+  "shrunk_steps": 4,
+  "geometry_windows": 18,
+  "geometry_rollbacks": [],
+  "structural_classifications": {
+    "insufficient_history": 2,
+    "diverse_recurrence": 16
+  },
+  "committed_geometry_operations": [
+    {
+      "window": 2,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 9.999999999999999e-06,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 3,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.004290342330932617,
+      "net_gain": 0.004160424501439212,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 4,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.0018284320831298828,
+      "net_gain": 0.001698519924774345,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 5,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.01060032844543457,
+      "net_gain": 0.010468889630411685,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 10,
+      "kind": "retire_group",
+      "future_CE_gain": 0.004012107849121094,
+      "net_gain": 0.004122107849121094,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 11,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.007557272911071777,
+      "net_gain": 0.007424670960373145,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 12,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 1.0000000000000026e-05,
+      "old_cost": 768,
+      "new_cost": 768
+    },
+    {
+      "window": 13,
+      "kind": "dictionary_grow_with_capacity_evidence",
+      "future_CE_gain": 0.004452347755432129,
+      "net_gain": 0.0043323477553086675,
+      "old_cost": 896,
+      "new_cost": 896
+    },
+    {
+      "window": 14,
+      "kind": "dictionary_grow_with_capacity_evidence",
+      "future_CE_gain": 0.0006930828094482422,
+      "net_gain": 0.000573082809442556,
+      "old_cost": 1024,
+      "new_cost": 1024
+    },
+    {
+      "window": 17,
+      "kind": "dictionary_replace_for_distinct_structure",
+      "future_CE_gain": 0.00830531120300293,
+      "net_gain": 0.00828094445482898,
+      "old_cost": 1024,
+      "new_cost": 1024
+    },
+    {
+      "window": 18,
+      "kind": "merge_groups",
+      "future_CE_gain": 0.0,
+      "net_gain": 9.999999999999813e-06,
+      "old_cost": 1024,
+      "new_cost": 1024
+    }
+  ],
+  "final_dictionary_dimension": 5,
+  "final_coordinate_count": 8,
+  "final_parameter_rank": 5,
+  "final_parameter_rank_relative_tolerance": 1e-08,
+  "final_G_singular_values": [
+    0.162771221237159,
+    0.14497605260735374,
+    0.12327337066907916,
+    0.09313178252977719,
+    0.00047407758163027313
+  ],
+  "final_machine_precision_rank": 5,
+  "final_groups": [
+    {
+      "name": "g11_dictionary",
+      "coordinates": 1
+    },
+    {
+      "name": "g2+g0+g1",
+      "coordinates": 3
+    },
+    {
+      "name": "g13_growth",
+      "coordinates": 1
+    },
+    {
+      "name": "g14_growth",
+      "coordinates": 1
+    },
+    {
+      "name": "g3_dictionary+g5_dictionary",
+      "coordinates": 2
+    }
+  ],
+  "resume": {
+    "resumed_iteration": 8,
+    "resumed_online_images": 13536,
+    "source_checkpoint": "/media/shangxueyuan/data1/fisher_rao_online_v5_DTD_medium_seed11_98f36a1_20261112/recovery_state.pt",
+    "args": {
+      "describe": false,
+      "root": "/home/shangxueyuan/merging/tsv",
+      "output": "/media/shangxueyuan/data1/fisher_rao_online_v5_DTD_medium_seed11_98f36a1_20261112",
+      "method": "online",
+      "task": "DTD",
+      "resume": "/media/shangxueyuan/data1/fisher_rao_online_v5_DTD_medium_seed11_98f36a1_20261112/recovery_state.pt",
+      "checkpoint_every": 8,
+      "seed": 11,
+      "steps": 128,
+      "until_budget": false,
+      "budget_images": 1000000,
+      "probe_size": 128,
+      "batch_size": 32,
+      "geometry_every": 8,
+      "lookahead_steps": 2,
+      "cold_batches": 3,
+      "candidate_batches": 3,
+      "max_groups": null,
+      "max_proposals": null,
+      "recurrence_overlap": 0.7,
+      "functional_angle": 0.04,
+      "trust_cap_factor": 4.0,
+      "sensitivity_quantile": 1.0,
+      "initial_grouping": "responses",
+      "initial_group_similarity": 0.8,
+      "persistence_windows": 3,
+      "confirmation_batches": 2,
+      "fixed_dictionary": false,
+      "frozen_geometry": false,
+      "single_group": false,
+      "no_response_loss": false,
+      "allow_dictionary_growth": true,
+      "max_dictionary_rank": 8,
+      "max_total_rank": 8,
+      "random_initial_partition": false,
+      "report_every": 8,
+      "report_images": 4096,
+      "audit": false
+    },
+    "coefficient_reconstruction_error": 1.734723475976807e-18,
+    "restored_window": 2,
+    "restored_persistence_windows": 2,
+    "recovery_scope": "Exact committed checkpoint; any work lost after that checkpoint is replayed and not included in restored ledger"
+  },
+  "checkpoint_headers": [
+    {
+      "file": "step_000000_images_000000992.pt",
+      "iteration": 0,
+      "online_images": 992,
+      "dictionary_version": 0,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g0",
+          "coordinates": 1
+        },
+        {
+          "name": "g1",
+          "coordinates": 1
+        },
+        {
+          "name": "g2",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2038797022
+    },
+    {
+      "file": "step_000008_images_000013536.pt",
+      "iteration": 8,
+      "online_images": 13536,
+      "dictionary_version": 0,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        }
+      ],
+      "bytes": 2039101955
+    },
+    {
+      "file": "step_000016_images_000024576.pt",
+      "iteration": 16,
+      "online_images": 24576,
+      "dictionary_version": 1,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039261538
+    },
+    {
+      "file": "step_000024_images_000035712.pt",
+      "iteration": 24,
+      "online_images": 35712,
+      "dictionary_version": 2,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g4_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039224260
+    },
+    {
+      "file": "step_000032_images_000048480.pt",
+      "iteration": 32,
+      "online_images": 48480,
+      "dictionary_version": 3,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g4_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039236064
+    },
+    {
+      "file": "step_000040_images_000061344.pt",
+      "iteration": 40,
+      "online_images": 61344,
+      "dictionary_version": 3,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g4_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039247426
+    },
+    {
+      "file": "step_000048_images_000074208.pt",
+      "iteration": 48,
+      "online_images": 74208,
+      "dictionary_version": 3,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g4_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039306410
+    },
+    {
+      "file": "step_000056_images_000087072.pt",
+      "iteration": 56,
+      "online_images": 87072,
+      "dictionary_version": 3,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g4_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039317138
+    },
+    {
+      "file": "step_000064_images_000099936.pt",
+      "iteration": 64,
+      "online_images": 99936,
+      "dictionary_version": 3,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g4_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039279802
+    },
+    {
+      "file": "step_000072_images_000112800.pt",
+      "iteration": 72,
+      "online_images": 112800,
+      "dictionary_version": 3,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039338221
+    },
+    {
+      "file": "step_000080_images_000125568.pt",
+      "iteration": 80,
+      "online_images": 125568,
+      "dictionary_version": 4,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g2",
+          "coordinates": 1
+        },
+        {
+          "name": "g0+g1",
+          "coordinates": 2
+        },
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2039349401
+    },
+    {
+      "file": "step_000088_images_000138432.pt",
+      "iteration": 88,
+      "online_images": 138432,
+      "dictionary_version": 4,
+      "dictionary_dimension": 3,
+      "groups": [
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        }
+      ],
+      "bytes": 2039311629
+    },
+    {
+      "file": "step_000096_images_000151328.pt",
+      "iteration": 96,
+      "online_images": 151328,
+      "dictionary_version": 5,
+      "dictionary_dimension": 4,
+      "groups": [
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g13_growth",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 2379109181
+    },
+    {
+      "file": "step_000104_images_000180096.pt",
+      "iteration": 104,
+      "online_images": 180096,
+      "dictionary_version": 6,
+      "dictionary_dimension": 5,
+      "groups": [
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g13_growth",
+          "coordinates": 1
+        },
+        {
+          "name": "g14_growth",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 3398486753
+    },
+    {
+      "file": "step_000112_images_000196640.pt",
+      "iteration": 112,
+      "online_images": 196640,
+      "dictionary_version": 6,
+      "dictionary_dimension": 5,
+      "groups": [
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g13_growth",
+          "coordinates": 1
+        },
+        {
+          "name": "g14_growth",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 3398498385
+    },
+    {
+      "file": "step_000120_images_000211136.pt",
+      "iteration": 120,
+      "online_images": 211136,
+      "dictionary_version": 7,
+      "dictionary_dimension": 5,
+      "groups": [
+        {
+          "name": "g3_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g5_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g13_growth",
+          "coordinates": 1
+        },
+        {
+          "name": "g14_growth",
+          "coordinates": 1
+        }
+      ],
+      "bytes": 3398509569
+    },
+    {
+      "file": "step_000128_images_000223328.pt",
+      "iteration": 128,
+      "online_images": 223328,
+      "dictionary_version": 7,
+      "dictionary_dimension": 5,
+      "groups": [
+        {
+          "name": "g11_dictionary",
+          "coordinates": 1
+        },
+        {
+          "name": "g2+g0+g1",
+          "coordinates": 3
+        },
+        {
+          "name": "g13_growth",
+          "coordinates": 1
+        },
+        {
+          "name": "g14_growth",
+          "coordinates": 1
+        },
+        {
+          "name": "g3_dictionary+g5_dictionary",
+          "coordinates": 2
+        }
+      ],
+      "bytes": 3398520053
+    }
+  ],
+  "expected_periodic_checkpoints_preserved": true,
+  "probe_training_disjoint": true,
+  "official_test_opened": false,
+  "independent_functional_groups_established": false,
+  "million_budget_training_complete": false,
+  "long_training_stability_established": false,
+  "engineering_checks_scope": "Only source identity, exact resume, finite/reconstructed steps, no solver fallback/rollback and checkpoint coverage; not a coordinate-amplitude safety guarantee",
+  "engineering_medium_checks_passed": true
+}

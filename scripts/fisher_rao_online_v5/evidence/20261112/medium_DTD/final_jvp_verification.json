@@ -1,0 +1,37 @@
+{
+  "task": "DTD",
+  "status": "passed",
+  "predeclared_primary_epsilon": 0.003,
+  "predeclared_relative_tolerance": 0.02,
+  "predeclared_cosine": 0.999,
+  "finite_difference": [
+    {
+      "epsilon": 0.001,
+      "relative_error": 0.0009246509120309562,
+      "cosine": 0.9999995725384931
+    },
+    {
+      "epsilon": 0.003,
+      "relative_error": 0.0023393558675294276,
+      "cosine": 0.999997284528779
+    },
+    {
+      "epsilon": 0.01,
+      "relative_error": 0.014314193536674784,
+      "cosine": 0.9998993701560277
+    }
+  ],
+  "probe_n": 128,
+  "classes": 47,
+  "calls": {
+    "images": 896,
+    "forwards": 14,
+    "jvp": 1,
+    "vjp": 0,
+    "training_images": 0
+  },
+  "seconds": 4.116082571912557,
+  "optimizer_updates": 0,
+  "trained_state_modified": false,
+  "scope": "One final-state dictionary direction; not a whole-trajectory proof"
+}

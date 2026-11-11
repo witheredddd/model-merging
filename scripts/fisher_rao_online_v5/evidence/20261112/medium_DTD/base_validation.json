@@ -1,0 +1,8 @@
+{
+  "theta": "untrained_theta0",
+  "metrics": {
+    "CE": 1.9371068477630615,
+    "accuracy": 0.453125,
+    "n": 128
+  }
+}

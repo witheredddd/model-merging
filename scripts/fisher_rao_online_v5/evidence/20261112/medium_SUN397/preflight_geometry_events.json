@@ -1,0 +1,444 @@
+[
+  {
+    "window": 1,
+    "iteration": 8,
+    "proposals": [
+      {
+        "accepted": false,
+        "initial_CE_old": 1.1837849617004395,
+        "initial_CE_new": 1.1837849617004395,
+        "future_CE_old": 1.1803722381591797,
+        "future_CE_new": 1.1803722381591797,
+        "future_CE_gain": 0.0,
+        "net_gain": -2.2570912615444973e-08,
+        "old_branch_cost": 768,
+        "new_branch_cost": 768,
+        "old_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "new_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "commit": "old_branch",
+        "old_accepted_steps": 2,
+        "new_accepted_steps": 2,
+        "future_parameter_difference": 0.0,
+        "reason": "capacity_or_continuity_cost",
+        "starting_parameter_move": 0.0,
+        "kind": "rotate_group",
+        "metadata": {
+          "continuity": 0.002257091261544497
+        },
+        "committed": false
+      },
+      {
+        "accepted": true,
+        "initial_CE_old": 1.1837849617004395,
+        "initial_CE_new": 1.1837849617004395,
+        "future_CE_old": 1.1803722381591797,
+        "future_CE_new": 1.1803722381591797,
+        "future_CE_gain": 0.0,
+        "net_gain": 9.999999999999964e-06,
+        "old_branch_cost": 768,
+        "new_branch_cost": 768,
+        "old_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "new_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "commit": "new_branch",
+        "old_accepted_steps": 2,
+        "new_accepted_steps": 2,
+        "future_parameter_difference": 0.0,
+        "reason": "accepted",
+        "starting_parameter_move": 0.0,
+        "kind": "merge_groups",
+        "metadata": {
+          "continuity": 6.217248937900877e-15
+        },
+        "committed": true
+      },
+      {
+        "accepted": false,
+        "initial_CE_old": 1.1837849617004395,
+        "initial_CE_new": 1.1858694553375244,
+        "future_CE_old": 1.1803722381591797,
+        "future_CE_new": 1.1834814548492432,
+        "future_CE_gain": -0.0031092166900634766,
+        "net_gain": -0.0029992166900634767,
+        "old_branch_cost": 768,
+        "new_branch_cost": 768,
+        "old_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "new_operations": {
+          "forward": 12,
+          "jvp": 3,
+          "backward": 2
+        },
+        "commit": "old_branch",
+        "old_accepted_steps": 2,
+        "new_accepted_steps": 2,
+        "future_parameter_difference": 0.0035819089971482754,
+        "reason": "future_task_loss",
+        "starting_parameter_move": 0.00218098983168602,
+        "kind": "retire_group",
+        "metadata": {},
+        "committed": false
+      }
+    ],
+    "local_refresh": true,
+    "dictionary_version_before": 0,
+    "groups_before": [
+      "g0",
+      "g1",
+      "g2"
+    ],
+    "responsibility": {
+      "coverage": [
+        [
+          0.01625420807481497,
+          0.014147903063919838,
+          0.006814713270687153
+        ],
+        [
+          0.03151570664276302,
+          0.02270887798752958,
+          0.09084009245867966
+        ],
+        [
+          0.1199780525084695,
+          0.11017942239853004,
+          0.031133419632594795
+        ]
+      ],
+      "conditional_novelty": [
+        [
+          0.016552112507108734,
+          0.012966413402645652,
+          0.006853979926767612
+        ],
+        [
+          0.02700218106709383,
+          0.02538220284036045,
+          0.09063869896980398
+        ],
+        [
+          0.11215652774712616,
+          0.11106583895624297,
+          0.03121244061558023
+        ]
+      ],
+      "unassigned": [
+        0.4741670206313166,
+        0.4402147814819467,
+        0.35841550497469904
+      ],
+      "masses": [
+        0.3343894541194524,
+        0.8195826726227426,
+        0.5732305661698426
+      ],
+      "conditional_gains": [
+        [
+          -0.013415336608886719,
+          0.0024309158325195312,
+          0.0023217201232910156
+        ],
+        [
+          -0.013415336608886719,
+          0.0024309158325195312,
+          -0.005612373352050781
+        ],
+        [
+          -0.013415336608886719,
+          0.0024309158325195312,
+          -0.005612373352050781
+        ]
+      ],
+      "current_coordinate_magnitude_used": false,
+      "forced_group_assignment": false
+    },
+    "evidence": [
+      {
+        "ids": [
+          19832,
+          11039,
+          17869,
+          12986,
+          2391,
+          440,
+          9331,
+          18693,
+          5714,
+          8861,
+          15375,
+          93,
+          9621,
+          4673,
+          8590,
+          15306,
+          17195,
+          3487,
+          6586,
+          13091,
+          18727,
+          2097,
+          6998,
+          14954,
+          10959,
+          8725,
+          2974,
+          11481,
+          19779,
+          1278,
+          13946,
+          1334
+        ],
+        "outside_fraction": 0.9631861214540757,
+        "independent_candidate_gain": 0.008483409881591797,
+        "group_conditional_gains": [
+          -0.013415336608886719,
+          0.0024309158325195312,
+          0.0023217201232910156
+        ],
+        "candidate_probe_radius": 0.005228671595373005,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.0003140656917821616
+      },
+      {
+        "ids": [
+          7776,
+          12272,
+          1091,
+          12256,
+          9581,
+          11015,
+          4957,
+          10878,
+          6760,
+          8213,
+          3787,
+          16173,
+          2141,
+          11871,
+          926,
+          17876,
+          8066,
+          9636,
+          11717,
+          17908,
+          1796,
+          14064,
+          15441,
+          10772,
+          18038,
+          18114,
+          19415,
+          16634,
+          13498,
+          198,
+          3128,
+          19152
+        ],
+        "outside_fraction": 0.8559167106211691,
+        "independent_candidate_gain": -0.0007405281066894531,
+        "group_conditional_gains": [
+          -0.013415336608886719,
+          0.0024309158325195312,
+          -0.005612373352050781
+        ],
+        "candidate_probe_radius": 0.0031664636003783794,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.0025628565344959497
+      },
+      {
+        "ids": [
+          8429,
+          13574,
+          5843,
+          6082,
+          10907,
+          6277,
+          906,
+          4164,
+          898,
+          3371,
+          3432,
+          8249,
+          6036,
+          2001,
+          16078,
+          12125,
+          16963,
+          11578,
+          5210,
+          10726,
+          17054,
+          18072,
+          2845,
+          9839,
+          4913,
+          11144,
+          4606,
+          11901,
+          19423,
+          14251,
+          1578,
+          9298
+        ],
+        "outside_fraction": 0.7419829260291124,
+        "independent_candidate_gain": 0.002750396728515625,
+        "group_conditional_gains": [
+          -0.013415336608886719,
+          0.0024309158325195312,
+          -0.005612373352050781
+        ],
+        "candidate_probe_radius": 0.00206162157869065,
+        "source": "actual_current_J_theta_v",
+        "dictionary_parameter_retention": 0.006268363445997238
+      }
+    ],
+    "persistent_outside": false,
+    "persistence": {
+      "kind": "insufficient_history",
+      "coherent": false,
+      "diverse": false,
+      "independent": true,
+      "candidate_indices": [
+        0,
+        2
+      ],
+      "weights": null,
+      "selected_index": null,
+      "structural_identity_proven": false,
+      "independent_windows": 1,
+      "current_residual_rank": 2,
+      "comparisons": []
+    },
+    "capacity_before": {
+      "dictionary_dimension": 3,
+      "stable_reachable_rank": 3,
+      "represented_reachable_rank": 3,
+      "remaining_reachable_rank": 0,
+      "coordinate_count": 3
+    },
+    "selected_operation": "merge_groups",
+    "independent_confirmation": {
+      "accepted": true,
+      "reason": "accepted",
+      "old_CE": 1.519525945186615,
+      "new_CE": 1.519525945186615,
+      "net_gain": 9.999999999999964e-06,
+      "batches": 2,
+      "ids": [
+        [
+          18241,
+          512,
+          18972,
+          17571,
+          12064,
+          896,
+          13956,
+          8658,
+          17531,
+          11565,
+          16116,
+          9086,
+          16594,
+          18483,
+          13219,
+          10365,
+          18845,
+          12675,
+          18060,
+          1805,
+          9932,
+          4732,
+          8062,
+          4665,
+          18833,
+          17659,
+          10595,
+          3235,
+          16449,
+          3526,
+          9593,
+          4467
+        ],
+        [
+          14647,
+          3932,
+          13936,
+          17006,
+          13031,
+          5993,
+          15254,
+          1613,
+          2422,
+          910,
+          14095,
+          7685,
+          14822,
+          9107,
+          4530,
+          12273,
+          16297,
+          13959,
+          2628,
+          19105,
+          3191,
+          3052,
+          7488,
+          17457,
+          15911,
+          19428,
+          18076,
+          6919,
+          2897,
+          16933,
+          9587,
+          7344
+        ]
+      ],
+      "independent_from_candidate_screening": true
+    },
+    "full_local_tracking": {
+      "safe": true,
+      "error": 0.0005325179399531859,
+      "amplitude": 0.019717103990937287,
+      "allowed": 0.003157565598640593,
+      "relative_error": 0.027007918617153456,
+      "max_angle": 0.035878142973432246,
+      "reference": "current_local_J_not_global_target_graph"
+    },
+    "dictionary_version_after": 0,
+    "groups_after": [
+      "g2",
+      "g0+g1"
+    ],
+    "total_rank": 3,
+    "online_images": 8416,
+    "actual_joint_parameter_rank": 3,
+    "actual_joint_functional_rank": 3,
+    "global_base_unchanged": true,
+    "capacity_after": {
+      "dictionary_dimension": 3,
+      "stable_reachable_rank": 3,
+      "represented_reachable_rank": 3,
+      "remaining_reachable_rank": 0,
+      "coordinate_count": 3
+    }
+  }
+]

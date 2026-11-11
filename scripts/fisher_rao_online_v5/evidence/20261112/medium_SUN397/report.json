@@ -1,0 +1,1128 @@
+{
+  "status": "complete",
+  "stop_reason": "step_limit",
+  "method": "online",
+  "task": "SUN397",
+  "initialization": {
+    "start": "theta0",
+    "high_dimensional_optimizer_steps": 0,
+    "initial_groups": 3,
+    "initial_rank": 3,
+    "dictionary_rank": 3,
+    "candidate_ids": [
+      [
+        15668,
+        19191,
+        15630,
+        1216,
+        13336,
+        5957,
+        346,
+        18068,
+        7544,
+        2526,
+        6338,
+        1780,
+        4954,
+        14509,
+        11411,
+        10254,
+        13813,
+        7453,
+        999,
+        8519,
+        9856,
+        17555,
+        3998,
+        2370,
+        15554,
+        13358,
+        9011,
+        1327,
+        3229,
+        839,
+        12548,
+        611
+      ],
+      [
+        13001,
+        17849,
+        15999,
+        12735,
+        7277,
+        14290,
+        11560,
+        16685,
+        11958,
+        2717,
+        18364,
+        1038,
+        11446,
+        18482,
+        4253,
+        1690,
+        7953,
+        16048,
+        3275,
+        671,
+        10194,
+        2265,
+        16857,
+        10825,
+        2093,
+        5873,
+        19147,
+        15581,
+        10521,
+        1901,
+        9046,
+        12071
+      ],
+      [
+        5203,
+        3918,
+        17181,
+        1234,
+        3621,
+        16047,
+        15722,
+        6933,
+        1325,
+        9574,
+        4487,
+        19048,
+        3345,
+        4944,
+        19504,
+        4074,
+        9445,
+        6229,
+        2936,
+        8179,
+        18332,
+        3761,
+        10446,
+        12858,
+        8114,
+        14238,
+        17507,
+        5749,
+        11460,
+        7300,
+        11077,
+        3595
+      ]
+    ],
+    "initial_grouping": {
+      "mode": "responses",
+      "measured_response_clusters": 3,
+      "proposed_groups": 3,
+      "group_sizes": [
+        1,
+        1,
+        1
+      ],
+      "cluster_labels": [
+        2,
+        0,
+        1
+      ],
+      "supported_ranks": [
+        1,
+        1,
+        1
+      ],
+      "group_budget": 3,
+      "similarity_threshold": 0.8,
+      "matched_single_group_joint_rank": 3,
+      "initialization_only": true,
+      "independent_functional_groups_claimed": false
+    },
+    "uncapped_energy_rank": 3,
+    "rank_capacity_limit": 8,
+    "ranks_are_capacity_initialization_not_group_identity": true
+  },
+  "base_validation": {
+    "CE": 1.265070915222168,
+    "accuracy": 0.6484375,
+    "n": 128
+  },
+  "final_validation": {
+    "CE": 1.2044099569320679,
+    "accuracy": 0.640625,
+    "n": 128
+  },
+  "Vcal_selected_validation": {
+    "CE": 1.2002222537994385,
+    "accuracy": 0.6328125,
+    "n": 128,
+    "model_online_cost": 196608
+  },
+  "actual_online_images": 227328,
+  "image_budget": 1000000,
+  "independent_final": {
+    "CE": 1.1133036613464355,
+    "accuracy": 0.689453125,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "independent_Vcal_selected": {
+    "CE": 1.11806321144104,
+    "accuracy": 0.689453125,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "unspent_images": 772672,
+  "compute_counts": {
+    "images": {
+      "task_gradient": 6112,
+      "FR": 13184,
+      "JVP": 56960,
+      "task_loss": 12960,
+      "read_only_direction_probe": 1920,
+      "lookahead_old_FR": 14400,
+      "lookahead_old_JVP": 39296,
+      "lookahead_old_task_loss": 9600,
+      "lookahead_old_task_gradient": 4800,
+      "lookahead_new_FR": 14400,
+      "lookahead_new_JVP": 39296,
+      "lookahead_new_task_loss": 9600,
+      "lookahead_new_task_gradient": 4800
+    },
+    "operations": {
+      "forward": 3264,
+      "backward": 491,
+      "jvp": 1059
+    }
+  },
+  "selection_reports": [
+    {
+      "exact_online_image_cost": 0,
+      "instant_validation": {
+        "CE": 1.265070915222168,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.265070915222168,
+        "accuracy": 0.6484375,
+        "n": 128,
+        "model_online_cost": 0
+      }
+    },
+    {
+      "exact_online_image_cost": 4096,
+      "instant_validation": {
+        "CE": 1.250997543334961,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.250997543334961,
+        "accuracy": 0.6484375,
+        "n": 128,
+        "model_online_cost": 4096
+      }
+    },
+    {
+      "exact_online_image_cost": 8192,
+      "instant_validation": {
+        "CE": 1.250997543334961,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.250997543334961,
+        "accuracy": 0.6484375,
+        "n": 128,
+        "model_online_cost": 4096
+      }
+    },
+    {
+      "exact_online_image_cost": 12288,
+      "instant_validation": {
+        "CE": 1.2450087070465088,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2450087070465088,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 12288
+      }
+    },
+    {
+      "exact_online_image_cost": 16384,
+      "instant_validation": {
+        "CE": 1.245044231414795,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2450087070465088,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 12288
+      }
+    },
+    {
+      "exact_online_image_cost": 20480,
+      "instant_validation": {
+        "CE": 1.245044231414795,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2450087070465088,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 12288
+      }
+    },
+    {
+      "exact_online_image_cost": 24576,
+      "instant_validation": {
+        "CE": 1.2432633638381958,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2432633638381958,
+        "accuracy": 0.6484375,
+        "n": 128,
+        "model_online_cost": 24576
+      }
+    },
+    {
+      "exact_online_image_cost": 28672,
+      "instant_validation": {
+        "CE": 1.2432633638381958,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2432633638381958,
+        "accuracy": 0.6484375,
+        "n": 128,
+        "model_online_cost": 24576
+      }
+    },
+    {
+      "exact_online_image_cost": 32768,
+      "instant_validation": {
+        "CE": 1.2432633638381958,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2432633638381958,
+        "accuracy": 0.6484375,
+        "n": 128,
+        "model_online_cost": 24576
+      }
+    },
+    {
+      "exact_online_image_cost": 36864,
+      "instant_validation": {
+        "CE": 1.2432633638381958,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2432633638381958,
+        "accuracy": 0.6484375,
+        "n": 128,
+        "model_online_cost": 24576
+      }
+    },
+    {
+      "exact_online_image_cost": 40960,
+      "instant_validation": {
+        "CE": 1.2414960861206055,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2414960861206055,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 40960
+      }
+    },
+    {
+      "exact_online_image_cost": 45056,
+      "instant_validation": {
+        "CE": 1.2414960861206055,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2414960861206055,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 40960
+      }
+    },
+    {
+      "exact_online_image_cost": 49152,
+      "instant_validation": {
+        "CE": 1.2414960861206055,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2414960861206055,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 40960
+      }
+    },
+    {
+      "exact_online_image_cost": 53248,
+      "instant_validation": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 53248
+      }
+    },
+    {
+      "exact_online_image_cost": 57344,
+      "instant_validation": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 53248
+      }
+    },
+    {
+      "exact_online_image_cost": 61440,
+      "instant_validation": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 53248
+      }
+    },
+    {
+      "exact_online_image_cost": 65536,
+      "instant_validation": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 53248
+      }
+    },
+    {
+      "exact_online_image_cost": 69632,
+      "instant_validation": {
+        "CE": 1.2389642000198364,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 53248
+      }
+    },
+    {
+      "exact_online_image_cost": 73728,
+      "instant_validation": {
+        "CE": 1.2389642000198364,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 53248
+      }
+    },
+    {
+      "exact_online_image_cost": 77824,
+      "instant_validation": {
+        "CE": 1.2389642000198364,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2388272285461426,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 53248
+      }
+    },
+    {
+      "exact_online_image_cost": 81920,
+      "instant_validation": {
+        "CE": 1.2254798412322998,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2254798412322998,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 81920
+      }
+    },
+    {
+      "exact_online_image_cost": 86016,
+      "instant_validation": {
+        "CE": 1.2254798412322998,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2254798412322998,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 81920
+      }
+    },
+    {
+      "exact_online_image_cost": 90112,
+      "instant_validation": {
+        "CE": 1.2254798412322998,
+        "accuracy": 0.65625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2254798412322998,
+        "accuracy": 0.65625,
+        "n": 128,
+        "model_online_cost": 81920
+      }
+    },
+    {
+      "exact_online_image_cost": 94208,
+      "instant_validation": {
+        "CE": 1.2250559329986572,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2250559329986572,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 94208
+      }
+    },
+    {
+      "exact_online_image_cost": 98304,
+      "instant_validation": {
+        "CE": 1.2250559329986572,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2250559329986572,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 94208
+      }
+    },
+    {
+      "exact_online_image_cost": 102400,
+      "instant_validation": {
+        "CE": 1.2250559329986572,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2250559329986572,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 94208
+      }
+    },
+    {
+      "exact_online_image_cost": 106496,
+      "instant_validation": {
+        "CE": 1.2250559329986572,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2250559329986572,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 94208
+      }
+    },
+    {
+      "exact_online_image_cost": 110592,
+      "instant_validation": {
+        "CE": 1.2241747379302979,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2241747379302979,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    },
+    {
+      "exact_online_image_cost": 114688,
+      "instant_validation": {
+        "CE": 1.2241747379302979,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2241747379302979,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    },
+    {
+      "exact_online_image_cost": 118784,
+      "instant_validation": {
+        "CE": 1.22298002243042,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.22298002243042,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 118784
+      }
+    },
+    {
+      "exact_online_image_cost": 122880,
+      "instant_validation": {
+        "CE": 1.22298002243042,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.22298002243042,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 118784
+      }
+    },
+    {
+      "exact_online_image_cost": 126976,
+      "instant_validation": {
+        "CE": 1.22298002243042,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.22298002243042,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 118784
+      }
+    },
+    {
+      "exact_online_image_cost": 131072,
+      "instant_validation": {
+        "CE": 1.2192561626434326,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2192561626434326,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 131072
+      }
+    },
+    {
+      "exact_online_image_cost": 135168,
+      "instant_validation": {
+        "CE": 1.2192561626434326,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2192561626434326,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 131072
+      }
+    },
+    {
+      "exact_online_image_cost": 139264,
+      "instant_validation": {
+        "CE": 1.2192561626434326,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2192561626434326,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 131072
+      }
+    },
+    {
+      "exact_online_image_cost": 143360,
+      "instant_validation": {
+        "CE": 1.2192561626434326,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2192561626434326,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 131072
+      }
+    },
+    {
+      "exact_online_image_cost": 147456,
+      "instant_validation": {
+        "CE": 1.2117974758148193,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2117974758148193,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 147456
+      }
+    },
+    {
+      "exact_online_image_cost": 151552,
+      "instant_validation": {
+        "CE": 1.2117974758148193,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2117974758148193,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 147456
+      }
+    },
+    {
+      "exact_online_image_cost": 155648,
+      "instant_validation": {
+        "CE": 1.2117974758148193,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2117974758148193,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 147456
+      }
+    },
+    {
+      "exact_online_image_cost": 159744,
+      "instant_validation": {
+        "CE": 1.2064590454101562,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2064590454101562,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 159744
+      }
+    },
+    {
+      "exact_online_image_cost": 163840,
+      "instant_validation": {
+        "CE": 1.2064590454101562,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2064590454101562,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 159744
+      }
+    },
+    {
+      "exact_online_image_cost": 167936,
+      "instant_validation": {
+        "CE": 1.2064590454101562,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2064590454101562,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 159744
+      }
+    },
+    {
+      "exact_online_image_cost": 172032,
+      "instant_validation": {
+        "CE": 1.202492356300354,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.202492356300354,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 172032
+      }
+    },
+    {
+      "exact_online_image_cost": 176128,
+      "instant_validation": {
+        "CE": 1.202492356300354,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.202492356300354,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 172032
+      }
+    },
+    {
+      "exact_online_image_cost": 180224,
+      "instant_validation": {
+        "CE": 1.204341173171997,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.202492356300354,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 172032
+      }
+    },
+    {
+      "exact_online_image_cost": 184320,
+      "instant_validation": {
+        "CE": 1.2032955884933472,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.202492356300354,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 172032
+      }
+    },
+    {
+      "exact_online_image_cost": 188416,
+      "instant_validation": {
+        "CE": 1.2021186351776123,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2021186351776123,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 188416
+      }
+    },
+    {
+      "exact_online_image_cost": 192512,
+      "instant_validation": {
+        "CE": 1.2024288177490234,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2021186351776123,
+        "accuracy": 0.640625,
+        "n": 128,
+        "model_online_cost": 188416
+      }
+    },
+    {
+      "exact_online_image_cost": 196608,
+      "instant_validation": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 196608
+      }
+    },
+    {
+      "exact_online_image_cost": 200704,
+      "instant_validation": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 196608
+      }
+    },
+    {
+      "exact_online_image_cost": 204800,
+      "instant_validation": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 196608
+      }
+    },
+    {
+      "exact_online_image_cost": 208896,
+      "instant_validation": {
+        "CE": 1.2081952095031738,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 196608
+      }
+    },
+    {
+      "exact_online_image_cost": 212992,
+      "instant_validation": {
+        "CE": 1.2081952095031738,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 196608
+      }
+    },
+    {
+      "exact_online_image_cost": 217088,
+      "instant_validation": {
+        "CE": 1.2027980089187622,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 196608
+      }
+    },
+    {
+      "exact_online_image_cost": 221184,
+      "instant_validation": {
+        "CE": 1.2027980089187622,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 196608
+      }
+    },
+    {
+      "exact_online_image_cost": 225280,
+      "instant_validation": {
+        "CE": 1.2027980089187622,
+        "accuracy": 0.6484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.2002222537994385,
+        "accuracy": 0.6328125,
+        "n": 128,
+        "model_online_cost": 196608
+      }
+    }
+  ],
+  "seconds": 1941.6263619549572,
+  "peak_gpu_bytes": 13498717696,
+  "actual_runtime_calls": {
+    "images": 235776,
+    "forwards": 4676,
+    "jvp": 1059,
+    "vjp": 0,
+    "training_images": 49792
+  },
+  "offline_counts": null,
+  "frozen_probe_ids": [
+    41,
+    244,
+    316,
+    323,
+    348,
+    371,
+    404,
+    409,
+    736,
+    963,
+    984,
+    1138,
+    1375,
+    1547,
+    1612,
+    1736,
+    1739,
+    1757,
+    1946,
+    1952,
+    2085,
+    2091,
+    2731,
+    2990,
+    3008,
+    3389,
+    3614,
+    3693,
+    3878,
+    3961,
+    4094,
+    4165,
+    5139,
+    5192,
+    5220,
+    5320,
+    5355,
+    5622,
+    5732,
+    5903,
+    6381,
+    6481,
+    6819,
+    7662,
+    7794,
+    7816,
+    8136,
+    8201,
+    8204,
+    8626,
+    8655,
+    8825,
+    8995,
+    9043,
+    9137,
+    9155,
+    9228,
+    9387,
+    9421,
+    9469,
+    9527,
+    9672,
+    9979,
+    10072,
+    10180,
+    10358,
+    10367,
+    10695,
+    10909,
+    10926,
+    10999,
+    11264,
+    11274,
+    11499,
+    11714,
+    11912,
+    12164,
+    12195,
+    12207,
+    12315,
+    12534,
+    12708,
+    13103,
+    13262,
+    13269,
+    13598,
+    13628,
+    13741,
+    13896,
+    13917,
+    14333,
+    14563,
+    14614,
+    14724,
+    14788,
+    14918,
+    15157,
+    15178,
+    15214,
+    15318,
+    15970,
+    16247,
+    16469,
+    16510,
+    16635,
+    16730,
+    16972,
+    17017,
+    17143,
+    17334,
+    17650,
+    17695,
+    17770,
+    17802,
+    17809,
+    17886,
+    18140,
+    18176,
+    18290,
+    18378,
+    18410,
+    18742,
+    18865,
+    18897,
+    19132,
+    19377,
+    19417,
+    19691
+  ],
+  "probe_origin": "training_pool_unlabeled",
+  "comparison": "Committed model at exact charged-cost ticks; unselected lookahead states excluded; Vcal selection separate",
+  "official_test_opened": false,
+  "independent_functional_groups_claimed": false
+}

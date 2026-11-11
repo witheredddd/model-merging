@@ -1,0 +1,35 @@
+{
+  "source_commit": "98f36a1b5135bce79be21b46e0024c22629d683d",
+  "stage": "bounded_medium_complete",
+  "tasks": {
+    "DTD": {
+      "stage": "medium_complete",
+      "target_attempts": 128,
+      "output": "/media/shangxueyuan/data1/fisher_rao_online_v5_DTD_medium_seed11_98f36a1_20261112",
+      "accepted": 124,
+      "online_images": 223328,
+      "validation": {
+        "CE": 1.5735373497009277,
+        "accuracy": 0.5390625,
+        "n": 128
+      },
+      "resume_verified": true
+    },
+    "SUN397": {
+      "stage": "medium_complete",
+      "target_attempts": 128,
+      "output": "/media/shangxueyuan/data1/fisher_rao_online_v5_SUN397_medium_seed11_98f36a1_20261112",
+      "accepted": 124,
+      "online_images": 227328,
+      "validation": {
+        "CE": 1.2044099569320679,
+        "accuracy": 0.640625,
+        "n": 128
+      },
+      "resume_verified": true
+    }
+  },
+  "updated_unix": 1794439160.8472993,
+  "active_task": null,
+  "long_training_started": false
+}

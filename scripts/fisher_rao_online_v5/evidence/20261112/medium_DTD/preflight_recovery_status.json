@@ -1,0 +1,7 @@
+{
+  "iteration": 8,
+  "online_images": 13536,
+  "complete_committed_snapshot": true,
+  "task": "DTD",
+  "archive_checkpoint": "/media/shangxueyuan/data1/fisher_rao_online_v5_DTD_medium_seed11_98f36a1_20261112/checkpoints/step_000008_images_000013536.pt"
+}
