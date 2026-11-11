@@ -1,0 +1,32 @@
+{
+  "design": "single_task_internal_functional_groups",
+  "task": "DTD",
+  "warmup": 100,
+  "steps": 50,
+  "training_forward_images": 8000,
+  "candidates": 8,
+  "X_n": 512,
+  "seeds": [
+    11,
+    23,
+    37,
+    53
+  ],
+  "code_sha256": {
+    "fiber_stage.py": "64e87c9b9a677925b8af3306077744c91248d50d80f5be8babf9d98c1c36d137",
+    "fr_math.py": "78ed4fb1f98920e1fbee58daae8c27291bc3e06346fdc0dc11f9c0f75d6b5975",
+    "structure.py": "42d5ac9cba3999b19cb4e4c34bd61c741583c24490883ca940f380017c9e2fb4",
+    "test_internal.py": "966eec39f2c79a997b3dea3cefbc3e343d2667cdaeb44d6ab98cb917e70e71fe",
+    "ec_stage.py": "bddaf82a4c382660c8dbf9b6cfce80de46d6a50fa2271237099e4bf350f0e3a0",
+    "learn.py": "694916c55ec13b0d907c6c1a495c73851ae131d5f5ec37affd53c9bf789b7542",
+    "smoke_real.py": "3103e33758df1fc8e1d994b350a50d5eeaaa91baf692a13bce03ca41c552e7df",
+    "pipeline.py": "2e821ede0699cf73483dc7f283b3f2079a8990629522d975935dd1751eb752f1",
+    "runtime_task.py": "4434b9317d724c8b2c659a93973be975c31a6f71faffd70a5d54e55a657a9607"
+  },
+  "spec_sha256": "783872619558dc94b0317556da2e06f8cd034eeeb2dcf2b22dcb83fadee603bc",
+  "phase": "development",
+  "source_scope": "same task, <=warmup steps",
+  "EC_enabled": false,
+  "fiber_enabled": false,
+  "test_opened": false
+}

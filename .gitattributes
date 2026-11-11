@@ -14,3 +14,8 @@ functional_geometry_dtd_v2_2/** -text
 functional_geometry_dtd_v2_2/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 functional_geometry_sun397_v2_*/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve the exact Fisher-Rao execution source hashes.
+scripts/fisher_rao_v2_internal_groups_r2/** -text
+scripts/fisher_rao_v2/** -text
+scripts/fisher_rao_v1/geometry.py -text

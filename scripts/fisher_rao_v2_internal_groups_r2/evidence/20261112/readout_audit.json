@@ -1,0 +1,598 @@
+[
+  {
+    "seed": 11,
+    "warm_Vcap": {
+      "ce": 1.1460306644439697,
+      "acc": 0.6875
+    },
+    "base_Vcap": {
+      "ce": 2.0709283351898193,
+      "acc": 0.421875
+    },
+    "structure": [
+      {
+        "M": 1,
+        "support": true,
+        "independent_view_ARI": 1.0,
+        "silhouette": 0.0,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": true,
+        "ranks": [
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999991
+        ],
+        "chart_retention": [
+          0.5501801112060019
+        ]
+      },
+      {
+        "M": 2,
+        "support": true,
+        "independent_view_ARI": 0.029411764705882353,
+        "silhouette": 0.05277200791970188,
+        "stability": 0.05,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999993,
+          0.9999999999999988
+        ],
+        "chart_retention": [
+          0.7699570359579921,
+          0.7413034960424472
+        ]
+      },
+      {
+        "M": 3,
+        "support": true,
+        "independent_view_ARI": 0.18823529411764706,
+        "silhouette": 0.0527464090682442,
+        "stability": 0.04,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999993,
+          0.9999999999999989,
+          0.999999999999999
+        ],
+        "chart_retention": [
+          0.7699570359579921,
+          0.9587911661080938,
+          0.9868828929487489
+        ]
+      },
+      {
+        "M": 4,
+        "support": false,
+        "independent_view_ARI": 0.48801128349788436,
+        "silhouette": 0.10711302080064106,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999993,
+          0.9999999999999988,
+          0.999999999999999,
+          1.0000000000000004
+        ],
+        "chart_retention": [
+          0.7699570359579921,
+          0.9922129983896348,
+          0.9868828929487489,
+          1.0000000000000018
+        ]
+      }
+    ],
+    "stable_rank": 12,
+    "reachability_min": 0.9999999999999982,
+    "initial_Vcal": {
+      "step": 0,
+      "ce": 0.8690207600593567,
+      "accuracy": 0.7265625,
+      "objective": 0.8690207600593567,
+      "training_images": 0,
+      "displacement": 0.0,
+      "group_parameter_norms": [
+        0.0
+      ],
+      "drift_angles": [
+        [
+          0.0,
+          9.65705618025044e-08
+        ]
+      ],
+      "overlap": []
+    },
+    "final_history": {
+      "step": 8,
+      "ce": 0.8286073803901672,
+      "accuracy": 0.734375,
+      "objective": 0.8286073803901672,
+      "training_images": 512,
+      "displacement": 0.009099264545869153,
+      "group_parameter_norms": [
+        0.009099264545869155
+      ],
+      "drift_angles": [
+        [
+          0.0018507579245651403,
+          0.009807032249826483
+        ]
+      ],
+      "overlap": []
+    },
+    "accepted_updates": 8,
+    "selected_budget": 512,
+    "used_train_images": 544,
+    "full_reference_Vcal": 0.8690207600593567,
+    "full_reference_steps": 16,
+    "selected_CE": 0.8286073803901672,
+    "Xprime_CE": 1.0025221109390259,
+    "Xprime_acc": 0.736328125
+  },
+  {
+    "seed": 23,
+    "warm_Vcap": {
+      "ce": 1.0151044130325317,
+      "acc": 0.703125
+    },
+    "base_Vcap": {
+      "ce": 2.0709283351898193,
+      "acc": 0.421875
+    },
+    "structure": [
+      {
+        "M": 1,
+        "support": true,
+        "independent_view_ARI": 1.0,
+        "silhouette": 0.0,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": true,
+        "ranks": [
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999999
+        ],
+        "chart_retention": [
+          0.5933047305617439
+        ]
+      },
+      {
+        "M": 2,
+        "support": false,
+        "independent_view_ARI": -0.0664819944598338,
+        "silhouette": 0.047219109293587476,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999999,
+          1.000000000000002
+        ],
+        "chart_retention": [
+          0.5982983920142839,
+          0.7961169340483446
+        ]
+      },
+      {
+        "M": 3,
+        "support": false,
+        "independent_view_ARI": 0.5700325732899023,
+        "silhouette": 0.05964466422629475,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999998,
+          0.9999999999999999,
+          1.000000000000002
+        ],
+        "chart_retention": [
+          0.7608287829504137,
+          0.8484735167707553,
+          0.7961169340483446
+        ]
+      },
+      {
+        "M": 4,
+        "support": false,
+        "independent_view_ARI": 0.5734430082256169,
+        "silhouette": 0.052869985406681946,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999998,
+          0.9999999999999999,
+          1.0000000000000016,
+          1.000000000000002
+        ],
+        "chart_retention": [
+          0.7608287829504137,
+          0.8484735167707553,
+          1.0000000000000013,
+          1.0000000000000033
+        ]
+      }
+    ],
+    "stable_rank": 12,
+    "reachability_min": 0.999999999999999,
+    "initial_Vcal": {
+      "step": 0,
+      "ce": 0.8435325026512146,
+      "accuracy": 0.7265625,
+      "objective": 0.8435325026512146,
+      "training_images": 0,
+      "displacement": 0.0,
+      "group_parameter_norms": [
+        0.0
+      ],
+      "drift_angles": [
+        [
+          7.742870483855356e-08,
+          9.185692672385242e-08
+        ]
+      ],
+      "overlap": []
+    },
+    "final_history": {
+      "step": 13,
+      "ce": 0.8165224194526672,
+      "accuracy": 0.75,
+      "objective": 0.8165224194526672,
+      "training_images": 832,
+      "displacement": 0.007362062203603195,
+      "group_parameter_norms": [
+        0.007362062203603195
+      ],
+      "drift_angles": [
+        [
+          0.00254459835806771,
+          0.015170437358299373
+        ]
+      ],
+      "overlap": []
+    },
+    "accepted_updates": 13,
+    "selected_budget": 832,
+    "used_train_images": 864,
+    "full_reference_Vcal": 0.8244478106498718,
+    "full_reference_steps": 26,
+    "selected_CE": 0.8165224194526672,
+    "Xprime_CE": 0.9961042404174805,
+    "Xprime_acc": 0.7265625
+  },
+  {
+    "seed": 37,
+    "warm_Vcap": {
+      "ce": 1.1177947521209717,
+      "acc": 0.6875
+    },
+    "base_Vcap": {
+      "ce": 2.0709283351898193,
+      "acc": 0.421875
+    },
+    "structure": [
+      {
+        "M": 1,
+        "support": true,
+        "independent_view_ARI": 1.0,
+        "silhouette": 0.0,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": true,
+        "ranks": [
+          2
+        ],
+        "reachable_retention": [
+          1.0
+        ],
+        "chart_retention": [
+          0.674623414387729
+        ]
+      },
+      {
+        "M": 2,
+        "support": true,
+        "independent_view_ARI": 0.20089686098654708,
+        "silhouette": 0.22106657341922445,
+        "stability": 0.39,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999994,
+          0.9999999999999996
+        ],
+        "chart_retention": [
+          0.9367552344532296,
+          0.7387346131233515
+        ]
+      },
+      {
+        "M": 3,
+        "support": false,
+        "independent_view_ARI": 0.5054945054945055,
+        "silhouette": 0.21645648309779672,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999983,
+          0.9999999999999996,
+          1.0000000000000002
+        ],
+        "chart_retention": [
+          0.9673276587918692,
+          0.7387346131233515,
+          0.9999999999999997
+        ]
+      },
+      {
+        "M": 4,
+        "support": false,
+        "independent_view_ARI": 0.5827186512118019,
+        "silhouette": 0.21285678254465046,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "reachable_retention": [
+          0.9999999999999984,
+          0.9999999999999996,
+          1.0000000000000002,
+          0.9999999999999994
+        ],
+        "chart_retention": [
+          0.9999999999999986,
+          0.7387346131233515,
+          0.9999999999999997,
+          0.9999999999999996
+        ]
+      }
+    ],
+    "stable_rank": 12,
+    "reachability_min": 0.9999999999999982,
+    "initial_Vcal": {
+      "step": 0,
+      "ce": 0.9602925777435303,
+      "accuracy": 0.7265625,
+      "objective": 0.9602925777435303,
+      "training_images": 0,
+      "displacement": 0.0,
+      "group_parameter_norms": [
+        0.0
+      ],
+      "drift_angles": [
+        [
+          9.424321830774489e-08,
+          1.1348386266624798e-07
+        ]
+      ],
+      "overlap": []
+    },
+    "final_history": {
+      "step": 3,
+      "ce": 0.9359792470932007,
+      "accuracy": 0.7265625,
+      "objective": 0.9359792470932007,
+      "training_images": 192,
+      "displacement": 0.001888980467860151,
+      "group_parameter_norms": [
+        0.001888980467860151
+      ],
+      "drift_angles": [
+        [
+          1.001264895637813e-06,
+          0.00029074088205530304
+        ]
+      ],
+      "overlap": []
+    },
+    "accepted_updates": 3,
+    "selected_budget": 192,
+    "used_train_images": 224,
+    "full_reference_Vcal": 0.8520118594169617,
+    "full_reference_steps": 6,
+    "selected_CE": 0.9359792470932007,
+    "Xprime_CE": 1.0353885889053345,
+    "Xprime_acc": 0.734375
+  },
+  {
+    "seed": 53,
+    "warm_Vcap": {
+      "ce": 1.0971094369888306,
+      "acc": 0.7265625
+    },
+    "base_Vcap": {
+      "ce": 2.0709283351898193,
+      "acc": 0.421875
+    },
+    "structure": [
+      {
+        "M": 1,
+        "support": true,
+        "independent_view_ARI": 1.0,
+        "silhouette": 0.0,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": true,
+        "ranks": [
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999993
+        ],
+        "chart_retention": [
+          0.6228120318694056
+        ]
+      },
+      {
+        "M": 2,
+        "support": true,
+        "independent_view_ARI": -0.05866177818515124,
+        "silhouette": 0.15706062326359074,
+        "stability": 0.29,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999994,
+          1.0
+        ],
+        "chart_retention": [
+          0.6998750792765669,
+          0.9579105426216986
+        ]
+      },
+      {
+        "M": 3,
+        "support": false,
+        "independent_view_ARI": -0.045666356011183594,
+        "silhouette": 0.1734877852788875,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999994,
+          1.0,
+          0.9999999999999967
+        ],
+        "chart_retention": [
+          0.6998750792765669,
+          0.9882171981579044,
+          0.9999999999999963
+        ]
+      },
+      {
+        "M": 4,
+        "support": false,
+        "independent_view_ARI": 0.7283950617283951,
+        "silhouette": 0.16351186669916484,
+        "stability": 1.0,
+        "equivalent_groups": false,
+        "qualified": false,
+        "ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "reachable_retention": [
+          0.9999999999999994,
+          1.0,
+          0.9999999999999989,
+          0.9999999999999967
+        ],
+        "chart_retention": [
+          0.8331572205398933,
+          0.9882171981579044,
+          0.978528960651498,
+          0.9999999999999963
+        ]
+      }
+    ],
+    "stable_rank": 12,
+    "reachability_min": 0.9999999999999907,
+    "initial_Vcal": {
+      "step": 0,
+      "ce": 0.9902107119560242,
+      "accuracy": 0.703125,
+      "objective": 0.9902107119560242,
+      "training_images": 0,
+      "displacement": 0.0,
+      "group_parameter_norms": [
+        0.0
+      ],
+      "drift_angles": [
+        [
+          0.0,
+          1.2467205919833125e-07
+        ]
+      ],
+      "overlap": []
+    },
+    "final_history": {
+      "step": 22,
+      "ce": 0.9209914803504944,
+      "accuracy": 0.7109375,
+      "objective": 0.9209914803504944,
+      "training_images": 1408,
+      "displacement": 0.009373861856884297,
+      "group_parameter_norms": [
+        0.009373861856884292
+      ],
+      "drift_angles": [
+        [
+          0.002514725462246941,
+          0.039314017416161584
+        ]
+      ],
+      "overlap": []
+    },
+    "accepted_updates": 22,
+    "selected_budget": 1408,
+    "used_train_images": 1440,
+    "full_reference_Vcal": 0.9338145852088928,
+    "full_reference_steps": 44,
+    "selected_CE": 0.9209914803504944,
+    "Xprime_CE": 0.9617360234260559,
+    "Xprime_acc": 0.7578125
+  }
+]

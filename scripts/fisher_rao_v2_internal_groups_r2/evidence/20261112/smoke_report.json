@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "coordinate_gradient_error": 0.0,
+  "warm_offset_preserved": true,
+  "reference_experts_read": false,
+  "test_opened": false,
+  "main_protocol": false,
+  "ranks": {
+    "A": 2,
+    "B": 2,
+    "C": 2,
+    "D": 2,
+    "F": 2
+  },
+  "calls": {
+    "images": 1544,
+    "forwards": 114,
+    "jvp": 13,
+    "vjp": 1,
+    "training_images": 836
+  }
+}
