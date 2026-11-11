@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "device": "CPU",
+  "task": "synthetic_CE_controlled_batch_family_shift",
+  "training_probe_function_fixed": true,
+  "cold_high_dimensional_optimizer_steps": 0,
+  "windows": 2,
+  "dictionary_version": 1,
+  "groups": 2,
+  "independent_future_CE_old": 0.6931471805599453,
+  "independent_future_CE_new": 0.5367344881797925,
+  "old_branch_image_cost": 38,
+  "new_branch_image_cost": 38,
+  "pure_dictionary_parameter_error": 2.7755578924351167e-17,
+  "subsequent_coordinate_parameter_change": 0.20000000000000004,
+  "global_invariant": true,
+  "online_images": 614,
+  "operations": {
+    "forward": 167,
+    "backward": 30,
+    "jvp": 43
+  },
+  "A100_executed": false,
+  "CLIP_executed": false,
+  "DTD_accuracy": null,
+  "limitations": "Synthetic mechanism test; does not validate DTD performance or independent functional groups"
+}

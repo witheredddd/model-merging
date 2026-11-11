@@ -1,5 +1,7 @@
 # model-merging — functional geometry / TFPML
 
+[在线几何 v5 代码与 CPU 验证](scripts/fisher_rao_online_v5/README.md)实现零预热、全局 `theta0+SΣZa` 状态、当前真实 JVP、在线字典与组候选、等成本前瞻及回滚。23 项 CPU 测试和合成分类两窗口检查通过；尚未进行 CLIP/A100 或 DTD 性能验收，旧 v4 实验保持停止。
+
 最新 Fisher–Rao 单任务实现见 [v3：任务损失与组条件响应共同学习](scripts/fisher_rao_response_v3/README.md)。它替代 r2 的分组后学习逻辑，使用统一提升、窗口化方向更新与可恢复训练；旧版实验另行保留。秩 4、8 对照及独立干预用于检验组结构，不能把初始化簇直接称为已发现的功能模块。
 
 对 v3 的下一轮审查诊断见 [精确预算、几何拒绝与同容量功能控制](scripts/fisher_rao_diagnostics_v4/README.md)：即时模型与开发集选优分开，四个训练种子，主模型仍固定 K=1、B=0、S，不叠加新的几何模块。
