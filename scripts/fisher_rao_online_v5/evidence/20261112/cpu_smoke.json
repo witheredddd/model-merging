@@ -11,8 +11,8 @@
   "independent_future_CE_new": 0.5367344881797925,
   "old_branch_image_cost": 38,
   "new_branch_image_cost": 38,
-  "pure_dictionary_parameter_error": 2.7755578924351167e-17,
-  "subsequent_coordinate_parameter_change": 0.20000000000000004,
+  "pure_dictionary_parameter_error": 0.0,
+  "subsequent_coordinate_parameter_change": 0.2000000000000001,
   "global_invariant": true,
   "online_images": 614,
   "operations": {

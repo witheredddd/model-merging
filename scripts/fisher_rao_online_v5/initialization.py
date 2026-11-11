@@ -3,6 +3,7 @@ import torch
 from state import ModelState,Group
 from geometry import refresh
 from manifold import span
+from dictionary import streaming_dictionary
 
 
 def initialize(raw,oracle,seed=11,candidates=3,dictionary_size=8,gamma=1e-5,energy=.95,maximum_total_rank=8):
@@ -21,7 +22,7 @@ def initialize(raw,oracle,seed=11,candidates=3,dictionary_size=8,gamma=1e-5,ener
         directions.append(-gradient/norm);ids.append(list(sample['ids']))
     if not directions:raise ValueError('No finite cold-start task directions')
     # d is a maximum compute budget, not an instruction to manufacture directions.
-    S=span(torch.stack(directions,dim=1).double())[:,:dictionary_size].to(base.dtype)
+    S=streaming_dictionary(directions,dictionary_size)
     provisional=ModelState(base,S,(Group('g0',torch.eye(S.shape[1],device=S.device,dtype=torch.double),
         torch.zeros(S.shape[1],device=S.device,dtype=torch.double)),)).validate()
     geometry=refresh(provisional,oracle,gamma)

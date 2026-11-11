@@ -1,6 +1,8 @@
 import unittest
 from dataclasses import replace
 import torch
+from unittest.mock import patch
+from dictionary import streaming_dictionary
 from fr_math import embedding
 from state import ModelState,Group
 from geometry import refresh,fr_preconditioned_direction,coefficient_step_radius
@@ -63,6 +65,21 @@ def basic_state(raw,rank=1):
 
 
 class OnlineV5Tests(unittest.TestCase):
+    def test_parameter_dictionary_never_uses_tall_dense_SVD(self):
+        generator=torch.Generator().manual_seed(18)
+        directions=[torch.randn(2000,generator=generator,dtype=torch.double) for _ in range(3)]
+        with patch('torch.linalg.svd',side_effect=AssertionError('Tall SVD forbidden')):
+            S=streaming_dictionary(directions,3)
+        torch.testing.assert_close(S.T@S,torch.eye(3,dtype=torch.double),atol=1e-12,rtol=1e-12)
+        X=torch.stack(directions,1)
+        self.assertLess(float((X-S@(S.T@X)).norm()/X.norm()),1e-12)
+
+    def test_parameter_dictionary_skips_zero_and_duplicate_candidates(self):
+        e=torch.eye(5,dtype=torch.float32)
+        S=streaming_dictionary([e[:,0],2*e[:,0],torch.zeros(5),e[:,1]],4)
+        self.assertEqual(S.shape,(5,2))
+        torch.testing.assert_close(S.T@S,torch.eye(2),atol=1e-6,rtol=1e-6)
+
     def test_cold_start_and_first_update_have_no_high_dimensional_bypass(self):
         raw=ToyOracle();ledger=Ledger();oracle=MeasuredOracle(raw,ledger)
         state,geometry,report=initialize(raw,oracle,candidates=3,dictionary_size=3)
