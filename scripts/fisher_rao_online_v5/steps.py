@@ -68,12 +68,17 @@ def coordinate_trial(state,geometry,oracle,sample,settings,radius):
     new_radius=max(minimum,min(maximum,new_radius))
     selected=proposed.validate() if accepted else state
     dx=selected.x-state.x;vertical=dx-geometry.V@(geometry.V.T@dx)
+    actual_da=selected.a-state.a
+    reconstructed=state.x+state.G@actual_da
     return selected,new_radius,dict(accepted=accepted,loss_before=before,loss_after=after,
         predicted_gain=predicted,actual_gain=gain,ratio=ratio,tracking=check,
         reason='accepted' if accepted else ('local_model_error' if not check['safe'] else 'task_or_numerical_control'),
         new_increment_near_null_energy=float(vertical.square().sum()),solver=info,
         radius_before=radius,radius_after=new_radius,step_shrunk=bool(new_radius<radius),
         actual_parameter_step_norm=float(dx.norm()),
+        actual_coordinate_step_norm=float(actual_da.norm()),
+        coordinate_norm=float(selected.a.norm()),coordinate_maximum=float(selected.a.abs().max()),
+        coordinate_accumulation_relative_error=float((selected.x-reconstructed).norm()/reconstructed.norm().clamp_min(1e-30)),
         sample_sensitivity_median=float(geometry.sensitivity_rates.median()),
         sample_sensitivity_max=float(geometry.sensitivity_rates.max()),
         sensitivity_quantile=settings.sensitivity_quantile)

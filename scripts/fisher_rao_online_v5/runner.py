@@ -4,6 +4,7 @@ from dataclasses import asdict,replace
 import hashlib
 import json
 import math
+import signal
 from pathlib import Path
 import time
 import torch
@@ -31,6 +32,9 @@ def main():
     parser.add_argument('--root',type=Path,default=Path('/home/shangxueyuan/merging/tsv'))
     parser.add_argument('--output',type=Path)
     parser.add_argument('--method',choices=['online','adamw'],default='online')
+    parser.add_argument('--task',choices=['DTD','SUN397'],default='DTD')
+    parser.add_argument('--resume',type=Path,help='Resume a complete committed online checkpoint in this output directory')
+    parser.add_argument('--checkpoint-every',type=int,default=8)
     parser.add_argument('--seed',type=int,default=11)
     parser.add_argument('--steps',type=int,default=64)
     parser.add_argument('--until-budget',action='store_true')
@@ -80,7 +84,7 @@ def main():
     settings=replace(settings,lookahead=replace(settings.lookahead,steps=args.lookahead_steps),
         step=replace(settings.step,functional_angle=args.functional_angle,radius_cap_factor=args.trust_cap_factor,
                      sensitivity_quantile=args.sensitivity_quantile))
-    description=dict(algorithm='online_geometry_v5',settings=asdict(settings),method=args.method,
+    description=dict(algorithm='online_geometry_v5',settings=asdict(settings),method=args.method,task=args.task,
         parameter_invariant='theta0+S_sum_Za',warmup_steps=0,automatic_job_launch=False,
         official_test_opened=False,A100_validated=False,independent_functional_groups_claimed=False)
     if args.describe:
@@ -88,21 +92,31 @@ def main():
     if args.output is None:parser.error('--output is required for a manual training run')
     if args.random_initial_partition and (args.single_group or args.frozen_geometry):
         parser.error('Random partition is a separate experimental control')
-    if args.steps<1 or args.batch_size<1 or args.report_every<1 or args.report_images<1 or args.budget_images<1:
+    if args.steps<1 or args.batch_size<1 or args.report_every<1 or args.report_images<1 or args.budget_images<1 or args.checkpoint_every<1:
         parser.error('Step, batch, report and image budgets must be positive')
     args.output.mkdir(parents=True,exist_ok=True)
-    if any(args.output.iterdir()):raise ValueError('Use a fresh output directory; stopped v4 jobs must not be resumed')
+    if args.resume is None and any(args.output.iterdir()):raise ValueError('Use a fresh output directory for a new run')
+    if args.resume is not None and (args.method!='online' or args.resume.resolve().parent not in
+                                    (args.output.resolve(),args.output.resolve()/'checkpoints')):
+        raise ValueError('Resume requires an online checkpoint in the same output directory')
     source={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in Path(__file__).parent.glob('*.py')}
-    arguments=dict(vars(args),root=str(args.root),output=str(args.output))
-    write(args.output/'config.json',dict(**description,args=arguments,source_sha256=source))
+    arguments={k:str(v) if isinstance(v,Path) else v for k,v in vars(args).items()}
+    configuration=dict(**description,args=arguments,source_sha256=source)
+    if args.resume is None:write(args.output/'config.json',configuration)
     from clip_runtime import ClipTask
-    raw=ClipTask(args.root,args.output,args.probe_size,args.batch_size)
-    base_metrics=raw.validation(raw.theta0)
-    write(args.output/'base_validation.json',dict(theta='untrained_theta0',metrics=base_metrics))
+    raw=ClipTask(args.root,args.output,args.probe_size,args.batch_size,task=args.task)
+    if args.resume is None:
+        base_metrics=raw.validation(raw.theta0)
+        write(args.output/'base_validation.json',dict(theta='untrained_theta0',metrics=base_metrics))
+    else:base_metrics=json.loads((args.output/'base_validation.json').read_text())['metrics']
+    split_hash=hashlib.sha256(json.dumps(raw.rt.input['split'],sort_keys=True).encode()).hexdigest()
+    identity=dict(task=args.task,source_sha256=source,base_sha256=raw.rt.input['base_sha256'],
+        head_sha256=raw.rt.input['head_sha256'],split_sha256=split_hash,batch_size=args.batch_size,
+        asset_loader_sha256=hashlib.sha256((args.root/'scripts/fisher_rao_diagnostics_v4/runtime_task.py').read_bytes()).hexdigest())
     start=time.monotonic();torch.cuda.reset_peak_memory_stats();torch.cuda.synchronize()
     history=[];stop='step_limit'
     if args.method=='online':
-        engine=OnlineTrainer(raw,settings,args.budget_images)
+        engine=OnlineTrainer(raw,settings,args.budget_images) if args.resume is None else None
         parameter=lambda:engine.state.parameters()
         used=lambda:engine.ledger.used
         update=lambda step:engine.step()
@@ -126,17 +140,53 @@ def main():
         temporary=args.output/'selected_state.pt.tmp';torch.save(checkpoint,temporary)
         temporary.replace(args.output/'selected_state.pt')
     reporter=CostReporter(grid,state_now,evaluate,save_best)
-    reporter.bootstrap_base(used())
+    from checkpointing import capture,restore,atomic_save,archive_snapshot
+    elapsed_before=0.
+    if args.resume is not None:
+        payload=torch.load(args.resume,map_location='cpu',weights_only=True)
+        engine=restore(payload,raw,settings,identity,reporter)
+        if engine.ledger.limit!=args.budget_images:raise ValueError('Resume budget must match checkpoint')
+        atomic_save(args.output/'selected_state.pt',payload['selected'])
+        history=list(engine.events);elapsed_before=payload['elapsed_seconds']
+        expected_x=torch.cat([g['Z'] for g in payload['state']['groups']],1)@torch.cat([g['a'] for g in payload['state']['groups']])
+        resume_error=float((engine.state.x.cpu()-expected_x).norm())
+        if resume_error>1e-12*(1+float(expected_x.norm())):raise ValueError('Resume parameter coefficients changed')
+        write(args.output/'resume_status.json',dict(resumed_iteration=engine.iteration,resumed_online_images=used(),
+            source_checkpoint=str(args.resume),args=arguments,
+            coefficient_reconstruction_error=resume_error,restored_window=engine.window,
+            restored_persistence_windows=len(engine.persistence.windows),
+            recovery_scope='Exact committed checkpoint; any work lost after that checkpoint is replayed and not included in restored ledger'))
+        del payload
+    else:reporter.bootstrap_base(used())
     if args.method=='online':engine.ledger.on_progress=reporter.before_progress
+    interrupted=[]
+    def request_stop(number,frame):interrupted.append(number)
+    signal.signal(signal.SIGTERM,request_stop)
+    signal.signal(signal.SIGINT,request_stop)
+    def save_recovery():
+        if args.method!='online':return
+        selected=torch.load(args.output/'selected_state.pt',map_location='cpu',weights_only=True)
+        snapshot=capture(engine,reporter,identity,selected,elapsed_before+time.monotonic()-start)
+        archive=archive_snapshot(args.output,snapshot)
+        write(args.output/'coordinate_events.json',history)
+        write(args.output/'geometry_events.json',engine.geometry_events)
+        write(args.output/'recovery_status.json',dict(iteration=engine.iteration,online_images=used(),
+            complete_committed_snapshot=True,task=args.task,archive_checkpoint=str(archive)))
+    save_recovery()
     maximum_steps=args.budget_images if args.until_budget else args.steps
-    for step in range(maximum_steps):
+    first_step=engine.iteration if args.method=='online' else 0
+    for step in range(first_step,maximum_steps):
         try:history.append(update(step))
         except BudgetEnd:
             reporter.flush();stop='online_image_budget';break
         reporter.flush()
+        if (step+1)%args.checkpoint_every==0:save_recovery()
         if (step+1)%args.report_every==0 or step+1==maximum_steps:
             write(args.output/'status.json',dict(stage='manual_training',step=step+1,actual_online_images=used(),
-                last_cost_checkpoint=reporter.rows[-1]))
+                last_cost_checkpoint=reporter.rows[-1],elapsed_seconds=elapsed_before+time.monotonic()-start,
+                latest_coordinate_event=history[-1]))
+        if interrupted:stop='signal_after_committed_step';break
+    save_recovery()
     final_metrics=raw.validation(parameter())
     final_independent=raw.generalization(parameter())
     selected_checkpoint=torch.load(args.output/'selected_state.pt',map_location='cpu',weights_only=True)
@@ -180,12 +230,12 @@ def main():
         counts=dict(images=used(),backward=engine.backward);initialization=dict(start='theta0',control_only=True)
     torch.cuda.synchronize()
     write(args.output/'coordinate_events.json',history)
-    write(args.output/'report.json',dict(status='complete',stop_reason=stop,method=args.method,
+    write(args.output/'report.json',dict(status='stopped' if interrupted else 'complete',stop_reason=stop,method=args.method,task=args.task,
         initialization=initialization,base_validation=base_metrics,final_validation=final_metrics,
         Vcal_selected_validation=reporter.best,actual_online_images=used(),image_budget=args.budget_images,
         independent_final=final_independent,independent_Vcal_selected=selected_independent,
         unspent_images=args.budget_images-used(),compute_counts=counts,
-        selection_reports=reporter.rows,seconds=time.monotonic()-start,peak_gpu_bytes=torch.cuda.max_memory_allocated(),
+        selection_reports=reporter.rows,seconds=elapsed_before+time.monotonic()-start,peak_gpu_bytes=torch.cuda.max_memory_allocated(),
         actual_runtime_calls=raw.rt.calls,
         offline_counts=offline_counts,
         frozen_probe_ids=raw.rt.split['X'],probe_origin='training_pool_unlabeled',

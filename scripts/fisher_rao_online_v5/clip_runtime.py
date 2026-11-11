@@ -20,12 +20,14 @@ def split_training_probe(train_ids,size,seed=20261112):
 
 
 class ClipTask:
-    def __init__(self,root,output,probe_size=128,batch_size=32,probe_seed=20261112):
+    def __init__(self,root,output,probe_size=128,batch_size=32,probe_seed=20261112,task='DTD'):
+        if task not in ('DTD','SUN397'):raise ValueError('Task adapter not validated for this task')
         root=Path(root);dependency=root/'scripts/fisher_rao_diagnostics_v4/runtime_task.py'
         spec=importlib.util.spec_from_file_location('fisher_rao_v5_asset_loader',dependency)
         if spec is None or spec.loader is None:raise FileNotFoundError(str(dependency))
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
-        runtime=module.TaskRuntime(root,output,'DTD',probe_size)
+        runtime=module.TaskRuntime(root,output,task,probe_size)
+        if runtime.classes!={'DTD':47,'SUN397':397}[task]:raise ValueError('Task/head class count mismatch')
         probe,training=split_training_probe(runtime.split['train'],probe_size,probe_seed)
         old_X=runtime.split['X']
         runtime.split={**runtime.split,'X':probe,'train':training,'unused_old_development_X':old_X}

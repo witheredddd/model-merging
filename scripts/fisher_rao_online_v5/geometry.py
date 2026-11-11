@@ -96,11 +96,17 @@ def fr_preconditioned_direction(state,geometry,gradient_x,epsilon=1e-8,condition
         step=-(Q.T@gx);fallback=str(error)
     delta=V@(step/s)
     dx=G@delta
+    intended=Q@step
+    reconstruction=float((dx-intended).norm()/intended.norm().clamp_min(1e-30))
     vertical=dx-geometry.V@(geometry.V.T@dx)
     return delta,dict(condition=condition,fallback=fallback,
         proposed_increment_near_null_energy=float(vertical.square().sum()),
         coefficient_gradient=gradient.detach().cpu(),system_dimension=len(gradient),
         effective_system_dimension=rank,coordinate_nullity=G.shape[1]-rank,
+        minimum_retained_singular_value=float(s.min()) if rank else None,
+        maximum_singular_value=float(s.max()) if rank else 0.,
+        unscaled_coordinate_step_norm=float(delta.norm()),
+        parameter_step_reconstruction_relative_error=reconstruction,
         solver_space='represented_dictionary_subspace')
 
 

@@ -83,3 +83,5 @@ python scripts/fisher_rao_online_v5/runner.py --method adamw \
 - 字典增长的等成本比较给较小分支加入真实外部候选 JVP 检查；小矩阵系统维数仍可能不同，因此不是严格等 FLOPs。全参数候选梯度及密集 S 的真实显存/速度仍需 CLIP profiling。
 - 当前支持局部误差控制和在线重线性化；没有开启任意自由 B、多步高维 CG、纤维优化或 EC。不把预留机制计作已完成实验。
 - 长程冻结复用、跨种子功能身份和容量匹配的整套正式统计尚未验收。不能因 S 可随模型移动，就宣称整个训练只需一个固定低维空间。
+
+[DTD and SUN397 medium-run protocol, complete resume and historical checkpoints](MEDIUM_RUN.md): 46 CPU tests passed; this is not a claim that the real medium runs have completed.
