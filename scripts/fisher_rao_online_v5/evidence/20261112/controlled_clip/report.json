@@ -1,0 +1,1197 @@
+{
+  "status": "complete",
+  "stop_reason": "step_limit",
+  "method": "online",
+  "initialization": {
+    "start": "theta0",
+    "high_dimensional_optimizer_steps": 0,
+    "initial_groups": 3,
+    "initial_rank": 3,
+    "dictionary_rank": 3,
+    "candidate_ids": [
+      [
+        847,
+        1896,
+        528,
+        2666,
+        1506,
+        417,
+        1824,
+        1743,
+        1401,
+        3434,
+        101,
+        193,
+        2572,
+        3385,
+        1501,
+        1672,
+        3725,
+        2824,
+        1141,
+        92,
+        2535,
+        168,
+        1667,
+        1802,
+        3592,
+        1509,
+        3406,
+        2303,
+        2072,
+        785,
+        272,
+        1977
+      ],
+      [
+        3743,
+        2695,
+        1106,
+        1217,
+        802,
+        196,
+        1025,
+        3468,
+        508,
+        2751,
+        233,
+        3382,
+        603,
+        2462,
+        737,
+        1412,
+        517,
+        3264,
+        579,
+        2691,
+        953,
+        243,
+        3144,
+        1887,
+        3572,
+        616,
+        3177,
+        1931,
+        748,
+        365,
+        1426,
+        1818
+      ],
+      [
+        2876,
+        3479,
+        1890,
+        50,
+        1678,
+        3335,
+        208,
+        2239,
+        2538,
+        3496,
+        1139,
+        978,
+        2870,
+        1553,
+        634,
+        1111,
+        2498,
+        1554,
+        794,
+        421,
+        449,
+        595,
+        2986,
+        3645,
+        134,
+        3373,
+        1263,
+        1172,
+        105,
+        509,
+        3750,
+        2146
+      ]
+    ],
+    "initial_grouping": {
+      "mode": "responses",
+      "measured_response_clusters": 3,
+      "proposed_groups": 3,
+      "group_sizes": [
+        1,
+        1,
+        1
+      ],
+      "cluster_labels": [
+        1,
+        2,
+        0
+      ],
+      "supported_ranks": [
+        1,
+        1,
+        1
+      ],
+      "group_budget": 3,
+      "similarity_threshold": 0.8,
+      "matched_single_group_joint_rank": 3,
+      "initialization_only": true,
+      "independent_functional_groups_claimed": false
+    },
+    "uncapped_energy_rank": 3,
+    "rank_capacity_limit": 8,
+    "ranks_are_capacity_initialization_not_group_identity": true
+  },
+  "base_validation": {
+    "CE": 1.9371068477630615,
+    "accuracy": 0.453125,
+    "n": 128
+  },
+  "final_validation": {
+    "CE": 1.744988203048706,
+    "accuracy": 0.515625,
+    "n": 128
+  },
+  "Vcal_selected_validation": {
+    "CE": 1.7488982677459717,
+    "accuracy": 0.515625,
+    "n": 128,
+    "model_online_cost": 110592
+  },
+  "actual_online_images": 123488,
+  "image_budget": 200000,
+  "independent_final": {
+    "CE": 1.8711603879928589,
+    "accuracy": 0.486328125,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "independent_Vcal_selected": {
+    "CE": 1.8767929077148438,
+    "accuracy": 0.48828125,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "unspent_images": 76512,
+  "compute_counts": {
+    "images": {
+      "task_gradient": 1920,
+      "FR": 6016,
+      "JVP": 29184,
+      "task_loss": 6464,
+      "read_only_direction_probe": 1056,
+      "lookahead_old_FR": 9408,
+      "lookahead_old_JVP": 20608,
+      "lookahead_old_task_loss": 6272,
+      "lookahead_old_task_gradient": 3136,
+      "lookahead_new_FR": 9408,
+      "lookahead_new_JVP": 20608,
+      "lookahead_new_task_loss": 6272,
+      "lookahead_new_task_gradient": 3136
+    },
+    "operations": {
+      "forward": 1792,
+      "backward": 256,
+      "jvp": 550
+    }
+  },
+  "selection_reports": [
+    {
+      "exact_online_image_cost": 0,
+      "instant_validation": {
+        "CE": 1.9371068477630615,
+        "accuracy": 0.453125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.9371068477630615,
+        "accuracy": 0.453125,
+        "n": 128,
+        "model_online_cost": 0
+      }
+    },
+    {
+      "exact_online_image_cost": 2048,
+      "instant_validation": {
+        "CE": 1.8472938537597656,
+        "accuracy": 0.4765625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.8472938537597656,
+        "accuracy": 0.4765625,
+        "n": 128,
+        "model_online_cost": 2048
+      }
+    },
+    {
+      "exact_online_image_cost": 4096,
+      "instant_validation": {
+        "CE": 1.8472938537597656,
+        "accuracy": 0.4765625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.8472938537597656,
+        "accuracy": 0.4765625,
+        "n": 128,
+        "model_online_cost": 2048
+      }
+    },
+    {
+      "exact_online_image_cost": 6144,
+      "instant_validation": {
+        "CE": 1.8472938537597656,
+        "accuracy": 0.4765625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.8472938537597656,
+        "accuracy": 0.4765625,
+        "n": 128,
+        "model_online_cost": 2048
+      }
+    },
+    {
+      "exact_online_image_cost": 8192,
+      "instant_validation": {
+        "CE": 1.8472938537597656,
+        "accuracy": 0.4765625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.8472938537597656,
+        "accuracy": 0.4765625,
+        "n": 128,
+        "model_online_cost": 2048
+      }
+    },
+    {
+      "exact_online_image_cost": 10240,
+      "instant_validation": {
+        "CE": 1.820220708847046,
+        "accuracy": 0.4921875,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.820220708847046,
+        "accuracy": 0.4921875,
+        "n": 128,
+        "model_online_cost": 10240
+      }
+    },
+    {
+      "exact_online_image_cost": 12288,
+      "instant_validation": {
+        "CE": 1.820220708847046,
+        "accuracy": 0.4921875,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.820220708847046,
+        "accuracy": 0.4921875,
+        "n": 128,
+        "model_online_cost": 10240
+      }
+    },
+    {
+      "exact_online_image_cost": 14336,
+      "instant_validation": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128,
+        "model_online_cost": 14336
+      }
+    },
+    {
+      "exact_online_image_cost": 16384,
+      "instant_validation": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128,
+        "model_online_cost": 14336
+      }
+    },
+    {
+      "exact_online_image_cost": 18432,
+      "instant_validation": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128,
+        "model_online_cost": 14336
+      }
+    },
+    {
+      "exact_online_image_cost": 20480,
+      "instant_validation": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128,
+        "model_online_cost": 14336
+      }
+    },
+    {
+      "exact_online_image_cost": 22528,
+      "instant_validation": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128,
+        "model_online_cost": 14336
+      }
+    },
+    {
+      "exact_online_image_cost": 24576,
+      "instant_validation": {
+        "CE": 1.790238857269287,
+        "accuracy": 0.484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.790238857269287,
+        "accuracy": 0.484375,
+        "n": 128,
+        "model_online_cost": 24576
+      }
+    },
+    {
+      "exact_online_image_cost": 26624,
+      "instant_validation": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128,
+        "model_online_cost": 26624
+      }
+    },
+    {
+      "exact_online_image_cost": 28672,
+      "instant_validation": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128,
+        "model_online_cost": 26624
+      }
+    },
+    {
+      "exact_online_image_cost": 30720,
+      "instant_validation": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128,
+        "model_online_cost": 26624
+      }
+    },
+    {
+      "exact_online_image_cost": 32768,
+      "instant_validation": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128,
+        "model_online_cost": 26624
+      }
+    },
+    {
+      "exact_online_image_cost": 34816,
+      "instant_validation": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7751514911651611,
+        "accuracy": 0.5078125,
+        "n": 128,
+        "model_online_cost": 26624
+      }
+    },
+    {
+      "exact_online_image_cost": 36864,
+      "instant_validation": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128,
+        "model_online_cost": 36864
+      }
+    },
+    {
+      "exact_online_image_cost": 38912,
+      "instant_validation": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128,
+        "model_online_cost": 36864
+      }
+    },
+    {
+      "exact_online_image_cost": 40960,
+      "instant_validation": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128,
+        "model_online_cost": 36864
+      }
+    },
+    {
+      "exact_online_image_cost": 43008,
+      "instant_validation": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128,
+        "model_online_cost": 36864
+      }
+    },
+    {
+      "exact_online_image_cost": 45056,
+      "instant_validation": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128,
+        "model_online_cost": 36864
+      }
+    },
+    {
+      "exact_online_image_cost": 47104,
+      "instant_validation": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.772359848022461,
+        "accuracy": 0.5,
+        "n": 128,
+        "model_online_cost": 36864
+      }
+    },
+    {
+      "exact_online_image_cost": 49152,
+      "instant_validation": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 49152
+      }
+    },
+    {
+      "exact_online_image_cost": 51200,
+      "instant_validation": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 49152
+      }
+    },
+    {
+      "exact_online_image_cost": 53248,
+      "instant_validation": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 49152
+      }
+    },
+    {
+      "exact_online_image_cost": 55296,
+      "instant_validation": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 49152
+      }
+    },
+    {
+      "exact_online_image_cost": 57344,
+      "instant_validation": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 49152
+      }
+    },
+    {
+      "exact_online_image_cost": 59392,
+      "instant_validation": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.764051914215088,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 49152
+      }
+    },
+    {
+      "exact_online_image_cost": 61440,
+      "instant_validation": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 61440
+      }
+    },
+    {
+      "exact_online_image_cost": 63488,
+      "instant_validation": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 61440
+      }
+    },
+    {
+      "exact_online_image_cost": 65536,
+      "instant_validation": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 61440
+      }
+    },
+    {
+      "exact_online_image_cost": 67584,
+      "instant_validation": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 61440
+      }
+    },
+    {
+      "exact_online_image_cost": 69632,
+      "instant_validation": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 61440
+      }
+    },
+    {
+      "exact_online_image_cost": 71680,
+      "instant_validation": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7635447978973389,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 61440
+      }
+    },
+    {
+      "exact_online_image_cost": 73728,
+      "instant_validation": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 73728
+      }
+    },
+    {
+      "exact_online_image_cost": 75776,
+      "instant_validation": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 73728
+      }
+    },
+    {
+      "exact_online_image_cost": 77824,
+      "instant_validation": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 73728
+      }
+    },
+    {
+      "exact_online_image_cost": 79872,
+      "instant_validation": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 73728
+      }
+    },
+    {
+      "exact_online_image_cost": 81920,
+      "instant_validation": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 73728
+      }
+    },
+    {
+      "exact_online_image_cost": 83968,
+      "instant_validation": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7610374689102173,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 73728
+      }
+    },
+    {
+      "exact_online_image_cost": 86016,
+      "instant_validation": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 86016
+      }
+    },
+    {
+      "exact_online_image_cost": 88064,
+      "instant_validation": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 86016
+      }
+    },
+    {
+      "exact_online_image_cost": 90112,
+      "instant_validation": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 86016
+      }
+    },
+    {
+      "exact_online_image_cost": 92160,
+      "instant_validation": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 86016
+      }
+    },
+    {
+      "exact_online_image_cost": 94208,
+      "instant_validation": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 86016
+      }
+    },
+    {
+      "exact_online_image_cost": 96256,
+      "instant_validation": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7557625770568848,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 86016
+      }
+    },
+    {
+      "exact_online_image_cost": 98304,
+      "instant_validation": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 98304
+      }
+    },
+    {
+      "exact_online_image_cost": 100352,
+      "instant_validation": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 98304
+      }
+    },
+    {
+      "exact_online_image_cost": 102400,
+      "instant_validation": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 98304
+      }
+    },
+    {
+      "exact_online_image_cost": 104448,
+      "instant_validation": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 98304
+      }
+    },
+    {
+      "exact_online_image_cost": 106496,
+      "instant_validation": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 98304
+      }
+    },
+    {
+      "exact_online_image_cost": 108544,
+      "instant_validation": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7534085512161255,
+        "accuracy": 0.5234375,
+        "n": 128,
+        "model_online_cost": 98304
+      }
+    },
+    {
+      "exact_online_image_cost": 110592,
+      "instant_validation": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    },
+    {
+      "exact_online_image_cost": 112640,
+      "instant_validation": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    },
+    {
+      "exact_online_image_cost": 114688,
+      "instant_validation": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    },
+    {
+      "exact_online_image_cost": 116736,
+      "instant_validation": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    },
+    {
+      "exact_online_image_cost": 118784,
+      "instant_validation": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    },
+    {
+      "exact_online_image_cost": 120832,
+      "instant_validation": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    },
+    {
+      "exact_online_image_cost": 122880,
+      "instant_validation": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7488982677459717,
+        "accuracy": 0.515625,
+        "n": 128,
+        "model_online_cost": 110592
+      }
+    }
+  ],
+  "seconds": 920.4473666232079,
+  "peak_gpu_bytes": 13813826048,
+  "actual_runtime_calls": {
+    "images": 132576,
+    "forwards": 2623,
+    "jvp": 550,
+    "vjp": 0,
+    "training_images": 28256
+  },
+  "offline_counts": null,
+  "frozen_probe_ids": [
+    14,
+    24,
+    26,
+    56,
+    73,
+    112,
+    128,
+    155,
+    191,
+    195,
+    212,
+    286,
+    290,
+    295,
+    296,
+    300,
+    307,
+    369,
+    451,
+    456,
+    500,
+    577,
+    583,
+    591,
+    645,
+    685,
+    727,
+    840,
+    843,
+    854,
+    924,
+    937,
+    967,
+    989,
+    1015,
+    1022,
+    1078,
+    1091,
+    1110,
+    1162,
+    1176,
+    1186,
+    1198,
+    1203,
+    1222,
+    1225,
+    1295,
+    1297,
+    1303,
+    1349,
+    1383,
+    1429,
+    1525,
+    1532,
+    1577,
+    1585,
+    1586,
+    1599,
+    1627,
+    1628,
+    1637,
+    1650,
+    1657,
+    1658,
+    1702,
+    1729,
+    1779,
+    1790,
+    1816,
+    1825,
+    1901,
+    1903,
+    1904,
+    1916,
+    1959,
+    2025,
+    2041,
+    2044,
+    2069,
+    2168,
+    2248,
+    2316,
+    2324,
+    2348,
+    2356,
+    2361,
+    2362,
+    2366,
+    2394,
+    2511,
+    2518,
+    2559,
+    2561,
+    2562,
+    2574,
+    2578,
+    2604,
+    2616,
+    2720,
+    2743,
+    2792,
+    2796,
+    2821,
+    2845,
+    2859,
+    2873,
+    2882,
+    2889,
+    2922,
+    2935,
+    2971,
+    2992,
+    3031,
+    3045,
+    3078,
+    3098,
+    3220,
+    3269,
+    3292,
+    3302,
+    3339,
+    3513,
+    3564,
+    3589,
+    3663,
+    3676,
+    3727,
+    3748
+  ],
+  "probe_origin": "training_pool_unlabeled",
+  "comparison": "Committed model at exact charged-cost ticks; unselected lookahead states excluded; Vcal selection separate",
+  "official_test_opened": false,
+  "independent_functional_groups_claimed": false
+}

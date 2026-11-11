@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "fixed_geometry_sha256": "98ebe431618df59f93082cd4aafb05120de0544470f3a714da1a547074479694",
+  "original_condition": 128038953.39860736,
+  "original_fallback": "ill_conditioned_FR_system",
+  "reduced_condition": 2.20026308215809,
+  "reduced_fallback": null,
+  "coordinate_count": 7,
+  "effective_dimension": 5,
+  "coordinate_nullity": 2,
+  "direct_subspace_step_relative_error": 6.056037236691328e-16,
+  "duplicate_coordinates_step_relative_error": 8.368709520245071e-16,
+  "diagnostic_online_images": 800,
+  "no_optimizer_updates": true,
+  "training_result_modified": false,
+  "full_fixed_solver_training_complete": false
+}

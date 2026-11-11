@@ -73,24 +73,35 @@ def tracking_error(geometry,state,actual,positions=None,absolute=2e-4,relative=.
 
 def fr_preconditioned_direction(state,geometry,gradient_x,epsilon=1e-8,condition_limit=1e8):
     geometry.require_current_dictionary(state)
-    G=state.G;gradient=G.T@gradient_x.to(G.dtype)
-    AG=geometry.A@G
-    H=AG.T@AG+geometry.damping*(G.T@G)+epsilon*torch.eye(G.shape[1],device=G.device,dtype=G.dtype)
+    # Overlapping groups may have an exact coordinate kernel. Solve on the
+    # represented dictionary subspace, then lift the step with minimum norm.
+    # Coordinate redundancy is not a defect of the current Jacobian.
+    G=state.G;gx=gradient_x.to(G.dtype);gradient=G.T@gx
+    Q,s,Vt=torch.linalg.svd(G,full_matrices=False)
+    tolerance=max(G.shape)*torch.finfo(G.dtype).eps
+    keep=s>s[0]*tolerance
+    Q=Q[:,keep];s=s[keep];V=Vt[keep].T
+    rank=len(s)
+    AQ=geometry.A@Q
+    H=AQ.T@AQ+(geometry.damping+epsilon)*torch.eye(rank,device=G.device,dtype=G.dtype)
     condition=float('inf')
     fallback=None
     try:
-        condition=float(torch.linalg.cond(H))
+        condition=float(torch.linalg.cond(H)) if rank else 1.
         if not math.isfinite(condition) or condition>condition_limit:
             raise ValueError('ill_conditioned_FR_system')
-        delta=-torch.linalg.solve(H,gradient)
-        if not torch.isfinite(delta).all():raise ValueError('nonfinite_FR_solution')
+        step=-torch.linalg.solve(H,Q.T@gx)
+        if not torch.isfinite(step).all():raise ValueError('nonfinite_FR_solution')
     except (RuntimeError,ValueError) as error:
-        delta=-gradient;fallback=str(error)
+        step=-(Q.T@gx);fallback=str(error)
+    delta=V@(step/s)
     dx=G@delta
     vertical=dx-geometry.V@(geometry.V.T@dx)
     return delta,dict(condition=condition,fallback=fallback,
         proposed_increment_near_null_energy=float(vertical.square().sum()),
-        coefficient_gradient=gradient.detach().cpu(),system_dimension=len(gradient))
+        coefficient_gradient=gradient.detach().cpu(),system_dimension=len(gradient),
+        effective_system_dimension=rank,coordinate_nullity=G.shape[1]-rank,
+        solver_space='represented_dictionary_subspace')
 
 
 def coefficient_step_radius(geometry,angle=.04,quantile=1.):

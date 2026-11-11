@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "primary_epsilon": 0.01,
+  "predeclared_primary_relative_tolerance": 0.02,
+  "predeclared_primary_cosine": 0.999,
+  "finite_difference": [
+    {
+      "epsilon": 0.001,
+      "relative_error": 0.0003898274364243633,
+      "cosine": 0.9999999244325842
+    },
+    {
+      "epsilon": 0.003,
+      "relative_error": 0.0017925082860068113,
+      "cosine": 0.9999984127625065
+    },
+    {
+      "epsilon": 0.01,
+      "relative_error": 0.014001882022073104,
+      "cosine": 0.9999048150626882
+    }
+  ],
+  "current_vs_base_FR": 0.49398018175511277,
+  "ambient_relative_JVP_change": 0.7717125947337677,
+  "transported_relative_JVP_change": 0.7288203341533324,
+  "dictionary_shape": [
+    84934656,
+    5
+  ],
+  "coordinate_count": 7,
+  "fixed_global_base": true,
+  "no_optimizer_updates": true,
+  "training_result_modified": false,
+  "calls": {
+    "images": 1280,
+    "forwards": 20,
+    "jvp": 2,
+    "vjp": 0,
+    "training_images": 0
+  },
+  "seconds": 11.193654394242913
+}

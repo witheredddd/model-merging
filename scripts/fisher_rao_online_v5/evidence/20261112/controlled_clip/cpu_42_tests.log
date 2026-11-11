@@ -1,0 +1,47 @@
+test_genuine_reduced_system_condition_failure_still_uses_fallback (test_coordinate_quotient.CoordinateQuotientTests) ... ok
+test_redundant_overlapping_groups_preserve_parameter_step_without_fallback (test_coordinate_quotient.CoordinateQuotientTests) ... ok
+test_zero_represented_space_returns_no_step_without_refresh_fallback (test_coordinate_quotient.CoordinateQuotientTests) ... ok
+test_AdamW_control_starts_at_same_base_and_does_not_write_online_state (test_online_v5.OnlineV5Tests) ... ok
+test_FR_direction_matches_small_system_and_reports_null_increment (test_online_v5.OnlineV5Tests) ... ok
+test_actual_CE_two_window_closed_loop_on_CPU (test_online_v5.OnlineV5Tests) ... ok
+test_cached_validation_does_not_hide_inplace_dictionary_corruption (test_online_v5.OnlineV5Tests) ... ok
+test_cold_start_and_first_update_have_no_high_dimensional_bypass (test_online_v5.OnlineV5Tests) ... ok
+test_cost_reporter_waits_for_commit_and_keeps_selected_distinct (test_online_v5.OnlineV5Tests) ... ok
+test_dictionary_replacement_preserves_nonzero_total_model_and_has_no_residual (test_online_v5.OnlineV5Tests) ... ok
+test_explicit_dictionary_growth_has_equal_measured_lookahead_cost (test_online_v5.OnlineV5Tests) ... ok
+test_failed_single_column_replacement_rolls_back_and_growth_is_explicit (test_online_v5.OnlineV5Tests) ... ok
+test_finite_factors_cannot_hide_overflow_in_generated_model (test_online_v5.OnlineV5Tests) ... ok
+test_geometry_can_start_with_CE_rise_and_win_after_equal_future_updates (test_online_v5.OnlineV5Tests) ... ok
+test_independent_fingerprint_is_invariant_to_same_group_basis_rotation (test_online_v5.OnlineV5Tests) ... ok
+test_local_JVP_matches_finite_difference_at_two_distinct_models (test_online_v5.OnlineV5Tests) ... ok
+test_lookahead_charges_exactly_equal_branches_and_commits_paid_progress (test_online_v5.OnlineV5Tests) ... ok
+test_one_invalid_geometry_window_rolls_back_without_stopping_later_batches (test_online_v5.OnlineV5Tests) ... ok
+test_parameter_dictionary_never_uses_tall_dense_SVD (test_online_v5.OnlineV5Tests) ... ok
+test_parameter_dictionary_skips_zero_and_duplicate_candidates (test_online_v5.OnlineV5Tests) ... ok
+test_probe_ids_are_fixed_training_source_and_excluded_from_optimization (test_online_v5.OnlineV5Tests) ... ok
+test_refresh_changes_J_without_moving_global_base_or_model (test_online_v5.OnlineV5Tests) ... ok
+test_rejected_lookahead_does_not_mutate_original_and_all_costs_remain (test_online_v5.OnlineV5Tests) ... ok
+test_same_rank_merge_is_a_pure_representation_change (test_online_v5.OnlineV5Tests) ... ok
+test_soft_responsibilities_allow_unassigned_without_coordinate_magnitude_gain (test_online_v5.OnlineV5Tests) ... ok
+test_stale_Jacobian_is_rejected_even_if_version_was_not_incremented (test_online_v5.OnlineV5Tests) ... ok
+test_two_online_windows_can_change_dictionary_and_future_real_updates (test_online_v5.OnlineV5Tests) ... ok
+test_uncommitted_branch_work_does_not_publish_hypothetical_models (test_online_v5.OnlineV5Tests) ... ok
+test_birth_has_no_new_capacity_when_current_groups_fill_reachable_space (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_coordinate_logs_actual_step_trust_and_sensitivity (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_evidence_transaction_restores_reference_and_subspace_history (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_four_is_not_a_hard_group_candidate_or_lookahead_limit (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_fresh_confirmation_rejects_a_candidate_that_only_wins_screening_batch (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_largest_one_off_gain_does_not_replace_the_recurring_axis (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_multidimensional_recurrence_is_invariant_to_basis_rotations (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_random_initial_control_matches_functional_group_sizes_and_rank (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_response_initialization_and_single_control_have_same_total_span (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_responses_at_different_predictions_are_transported_before_comparison (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_reused_training_ids_cannot_count_as_another_independent_window (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_same_axis_with_sign_changes_is_coherent (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_similar_early_responses_do_not_force_multiple_initial_groups (test_structural_evidence.StructuralEvidenceTests) ... ok
+test_three_orthogonal_beneficial_windows_are_not_one_recurring_structure (test_structural_evidence.StructuralEvidenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.661s
+
+OK

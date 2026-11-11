@@ -1,0 +1,19 @@
+{
+  "stage": "manual_training",
+  "step": 24,
+  "actual_online_images": 123488,
+  "last_cost_checkpoint": {
+    "exact_online_image_cost": 122880,
+    "instant_validation": {
+      "CE": 1.7488982677459717,
+      "accuracy": 0.515625,
+      "n": 128
+    },
+    "Vcal_selected": {
+      "CE": 1.7488982677459717,
+      "accuracy": 0.515625,
+      "n": 128,
+      "model_online_cost": 110592
+    }
+  }
+}
