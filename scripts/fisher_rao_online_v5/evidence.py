@@ -4,8 +4,8 @@ import torch
 from manifold import span
 
 
-def actual_responses(state,geometry,oracle,samples,independent_sample,step_radius):
-    directions=[];responses=[];rows=[]
+def actual_responses(state,geometry,oracle,samples,independent_sample,step_radius,functional_angle=.04):
+    directions=[];responses=[];rows=[];outside_responses=[]
     baseline=oracle.loss(state,independent_sample)
     for sample in samples:
         _,g=oracle.gradient(state,sample)
@@ -19,7 +19,7 @@ def actual_responses(state,geometry,oracle,samples,independent_sample,step_radiu
         # Direction probes are standalone ephemeral states, not model writes.
         # Use explicit dense theta only inside a read-only candidate loss call.
         actual_rate=float((r.reshape_as(geometry.q).norm(dim=1)/geometry.q.norm(dim=1)).max())
-        probe_radius=min(step_radius,.04/max(actual_rate,1e-12))
+        probe_radius=min(step_radius,functional_angle/max(actual_rate,1e-12))
         proposed_loss=oracle.raw_loss_at(state.parameters()+v*probe_radius,independent_sample)
         group_gains=[]
         for group in state.groups:
@@ -36,13 +36,15 @@ def actual_responses(state,geometry,oracle,samples,independent_sample,step_radiu
             trial=state.with_coordinates(torch.cat(pieces))
             group_gains.append(baseline-oracle.loss(trial,independent_sample))
         directions.append(v.detach());responses.append(r.detach())
+        outside_responses.append(outside.detach())
         rows.append(dict(ids=list(sample['ids']),outside_fraction=float(outside.square().sum()/r.square().sum().clamp_min(1e-30)),
             independent_candidate_gain=baseline-proposed_loss,group_conditional_gains=group_gains,
             candidate_probe_radius=probe_radius,
             source='actual_current_J_theta_v',dictionary_parameter_retention=float((state.S.T@v).square().sum())))
     if not responses:return None
     return dict(directions=directions,R=torch.stack(responses,1),rows=rows,
-                independent_ids=list(independent_sample['ids']))
+                outside=torch.stack(outside_responses,1),q=geometry.q.detach().clone(),
+                baseline_independent_CE=baseline,independent_ids=list(independent_sample['ids']))
 
 
 def responsibilities(state,geometry,evidence,temperature=.25,unassigned_score=.25,gain_weight=.1):
@@ -68,19 +70,4 @@ def responsibilities(state,geometry,evidence,temperature=.25,unassigned_score=.2
         current_coordinate_magnitude_used=False,forced_group_assignment=False)
 
 
-class Persistence:
-    def __init__(self,required=3,outside_fraction=.2):
-        if required<1:raise ValueError('Persistence window count must be positive')
-        self.required=required;self.threshold=outside_fraction;self.windows=[]
-
-    def observe(self,evidence):
-        ids=set(i for row in evidence['rows'] for i in row['ids'])|set(evidence['independent_ids'])
-        previous=self.windows[-(self.required-1):] if self.required>1 else []
-        independent=not any(ids.intersection(old) for old in previous)
-        beneficial=any(row['outside_fraction']>self.threshold and row['independent_candidate_gain']>0 for row in evidence['rows'])
-        if independent and beneficial:self.windows=(self.windows+[ids])[-self.required:]
-        elif not beneficial:self.windows=[]
-        return independent and beneficial and len(self.windows)>=self.required
-
-    def excluded_ids(self):
-        return set().union(*self.windows[-(self.required-1):]) if self.windows and self.required>1 else set()
+from structural_persistence import StructuralPersistence as Persistence

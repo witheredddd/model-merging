@@ -8,17 +8,17 @@
   "dictionary_version": 1,
   "groups": 2,
   "independent_future_CE_old": 0.6931471805599453,
-  "independent_future_CE_new": 0.5367344881797925,
+  "independent_future_CE_new": 0.5367344944079124,
   "old_branch_image_cost": 38,
   "new_branch_image_cost": 38,
   "pure_dictionary_parameter_error": 0.0,
-  "subsequent_coordinate_parameter_change": 0.2000000000000001,
+  "subsequent_coordinate_parameter_change": 0.20000000000000004,
   "global_invariant": true,
-  "online_images": 614,
+  "online_images": 632,
   "operations": {
-    "forward": 167,
+    "forward": 174,
     "backward": 30,
-    "jvp": 43
+    "jvp": 44
   },
   "A100_executed": false,
   "CLIP_executed": false,

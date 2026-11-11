@@ -1,6 +1,7 @@
 """Online geometry changes precede and alter subsequent SZa coordinate writes."""
 from dataclasses import dataclass,field,replace,asdict
 import torch
+from typing import Optional
 from manifold import span,weighted_target
 from state import Group
 from geometry import refresh,coefficient_step_radius,tracking_error
@@ -9,7 +10,7 @@ from work import Ledger,MeasuredOracle,BudgetEnd
 from steps import StepSettings,coordinate_trial
 from evidence import Persistence,actual_responses,responsibilities
 from transforms import replace_dictionary,replace_group,add_group,merge_groups,drop_group
-from lookahead import LookaheadSettings,compare
+from lookahead import LookaheadSettings,compare,complexity
 
 
 @dataclass(frozen=True)
@@ -19,25 +20,38 @@ class Settings:
     initial_dictionary_budget: int = 8
     maximum_dictionary_rank: int = 8
     maximum_total_rank: int = 8
-    maximum_groups: int = 4
+    maximum_groups: Optional[int] = None
     geometry_every: int = 8
     candidate_batches: int = 3
     persistence_windows: int = 3
-    maximum_proposals: int = 4
+    maximum_proposals: Optional[int] = None
+    recurrence_overlap: float = .7
+    initial_grouping: str = 'responses'
+    initial_group_similarity: float = .8
+    confirmation_batches: int = 2
     gamma: float = 1e-5
     response_weight: float = .001
     step: StepSettings = field(default_factory=StepSettings)
     lookahead: LookaheadSettings = field(default_factory=LookaheadSettings)
     online_dictionary: bool = True
     dynamic_groups: bool = True
-    allow_dictionary_growth: bool = False
+    allow_dictionary_growth: bool = True
 
     def __post_init__(self):
-        if self.cold_batches not in [2,3,4] or self.candidate_batches not in [2,3,4]:
-            raise ValueError('Cold/online task candidates must use 2-4 independent batches')
-        if min(self.initial_dictionary_budget,self.maximum_dictionary_rank,self.maximum_total_rank,self.maximum_groups,self.geometry_every,self.maximum_proposals)<1:
+        if self.cold_batches<1 or self.candidate_batches<1:
+            raise ValueError('Candidate batch budgets must be positive')
+        optional=[v for v in [self.maximum_groups,self.maximum_proposals] if v is not None]
+        if min([self.initial_dictionary_budget,self.maximum_dictionary_rank,self.maximum_total_rank,self.geometry_every]+optional)<1:
             raise ValueError('Capacity and interval budgets must be positive')
         if self.gamma<=0 or self.response_weight<0:raise ValueError('Invalid damping/response weight')
+        if self.confirmation_batches<0:raise ValueError('Invalid independent confirmation budget')
+        if not 0<self.recurrence_overlap<=1:raise ValueError('Invalid recurrence overlap')
+        if self.initial_grouping not in ['single','responses','random'] or not 0<=self.initial_group_similarity<=1:
+            raise ValueError('Invalid initial grouping policy')
+
+    @property
+    def group_budget(self):
+        return self.maximum_total_rank if self.maximum_groups is None else min(self.maximum_groups,self.maximum_total_rank)
 
 
 def lifted_axes(geometry,target):
@@ -51,18 +65,21 @@ def lifted_axes(geometry,target):
 class OnlineTrainer:
     def __init__(self,raw,settings=None,budget=1000000):
         self.raw=raw;self.settings=settings or Settings()
-        if not 2<=self.settings.candidate_batches<=4 or self.settings.geometry_every<1:
-            raise ValueError('Use 2-4 candidate batches and a positive geometry interval')
-        if self.settings.lookahead.steps not in [2,3,4]:raise ValueError('Lookahead must use 2-4 batches')
         self.ledger=Ledger(budget);self.oracle=MeasuredOracle(raw,self.ledger)
         self.state,self.geometry,self.initialization=initialize(raw,self.oracle,self.settings.seed,
             self.settings.cold_batches,min(self.settings.initial_dictionary_budget,self.settings.maximum_dictionary_rank),
-            self.settings.gamma,maximum_total_rank=self.settings.maximum_total_rank)
-        self.radius=coefficient_step_radius(self.geometry)
-        self.persistence=Persistence(self.settings.persistence_windows)
+            self.settings.gamma,maximum_total_rank=self.settings.maximum_total_rank,
+            grouping=self.settings.initial_grouping,maximum_groups=self.settings.group_budget,
+            group_similarity=self.settings.initial_group_similarity)
+        self.radius=self._nominal_radius(self.geometry)
+        self.persistence=Persistence(self.settings.persistence_windows,overlap=self.settings.recurrence_overlap)
         self.iteration=0;self.window=0;self.events=[];self.geometry_events=[]
         self.snapshots=[]
         self.dictionary_replacement_failures=0
+
+    def _nominal_radius(self,geometry):
+        controls=self.settings.step
+        return coefficient_step_radius(geometry,controls.functional_angle,controls.sensitivity_quantile)
 
     def step(self,sample=None):
         sample=sample or self.raw.sample(self.settings.seed,1000+self.iteration,())
@@ -124,17 +141,46 @@ class OnlineTrainer:
         if not len(s) or float(s[0])<1e-6*max(float(R.norm()),1e-12):return None
         Z=lifted_axes(geometry,u[:,:1])
         if Z is None:return None
-        return add_group(state,Z,name,self.settings.maximum_total_rank,self.settings.maximum_groups)
+        result=add_group(state,Z,name,self.settings.maximum_total_rank,self.settings.group_budget)
+        if result is None:return None
+        old_rank=self._capacity(state,geometry)['represented_reachable_rank']
+        new_rank=self._capacity(result,geometry)['represented_reachable_rank']
+        return result if new_rank>old_rank else None
+
+    def _capacity(self,state,geometry):
+        represented=span(geometry.L.T@(geometry.A@state.G),tol=1e-6).shape[1]
+        return dict(dictionary_dimension=state.S.shape[1],stable_reachable_rank=geometry.L.shape[1],
+            represented_reachable_rank=represented,remaining_reachable_rank=max(0,geometry.L.shape[1]-represented),
+            coordinate_count=state.total_rank)
+
+    def _persistent_direction(self,evidence,decision,check_sample):
+        if not decision['coherent']:
+            return evidence['directions'][decision['selected_index']],dict(source='structurally_distinct_novelty')
+        weights=decision['weights']
+        direction=torch.zeros_like(evidence['directions'][0])
+        for weight,candidate in zip(weights,evidence['directions']):direction=direction+candidate*weight
+        norm=float(direction.norm())
+        if not 1e-12<norm<float('inf'):return None,dict(reason='degenerate_recurring_combination')
+        direction=direction/norm
+        response=self.oracle.jvp(self.state,direction).reshape_as(self.geometry.q)
+        rate=float((response.norm(dim=1)/self.geometry.q.norm(dim=1)).max())
+        radius=min(self.radius,self.settings.step.functional_angle/max(rate,1e-12))
+        losses=[self.oracle.raw_loss_at(self.state.parameters()+sign*radius*direction,check_sample) for sign in [1.,-1.]]
+        best=min(range(2),key=lambda i:losses[i])
+        gain=evidence['baseline_independent_CE']-losses[best]
+        if not gain>0:return None,dict(reason='recurring_structure_lacks_current_task_gain',independent_gain=gain)
+        return direction*(1. if best==0 else -1.),dict(source='recurring_residual_subspace_combination',
+            weights=weights,independent_gain=gain,polarity=1 if best==0 else -1)
 
     def geometry_window(self):
         original,geometry,radius=self.state,self.geometry,self.radius
-        persistence=list(self.persistence.windows)
+        persistence=self.persistence.snapshot()
         try:
             return self._geometry_window()
         except (ValueError,RuntimeError,BudgetEnd) as error:
             self.state,self.geometry=original,geometry
-            self.radius=max(coefficient_step_radius(geometry)*1e-6,radius*.5)
-            self.persistence.windows=persistence
+            self.radius=max(self._nominal_radius(geometry)*1e-6,radius*.5)
+            self.persistence.restore(persistence)
             event=dict(window=self.window,reason='geometry_transaction_rolled_back',error=str(error),
                 state_preserved=True,online_images=self.ledger.used,proposals=[])
             self.geometry_events.append(event)
@@ -149,32 +195,37 @@ class OnlineTrainer:
             self.geometry_events.append(event);return event
         # Reanchoring updates local q/J/reference_x only. theta0 is unchanged.
         self.geometry=refresh(self.state,self.oracle,settings.gamma)
-        self.radius=min(self.radius,coefficient_step_radius(self.geometry)*4)
+        self.radius=min(self.radius,self._nominal_radius(self.geometry)*settings.step.radius_cap_factor)
         excluded=self.persistence.excluded_ids()
         samples,used=self._samples(100000+self.window*100,settings.candidate_batches,excluded)
         checks,used=self._samples(100050+self.window*100,1,used)
-        evidence=actual_responses(self.state,self.geometry,self.oracle,samples,checks[0],self.radius)
+        evidence=actual_responses(self.state,self.geometry,self.oracle,samples,checks[0],self.radius,settings.step.functional_angle)
         event=dict(window=self.window,iteration=self.iteration,proposals=[],local_refresh=True,
             dictionary_version_before=self.state.dictionary_version,groups_before=[g.name for g in self.state.groups])
         if evidence is None:
             event['reason']='no_finite_nonzero_candidates';self.geometry_events.append(event);return event
         rho,responsibility=responsibilities(self.state,self.geometry,evidence)
-        persistent=self.persistence.observe(evidence)
-        event.update(responsibility=responsibility,evidence=evidence['rows'],persistent_outside=persistent)
+        decision=self.persistence.observe(evidence)
+        persistent=decision['coherent'] or decision['diverse']
+        capacity=self._capacity(self.state,self.geometry)
+        event.update(responsibility=responsibility,evidence=evidence['rows'],persistent_outside=persistent,
+            persistence=decision,capacity_before=capacity)
         candidates=[]
         if persistent and settings.online_dictionary:
-            index=max(range(len(evidence['rows'])),key=lambda j:evidence['rows'][j]['outside_fraction']*
-                max(evidence['rows'][j]['independent_candidate_gain'],0.))
+            direction,direction_info=self._persistent_direction(evidence,decision,checks[0])
+            event['persistent_direction']=direction_info
+            if direction is None:persistent=False
+        if persistent and settings.online_dictionary:
             lifted=self.geometry.C@evidence['R']
             importance=lifted@lifted.T
             importance=importance/importance.trace().clamp_min(1e-12)
             contributions=torch.stack([g.Z@g.a for g in self.state.groups],1)
             group_importance=contributions@contributions.T
             importance=importance+.25*group_importance/group_importance.trace().clamp_min(1e-12)
-            proposed,info=replace_dictionary(self.state,evidence['directions'][index],settings.maximum_dictionary_rank,importance=importance)
+            proposed,info=replace_dictionary(self.state,direction,settings.maximum_dictionary_rank,importance=importance)
             unrepresentable=proposed is None
             if proposed is None and settings.allow_dictionary_growth:
-                proposed,info=replace_dictionary(self.state,evidence['directions'][index],settings.maximum_dictionary_rank,grow=True)
+                proposed,info=replace_dictionary(self.state,direction,settings.maximum_dictionary_rank,grow=True)
             if proposed is not None:
                 new_geometry=refresh(proposed,self.oracle,settings.gamma)
                 R=torch.stack([self.oracle.jvp(proposed,v).flatten() for v in evidence['directions']],1).double()
@@ -184,12 +235,15 @@ class OnlineTrainer:
                     changed=self._rotation(proposed,new_geometry,dict(R=R),rho,0)
                     if changed is not None:proposed=changed
                 info['continuity']=self._continuity(proposed,new_geometry.A)
-                kind='dictionary_grow_after_unrepresentable_replacement' if unrepresentable else 'dictionary_replace'
+                info.update(structural_event=decision['kind'],capacity_after=self._capacity(proposed,new_geometry))
+                kind='dictionary_grow_after_unrepresentable_replacement' if unrepresentable else (
+                    'dictionary_replace' if decision['coherent'] else 'dictionary_replace_for_distinct_structure')
                 candidates.append((kind,proposed,info))
             # Growth is a separate, explicitly enabled candidate only after a
             # prior fixed-rank replacement failed despite persistent task evidence.
-            if settings.allow_dictionary_growth and self.dictionary_replacement_failures>0:
-                grown,info=replace_dictionary(self.state,evidence['directions'][index],settings.maximum_dictionary_rank,grow=True)
+            growth_evidence=self.dictionary_replacement_failures>0 or decision['diverse'] or capacity['remaining_reachable_rank']==0
+            if settings.allow_dictionary_growth and growth_evidence:
+                grown,info=replace_dictionary(self.state,direction,settings.maximum_dictionary_rank,grow=True)
                 if grown is not None:
                     grown_geometry=refresh(grown,self.oracle,settings.gamma)
                     R=torch.stack([self.oracle.jvp(grown,v).flatten() for v in evidence['directions']],1).double()
@@ -199,7 +253,9 @@ class OnlineTrainer:
                         rotated=self._rotation(grown,grown_geometry,dict(R=R),rho,0)
                         if rotated is not None:grown=rotated
                     info['continuity']=self._continuity(grown,grown_geometry.A)
-                    candidates.append(('dictionary_grow_after_failed_replacement',grown,info))
+                    info.update(structural_event=decision['kind'],capacity_after=self._capacity(grown,grown_geometry),
+                        reason_for_growth='failed_replacement_or_full_reachable_span_or_distinct_novelty')
+                    candidates.append(('dictionary_grow_with_capacity_evidence',grown,info))
         if settings.response_weight>0:
             index=int(rho.sum(0).argmax())
             proposed=self._rotation(self.state,self.geometry,evidence,rho,index)
@@ -215,8 +271,9 @@ class OnlineTrainer:
         fits,used=self._samples(200000+self.window*100,settings.lookahead.steps,used)
         validations,used=self._samples(200050+self.window*100,1,used)
         original=self.state;best=None;best_score=-float('inf');baseline_end=None
-        best_geometry=None;baseline_geometry=None
-        for kind,proposed,metadata in candidates[:settings.maximum_proposals]:
+        best_geometry=None;baseline_geometry=None;best_comparison=None;best_proposal=None;best_continuity=0.
+        eligible_proposals=candidates if settings.maximum_proposals is None else candidates[:settings.maximum_proposals]
+        for kind,proposed,metadata in eligible_proposals:
             if proposed is None:continue
             displacement=float((proposed.parameters()-original.parameters()).norm())
             if displacement>self.radius:
@@ -225,10 +282,14 @@ class OnlineTrainer:
                 selected,comparison=compare(original,proposed,self.raw,self.ledger,fits,validations[0],
                     settings.step,settings.lookahead,continuity=metadata.get('continuity',0.), gamma=settings.gamma)
                 selected_geometry=comparison.pop('_selected_geometry')
+                old_state=comparison.pop('_old_branch_state')
+                old_geometry=comparison.pop('_old_branch_geometry')
+                if baseline_end is None:baseline_end,baseline_geometry=old_state,old_geometry
                 comparison.update(kind=kind,metadata=metadata)
                 event['proposals'].append(comparison)
                 if comparison['accepted'] and comparison['net_gain']>best_score:
                     best,best_score,best_geometry=selected,comparison['net_gain'],selected_geometry
+                    best_comparison,best_proposal,best_continuity=comparison,proposed,metadata.get('continuity',0.)
                     event['selected_operation']=kind
                 elif not comparison['accepted'] and baseline_end is None:
                     baseline_end,baseline_geometry=selected,selected_geometry
@@ -237,6 +298,28 @@ class OnlineTrainer:
                 break
             except (ValueError,RuntimeError) as error:
                 event['proposals'].append(dict(kind=kind,accepted=False,reason='transaction_rolled_back',error=str(error)))
+        if best is not None and settings.confirmation_batches:
+            fresh,used=self._samples(300000+self.window*100,settings.confirmation_batches,used)
+            needed=2*sum(len(sample['y']) for sample in fresh)
+            confirmation=dict(accepted=False,reason='insufficient_confirmation_budget')
+            if self.ledger.used+needed<=self.ledger.limit:
+                old_losses=[self.oracle.loss(baseline_end,sample) for sample in fresh]
+                new_losses=[self.oracle.loss(best,sample) for sample in fresh]
+                old=sum(old_losses)/len(old_losses);new=sum(new_losses)/len(new_losses)
+                noise=settings.lookahead.validation_noise*max(1.,abs(old))
+                cost=complexity(best_proposal,settings.lookahead)-complexity(original,settings.lookahead)
+                gain=old-new-cost-settings.lookahead.continuity_penalty*best_continuity
+                valid=all(torch.isfinite(torch.tensor(value)) for value in old_losses+new_losses)
+                accepted=bool(valid and new<=old+noise and gain>=-noise)
+                confirmation=dict(accepted=accepted,reason='accepted' if accepted else 'fresh_training_CE',
+                    old_CE=old,new_CE=new,net_gain=gain,batches=len(fresh),ids=[s['ids'] for s in fresh],
+                    independent_from_candidate_screening=True)
+            event['independent_confirmation']=confirmation
+            if not confirmation['accepted']:
+                best_comparison.update(screening_accepted=True,accepted=False,reason='independent_confirmation_rejected')
+                best,best_geometry=None,None;event.pop('selected_operation',None)
+        for proposal in event['proposals']:
+            proposal['committed']=bool(best is not None and proposal is best_comparison)
         selected_state=(best if best is not None else baseline_end) or original
         selected_state.validate()
         selected_geometry=(best_geometry if best is not None else baseline_geometry) or self.geometry
@@ -250,12 +333,13 @@ class OnlineTrainer:
         # Commit only after every required validation has completed. Reporters
         # and other observers never see an unvalidated transactional model.
         self.state,self.geometry=selected_state,selected_geometry
-        self.radius=min(self.radius,coefficient_step_radius(self.geometry)*4)
+        self.radius=min(self.radius,self._nominal_radius(self.geometry)*settings.step.radius_cap_factor)
         event.update(dictionary_version_after=self.state.dictionary_version,groups_after=[g.name for g in self.state.groups],
             total_rank=self.state.total_rank,online_images=self.ledger.used,
             actual_joint_parameter_rank=int(torch.linalg.matrix_rank(self.state.G,rtol=1e-8)),
             actual_joint_functional_rank=int(torch.linalg.matrix_rank(self.geometry.A@self.state.G,rtol=1e-6)),
             global_base_unchanged=bool(torch.equal(self.state.theta0,self.raw.theta0)))
+        event['capacity_after']=self._capacity(self.state,self.geometry)
         self.geometry_events.append(event)
         replacements=[p for p in event['proposals'] if p.get('kind')=='dictionary_replace']
         if replacements:

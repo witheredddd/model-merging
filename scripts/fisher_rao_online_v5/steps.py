@@ -13,12 +13,18 @@ class StepSettings:
     local_relative: float = .15
     condition_limit: float = 1e8
     monitor_count: int = 32
+    functional_angle: float = .04
+    radius_cap_factor: float = 4.
+    sensitivity_quantile: float = 1.
 
     def __post_init__(self):
-        if not all(math.isfinite(v) and v>=0 for v in [self.learning_rate,self.noise_allowance,self.local_absolute,self.local_relative,self.condition_limit]):
+        if not all(math.isfinite(v) and v>=0 for v in [self.learning_rate,self.noise_allowance,self.local_absolute,self.local_relative,self.condition_limit,
+            self.functional_angle,self.radius_cap_factor,self.sensitivity_quantile]):
             raise ValueError('Coordinate controls must be finite and nonnegative')
         if self.learning_rate<=0 or self.condition_limit<1 or self.monitor_count<1:
             raise ValueError('Invalid coordinate learning rate, condition limit or monitor size')
+        if self.functional_angle<=0 or self.radius_cap_factor<1 or not 0<self.sensitivity_quantile<=1:
+            raise ValueError('Invalid functional trust budget')
 
 
 def coordinate_trial(state,geometry,oracle,sample,settings,radius):
@@ -56,12 +62,18 @@ def coordinate_trial(state,geometry,oracle,sample,settings,radius):
     if accepted:
         new_radius=radius*(1.25 if ratio>.75 else (.7 if gain<0 else 1.))
     else:new_radius=radius*.5
-    minimum=coefficient_step_radius(geometry)*1e-6
-    maximum=coefficient_step_radius(geometry)*4
+    nominal=coefficient_step_radius(geometry,settings.functional_angle,settings.sensitivity_quantile)
+    minimum=nominal*1e-6
+    maximum=nominal*settings.radius_cap_factor
     new_radius=max(minimum,min(maximum,new_radius))
     selected=proposed.validate() if accepted else state
     dx=selected.x-state.x;vertical=dx-geometry.V@(geometry.V.T@dx)
     return selected,new_radius,dict(accepted=accepted,loss_before=before,loss_after=after,
         predicted_gain=predicted,actual_gain=gain,ratio=ratio,tracking=check,
         reason='accepted' if accepted else ('local_model_error' if not check['safe'] else 'task_or_numerical_control'),
-        new_increment_near_null_energy=float(vertical.square().sum()),solver=info)
+        new_increment_near_null_energy=float(vertical.square().sum()),solver=info,
+        radius_before=radius,radius_after=new_radius,step_shrunk=bool(new_radius<radius),
+        actual_parameter_step_norm=float(dx.norm()),
+        sample_sensitivity_median=float(geometry.sensitivity_rates.median()),
+        sample_sensitivity_max=float(geometry.sensitivity_rates.max()),
+        sensitivity_quantile=settings.sensitivity_quantile)

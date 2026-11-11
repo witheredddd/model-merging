@@ -18,7 +18,7 @@ class LookaheadSettings:
     continuity_penalty: float = 1e-5
 
     def __post_init__(self):
-        if self.steps not in [2,3,4]:raise ValueError('Matched lookahead uses 2-4 task batches')
+        if self.steps<1:raise ValueError('Matched lookahead batch budget must be positive')
         values=[self.validation_noise,self.maximum_initial_rise,self.rank_penalty,self.group_penalty,
                 self.dictionary_penalty,self.continuity_penalty]
         if not all(math.isfinite(v) and v>=0 for v in values):raise ValueError('Invalid lookahead controls')
@@ -53,7 +53,7 @@ def compare(old,new,raw,ledger,samples,validation,step_settings,settings,continu
             if state.S.shape[1]<width:
                 for v in new.S[:,state.S.shape[1]:].T:oracle.jvp(state,v)
             initial_loss=oracle.loss(state,validation)
-            radius=coefficient_step_radius(geometry);events=[]
+            radius=coefficient_step_radius(geometry,step_settings.functional_angle,step_settings.sensitivity_quantile);events=[]
             for sample in samples:
                 state,radius,event=coordinate_trial(state,geometry,oracle,sample,step_settings,radius)
                 events.append(event)
@@ -83,4 +83,6 @@ def compare(old,new,raw,ledger,samples,validation,step_settings,settings,continu
             ('future_task_loss' if not task_safe else 'capacity_or_continuity_cost')),
         starting_parameter_move=float((new.parameters()-old.parameters()).norm()))
     info['_selected_geometry']=after['geometry'] if accepted else before['geometry']
+    info['_old_branch_state']=before['state']
+    info['_old_branch_geometry']=before['geometry']
     return after['state'] if accepted else before['state'],info

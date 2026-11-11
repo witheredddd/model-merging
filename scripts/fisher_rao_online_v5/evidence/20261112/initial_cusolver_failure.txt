@@ -1,0 +1,16 @@
+11月 12 04:48:07 shangxueyuan-06 systemd[147755]: Started /home/shangxueyuan/merging/afg_env/bin/python -u /home/shangxueyuan/merging/tsv/scripts/fisher_rao_online_v5_9b01696/runner.py --method online --root /home/shangxueyuan/merging/tsv --output /media/shangxueyuan/data1/fisher_rao_online_v5_DTD_seed11_full_20261112 --seed 11 --until-budget --budget-images 1000000 --probe-size 128 --batch-size 32 --geometry-every 8 --lookahead-steps 2 --allow-dictionary-growth --max-dictionary-rank 8 --max-total-rank 8 --audit.
+11月 12 04:48:16 shangxueyuan-06 python[1702437]: Traceback (most recent call last):
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:   File "/home/shangxueyuan/merging/tsv/scripts/fisher_rao_online_v5_9b01696/runner.py", line 182, in <module>
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:     if __name__=='__main__':main()
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:   File "/home/shangxueyuan/merging/tsv/scripts/fisher_rao_online_v5_9b01696/runner.py", line 84, in main
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:     engine=OnlineTrainer(raw,settings,args.budget_images)
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:   File "/home/shangxueyuan/merging/tsv/scripts/fisher_rao_online_v5_9b01696/trainer.py", line 58, in __init__
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:     self.state,self.geometry,self.initialization=initialize(raw,self.oracle,self.settings.seed,
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:   File "/home/shangxueyuan/merging/tsv/scripts/fisher_rao_online_v5_9b01696/initialization.py", line 24, in initialize
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:     S=span(torch.stack(directions,dim=1).double())[:,:dictionary_size].to(base.dtype)
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:   File "/home/shangxueyuan/merging/tsv/scripts/fisher_rao_online_v5_9b01696/manifold.py", line 55, in span
+11月 12 04:48:16 shangxueyuan-06 python[1702437]:     u,s,_=torch.linalg.svd(x,full_matrices=False)
+11月 12 04:48:16 shangxueyuan-06 python[1702437]: torch._C._LinAlgError: cusolver error: CUSOLVER_STATUS_INVALID_VALUE, when calling `cusolverDnDgesvdj_bufferSize(handle, jobz, econ, m, n, A, lda, S, U, ldu, V, ldv, lwork, params)`. This error may appear if the input matrix contains NaN. If you keep seeing this error, you may use `torch.backends.cuda.preferred_linalg_library()` to try linear algebra operators with other supported backends. See https://pytorch.org/docs/stable/backends.html#torch.backends.cuda.preferred_linalg_library
+11月 12 04:48:18 shangxueyuan-06 systemd[147755]: fisher-rao-online-v5-dtd-full-20261112.service: Main process exited, code=exited, status=1/FAILURE
+11月 12 04:48:18 shangxueyuan-06 systemd[147755]: fisher-rao-online-v5-dtd-full-20261112.service: Failed with result 'exit-code'.
+11月 12 04:48:18 shangxueyuan-06 systemd[147755]: fisher-rao-online-v5-dtd-full-20261112.service: Consumed 30.882s CPU time.

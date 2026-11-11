@@ -1,0 +1,51 @@
+{
+  "algorithm": "online_geometry_v5",
+  "settings": {
+    "seed": 11,
+    "cold_batches": 3,
+    "initial_dictionary_budget": 8,
+    "maximum_dictionary_rank": 8,
+    "maximum_total_rank": 8,
+    "maximum_groups": null,
+    "geometry_every": 8,
+    "candidate_batches": 3,
+    "persistence_windows": 3,
+    "maximum_proposals": null,
+    "recurrence_overlap": 0.7,
+    "initial_grouping": "responses",
+    "initial_group_similarity": 0.8,
+    "confirmation_batches": 2,
+    "gamma": 1e-05,
+    "response_weight": 0.001,
+    "step": {
+      "learning_rate": 0.05,
+      "noise_allowance": 0.0001,
+      "local_absolute": 0.0002,
+      "local_relative": 0.15,
+      "condition_limit": 100000000.0,
+      "monitor_count": 32,
+      "functional_angle": 0.04,
+      "radius_cap_factor": 4.0,
+      "sensitivity_quantile": 1.0
+    },
+    "lookahead": {
+      "steps": 2,
+      "validation_noise": 0.0001,
+      "maximum_initial_rise": 0.05,
+      "rank_penalty": 0.0001,
+      "group_penalty": 1e-05,
+      "dictionary_penalty": 1e-05,
+      "continuity_penalty": 1e-05
+    },
+    "online_dictionary": true,
+    "dynamic_groups": true,
+    "allow_dictionary_growth": true
+  },
+  "method": "online",
+  "parameter_invariant": "theta0+S_sum_Za",
+  "warmup_steps": 0,
+  "automatic_job_launch": false,
+  "official_test_opened": false,
+  "A100_validated": false,
+  "independent_functional_groups_claimed": false
+}

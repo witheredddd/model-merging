@@ -38,12 +38,27 @@ def main():
     parser.add_argument('--probe-size',type=int,default=128)
     parser.add_argument('--batch-size',type=int,default=32)
     parser.add_argument('--geometry-every',type=int,default=8)
-    parser.add_argument('--lookahead-steps',type=int,choices=[2,3,4],default=2)
+    parser.add_argument('--lookahead-steps',type=int,default=2)
+    parser.add_argument('--cold-batches',type=int,default=3)
+    parser.add_argument('--candidate-batches',type=int,default=3)
+    parser.add_argument('--max-groups',type=int)
+    parser.add_argument('--max-proposals',type=int)
+    parser.add_argument('--recurrence-overlap',type=float,default=.7)
+    parser.add_argument('--functional-angle',type=float,default=.04)
+    parser.add_argument('--trust-cap-factor',type=float,default=4.)
+    parser.add_argument('--sensitivity-quantile',type=float,default=1.)
+    parser.add_argument('--initial-grouping',choices=['single','responses','random'],default='responses')
+    parser.add_argument('--initial-group-similarity',type=float,default=.8)
+    parser.add_argument('--persistence-windows',type=int,default=3)
+    parser.add_argument('--confirmation-batches',type=int,default=2)
     parser.add_argument('--fixed-dictionary',action='store_true')
     parser.add_argument('--frozen-geometry',action='store_true')
     parser.add_argument('--single-group',action='store_true')
     parser.add_argument('--no-response-loss',action='store_true')
-    parser.add_argument('--allow-dictionary-growth',action='store_true')
+    growth=parser.add_mutually_exclusive_group()
+    growth.add_argument('--allow-dictionary-growth',dest='allow_dictionary_growth',action='store_true')
+    growth.add_argument('--fixed-dictionary-rank',dest='allow_dictionary_growth',action='store_false')
+    parser.set_defaults(allow_dictionary_growth=True)
     parser.add_argument('--max-dictionary-rank',type=int,default=8)
     parser.add_argument('--max-total-rank',type=int,default=8)
     parser.add_argument('--random-initial-partition',action='store_true')
@@ -54,11 +69,17 @@ def main():
     settings=Settings(seed=args.seed,geometry_every=args.geometry_every,
         online_dictionary=not(args.fixed_dictionary or args.frozen_geometry),
         dynamic_groups=not(args.single_group or args.frozen_geometry),
-        maximum_groups=1 if args.single_group else 4,
+        maximum_groups=1 if args.single_group else args.max_groups,maximum_proposals=args.max_proposals,
+        cold_batches=args.cold_batches,candidate_batches=args.candidate_batches,recurrence_overlap=args.recurrence_overlap,
+        initial_grouping='single' if args.single_group else ('random' if args.random_initial_partition else args.initial_grouping),
+        initial_group_similarity=args.initial_group_similarity,
+        persistence_windows=args.persistence_windows,confirmation_batches=args.confirmation_batches,
         response_weight=0. if args.no_response_loss or args.frozen_geometry else .001,
         allow_dictionary_growth=args.allow_dictionary_growth,maximum_dictionary_rank=args.max_dictionary_rank,
         maximum_total_rank=args.max_total_rank)
-    settings=replace(settings,lookahead=replace(settings.lookahead,steps=args.lookahead_steps))
+    settings=replace(settings,lookahead=replace(settings.lookahead,steps=args.lookahead_steps),
+        step=replace(settings.step,functional_angle=args.functional_angle,radius_cap_factor=args.trust_cap_factor,
+                     sensitivity_quantile=args.sensitivity_quantile))
     description=dict(algorithm='online_geometry_v5',settings=asdict(settings),method=args.method,
         parameter_invariant='theta0+S_sum_Za',warmup_steps=0,automatic_job_launch=False,
         official_test_opened=False,A100_validated=False,independent_functional_groups_claimed=False)
@@ -82,13 +103,6 @@ def main():
     history=[];stop='step_limit'
     if args.method=='online':
         engine=OnlineTrainer(raw,settings,args.budget_images)
-        if args.random_initial_partition:
-            from control_audit import random_partition
-            from geometry import refresh
-            randomized=random_partition(engine.state,args.seed+911)
-            if randomized is not None:
-                engine.state=randomized;engine.geometry=refresh(engine.state,engine.oracle,settings.gamma)
-            engine.initialization['random_partition_control_applied']=randomized is not None
         parameter=lambda:engine.state.parameters()
         used=lambda:engine.ledger.used
         update=lambda step:engine.step()

@@ -1,0 +1,27 @@
+{
+  "status": "stopped_for_confirmed_structural_persistence_review",
+  "timestamp_utc": "2026-11-11T21:19:07.097269+00:00",
+  "source_commit": "460f738",
+  "full_training_complete": false,
+  "reason": "Cross-window evidence lacked residual subspace consistency",
+  "last_periodic_status": {
+    "stage": "manual_training",
+    "step": 16,
+    "actual_online_images": 14752,
+    "last_cost_checkpoint": {
+      "exact_online_image_cost": 12288,
+      "instant_validation": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128
+      },
+      "Vcal_selected": {
+        "CE": 1.7956384420394897,
+        "accuracy": 0.484375,
+        "n": 128,
+        "model_online_cost": 12288
+      }
+    }
+  },
+  "existing_checkpoints_preserved": true
+}

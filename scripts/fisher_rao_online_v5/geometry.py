@@ -17,6 +17,7 @@ class Geometry:
     damping: float
     dictionary_pointer: int
     dictionary_mutation_version: int
+    sensitivity_rates: torch.Tensor
 
     def actual_U(self,group):
         return self.A@group.Z
@@ -47,7 +48,9 @@ def refresh(state,oracle,gamma=1e-5,relative_rank=1e-3):
     L,s,Vt=torch.linalg.svd(A,full_matrices=False)
     keep=s>max(float(s[0])*relative_rank,1e-12)
     damping=max(gamma*float(s[0])**2,1e-12)
-    return Geometry(q,A,L[:,keep],Vt[keep].T,s,state.x.detach().clone(),state.dictionary_version,damping,state.S.data_ptr(),state.S._version)
+    blocks=A.reshape(*q.shape,A.shape[1])
+    rates=torch.linalg.svdvals(blocks)[...,0]/q.norm(dim=1)
+    return Geometry(q,A,L[:,keep],Vt[keep].T,s,state.x.detach().clone(),state.dictionary_version,damping,state.S.data_ptr(),state.S._version,rates)
 
 
 def tracking_error(geometry,state,actual,positions=None,absolute=2e-4,relative=.15):
@@ -90,8 +93,8 @@ def fr_preconditioned_direction(state,geometry,gradient_x,epsilon=1e-8,condition
         coefficient_gradient=gradient.detach().cpu(),system_dimension=len(gradient))
 
 
-def coefficient_step_radius(geometry,angle=.04):
-    blocks=geometry.A.reshape(*geometry.q.shape,geometry.A.shape[1])
-    rate=float((torch.linalg.svdvals(blocks)[...,0]/geometry.q.norm(dim=1)).max())
+def coefficient_step_radius(geometry,angle=.04,quantile=1.):
+    if angle<=0 or not 0<quantile<=1:raise ValueError('Invalid functional radius controls')
+    rate=float(torch.quantile(geometry.sensitivity_rates,quantile))
     if not math.isfinite(rate) or rate<=0:return 1e-3
     return angle/rate
