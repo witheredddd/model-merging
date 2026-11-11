@@ -20,3 +20,5 @@ scripts/fisher_rao_v2_internal_groups_r2/** -text
 scripts/fisher_rao_v2/** -text
 scripts/fisher_rao_v1/geometry.py -text
 scripts/fisher_rao_response_v3/** -text
+scripts/fisher_rao_diagnostics_v4/** -text
+scripts/fisher_rao_diagnostics_v4/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

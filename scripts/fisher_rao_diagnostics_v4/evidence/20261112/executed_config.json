@@ -1,0 +1,86 @@
+{
+  "protocol": "v3_diagnostics_v4",
+  "seeds": [
+    11,
+    23,
+    37,
+    53
+  ],
+  "ranks": [
+    4,
+    8
+  ],
+  "options": {
+    "attempts": 64,
+    "budget": 16384,
+    "batch_size": 32,
+    "window": 8,
+    "coordinate_lr": 0.03,
+    "basis_lr": 0.01,
+    "backtracks": 8,
+    "geometry_backtracks": 12,
+    "response_weight": 0.02,
+    "drift_weight": 0.001,
+    "max_angle_degrees": 10.0,
+    "preservation_tolerance": 0.05,
+    "CE_tolerance": 1e-06,
+    "stationary_batches": 16,
+    "stationary_norm": 1e-07,
+    "initial_trust_fraction": 0.05,
+    "minimum_step": 1e-10
+  },
+  "gamma": 1e-05,
+  "minimum_minibatches": 64,
+  "selection_stride": 512,
+  "costs": [
+    1024,
+    2048,
+    4096,
+    8192,
+    16384
+  ],
+  "tolerance_seeds": [
+    11,
+    23
+  ],
+  "tolerances": [
+    0.01,
+    0.05,
+    0.2
+  ],
+  "control_budget": 2048,
+  "K": 1,
+  "B": 0,
+  "dictionary_refresh": false,
+  "fiber": false,
+  "EC": false,
+  "test_opened": false,
+  "settings_fixed_before_independent_seeds": true,
+  "group_counts_are_experimental_hypotheses": [
+    1,
+    2
+  ],
+  "source_sha256": {
+    "fr_math.py": "78ed4fb1f98920e1fbee58daae8c27291bc3e06346fdc0dc11f9c0f75d6b5975",
+    "suite.py": "6b1ef421f6a121feafdc9b7ca39d0ede1e805b97cc17b106ba4ac107cde4cce6",
+    "test_response_learning.py": "17d7ac6aaa00762c3accb7c64450b8a80c7cfb61fb066a1d7c0176531b4719fc",
+    "control_audit.py": "422205e06cc9ccc927b099e3b05cef06ed72b579ed4a6f75c038280f07c0db95",
+    "initialization.py": "876da9e9a42c8a4ffc8c5f985ad1252b9418a3d6b7aaa70b3d54671eff38d3b3",
+    "budget_training.py": "c20a7c0e865b88ac76c4ac03299d66ba41243482030c6ff1c7a6153caf4f5b21",
+    "optimizer.py": "5a004b74ff07e9aec788b9f5765801a0eec6ef7414964533cbc80c513c2dea78",
+    "smoke_real.py": "cc57538029ffb3b15976c24c2f6218d7589fcc6f1e3fd87660c2684f0eead5b5",
+    "curvature.py": "fadd6b98197fe3dc826823fa31eb19ae590666035f333d60f0f5167b446e1a02",
+    "test_diagnostics.py": "b9f16b930da0d5990a3020fe0abec8995110c54e01b85ef36eaa89bb2d7dd1d7",
+    "dictionary_refresh.py": "ec126dd7ccfab1e4c38002960dc2d8d9acdb500b9639e33e2aad2a47108d604a",
+    "reporting.py": "69903e9ebe4bef15eeb5d958b79abc6ca71fa4f6489c34208271d0f712616409",
+    "diagnostics.py": "e683d1c684ed38144a7f0ef6dd99d4b1f7ee302057874fe1105b8bad0ae56615",
+    "manifold.py": "88c81dd05f573e8252d2b15ee86b1799bf7d3557438b4eea2dba2642379e3d6e",
+    "runtime_task.py": "4434b9317d724c8b2c659a93973be975c31a6f71faffd70a5d54e55a657a9607",
+    "audits.py": "ce2244cd1c27c82c4a185aa3a4d817c5ab5931b180b042725815ca145136071d",
+    "feedback.py": "98af336e82fa75e72d0d3a10b461fbda34f981c324095dcd59d19edbd421c8d2",
+    "runner.py": "f357ef60f800a6ce4498d1a89857a69dd3dc1fd43705ea67037ddf918a9e9fc0",
+    "responses.py": "40c8f6069ec8b3df2c55e74bf58348bb5b303d49da983f79a3861b1254e1dd4e",
+    "model.py": "3ab58d597e56e1de3c66b2cd0528d246eb29d940a5316f9f77eeb0bef16fc11c",
+    "oracle.py": "9daff504130245587014b1c8e39d50d41ccf3862ef39092ad4f17ac08856732e"
+  }
+}

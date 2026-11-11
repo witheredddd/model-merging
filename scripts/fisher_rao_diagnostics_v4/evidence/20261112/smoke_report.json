@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "main_protocol": false,
+  "X_n": 8,
+  "dictionary_columns": 4,
+  "actual_task_adjoint_relative_error": 0.0,
+  "models": {
+    "single_r2_ce": {
+      "mode": "ce",
+      "attempts": 24,
+      "geometry_windows": 6,
+      "accepted_geometry_windows": 6,
+      "charged_training_images": 256,
+      "stop": "exact_training_image_budget"
+    },
+    "two_r2_ce": {
+      "mode": "ce",
+      "attempts": 22,
+      "geometry_windows": 5,
+      "accepted_geometry_windows": 5,
+      "charged_training_images": 256,
+      "stop": "exact_training_image_budget"
+    },
+    "two_r2_response": {
+      "mode": "response",
+      "attempts": 16,
+      "geometry_windows": 4,
+      "accepted_geometry_windows": 1,
+      "charged_training_images": 256,
+      "stop": "exact_training_image_budget",
+      "offline_windows": 4,
+      "fingerprint_groups": 2,
+      "same_capacity_controls": 4
+    },
+    "two_r2_frozen": {
+      "mode": "frozen",
+      "attempts": 26,
+      "geometry_windows": 5,
+      "accepted_geometry_windows": 0,
+      "charged_training_images": 256,
+      "stop": "exact_training_image_budget"
+    }
+  },
+  "seconds": 20.430404474027455,
+  "peak_gpu_bytes": 3947868160,
+  "old_expert_endpoints_read": false,
+  "early_warmup_only": true,
+  "test_opened": false
+}

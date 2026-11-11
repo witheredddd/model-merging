@@ -2,6 +2,8 @@
 
 最新 Fisher–Rao 单任务实现见 [v3：任务损失与组条件响应共同学习](scripts/fisher_rao_response_v3/README.md)。它替代 r2 的分组后学习逻辑，使用统一提升、窗口化方向更新与可恢复训练；旧版实验另行保留。秩 4、8 对照及独立干预用于检验组结构，不能把初始化簇直接称为已发现的功能模块。
 
+对 v3 的下一轮审查诊断见 [精确预算、几何拒绝与同容量功能控制](scripts/fisher_rao_diagnostics_v4/README.md)：即时模型与开发集选优分开，四个训练种子，主模型仍固定 K=1、B=0、S，不叠加新的几何模块。
+
 [DTD 局部功能更新图谱](scripts/fr_hst/README.md)学习可冻结的非线性坐标映射，并保留[原在线 Fisher 投影基线](scripts/fr_hst/BASELINE.md)。
 
 当前发布 **`functional-geometry-v2.4.0-sun397-metric`**。文件校验见 [SHA256SUMS](SHA256SUMS)。
