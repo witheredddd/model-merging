@@ -1,0 +1,424 @@
+{
+  "status": "complete",
+  "results": [
+    {
+      "mode": "ce",
+      "selected": {
+        "attempt": 16,
+        "training_images": 1376,
+        "metrics": {
+          "CE": 0.8355473279953003,
+          "accuracy": 0.734375,
+          "n": 128
+        },
+        "displacement": 0.008947545811484795,
+        "group_norms": [
+          0.008947545811484797
+        ],
+        "drift_from_initial": [
+          [
+            0.0,
+            3.942476676500724e-08,
+            8.560065398421929e-08,
+            8.940696716308596e-08,
+            2.1560389152581015e-06,
+            1.6316302012049237e-05,
+            0.00010378946098247765,
+            0.0011714361852230813
+          ]
+        ],
+        "redundancy": {
+          "groups": [
+            {
+              "group": 0,
+              "explained_by_other_groups": 0.0,
+              "conditional_novelty": 1.0
+            }
+          ],
+          "joint_rank": 8,
+          "coordinate_count": 8
+        },
+        "coordinate": {
+          "accepted": true,
+          "loss_before": 0.3352968692779541,
+          "loss_after": 0.3316785991191864,
+          "functional_gradient_norm": 0.8536083626634056,
+          "coordinate_gradient_norm": 0.49532622875911375,
+          "parameter_gradient_direction_norm": 0.039395813194114886,
+          "trial_rate": 0.015,
+          "reasons": []
+        }
+      },
+      "stop_reason": "attempt_limit",
+      "attempts_completed": 16,
+      "used_training_images": 1376,
+      "accepted_geometry_windows": 4,
+      "geometry_windows": 4,
+      "rejected_coordinate_batches": 1,
+      "budget_breakdown": {
+        "coordinate_gradient": 512,
+        "coordinate_trial": 480,
+        "geometry_task_gradient": 128,
+        "conditional_group_gain": 128,
+        "geometry_trial": 128
+      },
+      "single_bad_batch_did_not_stop_training": true,
+      "seed": 11,
+      "rank": 8,
+      "case": "single_r8_ce",
+      "profile": {
+        "seconds": 26.224869899917394,
+        "peak_gpu_bytes": 11620971520,
+        "calls": {
+          "images": 7648,
+          "forwards": 141,
+          "jvp": 0,
+          "vjp": 0,
+          "training_images": 1376
+        }
+      },
+      "Xprime": {
+        "CE": 1.0080565214157104,
+        "accuracy": 0.724609375,
+        "n": 512
+      },
+      "actual_FR_tracking": {
+        "FR_tracking_error": 0.016083900927748307,
+        "target_FR": 0.10647905417393586,
+        "relative_tracking_error": 0.15105225203705233,
+        "prediction_map": "fixed_single_task_X",
+        "real_log_chart_error": 0.016128903029066,
+        "outside_anchor_first_order_image": 0.01521217495339956
+      },
+      "curvature_diagnostic": {
+        "eligible": false,
+        "reason": "quadratic_design_not_identifiable",
+        "rank": 2,
+        "features": 36
+      }
+    },
+    {
+      "mode": "ce",
+      "selected": {
+        "attempt": 16,
+        "training_images": 1504,
+        "metrics": {
+          "CE": 0.8354877829551697,
+          "accuracy": 0.734375,
+          "n": 128
+        },
+        "displacement": 0.008979831017280723,
+        "group_norms": [
+          0.004827788525646604,
+          0.006980548956654561
+        ],
+        "drift_from_initial": [
+          [
+            2.9031271190124162e-06,
+            1.1827983840709766e-05,
+            8.725967066253848e-05,
+            0.0008105031625665443
+          ],
+          [
+            7.45058059692383e-08,
+            9.295458535367104e-06,
+            7.317023837015423e-05,
+            0.001562329518723531
+          ]
+        ],
+        "redundancy": {
+          "groups": [
+            {
+              "group": 0,
+              "explained_by_other_groups": 7.500476418228605e-07,
+              "conditional_novelty": 0.9999992499523582
+            },
+            {
+              "group": 1,
+              "explained_by_other_groups": 7.500476418227882e-07,
+              "conditional_novelty": 0.9999992499523582
+            }
+          ],
+          "joint_rank": 8,
+          "coordinate_count": 8
+        },
+        "coordinate": {
+          "accepted": true,
+          "loss_before": 0.3353046178817749,
+          "loss_after": 0.33132970333099365,
+          "functional_gradient_norm": 0.8536598310667367,
+          "coordinate_gradient_norm": 0.49541486375235605,
+          "parameter_gradient_direction_norm": 0.03940268281657849,
+          "trial_rate": 0.0165,
+          "reasons": []
+        }
+      },
+      "stop_reason": "attempt_limit",
+      "attempts_completed": 16,
+      "used_training_images": 1504,
+      "accepted_geometry_windows": 4,
+      "geometry_windows": 4,
+      "rejected_coordinate_batches": 1,
+      "budget_breakdown": {
+        "coordinate_gradient": 512,
+        "coordinate_trial": 480,
+        "geometry_task_gradient": 128,
+        "conditional_group_gain": 256,
+        "geometry_trial": 128
+      },
+      "single_bad_batch_did_not_stop_training": true,
+      "seed": 11,
+      "rank": 8,
+      "case": "two_r8_ce",
+      "profile": {
+        "seconds": 26.187597035896033,
+        "peak_gpu_bytes": 11623840768,
+        "calls": {
+          "images": 7776,
+          "forwards": 145,
+          "jvp": 0,
+          "vjp": 0,
+          "training_images": 1504
+        }
+      },
+      "Xprime": {
+        "CE": 1.0078891515731812,
+        "accuracy": 0.7265625,
+        "n": 512
+      },
+      "actual_FR_tracking": {
+        "FR_tracking_error": 0.01615619408642992,
+        "target_FR": 0.1069089099002034,
+        "relative_tracking_error": 0.15112111891807048,
+        "prediction_map": "fixed_single_task_X",
+        "real_log_chart_error": 0.01620133933888287,
+        "outside_anchor_first_order_image": 0.015279505344979443
+      },
+      "curvature_diagnostic": {
+        "eligible": false,
+        "reason": "quadratic_design_not_identifiable",
+        "rank": 2,
+        "features": 36
+      }
+    },
+    {
+      "mode": "response",
+      "selected": {
+        "attempt": 16,
+        "training_images": 2176,
+        "metrics": {
+          "CE": 0.8355607986450195,
+          "accuracy": 0.734375,
+          "n": 128
+        },
+        "displacement": 0.008950708455893162,
+        "group_norms": [
+          0.004780385567596295,
+          0.00698463336865498
+        ],
+        "drift_from_initial": [
+          [
+            2.6671829807106168e-06,
+            1.0846847868342447e-05,
+            0.00014676189076256286,
+            0.0006817692348004998
+          ],
+          [
+            2.8567511983755517e-06,
+            5.424986047993e-05,
+            0.00018702278436007468,
+            0.0006817692388716102
+          ]
+        ],
+        "redundancy": {
+          "groups": [
+            {
+              "group": 0,
+              "explained_by_other_groups": 1.7656829078729027e-07,
+              "conditional_novelty": 0.9999998234317092
+            },
+            {
+              "group": 1,
+              "explained_by_other_groups": 1.7656829078727656e-07,
+              "conditional_novelty": 0.9999998234317092
+            }
+          ],
+          "joint_rank": 8,
+          "coordinate_count": 8
+        },
+        "coordinate": {
+          "accepted": true,
+          "loss_before": 0.3352789878845215,
+          "loss_after": 0.3316575586795807,
+          "functional_gradient_norm": 0.853545248497051,
+          "coordinate_gradient_norm": 0.4955698823343056,
+          "parameter_gradient_direction_norm": 0.03941281770153149,
+          "trial_rate": 0.015,
+          "reasons": []
+        }
+      },
+      "stop_reason": "attempt_limit",
+      "attempts_completed": 16,
+      "used_training_images": 2176,
+      "accepted_geometry_windows": 1,
+      "geometry_windows": 4,
+      "rejected_coordinate_batches": 1,
+      "budget_breakdown": {
+        "coordinate_gradient": 512,
+        "coordinate_trial": 480,
+        "geometry_task_gradient": 128,
+        "conditional_group_gain": 256,
+        "geometry_trial": 800
+      },
+      "single_bad_batch_did_not_stop_training": true,
+      "seed": 11,
+      "rank": 8,
+      "case": "two_r8_response",
+      "profile": {
+        "seconds": 24.479781372006983,
+        "peak_gpu_bytes": 11623841280,
+        "calls": {
+          "images": 6912,
+          "forwards": 142,
+          "jvp": 0,
+          "vjp": 0,
+          "training_images": 2176
+        }
+      },
+      "Xprime": {
+        "CE": 1.008082628250122,
+        "accuracy": 0.724609375,
+        "n": 512
+      },
+      "actual_FR_tracking": {
+        "FR_tracking_error": 0.016094780249924025,
+        "target_FR": 0.10652128045646261,
+        "relative_tracking_error": 0.15109450600814253,
+        "prediction_map": "fixed_single_task_X",
+        "real_log_chart_error": 0.016139835134699368,
+        "outside_anchor_first_order_image": 0.015221961754174021
+      },
+      "curvature_diagnostic": {
+        "eligible": false,
+        "reason": "quadratic_design_not_identifiable",
+        "rank": 2,
+        "features": 36
+      }
+    },
+    {
+      "mode": "frozen",
+      "selected": {
+        "attempt": 16,
+        "training_images": 1376,
+        "metrics": {
+          "CE": 0.8355818390846252,
+          "accuracy": 0.734375,
+          "n": 128
+        },
+        "displacement": 0.008949370604056475,
+        "group_norms": [
+          0.004781329095622187,
+          0.006984103697152579
+        ],
+        "drift_from_initial": [
+          [
+            0.0,
+            0.0,
+            8.42936970217881e-08,
+            8.688795409866128e-08
+          ],
+          [
+            0.0,
+            0.0,
+            9.064022496787043e-08,
+            1.0430812835693365e-07
+          ]
+        ],
+        "redundancy": {
+          "groups": [
+            {
+              "group": 0,
+              "explained_by_other_groups": 1.7963348814537532e-29,
+              "conditional_novelty": 1.0
+            },
+            {
+              "group": 1,
+              "explained_by_other_groups": 1.855796496220089e-29,
+              "conditional_novelty": 1.0
+            }
+          ],
+          "joint_rank": 8,
+          "coordinate_count": 8
+        },
+        "coordinate": {
+          "accepted": true,
+          "loss_before": 0.3353065252304077,
+          "loss_after": 0.3316892981529236,
+          "functional_gradient_norm": 0.853635304457092,
+          "coordinate_gradient_norm": 0.4952628156429548,
+          "parameter_gradient_direction_norm": 0.03938934254680096,
+          "trial_rate": 0.015,
+          "reasons": []
+        }
+      },
+      "stop_reason": "attempt_limit",
+      "attempts_completed": 16,
+      "used_training_images": 1376,
+      "accepted_geometry_windows": 0,
+      "geometry_windows": 4,
+      "rejected_coordinate_batches": 1,
+      "budget_breakdown": {
+        "coordinate_gradient": 512,
+        "coordinate_trial": 480,
+        "geometry_task_gradient": 128,
+        "conditional_group_gain": 256
+      },
+      "single_bad_batch_did_not_stop_training": true,
+      "seed": 11,
+      "rank": 8,
+      "case": "two_r8_frozen",
+      "profile": {
+        "seconds": 23.36625928292051,
+        "peak_gpu_bytes": 11623841280,
+        "calls": {
+          "images": 5600,
+          "forwards": 109,
+          "jvp": 0,
+          "vjp": 0,
+          "training_images": 1376
+        }
+      },
+      "Xprime": {
+        "CE": 1.0080918073654175,
+        "accuracy": 0.724609375,
+        "n": 512
+      },
+      "actual_FR_tracking": {
+        "FR_tracking_error": 0.016092198145810095,
+        "target_FR": 0.10651403703972663,
+        "relative_tracking_error": 0.15108053917633574,
+        "prediction_map": "fixed_single_task_X",
+        "real_log_chart_error": 0.016137242008191784,
+        "outside_anchor_first_order_image": 0.015219453936057638
+      },
+      "curvature_diagnostic": {
+        "eligible": false,
+        "reason": "quadratic_design_not_identifiable",
+        "rank": 2,
+        "features": 36
+      }
+    }
+  ],
+  "note": "Group identity is a hypothesis; response coverage and CE gains do not alone prove independent functions",
+  "comparison_protocol": "same rank, S and initial joint span; actual charged training forwards reported",
+  "test_opened": false,
+  "EC_enabled": false,
+  "fiber_enabled": false,
+  "calls": {
+    "images": 115232,
+    "forwards": 2007,
+    "jvp": 20,
+    "vjp": 0,
+    "training_images": 13216
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "main_protocol": false,
+  "X_n": 8,
+  "dictionary_columns": 4,
+  "actual_task_adjoint_relative_error": 0.0,
+  "models": {
+    "single_r2_ce": {
+      "mode": "ce",
+      "attempts": 9,
+      "geometry_windows": 3,
+      "accepted_geometry_windows": 3,
+      "charged_training_images": 108,
+      "stop": "attempt_limit"
+    },
+    "two_r2_ce": {
+      "mode": "ce",
+      "attempts": 9,
+      "geometry_windows": 3,
+      "accepted_geometry_windows": 2,
+      "charged_training_images": 136,
+      "stop": "attempt_limit"
+    },
+    "two_r2_response": {
+      "mode": "response",
+      "attempts": 9,
+      "geometry_windows": 3,
+      "accepted_geometry_windows": 0,
+      "charged_training_images": 124,
+      "stop": "attempt_limit"
+    },
+    "two_r2_frozen": {
+      "mode": "frozen",
+      "attempts": 9,
+      "geometry_windows": 3,
+      "accepted_geometry_windows": 0,
+      "charged_training_images": 108,
+      "stop": "attempt_limit"
+    }
+  },
+  "seconds": 7.113581458106637,
+  "peak_gpu_bytes": 3608122368,
+  "old_expert_endpoints_read": false,
+  "early_warmup_only": true,
+  "test_opened": false
+}

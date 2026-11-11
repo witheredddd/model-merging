@@ -19,3 +19,4 @@ functional_geometry_sun397_v2_*/** -text whitespace=blank-at-eol,blank-at-eof,sp
 scripts/fisher_rao_v2_internal_groups_r2/** -text
 scripts/fisher_rao_v2/** -text
 scripts/fisher_rao_v1/geometry.py -text
+scripts/fisher_rao_response_v3/** -text

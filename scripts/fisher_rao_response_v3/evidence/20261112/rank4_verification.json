@@ -1,0 +1,377 @@
+{
+  "source_matches_executed_config": true,
+  "source_sha256": {
+    "fr_math.py": "78ed4fb1f98920e1fbee58daae8c27291bc3e06346fdc0dc11f9c0f75d6b5975",
+    "test_response_learning.py": "17d7ac6aaa00762c3accb7c64450b8a80c7cfb61fb066a1d7c0176531b4719fc",
+    "initialization.py": "876da9e9a42c8a4ffc8c5f985ad1252b9418a3d6b7aaa70b3d54671eff38d3b3",
+    "optimizer.py": "b6234ae28d43670c44fb64848e02f09de1fffb475ad38fc4f518c10f7c2d0687",
+    "smoke_real.py": "79ddcd03c4f67ed3806bc240ca73503f6c5e9a07156e5208e32607bb02d79dd0",
+    "curvature.py": "fadd6b98197fe3dc826823fa31eb19ae590666035f333d60f0f5167b446e1a02",
+    "dictionary_refresh.py": "ec126dd7ccfab1e4c38002960dc2d8d9acdb500b9639e33e2aad2a47108d604a",
+    "manifold.py": "88c81dd05f573e8252d2b15ee86b1799bf7d3557438b4eea2dba2642379e3d6e",
+    "runtime_task.py": "4434b9317d724c8b2c659a93973be975c31a6f71faffd70a5d54e55a657a9607",
+    "audits.py": "ce2244cd1c27c82c4a185aa3a4d817c5ab5931b180b042725815ca145136071d",
+    "feedback.py": "98af336e82fa75e72d0d3a10b461fbda34f981c324095dcd59d19edbd421c8d2",
+    "runner.py": "38e16d1cc633fa3e85d93147a9d5faaf9c2b7dfa5ed9e1955df3a6ee3f05ea43",
+    "responses.py": "40c8f6069ec8b3df2c55e74bf58348bb5b303d49da983f79a3861b1254e1dd4e",
+    "model.py": "3ab58d597e56e1de3c66b2cd0528d246eb29d940a5316f9f77eeb0bef16fc11c",
+    "oracle.py": "377f9d3dffe9562c8ab15f7c865b63161bdc8bbab89560e9a302858af9e760c5"
+  },
+  "cases": {
+    "two_r4_response": {
+      "geometry_events": [
+        {
+          "window": 0,
+          "accepted": true,
+          "scale": 0.015625,
+          "CE_before": 0.7892666459083557,
+          "CE_after": 0.7892624735832214,
+          "preservation": {
+            "parameter_error": 7.555942449993489e-05,
+            "relative_parameter_error": 0.017406404626609057,
+            "allowed_parameter_error": 0.00021705489272996588,
+            "accepted": true
+          },
+          "angles": [
+            [
+              1.3748854972969762e-05,
+              0.00021732161173778242
+            ],
+            [
+              7.891895112824381e-05,
+              0.0027270769570269496
+            ]
+          ],
+          "responsibility": {
+            "mass": [
+              0.15850324951644063,
+              3.8414967504835595
+            ],
+            "effective_responses": [
+              2.3203894369995606,
+              3.9950767912688416
+            ],
+            "coverage": [
+              [
+                0.09385960316332093,
+                0.318527253137952
+              ],
+              [
+                0.005230352474542714,
+                0.6578709501729194
+              ],
+              [
+                0.05702556327226747,
+                0.26690332955723967
+              ],
+              [
+                0.019555848982743946,
+                0.4552626637627445
+              ]
+            ],
+            "conditional_novelty": [
+              [
+                0.09385960316332106,
+                0.3185272531379535
+              ],
+              [
+                0.00523035247454314,
+                0.657870950172923
+              ],
+              [
+                0.05702556327226759,
+                0.2669033295572411
+              ],
+              [
+                0.019555848982743807,
+                0.45526266376274654
+              ]
+            ],
+            "conditional_CE_gains": [
+              0.004511475563049316,
+              0.029464244842529297
+            ],
+            "membership_entropy": 0.148548363306716,
+            "redundancy": {
+              "groups": [
+                {
+                  "group": 0,
+                  "explained_by_other_groups": 5.5616096488773924e-30,
+                  "conditional_novelty": 1.0
+                },
+                {
+                  "group": 1,
+                  "explained_by_other_groups": 5.391202552138447e-30,
+                  "conditional_novelty": 1.0
+                }
+              ],
+              "joint_rank": 4,
+              "coordinate_count": 4
+            },
+            "definition": "decoder_adjoint_d=-L^T C_w^T S^T grad_theta_CE"
+          },
+          "training_images": 416
+        },
+        {
+          "window": 1,
+          "accepted": true,
+          "scale": 0.015625,
+          "CE_before": 0.26906368136405945,
+          "CE_after": 0.2690531313419342,
+          "preservation": {
+            "parameter_error": 0.0001063003937007664,
+            "relative_parameter_error": 0.02117854509343308,
+            "allowed_parameter_error": 0.0002509724557111985,
+            "accepted": true
+          },
+          "angles": [
+            [
+              0.00011548804082524236,
+              0.0027270769560091704
+            ],
+            [
+              0.0007176721695792842,
+              0.002727076956375571
+            ]
+          ],
+          "responsibility": {
+            "mass": [
+              1.8541259858221417,
+              2.1458740141778585
+            ],
+            "effective_responses": [
+              3.051122719340927,
+              3.24628514208407
+            ],
+            "coverage": [
+              [
+                0.07230836192605034,
+                0.026671735682510356
+              ],
+              [
+                0.12018688101685736,
+                0.27591492459599415
+              ],
+              [
+                0.098584552858117,
+                0.13551772837168918
+              ],
+              [
+                0.23543904819733635,
+                0.0001479967812823327
+              ]
+            ],
+            "conditional_novelty": [
+              [
+                0.07226398826661405,
+                0.026627362023073715
+              ],
+              [
+                0.120040684795672,
+                0.27576872837480765
+              ],
+              [
+                0.09845367302666956,
+                0.1353868485402411
+              ],
+              [
+                0.23544567900062952,
+                0.00015462758457569122
+              ]
+            ],
+            "conditional_CE_gains": [
+              0.007807731628417969,
+              0.01975184679031372
+            ],
+            "membership_entropy": 0.5437716363945441,
+            "redundancy": {
+              "groups": [
+                {
+                  "group": 0,
+                  "explained_by_other_groups": 1.6418633023876794e-07,
+                  "conditional_novelty": 0.9999998358136698
+                },
+                {
+                  "group": 1,
+                  "explained_by_other_groups": 1.6418633023875857e-07,
+                  "conditional_novelty": 0.9999998358136698
+                }
+              ],
+              "joint_rank": 4,
+              "coordinate_count": 4
+            },
+            "definition": "decoder_adjoint_d=-L^T C_w^T S^T grad_theta_CE"
+          },
+          "training_images": 832
+        },
+        {
+          "window": 2,
+          "accepted": false,
+          "reason": "all_geometry_trials_rejected",
+          "responsibility": {
+            "mass": [
+              2.12136649908149,
+              1.8786335009185093
+            ],
+            "effective_responses": [
+              2.875435984733145,
+              2.6690035085426103
+            ],
+            "coverage": [
+              [
+                0.2013791469494712,
+                0.020047813798026684
+              ],
+              [
+                0.3459634712899302,
+                0.0025876229828466907
+              ],
+              [
+                0.12606865762304947,
+                0.4541597717226924
+              ],
+              [
+                0.11631899874980028,
+                0.05949257394435463
+              ]
+            ],
+            "conditional_novelty": [
+              [
+                0.20128731789872162,
+                0.019955984747276962
+              ],
+              [
+                0.3460493326042017,
+                0.0026734842971178857
+              ],
+              [
+                0.1250788736302788,
+                0.45316998772992
+              ],
+              [
+                0.11634912557533869,
+                0.0595227007698929
+              ]
+            ],
+            "conditional_CE_gains": [
+              0.00887104868888855,
+              0.09221935272216797
+            ],
+            "membership_entropy": 0.4261867084451696,
+            "redundancy": {
+              "groups": [
+                {
+                  "group": 0,
+                  "explained_by_other_groups": 3.552933265532324e-06,
+                  "conditional_novelty": 0.9999964470667345
+                },
+                {
+                  "group": 1,
+                  "explained_by_other_groups": 3.5529332655324315e-06,
+                  "conditional_novelty": 0.9999964470667345
+                }
+              ],
+              "joint_rank": 4,
+              "coordinate_count": 4
+            },
+            "definition": "decoder_adjoint_d=-L^T C_w^T S^T grad_theta_CE"
+          },
+          "training_images": 1408
+        },
+        {
+          "window": 3,
+          "accepted": true,
+          "scale": 0.0078125,
+          "CE_before": 0.36578959226608276,
+          "CE_after": 0.3657890558242798,
+          "preservation": {
+            "parameter_error": 9.47353303197308e-05,
+            "relative_parameter_error": 0.015574025456243272,
+            "allowed_parameter_error": 0.00030415529174200617,
+            "accepted": true
+          },
+          "angles": [
+            [
+              0.0001495614436881794,
+              0.0013635384777425836
+            ],
+            [
+              0.0001348832411500824,
+              0.0013635384779868503
+            ]
+          ],
+          "responsibility": {
+            "mass": [
+              2.284619389640501,
+              1.7153806103594986
+            ],
+            "effective_responses": [
+              3.683234105420054,
+              3.47056145651283
+            ],
+            "coverage": [
+              [
+                0.08029653246454262,
+                0.0641640185520865
+              ],
+              [
+                0.12134300402083907,
+                0.12699738185521603
+              ],
+              [
+                0.10381867452855248,
+                0.06022237804827492
+              ],
+              [
+                0.2399609509944745,
+                0.009048129880338266
+              ]
+            ],
+            "conditional_novelty": [
+              [
+                0.07998975586181967,
+                0.0638572419493633
+              ],
+              [
+                0.12094723789464307,
+                0.12660161572902012
+              ],
+              [
+                0.10382518260103443,
+                0.060228886120756796
+              ],
+              [
+                0.2397368799616942,
+                0.00882405884755776
+              ]
+            ],
+            "conditional_CE_gains": [
+              0.010558456182479858,
+              0.020182758569717407
+            ],
+            "membership_entropy": 0.6202204349733452,
+            "redundancy": {
+              "groups": [
+                {
+                  "group": 0,
+                  "explained_by_other_groups": 3.552933265532324e-06,
+                  "conditional_novelty": 0.9999964470667345
+                },
+                {
+                  "group": 1,
+                  "explained_by_other_groups": 3.5529332655324315e-06,
+                  "conditional_novelty": 0.9999964470667345
+                }
+              ],
+              "joint_rank": 4,
+              "coordinate_count": 4
+            },
+            "definition": "decoder_adjoint_d=-L^T C_w^T S^T grad_theta_CE"
+          },
+          "training_images": 1824
+        }
+      ],
+      "stop_reason": "attempt_limit"
+    }
+  }
+}

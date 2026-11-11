@@ -1,0 +1,58 @@
+{
+  "common_predeclared_budget_results": [
+    {
+      "training_image_budget_ceiling": 1024,
+      "models": {
+        "single_r8_ce": {
+          "CE": 1.009955644607544,
+          "accuracy": 0.724609375,
+          "selected_model_cost": 896,
+          "evaluated_prefix_cost": 896
+        },
+        "two_r8_ce": {
+          "CE": 1.0099507570266724,
+          "accuracy": 0.724609375,
+          "selected_model_cost": 960,
+          "evaluated_prefix_cost": 960
+        },
+        "two_r8_response": {
+          "CE": 1.0154292583465576,
+          "accuracy": 0.724609375,
+          "selected_model_cost": 768,
+          "evaluated_prefix_cost": 768
+        },
+        "two_r8_frozen": {
+          "CE": 1.0099670886993408,
+          "accuracy": 0.724609375,
+          "selected_model_cost": 896,
+          "evaluated_prefix_cost": 896
+        }
+      },
+      "paired_comparisons": {
+        "two_r8_response_vs_single_r8_ce": {
+          "CE_gain": -0.005473603494465351,
+          "CI": [
+            -0.00797613528339749,
+            -0.0032595925718125864
+          ]
+        },
+        "two_r8_response_vs_two_r8_ce": {
+          "CE_gain": -0.0054784477688372135,
+          "CI": [
+            -0.00798443884801312,
+            -0.0032624729586535396
+          ]
+        },
+        "two_r8_response_vs_two_r8_frozen": {
+          "CE_gain": -0.005462110973894596,
+          "CI": [
+            -0.00796445585379697,
+            -0.0032494925598742343
+          ]
+        }
+      }
+    }
+  ],
+  "matching": "same ceiling on charged task forwards; exact selected/prefix costs reported, not assumed identical FLOPs",
+  "no_common_checkpoint_reason": null
+}
