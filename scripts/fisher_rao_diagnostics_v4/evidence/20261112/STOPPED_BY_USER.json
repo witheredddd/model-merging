@@ -1,0 +1,20 @@
+{
+  "status": "stopped_on_user_request",
+  "timestamp_utc": "2026-11-11T19:36:20.086200+00:00",
+  "reason": "User requested static code review before further experiments",
+  "resume_requires_explicit_user_instruction": true,
+  "completed_cases": 4,
+  "completed_metric_files": [
+    "seed_11/single_r4_ce_metrics.json",
+    "seed_11/two_r4_ce_metrics.json",
+    "seed_11/two_r4_frozen_metrics.json",
+    "seed_11/two_r4_response_metrics.json"
+  ],
+  "interrupted_case": "two_r4_response_tol001",
+  "interrupted_attempt": 125,
+  "interrupted_cost": 9792,
+  "full_protocol_complete": false,
+  "geometry_stage_complete": false,
+  "functional_stage_complete": false,
+  "existing_results_preserved": true
+}
