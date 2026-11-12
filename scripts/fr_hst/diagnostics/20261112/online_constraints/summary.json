@@ -1,0 +1,184 @@
+[
+  {
+    "run": "adamw_42",
+    "complete": true,
+    "selected": {
+      "epoch": 8,
+      "step": 416,
+      "elapsed_sec": 198.75868678092957,
+      "ce": 0.6760840213045161,
+      "accuracy": 0.8324468085106383,
+      "n": 376
+    },
+    "final": {
+      "epoch": 8,
+      "step": 416,
+      "elapsed_sec": 198.75868678092957,
+      "ce": 0.6760840213045161,
+      "accuracy": 0.8324468085106383,
+      "n": 376
+    },
+    "geometry_windows": 0,
+    "stable_windows": 0,
+    "attempted_controls": 0,
+    "accepted_controls": 0,
+    "audit_ce_violations": 0,
+    "audit_fr_violations": 0
+  },
+  {
+    "run": "adamw_43",
+    "complete": true,
+    "selected": {
+      "epoch": 7,
+      "step": 364,
+      "elapsed_sec": 149.1230070590973,
+      "ce": 0.6660955053694705,
+      "accuracy": 0.8430851063829787,
+      "n": 376
+    },
+    "final": {
+      "epoch": 8,
+      "step": 416,
+      "elapsed_sec": 172.56610798835754,
+      "ce": 0.6661212114577598,
+      "accuracy": 0.8457446808510638,
+      "n": 376
+    },
+    "geometry_windows": 0,
+    "stable_windows": 0,
+    "attempted_controls": 0,
+    "accepted_controls": 0,
+    "audit_ce_violations": 0,
+    "audit_fr_violations": 0
+  },
+  {
+    "run": "fisher_42",
+    "complete": true,
+    "selected": {
+      "epoch": 5,
+      "step": 260,
+      "elapsed_sec": 251.34617495536804,
+      "ce": 0.7159886968896744,
+      "accuracy": 0.800531914893617,
+      "n": 376
+    },
+    "final": {
+      "epoch": 8,
+      "step": 416,
+      "elapsed_sec": 396.49355387687683,
+      "ce": 0.7695946084692123,
+      "accuracy": 0.8111702127659575,
+      "n": 376
+    },
+    "geometry_windows": 26,
+    "stable_windows": 11,
+    "attempted_controls": 390,
+    "accepted_controls": 368,
+    "audit_ce_violations": 57,
+    "audit_fr_violations": 25
+  },
+  {
+    "run": "online_42",
+    "complete": true,
+    "selected": {
+      "epoch": 4,
+      "step": 208,
+      "elapsed_sec": 174.573246717453,
+      "ce": 0.6630386951121878,
+      "accuracy": 0.8430851063829787,
+      "n": 376
+    },
+    "final": {
+      "epoch": 8,
+      "step": 416,
+      "elapsed_sec": 347.10422563552856,
+      "ce": 0.9320545399442632,
+      "accuracy": 0.7632978723404256,
+      "n": 376
+    },
+    "geometry_windows": 26,
+    "stable_windows": 13,
+    "attempted_controls": 195,
+    "accepted_controls": 193,
+    "audit_ce_violations": 24,
+    "audit_fr_violations": 0
+  },
+  {
+    "run": "online_43",
+    "complete": true,
+    "selected": {
+      "epoch": 5,
+      "step": 260,
+      "elapsed_sec": 224.23548531532288,
+      "ce": 0.6516601937882444,
+      "accuracy": 0.8324468085106383,
+      "n": 376
+    },
+    "final": {
+      "epoch": 8,
+      "step": 416,
+      "elapsed_sec": 345.7504665851593,
+      "ce": 0.655960387371956,
+      "accuracy": 0.8351063829787234,
+      "n": 376
+    },
+    "geometry_windows": 26,
+    "stable_windows": 16,
+    "attempted_controls": 240,
+    "accepted_controls": 240,
+    "audit_ce_violations": 35,
+    "audit_fr_violations": 0
+  },
+  {
+    "run": "random_42",
+    "complete": true,
+    "selected": {
+      "epoch": 4,
+      "step": 208,
+      "elapsed_sec": 202.95251178741455,
+      "ce": 0.7535118346518659,
+      "accuracy": 0.8138297872340425,
+      "n": 376
+    },
+    "final": {
+      "epoch": 8,
+      "step": 416,
+      "elapsed_sec": 398.78309774398804,
+      "ce": 0.8378977674119016,
+      "accuracy": 0.7819148936170213,
+      "n": 376
+    },
+    "geometry_windows": 26,
+    "stable_windows": 14,
+    "attempted_controls": 390,
+    "accepted_controls": 353,
+    "audit_ce_violations": 70,
+    "audit_fr_violations": 29
+  },
+  {
+    "run": "random_43",
+    "complete": false,
+    "selected": {
+      "epoch": 3,
+      "step": 156,
+      "elapsed_sec": 151.01157999038696,
+      "ce": 0.6619295465185288,
+      "accuracy": 0.8164893617021277,
+      "n": 376
+    },
+    "final": {
+      "epoch": 4,
+      "step": 208,
+      "elapsed_sec": 200.8283772468567,
+      "ce": 0.7037653466488453,
+      "accuracy": 0.8058510638297872,
+      "n": 376
+    },
+    "geometry_windows": 16,
+    "stable_windows": 8,
+    "attempted_controls": 236,
+    "accepted_controls": 214,
+    "audit_ce_violations": 42,
+    "audit_fr_violations": 5
+  }
+]
