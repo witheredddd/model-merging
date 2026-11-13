@@ -1,0 +1,60 @@
+{
+  "mask_budget": 849346,
+  "unique_masks_valid": true,
+  "matched_matrix_counts_valid": true,
+  "held_ids_disjoint_from_both_A_probes": true,
+  "response_checks": 384,
+  "task_checks": 72,
+  "negative_task_CE_checks": 72,
+  "overlap": {
+    "joint_logdet": {
+      "intersection_fraction_with_joint": 1.0,
+      "Jaccard_with_joint": 1.0
+    },
+    "top_g": {
+      "intersection_fraction_with_joint": 0.8060543053125582,
+      "Jaccard_with_joint": 0.6751180634924705
+    },
+    "top_leverage": {
+      "intersection_fraction_with_joint": 0.5978776611651788,
+      "Jaccard_with_joint": 0.42640905476338226
+    },
+    "random_14": {
+      "intersection_fraction_with_joint": 0.00984639946500013,
+      "Jaccard_with_joint": 0.00494755754648947
+    },
+    "random_15": {
+      "intersection_fraction_with_joint": 0.010094825901340561,
+      "Jaccard_with_joint": 0.005073018570301009
+    },
+    "random_16": {
+      "intersection_fraction_with_joint": 0.009898204029924201,
+      "Jaccard_with_joint": 0.004973717450015826
+    },
+    "position_101": {
+      "intersection_fraction_with_joint": 3.414391779086497e-05,
+      "Jaccard_with_joint": 1.707225035218875e-05
+    },
+    "position_102": {
+      "intersection_fraction_with_joint": 0.008226329434647364,
+      "Jaccard_with_joint": 0.004130152715751269
+    },
+    "position_103": {
+      "intersection_fraction_with_joint": 0.00012597928288353628,
+      "Jaccard_with_joint": 6.299360938663653e-05
+    },
+    "matrix_matched_41": {
+      "intersection_fraction_with_joint": 0.018458908383626932,
+      "Jaccard_with_joint": 0.009315430531177993
+    },
+    "matrix_matched_42": {
+      "intersection_fraction_with_joint": 0.018506003442648813,
+      "Jaccard_with_joint": 0.009339419384969702
+    },
+    "matrix_matched_43": {
+      "intersection_fraction_with_joint": 0.018674368278652046,
+      "Jaccard_with_joint": 0.00942518886329049
+    }
+  },
+  "caveat": "Small negative CE changes can be near numerical noise; checks share images and gradients, not72 independent statistical repetitions"
+}

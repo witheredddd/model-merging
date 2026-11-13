@@ -1,0 +1,1360 @@
+{
+  "method": "matrix_matched_41",
+  "budget": 849346,
+  "information_eigenvalues": [
+    6.314353365318216,
+    6.588797285081993,
+    8.630893366459512,
+    10.46194849869272,
+    11.50316132150497,
+    13.301150264709051,
+    16.45799200630498,
+    20.62996169268007,
+    32.22905971160242,
+    55.00607932349768
+  ],
+  "response_control": [
+    {
+      "controller": "selected_min_norm",
+      "seed": 5021,
+      "radius": 0.001,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.0026431588904904098,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.0026431591250002384,
+      "linear_selected_constraint_relative_error": 1.215462483142798e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9054697231533606,
+          "CE_delta": 0.0003871607735414198,
+          "accuracy": 0.4609375,
+          "KL_from_base": 7.96219900453024e-05,
+          "selected_response_norm": 0.011531697750168664,
+          "outside_response_norm": 0.0051146902367478625,
+          "selected_target_relative_error": 0.0036355371362080586,
+          "full_target_relative_error": 0.4451601435995782,
+          "outside_over_target_norm": 0.4421801679031814,
+          "KL_target_to_control": 1.3260102494918016e-05
+        },
+        "held": {
+          "CE": 1.6680641662263573,
+          "CE_delta": 0.00124349503960408,
+          "accuracy": 0.51953125,
+          "KL_from_base": 2.6054431108069245e-05,
+          "selected_response_norm": 0.00639723449542929,
+          "outside_response_norm": 0.003345396314132552,
+          "selected_target_relative_error": 0.4436480750347146,
+          "full_target_relative_error": 0.5386813906643888,
+          "outside_over_target_norm": 0.30589447939222764,
+          "KL_target_to_control": 1.735008160731998e-05
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5021,
+      "radius": 0.001,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.0021503643166580406,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.002150364452973008,
+      "linear_selected_constraint_relative_error": 0.17561968022947017,
+      "metrics": {
+        "fit": {
+          "CE": 1.9055848813852085,
+          "CE_delta": 0.0005023190053891617,
+          "accuracy": 0.4609375,
+          "KL_from_base": 5.565403107549515e-05,
+          "selected_response_norm": 0.009723183083889532,
+          "outside_response_norm": 0.0040888325467292545,
+          "selected_target_relative_error": 0.17713971234381795,
+          "full_target_relative_error": 0.3983196011248405,
+          "outside_over_target_norm": 0.3534917225388684,
+          "KL_target_to_control": 1.061414887908257e-05
+        },
+        "held": {
+          "CE": 1.6679975816758583,
+          "CE_delta": 0.0011769104891048454,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.8031970279502862e-05,
+          "selected_response_norm": 0.005337970177873924,
+          "outside_response_norm": 0.0027523272264893756,
+          "selected_target_relative_error": 0.5313943753915881,
+          "full_target_relative_error": 0.5878189995045827,
+          "outside_over_target_norm": 0.2516657594519794,
+          "KL_target_to_control": 2.0657831559745466e-05
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5021,
+      "radius": 0.001,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.0026431588904904098,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.0026431591250002384,
+      "linear_selected_constraint_relative_error": 1.215462483142798e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9048334394370006,
+          "CE_delta": -0.0002491229428182543,
+          "accuracy": 0.4609375,
+          "KL_from_base": 8.125975614980381e-05,
+          "selected_response_norm": 0.01162467428042757,
+          "outside_response_norm": 0.00522492250202779,
+          "selected_target_relative_error": 0.0027436195487048434,
+          "full_target_relative_error": 0.44706407273163384,
+          "outside_over_target_norm": 0.45035428590986487,
+          "KL_target_to_control": 1.3450355486619943e-05
+        },
+        "held": {
+          "CE": 1.6656313821911173,
+          "CE_delta": -0.0011892889956361076,
+          "accuracy": 0.51953125,
+          "KL_from_base": 2.6022320311734794e-05,
+          "selected_response_norm": 0.0063954434902594275,
+          "outside_response_norm": 0.0033362177158392414,
+          "selected_target_relative_error": 0.4446036159855159,
+          "full_target_relative_error": 0.5394252803829233,
+          "outside_over_target_norm": 0.3048313255478091,
+          "KL_target_to_control": 1.7431229800145956e-05
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5021,
+      "radius": 0.001,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.002151256763341426,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.00215125665999949,
+      "linear_selected_constraint_relative_error": 0.17158241162232288,
+      "metrics": {
+        "fit": {
+          "CE": 1.9046702197157999,
+          "CE_delta": -0.00041234266401928075,
+          "accuracy": 0.4609375,
+          "KL_from_base": 5.731051047222661e-05,
+          "selected_response_norm": 0.00984895407708524,
+          "outside_response_norm": 0.00419159935226989,
+          "selected_target_relative_error": 0.17029235859302966,
+          "full_target_relative_error": 0.3962962696381462,
+          "outside_over_target_norm": 0.3612885611947625,
+          "KL_target_to_control": 1.0569791307059837e-05
+        },
+        "held": {
+          "CE": 1.66568004825728,
+          "CE_delta": -0.0011406229294734908,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.8067236215074564e-05,
+          "selected_response_norm": 0.005349036546096533,
+          "outside_response_norm": 0.0027412220400194836,
+          "selected_target_relative_error": 0.5303606902958233,
+          "full_target_relative_error": 0.5868613856633037,
+          "outside_over_target_norm": 0.25046637217733464,
+          "KL_target_to_control": 2.0633239423035407e-05
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5021,
+      "radius": 0.003,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.00792947667147123,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.007929476909339428,
+      "linear_selected_constraint_relative_error": 1.237332715081319e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9066365641161025,
+          "CE_delta": 0.001554001736283444,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0006992859327692273,
+          "selected_response_norm": 0.034152092045355416,
+          "outside_response_norm": 0.015018179306095027,
+          "selected_target_relative_error": 0.013091420999866557,
+          "full_target_relative_error": 0.4427137988638388,
+          "outside_over_target_norm": 0.4346784412960004,
+          "KL_target_to_control": 0.0001171105668312477
+        },
+        "held": {
+          "CE": 1.6707160376364538,
+          "CE_delta": 0.0038953664497004773,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.00023467913267942496,
+          "selected_response_norm": 0.019185141529097696,
+          "outside_response_norm": 0.010067273122766755,
+          "selected_target_relative_error": 0.4421695232374458,
+          "full_target_relative_error": 0.5385083852055752,
+          "outside_over_target_norm": 0.30732401469472287,
+          "KL_target_to_control": 0.00015552444301342245
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5021,
+      "radius": 0.003,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.006440021673728954,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.006440021563321352,
+      "linear_selected_constraint_relative_error": 0.18251028798189384,
+      "metrics": {
+        "fit": {
+          "CE": 1.9068344490158167,
+          "CE_delta": 0.0017518866359976057,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0004829402784750688,
+          "selected_response_norm": 0.02863391748095307,
+          "outside_response_norm": 0.011954501622370084,
+          "selected_target_relative_error": 0.1873353275128748,
+          "full_target_relative_error": 0.4016432024389748,
+          "outside_over_target_norm": 0.34600493347242345,
+          "KL_target_to_control": 9.630000089669369e-05
+        },
+        "held": {
+          "CE": 1.6704534653876082,
+          "CE_delta": 0.0036327942008547703,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.0001613884822664375,
+          "selected_response_norm": 0.01594517379744473,
+          "outside_response_norm": 0.008282620792037074,
+          "selected_target_relative_error": 0.5330364826041375,
+          "full_target_relative_error": 0.5900717731268624,
+          "outside_over_target_norm": 0.25284386774472073,
+          "KL_target_to_control": 0.00018666872062387052
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5021,
+      "radius": 0.003,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.00792947667147123,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.007929476909339428,
+      "linear_selected_constraint_relative_error": 1.237332715081319e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.904766621490644,
+          "CE_delta": -0.000315940889175269,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0007420289685176493,
+          "selected_response_norm": 0.034932048275455284,
+          "outside_response_norm": 0.01598018277327728,
+          "selected_target_relative_error": 0.005936234587291411,
+          "full_target_relative_error": 0.44798183939746733,
+          "outside_over_target_norm": 0.4586326118734153,
+          "KL_target_to_control": 0.0001218730051956371
+        },
+        "held": {
+          "CE": 1.6634174652984433,
+          "CE_delta": -0.0034032058883101844,
+          "accuracy": 0.5234375,
+          "KL_from_base": 0.0002338397431042933,
+          "selected_response_norm": 0.01917000432350063,
+          "outside_response_norm": 0.009985685103100031,
+          "selected_target_relative_error": 0.4450001658720944,
+          "full_target_relative_error": 0.5404112921212209,
+          "outside_over_target_norm": 0.3041059265217797,
+          "KL_target_to_control": 0.0001575847194667623
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5021,
+      "radius": 0.003,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.006446340048294304,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.006446340121328831,
+      "linear_selected_constraint_relative_error": 0.17047132730906245,
+      "metrics": {
+        "fit": {
+          "CE": 1.9041424023601157,
+          "CE_delta": -0.0009401600197032159,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0005255119181913103,
+          "selected_response_norm": 0.029687666384320924,
+          "outside_response_norm": 0.012841992937632156,
+          "selected_target_relative_error": 0.16748396143270572,
+          "full_target_relative_error": 0.39514145207842444,
+          "outside_over_target_norm": 0.36856629528013174,
+          "KL_target_to_control": 9.479546087568477e-05
+        },
+        "held": {
+          "CE": 1.6635186044701815,
+          "CE_delta": -0.0033020667165718433,
+          "accuracy": 0.5234375,
+          "KL_from_base": 0.0001622536283205996,
+          "selected_response_norm": 0.016039437567824315,
+          "outside_response_norm": 0.008182747642963456,
+          "selected_target_relative_error": 0.530080697181639,
+          "full_target_relative_error": 0.5871650577264175,
+          "outside_over_target_norm": 0.24919893104628205,
+          "KL_target_to_control": 0.00018606170101115183
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5022,
+      "radius": 0.001,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.002839100161587849,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.002839100081473589,
+      "linear_selected_constraint_relative_error": 1.6041977675502147e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9046277847219244,
+          "CE_delta": -0.000454777657894605,
+          "accuracy": 0.4609375,
+          "KL_from_base": 6.802972520483676e-05,
+          "selected_response_norm": 0.010197996010924056,
+          "outside_response_norm": 0.005670534554181472,
+          "selected_target_relative_error": 0.002993092482199744,
+          "full_target_relative_error": 0.5560484417916883,
+          "outside_over_target_norm": 0.5564636627381554,
+          "KL_target_to_control": 1.6039080715080548e-05
+        },
+        "held": {
+          "CE": 1.6659385098989845,
+          "CE_delta": -0.000882161287768805,
+          "accuracy": 0.51953125,
+          "KL_from_base": 2.8874897487348072e-05,
+          "selected_response_norm": 0.006823111624037129,
+          "outside_response_norm": 0.003342629797022866,
+          "selected_target_relative_error": 0.4100933142294187,
+          "full_target_relative_error": 0.5157759331914974,
+          "outside_over_target_norm": 0.31216827116963813,
+          "KL_target_to_control": 1.5247907704378922e-05
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5022,
+      "radius": 0.001,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.0021966048653037284,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.0021966048516333103,
+      "linear_selected_constraint_relative_error": 0.24263189660481377,
+      "metrics": {
+        "fit": {
+          "CE": 1.904606653763832,
+          "CE_delta": -0.0004759086159870223,
+          "accuracy": 0.4609375,
+          "KL_from_base": 4.1057012382261635e-05,
+          "selected_response_norm": 0.008130374515967305,
+          "outside_response_norm": 0.0040060632079863155,
+          "selected_target_relative_error": 0.24172892498526422,
+          "full_target_relative_error": 0.4611043587579404,
+          "outside_over_target_norm": 0.3931249487286501,
+          "KL_target_to_control": 1.1039265585621336e-05
+        },
+        "held": {
+          "CE": 1.6661136974889077,
+          "CE_delta": -0.0007069736978456793,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.866967270857299e-05,
+          "selected_response_norm": 0.0055183826093191885,
+          "outside_response_norm": 0.002622861906079123,
+          "selected_target_relative_error": 0.535990043115037,
+          "full_target_relative_error": 0.5895062813638401,
+          "outside_over_target_norm": 0.24494913180833486,
+          "KL_target_to_control": 1.991547499724532e-05
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5022,
+      "radius": 0.001,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.002839100161587849,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.002839100081473589,
+      "linear_selected_constraint_relative_error": 1.6041977675502147e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9056730135956275,
+          "CE_delta": 0.0005904512158082459,
+          "accuracy": 0.4609375,
+          "KL_from_base": 6.748981520285317e-05,
+          "selected_response_norm": 0.010170256611150175,
+          "outside_response_norm": 0.005607735959012918,
+          "selected_target_relative_error": 0.0029452995424074546,
+          "full_target_relative_error": 0.5511333036731546,
+          "outside_over_target_norm": 0.550887658126652,
+          "KL_target_to_control": 1.5751330859502758e-05
+        },
+        "held": {
+          "CE": 1.6677614445832862,
+          "CE_delta": 0.0009407733965326139,
+          "accuracy": 0.51953125,
+          "KL_from_base": 2.8970728243853894e-05,
+          "selected_response_norm": 0.006834762012889361,
+          "outside_response_norm": 0.003353941501567262,
+          "selected_target_relative_error": 0.4114037028379047,
+          "full_target_relative_error": 0.5162276125602566,
+          "outside_over_target_norm": 0.3125024378643471,
+          "KL_target_to_control": 1.535148535180171e-05
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5022,
+      "radius": 0.001,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.0021917182042738986,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.0021917179692536592,
+      "linear_selected_constraint_relative_error": 0.24299795278217862,
+      "metrics": {
+        "fit": {
+          "CE": 1.905635863146359,
+          "CE_delta": 0.0005533007665397365,
+          "accuracy": 0.4609375,
+          "KL_from_base": 4.06584714458615e-05,
+          "selected_response_norm": 0.00809446900023653,
+          "outside_response_norm": 0.003969640869209818,
+          "selected_target_relative_error": 0.24389891554134294,
+          "full_target_relative_error": 0.4602604351254647,
+          "outside_over_target_norm": 0.38996596452229754,
+          "KL_target_to_control": 1.0975840353465575e-05
+        },
+        "held": {
+          "CE": 1.6675655873487343,
+          "CE_delta": 0.0007449161619806974,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.8649067431333606e-05,
+          "selected_response_norm": 0.00551379576460887,
+          "outside_response_norm": 0.0026274619308119833,
+          "selected_target_relative_error": 0.5381116854208954,
+          "full_target_relative_error": 0.5909998881702356,
+          "outside_over_target_norm": 0.2448129337947079,
+          "KL_target_to_control": 2.0124280953108183e-05
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5022,
+      "radius": 0.003,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.008517300484763547,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.008517300710082054,
+      "linear_selected_constraint_relative_error": 1.7682813545787362e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9041315564177177,
+          "CE_delta": -0.0009510059621017921,
+          "accuracy": 0.46875,
+          "KL_from_base": 0.0006170215233712009,
+          "selected_response_norm": 0.030658087662573157,
+          "outside_response_norm": 0.017219783836525577,
+          "selected_target_relative_error": 0.00896287937719944,
+          "full_target_relative_error": 0.561040792456965,
+          "outside_over_target_norm": 0.5626416055731301,
+          "KL_target_to_control": 0.00014702036181057156
+        },
+        "held": {
+          "CE": 1.6643525630678577,
+          "CE_delta": -0.002468108118895505,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.0002590072882242154,
+          "selected_response_norm": 0.02043020566817623,
+          "outside_response_norm": 0.01000129970071114,
+          "selected_target_relative_error": 0.40861731757305975,
+          "full_target_relative_error": 0.5152952595097257,
+          "outside_over_target_norm": 0.3120763288247684,
+          "KL_target_to_control": 0.00013629283297344105
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5022,
+      "radius": 0.003,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.006602506125276274,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.006602506153285503,
+      "linear_selected_constraint_relative_error": 0.24258049089137806,
+      "metrics": {
+        "fit": {
+          "CE": 1.9038922428260363,
+          "CE_delta": -0.0011903195537828594,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0003729086095807475,
+          "selected_response_norm": 0.024484612824337275,
+          "outside_response_norm": 0.012136673056094293,
+          "selected_target_relative_error": 0.23985771659486113,
+          "full_target_relative_error": 0.4621294206039917,
+          "outside_over_target_norm": 0.3965553388720611,
+          "KL_target_to_control": 0.00010002454562180862
+        },
+        "held": {
+          "CE": 1.6648172648701205,
+          "CE_delta": -0.002003406316632934,
+          "accuracy": 0.5234375,
+          "KL_from_base": 0.00016812375093122503,
+          "selected_response_norm": 0.016562348460884408,
+          "outside_response_norm": 0.00785725523931288,
+          "selected_target_relative_error": 0.5338368187459707,
+          "full_target_relative_error": 0.5880932280798415,
+          "outside_over_target_norm": 0.24517447162888112,
+          "KL_target_to_control": 0.00017743598484293912
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5022,
+      "radius": 0.003,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.008517300484763547,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.008517300710082054,
+      "linear_selected_constraint_relative_error": 1.7682813545787362e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9072530849946125,
+          "CE_delta": 0.002170522614793396,
+          "accuracy": 0.46875,
+          "KL_from_base": 0.000602587571142382,
+          "selected_response_norm": 0.03041308297100291,
+          "outside_response_norm": 0.016657270765782165,
+          "selected_target_relative_error": 0.008684346871072347,
+          "full_target_relative_error": 0.5464010644273125,
+          "outside_over_target_norm": 0.5459529617957708,
+          "KL_target_to_control": 0.00013932285467389637
+        },
+        "held": {
+          "CE": 1.6698221539802205,
+          "CE_delta": 0.0030014827934671576,
+          "accuracy": 0.5234375,
+          "KL_from_base": 0.0002616302829293463,
+          "selected_response_norm": 0.02053596747766637,
+          "outside_response_norm": 0.010104609683653395,
+          "selected_target_relative_error": 0.4125540645948111,
+          "full_target_relative_error": 0.5167063857119314,
+          "outside_over_target_norm": 0.31313212698664533,
+          "KL_target_to_control": 0.00013910968011783355
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5022,
+      "radius": 0.003,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.006559513341390748,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.006559513043612242,
+      "linear_selected_constraint_relative_error": 0.2436279767368453,
+      "metrics": {
+        "fit": {
+          "CE": 1.9069696726742698,
+          "CE_delta": 0.001887110294450807,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0003622583842863204,
+          "selected_response_norm": 0.02416609646692147,
+          "outside_response_norm": 0.011809154291445976,
+          "selected_target_relative_error": 0.24633840980194954,
+          "full_target_relative_error": 0.45962742250089766,
+          "outside_over_target_norm": 0.3870527682699543,
+          "KL_target_to_control": 9.834259433602908e-05
+        },
+        "held": {
+          "CE": 1.6691715671500014,
+          "CE_delta": 0.00235089596324779,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.0001675981385951167,
+          "selected_response_norm": 0.016522623438605565,
+          "outside_response_norm": 0.00789916149862446,
+          "selected_target_relative_error": 0.5401295679824921,
+          "full_target_relative_error": 0.5925424600120577,
+          "outside_over_target_norm": 0.24478741078705266,
+          "KL_target_to_control": 0.0001830415966949711
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5023,
+      "radius": 0.001,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.0028648277742226737,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.002864828100427985,
+      "linear_selected_constraint_relative_error": 1.5306318563942478e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9043025969213776,
+          "CE_delta": -0.0007799654584418999,
+          "accuracy": 0.4609375,
+          "KL_from_base": 7.261486577914611e-05,
+          "selected_response_norm": 0.01081477593327512,
+          "outside_response_norm": 0.005311794702868232,
+          "selected_target_relative_error": 0.0017425820079536429,
+          "full_target_relative_error": 0.49131864542455467,
+          "outside_over_target_norm": 0.4915801054694565,
+          "KL_target_to_control": 1.4089318741363978e-05
+        },
+        "held": {
+          "CE": 1.6649324106307435,
+          "CE_delta": -0.0018882605560100085,
+          "accuracy": 0.51953125,
+          "KL_from_base": 2.5714283572945526e-05,
+          "selected_response_norm": 0.006423247639567362,
+          "outside_response_norm": 0.0031888942214466733,
+          "selected_target_relative_error": 0.42550663585451787,
+          "full_target_relative_error": 0.524084832373756,
+          "outside_over_target_norm": 0.305814307668108,
+          "KL_target_to_control": 1.4932368760615915e-05
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5023,
+      "radius": 0.001,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.0022758109543337367,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.002275810344144702,
+      "linear_selected_constraint_relative_error": 0.20664925356842137,
+      "metrics": {
+        "fit": {
+          "CE": 1.9043132311925925,
+          "CE_delta": -0.0007693311872267332,
+          "accuracy": 0.4609375,
+          "KL_from_base": 4.802368777993524e-05,
+          "selected_response_norm": 0.008946374326052546,
+          "outside_response_norm": 0.0039968685080042895,
+          "selected_target_relative_error": 0.20610615304850077,
+          "full_target_relative_error": 0.42315522124057364,
+          "outside_over_target_norm": 0.36989024475124516,
+          "KL_target_to_control": 1.0454803350097831e-05
+        },
+        "held": {
+          "CE": 1.6651396002763992,
+          "CE_delta": -0.0016810709103547185,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.764273926912655e-05,
+          "selected_response_norm": 0.00537085897360095,
+          "outside_response_norm": 0.0025367983873163863,
+          "selected_target_relative_error": 0.5300717899060924,
+          "full_target_relative_error": 0.5832930322596416,
+          "outside_over_target_norm": 0.24327844971878343,
+          "KL_target_to_control": 1.8496690432307847e-05
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5023,
+      "radius": 0.001,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.0028648277742226737,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.002864828100427985,
+      "linear_selected_constraint_relative_error": 1.5306318563942478e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9059916230894651,
+          "CE_delta": 0.0009090607096462215,
+          "accuracy": 0.4609375,
+          "KL_from_base": 7.242156143812657e-05,
+          "selected_response_norm": 0.010813226930336282,
+          "outside_response_norm": 0.005284614837199905,
+          "selected_target_relative_error": 0.001990712729315087,
+          "full_target_relative_error": 0.4882404146888404,
+          "outside_over_target_norm": 0.4881324714913187,
+          "KL_target_to_control": 1.3974279799756032e-05
+        },
+        "held": {
+          "CE": 1.6687608413491586,
+          "CE_delta": 0.001940170162405172,
+          "accuracy": 0.51953125,
+          "KL_from_base": 2.5774565779522127e-05,
+          "selected_response_norm": 0.006431871972060409,
+          "outside_response_norm": 0.0031906234691398963,
+          "selected_target_relative_error": 0.4252023283569144,
+          "full_target_relative_error": 0.5236454171910068,
+          "outside_over_target_norm": 0.30570976835571656,
+          "KL_target_to_control": 1.4935148114051248e-05
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5023,
+      "radius": 0.001,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.002284321028644182,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.002284320769831538,
+      "linear_selected_constraint_relative_error": 0.2052232960930039,
+      "metrics": {
+        "fit": {
+          "CE": 1.9059308267660582,
+          "CE_delta": 0.0008482643862389361,
+          "accuracy": 0.4609375,
+          "KL_from_base": 4.805081789069113e-05,
+          "selected_response_norm": 0.008957056340059926,
+          "outside_response_norm": 0.0039858271748199215,
+          "selected_target_relative_error": 0.2058370742593253,
+          "full_target_relative_error": 0.4220023518882012,
+          "outside_over_target_norm": 0.36816527404918814,
+          "KL_target_to_control": 1.0435538897332873e-05
+        },
+        "held": {
+          "CE": 1.6685395312873914,
+          "CE_delta": 0.001718860100637832,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.77900925321934e-05,
+          "selected_response_norm": 0.005393267397666694,
+          "outside_response_norm": 0.0025487095499856015,
+          "selected_target_relative_error": 0.5289076185287299,
+          "full_target_relative_error": 0.5825645438867698,
+          "outside_over_target_norm": 0.2442047498453781,
+          "KL_target_to_control": 1.848552221071324e-05
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5023,
+      "radius": 0.003,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.00859448332266802,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.008594484068453312,
+      "linear_selected_constraint_relative_error": 1.7875046546486026e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9031309447901685,
+          "CE_delta": -0.0019516175896506006,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0006542333444127813,
+          "selected_response_norm": 0.0323879668822829,
+          "outside_response_norm": 0.016020366841642562,
+          "selected_target_relative_error": 0.004574418132793568,
+          "full_target_relative_error": 0.49422902210408043,
+          "outside_over_target_norm": 0.495406630656592,
+          "KL_target_to_control": 0.0001276660010562322
+        },
+        "held": {
+          "CE": 1.6613152793752581,
+          "CE_delta": -0.005505391811495269,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.00023087065402561637,
+          "selected_response_norm": 0.019238838355908044,
+          "outside_response_norm": 0.009566906695805589,
+          "selected_target_relative_error": 0.42564738030734317,
+          "full_target_relative_error": 0.524637972382268,
+          "outside_over_target_norm": 0.30609382836172355,
+          "KL_target_to_control": 0.0001344516510230442
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5023,
+      "radius": 0.003,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.006798632911615852,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.006798633374273777,
+      "linear_selected_constraint_relative_error": 0.20892160263860535,
+      "metrics": {
+        "fit": {
+          "CE": 1.9030124543971183,
+          "CE_delta": -0.0020701079827006724,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0004305835321060411,
+          "selected_response_norm": 0.02674073777513329,
+          "outside_response_norm": 0.012021411561620109,
+          "selected_target_relative_error": 0.20742700820291987,
+          "full_target_relative_error": 0.42471387604579824,
+          "outside_over_target_norm": 0.3717447332103542,
+          "KL_target_to_control": 9.436079693608205e-05
+        },
+        "held": {
+          "CE": 1.66189727062415,
+          "CE_delta": -0.004923400562603327,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.00015723894544469693,
+          "selected_response_norm": 0.016030931855646715,
+          "outside_response_norm": 0.007573256544081721,
+          "selected_target_relative_error": 0.5315116922439697,
+          "full_target_relative_error": 0.5845022127136391,
+          "outside_over_target_norm": 0.24230685658926568,
+          "KL_target_to_control": 0.0001668836165975838
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5023,
+      "radius": 0.003,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.00859448332266802,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.008594484068453312,
+      "linear_selected_constraint_relative_error": 1.7875046546486026e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9081963477884962,
+          "CE_delta": 0.0031137854086770358,
+          "accuracy": 0.46875,
+          "KL_from_base": 0.0006490994797101102,
+          "selected_response_norm": 0.03238060589287267,
+          "outside_response_norm": 0.015776321461658003,
+          "selected_target_relative_error": 0.006505026698333585,
+          "full_target_relative_error": 0.48497146327074786,
+          "outside_over_target_norm": 0.485034463128153,
+          "KL_target_to_control": 0.00012456643077727214
+        },
+        "held": {
+          "CE": 1.6727993101394545,
+          "CE_delta": 0.00597863895270102,
+          "accuracy": 0.52734375,
+          "KL_from_base": 0.00023257169570267295,
+          "selected_response_norm": 0.01931915615259766,
+          "outside_response_norm": 0.009585082048718331,
+          "selected_target_relative_error": 0.42473003555989824,
+          "full_target_relative_error": 0.5233496086417962,
+          "outside_over_target_norm": 0.30586079591130777,
+          "KL_target_to_control": 0.00013454444098853226
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5023,
+      "radius": 0.003,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.00687514515666541,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.006875145249068737,
+      "linear_selected_constraint_relative_error": 0.20475375148762773,
+      "metrics": {
+        "fit": {
+          "CE": 1.9078631456137995,
+          "CE_delta": 0.0027805832339802628,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0004316549068812548,
+          "selected_response_norm": 0.026852043681242416,
+          "outside_response_norm": 0.011925085016066159,
+          "selected_target_relative_error": 0.2065768163696358,
+          "full_target_relative_error": 0.42124494551727987,
+          "outside_over_target_norm": 0.36663028340177833,
+          "KL_target_to_control": 9.38523488405521e-05
+        },
+        "held": {
+          "CE": 1.6720916556711811,
+          "CE_delta": 0.005270984484427736,
+          "accuracy": 0.52734375,
+          "KL_from_base": 0.00016127722521744125,
+          "selected_response_norm": 0.016236173031489227,
+          "outside_response_norm": 0.007681075016486552,
+          "selected_target_relative_error": 0.5280582022298174,
+          "full_target_relative_error": 0.5823521776220888,
+          "outside_over_target_norm": 0.2451037670888983,
+          "KL_target_to_control": 0.00016660656216027837
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5024,
+      "radius": 0.001,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.002978983594989475,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.0029789835680276155,
+      "linear_selected_constraint_relative_error": 1.2925999918758538e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9045005114253273,
+          "CE_delta": -0.0005820509544918733,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.00011114572510194605,
+          "selected_response_norm": 0.013828375801617502,
+          "outside_response_norm": 0.005513272728263059,
+          "selected_target_relative_error": 0.004118996392470155,
+          "full_target_relative_error": 0.3995662131708016,
+          "outside_over_target_norm": 0.39771493819850484,
+          "KL_target_to_control": 1.534875948265703e-05
+        },
+        "held": {
+          "CE": 1.6650765153471319,
+          "CE_delta": -0.0017441558396216021,
+          "accuracy": 0.51953125,
+          "KL_from_base": 4.164670089188606e-05,
+          "selected_response_norm": 0.008200711457930932,
+          "outside_response_norm": 0.004004990111462475,
+          "selected_target_relative_error": 0.3668920541559362,
+          "full_target_relative_error": 0.49499312861553624,
+          "outside_over_target_norm": 0.3327093983738019,
+          "KL_target_to_control": 1.7758719910599272e-05
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5024,
+      "radius": 0.001,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.0025379884763591484,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.0025379883591085672,
+      "linear_selected_constraint_relative_error": 0.1549891288809857,
+      "metrics": {
+        "fit": {
+          "CE": 1.9045229190666084,
+          "CE_delta": -0.0005596433132108716,
+          "accuracy": 0.4609375,
+          "KL_from_base": 8.296122931066832e-05,
+          "selected_response_norm": 0.012067938717204275,
+          "outside_response_norm": 0.004460000102552907,
+          "selected_target_relative_error": 0.1565663291189889,
+          "full_target_relative_error": 0.35948819309714275,
+          "outside_over_target_norm": 0.32173424979666987,
+          "KL_target_to_control": 1.2416904634743174e-05
+        },
+        "held": {
+          "CE": 1.665197581220267,
+          "CE_delta": -0.0016230899664864858,
+          "accuracy": 0.51953125,
+          "KL_from_base": 3.217925307650551e-05,
+          "selected_response_norm": 0.007245237431715268,
+          "outside_response_norm": 0.0034421830701653147,
+          "selected_target_relative_error": 0.4451138596985193,
+          "full_target_relative_error": 0.5289865521389472,
+          "outside_over_target_norm": 0.28595492785099197,
+          "KL_target_to_control": 2.0286093881290368e-05
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5024,
+      "radius": 0.001,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.002978983594989475,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.0029789835680276155,
+      "linear_selected_constraint_relative_error": 1.2925999918758538e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.905901113096923,
+          "CE_delta": 0.0008185507171037552,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.00011349390449372114,
+          "selected_response_norm": 0.013995029893102147,
+          "outside_response_norm": 0.005642296648022042,
+          "selected_target_relative_error": 0.00411235411731762,
+          "full_target_relative_error": 0.4012961807241301,
+          "outside_over_target_norm": 0.404051289118817,
+          "KL_target_to_control": 1.5691825326570784e-05
+        },
+        "held": {
+          "CE": 1.6686556640107435,
+          "CE_delta": 0.001834992823990105,
+          "accuracy": 0.51953125,
+          "KL_from_base": 4.171402347300485e-05,
+          "selected_response_norm": 0.008214394013215623,
+          "outside_response_norm": 0.003994189227926366,
+          "selected_target_relative_error": 0.3625839868538165,
+          "full_target_relative_error": 0.49235015322122655,
+          "outside_over_target_norm": 0.3326098763277248,
+          "KL_target_to_control": 1.7474816622539338e-05
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5024,
+      "radius": 0.001,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.0025669448292466326,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.002566944807767868,
+      "linear_selected_constraint_relative_error": 0.14785304909404506,
+      "metrics": {
+        "fit": {
+          "CE": 1.9058064591738249,
+          "CE_delta": 0.0007238967940057736,
+          "accuracy": 0.4609375,
+          "KL_from_base": 8.582334411431973e-05,
+          "selected_response_norm": 0.012290286491273361,
+          "outside_response_norm": 0.004585973439160277,
+          "selected_target_relative_error": 0.1461007828996546,
+          "full_target_relative_error": 0.3570585551374784,
+          "outside_over_target_norm": 0.32840678105908155,
+          "KL_target_to_control": 1.2430760912148456e-05
+        },
+        "held": {
+          "CE": 1.6685213883185201,
+          "CE_delta": 0.0017007171317664905,
+          "accuracy": 0.51953125,
+          "KL_from_base": 3.280878124726723e-05,
+          "selected_response_norm": 0.007321981663169163,
+          "outside_response_norm": 0.0034673403350499086,
+          "selected_target_relative_error": 0.43569090607535765,
+          "full_target_relative_error": 0.522827375436475,
+          "outside_over_target_norm": 0.28873735674907364,
+          "KL_target_to_control": 1.9701944944542827e-05
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5024,
+      "radius": 0.003,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.008936950784968426,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.008936950005590916,
+      "linear_selected_constraint_relative_error": 1.1816355547281213e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.9040238877758715,
+          "CE_delta": -0.0010586746039475963,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0009807729360584243,
+          "selected_response_norm": 0.040962430843078934,
+          "outside_response_norm": 0.0163300094064109,
+          "selected_target_relative_error": 0.012211939699389588,
+          "full_target_relative_error": 0.39858031136691235,
+          "outside_over_target_norm": 0.39544582222312497,
+          "KL_target_to_control": 0.0001356776328296679
+        },
+        "held": {
+          "CE": 1.6618641564762244,
+          "CE_delta": -0.0049565147105291845,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.00037432941386855484,
+          "selected_response_norm": 0.024555883341304593,
+          "outside_response_norm": 0.012067057959872719,
+          "selected_target_relative_error": 0.37121748027538753,
+          "full_target_relative_error": 0.4979998623247107,
+          "outside_over_target_norm": 0.3331283600881925,
+          "KL_target_to_control": 0.00016299218403719858
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5024,
+      "radius": 0.003,
+      "sign": -1,
+      "uncapped_parameter_norm": 0.007526499954454168,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.007526499684900045,
+      "linear_selected_constraint_relative_error": 0.16315385678223404,
+      "metrics": {
+        "fit": {
+          "CE": 1.9038656807906444,
+          "CE_delta": -0.0012168815891747992,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.000722330068002093,
+          "selected_response_norm": 0.03552858061078202,
+          "outside_response_norm": 0.013139834030098212,
+          "selected_target_relative_error": 0.16736011776461684,
+          "full_target_relative_error": 0.3628840726256176,
+          "outside_over_target_norm": 0.31819286459612706,
+          "KL_target_to_control": 0.00011229141305363807
+        },
+        "held": {
+          "CE": 1.6621828774808634,
+          "CE_delta": -0.004637793705890163,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.00028383774545318594,
+          "selected_response_norm": 0.0214937675143429,
+          "outside_response_norm": 0.010258945604119572,
+          "selected_target_relative_error": 0.4547528638876473,
+          "full_target_relative_error": 0.5357985070941965,
+          "outside_over_target_norm": 0.2832128375200389,
+          "KL_target_to_control": 0.0001888347683391003
+        }
+      }
+    },
+    {
+      "controller": "selected_min_norm",
+      "seed": 5024,
+      "radius": 0.003,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.008936950784968426,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.008936950005590916,
+      "linear_selected_constraint_relative_error": 1.1816355547281213e-15,
+      "metrics": {
+        "fit": {
+          "CE": 1.908276900787476,
+          "CE_delta": 0.003194338407656769,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.001044053224443182,
+          "selected_response_norm": 0.0424414662166484,
+          "outside_response_norm": 0.01750490620980318,
+          "selected_target_relative_error": 0.011841795610968252,
+          "full_target_relative_error": 0.40365279547923366,
+          "outside_over_target_norm": 0.4146772513084697,
+          "KL_target_to_control": 0.00014490304246533755
+        },
+        "held": {
+          "CE": 1.672600910269877,
+          "CE_delta": 0.005780239083123397,
+          "accuracy": 0.5234375,
+          "KL_from_base": 0.0003762314483438061,
+          "selected_response_norm": 0.024681904933545613,
+          "outside_response_norm": 0.01197156494432026,
+          "selected_target_relative_error": 0.35843889109640814,
+          "full_target_relative_error": 0.4900106706472542,
+          "outside_over_target_norm": 0.3328765518060287,
+          "KL_target_to_control": 0.00015525852640921854
+        }
+      }
+    },
+    {
+      "controller": "full_response_fit",
+      "seed": 5024,
+      "radius": 0.003,
+      "sign": 1,
+      "uncapped_parameter_norm": 0.007785648246996981,
+      "scale": 1.0,
+      "applied_parameter_norm": 0.007785648573189974,
+      "linear_selected_constraint_relative_error": 0.14212709044161861,
+      "metrics": {
+        "fit": {
+          "CE": 1.9077844658532954,
+          "CE_delta": 0.002701903473476067,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0007997948448999503,
+          "selected_response_norm": 0.0375222973296511,
+          "outside_response_norm": 0.014298323801890006,
+          "selected_target_relative_error": 0.13656330944632444,
+          "full_target_relative_error": 0.35573390381918785,
+          "outside_over_target_norm": 0.33871587436245293,
+          "KL_target_to_control": 0.00011276138938062711
+        },
+        "held": {
+          "CE": 1.6721622633266358,
+          "CE_delta": 0.0053415921398821285,
+          "accuracy": 0.52734375,
+          "KL_from_base": 0.000300811217137811,
+          "selected_response_norm": 0.022182699468018763,
+          "outside_response_norm": 0.010487721556788183,
+          "selected_target_relative_error": 0.42683331078021103,
+          "full_target_relative_error": 0.517433544323135,
+          "outside_over_target_norm": 0.2916173954167719,
+          "KL_target_to_control": 0.00017305976049951052
+        }
+      }
+    }
+  ],
+  "task_control": [
+    {
+      "batch": 0,
+      "radius": 0.001,
+      "applied_parameter_norm": 0.0010000005131587386,
+      "metrics": {
+        "fit": {
+          "CE": 1.9046059224693486,
+          "CE_delta": -0.00047663991047043933,
+          "accuracy": 0.4609375,
+          "KL_from_base": 1.1293294034215433e-06,
+          "selected_response_norm": 0.000958227722955534,
+          "outside_response_norm": 0.0011578484383856107
+        },
+        "held": {
+          "CE": 1.6663125830452379,
+          "CE_delta": -0.0005080881415157236,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.04404261608399e-06,
+          "selected_response_norm": 0.0009174534746061475,
+          "outside_response_norm": 0.0011164344574229412
+        }
+      }
+    },
+    {
+      "batch": 0,
+      "radius": 0.003,
+      "applied_parameter_norm": 0.0030000004917383194,
+      "metrics": {
+        "fit": {
+          "CE": 1.9036588706711073,
+          "CE_delta": -0.0014236917087118153,
+          "accuracy": 0.4609375,
+          "KL_from_base": 1.0168373162804559e-05,
+          "selected_response_norm": 0.0028765482656972516,
+          "outside_response_norm": 0.00347367330399016
+        },
+        "held": {
+          "CE": 1.6653048606479683,
+          "CE_delta": -0.001515810538785012,
+          "accuracy": 0.51953125,
+          "KL_from_base": 9.391500228062257e-06,
+          "selected_response_norm": 0.002753004351435277,
+          "outside_response_norm": 0.003347476176052699
+        }
+      }
+    },
+    {
+      "batch": 0,
+      "radius": 0.01,
+      "applied_parameter_norm": 0.009999999776482582,
+      "metrics": {
+        "fit": {
+          "CE": 1.9004140114220809,
+          "CE_delta": -0.004668550957738068,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.0001132338825237017,
+          "selected_response_norm": 0.009617444437262866,
+          "outside_response_norm": 0.011581438270647943
+        },
+        "held": {
+          "CE": 1.6618538316221345,
+          "CE_delta": -0.004966839564619111,
+          "accuracy": 0.5234375,
+          "KL_from_base": 0.00010414900410268989,
+          "selected_response_norm": 0.009176521627791723,
+          "outside_response_norm": 0.011142078267317312
+        }
+      }
+    },
+    {
+      "batch": 1,
+      "radius": 0.001,
+      "applied_parameter_norm": 0.0010000003967434168,
+      "metrics": {
+        "fit": {
+          "CE": 1.9046107791871307,
+          "CE_delta": -0.00047178319268843013,
+          "accuracy": 0.4609375,
+          "KL_from_base": 1.6513889184483235e-06,
+          "selected_response_norm": 0.0013031135707041882,
+          "outside_response_norm": 0.001266597796363757
+        },
+        "held": {
+          "CE": 1.6663112270684106,
+          "CE_delta": -0.0005094441183429632,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.8668506724325955e-06,
+          "selected_response_norm": 0.001364955521490696,
+          "outside_response_norm": 0.0013673348006818758
+        }
+      }
+    },
+    {
+      "batch": 1,
+      "radius": 0.003,
+      "applied_parameter_norm": 0.0029999997932463884,
+      "metrics": {
+        "fit": {
+          "CE": 1.9036744309242377,
+          "CE_delta": -0.001408131455581301,
+          "accuracy": 0.4609375,
+          "KL_from_base": 1.4853075786315972e-05,
+          "selected_response_norm": 0.003906548283941364,
+          "outside_response_norm": 0.0037992258303183256
+        },
+        "held": {
+          "CE": 1.6653048735406952,
+          "CE_delta": -0.0015157976460584398,
+          "accuracy": 0.51953125,
+          "KL_from_base": 1.6777221891449698e-05,
+          "selected_response_norm": 0.0040898567136190955,
+          "outside_response_norm": 0.004098860223474166
+        }
+      }
+    },
+    {
+      "batch": 1,
+      "radius": 0.01,
+      "applied_parameter_norm": 0.009999999776482582,
+      "metrics": {
+        "fit": {
+          "CE": 1.90048365592201,
+          "CE_delta": -0.0045989064578093874,
+          "accuracy": 0.4609375,
+          "KL_from_base": 0.00016463638709428936,
+          "selected_response_norm": 0.01299221443877956,
+          "outside_response_norm": 0.012651674849371507
+        },
+        "held": {
+          "CE": 1.6619040061230317,
+          "CE_delta": -0.004916665063721796,
+          "accuracy": 0.51953125,
+          "KL_from_base": 0.00018548382701343892,
+          "selected_response_norm": 0.01357324670014943,
+          "outside_response_norm": 0.013628557337454059
+        }
+      }
+    }
+  ],
+  "matrix_counts": [
+    1084,
+    1268,
+    4777,
+    1723,
+    1358,
+    1597,
+    9552,
+    3821,
+    5560,
+    6831,
+    15168,
+    6016,
+    8786,
+    6944,
+    28974,
+    14765,
+    21561,
+    24138,
+    42824,
+    21959,
+    24731,
+    25534,
+    54800,
+    49368,
+    37742,
+    35436,
+    45227,
+    32855,
+    35282,
+    27617,
+    40150,
+    33531,
+    18644,
+    10556,
+    30425,
+    12082,
+    12297,
+    4588,
+    16383,
+    7543,
+    8410,
+    2783,
+    12521,
+    7395,
+    17765,
+    6095,
+    6634,
+    4246
+  ]
+}

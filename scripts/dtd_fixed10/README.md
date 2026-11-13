@@ -1,4 +1,6 @@
-# Two different fixed-10D tests
+# Fixed10 DTD experiments
+
+Latest **single-task raw-coordinate support and control**: [A: coordinate geometry and coupling](evidence/20261114_support/REPORT.md), [B: actual equal-budget masked control](evidence/20261114_control/REPORT.md), [complete protocol](SUPPORT_PROTOCOL.md). No fusion or EC. Local CE control is supported; high-fidelity selective response control and a unique advantage over top-g/leverage are not established.
 
 Completed **fixed-B mechanism tests A/B/C**: [independent finite KL, one-step CE and ambient Fisher leakage](evidence/20261113_mechanisms/REPORT.md). All four states completed without training or basis changes. Local sensitivity and useful task descent are supported; ambient Fisher invariance is not. This is separate from expert-update reconstruction.
 

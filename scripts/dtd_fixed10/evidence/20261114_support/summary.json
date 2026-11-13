@@ -1,0 +1,24 @@
+{
+  "top1percent_mass": {
+    "ellB": 0.3884552112971491,
+    "ellQ": 0.18546680033968577,
+    "g": 0.4972768151976152,
+    "rho": 0.5249870005808456,
+    "a_old": 0.47866416078365903,
+    "a_expert": 0.15857530094132857,
+    "used_old": 0.45479983493148446,
+    "used_expert": 0.09890997500716103,
+    "self_old": 0.9976684841611404,
+    "self_expert": 0.5266321595725385
+  },
+  "ellB_g_top1percent_overlap": {
+    "intersection_fraction": 0.5357769389624487,
+    "jaccard": 0.3659121026155647
+  },
+  "rho_negative_absolute_fraction": 0.0964775846285092,
+  "raw_energy": 1152.4283366920392,
+  "sum_matrix_self_energy": 82.57177307157968,
+  "total_cross_energy": 1069.8565410798942,
+  "negative_cross_pairs": 6,
+  "layer_or_matrix_groups_are_not_discovered": true
+}
