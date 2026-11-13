@@ -1,0 +1,60 @@
+{
+  "checkpoint_metadata_checked": true,
+  "live_interrupt_and_replay_tested": false,
+  "arms": {
+    "fixed10": {
+      "saved_steps": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120,
+        128
+      ],
+      "recovery_step": 128,
+      "selected_step": 48,
+      "selected_matches_saved_state": true,
+      "variable_numel": 10
+    },
+    "full_adamw": {
+      "saved_steps": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120,
+        128
+      ],
+      "recovery_step": 128,
+      "selected_step": 112,
+      "selected_matches_saved_state": true,
+      "variable_numel": 84934656
+    }
+  },
+  "basis_shape": [
+    10,
+    84934656
+  ],
+  "source_sha256": "04ff615e0d2e3f2bdb672b92607f49a16619d280cbb304c8b4108e56a236f6a9",
+  "matrix_sha256": "fa379b6821695757f8a4a6c747d2dfaffe51810539e9c499bdbabe0e314e0c43"
+}

@@ -1,0 +1,41 @@
+{
+  "arm": "full_adamw",
+  "steps": 128,
+  "base_validation": {
+    "CE": 1.9373095035552979,
+    "accuracy": 0.453125,
+    "n": 128
+  },
+  "final_validation": {
+    "CE": 0.9496002197265625,
+    "accuracy": 0.7578125,
+    "n": 128
+  },
+  "independent_final": {
+    "CE": 1.0462062358856201,
+    "accuracy": 0.72265625,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "selected": {
+    "step": 112,
+    "validation": {
+      "CE": 0.8119875192642212,
+      "accuracy": 0.765625,
+      "n": 128
+    }
+  },
+  "independent_selected": {
+    "CE": 0.9688994288444519,
+    "accuracy": 0.73828125,
+    "n": 512,
+    "split": "independent_development_Xprime"
+  },
+  "training_images": 4096,
+  "history_informed_fixed_space": false,
+  "not_an_online_discovery_algorithm": true,
+  "lr": 1e-05,
+  "weight_decay": 0.0,
+  "caveat": "Rates differ due to coordinate scale; one predefined optimizer setting, no LR search or matched-FLOPs claim",
+  "official_test_opened": false
+}

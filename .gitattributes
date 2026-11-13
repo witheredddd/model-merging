@@ -30,3 +30,5 @@ scripts/fisher_rao_functional_pullback/** -text
 scripts/fisher_rao_functional_pullback/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 scripts/dtd_fisher_blocks/** -text
 scripts/dtd_fisher_blocks/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+scripts/dtd_fixed10/** -text
+scripts/dtd_fixed10/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

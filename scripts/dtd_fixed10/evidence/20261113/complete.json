@@ -1,0 +1,6 @@
+{
+  "status": "complete",
+  "projection": true,
+  "fixed_training_steps": 128,
+  "full_control_steps": 128
+}

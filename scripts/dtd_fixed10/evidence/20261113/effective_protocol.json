@@ -1,0 +1,14 @@
+{
+  "steps_per_arm": 128,
+  "images_per_arm": 4096,
+  "paired_training_ids_identical": true,
+  "development_ids_disjoint": true,
+  "optimizer_ids_exclude_probe_and_development": true,
+  "public_source_matches_executed_source": true,
+  "service_exit_status": 0,
+  "official_test_opened": false,
+  "basis_from_prior_complete_history": true,
+  "endpoint_read_for_projection": true,
+  "adapter_assets_warning": "assets.json is unmodified metadata from the frozen v5 ClipTask adapter. Its algorithm/parameter_state/expert_endpoints_read fields describe that adapter construction, not this fixed10 experiment. This experiment explicitly reads historical Fisher matrices and the endpoint update; use config.json, projection.json and this effective protocol for experiment provenance.",
+  "live_interrupt_and_replay_tested": false
+}
