@@ -1,0 +1,19 @@
+# DTD-only temporal Fisher block experiment
+
+This experiment uses only DTD operators at nine states (0,16,...,128) of the completed v5 medium trajectory. This is not a converged expert, and its active parameter scope is the same48 visual matrices as that trajectory. It does not reuse the failed full-visual step49 refresh as a completed run.
+
+One fixed Euclidean-orthonormal computation space Q is built from the endpoint displacement first, all16 actual trajectory increments and every dictionary axis from all17 stored checkpoints. **There is no fixed dimension cap**. Twice-reorthogonalized FP64 MGS removes numerical dependencies with relative residual tolerance1e-5; the observed rank is reported. This finite candidate space still does not cover the entire parameter space. Every matrix is `A_t=Q^T F_D,t Q=(J_q,t Q)^T(J_q,t Q)` with `q=2sqrt(p)/sqrt(N)`. Coordinates and fixed training-origin probe IDs are identical across all states; this is the categorical predictive Fisher, not an empirical-label gradient outer product. No other task's Fisher is used.
+
+For discovery, each training A_t is Frobenius-normalized so one state cannot dominate by scale. The symmetric traceless commutator operator maps X to the stacked `[A_t,X]`. Its smallest singular direction proposes a commuting symmetric matrix. Eigenvalue gaps propose block partitions; only fitting states16,48,80,112 select the partition. Maximum training off-block Frobenius leakage5% is a preset heuristic, not a theorem. If no candidate passes, one whole block is returned. This is an approximate-commutant candidate method, not an implementation or guarantee of the finest error-controlled SBD algorithm.
+
+States0,32,64,96,128 and a second disjoint training-origin probe set test the same fixed partition. Report both global leakage and pair-normalized block couplings, with5% and10% acceptance thresholds respectively, plus100 random orthogonal same-block-size controls. No blocks are chosen using these held-out results. Zero near-null blocks are not manufactured by dropping the residual. Lack of support means this restricted candidate search did not establish stable blocks, not that no decomposition could exist.
+
+The endpoint displacement tau128 is preserved as `sum_m Q O_m O_m^T Q^T tau + residual`. The full high-dimensional residual is saved even when it is numerically small. `common_basis.pt` and `complete_update_decomposition.pt` retain all ingredients for reconstruction; no low-dimensional remainder is silently discarded. Matrix CSV/NPZ files retain actual non-diagonal entries, including coupling signs. They are not zeroed for visualization.
+
+Restricted block structure of Q^T F Q does not prove ambient invariance, because F can map outside Q. This experiment does not certify full-parameter common invariant subspaces, semantic modules, loss conflicts or Pareto improvements. No official test data or cross-task block diagonalization is used.
+
+Q is constructed transductively from the known full trajectory, including endpoint displacement. Held-out **Fisher measurements** do not fit the partition, but their model displacements helped define Q. Thus validation is conditional on this shared computation space, not a claim of generalization to wholly unseen trajectories.
+
+The method is inspired by commutant-based SBD: Maehara and Murota, [Algorithm for Error-Controlled Simultaneous Block-Diagonalization of Matrices](https://www.keisu.t.u-tokyo.ac.jp/data/2009/METR09-53.pdf). The numerical thresholds and restricted search above are this experiment's explicit choices.
+
+Two tests check a known randomly mixed common block family and a generic irreducible family without forcing multiple groups. Large bases and full residual vectors stay on A100; small matrices, partitions and diagnostics can be published in Git.
