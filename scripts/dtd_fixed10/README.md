@@ -1,5 +1,7 @@
 # Two different fixed-10D tests
 
+Follow-up **inference-only transfer projection**: [82.07% external expert report](evidence/20261113_external_expert/REPORT.md). Keep the old Fisher basis unchanged and project a different expert, without training: historical Test accuracy82.0745% ->49.2553%. The active48-only expert control retains82.2872%, ruling out the scope mismatch as the main source of this drop. This does not compare Fisher selection to PCA or random subspaces.
+
 Completed A100 experiment: [report and paired results](evidence/20261113/REPORT.md). Both training arms completed128 updates. Fixed10 final Xprime accuracy51.5625%; full AdamW final72.265625%. Projection preserves all640 development predictions. These different findings must be reported separately.
 
 Use the top10 eigenvectors of the mean of individually Frobenius-normalized DTD Fishers at steps16,48,80,112, within the previously measured26D common computation space Q. This exactly reproduces the reported99.99983641185109% squared endpoint-update coverage (up to finite precision). B10 is Euclidean-orthonormal in parameter space; it is fixed throughout the experiments. No Grassmann update, regrouping or fiber step is performed.
