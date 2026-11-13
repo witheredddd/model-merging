@@ -1,5 +1,7 @@
 # Two different fixed-10D tests
 
+Completed **fixed-B mechanism tests A/B/C**: [independent finite KL, one-step CE and ambient Fisher leakage](evidence/20261113_mechanisms/REPORT.md). All four states completed without training or basis changes. Local sensitivity and useful task descent are supported; ambient Fisher invariance is not. This is separate from expert-update reconstruction.
+
 Follow-up **inference-only transfer projection**: [82.07% external expert report](evidence/20261113_external_expert/REPORT.md). Keep the old Fisher basis unchanged and project a different expert, without training: historical Test accuracy82.0745% ->49.2553%. The active48-only expert control retains82.2872%, ruling out the scope mismatch as the main source of this drop. This does not compare Fisher selection to PCA or random subspaces.
 
 Completed A100 experiment: [report and paired results](evidence/20261113/REPORT.md). Both training arms completed128 updates. Fixed10 final Xprime accuracy51.5625%; full AdamW final72.265625%. Projection preserves all640 development predictions. These different findings must be reported separately.

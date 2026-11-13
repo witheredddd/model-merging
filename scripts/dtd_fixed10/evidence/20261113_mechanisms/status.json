@@ -1,0 +1,10 @@
+{
+  "stage": "complete",
+  "states": [
+    0,
+    32,
+    64,
+    128
+  ],
+  "training": false
+}
