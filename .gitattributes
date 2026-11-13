@@ -34,3 +34,5 @@ scripts/dtd_fixed10/** -text
 scripts/dtd_fixed10/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 scripts/fisher_support_profile/** -text
 scripts/fisher_support_profile/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+scripts/cars_fisher_diagonalization/** -text
+scripts/cars_fisher_diagonalization/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

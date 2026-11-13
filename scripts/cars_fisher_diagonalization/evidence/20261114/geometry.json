@@ -1,0 +1,26 @@
+{
+  "candidate_dimension": 25,
+  "candidate_dimension_cap": null,
+  "orthogonality_error": 1.1917810935352604e-12,
+  "actual_coordinate_tangent_singular_values": [
+    0.8392331751415315,
+    0.72065889256016,
+    0.41104396695101436,
+    0.28546209524071997,
+    0.2238728569959262,
+    0.16945146032125163,
+    0.14702273811363703,
+    0.1108828108484604,
+    0.0962998016618583,
+    0.08432527925190413,
+    0.05203787017860493,
+    0.03724394672276845,
+    0.026455887235620618,
+    0.02070498598426948,
+    0.010362773115487585,
+    0.005590749402749659
+  ],
+  "actual_coordinate_tangent_rank": 16,
+  "tangent_relative_singular_cutoff": 1e-06,
+  "distinction": "Candidate frame span plus updates versus current2M nonlinear coordinate tangent; neither is a full-space Fisher eigenspace"
+}
