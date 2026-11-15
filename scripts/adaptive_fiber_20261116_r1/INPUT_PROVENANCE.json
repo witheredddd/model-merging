@@ -1,0 +1,14 @@
+{
+  "zip_sha256": "f667340946674b09e58934e2e2e3f5ec4d70135a32595686a5c8c552381472f2",
+  "original_files": {
+    "fiber_core.py": "0314d7a5d19a661ee97bd70ca10fdf9e458ae4e0a7f7dee5c5a9d23dce73d344",
+    "launch_a100.sh": "7d0e1be77a6468a2faddf816ef8f34c5bc0f458c39d1af4e60672a3e404ba016",
+    "README.md": "d0fa6e020182c7e0d015682164d830faa332c5d7a26e4e7dd2b8323f74b26d5a",
+    "run_a100.py": "6c88df9c9e1e0d86aed928a0ba7bc5ff5729ba6e757dd3cb408c0d56939d9e98",
+    "run_comparators_a100.py": "b2f177b15c1b92b17f258a72a17df582404f691d533a9e4c5f851e33f53247b8",
+    "test_fiber_core.py": "6ea3048cf774f5ef8df89473e252f2104968b0bcab2ccde71784d47726a1cc71",
+    "test_runner_mock.py": "014388832f05c367f6c85c564bf88300cd9f27d4fb3fe537f54a19cd037ef1f3",
+    "verify_files.py": "332e6fabf24f3289c14ec6276486e0e117f8453e1ca066c439a7452d34f21867"
+  },
+  "execution_scope": "Review and corrected implementation; attachment launch instructions not executed verbatim"
+}
