@@ -1,0 +1,650 @@
+[
+  {
+    "anchor": 0,
+    "tau": 0.001,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9959978216063394,
+    "Cars_response_fraction_outside_plane": 0.6044614447473684,
+    "joint_response_fraction_outside_plane": 0.6311772319568711
+  },
+  {
+    "anchor": 0,
+    "tau": 0.001,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9960026981033876,
+    "Cars_response_fraction_outside_plane": 0.6046746820377755,
+    "joint_response_fraction_outside_plane": 0.6313954943890089
+  },
+  {
+    "anchor": 0,
+    "tau": 0.001,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9960021506198763,
+    "Cars_response_fraction_outside_plane": 0.6046752758333427,
+    "joint_response_fraction_outside_plane": 0.631396155488443
+  },
+  {
+    "anchor": 0,
+    "tau": 0.003,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9954389813989668,
+    "Cars_response_fraction_outside_plane": 0.6055911561237114,
+    "joint_response_fraction_outside_plane": 0.6323215004502546
+  },
+  {
+    "anchor": 0,
+    "tau": 0.003,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.995457076629867,
+    "Cars_response_fraction_outside_plane": 0.6062256953750808,
+    "joint_response_fraction_outside_plane": 0.632971197696903
+  },
+  {
+    "anchor": 0,
+    "tau": 0.003,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.995457249876228,
+    "Cars_response_fraction_outside_plane": 0.6062268916809365,
+    "joint_response_fraction_outside_plane": 0.6329725868334799
+  },
+  {
+    "anchor": 0,
+    "tau": 0.01,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9544806325651206,
+    "Cars_response_fraction_outside_plane": 0.6161962410223273,
+    "joint_response_fraction_outside_plane": 0.6417307988809572
+  },
+  {
+    "anchor": 0,
+    "tau": 0.01,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9550226291548832,
+    "Cars_response_fraction_outside_plane": 0.6181632528913062,
+    "joint_response_fraction_outside_plane": 0.6437357902406398
+  },
+  {
+    "anchor": 0,
+    "tau": 0.01,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.955025465544819,
+    "Cars_response_fraction_outside_plane": 0.6181679876856814,
+    "joint_response_fraction_outside_plane": 0.6437413582238696
+  },
+  {
+    "anchor": 0,
+    "tau": 0.03,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9195068993711352,
+    "Cars_response_fraction_outside_plane": 0.6654352616409367,
+    "joint_response_fraction_outside_plane": 0.703498269860982
+  },
+  {
+    "anchor": 0,
+    "tau": 0.03,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9205893999789698,
+    "Cars_response_fraction_outside_plane": 0.6678142517377158,
+    "joint_response_fraction_outside_plane": 0.7059218069598645
+  },
+  {
+    "anchor": 0,
+    "tau": 0.03,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9205898144340575,
+    "Cars_response_fraction_outside_plane": 0.6678069307955661,
+    "joint_response_fraction_outside_plane": 0.7059146824505087
+  },
+  {
+    "anchor": 0,
+    "tau": 0.1,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9362027764140762,
+    "Cars_response_fraction_outside_plane": 0.7904957052028798,
+    "joint_response_fraction_outside_plane": 0.8105789333777014
+  },
+  {
+    "anchor": 0,
+    "tau": 0.1,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9361206211236653,
+    "Cars_response_fraction_outside_plane": 0.7902910287664201,
+    "joint_response_fraction_outside_plane": 0.8103080788402645
+  },
+  {
+    "anchor": 0,
+    "tau": 0.1,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9361210180984382,
+    "Cars_response_fraction_outside_plane": 0.7902885511673022,
+    "joint_response_fraction_outside_plane": 0.810305803145848
+  },
+  {
+    "anchor": 0,
+    "tau": 0.3,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_7",
+    "parameter_fraction_outside_plane": 0.9573551542753015,
+    "Cars_response_fraction_outside_plane": 0.8066962617204846,
+    "joint_response_fraction_outside_plane": 0.7929660037289619
+  },
+  {
+    "anchor": 0,
+    "tau": 0.3,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_7",
+    "parameter_fraction_outside_plane": 0.9576737696581213,
+    "Cars_response_fraction_outside_plane": 0.8079468385784551,
+    "joint_response_fraction_outside_plane": 0.7943479997839127
+  },
+  {
+    "anchor": 0,
+    "tau": 0.3,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_7",
+    "parameter_fraction_outside_plane": 0.9575614752042475,
+    "Cars_response_fraction_outside_plane": 0.80738309407073,
+    "joint_response_fraction_outside_plane": 0.7932849527147938
+  },
+  {
+    "anchor": 0,
+    "tau": 1.0,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7617121519123862,
+    "Cars_response_fraction_outside_plane": 0.33805774765160046,
+    "joint_response_fraction_outside_plane": 0.3647802590855943
+  },
+  {
+    "anchor": 0,
+    "tau": 1.0,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7925321366529406,
+    "Cars_response_fraction_outside_plane": 0.3729200892234572,
+    "joint_response_fraction_outside_plane": 0.4019836860721128
+  },
+  {
+    "anchor": 0,
+    "tau": 1.0,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7855023493016904,
+    "Cars_response_fraction_outside_plane": 0.3546213010625226,
+    "joint_response_fraction_outside_plane": 0.3111641855553638
+  },
+  {
+    "anchor": 0,
+    "tau": 3.0,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7617121519123862,
+    "Cars_response_fraction_outside_plane": 0.33805774765160046,
+    "joint_response_fraction_outside_plane": 0.3647802590855943
+  },
+  {
+    "anchor": 0,
+    "tau": 3.0,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7925477425856077,
+    "Cars_response_fraction_outside_plane": 0.3729435824307673,
+    "joint_response_fraction_outside_plane": 0.40197952459772185
+  },
+  {
+    "anchor": 0,
+    "tau": 3.0,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7855102688139861,
+    "Cars_response_fraction_outside_plane": 0.3546332950976322,
+    "joint_response_fraction_outside_plane": 0.31117457914321994
+  },
+  {
+    "anchor": 1,
+    "tau": 0.001,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.996940535333359,
+    "Cars_response_fraction_outside_plane": 0.6180808742100546,
+    "joint_response_fraction_outside_plane": 0.639213600906313
+  },
+  {
+    "anchor": 1,
+    "tau": 0.001,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9969456252527777,
+    "Cars_response_fraction_outside_plane": 0.6183112485587233,
+    "joint_response_fraction_outside_plane": 0.6394571383716997
+  },
+  {
+    "anchor": 1,
+    "tau": 0.001,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9969455901027248,
+    "Cars_response_fraction_outside_plane": 0.6183114068864645,
+    "joint_response_fraction_outside_plane": 0.6394572981380933
+  },
+  {
+    "anchor": 1,
+    "tau": 0.003,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.993986036277225,
+    "Cars_response_fraction_outside_plane": 0.6212253650646119,
+    "joint_response_fraction_outside_plane": 0.6426930335424844
+  },
+  {
+    "anchor": 1,
+    "tau": 0.003,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9940180734255988,
+    "Cars_response_fraction_outside_plane": 0.6218900004140671,
+    "joint_response_fraction_outside_plane": 0.6433985582206023
+  },
+  {
+    "anchor": 1,
+    "tau": 0.003,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9940180447426075,
+    "Cars_response_fraction_outside_plane": 0.6218903892404072,
+    "joint_response_fraction_outside_plane": 0.6433988661169017
+  },
+  {
+    "anchor": 1,
+    "tau": 0.01,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9391905216590727,
+    "Cars_response_fraction_outside_plane": 0.604351781958395,
+    "joint_response_fraction_outside_plane": 0.628268665733058
+  },
+  {
+    "anchor": 1,
+    "tau": 0.01,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9401021433942734,
+    "Cars_response_fraction_outside_plane": 0.6063019138795754,
+    "joint_response_fraction_outside_plane": 0.6303513537691273
+  },
+  {
+    "anchor": 1,
+    "tau": 0.01,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9401054066033763,
+    "Cars_response_fraction_outside_plane": 0.6063060156560829,
+    "joint_response_fraction_outside_plane": 0.6303564434349963
+  },
+  {
+    "anchor": 1,
+    "tau": 0.03,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9243880720489679,
+    "Cars_response_fraction_outside_plane": 0.668534970064351,
+    "joint_response_fraction_outside_plane": 0.7132286032115617
+  },
+  {
+    "anchor": 1,
+    "tau": 0.03,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9252759882644261,
+    "Cars_response_fraction_outside_plane": 0.6702587474242117,
+    "joint_response_fraction_outside_plane": 0.7150975587429643
+  },
+  {
+    "anchor": 1,
+    "tau": 0.03,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9252787409312067,
+    "Cars_response_fraction_outside_plane": 0.6702576837682649,
+    "joint_response_fraction_outside_plane": 0.7150974180353525
+  },
+  {
+    "anchor": 1,
+    "tau": 0.1,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9438277867158871,
+    "Cars_response_fraction_outside_plane": 0.7710392648494135,
+    "joint_response_fraction_outside_plane": 0.7932068213339113
+  },
+  {
+    "anchor": 1,
+    "tau": 0.1,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9438248292349268,
+    "Cars_response_fraction_outside_plane": 0.7709305356093845,
+    "joint_response_fraction_outside_plane": 0.7930497303819576
+  },
+  {
+    "anchor": 1,
+    "tau": 0.1,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9438270154173901,
+    "Cars_response_fraction_outside_plane": 0.770939214878163,
+    "joint_response_fraction_outside_plane": 0.7930563244253166
+  },
+  {
+    "anchor": 1,
+    "tau": 0.3,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_5",
+    "parameter_fraction_outside_plane": 0.925074940534842,
+    "Cars_response_fraction_outside_plane": 0.7313058358546036,
+    "joint_response_fraction_outside_plane": 0.7749618098836243
+  },
+  {
+    "anchor": 1,
+    "tau": 0.3,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_5",
+    "parameter_fraction_outside_plane": 0.924026640887263,
+    "Cars_response_fraction_outside_plane": 0.7272382270949455,
+    "joint_response_fraction_outside_plane": 0.771271957601607
+  },
+  {
+    "anchor": 1,
+    "tau": 0.3,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_5",
+    "parameter_fraction_outside_plane": 0.924024749625064,
+    "Cars_response_fraction_outside_plane": 0.727221708114236,
+    "joint_response_fraction_outside_plane": 0.7712598778484372
+  },
+  {
+    "anchor": 1,
+    "tau": 1.0,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7430994871603461,
+    "Cars_response_fraction_outside_plane": 0.2931860566763603,
+    "joint_response_fraction_outside_plane": 0.3292638815277931
+  },
+  {
+    "anchor": 1,
+    "tau": 1.0,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.791931385732823,
+    "Cars_response_fraction_outside_plane": 0.3381634597495334,
+    "joint_response_fraction_outside_plane": 0.3774466357334684
+  },
+  {
+    "anchor": 1,
+    "tau": 1.0,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7839442200468791,
+    "Cars_response_fraction_outside_plane": 0.32946976013965446,
+    "joint_response_fraction_outside_plane": 0.35382095271997427
+  },
+  {
+    "anchor": 1,
+    "tau": 3.0,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7430994871603461,
+    "Cars_response_fraction_outside_plane": 0.2931860566763603,
+    "joint_response_fraction_outside_plane": 0.3292638815277931
+  },
+  {
+    "anchor": 1,
+    "tau": 3.0,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.791983798513225,
+    "Cars_response_fraction_outside_plane": 0.3382169510689326,
+    "joint_response_fraction_outside_plane": 0.3774988650548963
+  },
+  {
+    "anchor": 1,
+    "tau": 3.0,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7838619622978386,
+    "Cars_response_fraction_outside_plane": 0.32938180930861155,
+    "joint_response_fraction_outside_plane": 0.35372818277298035
+  },
+  {
+    "anchor": 2,
+    "tau": 0.001,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9978004373653993,
+    "Cars_response_fraction_outside_plane": 0.5902250497157667,
+    "joint_response_fraction_outside_plane": 0.6098032387236489
+  },
+  {
+    "anchor": 2,
+    "tau": 0.001,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9978045274781553,
+    "Cars_response_fraction_outside_plane": 0.590391006171193,
+    "joint_response_fraction_outside_plane": 0.6099802673337201
+  },
+  {
+    "anchor": 2,
+    "tau": 0.001,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9978042754348104,
+    "Cars_response_fraction_outside_plane": 0.5903907123729331,
+    "joint_response_fraction_outside_plane": 0.6099800753320906
+  },
+  {
+    "anchor": 2,
+    "tau": 0.003,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9904223619891049,
+    "Cars_response_fraction_outside_plane": 0.5806070263895247,
+    "joint_response_fraction_outside_plane": 0.6012674689939462
+  },
+  {
+    "anchor": 2,
+    "tau": 0.003,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9904680473876357,
+    "Cars_response_fraction_outside_plane": 0.5811002694886934,
+    "joint_response_fraction_outside_plane": 0.6017986714783944
+  },
+  {
+    "anchor": 2,
+    "tau": 0.003,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9904679161895402,
+    "Cars_response_fraction_outside_plane": 0.5811033837107641,
+    "joint_response_fraction_outside_plane": 0.6018015765823154
+  },
+  {
+    "anchor": 2,
+    "tau": 0.01,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9286339464349529,
+    "Cars_response_fraction_outside_plane": 0.5702082535106323,
+    "joint_response_fraction_outside_plane": 0.5944271602531507
+  },
+  {
+    "anchor": 2,
+    "tau": 0.01,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9295193996086423,
+    "Cars_response_fraction_outside_plane": 0.5715149232192885,
+    "joint_response_fraction_outside_plane": 0.595837501067799
+  },
+  {
+    "anchor": 2,
+    "tau": 0.01,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_1",
+    "parameter_fraction_outside_plane": 0.9295121902667198,
+    "Cars_response_fraction_outside_plane": 0.5715059131842004,
+    "joint_response_fraction_outside_plane": 0.5958283890870933
+  },
+  {
+    "anchor": 2,
+    "tau": 0.03,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_2",
+    "parameter_fraction_outside_plane": 0.9670895332078159,
+    "Cars_response_fraction_outside_plane": 0.6289133715163956,
+    "joint_response_fraction_outside_plane": 0.6441724929513575
+  },
+  {
+    "anchor": 2,
+    "tau": 0.03,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_2",
+    "parameter_fraction_outside_plane": 0.9669332837724717,
+    "Cars_response_fraction_outside_plane": 0.6286179864718252,
+    "joint_response_fraction_outside_plane": 0.6439143951170384
+  },
+  {
+    "anchor": 2,
+    "tau": 0.03,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_2",
+    "parameter_fraction_outside_plane": 0.96693653476131,
+    "Cars_response_fraction_outside_plane": 0.6286214798945547,
+    "joint_response_fraction_outside_plane": 0.6439172727638242
+  },
+  {
+    "anchor": 2,
+    "tau": 0.1,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9514964842472274,
+    "Cars_response_fraction_outside_plane": 0.6656937155955079,
+    "joint_response_fraction_outside_plane": 0.7103512942243553
+  },
+  {
+    "anchor": 2,
+    "tau": 0.1,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9515479826962068,
+    "Cars_response_fraction_outside_plane": 0.6661951512380927,
+    "joint_response_fraction_outside_plane": 0.7105441906748511
+  },
+  {
+    "anchor": 2,
+    "tau": 0.1,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_4",
+    "parameter_fraction_outside_plane": 0.9515490271132241,
+    "Cars_response_fraction_outside_plane": 0.6661967825402867,
+    "joint_response_fraction_outside_plane": 0.7105459746309557
+  },
+  {
+    "anchor": 2,
+    "tau": 0.3,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_7",
+    "parameter_fraction_outside_plane": 0.9550114515048019,
+    "Cars_response_fraction_outside_plane": 0.5557582510668176,
+    "joint_response_fraction_outside_plane": 0.5661362379938903
+  },
+  {
+    "anchor": 2,
+    "tau": 0.3,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_7",
+    "parameter_fraction_outside_plane": 0.9555518571741244,
+    "Cars_response_fraction_outside_plane": 0.5627797992292932,
+    "joint_response_fraction_outside_plane": 0.5732801281690997
+  },
+  {
+    "anchor": 2,
+    "tau": 0.3,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_7",
+    "parameter_fraction_outside_plane": 0.9555538019511141,
+    "Cars_response_fraction_outside_plane": 0.5628019466054793,
+    "joint_response_fraction_outside_plane": 0.5733049439457183
+  },
+  {
+    "anchor": 2,
+    "tau": 1.0,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.6650943577778522,
+    "Cars_response_fraction_outside_plane": 0.18482175354559519,
+    "joint_response_fraction_outside_plane": 0.20078942719589263
+  },
+  {
+    "anchor": 2,
+    "tau": 1.0,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.7102253845308173,
+    "Cars_response_fraction_outside_plane": 0.2135901122537901,
+    "joint_response_fraction_outside_plane": 0.2300859448509986
+  },
+  {
+    "anchor": 2,
+    "tau": 1.0,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_10",
+    "parameter_fraction_outside_plane": 0.710147190764104,
+    "Cars_response_fraction_outside_plane": 0.21353336748388513,
+    "joint_response_fraction_outside_plane": 0.23002750673335584
+  },
+  {
+    "anchor": 2,
+    "tau": 3.0,
+    "problem": "linear_Cars_support_norm_only",
+    "conditional_plane": "pair_11",
+    "parameter_fraction_outside_plane": 0.6092717176909449,
+    "Cars_response_fraction_outside_plane": 0.18197603180643684,
+    "joint_response_fraction_outside_plane": 0.1949045321833502
+  },
+  {
+    "anchor": 2,
+    "tau": 3.0,
+    "problem": "GN_Cars_norm_only",
+    "conditional_plane": "pair_11",
+    "parameter_fraction_outside_plane": 0.6674119978101879,
+    "Cars_response_fraction_outside_plane": 0.2115044260141101,
+    "joint_response_fraction_outside_plane": 0.22528431642359015
+  },
+  {
+    "anchor": 2,
+    "tau": 3.0,
+    "problem": "GN_Cars_with_DTD_CE_protection",
+    "conditional_plane": "pair_11",
+    "parameter_fraction_outside_plane": 0.6673844894760972,
+    "Cars_response_fraction_outside_plane": 0.21148920710876448,
+    "joint_response_fraction_outside_plane": 0.2252683484334701
+  }
+]

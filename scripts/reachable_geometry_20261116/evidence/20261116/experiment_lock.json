@@ -1,0 +1,31 @@
+{
+  "source": "/media/shangxueyuan/data1/conditional_compensation_20261116",
+  "scope": "First experiment only: local functional reachable set; no support growth, dynamic update or EC",
+  "candidate_domain": "Existing complete expert-recombination E, 304 dimensions; not full 86M space",
+  "taus": [
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0
+  ],
+  "radii": [
+    0.002230120585677177,
+    0.006690361757031531,
+    0.02230120585677177
+  ],
+  "source_norm_budget": "epsilon=R*tau*||J_D(-h_C/||h_C||)||",
+  "problems": [
+    "linear_Cars_support_norm_only",
+    "GN_Cars_norm_only",
+    "GN_Cars_with_DTD_CE_protection"
+  ],
+  "conditional_family": "Union of the eight previously p0-selected conditional planes per anchor; NOT all-pair or all-2D upper bound",
+  "evidence": "p4/p5 already observed; fully exploratory follow-up. No new heldout claim; p6 and Test unopened",
+  "reachable_spectrum": "Inner ellipsoid v^T(I/R^2+KD/epsilon^2)v<=1 is feasible; reachable set is contained in sqrt(2) times this ellipsoid. All axes reported, no Fisher cutoff.",
+  "timestamp_unix": 1794779958.6600335,
+  "main_source_sha256": "dcc6ea99c6704a5a520bc4a3ca46653b3deaa3d0357eaaa0bd6c2b1a045a050a"
+}

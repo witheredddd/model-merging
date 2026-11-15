@@ -1,0 +1,26 @@
+[
+  {
+    "anchor": 0,
+    "min_DTD_singular_value": 0.0015589441063992033,
+    "max_DTD_singular_value": 2.863878558037775,
+    "numerical_full_column_rank": true,
+    "exact_fiber_in_E": "No nonzero kernel at observed numerical precision; exact epsilon=0 admits only zero if full rank holds",
+    "norm_bound_at_epsilon": "||v|| <= min(R,epsilon/sigma_min(J_D)); no nonzero exact fiber is inferred"
+  },
+  {
+    "anchor": 1,
+    "min_DTD_singular_value": 0.0011544813979396276,
+    "max_DTD_singular_value": 2.5233789547477414,
+    "numerical_full_column_rank": true,
+    "exact_fiber_in_E": "No nonzero kernel at observed numerical precision; exact epsilon=0 admits only zero if full rank holds",
+    "norm_bound_at_epsilon": "||v|| <= min(R,epsilon/sigma_min(J_D)); no nonzero exact fiber is inferred"
+  },
+  {
+    "anchor": 2,
+    "min_DTD_singular_value": 0.0007710887340713157,
+    "max_DTD_singular_value": 1.8644510129522505,
+    "numerical_full_column_rank": true,
+    "exact_fiber_in_E": "No nonzero kernel at observed numerical precision; exact epsilon=0 admits only zero if full rank holds",
+    "norm_bound_at_epsilon": "||v|| <= min(R,epsilon/sigma_min(J_D)); no nonzero exact fiber is inferred"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "done": true,
+  "program_records": 2376,
+  "failed": 0,
+  "seconds": 199.22996858134866,
+  "no_GPU_use": true,
+  "no_old_jobs_modified": true,
+  "linear_support_refined_with_scalar_dual": true,
+  "original_failed_records_preserved": true
+}
