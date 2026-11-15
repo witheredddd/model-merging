@@ -1,0 +1,4663 @@
+{
+  "points": [
+    {
+      "id": "a0_selected1_r1",
+      "anchor": 0,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 1.2329656852505258e-07,
+      "nonlinear_DTD_joint_energy": 1.600446061834887e-08,
+      "finite_DTD_energy_reduction": 1.0729210790670372e-07,
+      "finite_response_additivity_error": 0.02012987623446151,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected1_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -2.1920422241638897e-05,
+            "CI95": [
+              -4.3361458919088326e-05,
+              -7.208719614163725e-07
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -1.8944389632323737e-05,
+            "CI95": [
+              -7.716152892961442e-05,
+              3.8987938064839204e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected1_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -5.81692138330054e-07,
+            "CI95": [
+              -2.1546632310908807e-06,
+              8.609677865060694e-07
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.304393592197178e-06,
+            "CI95": [
+              -2.950820561569232e-07,
+              3.0402741564660585e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -1.6201744246194281e-06,
+            "CI95": [
+              -3.3009720718336115e-05,
+              3.105572918297754e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0002065877800138393,
+            "CI95": [
+              0.0001154763163116351,
+              0.0003081328288328408
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 4.177199992519202e-06,
+            "CI95": [
+              -2.0532664771056984e-05,
+              3.0168288043242134e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -5.8071845583456845e-05,
+            "CI95": [
+              -0.00013332867013696114,
+              1.9660746506588392e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected1_r1",
+      "anchor": 0,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 1.071268348100844e-07,
+      "nonlinear_DTD_joint_energy": 1.81159090486573e-08,
+      "finite_DTD_energy_reduction": 8.901092576142711e-08,
+      "finite_response_additivity_error": 0.01644241100383411,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected1_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -1.2543355082331314e-05,
+            "CI95": [
+              -2.7466203492256375e-05,
+              1.914768068689067e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -5.1041811792607414e-05,
+            "CI95": [
+              -0.00011774214185279085,
+              3.1209770626020387e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected1_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 1.8344442999137814e-07,
+            "CI95": [
+              -1.1017181647886576e-06,
+              1.5893147697231818e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 4.138168519472874e-07,
+            "CI95": [
+              -6.861442565646227e-07,
+              1.542404195757675e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -5.56803068003111e-06,
+            "CI95": [
+              -2.5552102458158472e-05,
+              1.3395554327717935e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00014610512011822445,
+            "CI95": [
+              8.60359694973315e-05,
+              0.00021193713094644928
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 3.4380655813798876e-06,
+            "CI95": [
+              -1.195067225827134e-05,
+              1.930191819795364e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0001153693694471254,
+            "CI95": [
+              -0.0001961274946032471,
+              -4.744498245622451e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected2_r1",
+      "anchor": 0,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 2.928092872294721e-08,
+      "nonlinear_DTD_joint_energy": 2.6780579806934545e-08,
+      "finite_DTD_energy_reduction": 2.5003489160126645e-09,
+      "finite_response_additivity_error": 0.013722163963515938,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected2_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -6.875364969532323e-06,
+            "CI95": [
+              -1.075929470631884e-05,
+              -3.1860257426907304e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -3.4538221307490493e-06,
+            "CI95": [
+              -7.444691476596084e-06,
+              -3.313131958986608e-07
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected2_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 6.7833182257485e-06,
+            "CI95": [
+              1.7501755516366555e-06,
+              1.2352885737360904e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 2.306213976940406e-06,
+            "CI95": [
+              -2.2871454904178207e-06,
+              7.573316935366507e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 1.3449331523431172e-05,
+            "CI95": [
+              -1.950930775269765e-05,
+              5.280077735371159e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0002220450613059654,
+            "CI95": [
+              0.00011621946392996677,
+              0.00034229541662540497
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 1.9246705940569807e-05,
+            "CI95": [
+              -2.969745471243786e-06,
+              4.3136403787191605e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.261456429133073e-05,
+            "CI95": [
+              -8.362004936915769e-05,
+              -1.0353965464300499e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected2_r1",
+      "anchor": 0,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 2.2933396751799066e-08,
+      "nonlinear_DTD_joint_energy": 2.1272969806011566e-08,
+      "finite_DTD_energy_reduction": 1.6604269457874993e-09,
+      "finite_response_additivity_error": 0.01666147513602626,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected2_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -3.894005722782214e-06,
+            "CI95": [
+              -6.112462741635319e-06,
+              -1.631533770666028e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 9.57698519223573e-08,
+            "CI95": [
+              -1.9573230669156705e-06,
+              2.3229782196956257e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected2_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 1.6878707700897264e-06,
+            "CI95": [
+              -1.3925053161899954e-06,
+              4.8788732646956466e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -3.770119638515014e-06,
+            "CI95": [
+              -7.331443978265169e-06,
+              -4.712527142096661e-07
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 3.020926631036303e-06,
+            "CI95": [
+              -1.8547992483426176e-05,
+              2.0973656353136244e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0001972107944181944,
+            "CI95": [
+              0.00010683686643098981,
+              0.0002979973028669195
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 1.2027022892447302e-05,
+            "CI95": [
+              -1.6492928495206883e-06,
+              2.6017309303061484e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -6.426369514715542e-05,
+            "CI95": [
+              -9.040445370998423e-05,
+              -4.068178302948203e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected4_r1",
+      "anchor": 0,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.4744104174765835e-06,
+      "nonlinear_DTD_joint_energy": 2.1298283321253746e-06,
+      "finite_DTD_energy_reduction": 3.4458208535120884e-07,
+      "finite_response_additivity_error": 0.0019483798195056314,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected4_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -0.00017094571760131904,
+            "CI95": [
+              -0.00037353575248002716,
+              7.771103954955125e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0001295764722971784,
+            "CI95": [
+              -0.00042701610157745896,
+              0.0001326526391744626
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected4_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -8.164293183715483e-05,
+            "CI95": [
+              -0.00010461314779188483,
+              -5.992324669498618e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 4.8245617382407965e-06,
+            "CI95": [
+              -1.755475090496245e-06,
+              1.1661748299974531e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00013842574595579758,
+            "CI95": [
+              -0.00033682718473278245,
+              5.337209224176245e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0006550925871622643,
+            "CI95": [
+              0.0003270035301909653,
+              0.0011013638623047616
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00013064518561396493,
+            "CI95": [
+              -0.0004787247110616377,
+              0.00016962487705362214
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0002745763428667088,
+            "CI95": [
+              -0.0006520259694890406,
+              4.347105878420305e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected4_r1",
+      "anchor": 0,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.7440537904841204e-06,
+      "nonlinear_DTD_joint_energy": 2.2333957181845274e-06,
+      "finite_DTD_energy_reduction": 5.10658072299593e-07,
+      "finite_response_additivity_error": 0.002034250432066395,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected4_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -5.4247928461270856e-05,
+            "CI95": [
+              -0.0002053174622944481,
+              7.593088930486391e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00016198214520301367,
+            "CI95": [
+              -0.0003832208448935223,
+              4.644428698439264e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected4_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -7.193180411361536e-05,
+            "CI95": [
+              -8.742239316590496e-05,
+              -5.745045329165095e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.0959879252161526e-05,
+            "CI95": [
+              5.679864786257046e-06,
+              1.6718123846170876e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00015033133989715076,
+            "CI95": [
+              -0.0002811857231195711,
+              -1.984104313670369e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0003961767459708897,
+            "CI95": [
+              0.00023335689829325943,
+              0.0005597853896872288
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.00010048518186003422,
+            "CI95": [
+              -0.00011282965511273335,
+              0.00031055930885767443
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00012136216204086497,
+            "CI95": [
+              -0.0003621643024164342,
+              7.291887541666873e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected5_r1",
+      "anchor": 0,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.2325890018486675e-06,
+      "nonlinear_DTD_joint_energy": 1.945414720523918e-06,
+      "finite_DTD_energy_reduction": 2.8717428132474964e-07,
+      "finite_response_additivity_error": 0.0019292696202587477,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected5_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -0.0001558742604485571,
+            "CI95": [
+              -0.0003486546553053587,
+              1.5085159826906684e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00020261178714619827,
+            "CI95": [
+              -0.0004972758298767523,
+              5.504372830957614e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected5_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -0.00010963921513715075,
+            "CI95": [
+              -0.00014502586650461203,
+              -7.697573196603353e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 8.693192133795657e-06,
+            "CI95": [
+              1.563441110402625e-06,
+              1.6838370732972042e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00012337619334169828,
+            "CI95": [
+              -0.00033481820355627277,
+              6.502515186013915e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0005820595698797781,
+            "CI95": [
+              0.00031813374278613236,
+              0.0009341347828009862
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00011559563299986564,
+            "CI95": [
+              -0.00042371182716759555,
+              0.00015227572412945803
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00034760936014919494,
+            "CI95": [
+              -0.0006698860612505039,
+              -6.36627606561375e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected5_r1",
+      "anchor": 0,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.5015677324161695e-06,
+      "nonlinear_DTD_joint_energy": 2.065204601704789e-06,
+      "finite_DTD_energy_reduction": 4.3636313071138067e-07,
+      "finite_response_additivity_error": 0.0020031944206137142,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected5_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -8.155138147881415e-05,
+            "CI95": [
+              -0.00024754259433139276,
+              5.628293096366027e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00022486938933141882,
+            "CI95": [
+              -0.0004180601462924578,
+              -3.581545368866829e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected5_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -9.33326097697809e-05,
+            "CI95": [
+              -0.00011838948480146337,
+              -7.085225255348762e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 5.623856846044041e-06,
+            "CI95": [
+              8.574912875635248e-07,
+              1.1049305374568108e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00017764730963527853,
+            "CI95": [
+              -0.000331222522431094,
+              -4.184844946850213e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0003332737240596854,
+            "CI95": [
+              0.0001952721570641599,
+              0.0004854411807836151
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 7.316921212190642e-05,
+            "CI95": [
+              -0.00015117026291940904,
+              0.0002841692526389957
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0001842651839520692,
+            "CI95": [
+              -0.0003698048122246644,
+              -2.63082742165541e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected7_r1",
+      "anchor": 0,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.601992341892742e-05,
+      "nonlinear_DTD_joint_energy": 1.6573068814324792e-05,
+      "finite_DTD_energy_reduction": -5.531453953973714e-07,
+      "finite_response_additivity_error": 0.0013056299675736679,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected7_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 8.506127401932522e-05,
+            "CI95": [
+              -0.0004641601035313865,
+              0.0006397297522618963
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00013856014418660683,
+            "CI95": [
+              -0.0006710259720229311,
+              0.0003433826467518761
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected7_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -0.00011906746931771698,
+            "CI95": [
+              -0.00015912821371255248,
+              -8.295557921564538e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.7330475999843442e-05,
+            "CI95": [
+              3.003848601736241e-06,
+              3.261506855615064e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -7.686746190473512e-05,
+            "CI95": [
+              -0.0005574565312389523,
+              0.00039096373812050333
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0009121287841340642,
+            "CI95": [
+              0.00047684152557126406,
+              0.0014989180561382294
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.00021055151401224042,
+            "CI95": [
+              -0.0005223034762680867,
+              0.00099338482290028
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0004923714917038332,
+            "CI95": [
+              -0.001027325359682936,
+              -4.202910958931123e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected7_r1",
+      "anchor": 0,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.732936257934577e-05,
+      "nonlinear_DTD_joint_energy": 1.7300318352849088e-05,
+      "finite_DTD_energy_reduction": 2.9044226496680828e-08,
+      "finite_response_additivity_error": 0.0012742680746024603,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected7_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -0.0003463993451273302,
+            "CI95": [
+              -0.000755484783300396,
+              5.269559069399608e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0005519033847365079,
+            "CI95": [
+              -0.001073535664528517,
+              -0.00012005439975615923
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected7_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -0.00011762027556059432,
+            "CI95": [
+              -0.00014711091169921888,
+              -9.037232221518881e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.120200818983515e-05,
+            "CI95": [
+              1.9246772103364894e-06,
+              2.2026032544069035e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00043555768360607256,
+            "CI95": [
+              -0.0007266924180142031,
+              -0.00015919641603227188
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00028009746793845636,
+            "CI95": [
+              2.1479051433660356e-05,
+              0.0005347451299446611
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.0003003849788998658,
+            "CI95": [
+              -0.00018212370921011258,
+              0.0007710069967119561
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00028488045782331593,
+            "CI95": [
+              -0.0006698155352689749,
+              6.580897071314657e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected8_r1",
+      "anchor": 0,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.10.attn.in_proj_weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.3450434913907002e-05,
+      "nonlinear_DTD_joint_energy": 1.299535951559757e-05,
+      "finite_DTD_energy_reduction": 4.5507539830943215e-07,
+      "finite_response_additivity_error": 0.0012096859373001863,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected8_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -4.037743284449535e-08,
+            "CI95": [
+              -5.927898218339063e-05,
+              6.376141422600923e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.042732416513001e-05,
+            "CI95": [
+              -0.0001237412027619694,
+              3.436398483059424e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected8_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 9.345577191954972e-06,
+            "CI95": [
+              -3.0614017972425884e-05,
+              4.95977666281593e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.390899106789066e-06,
+            "CI95": [
+              -4.6275284081756315e-05,
+              3.693172430780802e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.000161944538187353,
+            "CI95": [
+              -0.0007309626242508283,
+              0.0003725039530862837
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0010101686485972537,
+            "CI95": [
+              0.0004737428425468152,
+              0.0017297086276782372
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.00012547443772962253,
+            "CI95": [
+              -0.0006143823377701205,
+              0.0008060830375405444
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0003943316272406437,
+            "CI95": [
+              -0.001061293982115725,
+              0.00018810843940851016
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected8_r1",
+      "anchor": 0,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.10.attn.in_proj_weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.5594663023918236e-05,
+      "nonlinear_DTD_joint_energy": 1.4661143702181648e-05,
+      "finite_DTD_energy_reduction": 9.335193217365872e-07,
+      "finite_response_additivity_error": 0.0011703587720136232,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected8_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 1.376012646656932e-05,
+            "CI95": [
+              -1.834510264632712e-05,
+              4.951922313348217e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.098574438083142e-05,
+            "CI95": [
+              -8.639362042482914e-05,
+              3.861490006138814e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected8_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 3.9563768149238594e-05,
+            "CI95": [
+              6.495995850123753e-06,
+              7.152110776863369e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 8.963563750147671e-06,
+            "CI95": [
+              -1.2573250013195525e-05,
+              3.0893629413817165e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -7.534636414697205e-05,
+            "CI95": [
+              -0.0004057881877416254,
+              0.00026304566108923424
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0007910447363410548,
+            "CI95": [
+              0.00048120794238018993,
+              0.0011571506525067507
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.0006605962983589664,
+            "CI95": [
+              0.00015443724101671096,
+              0.0011525546751693738
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00022606681057928246,
+            "CI95": [
+              -0.00014200266276798962,
+              0.0006146049679404446
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected10_r1",
+      "anchor": 0,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.5.mlp.c_proj.weight"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.00017344061991929414,
+      "nonlinear_DTD_joint_energy": 0.00018308060584156633,
+      "finite_DTD_energy_reduction": -9.639985922272189e-06,
+      "finite_response_additivity_error": 0.005255889809668218,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected10_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.000721311927189738,
+            "CI95": [
+              0.00042162774753105837,
+              0.0010461540274938417
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0002391195803945333,
+            "CI95": [
+              -0.0004293676972353961,
+              -7.781481316505332e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected10_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -0.00032364624026506015,
+            "CI95": [
+              -0.00044025941191819397,
+              -0.00021914990131014013
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.8732160128883348e-05,
+            "CI95": [
+              -2.3255484957379823e-05,
+              6.457614703757255e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 0.00035534538536460976,
+            "CI95": [
+              -0.0002551018263007559,
+              0.001013127680415758
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0007565364604674202,
+            "CI95": [
+              0.00028349797210981226,
+              0.0013065817995832672
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.0007021669739545372,
+            "CI95": [
+              -0.0013383657320575365,
+              0.0027584403464595516
+            ],
+            "accuracy_difference": -0.0050000000000000044
+          },
+          "Cars": {
+            "CE_difference": -0.0013796339701267687,
+            "CI95": [
+              -0.0026858481341354083,
+              -0.0001813966167775115
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected10_r1",
+      "anchor": 0,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.5.mlp.c_proj.weight"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.00018462921182199084,
+      "nonlinear_DTD_joint_energy": 0.00018282477414115688,
+      "finite_DTD_energy_reduction": 1.8044376808339568e-06,
+      "finite_response_additivity_error": 0.004706599757016015,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected10_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.0006983911327491813,
+            "CI95": [
+              0.000486743476978292,
+              0.0009238152006007408
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00017354263185216827,
+            "CI95": [
+              -0.000269601659153453,
+              -8.268441493574087e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected10_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -0.00022193503256730701,
+            "CI95": [
+              -0.00031008356600226774,
+              -0.0001442799783360943
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 3.231057562927861e-05,
+            "CI95": [
+              1.1752781104036637e-05,
+              5.517369774183373e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00021999666908094782,
+            "CI95": [
+              -0.000600404822349849,
+              0.00020691300341485553
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00041771077049592987,
+            "CI95": [
+              0.0001246954999263654,
+              0.0006990414251581073
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.0008626105298440613,
+            "CI95": [
+              -0.0003037244725349121,
+              0.0020338265095388402
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0005828083949946665,
+            "CI95": [
+              -0.0015657700835582902,
+              0.00027943093478176214
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected11_r1",
+      "anchor": 0,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "proj"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.00016313188878491929,
+      "nonlinear_DTD_joint_energy": 0.00016555993285424656,
+      "finite_DTD_energy_reduction": -2.428044069327273e-06,
+      "finite_response_additivity_error": 0.0017672964727414647,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected11_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.00029515936029000787,
+            "CI95": [
+              -0.00011881982677632187,
+              0.0006482361829507631
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00011231082123192633,
+            "CI95": [
+              -0.00036625738564986825,
+              0.00014360421299878056
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected11_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -0.0003426525996880567,
+            "CI95": [
+              -0.0004687586377133562,
+              -0.00022150277232334278
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -8.463438880241333e-06,
+            "CI95": [
+              -6.174989995001769e-05,
+              4.91931941658072e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -7.086631179692362e-05,
+            "CI95": [
+              -0.0005561680271172799,
+              0.0004282228536432776
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0008833703148225676,
+            "CI95": [
+              0.0003778399081137093,
+              0.0015181548035731146
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.0002759552767930041,
+            "CI95": [
+              -0.0018565910183784434,
+              0.0023090658360124185
+            ],
+            "accuracy_difference": -0.0050000000000000044
+          },
+          "Cars": {
+            "CE_difference": -0.0012528001157716211,
+            "CI95": [
+              -0.002538064113543706,
+              -0.00016713964051524744
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a0_selected11_r1",
+      "anchor": 0,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "proj"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.0001758650027557105,
+      "nonlinear_DTD_joint_energy": 0.00017541050536829162,
+      "finite_DTD_energy_reduction": 4.544973874188692e-07,
+      "finite_response_additivity_error": 0.0017018290475723573,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a0_selected11_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.000476816732921589,
+            "CI95": [
+              0.00027580741589982373,
+              0.0007227077889083748
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00015725599349701724,
+            "CI95": [
+              -0.0003495160340127728,
+              1.8187151537597744e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_selected11_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -0.00021010159320362338,
+            "CI95": [
+              -0.0002840460833664819,
+              -0.0001390486280955445
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -2.3757000609120254e-05,
+            "CI95": [
+              -6.819036245942879e-05,
+              1.673352399324424e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00044142634228271397,
+            "CI95": [
+              -0.0008057680809117255,
+              -8.150237653705317e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00043392858452068694,
+            "CI95": [
+              0.0001740804070343677,
+              0.0007056155747857675
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a0_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.0006411808566422951,
+            "CI95": [
+              -0.0005082176945463441,
+              0.0017918177729873259
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0005665905809699096,
+            "CI95": [
+              -0.0015174824486145727,
+              0.0002702313693615032
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected1_r1",
+      "anchor": 1,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 1.2856393909674106e-07,
+      "nonlinear_DTD_joint_energy": 1.4627920901036394e-08,
+      "finite_DTD_energy_reduction": 1.1393601819570467e-07,
+      "finite_response_additivity_error": 0.016089955325943303,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected1_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -1.1356685303968617e-05,
+            "CI95": [
+              -3.0689978636457696e-05,
+              5.836268284157912e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -3.938337790230133e-05,
+            "CI95": [
+              -0.0001150054970008954,
+              3.665297748156442e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected1_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -1.388809042509375e-06,
+            "CI95": [
+              -2.881400819995879e-06,
+              -2.903429943138597e-08
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 2.468559364439505e-06,
+            "CI95": [
+              1.34845378519794e-07,
+              5.0808561735851135e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 1.1766823345981126e-05,
+            "CI95": [
+              -1.4089911813868614e-05,
+              4.437162311509308e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0002796923766964052,
+            "CI95": [
+              0.00016449839943893834,
+              0.00041536598044625213
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -3.981965665498326e-06,
+            "CI95": [
+              -1.6163508996378036e-05,
+              9.291026918507543e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -7.3843223307502e-05,
+            "CI95": [
+              -0.0001851006297410725,
+              4.261020488372114e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected1_r1",
+      "anchor": 1,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 1.0008064237489517e-07,
+      "nonlinear_DTD_joint_energy": 1.684598027574653e-08,
+      "finite_DTD_energy_reduction": 8.323466209914864e-08,
+      "finite_response_additivity_error": 0.01247363352589663,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected1_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -8.784762768892923e-06,
+            "CI95": [
+              -2.1864577886643235e-05,
+              2.923493828684008e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -6.237234950210078e-05,
+            "CI95": [
+              -0.00016442595220149137,
+              3.467352610856888e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected1_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -1.2819987603542132e-06,
+            "CI95": [
+              -2.5766535889387226e-06,
+              -7.315264778980384e-08
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.5068926595836308e-06,
+            "CI95": [
+              -3.252644514428407e-07,
+              3.4456469847649244e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -5.913420041683169e-06,
+            "CI95": [
+              -2.5114704162743648e-05,
+              1.2170695843570807e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00020727575647693883,
+            "CI95": [
+              0.00013525638940563048,
+              0.00029049873234946355
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -1.7223575598590297e-05,
+            "CI95": [
+              -3.1569496778536854e-05,
+              -4.468451047045724e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00013804529718886035,
+            "CI95": [
+              -0.00026065961221726663,
+              -2.380480227082582e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected2_r1",
+      "anchor": 1,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.7.mlp.c_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 2.3812171065802975e-08,
+      "nonlinear_DTD_joint_energy": 2.1786876025994993e-08,
+      "finite_DTD_energy_reduction": 2.0252950398079823e-09,
+      "finite_response_additivity_error": 0.013209290465001486,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected2_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 2.3835937020871243e-06,
+            "CI95": [
+              -8.963950368786105e-07,
+              5.725765930361926e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -8.548499086242154e-06,
+            "CI95": [
+              -1.4206552800668372e-05,
+              -4.195637746412533e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected2_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 5.701009640305838e-06,
+            "CI95": [
+              2.1718577675173386e-06,
+              1.0234701272220041e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 6.723680047893132e-06,
+            "CI95": [
+              2.5669236087348566e-06,
+              1.1842418611971924e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 2.551964254718869e-05,
+            "CI95": [
+              -1.1228396446141032e-05,
+              7.004019505144944e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0003105305883827236,
+            "CI95": [
+              0.00015941378043639068,
+              0.0004737534175567299
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 9.770853535709233e-06,
+            "CI95": [
+              -1.0212597430104108e-05,
+              3.363147842598613e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.3005011621183595e-05,
+            "CI95": [
+              -0.00010546384523060221,
+              2.121155056670649e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected2_r1",
+      "anchor": 1,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.7.mlp.c_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 1.588236715701795e-08,
+      "nonlinear_DTD_joint_energy": 1.443530095660003e-08,
+      "finite_DTD_energy_reduction": 1.447066200417919e-09,
+      "finite_response_additivity_error": 0.014851255841068408,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected2_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 8.29798267110778e-08,
+            "CI95": [
+              -2.4768668734861194e-06,
+              2.6394349717023233e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.173134138585654e-06,
+            "CI95": [
+              -6.819789790785711e-06,
+              -1.617477542531088e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected2_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 3.984099407055488e-06,
+            "CI95": [
+              1.2228054708911055e-06,
+              6.896779919602436e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 6.54450104703717e-07,
+            "CI95": [
+              -2.9735338402072642e-06,
+              4.162172228922845e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 2.9891885779466733e-06,
+            "CI95": [
+              -1.5818927469383537e-05,
+              2.0270041386625122e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00026550512837201134,
+            "CI95": [
+              0.00014585063286568062,
+              0.00040998236148784506
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -8.320966978960452e-06,
+            "CI95": [
+              -1.8464488717058506e-05,
+              1.32360158446624e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -7.981592529378783e-05,
+            "CI95": [
+              -0.00012061712547563782,
+              -4.4240699680334256e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected4_r1",
+      "anchor": 1,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.094030404925825e-06,
+      "nonlinear_DTD_joint_energy": 1.755037400803962e-06,
+      "finite_DTD_energy_reduction": 3.3899300412186314e-07,
+      "finite_response_additivity_error": 0.002021893772954085,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected4_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 9.881836283476968e-05,
+            "CI95": [
+              -0.00011289435635800316,
+              0.0003067281693695392
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.2620597648166e-05,
+            "CI95": [
+              -0.0003110071257804096,
+              0.00022699429196135811
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected4_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 3.744275487082011e-05,
+            "CI95": [
+              4.313466766413121e-06,
+              7.019310601007261e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.5343070839738933e-05,
+            "CI95": [
+              -4.714450843652471e-05,
+              7.975921595644864e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -1.0350549433242647e-05,
+            "CI95": [
+              -0.00017664520693680324,
+              0.00014403423602636018
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0008473886815564598,
+            "CI95": [
+              0.0004803813062835227,
+              0.0012963595457073903
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -8.348084490099228e-05,
+            "CI95": [
+              -0.00020978719323892894,
+              2.468812922723169e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0002853015797660055,
+            "CI95": [
+              -0.0006066721594483302,
+              3.570079730706552e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected4_r1",
+      "anchor": 1,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.057765117916669e-06,
+      "nonlinear_DTD_joint_energy": 1.7578059102465073e-06,
+      "finite_DTD_energy_reduction": 2.999592076701615e-07,
+      "finite_response_additivity_error": 0.0019343346402682425,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected4_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 8.717673869469224e-05,
+            "CI95": [
+              -8.379971157085056e-05,
+              0.00026509310296909846
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0002310339474765861,
+            "CI95": [
+              -0.0005196547243388086,
+              5.204856297272046e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected4_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 2.8477504696418465e-05,
+            "CI95": [
+              -1.5508494482682463e-06,
+              5.6529019984460844e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -3.781139332732912e-05,
+            "CI95": [
+              -8.174908025208543e-05,
+              6.925969846903125e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00011746446969243459,
+            "CI95": [
+              -0.00022849875956187801,
+              -3.5157611961523682e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0004978512890858074,
+            "CI95": [
+              0.00028283169185478076,
+              0.0007648262286386312
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -8.467127588232835e-05,
+            "CI95": [
+              -0.00016965019072211765,
+              -7.956964151245607e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00034236040884547955,
+            "CI95": [
+              -0.0006568913900653854,
+              -4.3721501368679155e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected5_r1",
+      "anchor": 1,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.10.attn.in_proj_weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.797003992596717e-06,
+      "nonlinear_DTD_joint_energy": 2.052816193587708e-06,
+      "finite_DTD_energy_reduction": 7.441877990090089e-07,
+      "finite_response_additivity_error": 0.0017571868283022558,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected5_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -4.948674229247459e-05,
+            "CI95": [
+              -0.00026589382531931827,
+              0.000135711186531314
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 6.797307894135852e-05,
+            "CI95": [
+              -0.00018693280476284635,
+              0.00033187235137301357
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected5_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -0.00011875895641774987,
+            "CI95": [
+              -0.0001740857283817037,
+              -7.027424247109737e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 6.781688594943827e-05,
+            "CI95": [
+              -2.074089630098093e-05,
+              0.00016947741868581523
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00015856505508852483,
+            "CI95": [
+              -0.0003491062195606319,
+              9.109428328676208e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0009581180077189403,
+            "CI95": [
+              0.0004746074385568668,
+              0.0015111362213000939
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00023169535055627452,
+            "CI95": [
+              -0.00040149529045662254,
+              -8.81492488552631e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00017457225360352502,
+            "CI95": [
+              -0.0004439681986510706,
+              9.498542072246139e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected5_r1",
+      "anchor": 1,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.10.attn.in_proj_weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.3167527677390886e-06,
+      "nonlinear_DTD_joint_energy": 1.652197079365339e-06,
+      "finite_DTD_energy_reduction": 6.645556883737496e-07,
+      "finite_response_additivity_error": 0.0020482039012806315,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected5_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -1.445424169836904e-05,
+            "CI95": [
+              -0.00017105610869269137,
+              0.00015682006699689765
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00010579112823210799,
+            "CI95": [
+              -4.040721268712702e-05,
+              0.0002595981406377022
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected5_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -9.873224709907355e-05,
+            "CI95": [
+              -0.0001289788466865295,
+              -6.834437974236087e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 7.960163564587282e-05,
+            "CI95": [
+              2.7936616616578918e-05,
+              0.00013253219965460135
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00021907497604619055,
+            "CI95": [
+              -0.00033158738769834093,
+              -0.00011040762339192119
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0008347034881550055,
+            "CI95": [
+              0.0005871854468371592,
+              0.0011159352422977125
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00018628178223608426,
+            "CI95": [
+              -0.0002989095119989479,
+              -9.449204457510617e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -5.508209776281407e-06,
+            "CI95": [
+              -0.0001497905249060037,
+              0.00015073105441377744
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected7_r1",
+      "anchor": 1,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.10.attn.in_proj_weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.3923540355979163e-05,
+      "nonlinear_DTD_joint_energy": 1.4034769433822595e-05,
+      "finite_DTD_energy_reduction": -1.1122907784343159e-07,
+      "finite_response_additivity_error": 0.001081027162538335,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected7_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.0001859394108179915,
+            "CI95": [
+              0.00011823119644841361,
+              0.0002615390460145921
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.8657507463578664e-05,
+            "CI95": [
+              -0.00019976619764485896,
+              9.339810917518284e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected7_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -4.367839948213222e-06,
+            "CI95": [
+              -3.4642087072791026e-05,
+              2.4179876257230692e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 4.34859645215693e-06,
+            "CI95": [
+              -3.0689804610878274e-05,
+              3.7806066006917675e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 0.00017665285152070062,
+            "CI95": [
+              -0.00027928681289912736,
+              0.00072489637222941
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0013533280607262589,
+            "CI95": [
+              0.0007182373518259201,
+              0.0021189634130182496
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -2.628759318920948e-06,
+            "CI95": [
+              -0.0003601971954789834,
+              0.0003260470562523387
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00043066429800258396,
+            "CI95": [
+              -0.0008036605314678305,
+              -0.00013661701919284207
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected7_r1",
+      "anchor": 1,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.10.attn.in_proj_weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.431542272632261e-05,
+      "nonlinear_DTD_joint_energy": 1.4293322903275367e-05,
+      "finite_DTD_energy_reduction": 2.209982304724248e-08,
+      "finite_response_additivity_error": 0.000954527509917285,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected7_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.00014956704448880373,
+            "CI95": [
+              0.00011386871736807986,
+              0.00018920762743508828
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -8.454860002728012e-05,
+            "CI95": [
+              -0.0001699465738150138,
+              -1.7103374442055377e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected7_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 5.745973395269604e-06,
+            "CI95": [
+              -6.517510564301153e-06,
+              2.1650164851652427e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -6.712019136931754e-06,
+            "CI95": [
+              -2.6444049905249485e-05,
+              1.5333240563565725e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.0001533991757388994,
+            "CI95": [
+              -0.0004181352932042909,
+              0.00010460575638017924
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0010729567729855006,
+            "CI95": [
+              0.0006601903910838572,
+              0.0015162421736959922
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -5.46241438685908e-05,
+            "CI95": [
+              -0.00022520207319174057,
+              0.00010061897346891494
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00029694623126311394,
+            "CI95": [
+              -0.0005584151261236788,
+              -1.5863064966107262e-05
+            ],
+            "accuracy_difference": 0.0020000000000000018
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected8_r1",
+      "anchor": 1,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.4.attn.out_proj.bias"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.3903144586244377e-05,
+      "nonlinear_DTD_joint_energy": 1.4169914479034485e-05,
+      "finite_DTD_energy_reduction": -2.667698927901083e-07,
+      "finite_response_additivity_error": 0.0010033901626235857,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected8_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 2.0496322351025272e-05,
+            "CI95": [
+              -7.65047063577736e-06,
+              4.975029392658421e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -5.985874076393669e-05,
+            "CI95": [
+              -0.00010544691602526979,
+              -2.2535989533201053e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected8_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -4.304139329711118e-05,
+            "CI95": [
+              -0.0001320138584666398,
+              5.063248942197701e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 6.173604348672203e-05,
+            "CI95": [
+              9.566599549276599e-06,
+              0.0001215908698607911
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 1.1223462653743559e-05,
+            "CI95": [
+              -0.00043748661737167354,
+              0.0005799555660992054
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0013421822327423024,
+            "CI95": [
+              0.0006953850896529622,
+              0.002089851317609142
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00016805814818587805,
+            "CI95": [
+              -0.0005520621998078871,
+              0.00017024424590433797
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00044181012598654016,
+            "CI95": [
+              -0.0007295070719837985,
+              -0.00020038644751311068
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected8_r1",
+      "anchor": 1,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.4.attn.out_proj.bias"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.4280236338051082e-05,
+      "nonlinear_DTD_joint_energy": 1.4799316579685539e-05,
+      "finite_DTD_energy_reduction": -5.190802416344561e-07,
+      "finite_response_additivity_error": 0.0009900618710103762,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected8_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 2.9966177819914003e-05,
+            "CI95": [
+              8.515116081108062e-07,
+              5.969353542585158e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -5.146682411757841e-05,
+            "CI95": [
+              -7.33758579113621e-05,
+              -3.040520430506805e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected8_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -3.707283184166554e-05,
+            "CI95": [
+              -7.191913575286953e-05,
+              -4.257073578477848e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 7.323000414936381e-05,
+            "CI95": [
+              4.023203497848222e-05,
+              0.00010730059414290533
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00027298226975752893,
+            "CI95": [
+              -0.000548334431184726,
+              -4.607881158505e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0011060429611966587,
+            "CI95": [
+              0.0006950193217539702,
+              0.0015922563953468217
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        },
+        {
+          "reference_id": "a1_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00017420723788722037,
+            "CI95": [
+              -0.000365156419863626,
+              -4.4533465772402305e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00026386004305195576,
+            "CI95": [
+              -0.0005130492513991657,
+              2.0744523513376624e-05
+            ],
+            "accuracy_difference": 0.0020000000000000018
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected10_r1",
+      "anchor": 1,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "proj"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.00017331302574871634,
+      "nonlinear_DTD_joint_energy": 0.00017305262489921076,
+      "finite_DTD_energy_reduction": 2.604008495055805e-07,
+      "finite_response_additivity_error": 0.002074330656818955,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected10_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.00037044380702615356,
+            "CI95": [
+              0.00015287814485312454,
+              0.0006004137100468402
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.859993054257427e-05,
+            "CI95": [
+              -0.00019622502097617112,
+              0.00010668425404696795
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected10_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 5.089921745092358e-05,
+            "CI95": [
+              -6.54291047506425e-06,
+              0.0001060919935559762
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -2.3973240616249225e-06,
+            "CI95": [
+              -5.8413857487030896e-05,
+              5.5975649778117514e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00068458017631959,
+            "CI95": [
+              -0.0011303702648876638,
+              -0.000276577978670836
+            ],
+            "accuracy_difference": 0.0050000000000000044
+          },
+          "Cars": {
+            "CE_difference": 0.0008216973694460287,
+            "CI95": [
+              0.00026739062146064195,
+              0.0014257785012450738
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.0009395243631282782,
+            "CI95": [
+              -0.002565753573133879,
+              0.0004649050761436196
+            ],
+            "accuracy_difference": 0.010000000000000009
+          },
+          "Cars": {
+            "CE_difference": -0.0026644352432545508,
+            "CI95": [
+              -0.004598536772990013,
+              -0.0009224278280359255
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected10_r1",
+      "anchor": 1,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "proj"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.0001481106197748788,
+      "nonlinear_DTD_joint_energy": 0.00014831806307619302,
+      "finite_DTD_energy_reduction": -2.0744330131422907e-07,
+      "finite_response_additivity_error": 0.0022555388678886,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected10_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.0002925314579536793,
+            "CI95": [
+              0.00020212873977410798,
+              0.0003911765962694684
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -8.922560581183973e-05,
+            "CI95": [
+              -0.00020797345071267554,
+              2.983920823752378e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected10_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 4.142688134822825e-05,
+            "CI95": [
+              1.2978144065646547e-05,
+              7.229547651001131e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -2.0740834757178868e-05,
+            "CI95": [
+              -6.629848578375787e-05,
+              2.6738715206546436e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00043468299920648555,
+            "CI95": [
+              -0.0008078853193672981,
+              -9.634726146106117e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0006399575697186654,
+            "CI95": [
+              0.00017224286515726546,
+              0.001095359087784646
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 0.00014830538249291155,
+            "CI95": [
+              -0.0005753392384468678,
+              0.0009377208953927766
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.002128511455186624,
+            "CI95": [
+              -0.003523594160844925,
+              -0.000934151311345155
+            ],
+            "accuracy_difference": 0.0040000000000000036
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected11_r1",
+      "anchor": 1,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.5.mlp.c_proj.bias"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.00017057490494197582,
+      "nonlinear_DTD_joint_energy": 0.0001696094618131583,
+      "finite_DTD_energy_reduction": 9.654431288175095e-07,
+      "finite_response_additivity_error": 0.004244172436873821,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected11_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.00011577509526283658,
+            "CI95": [
+              -8.264821437473017e-05,
+              0.00029554529566978984
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00019223336914043774,
+            "CI95": [
+              -0.0004147867554292731,
+              1.1891423116043914e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected11_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 3.4022572089797587e-05,
+            "CI95": [
+              -6.848623503082424e-05,
+              0.00012425915782206964
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -9.774474269163445e-05,
+            "CI95": [
+              -0.00022650105251678938,
+              2.992598575675452e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.000939233661974984,
+            "CI95": [
+              -0.0014068437908569434,
+              -0.0004897165511249306
+            ],
+            "accuracy_difference": 0.0050000000000000044
+          },
+          "Cars": {
+            "CE_difference": 0.0006780998880638634,
+            "CI95": [
+              0.00019225327217563818,
+              0.0011961002588471038
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.0011941778487836725,
+            "CI95": [
+              -0.002818097375382115,
+              0.00016444317536556217
+            ],
+            "accuracy_difference": 0.010000000000000009
+          },
+          "Cars": {
+            "CE_difference": -0.0028080327246367163,
+            "CI95": [
+              -0.00484268740152848,
+              -0.0010254298632640056
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1_selected11_r1",
+      "anchor": 1,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.5.mlp.c_proj.bias"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.00014480503119221813,
+      "nonlinear_DTD_joint_energy": 0.00014398190090521165,
+      "finite_DTD_energy_reduction": 8.231302870064731e-07,
+      "finite_response_additivity_error": 0.003797156065433764,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a1_selected11_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.00012250500099137687,
+            "CI95": [
+              6.342514411673366e-06,
+              0.0002374226163306365
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0002197436093843914,
+            "CI95": [
+              -0.00036265356039935333,
+              -0.0001018433726042597
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_selected11_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 6.395961394827773e-05,
+            "CI95": [
+              -1.4742772473206447e-06,
+              0.00013157683637762097
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00010746844762214762,
+            "CI95": [
+              -0.00019896223929518012,
+              -2.6055724457046572e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.0006046911211151219,
+            "CI95": [
+              -0.0009642122537593245,
+              -0.0002672409998426485
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0005094393195829431,
+            "CI95": [
+              6.92854940207967e-05,
+              0.0009309079347416399
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a1_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -2.170273941572487e-05,
+            "CI95": [
+              -0.0007433605486418089,
+              0.00078176872661276
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.002259029705322346,
+            "CI95": [
+              -0.0036569141178363187,
+              -0.0010552054485413916
+            ],
+            "accuracy_difference": 0.0040000000000000036
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected1_r1",
+      "anchor": 2,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 8.655668083449932e-08,
+      "nonlinear_DTD_joint_energy": 1.091988900672765e-08,
+      "finite_DTD_energy_reduction": 7.563679182777167e-08,
+      "finite_response_additivity_error": 0.012963021336093129,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected1_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -4.571213640064841e-06,
+            "CI95": [
+              -2.0056803722588705e-05,
+              8.368198846875543e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00016035285122419695,
+            "CI95": [
+              -0.0002701640708177231,
+              -6.155928587685576e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected1_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 3.81186632401488e-07,
+            "CI95": [
+              -2.943584856354639e-07,
+              1.0661889737749703e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 2.253633445881284e-06,
+            "CI95": [
+              -2.397246454965611e-07,
+              4.745024184783961e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -6.167448802871691e-06,
+            "CI95": [
+              -2.2908914984062243e-05,
+              8.270936705650391e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0008055277752212529,
+            "CI95": [
+              0.0005470039209547318,
+              0.0010854308275875131
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -4.462520346999294e-06,
+            "CI95": [
+              -1.3418116768491536e-05,
+              5.063212229023666e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00028703412569586526,
+            "CI95": [
+              -0.00046084416095486713,
+              -0.00014147948030155826
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected1_r1",
+      "anchor": 2,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 6.899061456108089e-08,
+      "nonlinear_DTD_joint_energy": 1.3340547742315265e-08,
+      "finite_DTD_energy_reduction": 5.565006681876562e-08,
+      "finite_response_additivity_error": 0.010554385255430433,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected1_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -5.505537391134458e-06,
+            "CI95": [
+              -1.573824682715116e-05,
+              4.363845865812041e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00011065822671880532,
+            "CI95": [
+              -0.0002474964408339499,
+              1.9817344609414738e-05
+            ],
+            "accuracy_difference": 0.0020000000000000018
+          }
+        },
+        {
+          "reference_id": "a2_selected1_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 1.0894205159888257e-07,
+            "CI95": [
+              -7.129603246954744e-07,
+              8.934987230182376e-07
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.940016305006905e-06,
+            "CI95": [
+              -1.2361320448050772e-07,
+              4.123285759863061e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -5.493108254105367e-07,
+            "CI95": [
+              -1.8332355052819526e-05,
+              1.617275526326804e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0006145901058537047,
+            "CI95": [
+              0.0004350522718684991,
+              0.0008165424260254455
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -1.1738912150185608e-05,
+            "CI95": [
+              -2.406187391616208e-05,
+              -9.323299758108e-07
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0002551877677433475,
+            "CI95": [
+              -0.0004157742810010325,
+              -0.00010543582718896494
+            ],
+            "accuracy_difference": 0.0020000000000000018
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected2_r1",
+      "anchor": 2,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.6.attn.out_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 2.0417305125163453e-08,
+      "nonlinear_DTD_joint_energy": 2.2587515223534474e-08,
+      "finite_DTD_energy_reduction": -2.1702100983710214e-09,
+      "finite_response_additivity_error": 0.01044540698355694,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected2_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 2.1402402716289545e-06,
+            "CI95": [
+              -6.133329443179262e-07,
+              5.237607854439239e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -1.4773453963111645e-05,
+            "CI95": [
+              -2.2552444402628043e-05,
+              -8.46552171128981e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected2_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 1.0765600156634365e-06,
+            "CI95": [
+              -8.523455862427332e-07,
+              3.167945428857337e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 2.8176349932707576e-06,
+            "CI95": [
+              3.135033471492945e-07,
+              5.313626201993796e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 5.174993144477772e-07,
+            "CI95": [
+              -2.5162245732191283e-05,
+              2.710452082035415e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0009511206093988437,
+            "CI95": [
+              0.0006428821993360811,
+              0.0013023443511347523
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": 2.222427770320176e-06,
+            "CI95": [
+              -1.550010829622198e-05,
+              2.4897747520804736e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00014144129151827465,
+            "CI95": [
+              -0.00022963168152523216,
+              -6.439482943962434e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected2_r1",
+      "anchor": 2,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.6.attn.out_proj.bias"
+      ],
+      "tau": 0.01,
+      "nonlinear_DTD_separate_energy": 1.2986632840572062e-08,
+      "nonlinear_DTD_joint_energy": 1.1956439215372817e-08,
+      "finite_DTD_energy_reduction": 1.0301936251992455e-09,
+      "finite_response_additivity_error": 0.012603226585879068,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected2_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 1.4140622760150536e-06,
+            "CI95": [
+              -2.116364596044242e-06,
+              5.089991099895971e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -1.78931368709346e-05,
+            "CI95": [
+              -2.346257822239973e-05,
+              -1.3029725290624641e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected2_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -5.109910396044584e-08,
+            "CI95": [
+              -1.5806427341490346e-06,
+              1.4329579890556154e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 2.892052852081569e-06,
+            "CI95": [
+              8.307791572296264e-07,
+              5.43610016149478e-06
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.01_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 6.357841191029777e-06,
+            "CI95": [
+              -1.2020582158930527e-05,
+              2.6845185187753246e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0007073055974766964,
+            "CI95": [
+              0.0004725320272253437,
+              0.0009883753535467575
+            ],
+            "accuracy_difference": -0.0040000000000000036
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.01_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -4.831760133745295e-06,
+            "CI95": [
+              -1.4519368840680408e-05,
+              2.882372834094967e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00016247227612035598,
+            "CI95": [
+              -0.00021949533904818463,
+              -0.00011046383302196802
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected4_r1",
+      "anchor": 2,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 1.7328811961180706e-06,
+      "nonlinear_DTD_joint_energy": 1.3625439047156248e-06,
+      "finite_DTD_energy_reduction": 3.7033729140244583e-07,
+      "finite_response_additivity_error": 0.002419458661709676,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected4_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -2.289215675941279e-06,
+            "CI95": [
+              -0.00018534700472947813,
+              0.0001505703548436728
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0004259585503728473,
+            "CI95": [
+              -0.0008159127435757127,
+              -9.707167615343589e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected4_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -8.286442686549151e-06,
+            "CI95": [
+              -2.608965504936408e-05,
+              6.8154413951343415e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -1.2915953606810896e-06,
+            "CI95": [
+              -3.4447925320491925e-05,
+              3.092629828233153e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -1.3390843391198485e-05,
+            "CI95": [
+              -0.00016327529914344756,
+              0.00014185838839077367
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0014303387977565606,
+            "CI95": [
+              0.000960627645352934,
+              0.001968587884807
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00011098946405994969,
+            "CI95": [
+              -0.00022951896855458084,
+              -1.2663985155653673e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0007191149475936196,
+            "CI95": [
+              -0.001171572127476452,
+              -0.0003521531951458767
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected4_r1",
+      "anchor": 2,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 1.681455929264352e-06,
+      "nonlinear_DTD_joint_energy": 1.5601027766371556e-06,
+      "finite_DTD_energy_reduction": 1.2135315262719646e-07,
+      "finite_response_additivity_error": 0.0019610681305990223,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected4_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 3.93295029052023e-06,
+            "CI95": [
+              -0.00015082043979881,
+              0.00015415252575006334
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00044291321954445496,
+            "CI95": [
+              -0.0007942992213948984,
+              -7.886696463007367e-05
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        },
+        {
+          "reference_id": "a2_selected4_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 4.017957697706873e-06,
+            "CI95": [
+              -1.5355080164088026e-05,
+              1.8930723367280385e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -1.2506109557241245e-05,
+            "CI95": [
+              -3.835611758417952e-05,
+              1.269565367168792e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00016107695852100932,
+            "CI95": [
+              -0.0002995630868309426,
+              -3.4144108192191646e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0012071569471549127,
+            "CI95": [
+              0.0008079641691764528,
+              0.0016342447958959045
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00015003552998465,
+            "CI95": [
+              -0.00023447182764724356,
+              -7.474838042821779e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0005640744485302927,
+            "CI95": [
+              -0.0009145025608295771,
+              -0.00020571570917378386
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected5_r1",
+      "anchor": 2,
+      "probe": 4,
+      "groups": [
+        "transformer.resblocks.5.attn.out_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 2.0037859548686105e-06,
+      "nonlinear_DTD_joint_energy": 2.056854223150001e-06,
+      "finite_DTD_energy_reduction": -5.306826828139033e-08,
+      "finite_response_additivity_error": 0.001192988695697707,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected5_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 3.491696031269578e-05,
+            "CI95": [
+              -4.909051372572693e-06,
+              7.13432723067851e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0004411691023235443,
+            "CI95": [
+              -0.0006764936592135979,
+              -0.00023217488036806686
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected5_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -7.696645652853288e-06,
+            "CI95": [
+              -1.2697498600527923e-05,
+              -3.218660298896537e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 4.4649264614409634e-05,
+            "CI95": [
+              2.4897197959221954e-05,
+              6.797926028785742e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 2.375156957798972e-05,
+            "CI95": [
+              -0.00015006464610017937,
+              0.00023917387112394766
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0014150461526953296,
+            "CI95": [
+              0.000900327559967507,
+              0.0020095942112324985
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -7.384705109076148e-05,
+            "CI95": [
+              -0.00018596197968364882,
+              4.777926523091863e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0007344075926548507,
+            "CI95": [
+              -0.001080268355696534,
+              -0.0004301715976993046
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected5_r1",
+      "anchor": 2,
+      "probe": 5,
+      "groups": [
+        "transformer.resblocks.5.attn.out_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.1,
+      "nonlinear_DTD_separate_energy": 1.6011947404515194e-06,
+      "nonlinear_DTD_joint_energy": 1.568472511834096e-06,
+      "finite_DTD_energy_reduction": 3.272222861742336e-08,
+      "finite_response_additivity_error": 0.0012909222692644162,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected5_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 2.2530464566237207e-05,
+            "CI95": [
+              8.064974741069616e-06,
+              3.759938942187316e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0003870038315416836,
+            "CI95": [
+              -0.000608969396879031,
+              -0.0001895608475740904
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        },
+        {
+          "reference_id": "a2_selected5_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -4.366792567206069e-06,
+            "CI95": [
+              -7.837356686431303e-06,
+              -1.506507449909135e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 4.040428412563534e-05,
+            "CI95": [
+              2.1211783285350573e-05,
+              6.18244150473361e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.1_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.0001424598795157502,
+            "CI95": [
+              -0.0003042457449045996,
+              -1.5831046279251456e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.001262963122182053,
+            "CI95": [
+              0.0008926491824728612,
+              0.0016616031820856404
+            ],
+            "accuracy_difference": -0.0020000000000000018
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.1_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00013141845097939086,
+            "CI95": [
+              -0.000259867562359155,
+              -2.3368360282835142e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0005082682735031525,
+            "CI95": [
+              -0.000782372367010772,
+              -0.0002594511002924837
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected7_r1",
+      "anchor": 2,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.7905149152910616e-05,
+      "nonlinear_DTD_joint_energy": 1.833707692765585e-05,
+      "finite_DTD_energy_reduction": -4.3192777474523335e-07,
+      "finite_response_additivity_error": 0.001758672934982112,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected7_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -0.00023064239824569316,
+            "CI95": [
+              -0.0006166298442233018,
+              0.00012960177113502898
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0007132764133997858,
+            "CI95": [
+              -0.0015449591406898433,
+              9.117085502990506e-05
+            ],
+            "accuracy_difference": 0.0033333333333332993
+          }
+        },
+        {
+          "reference_id": "a2_selected7_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -5.4973314893261745e-05,
+            "CI95": [
+              -0.00012024655079413158,
+              -1.3458793651561506e-06
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -8.408369048199322e-05,
+            "CI95": [
+              -0.00022029153112335277,
+              3.653115101071622e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00011338327221072371,
+            "CI95": [
+              -0.0004547633542775706,
+              0.00032876165378590747
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0016200585924927115,
+            "CI95": [
+              0.0011086900913586132,
+              0.002219753110845146
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.0004915598849058901,
+            "CI95": [
+              -0.0009220452297886165,
+              -0.00013382092973770083
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0011887457880000564,
+            "CI95": [
+              -0.0020018857931014054,
+              -0.00039515316950055506
+            ],
+            "accuracy_difference": 0.0033333333333332993
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected7_r1",
+      "anchor": 2,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.045278847425845e-05,
+      "nonlinear_DTD_joint_energy": 1.0831364808277755e-05,
+      "finite_DTD_energy_reduction": -3.7857633401930556e-07,
+      "finite_response_additivity_error": 0.0018953025562780626,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected7_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.00022414363765892712,
+            "CI95": [
+              -7.726642548005741e-05,
+              0.0005630307316309383
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.001076890660226349,
+            "CI95": [
+              -0.0019726658920883764,
+              -0.00036117830127955374
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected7_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": -2.877083362625852e-05,
+            "CI95": [
+              -8.30108768010697e-05,
+              1.9633886550050375e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -4.0759019762445485e-05,
+            "CI95": [
+              -0.00011835116544253038,
+              3.6711965302087966e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00010890800546537684,
+            "CI95": [
+              -0.0002802015676859347,
+              4.312390724548506e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0012640848101645168,
+            "CI95": [
+              0.0007611981264741219,
+              0.0018067541322486227
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00021538970547683488,
+            "CI95": [
+              -0.0004928914179980139,
+              3.879844370482073e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0013098787106277801,
+            "CI95": [
+              -0.0021657649381019817,
+              -0.0006119152010472024
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected8_r1",
+      "anchor": 2,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.10.mlp.c_fc.weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.582063518010849e-05,
+      "nonlinear_DTD_joint_energy": 1.53118773112976e-05,
+      "finite_DTD_energy_reduction": 5.087578688108894e-07,
+      "finite_response_additivity_error": 0.001831615065118082,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected8_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.00012000089156239981,
+            "CI95": [
+              6.838021059338948e-05,
+              0.00017967556234596796
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.00019962406658999968,
+            "CI95": [
+              -0.0003565179537555924,
+              -5.2903911238598905e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected8_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 1.2890490200137445e-05,
+            "CI95": [
+              -4.7331873620136523e-05,
+              8.4665404074043e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00026454290868229015,
+            "CI95": [
+              0.00012365531983376897,
+              0.0004236087836300973
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": 2.2558920070211984e-05,
+            "CI95": [
+              -0.0003354712490966408,
+              0.0005561006682724845
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.002159586751186438,
+            "CI95": [
+              0.001439208424036952,
+              0.003052431617529816
+            ],
+            "accuracy_difference": -0.0033333333333332993
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00035561769262495443,
+            "CI95": [
+              -0.000745939308468317,
+              1.3327093929861578e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0006492176293063301,
+            "CI95": [
+              -0.001417367080918907,
+              0.00013042616305006043
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected8_r1",
+      "anchor": 2,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.10.mlp.c_fc.weight"
+      ],
+      "tau": 0.3,
+      "nonlinear_DTD_separate_energy": 1.2103205138418692e-05,
+      "nonlinear_DTD_joint_energy": 1.2020938167442136e-05,
+      "finite_DTD_energy_reduction": 8.226697097655559e-08,
+      "finite_response_additivity_error": 0.0018707346236945704,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected8_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 0.0001057018760556169,
+            "CI95": [
+              5.4024874303733906e-05,
+              0.0001614576455160213
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0001545566631820834,
+            "CI95": [
+              -0.0002568750937356738,
+              -4.631086184872439e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected8_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 1.7058471952807601e-06,
+            "CI95": [
+              -3.473102506077014e-05,
+              3.922379419241125e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0001883232986955003,
+            "CI95": [
+              0.0001027300356489604,
+              0.0002786718096795897
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t0.3_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -6.162977579287142e-06,
+            "CI95": [
+              -0.00017611946044554668,
+              0.00016209954892985212
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0017220691540374394,
+            "CI95": [
+              0.0012251968500652912,
+              0.002298460866023078
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t0.3_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00011264467759074516,
+            "CI95": [
+              -0.0003655124725103875,
+              0.00015890252666172429
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.0008518943667548573,
+            "CI95": [
+              -0.0015733782420186222,
+              -0.0002931019794129523
+            ],
+            "accuracy_difference": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected10_r1",
+      "anchor": 2,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.5.mlp.c_proj.bias"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.0001783401761075779,
+      "nonlinear_DTD_joint_energy": 0.00017628498379504916,
+      "finite_DTD_energy_reduction": 2.055192312528742e-06,
+      "finite_response_additivity_error": 0.001581789964908207,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected10_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 3.6318804743906564e-05,
+            "CI95": [
+              1.0687476757804633e-05,
+              6.440641238235365e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.9226381705959285e-05,
+            "CI95": [
+              -3.204665369138597e-05,
+              6.824713072091091e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected10_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 7.648784477354588e-05,
+            "CI95": [
+              -3.052505935698296e-05,
+              0.00021580323034633246
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0002452908508617609,
+            "CI95": [
+              0.00010508196538361955,
+              0.00040851029165250537
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.0002499532739690683,
+            "CI95": [
+              -0.0005994497475784523,
+              0.0001563556360653119
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.001966093951390788,
+            "CI95": [
+              0.0011377191923075051,
+              0.0029425280955186093
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.0011293501068916864,
+            "CI95": [
+              -0.002353811756824194,
+              -5.130462647282413e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.002823347901385444,
+            "CI95": [
+              -0.005571850373057993,
+              -9.628968802051948e-05
+            ],
+            "accuracy_difference": 0.0033333333333332993
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected10_r1",
+      "anchor": 2,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.5.mlp.c_proj.bias"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.00011604280357655026,
+      "nonlinear_DTD_joint_energy": 0.00011570134265811619,
+      "finite_DTD_energy_reduction": 3.414609184340645e-07,
+      "finite_response_additivity_error": 0.0011535179612739536,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected10_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": -3.3674885889361455e-06,
+            "CI95": [
+              -2.2426375325717403e-05,
+              1.34080297209404e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 1.231696306506849e-05,
+            "CI95": [
+              -8.790227900453153e-06,
+              3.3449692114148746e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected10_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 1.7555224314995226e-06,
+            "CI95": [
+              -5.454157677712235e-05,
+              6.181108851924533e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00021459448748908683,
+            "CI95": [
+              0.00013217672233988356,
+              0.0003090951526429271
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.00013810437357608446,
+            "CI95": [
+              -0.0004019829961902703,
+              0.00013044713916168376
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0013860055970866172,
+            "CI95": [
+              0.0009537030177313246,
+              0.0018689646468305612
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.0003030697621854274,
+            "CI95": [
+              -0.001035560332516882,
+              0.00035136451050793644
+            ],
+            "accuracy_difference": -0.0025000000000000577
+          },
+          "Cars": {
+            "CE_difference": -0.003792695248163311,
+            "CI95": [
+              -0.006038324795119515,
+              -0.0020162021896232467
+            ],
+            "accuracy_difference": 0.0020000000000000018
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected11_r1",
+      "anchor": 2,
+      "probe": 4,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.4.attn.out_proj.bias"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.00017804240954563392,
+      "nonlinear_DTD_joint_energy": 0.0001776279061591155,
+      "finite_DTD_energy_reduction": 4.1450338651843606e-07,
+      "finite_response_additivity_error": 0.0008008370347205901,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected11_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 1.0769902442756785e-05,
+            "CI95": [
+              -3.7330634945667593e-06,
+              2.7795480231176562e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 3.260873624392763e-05,
+            "CI95": [
+              -2.0678965169433006e-06,
+              6.813247481322165e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected11_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 7.511053043781858e-05,
+            "CI95": [
+              -3.205656052922971e-05,
+              0.00022617530962528644
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00028226771154511536,
+            "CI95": [
+              0.00013684632906228394,
+              0.00045706181872419004
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.0002755640049144816,
+            "CI95": [
+              -0.0006166264852368849,
+              0.00012901586806841062
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.0019795412818594716,
+            "CI95": [
+              0.001149500942684816,
+              0.0029333452030228424
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.0011549608378370996,
+            "CI95": [
+              -0.002400614172687864,
+              -7.733477337168275e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": -0.002809900570916761,
+            "CI95": [
+              -0.005589612841140615,
+              -8.267309459296451e-05
+            ],
+            "accuracy_difference": 0.0033333333333332993
+          }
+        }
+      ]
+    },
+    {
+      "id": "a2_selected11_r1",
+      "anchor": 2,
+      "probe": 5,
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.4.attn.out_proj.bias"
+      ],
+      "tau": 1.0,
+      "nonlinear_DTD_separate_energy": 0.0001160308081343184,
+      "nonlinear_DTD_joint_energy": 0.00011574461822994722,
+      "finite_DTD_energy_reduction": 2.861899043711763e-07,
+      "finite_response_additivity_error": 0.00088180725311395,
+      "conditional_pair_control_dimension": 2,
+      "comparisons": [
+        {
+          "reference_id": "a2_selected11_costmatched_single",
+          "kind": "matched_single",
+          "DTD": {
+            "CE_difference": 2.1572780556967886e-06,
+            "CI95": [
+              -1.2404276688697651e-05,
+              1.472559102227165e-05
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 3.796569790830621e-05,
+            "CI95": [
+              1.0680441301190026e-05,
+              6.629705266352513e-05
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_selected11_4D",
+          "kind": "joint4D_upper",
+          "DTD": {
+            "CE_difference": 4.334529834091198e-05,
+            "CI95": [
+              -6.916310499073029e-06,
+              0.00010156699392844436
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.00021189876281006264,
+            "CI95": [
+              0.00011688751836563475,
+              0.00031107459456237736
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_full_t1.0_r1",
+          "kind": "full304_upper",
+          "DTD": {
+            "CE_difference": -0.0001325222749679705,
+            "CI95": [
+              -0.0004059549489013435,
+              0.00013977059738073946
+            ],
+            "accuracy_difference": 0.0
+          },
+          "Cars": {
+            "CE_difference": 0.001411512853333247,
+            "CI95": [
+              0.0009633910260400106,
+              0.0019114236281265126
+            ],
+            "accuracy_difference": 0.0
+          }
+        },
+        {
+          "reference_id": "a2_global_t1.0_r1",
+          "kind": "global2D_local",
+          "DTD": {
+            "CE_difference": -0.00029748766357731347,
+            "CI95": [
+              -0.001037430525088319,
+              0.00036144138166257237
+            ],
+            "accuracy_difference": -0.0025000000000000577
+          },
+          "Cars": {
+            "CE_difference": -0.0037671879919166807,
+            "CI95": [
+              -0.0059702081933606845,
+              -0.001990258855207278
+            ],
+            "accuracy_difference": 0.0020000000000000018
+          }
+        }
+      ]
+    }
+  ],
+  "no_new_selection": true,
+  "individual_CI_not_multiple_testing_corrected": true,
+  "finite_energy_reduction_includes_nonlinear_interaction_not_only_cross_inner_product": true
+}

@@ -1,0 +1,1487 @@
+[
+  {
+    "pair": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -0.22418415047700962,
+        0.06796756709206382
+      ],
+      [
+        -0.012534053603797599,
+        -1.2472921371347394
+      ]
+    ],
+    "source_response": 0.00012645645059985986,
+    "Cars_CE_slope": -0.00011178461375014481,
+    "cancelled_DTD_energy": 7.875233255536296e-08,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.2119405066460739,
+        0.12208445460595536
+      ],
+      [
+        -0.023646584139665534,
+        -1.1401721802699742
+      ]
+    ],
+    "source_response": 0.00010364391362270597,
+    "Cars_CE_slope": -0.00011154198176442126,
+    "cancelled_DTD_energy": 6.558323047289002e-08,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.20795283376969456,
+        0.0006668969216667589
+      ],
+      [
+        -0.00803477691494705,
+        -0.9289811322087405
+      ]
+    ],
+    "source_response": 8.115094045507267e-05,
+    "Cars_CE_slope": -0.00019060005550457001,
+    "cancelled_DTD_energy": 3.3826436885030516e-08,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.12114750439885152,
+    "cosine": 0.9986129053511871
+  },
+  {
+    "pair": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 0.32578363248505887,
+    "cosine": 0.9977045997183385
+  },
+  {
+    "pair": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.24413830538244238,
+    "cosine": 0.9938490867059165
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.weight"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -0.04145254574845061,
+        0.4156167737081441
+      ],
+      [
+        0.006191218288722427,
+        -0.5065926186535697
+      ]
+    ],
+    "source_response": 0.00012645645061953054,
+    "Cars_CE_slope": -9.257921140759997e-05,
+    "cancelled_DTD_energy": 1.8424871752394647e-09,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.weight"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.040389260242362814,
+        0.6945942804283455
+      ],
+      [
+        0.005421754822828575,
+        -0.4013964359676391
+      ]
+    ],
+    "source_response": 0.00011401906309636439,
+    "Cars_CE_slope": -9.258193041037827e-05,
+    "cancelled_DTD_energy": 1.4536966577430986e-09,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.weight"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.015599248866998785,
+        0.5170424452624361
+      ],
+      [
+        0.0050072105640959624,
+        -0.27463319633187167
+      ]
+    ],
+    "source_response": 8.959140576665417e-05,
+    "Cars_CE_slope": -0.00014647615817023547,
+    "cancelled_DTD_energy": 1.1234412467017955e-10,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.2981550079364835,
+    "cosine": 0.9361185092598496
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 0.25448405704088317,
+    "cosine": 0.9223374041117849
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.weight"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.21956386224666016,
+    "cosine": 0.9990810205702063
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -1.8155573493019088,
+        0.396529056222509
+      ],
+      [
+        0.2799916710033823,
+        -1.1645273508591467
+      ]
+    ],
+    "source_response": 0.001264438021481022,
+    "Cars_CE_slope": -0.0005509641506573129,
+    "cancelled_DTD_energy": 5.202835229889237e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -2.4055183589834983,
+        -0.6133583961048872
+      ],
+      [
+        0.5377407298878231,
+        -0.7072719004003516
+      ]
+    ],
+    "source_response": 0.0008288966561112368,
+    "Cars_CE_slope": -0.000552216515558004,
+    "cancelled_DTD_energy": 5.061924917768326e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -2.275461280157245,
+        -1.2456916215207252
+      ],
+      [
+        0.4566382577365236,
+        -0.47676204434073327
+      ]
+    ],
+    "source_response": 0.0006840340457261227,
+    "Cars_CE_slope": -0.0007699328368661179,
+    "cancelled_DTD_energy": 2.3457066652232837e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 1.2819687139875644,
+    "cosine": 0.8745899132642185
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 1.8473292921075208,
+    "cosine": 0.7300199410539069
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.6902699156469834,
+    "cosine": 0.966359482142239
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -1.2032288596918892,
+        -0.14413319004212377
+      ],
+      [
+        0.07031051176796553,
+        -0.1723382600510715
+      ]
+    ],
+    "source_response": 0.001264564504690977,
+    "Cars_CE_slope": -0.0005221020288608202,
+    "cancelled_DTD_energy": 4.721236509853485e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -1.6022758073551886,
+        -0.7749407460122006
+      ],
+      [
+        0.27389862256474107,
+        0.00039440181761756676
+      ]
+    ],
+    "source_response": 0.0008828058597606835,
+    "Cars_CE_slope": -0.0005438337806347601,
+    "cancelled_DTD_energy": 4.132982512960378e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -1.3921129831206212,
+        -1.1364830916034157
+      ],
+      [
+        0.16669978436258334,
+        0.03514577972645889
+      ]
+    ],
+    "source_response": 0.0006834199221356996,
+    "Cars_CE_slope": -0.0008130485421592692,
+    "cancelled_DTD_energy": 2.0352754237814725e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.7927429157314373,
+    "cosine": 0.9324891505093892
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 1.035749032268855,
+    "cosine": 0.8334085858496483
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.43310567939511335,
+    "cosine": 0.9711506912434652
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -2.2642074784661808,
+        -4.480284887927165
+      ],
+      [
+        0.35371476292725784,
+        0.07732665292577202
+      ]
+    ],
+    "source_response": 0.003793693519397503,
+    "Cars_CE_slope": -0.0007200783505632421,
+    "cancelled_DTD_energy": 6.482003918572706e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -2.91479427518067,
+        -3.697662212552586
+      ],
+      [
+        0.7198012331125663,
+        -0.8695431852583977
+      ]
+    ],
+    "source_response": 0.0023350363483612526,
+    "Cars_CE_slope": -0.0007216928548417962,
+    "cancelled_DTD_energy": 5.367252403801811e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -2.695550917069098,
+        -2.0748653787595024
+      ],
+      [
+        0.4322716522806717,
+        -0.4276317261016843
+      ]
+    ],
+    "source_response": 0.002082055463836234,
+    "Cars_CE_slope": -0.0012941534800878672,
+    "cancelled_DTD_energy": 2.419734460269335e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 1.4374780785060124,
+    "cosine": 0.9583520817192513
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 2.4966486189540382,
+    "cosine": 0.8923327054824484
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 1.7203186365997074,
+    "cosine": 0.9689853436648092
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -0.5620554609968363,
+        0.4376813701051649
+      ],
+      [
+        0.20141245729515192,
+        -0.8040144907608333
+      ]
+    ],
+    "source_response": 0.003354783280013352,
+    "Cars_CE_slope": -0.0007068293261701693,
+    "cancelled_DTD_energy": 5.707430911565867e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -1.1536749930722043,
+        0.39469202671126663
+      ],
+      [
+        0.40252124403410566,
+        -0.38708487965667426
+      ]
+    ],
+    "source_response": 0.0022469353913344274,
+    "Cars_CE_slope": -0.0008620249559676312,
+    "cancelled_DTD_energy": 6.032155285704629e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -1.1270523112641808,
+        0.31462076118912613
+      ],
+      [
+        0.43920672847989,
+        -0.08117048819301875
+      ]
+    ],
+    "source_response": 0.0017083661133363084,
+    "Cars_CE_slope": -0.0010912340299955184,
+    "cancelled_DTD_energy": 4.7514154520125905e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.7524206264434775,
+    "cosine": 0.8278911267198651
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 0.9557274306701392,
+    "cosine": 0.6756618667048953
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.31945205340170996,
+    "cosine": 0.9719617868152717
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.weight"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        0.12279701198514485,
+        0.18092824544216402
+      ],
+      [
+        0.2609910447553638,
+        0.19011663189713376
+      ]
+    ],
+    "source_response": 0.012644380068411213,
+    "Cars_CE_slope": -0.001438259255380943,
+    "cancelled_DTD_energy": 7.658677692141174e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.weight"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.2083071698095237,
+        -0.6263743097083496
+      ],
+      [
+        0.30637524688812473,
+        -0.3092220024998135
+      ]
+    ],
+    "source_response": 0.00921860439315199,
+    "Cars_CE_slope": -0.0017055903652694743,
+    "cancelled_DTD_energy": 4.033306551834544e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.weight"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.1951293646235451,
+        -1.5478275254541594
+      ],
+      [
+        0.1509690390887513,
+        -0.03235950096013701
+      ]
+    ],
+    "source_response": 0.00647813196187729,
+    "Cars_CE_slope": -0.002722435530686489,
+    "cancelled_DTD_energy": 2.953175388293394e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 1.0063628532289437,
+    "cosine": -0.38182257105496065
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 1.7751828547428294,
+    "cosine": -0.4428828678916202
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.weight"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.9747069393100691,
+    "cosine": 0.8603018943601567
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "proj"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -0.41999103381435526,
+        -0.460197124651833
+      ],
+      [
+        0.04421444196709648,
+        0.026607050152135922
+      ]
+    ],
+    "source_response": 0.012644378066457893,
+    "Cars_CE_slope": -0.0014169750075471146,
+    "cancelled_DTD_energy": 3.093702898234353e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "proj"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.5524060257334266,
+        0.1520173201714787
+      ],
+      [
+        0.030421420107488897,
+        0.222093548025594
+      ]
+    ],
+    "source_response": 0.009685992485179713,
+    "Cars_CE_slope": -0.0017170895304281322,
+    "cancelled_DTD_energy": 2.2245616508822084e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "proj"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.38568267782260596,
+        -0.5334637841164948
+      ],
+      [
+        -0.02686550021483556,
+        0.319632405557385
+      ]
+    ],
+    "source_response": 0.0076526515885011505,
+    "Cars_CE_slope": -0.0033006767744179887,
+    "cancelled_DTD_energy": 1.500413080963237e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "proj"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.6563120255168974,
+    "cosine": 0.44017370865728705
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "proj"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 0.31218789818141035,
+    "cosine": 0.906081653180367
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "proj"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.7144764789991869,
+    "cosine": 0.44865831604277023
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.bias"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -0.0450134973110416,
+        0.0945303083244839
+      ],
+      [
+        0.009174240468069715,
+        -0.5750661097697745
+      ]
+    ],
+    "source_response": 0.00013335823319750106,
+    "Cars_CE_slope": -9.62359480293111e-05,
+    "cancelled_DTD_energy": 1.298793741795921e-09,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.bias"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.05823841226733968,
+        0.6384164732901002
+      ],
+      [
+        -0.0006544814361627014,
+        -0.21370142002302667
+      ]
+    ],
+    "source_response": 0.00011813412700129281,
+    "Cars_CE_slope": -9.878335844213797e-05,
+    "cancelled_DTD_energy": 2.060823187430442e-09,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.bias"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.020342566896158775,
+        0.3244321181710322
+      ],
+      [
+        0.0013944377982989095,
+        0.0274644991702297
+      ]
+    ],
+    "source_response": 9.346864296048834e-05,
+    "Cars_CE_slope": -0.00015485359439380825,
+    "cancelled_DTD_energy": 1.141179266251286e-10,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.6531983631230569,
+    "cosine": 0.4704817412248559
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 0.6454201399223976,
+    "cosine": 0.08286466109655768
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.bias"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.3977278831139339,
+    "cosine": 0.9182930207073107
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -0.059342597501876884,
+        0.30738857058381197
+      ],
+      [
+        0.2473399286689179,
+        -0.5061761233562523
+      ]
+    ],
+    "source_response": 0.004366225576735707,
+    "Cars_CE_slope": -0.0006756541760605853,
+    "cancelled_DTD_energy": 4.72403747969878e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.16945564473108904,
+        0.3166502758725594
+      ],
+      [
+        0.3880413345795911,
+        -0.19704592994152806
+      ]
+    ],
+    "source_response": 0.0035436684969063032,
+    "Cars_CE_slope": -0.0009629920248662182,
+    "cancelled_DTD_energy": 1.2257596902081458e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.23652081398110036,
+        0.24131182706673238
+      ],
+      [
+        0.42136425038617803,
+        -0.1126063955277654
+      ]
+    ],
+    "source_response": 0.0027383690600376993,
+    "Cars_CE_slope": -0.001192234579416623,
+    "cancelled_DTD_energy": 1.440181019193538e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.35716806192718736,
+    "cosine": 0.8334661694695169
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 0.4700423934505506,
+    "cosine": 0.701445105388631
+  },
+  {
+    "pair": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.13569845424641644,
+    "cosine": 0.9706775474425701
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.bias"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        0.19846132582640696,
+        0.09574108681881663
+      ],
+      [
+        0.37991896630570776,
+        0.38170210973195134
+      ]
+    ],
+    "source_response": 0.014151753987361838,
+    "Cars_CE_slope": -0.0014006938049192768,
+    "cancelled_DTD_energy": 5.247519167092395e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.bias"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        0.19175047931926276,
+        -0.14332968279273603
+      ],
+      [
+        0.30793079045541416,
+        0.3612664627628148
+      ]
+    ],
+    "source_response": 0.011813412755067152,
+    "Cars_CE_slope": -0.0019213923562055083,
+    "cancelled_DTD_energy": 2.63810957901117e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.bias"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        0.564564773267159,
+        -0.8376411299441796
+      ],
+      [
+        -0.1880693871091933,
+        0.1727401714867353
+      ]
+    ],
+    "source_response": 0.009410029330075667,
+    "Cars_CE_slope": -0.003656487570986364,
+    "cancelled_DTD_energy": 8.740144117143051e-08,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.25059884571322855,
+    "cosine": 0.9025782253256668
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 1.1711148355509704,
+    "cosine": 0.04343222212143839
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.bias"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.9500616938198464,
+    "cosine": 0.4202839364767062
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.6.attn.out_proj.bias"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        0.01327627138826104,
+        0.31972875912292364
+      ],
+      [
+        0.007906113584148847,
+        -0.4582480349881373
+      ]
+    ],
+    "source_response": 0.0001598105320023004,
+    "Cars_CE_slope": -0.0001063813008308768,
+    "cancelled_DTD_energy": 2.3494207916212645e-10,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.6.attn.out_proj.bias"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        0.019264969807640878,
+        0.40440707418227506
+      ],
+      [
+        -0.006874690659189903,
+        -0.4637894439060388
+      ]
+    ],
+    "source_response": 0.00014427350493836127,
+    "Cars_CE_slope": -0.00010483588382258747,
+    "cancelled_DTD_energy": 2.7332690507948786e-10,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.6.attn.out_proj.bias"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.014659447091432382,
+        0.36335740411058465
+      ],
+      [
+        -0.06120185153354488,
+        -0.05191297769258682
+      ]
+    ],
+    "source_response": 0.00010531332842352248,
+    "Cars_CE_slope": -0.00018348983137560346,
+    "cancelled_DTD_energy": 2.1338674060364496e-09,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.6.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.08634501107142417,
+    "cosine": 0.9938397314078562
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.6.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 0.41541299048118696,
+    "cosine": 0.6691143801370971
+  },
+  {
+    "pair": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.6.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 0.4188431750716319,
+    "cosine": 0.7465017740142245
+  },
+  {
+    "pair": [
+      "transformer.resblocks.5.attn.out_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -0.011169858023394817,
+        0.7237359295587986
+      ],
+      [
+        0.10162102689762224,
+        -0.09664029639835821
+      ]
+    ],
+    "source_response": 0.0016077863833512736,
+    "Cars_CE_slope": -0.0003057557000904666,
+    "cancelled_DTD_energy": 9.487450817013302e-08,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.5.attn.out_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.7016193375316883,
+        0.79701152245497
+      ],
+      [
+        0.32092904274971,
+        -0.1899652703571899
+      ]
+    ],
+    "source_response": 0.0013542006121516799,
+    "Cars_CE_slope": -0.0005217080639750867,
+    "cancelled_DTD_energy": 2.679904290459472e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.5.attn.out_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.8094284883139904,
+        -0.29638442639469587
+      ],
+      [
+        0.24003295093113963,
+        0.0947546891833403
+      ]
+    ],
+    "source_response": 0.0010531332829905584,
+    "Cars_CE_slope": -0.0008949112088874689,
+    "cancelled_DTD_energy": 1.6022014007699587e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "transformer.resblocks.5.attn.out_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 0.7340949208712421,
+    "cosine": 0.7660507490555082
+  },
+  {
+    "pair": [
+      "transformer.resblocks.5.attn.out_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 1.3166823013485753,
+    "cosine": -0.2867486000192645
+  },
+  {
+    "pair": [
+      "transformer.resblocks.5.attn.out_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 1.1378695650141724,
+    "cosine": 0.3858454930192262
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.10.mlp.c_fc.weight"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        0.8363543309503743,
+        1.081965617384099
+      ],
+      [
+        0.35322322215120183,
+        0.21469522796257542
+      ]
+    ],
+    "source_response": 0.005476427335308675,
+    "Cars_CE_slope": -0.0005118390738417694,
+    "cancelled_DTD_energy": 6.675800757206909e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.10.mlp.c_fc.weight"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.2054076414351252,
+        -0.41028891939159107
+      ],
+      [
+        0.5636819145428692,
+        0.08152658751794577
+      ]
+    ],
+    "source_response": 0.004054705719827945,
+    "Cars_CE_slope": -0.0007680095659789536,
+    "cancelled_DTD_energy": 6.729393013608352e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.10.mlp.c_fc.weight"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -1.3267289941239155,
+        -0.7443899070738185
+      ],
+      [
+        0.6813142921736574,
+        0.5936159968932259
+      ]
+    ],
+    "source_response": 0.0031593998511696094,
+    "Cars_CE_slope": -0.001575181009003113,
+    "cancelled_DTD_energy": 8.578590055511346e-07,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.10.mlp.c_fc.weight"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 1.8368773387565205,
+    "cosine": -0.38196374227748586
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.10.mlp.c_fc.weight"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 2.8750180299065735,
+    "cosine": -0.611943658641481
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.10.mlp.c_fc.weight"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 1.2825981387119871,
+    "cosine": 0.7807406146495163
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor": 0,
+    "T": [
+      [
+        -0.3777840392524859,
+        0.19972251326618198
+      ],
+      [
+        0.9656408921785463,
+        1.2384734297462026
+      ]
+    ],
+    "source_response": 0.00888634574826592,
+    "Cars_CE_slope": -0.0009958555695652948,
+    "cancelled_DTD_energy": 5.307449407551138e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor": 1,
+    "T": [
+      [
+        -0.4847936159923917,
+        1.2422701332737451
+      ],
+      [
+        0.44688275800052885,
+        1.0469803281157906
+      ]
+    ],
+    "source_response": 0.008805772701125416,
+    "Cars_CE_slope": -0.0015790765519352607,
+    "cancelled_DTD_energy": 2.0139130057969317e-06,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor": 2,
+    "T": [
+      [
+        -0.48588624788136464,
+        0.4783772290855815
+      ],
+      [
+        -0.28173714867248867,
+        0.13094040135492105
+      ]
+    ],
+    "source_response": 0.010531332843468778,
+    "Cars_CE_slope": -0.0040365446164997935,
+    "cancelled_DTD_energy": 3.0392157421350106e-08,
+    "scope": "Fixed canonical driver, cached local response; finite cross-anchor evaluation in supplementary bank"
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      1
+    ],
+    "T_difference_Frobenius": 1.1849625307347829,
+    "cosine": 0.7567431179548978
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      0,
+      2
+    ],
+    "T_difference_Frobenius": 1.6946728073388566,
+    "cosine": 0.1387533215243885
+  },
+  {
+    "pair": [
+      "conv1.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "anchor_pair": [
+      1,
+      2
+    ],
+    "T_difference_Frobenius": 1.3976944153618587,
+    "cosine": 0.6401582508770466
+  }
+]

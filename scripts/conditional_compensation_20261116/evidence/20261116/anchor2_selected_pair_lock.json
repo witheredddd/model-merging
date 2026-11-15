@@ -1,0 +1,762 @@
+{
+  "selected": [
+    {
+      "kind": "single",
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight"
+      ],
+      "ids": [
+        220,
+        221
+      ],
+      "W": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "x": [
+        0.0022115847435201833,
+        1.0254766760816336e-05
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 3.367421896882661e-10,
+        "stationarity_relative_residual": 2.3158331719090325e-09,
+        "complementarity_absolute": 3.217835738300547e-13,
+        "complementarity_relative": 1.888907024969415e-09,
+        "predicted_Cars_CE": -0.0001701303875022888,
+        "Cars_CE_slope": -0.00017035437402498145,
+        "DTD_CE_slope": -2.484513655980549e-13,
+        "source_response": 0.00010531332847523368,
+        "cost": 0.0022116085182537514,
+        "R": 0.006690361757031531,
+        "ell": 0.00010531332843977024,
+        "passed": true
+      },
+      "tau": 0.01
+    },
+    {
+      "kind": "conditional_pair",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "group_indices": [
+        118,
+        119
+      ],
+      "ids": [
+        236,
+        237,
+        238,
+        239
+      ],
+      "W": [
+        [
+          -0.9790244453076362,
+          0.005144244119685302
+        ],
+        [
+          -0.0,
+          -0.7326538280559853
+        ],
+        [
+          0.20359090773152624,
+          -0.0015583647248695496
+        ],
+        [
+          0.007866243012326635,
+          0.6805802498506195
+        ]
+      ],
+      "x": [
+        -0.0032212434698523176,
+        4.6892242217787654e-05
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 3.4668756345948104e-10,
+        "complementarity_absolute": 7.756002353898909e-14,
+        "complementarity_relative": 3.131311300200038e-10,
+        "predicted_Cars_CE": -0.00024654616729392523,
+        "Cars_CE_slope": -0.00024769183292007506,
+        "DTD_CE_slope": -5.213320128111274e-07,
+        "source_response": 0.00010531332842520244,
+        "cost": 0.003221584761331977,
+        "R": 0.006690361757031531,
+        "ell": 0.00010531332843977024,
+        "passed": true
+      },
+      "tau": 0.01,
+      "operator": {
+        "T": [
+          [
+            -0.20795283376969456,
+            0.0006668969216667589
+          ],
+          [
+            -0.00803477691494705,
+            -0.9289811322087405
+          ]
+        ],
+        "damping": 0.0,
+        "regularized_Schur_identity_relative_error": 6.28425372675979e-17,
+        "Schur_includes_damping_cost": false,
+        "raw_source_energy_computed_separately": true
+      },
+      "gain_beyond_best_single": 7.641577979163643e-05,
+      "DTD_cancelled_energy": 5.423538477429952e-08,
+      "driver_dimension": 2
+    },
+    {
+      "kind": "conditional_pair",
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.6.attn.out_proj.bias"
+      ],
+      "group_indices": [
+        110,
+        83
+      ],
+      "ids": [
+        220,
+        221,
+        166,
+        167
+      ],
+      "W": [
+        [
+          -0.9980255799238582,
+          -0.002009861776491272
+        ],
+        [
+          -0.0,
+          -0.9387627413720603
+        ],
+        [
+          0.014630503184789923,
+          -0.34107692931831435
+        ],
+        [
+          0.061081013369180016,
+          0.04885697651352718
+        ]
+      ],
+      "x": [
+        -0.002315891685505678,
+        6.5980418393812445e-06
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 4.836778828480798e-10,
+        "complementarity_absolute": 7.628477091573019e-14,
+        "complementarity_relative": 4.1574386081142213e-10,
+        "predicted_Cars_CE": -0.00018323838654942754,
+        "Cars_CE_slope": -0.00018348983137560343,
+        "DTD_CE_slope": -4.003253947474578e-07,
+        "source_response": 0.00010531332842352248,
+        "cost": 0.002315901084491832,
+        "R": 0.006690361757031531,
+        "ell": 0.00010531332843977024,
+        "passed": true
+      },
+      "tau": 0.01,
+      "operator": {
+        "T": [
+          [
+            -0.014659447091432382,
+            0.36335740411058465
+          ],
+          [
+            -0.06120185153354488,
+            -0.05191297769258682
+          ]
+        ],
+        "damping": 0.0,
+        "regularized_Schur_identity_relative_error": 0.0,
+        "Schur_includes_damping_cost": false,
+        "raw_source_energy_computed_separately": true
+      },
+      "gain_beyond_best_single": 1.310799904713874e-05,
+      "DTD_cancelled_energy": 2.1338674060364496e-09,
+      "driver_dimension": 2
+    },
+    {
+      "kind": "single",
+      "groups": [
+        "transformer.resblocks.5.attn.out_proj.bias"
+      ],
+      "ids": [
+        142,
+        143
+      ],
+      "W": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "x": [
+        -0.004294096268904167,
+        -0.001609575855130406
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 7.909650712178973e-11,
+        "stationarity_relative_residual": 8.865254903230593e-10,
+        "complementarity_absolute": 1.0070995938847206e-12,
+        "complementarity_relative": 1.912853625355919e-09,
+        "predicted_Cars_CE": -0.0005245222688995063,
+        "Cars_CE_slope": -0.0005264906736903784,
+        "DTD_CE_slope": -7.72826619993559e-05,
+        "source_response": 0.0010531332844810016,
+        "cost": 0.004585847489836035,
+        "R": 0.006690361757031531,
+        "ell": 0.0010531332843977024,
+        "passed": true
+      },
+      "tau": 0.1
+    },
+    {
+      "kind": "conditional_pair",
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "group_indices": [
+        100,
+        118
+      ],
+      "ids": [
+        200,
+        201,
+        236,
+        237
+      ],
+      "W": [
+        [
+          -0.39571024644629627,
+          0.3136446235034521
+        ],
+        [
+          -0.0,
+          -0.7654383037588839
+        ],
+        [
+          0.9004233439500281,
+          0.23981388527187483
+        ],
+        [
+          -0.1806964375057271,
+          0.508154064941833
+        ]
+      ],
+      "x": [
+        0.006252927868400224,
+        0.002379460763676497
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 1.490370049594958e-10,
+        "stationarity_relative_residual": 6.179537894276998e-10,
+        "complementarity_absolute": 9.894064766955493e-13,
+        "complementarity_relative": 1.0676124522462128e-09,
+        "predicted_Cars_CE": -0.0009202935375088676,
+        "Cars_CE_slope": -0.0009267468495837404,
+        "DTD_CE_slope": -3.7747784882111544e-05,
+        "source_response": 0.001053133284499579,
+        "cost": 0.006690361758028643,
+        "R": 0.006690361757031531,
+        "ell": 0.0010531332843977024,
+        "passed": true
+      },
+      "tau": 0.1,
+      "operator": {
+        "T": [
+          [
+            -2.275461280157245,
+            -1.2456916215207252
+          ],
+          [
+            0.4566382577365236,
+            -0.47676204434073327
+          ]
+        ],
+        "damping": 0.0,
+        "regularized_Schur_identity_relative_error": 1.1482672707796386e-16,
+        "Schur_includes_damping_cost": false,
+        "raw_source_energy_computed_separately": true
+      },
+      "gain_beyond_best_single": 0.00039577126860936126,
+      "DTD_cancelled_energy": 3.2237172987998636e-07,
+      "driver_dimension": 2
+    },
+    {
+      "kind": "conditional_pair",
+      "groups": [
+        "transformer.resblocks.5.attn.out_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "group_indices": [
+        71,
+        118
+      ],
+      "ids": [
+        142,
+        143,
+        236,
+        237
+      ],
+      "W": [
+        [
+          -0.7640959596057966,
+          0.1491841235430656
+        ],
+        [
+          -0.0,
+          -0.9728717734173371
+        ],
+        [
+          0.618481037510548,
+          0.16759016291997683
+        ],
+        [
+          -0.18340820797874027,
+          -0.05637505709928714
+        ]
+      ],
+      "x": [
+        0.0061567739035235085,
+        0.0017024470292917745
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.7850457916209304e-09,
+        "complementarity_absolute": 3.7380180809052856e-12,
+        "complementarity_relative": 4.176970903685848e-09,
+        "predicted_Cars_CE": -0.0008897237302508563,
+        "Cars_CE_slope": -0.0008949112088874689,
+        "DTD_CE_slope": -6.023912599984275e-05,
+        "source_response": 0.0010531332829905584,
+        "cost": 0.006387815807195171,
+        "R": 0.006690361757031531,
+        "ell": 0.0010531332843977024,
+        "passed": true
+      },
+      "tau": 0.1,
+      "operator": {
+        "T": [
+          [
+            -0.8094284883139904,
+            -0.29638442639469587
+          ],
+          [
+            0.24003295093113963,
+            0.0947546891833403
+          ]
+        ],
+        "damping": 0.0,
+        "regularized_Schur_identity_relative_error": 1.0549551340470664e-16,
+        "Schur_includes_damping_cost": false,
+        "raw_source_energy_computed_separately": true
+      },
+      "gain_beyond_best_single": 0.00036520146135135003,
+      "DTD_cancelled_energy": 1.6022014007699592e-07,
+      "driver_dimension": 2
+    },
+    {
+      "kind": "single",
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "ids": [
+        200,
+        201
+      ],
+      "W": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "x": [
+        -0.003796080192887841,
+        -0.005509148355119579
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 1.2261791582091064e-10,
+        "stationarity_relative_residual": 1.6110450389199699e-09,
+        "complementarity_absolute": 3.764996709541018e-12,
+        "complementarity_relative": 3.0550756994985325e-09,
+        "predicted_Cars_CE": -0.0012199092838567095,
+        "Cars_CE_slope": -0.0012323742780445716,
+        "DTD_CE_slope": -0.00019147622302261686,
+        "source_response": 0.003159399853580505,
+        "cost": 0.006690361756254451,
+        "R": 0.006690361757031531,
+        "ell": 0.0031593998531931062,
+        "passed": true
+      },
+      "tau": 0.3
+    },
+    {
+      "kind": "conditional_pair",
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "group_indices": [
+        3,
+        118
+      ],
+      "ids": [
+        6,
+        7,
+        236,
+        237
+      ],
+      "W": [
+        [
+          -0.34395238737394873,
+          0.4492752141234088
+        ],
+        [
+          -0.0,
+          -0.7022228035256137
+        ],
+        [
+          0.9271411732139533,
+          0.2459735677639618
+        ],
+        [
+          -0.1486808667960185,
+          0.49450168871750066
+        ]
+      ],
+      "x": [
+        0.006376516058004109,
+        0.0020250883745123664
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 8.669258183619638e-09,
+        "complementarity_absolute": 3.2572118348354124e-11,
+        "complementarity_relative": 1.8947918472926575e-08,
+        "predicted_Cars_CE": -0.00167357882357268,
+        "Cars_CE_slope": -0.0017190341194941422,
+        "DTD_CE_slope": -0.00015582547004831492,
+        "source_response": 0.0031593998457684173,
+        "cost": 0.006690361721354788,
+        "R": 0.006690361757031531,
+        "ell": 0.0031593998531931062,
+        "passed": true
+      },
+      "tau": 0.3,
+      "operator": {
+        "T": [
+          [
+            -2.695550917069098,
+            -2.0748653787595024
+          ],
+          [
+            0.4322716522806717,
+            -0.4276317261016843
+          ]
+        ],
+        "damping": 0.0,
+        "regularized_Schur_identity_relative_error": 0.0,
+        "Schur_includes_damping_cost": false,
+        "raw_source_energy_computed_separately": true
+      },
+      "gain_beyond_best_single": 0.00045366953971597056,
+      "DTD_cancelled_energy": 3.386464478080711e-07,
+      "driver_dimension": 2
+    },
+    {
+      "kind": "conditional_pair",
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.10.mlp.c_fc.weight"
+      ],
+      "group_indices": [
+        3,
+        134
+      ],
+      "ids": [
+        6,
+        7,
+        268,
+        269
+      ],
+      "W": [
+        [
+          -0.5568979405948746,
+          0.37784336720927664
+        ],
+        [
+          -0.0,
+          -0.8752014145040254
+        ],
+        [
+          0.7388526445551181,
+          0.150195349099569
+        ],
+        [
+          -0.3794225262093645,
+          -0.2621034738704687
+        ]
+      ],
+      "x": [
+        0.0055653616450450135,
+        0.0008354866829968821
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 3.4978292702382135e-10,
+        "complementarity_absolute": 1.67928166208647e-12,
+        "complementarity_relative": 1.0660880574920333e-09,
+        "predicted_Cars_CE": -0.0015368686911166928,
+        "Cars_CE_slope": -0.0015751810090031129,
+        "DTD_CE_slope": -0.00013831242711197662,
+        "source_response": 0.0031593998511696094,
+        "cost": 0.0056277249610835875,
+        "R": 0.006690361757031531,
+        "ell": 0.0031593998531931062,
+        "passed": true
+      },
+      "tau": 0.3,
+      "operator": {
+        "T": [
+          [
+            -1.3267289941239155,
+            -0.7443899070738185
+          ],
+          [
+            0.6813142921736574,
+            0.5936159968932259
+          ]
+        ],
+        "damping": 0.0,
+        "regularized_Schur_identity_relative_error": 3.2909327460041797e-17,
+        "Schur_includes_damping_cost": false,
+        "raw_source_energy_computed_separately": true
+      },
+      "gain_beyond_best_single": 0.00031695940725998324,
+      "DTD_cancelled_energy": 8.578590055511346e-07,
+      "driver_dimension": 2
+    },
+    {
+      "kind": "single",
+      "groups": [
+        "conv1.weight"
+      ],
+      "ids": [
+        6,
+        7
+      ],
+      "W": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "x": [
+        -0.00504714372272642,
+        -0.004391728197007213
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 1.105616043162172e-09,
+        "stationarity_relative_residual": 1.0008843749337922e-08,
+        "complementarity_absolute": 2.1771022812455858e-10,
+        "complementarity_relative": 5.310178084944731e-08,
+        "predicted_Cars_CE": -0.0036963534462769484,
+        "Cars_CE_slope": -0.004099866796215452,
+        "DTD_CE_slope": -0.0006776015374009308,
+        "source_response": 0.010531332855620634,
+        "cost": 0.006690361448699535,
+        "R": 0.006690361757031531,
+        "ell": 0.010531332843977023,
+        "passed": true
+      },
+      "tau": 1.0
+    },
+    {
+      "kind": "conditional_pair",
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.5.mlp.c_proj.bias"
+      ],
+      "group_indices": [
+        3,
+        77
+      ],
+      "ids": [
+        6,
+        7,
+        154,
+        155
+      ],
+      "W": [
+        [
+          -0.8593578990649233,
+          -0.30047748131785523
+        ],
+        [
+          -0.0,
+          -0.805076778544316
+        ],
+        [
+          -0.4851631974409306,
+          0.5047264213595789
+        ],
+        [
+          0.16161891338458415,
+          -0.08255848503417042
+        ]
+      ],
+      "x": [
+        0.003759423138005046,
+        0.005534227834349102
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.6813700889812613e-09,
+        "complementarity_absolute": 5.459603531019108e-11,
+        "complementarity_relative": 1.3388450284559961e-08,
+        "predicted_Cars_CE": -0.0036766050348866473,
+        "Cars_CE_slope": -0.004077845766298523,
+        "DTD_CE_slope": -0.0006613237181438475,
+        "source_response": 0.010531332824943706,
+        "cost": 0.006690361728116953,
+        "R": 0.006690361757031531,
+        "ell": 0.010531332843977023,
+        "passed": true
+      },
+      "tau": 1.0,
+      "operator": {
+        "T": [
+          [
+            0.564564773267159,
+            -0.8376411299441796
+          ],
+          [
+            -0.1880693871091933,
+            0.1727401714867353
+          ]
+        ],
+        "damping": 0.0,
+        "regularized_Schur_identity_relative_error": 0.0,
+        "Schur_includes_damping_cost": false,
+        "raw_source_energy_computed_separately": true
+      },
+      "gain_beyond_best_single": -1.9748411390301153e-05,
+      "DTD_cancelled_energy": 2.0167419888361094e-07,
+      "driver_dimension": 2
+    },
+    {
+      "kind": "conditional_pair",
+      "groups": [
+        "conv1.weight",
+        "transformer.resblocks.4.attn.out_proj.bias"
+      ],
+      "group_indices": [
+        3,
+        59
+      ],
+      "ids": [
+        6,
+        7,
+        118,
+        119
+      ],
+      "W": [
+        [
+          -0.8718885362141193,
+          -0.18761812127343727
+        ],
+        [
+          -0.0,
+          -0.916372057548684
+        ],
+        [
+          0.42363864943185375,
+          -0.3472104607214911
+        ],
+        [
+          0.24564339015319586,
+          -0.06713113047899208
+        ]
+      ],
+      "x": [
+        0.004616809436485412,
+        0.004842108108553902
+      ],
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 3.041554156004008e-10,
+        "complementarity_absolute": 5.46213172199265e-12,
+        "complementarity_relative": 1.3531701593649237e-09,
+        "predicted_Cars_CE": -0.003635305038241615,
+        "Cars_CE_slope": -0.0040365446164997935,
+        "DTD_CE_slope": -0.0006729366808714075,
+        "source_response": 0.010531332843468778,
+        "cost": 0.006690361747151211,
+        "R": 0.006690361757031531,
+        "ell": 0.010531332843977023,
+        "passed": true
+      },
+      "tau": 1.0,
+      "operator": {
+        "T": [
+          [
+            -0.48588624788136464,
+            0.4783772290855815
+          ],
+          [
+            -0.28173714867248867,
+            0.13094040135492105
+          ]
+        ],
+        "damping": 0.0,
+        "regularized_Schur_identity_relative_error": 1.3163730984016719e-16,
+        "Schur_includes_damping_cost": false,
+        "raw_source_energy_computed_separately": true
+      },
+      "gain_beyond_best_single": -6.104840803533356e-05,
+      "DTD_cancelled_energy": 3.039215742135011e-08,
+      "driver_dimension": 2
+    }
+  ],
+  "source_reference": 1.5741051420588212,
+  "selection_data": "p0 cached geometry only",
+  "p4_p5_seen": false,
+  "score": "Predicted Cars objective gain over best of all152 single tensors at same budgets",
+  "positive_gain_or_positive_cancellation_not_assumed": true,
+  "all_pairs_evaluated": true
+}

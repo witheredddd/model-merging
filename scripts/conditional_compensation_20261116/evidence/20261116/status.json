@@ -1,9 +1,7 @@
 {
-  "time_utc": "2026-11-15T18:26:23.014438+00:00",
-  "stage": "labeled_anchor_Jacobian_cache",
-  "anchor": 1,
-  "anchor_id": "linear_Global_EC_091",
-  "completed": 59,
-  "total": 304,
-  "seconds": 3231.665706546046
+  "time_utc": "2026-11-15T20:23:22.185809+00:00",
+  "stage": "conditional_compensation_complete",
+  "seconds": 9606.957817136776,
+  "anchors": 3,
+  "models": 279
 }

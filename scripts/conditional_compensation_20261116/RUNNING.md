@@ -1,6 +1,6 @@
 # 条件功能补偿：固定锚点的第二阶段先导
 
-GitHub快照时间：2026-11-15T18:26:24.567734+00:00。第一锚点304/304已完成；当前第二锚点59/304，三锚点总进度363/912。尚无有限补偿性能结果，未生成最终REPORT.md。服务Result=success仅表示当前未记录退出失败，不代表实验完成。代码与本次服务器源码SHA256一致；原始模型、完整Jacobian缓存与图像继续保存在服务器。
+Main result update: completed at 2026-11-16 04:23 Asia/Shanghai. All 3 anchors, 279 models and 837 evaluation points are saved; paired audit has 48 records. Supplementary controls are still running. extra_validation_audit.partial.json is explicitly incomplete. See [main report](evidence/20261116/REPORT.md), finite_results.json, and publish_snapshot.json in the same evidence directory. The historical 02:26 snapshot is preserved as publish_snapshot_0226.json. Raw checkpoints, full Jacobians and images remain on A100.
 
 本目录是运行源码与状态证据快照。执行还依赖服务器既有compromise_geometry_20261115的space/context和其CLIP运行环境，不能把本目录单独视为完整离线复现包。
 

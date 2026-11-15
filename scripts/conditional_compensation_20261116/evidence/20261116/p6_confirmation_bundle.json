@@ -1,0 +1,17 @@
+{
+  "main_candidate_sha256": "5d65a34ef4af0a4922dde2f2c154d65b68ec02844193d536dd7b0d0e8589390a",
+  "extra_controls_sha256": "968201858c5383809e307e30a4657130495eb4128d7ddf34618cdfdd033886f1",
+  "data_evidence": {
+    "p0": "discovery",
+    "p4": "reused stability",
+    "p5": "reused frozen training holdout",
+    "p6": "future confirmation, unopened"
+  },
+  "comparisons": [
+    "selected_vs_matched_random",
+    "selected_vs_reoptimized_driver",
+    "selected_vs_reoptimized_compensator",
+    "current_vs_pinv_vs_damped"
+  ],
+  "existing_CIs_are_not_multiple_testing_discovery_certificates": true
+}

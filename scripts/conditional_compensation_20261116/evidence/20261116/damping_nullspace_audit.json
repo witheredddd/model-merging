@@ -1,0 +1,4706 @@
+[
+  {
+    "parent": "a0_selected1_r1",
+    "anchor": 0,
+    "groups": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.22418415047700962,
+          0.06796756709206382
+        ],
+        [
+          -0.012534053603797599,
+          -1.2472921371347394
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 6.3343446568152675e-18,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.03981510146503467,
+          0.18283292271067164
+        ],
+        "condition_number": 4.592049649081874,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.22418415047700957,
+            0.06796756709206418
+          ],
+          [
+            -0.01253405360379769,
+            -1.2472921371347399
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.821877749947921e-16,
+        "relative_T_change": 4.58718150274331e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645059985983,
+          "cancelled_DTD_energy": 7.875233255536295e-08,
+          "Cars_CE_slope": -0.00011178461375014481,
+          "parameter_cost": 0.0024792714767614948,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.03981510146503467,
+          0.18283292271067164
+        ],
+        "condition_number": 4.592049649081874,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.22418415042402723,
+            0.06796756685522169
+          ],
+          [
+            -0.012534053639436018,
+            -1.2472921367323373
+          ]
+        ],
+        "damping": 1.8283292271067165e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.712736836194947e-10,
+        "relative_T_change": 3.713265748749856e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645059985983,
+          "cancelled_DTD_energy": 7.87523325445742e-08,
+          "Cars_CE_slope": -0.00011178461375335795,
+          "parameter_cost": 0.0024792714767348364,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.03981510146503467,
+          0.18283292271067164
+        ],
+        "condition_number": 4.592049649081874,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.22418414517877355,
+            0.06796754340784443
+          ],
+          [
+            -0.012534057167634142,
+            -1.247292096894515
+          ]
+        ],
+        "damping": 1.8283292271067165e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.712738218099401e-08,
+        "relative_T_change": 3.7132668375818135e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645059985988,
+          "cancelled_DTD_energy": 7.875233147648745e-08,
+          "Cars_CE_slope": -0.00011178461407145922,
+          "parameter_cost": 0.002479271474095689,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.03981510146503467,
+          0.18283292271067164
+        ],
+        "condition_number": 4.592049649081874,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.22418362065531855,
+            0.06796519868291992
+          ],
+          [
+            -0.012534409985420039,
+            -1.2472881131288833
+          ]
+        ],
+        "damping": 1.8283292271067164e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.712717250999649e-06,
+        "relative_T_change": 3.7132503171572565e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645060033764,
+          "cancelled_DTD_energy": 7.87522246680509e-08,
+          "Cars_CE_slope": -0.00011178464588141847,
+          "parameter_cost": 0.0024792712101823085,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.03981510146503467,
+          0.18283292271067164
+        ],
+        "condition_number": 4.592049649081874,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.22413118743954794,
+            0.06773085414527931
+          ],
+          [
+            -0.012569671476189532,
+            -1.2468899025454243
+          ]
+        ],
+        "damping": 1.8283292271067165e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.0004710619918734572,
+        "relative_T_change": 0.0003711597784386098,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645537436582,
+          "cancelled_DTD_energy": 7.874154621591304e-08,
+          "Cars_CE_slope": -0.00011178782520049017,
+          "parameter_cost": 0.002479244832715281,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a0_selected2_r1",
+    "anchor": 0,
+    "groups": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.04145254574845061,
+          0.4156167737081441
+        ],
+        [
+          0.006191218288722427,
+          -0.5065926186535697
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 7.194744190851543e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.15253614571766136,
+          0.8206060236160253
+        ],
+        "condition_number": 5.379747991895219,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.04145254574845062,
+            0.4156167737081443
+          ],
+          [
+            0.00619121828872243,
+            -0.50659261865357
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.14335771102377e-16,
+        "relative_T_change": 4.787289262500832e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645061953054,
+          "cancelled_DTD_energy": 1.842487175239465e-09,
+          "Cars_CE_slope": -9.257921140759997e-05,
+          "parameter_cost": 0.001888968698054979,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.15253614571766136,
+          0.8206060236160253
+        ],
+        "condition_number": 5.379747991895219,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.04145254572606532,
+            0.4156167734749983
+          ],
+          [
+            0.006191218287286239,
+            -0.5065926185943286
+          ]
+        ],
+        "damping": 8.206060236160253e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 2.4159808491328766e-10,
+        "relative_T_change": 3.679504606459345e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645061953054,
+          "cancelled_DTD_energy": 1.8424871742723694e-09,
+          "Cars_CE_slope": -9.257921140471065e-05,
+          "parameter_cost": 0.0018889686980533087,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.15253614571766136,
+          0.8206060236160253
+        ],
+        "condition_number": 5.379747991895219,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.04145254350992163,
+            0.41561675039355944
+          ],
+          [
+            0.00619121814510348,
+            -0.5065926127294369
+          ]
+        ],
+        "damping": 8.206060236160254e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 2.415981883039488e-08,
+        "relative_T_change": 3.679506181084467e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645061953054,
+          "cancelled_DTD_energy": 1.8424870785299257e-09,
+          "Cars_CE_slope": -9.257921111866753e-05,
+          "parameter_cost": 0.0018889686978879377,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.15253614571766136,
+          0.8206060236160253
+        ],
+        "condition_number": 5.379747991895219,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.04145232189674584,
+            0.41561444226218236
+          ],
+          [
+            0.00619120392688537,
+            -0.5065920262413165
+          ]
+        ],
+        "damping": 8.206060236160253e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 2.4159694531145086e-06,
+        "relative_T_change": 3.679487250484816e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00012645645061963294,
+          "cancelled_DTD_energy": 1.84247750433684e-09,
+          "Cars_CE_slope": -9.257918251451068e-05,
+          "parameter_cost": 0.0018889686813509767,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.15253614571766136,
+          0.8206060236160253
+        ],
+        "condition_number": 5.379747991895219,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.041430172502190055,
+            0.4153837541621435
+          ],
+          [
+            0.006189782682070878,
+            -0.5065333878603434
+          ]
+        ],
+        "damping": 8.206060236160253e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.0002414726046557469,
+        "relative_T_change": 0.00036775935599135635,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0001264564516422247,
+          "cancelled_DTD_energy": 1.8415205973815249e-09,
+          "Cars_CE_slope": -9.25763236548777e-05,
+          "parameter_cost": 0.001888967028986367,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a0_selected4_r1",
+    "anchor": 0,
+    "groups": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -1.8155573493019088,
+          0.396529056222509
+        ],
+        [
+          0.2799916710033823,
+          -1.1645273508591467
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 7.054164505167348e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.8155573493019093,
+            0.3965290562225084
+          ],
+          [
+            0.2799916710033824,
+            -1.1645273508591467
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 7.631521572941402e-16,
+        "relative_T_change": 3.451798226956561e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001264438021481022,
+          "cancelled_DTD_energy": 5.202835229889238e-07,
+          "Cars_CE_slope": -0.0005509641506573129,
+          "parameter_cost": 0.006689692569750061,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.8155573433254397,
+            0.3965290546240474
+          ],
+          [
+            0.279991670486723,
+            -1.1645273506112463
+          ]
+        ],
+        "damping": 2.5143913788670764e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 6.213022912072601e-09,
+        "relative_T_change": 2.8101999407264683e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001264438021481022,
+          "cancelled_DTD_energy": 5.202835212871935e-07,
+          "Cars_CE_slope": -0.0005509641497404257,
+          "parameter_cost": 0.00668969255319276,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.8155567516551945,
+            0.3965288963764662
+          ],
+          [
+            0.2799916193374706,
+            -1.16452732606912
+          ]
+        ],
+        "damping": 2.5143913788670765e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 6.213020717929401e-07,
+        "relative_T_change": 2.8101989482979556e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0012644380214810328,
+          "cancelled_DTD_energy": 5.202833528159448e-07,
+          "Cars_CE_slope": -0.0005509640589686231,
+          "parameter_cost": 0.006689690914020773,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.8154975865674197,
+            0.3965130721393751
+          ],
+          [
+            0.27998650457567087,
+            -1.164524871901547
+          ]
+        ],
+        "damping": 2.514391378867076e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 6.212819451208312e-05,
+        "relative_T_change": 2.810107913750734e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0012644380215911435,
+          "cancelled_DTD_energy": 5.202665062424301e-07,
+          "Cars_CE_slope": -0.0005509549820854486,
+          "parameter_cost": 0.006689527002840719,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.8096003821526694,
+            0.39493584031598955
+          ],
+          [
+            0.2794766575055591,
+            -1.1642799041491794
+          ]
+        ],
+        "damping": 2.5143913788670765e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.006192758942435764,
+        "relative_T_change": 0.002801034385234685,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0012644391155944405,
+          "cancelled_DTD_energy": 5.185873445110671e-07,
+          "Cars_CE_slope": -0.0005500502549480273,
+          "parameter_cost": 0.0066731958710728925,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a0_selected5_r1",
+    "anchor": 0,
+    "groups": [
+      "transformer.resblocks.7.mlp.c_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -1.2032288596918892,
+          -0.14413319004212377
+        ],
+        [
+          0.07031051176796553,
+          -0.1723382600510715
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 0.0,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.2032288596918892,
+            -0.14413319004212372
+          ],
+          [
+            0.07031051176796557,
+            -0.17233826005107153
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 7.473417450352271e-17,
+        "relative_T_change": 6.095565754969268e-17,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001264564504690977,
+          "cancelled_DTD_energy": 4.721236509853485e-07,
+          "Cars_CE_slope": -0.0005221020288608202,
+          "parameter_cost": 0.006690361757031531,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.2032288557617103,
+            -0.14413318961936042
+          ],
+          [
+            0.07031051143966571,
+            -0.17233826006827208
+          ]
+        ],
+        "damping": 2.5143913788670764e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.966498615585432e-09,
+        "relative_T_change": 3.2352070908545194e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001264564505243842,
+          "cancelled_DTD_energy": 4.721236500819534e-07,
+          "Cars_CE_slope": -0.0005221020282852697,
+          "parameter_cost": 0.006690361747219255,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.2032284666741129,
+            -0.14413314776578828
+          ],
+          [
+            0.07031047893799316,
+            -0.1723382617711291
+          ]
+        ],
+        "damping": 2.5143913788670765e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.96649753223336e-07,
+        "relative_T_change": 3.2352062072368393e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0012645645052438504,
+          "cancelled_DTD_energy": 4.72123519776422e-07,
+          "Cars_CE_slope": -0.0005221019487078771,
+          "parameter_cost": 0.0066903604862283035,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.2031895591876935,
+            -0.14412896254504245
+          ],
+          [
+            0.07030722887808284,
+            -0.1723384320455068
+          ]
+        ],
+        "damping": 2.514391378867076e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.9663690066261365e-05,
+        "relative_T_change": 3.2351013775126556e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001264564505328557,
+          "cancelled_DTD_energy": 4.7211048964746747e-07,
+          "Cars_CE_slope": -0.0005220939912291735,
+          "parameter_cost": 0.006690234392122371,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1993115022619307,
+            -0.14371180095136402
+          ],
+          [
+            0.0699832928165274,
+            -0.17235534658588336
+          ]
+        ],
+        "damping": 2.5143913788670765e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.003953558168500153,
+        "relative_T_change": 0.00322465243541997,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0012645653469302428,
+          "cancelled_DTD_energy": 4.708117048772144e-07,
+          "Cars_CE_slope": -0.0005213008404547412,
+          "parameter_cost": 0.006677674699459156,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a0_selected7_r1",
+    "anchor": 0,
+    "groups": [
+      "conv1.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -2.2642074784661808,
+          -4.480284887927165
+        ],
+        [
+          0.35371476292725784,
+          0.07732665292577202
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 2.999333305505563e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.2642074784661808,
+            -4.480284887927166
+          ],
+          [
+            0.3537147629272579,
+            0.07732665292577216
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 9.006673595595123e-16,
+        "relative_T_change": 1.7895382477687982e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003793693519397503,
+          "cancelled_DTD_energy": 6.482003918572706e-07,
+          "Cars_CE_slope": -0.0007200783505632423,
+          "parameter_cost": 0.00669036175703153,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.2642074710116358,
+            -4.480284873341955
+          ],
+          [
+            0.35371476228236975,
+            0.07732665172591173
+          ]
+        ],
+        "damping": 2.5143913788670764e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.643636583796932e-08,
+        "relative_T_change": 3.2657456728255106e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0037936935197498836,
+          "cancelled_DTD_energy": 6.482003899760723e-07,
+          "Cars_CE_slope": -0.000720078349636353,
+          "parameter_cost": 0.006690361738215078,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.2642067330119895,
+            -4.480283429406664
+          ],
+          [
+            0.35371469843847386,
+            0.07732653293977745
+          ]
+        ],
+        "damping": 2.5143913788670765e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.6436360438779412e-06,
+        "relative_T_change": 3.265744600059106e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0037936935197498876,
+          "cancelled_DTD_energy": 6.482001918162039e-07,
+          "Cars_CE_slope": -0.0007200782512527502,
+          "parameter_cost": 0.0066903598138646145,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.2641329354631616,
+            -4.480139040602414
+          ],
+          [
+            0.35370831425276333,
+            0.07731465472448881
+          ]
+        ],
+        "damping": 2.514391378867076e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.00016435827838231454,
+        "relative_T_change": 3.265638777521936e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0037936935197929763,
+          "cancelled_DTD_energy": 6.481803764767213e-07,
+          "Cars_CE_slope": -0.0007200684132143703,
+          "parameter_cost": 0.006690167385469797,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.007681660354379399,
+          0.25143913788670763
+        ],
+        "condition_number": 32.7323945979152,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.2567772593351196,
+            -4.465747255308642
+          ],
+          [
+            0.35307192775074936,
+            0.07613080155132275
+          ]
+        ],
+        "damping": 2.5143913788670765e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.0163827414085876,
+        "relative_T_change": 0.0032550910214300946,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003793693947904909,
+          "cancelled_DTD_energy": 6.462052949072991e-07,
+          "Cars_CE_slope": -0.0007190878179204085,
+          "parameter_cost": 0.00667099084180345,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a0_selected8_r1",
+    "anchor": 0,
+    "groups": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.5620554609968363,
+          0.4376813701051649
+        ],
+        [
+          0.20141245729515192,
+          -0.8040144907608333
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 0.0,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.012899859282959253,
+          0.2330723599543686
+        ],
+        "condition_number": 18.067821891844805,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5620554609968363,
+            0.4376813701051649
+          ],
+          [
+            0.20141245729515195,
+            -0.8040144907608334
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.1443916996305594e-16,
+        "relative_T_change": 1.0470940549747619e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003354783280013352,
+          "cancelled_DTD_energy": 5.707430911565866e-07,
+          "Cars_CE_slope": -0.0007068293261701693,
+          "parameter_cost": 0.0066903617480865655,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.012899859282959253,
+          0.2330723599543686
+        ],
+        "condition_number": 18.067821891844805,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5620554599744029,
+            0.4376813692853255
+          ],
+          [
+            0.20141245725430948,
+            -0.8040144906638046
+          ]
+        ],
+        "damping": 2.330723599543686e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.3147583627665497e-09,
+        "relative_T_change": 1.20297592670904e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003354783280013352,
+          "cancelled_DTD_energy": 5.707430909146529e-07,
+          "Cars_CE_slope": -0.0007068293259765273,
+          "parameter_cost": 0.0066903617469380216,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.012899859282959253,
+          0.2330723599543686
+        ],
+        "condition_number": 18.067821891844805,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5620553587535155,
+            0.4376812881212476
+          ],
+          [
+            0.20141245321091275,
+            -0.8040144810579789
+          ]
+        ],
+        "damping": 2.330723599543686e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.3147579904215817e-07,
+        "relative_T_change": 1.202975586021317e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003354783280013352,
+          "cancelled_DTD_energy": 5.707430669632436e-07,
+          "Cars_CE_slope": -0.000706829306805976,
+          "parameter_cost": 0.006690361633232252,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.012899859282959253,
+          0.2330723599543686
+        ],
+        "condition_number": 18.067821891844805,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5620452368477121,
+            0.4376731718603663
+          ],
+          [
+            0.20141204887534225,
+            -0.8040135204793266
+          ]
+        ],
+        "damping": 2.3307235995436858e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.3147345588935457e-05,
+        "relative_T_change": 1.2029541466717364e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0033547832800160213,
+          "cancelled_DTD_energy": 5.707406718577555e-07,
+          "Cars_CE_slope": -0.0007068273897856029,
+          "parameter_cost": 0.006690350262949829,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.012899859282959253,
+          0.2330723599543686
+        ],
+        "condition_number": 18.067821891844805,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5610348722782985,
+            0.4368630122823162
+          ],
+          [
+            0.2013716563144364,
+            -0.8039175018989883
+          ]
+        ],
+        "damping": 2.330723599543686e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.0013123956788917174,
+        "relative_T_change": 0.0012008141212363856,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0033547833066110803,
+          "cancelled_DTD_energy": 5.705015152470552e-07,
+          "Cars_CE_slope": -0.0007066360346990014,
+          "parameter_cost": 0.006689216173978823,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a0_selected10_r1",
+    "anchor": 0,
+    "groups": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          0.12279701198514485,
+          0.18092824544216402
+        ],
+        [
+          0.2609910447553638,
+          0.19011663189713376
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 5.998666611011126e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.15092136425239383,
+          1.0580971093371632
+        ],
+        "condition_number": 7.010916675571863,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.12279701198514487,
+            0.18092824544216402
+          ],
+          [
+            0.26099104475536383,
+            0.19011663189713376
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.721958498152797e-17,
+        "relative_T_change": 1.4672904239881024e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644380068411214,
+          "cancelled_DTD_energy": 7.658677692141176e-06,
+          "Cars_CE_slope": -0.001438259255380943,
+          "parameter_cost": 0.00668969249130772,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.15092136425239383,
+          1.0580971093371632
+        ],
+        "condition_number": 7.010916675571863,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.12279701188536225,
+            0.18092824530580529
+          ],
+          [
+            0.2609910447212154,
+            0.19011663186724298
+          ]
+        ],
+        "damping": 1.0580971093371633e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.749566777578757e-10,
+        "relative_T_change": 4.4864404027008747e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644380068411214,
+          "cancelled_DTD_energy": 7.658677691076857e-06,
+          "Cars_CE_slope": -0.0014382592553717757,
+          "parameter_cost": 0.006689692491084737,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.15092136425239383,
+          1.0580971093371632
+        ],
+        "condition_number": 7.010916675571863,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.12279700200688616,
+            0.18092823180629267
+          ],
+          [
+            0.2609910413405301,
+            0.19011662890806083
+          ]
+        ],
+        "damping": 1.0580971093371633e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.749566460902742e-08,
+        "relative_T_change": 4.486439590643807e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644380068411214,
+          "cancelled_DTD_energy": 7.658677585709585e-06,
+          "Cars_CE_slope": -0.001438259254464202,
+          "parameter_cost": 0.00668969246900935,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.15092136425239383,
+          1.0580971093371632
+        ],
+        "condition_number": 7.010916675571863,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.12279601416633798,
+            0.1809268818645884
+          ],
+          [
+            0.2609907032728899,
+            0.1901163329908936
+          ]
+        ],
+        "damping": 1.058097109337163e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.7495546280123263e-06,
+        "relative_T_change": 4.486409247384937e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644380068411837,
+          "cancelled_DTD_energy": 7.658667049013444e-06,
+          "Cars_CE_slope": -0.0014382591637068579,
+          "parameter_cost": 0.006689690261489013,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.15092136425239383,
+          1.0580971093371632
+        ],
+        "condition_number": 7.010916675571863,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.1226973006669026,
+            0.18079198320247047
+          ],
+          [
+            0.2609569054706175,
+            0.19008675177684772
+          ]
+        ],
+        "damping": 0.00010580971093371632,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.00017483723088405212,
+        "relative_T_change": 0.0004483377408549602,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644380074645505,
+          "cancelled_DTD_energy": 7.657613691704316e-06,
+          "Cars_CE_slope": -0.0014382500884669626,
+          "parameter_cost": 0.0066894696925871135,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a0_selected11_r1",
+    "anchor": 0,
+    "groups": [
+      "conv1.weight",
+      "proj"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.41999103381435526,
+          -0.460197124651833
+        ],
+        [
+          0.04421444196709648,
+          0.026607050152135922
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 1.1997333222022251e-16,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.1140389391376632,
+          2.4194384644923868
+        ],
+        "condition_number": 21.21589768185881,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.4199910338143554,
+            -0.4601971246518331
+          ],
+          [
+            0.04421444196709647,
+            0.026607050152135915
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.5731560566382466e-16,
+        "relative_T_change": 2.516367862543417e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644378066457893,
+          "cancelled_DTD_energy": 3.0937028982343544e-06,
+          "Cars_CE_slope": -0.0014169750075471148,
+          "parameter_cost": 0.006689691433255607,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.1140389391376632,
+          2.4194384644923868
+        ],
+        "condition_number": 21.21589768185881,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.4199910329242377,
+            -0.4601971236760821
+          ],
+          [
+            0.04421444197077498,
+            0.026607050158354604
+          ]
+        ],
+        "damping": 2.419438464492387e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.3207767741276066e-09,
+        "relative_T_change": 2.11267039527582e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644378066457893,
+          "cancelled_DTD_energy": 3.0937028927314943e-06,
+          "Cars_CE_slope": -0.0014169750072987384,
+          "parameter_cost": 0.006689691429681764,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.1140389391376632,
+          2.4194384644923868
+        ],
+        "condition_number": 21.21589768185881,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.41999094480260757,
+            -0.4601970270767536
+          ],
+          [
+            0.04421444233494698,
+            0.0266070507740045
+          ]
+        ],
+        "damping": 2.419438464492387e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.3207766420988825e-07,
+        "relative_T_change": 2.1126701840870848e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644378066457894,
+          "cancelled_DTD_energy": 3.09370234794845e-06,
+          "Cars_CE_slope": -0.0014169749827094857,
+          "parameter_cost": 0.006689691075871437,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.1140389391376632,
+          2.4194384644923868
+        ],
+        "condition_number": 21.21589768185881,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.419982132826535,
+            -0.4601873673488238
+          ],
+          [
+            0.04421447875040906,
+            0.02660711233706789
+          ]
+        ],
+        "damping": 2.4194384644923865e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.32074890182375e-05,
+        "relative_T_change": 2.1126258116699002e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644378066480765,
+          "cancelled_DTD_energy": 3.0936478707893277e-06,
+          "Cars_CE_slope": -0.0014169725238362759,
+          "parameter_cost": 0.006689655695869634,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.1140389391376632,
+          2.4194384644923868
+        ],
+        "condition_number": 21.21589768185881,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.41910280052259147,
+            -0.4592234393514494
+          ],
+          [
+            0.0442181029593873,
+            0.026613249421459217
+          ]
+        ],
+        "damping": 0.0002419438464492387,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.001317980758048221,
+        "relative_T_change": 0.002108197981381705,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.012644378294223733,
+          "cancelled_DTD_energy": 3.0882115823063534e-06,
+          "Cars_CE_slope": -0.0014167271559847494,
+          "parameter_cost": 0.006686127977788741,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a1_selected1_r1",
+    "anchor": 1,
+    "groups": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.2119405066460739,
+          0.12208445460595536
+        ],
+        [
+          -0.023646584139665534,
+          -1.1401721802699742
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 1.0340335465971347e-16,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.033513761378524354,
+          0.15382857553461807
+        ],
+        "condition_number": 4.5900122578658555,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.21194050664607386,
+            0.12208445460595542
+          ],
+          [
+            -0.023646584139665555,
+            -1.1401721802699745
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 2.31492981972618e-16,
+        "relative_T_change": 1.9847622159302087e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00011813412746440516,
+          "cancelled_DTD_energy": 8.510403106787291e-08,
+          "Cars_CE_slope": -0.00012713676304386282,
+          "parameter_cost": 0.0028196887484805365,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.033513761378524354,
+          0.15382857553461807
+        ],
+        "condition_number": 4.5900122578658555,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.2119405066012702,
+            0.12208445438085111
+          ],
+          [
+            -0.023646584168510325,
+            -1.1401721798745312
+          ]
+        ],
+        "damping": 1.538285755346181e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.58133706941364e-10,
+        "relative_T_change": 3.927922408847871e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00011813412746440516,
+          "cancelled_DTD_energy": 8.510403105723167e-08,
+          "Cars_CE_slope": -0.00012713676304632783,
+          "parameter_cost": 0.0028196887484569955,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.033513761378524354,
+          0.15382857553461807
+        ],
+        "condition_number": 4.5900122578658555,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.21194050216570787,
+            0.12208443209554568
+          ],
+          [
+            -0.023646587024140117,
+            -1.1401721407257022
+          ]
+        ],
+        "damping": 1.5382857553461808e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.581333727145856e-08,
+        "relative_T_change": 3.927919543272096e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0001181341274644052,
+          "cancelled_DTD_energy": 8.510403000374974e-08,
+          "Cars_CE_slope": -0.00012713676329036467,
+          "parameter_cost": 0.002819688746126436,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.033513761378524354,
+          0.15382857553461807
+        ],
+        "condition_number": 4.5900122578658555,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.21194005861098464,
+            0.12208220357686557
+          ],
+          [
+            -0.023646872585419847,
+            -1.140168225859431
+          ]
+        ],
+        "damping": 1.5382857553461807e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.581313250800648e-06,
+        "relative_T_change": 3.927901987372153e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00011813412746483733,
+          "cancelled_DTD_energy": 8.510392465575897e-08,
+          "Cars_CE_slope": -0.00012713678769388388,
+          "parameter_cost": 0.002819688513071596,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.033513761378524354,
+          0.15382857553461807
+        ],
+        "condition_number": 4.5900122578658555,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.2118957182946746,
+            0.12185947066760121
+          ],
+          [
+            -0.02367541168585883,
+            -1.1397769061712524
+          ]
+        ],
+        "damping": 1.5382857553461808e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.0004579262052758306,
+        "relative_T_change": 0.00039261433421047506,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0001181341317833744,
+          "cancelled_DTD_energy": 8.509339187757859e-08,
+          "Cars_CE_slope": -0.00012713922640973982,
+          "parameter_cost": 0.002819665218663659,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a1_selected2_r1",
+    "anchor": 1,
+    "groups": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.7.mlp.c_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.05823841226733968,
+          0.6384164732901002
+        ],
+        [
+          -0.0006544814361627014,
+          -0.21370142002302667
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 1.8616817075253587e-18,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.04844829813770532,
+          0.09643444401281302
+        ],
+        "condition_number": 1.9904609185386857,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.05823841226733968,
+            0.6384164732901002
+          ],
+          [
+            -0.0006544814361627102,
+            -0.2137014200230265
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.6676485056370135e-16,
+        "relative_T_change": 2.46785381374673e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00011813412700129281,
+          "cancelled_DTD_energy": 2.060823187430442e-09,
+          "Cars_CE_slope": -9.878335844213797e-05,
+          "parameter_cost": 0.0019713269411290022,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.04844829813770532,
+          0.09643444401281302
+        ],
+        "condition_number": 1.9904609185386857,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.05823841225956632,
+            0.6384164731945002
+          ],
+          [
+            -0.0006544814387935428,
+            -0.21370141995773312
+          ]
+        ],
+        "damping": 9.643444401281302e-12,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.1606010770990447e-10,
+        "relative_T_change": 1.717504488911089e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00011813412700129281,
+          "cancelled_DTD_energy": 2.0608231871841675e-09,
+          "Cars_CE_slope": -9.87833584412556e-05,
+          "parameter_cost": 0.001971326941128144,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.04844829813770532,
+          0.09643444401281302
+        ],
+        "condition_number": 1.9904609185386857,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.058238411490002834,
+            0.6384164637300952
+          ],
+          [
+            -0.0006544816992471199,
+            -0.213701413493669
+          ]
+        ],
+        "damping": 9.643444401281302e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.160601883939044e-08,
+        "relative_T_change": 1.7175056829056044e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00011813412700129281,
+          "cancelled_DTD_energy": 2.0608231628029523e-09,
+          "Cars_CE_slope": -9.878335835390115e-05,
+          "parameter_cost": 0.001971326941043187,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.04844829813770532,
+          0.09643444401281302
+        ],
+        "condition_number": 1.9904609185386857,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.05823833453376917,
+            0.6384155172911703
+          ],
+          [
+            -0.0006545077445256063,
+            -0.2137007670887729
+          ]
+        ],
+        "damping": 9.643444401281301e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.1605997293129968e-06,
+        "relative_T_change": 1.7175024944026975e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00011813412700129971,
+          "cancelled_DTD_energy": 2.0608207246846566e-09,
+          "Cars_CE_slope": -9.878334961846648e-05,
+          "parameter_cost": 0.001971326932547482,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.04844829813770532,
+          0.09643444401281302
+        ],
+        "condition_number": 1.9904609185386857,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.058230640063822885,
+            0.6383208891168413
+          ],
+          [
+            -0.0006571114808669674,
+            -0.21363614171380862
+          ]
+        ],
+        "damping": 9.643444401281303e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.00011603842516431875,
+        "relative_T_change": 0.0001717183621818086,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00011813412707032019,
+          "cancelled_DTD_energy": 2.060576945148426e-09,
+          "Cars_CE_slope": -9.87824761722061e-05,
+          "parameter_cost": 0.0019713260831663894,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a1_selected4_r1",
+    "anchor": 1,
+    "groups": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -2.4055183589834983,
+          -0.6133583961048872
+        ],
+        [
+          0.5377407298878231,
+          -0.7072719004003516
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 3.387377752577746e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.005883274277550993,
+          0.1352445865294581
+        ],
+        "condition_number": 22.98797916757262,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.405518358983498,
+            -0.6133583961048868
+          ],
+          [
+            0.5377407298878232,
+            -0.7072719004003517
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.768888059150692e-16,
+        "relative_T_change": 2.1879293943041372e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813412706861484,
+          "cancelled_DTD_energy": 4.871556435799256e-07,
+          "Cars_CE_slope": -0.0006197364987700341,
+          "parameter_cost": 0.006690361748863007,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.005883274277550993,
+          0.1352445865294581
+        ],
+        "condition_number": 22.98797916757262,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.4055183533884352,
+            -0.6133583948780696
+          ],
+          [
+            0.5377407292509654,
+            -0.7072719004565404
+          ]
+        ],
+        "damping": 1.3524458652945809e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.763554200132559e-09,
+        "relative_T_change": 2.1859064556006663e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813412706861484,
+          "cancelled_DTD_energy": 4.871556425495785e-07,
+          "Cars_CE_slope": -0.0006197364981177982,
+          "parameter_cost": 0.006690361735824129,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.005883274277550993,
+          0.1352445865294581
+        ],
+        "condition_number": 22.98797916757262,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.4055177994774475,
+            -0.6133582734231782
+          ],
+          [
+            0.5377406662020828,
+            -0.7072719060192301
+          ]
+        ],
+        "damping": 1.3524458652945808e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.763551578145536e-07,
+        "relative_T_change": 2.185905461176365e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813412706861532,
+          "cancelled_DTD_energy": 4.871555405452511e-07,
+          "Cars_CE_slope": -0.0006197364335464692,
+          "parameter_cost": 0.006690360444975655,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.005883274277550993,
+          0.1352445865294581
+        ],
+        "condition_number": 22.98797916757262,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.4054624096523556,
+            -0.6133461282115142
+          ],
+          [
+            0.5377343614528081,
+            -0.7072724622587505
+          ]
+        ],
+        "damping": 1.3524458652945809e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.76342043627635e-05,
+        "relative_T_change": 2.1858557238357413e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001181341270736081,
+          "cancelled_DTD_energy": 4.871453403460854e-07,
+          "Cars_CE_slope": -0.0006197299765621287,
+          "parameter_cost": 0.006690231363320298,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.005883274277550993,
+          0.1352445865294581
+        ],
+        "condition_number": 22.98797916757262,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.39993613611541,
+            -0.6121343742132905
+          ],
+          [
+            0.5371052732083803,
+            -0.7073277925395818
+          ]
+        ],
+        "damping": 1.3524458652945809e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.005750336586913249,
+        "relative_T_change": 0.00218089349570466,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813417677476396,
+          "cancelled_DTD_energy": 4.861276507963902e-07,
+          "Cars_CE_slope": -0.0006190857603757893,
+          "parameter_cost": 0.006677355044790638,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a1_selected5_r1",
+    "anchor": 1,
+    "groups": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -1.1536749930722043,
+          0.39469202671126663
+        ],
+        [
+          0.40252124403410566,
+          -0.38708487965667426
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 3.0297627680937213e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1536749930722046,
+            0.39469202671126674
+          ],
+          [
+            0.4025212440341057,
+            -0.3870848796566744
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 2.7755575615628914e-16,
+        "relative_T_change": 2.0695800947875624e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813412738488377,
+          "cancelled_DTD_energy": 7.655236982803713e-07,
+          "Cars_CE_slope": -0.0005523420916199001,
+          "parameter_cost": 0.005633449676706035,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1536749919090714,
+            0.3946920263085819
+          ],
+          [
+            0.4025212439716835,
+            -0.38708487961028043
+          ]
+        ],
+        "damping": 1.0828180195193385e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.2333215704994612e-09,
+        "relative_T_change": 9.196198299488894e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813412738488377,
+          "cancelled_DTD_energy": 7.655236978687587e-07,
+          "Cars_CE_slope": -0.0005523420914128735,
+          "parameter_cost": 0.00563344967361691,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1536748767589404,
+            0.3946919864427916
+          ],
+          [
+            0.40252123779188875,
+            -0.38708487501728456
+          ]
+        ],
+        "damping": 1.0828180195193384e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.233321314712036e-07,
+        "relative_T_change": 9.196196392223228e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813412738488384,
+          "cancelled_DTD_energy": 7.655236571191434e-07,
+          "Cars_CE_slope": -0.0005523420709172543,
+          "parameter_cost": 0.005633449367793686,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1536633618612588,
+            0.3946879999037727
+          ],
+          [
+            0.4025206198152226,
+            -0.38708441571891317
+          ]
+        ],
+        "damping": 1.0828180195193384e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.2333091020182917e-05,
+        "relative_T_change": 9.196105328905982e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813412738568131,
+          "cancelled_DTD_energy": 7.655195821949023e-07,
+          "Cars_CE_slope": -0.000552340021375709,
+          "parameter_cost": 0.005633418785842572,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1525130252666447,
+            0.394289745706197
+          ],
+          [
+            0.40245885029157297,
+            -0.38703849808797686
+          ]
+        ],
+        "damping": 1.0828180195193385e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.0012320890459780178,
+        "relative_T_change": 0.0009187008044344337,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0011813413534461086,
+          "cancelled_DTD_energy": 7.651124624642646e-07,
+          "Cars_CE_slope": -0.0005521352707346643,
+          "parameter_cost": 0.005630364300802283,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a1_selected7_r1",
+    "anchor": 1,
+    "groups": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.10.attn.in_proj_weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -1.1536749930722043,
+          0.39469202671126663
+        ],
+        [
+          0.40252124403410566,
+          -0.38708487965667426
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 3.0297627680937213e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1536749930722046,
+            0.39469202671126674
+          ],
+          [
+            0.4025212440341057,
+            -0.3870848796566744
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 2.7755575615628914e-16,
+        "relative_T_change": 2.0695800947875624e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0035089789601288096,
+          "cancelled_DTD_energy": 1.8428560769831118e-07,
+          "Cars_CE_slope": -0.0009839669043148437,
+          "parameter_cost": 0.00669036175703153,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1536749919090714,
+            0.3946920263085819
+          ],
+          [
+            0.4025212439716835,
+            -0.38708487961028043
+          ]
+        ],
+        "damping": 1.0828180195193385e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.2333215704994612e-09,
+        "relative_T_change": 9.196198299488894e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0035089789607713716,
+          "cancelled_DTD_energy": 1.842856075879613e-07,
+          "Cars_CE_slope": -0.0009839669043537253,
+          "parameter_cost": 0.006690361757031532,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1536748767589404,
+            0.3946919864427916
+          ],
+          [
+            0.40252123779188875,
+            -0.38708487501728456
+          ]
+        ],
+        "damping": 1.0828180195193384e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.233321314712036e-07,
+        "relative_T_change": 9.196196392223228e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003508978962740675,
+          "cancelled_DTD_energy": 1.8428559018842476e-07,
+          "Cars_CE_slope": -0.0009839668909170812,
+          "parameter_cost": 0.00669036163949813,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1536633618612588,
+            0.3946879999037727
+          ],
+          [
+            0.4025206198152226,
+            -0.38708441571891317
+          ]
+        ],
+        "damping": 1.0828180195193384e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.2333091020182917e-05,
+        "relative_T_change": 9.196105328905982e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0035089789627419403,
+          "cancelled_DTD_energy": 1.8428382956743748e-07,
+          "Cars_CE_slope": -0.0009839654920446638,
+          "parameter_cost": 0.006690349510853573,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.010807150818251952,
+          0.10828180195193385
+        ],
+        "condition_number": 10.019458761421111,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.1525130252666447,
+            0.394289745706197
+          ],
+          [
+            0.40245885029157297,
+            -0.38703849808797686
+          ]
+        ],
+        "damping": 1.0828180195193385e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.0012320890459780178,
+        "relative_T_change": 0.0009187008044344337,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003508978975362091,
+          "cancelled_DTD_energy": 1.8410794300662473e-07,
+          "Cars_CE_slope": -0.0009838257450312609,
+          "parameter_cost": 0.0066891383552018496,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a1_selected8_r1",
+    "anchor": 1,
+    "groups": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.16945564473108904,
+          0.3166502758725594
+        ],
+        [
+          0.3880413345795911,
+          -0.19704592994152806
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 6.24601595670708e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.03934342124765314,
+          0.10007807226301209
+        ],
+        "condition_number": 2.5437053791803073,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.16945564473108904,
+            0.3166502758725594
+          ],
+          [
+            0.3880413345795913,
+            -0.19704592994152811
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.7554167342883506e-16,
+        "relative_T_change": 3.111024253965571e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0035436684969063032,
+          "cancelled_DTD_energy": 1.2257596902081464e-07,
+          "Cars_CE_slope": -0.0009629920248662184,
+          "parameter_cost": 0.006689690974904952,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.03934342124765314,
+          0.10007807226301209
+        ],
+        "condition_number": 2.5437053791803073,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.16945564472960564,
+            0.3166502758451142
+          ],
+          [
+            0.3880413344949138,
+            -0.19704592990930392
+          ]
+        ],
+        "damping": 1.000780722630121e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 9.467884670195545e-11,
+        "relative_T_change": 1.6779388203034422e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0035436684969063032,
+          "cancelled_DTD_energy": 1.2257596898971995e-07,
+          "Cars_CE_slope": -0.0009629920248519335,
+          "parameter_cost": 0.006689690974845943,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.03934342124765314,
+          0.10007807226301209
+        ],
+        "condition_number": 2.5437053791803073,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.1694556445827501,
+            0.31665027312804517
+          ],
+          [
+            0.3880413261118596,
+            -0.1970459267191131
+          ]
+        ],
+        "damping": 1.0007807226301209e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 9.467882439998603e-09,
+        "relative_T_change": 1.6779384250584474e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0035436684969063037,
+          "cancelled_DTD_energy": 1.2257596591135444e-07,
+          "Cars_CE_slope": -0.0009629920234377335,
+          "parameter_cost": 0.006689690969004174,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.03934342124765314,
+          0.10007807226301209
+        ],
+        "condition_number": 2.5437053791803073,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.16945562989682264,
+            0.31665000142130584
+          ],
+          [
+            0.38804048780842354,
+            -0.19704560770067003
+          ]
+        ],
+        "damping": 1.0007807226301208e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 9.467862096863309e-07,
+        "relative_T_change": 1.6779348197614223e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003543668496906359,
+          "cancelled_DTD_energy": 1.225756580755782e-07,
+          "Cars_CE_slope": -0.0009629918820180955,
+          "parameter_cost": 0.006689690384829408,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.03934342124765314,
+          0.10007807226301209
+        ],
+        "condition_number": 2.5437053791803073,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.16945415755889362,
+            0.3166228324017008
+          ],
+          [
+            0.38795667739300704,
+            -0.19701371219722977
+          ]
+        ],
+        "damping": 1.000780722630121e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 9.465821708602545e-05,
+        "relative_T_change": 0.00016775732134691524,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0035436684974634257,
+          "cancelled_DTD_energy": 1.225448823171976e-07,
+          "Cars_CE_slope": -0.0009629777436313386,
+          "parameter_cost": 0.006689631989365678,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a1_selected10_r1",
+    "anchor": 1,
+    "groups": [
+      "conv1.weight",
+      "proj"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.5524060257334266,
+          0.1520173201714787
+        ],
+        [
+          0.030421420107488897,
+          0.222093548025594
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 1.580518243627317e-16,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.10916240818783546,
+          0.919877604817725
+        ],
+        "condition_number": 8.426688455195071,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5524060257334263,
+            0.15201732017147868
+          ],
+          [
+            0.030421420107488894,
+            0.22209354802559403
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 2.255140518769849e-16,
+        "relative_T_change": 3.665501369917555e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.01181341275096908,
+          "cancelled_DTD_energy": 2.7248533696544686e-06,
+          "Cars_CE_slope": -0.001955500185348305,
+          "parameter_cost": 0.006690361756153421,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.10916240818783546,
+          0.919877604817725
+        ],
+        "condition_number": 8.426688455195071,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5524060252676917,
+            0.15201732004576382
+          ],
+          [
+            0.030421420098566673,
+            0.22209354800496772
+          ]
+        ],
+        "damping": 9.19877604817725e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.829267788689379e-10,
+        "relative_T_change": 7.849483235215731e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.01181341275096908,
+          "cancelled_DTD_energy": 2.724853368588143e-06,
+          "Cars_CE_slope": -0.001955500185282786,
+          "parameter_cost": 0.006690361755523313,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.10916240818783546,
+          0.919877604817725
+        ],
+        "condition_number": 8.426688455195071,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5524059791599554,
+            0.1520173075999908
+          ],
+          [
+            0.03042141921526671,
+            0.22209354596296196
+          ]
+        ],
+        "damping": 9.19877604817725e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.8292660294160876e-08,
+        "relative_T_change": 7.849480375696067e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.01181341275096908,
+          "cancelled_DTD_energy": 2.724853263021878e-06,
+          "Cars_CE_slope": -0.0019555001787963707,
+          "parameter_cost": 0.006690361693142556,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.10916240818783546,
+          0.919877604817725
+        ],
+        "condition_number": 8.426688455195071,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.5524013684251644,
+            0.15201606303314977
+          ],
+          [
+            0.03042133088584899,
+            0.22209334176246046
+          ]
+        ],
+        "damping": 9.198776048177249e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.829225818712986e-06,
+        "relative_T_change": 7.84941501729109e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.011813412750970722,
+          "cancelled_DTD_energy": 2.724842706472107e-06,
+          "Cars_CE_slope": -0.0019554995301601717,
+          "parameter_cost": 0.006690355455141314,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.10916240818783546,
+          0.919877604817725
+        ],
+        "condition_number": 8.426688455195071,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.551940683136058,
+            0.151891710890134
+          ],
+          [
+            0.030412503727453865,
+            0.22207292243465904
+          ]
+        ],
+        "damping": 9.19877604817725e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.00048252081957150843,
+        "relative_T_change": 0.0007842884780048645,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.011813412767355041,
+          "cancelled_DTD_energy": 2.723787818599237e-06,
+          "Cars_CE_slope": -0.0019554347197025526,
+          "parameter_cost": 0.006689732398420229,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a1_selected11_r1",
+    "anchor": 1,
+    "groups": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          0.19175047931926276,
+          -0.14332968279273603
+        ],
+        [
+          0.30793079045541416,
+          0.3612664627628148
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 3.9207832172343235e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.14074178339879706,
+          0.16273095873234641
+        ],
+        "condition_number": 1.156237719904701,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.1917504793192628,
+            -0.14332968279273603
+          ],
+          [
+            0.3079307904554142,
+            0.3612664627628149
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 9.614813431917819e-17,
+        "relative_T_change": 1.8085023447586738e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.011813412755067153,
+          "cancelled_DTD_energy": 2.6381095790111706e-06,
+          "Cars_CE_slope": -0.0019213923562055085,
+          "parameter_cost": 0.006690361756897856,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.14074178339879706,
+          0.16273095873234641
+        ],
+        "condition_number": 1.156237719904701,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.19175047929698358,
+            -0.14332968277629377
+          ],
+          [
+            0.3079307904245502,
+            0.3612664627267364
+          ]
+        ],
+        "damping": 1.6273095873234642e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.4963144336596563e-11,
+        "relative_T_change": 1.0338315570229144e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.011813412755067152,
+          "cancelled_DTD_energy": 2.6381095787466443e-06,
+          "Cars_CE_slope": -0.0019213923561959513,
+          "parameter_cost": 0.006690361756775991,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.14074178339879706,
+          0.16273095873234641
+        ],
+        "condition_number": 1.156237719904701,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.19175047709134238,
+            -0.14332968114850905
+          ],
+          [
+            0.3079307873690147,
+            0.361266459154969
+          ]
+        ],
+        "damping": 1.6273095873234643e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.496319182228561e-09,
+        "relative_T_change": 1.0338324502069641e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.011813412755067152,
+          "cancelled_DTD_energy": 2.6381095525585417e-06,
+          "Cars_CE_slope": -0.0019213923552497897,
+          "parameter_cost": 0.006690361744711472,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.14074178339879706,
+          0.16273095873234641
+        ],
+        "condition_number": 1.156237719904701,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.1917502565274805,
+            -0.14332951837022537
+          ],
+          [
+            0.307930481815774,
+            0.36126610197859227
+          ]
+        ],
+        "damping": 1.6273095873234642e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.496313518905309e-07,
+        "relative_T_change": 1.0338313849618136e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.011813412755067207,
+          "cancelled_DTD_energy": 2.6381069337509936e-06,
+          "Cars_CE_slope": -0.001921392260633732,
+          "parameter_cost": 0.006690360538261271,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.14074178339879706,
+          0.16273095873234641
+        ],
+        "condition_number": 1.156237719904701,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.19172820270170293,
+            -0.14331324241068283
+          ],
+          [
+            0.30789992955473683,
+            0.3612303879064508
+          ]
+        ],
+        "damping": 1.6273095873234642e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.495747723707484e-05,
+        "relative_T_change": 0.00010337249614779712,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.01181341275562859,
+          "cancelled_DTD_energy": 2.6378450792608003e-06,
+          "Cars_CE_slope": -0.0019213827999706905,
+          "parameter_cost": 0.006690239910300582,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a2_selected1_r1",
+    "anchor": 2,
+    "groups": [
+      "transformer.resblocks.9.attn.out_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.20795283376969456,
+          0.0006668969216667589
+        ],
+        [
+          -0.00803477691494705,
+          -0.9289811322087405
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 6.28425372675979e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.018638162427934944,
+          0.0889706699802361
+        ],
+        "condition_number": 4.7735752021823,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.20795283376969445,
+            0.0006668969216669352
+          ],
+          [
+            -0.008034776914947068,
+            -0.9289811322087403
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 2.367096171783339e-16,
+        "relative_T_change": 2.486430020289164e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00010531332842520244,
+          "cancelled_DTD_energy": 5.4235384774299504e-08,
+          "Cars_CE_slope": -0.0002476918329200751,
+          "parameter_cost": 0.0032215847613319775,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.018638162427934944,
+          0.0889706699802361
+        ],
+        "condition_number": 4.7735752021823,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.2079528337221681,
+            0.000666896753326003
+          ],
+          [
+            -0.008034776949848627,
+            -0.9289811318910776
+          ]
+        ],
+        "damping": 8.89706699802361e-12,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.643147122457573e-10,
+        "relative_T_change": 3.826811297989676e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00010531332842520245,
+          "cancelled_DTD_energy": 5.42353847666439e-08,
+          "Cars_CE_slope": -0.000247691832925584,
+          "parameter_cost": 0.003221584761300036,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.018638162427934944,
+          0.0889706699802361
+        ],
+        "condition_number": 4.7735752021823,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.20795282901704526,
+            0.0006668800875778121
+          ],
+          [
+            -0.008034780405105928,
+            -0.9289811004424252
+          ]
+        ],
+        "damping": 8.89706699802361e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.643150037102962e-08,
+        "relative_T_change": 3.826814359572843e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00010531332842520249,
+          "cancelled_DTD_energy": 5.42353840087362e-08,
+          "Cars_CE_slope": -0.0002476918334709624,
+          "parameter_cost": 0.003221584758137803,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.018638162427934944,
+          0.0889706699802361
+        ],
+        "condition_number": 4.7735752021823,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.20795235850649885,
+            0.0006652135223884584
+          ],
+          [
+            -0.008035125928799413,
+            -0.9289779555909781
+          ]
+        ],
+        "damping": 8.89706699802361e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.6431331725396413e-06,
+        "relative_T_change": 3.826796644806109e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00010531332842563712,
+          "cancelled_DTD_energy": 5.423530821814773e-08,
+          "Cars_CE_slope": -0.0002476918880084756,
+          "parameter_cost": 0.0032215844419162826,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.018638162427934944,
+          0.0889706699802361
+        ],
+        "condition_number": 4.7735752021823,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.2079053247801509,
+            0.0004986531352372383
+          ],
+          [
+            -0.008069657981461843,
+            -0.9286636080364145
+          ]
+        ],
+        "damping": 8.897066998023611e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.000364144702792892,
+        "relative_T_change": 0.00038250254955690726,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00010531333276864155,
+          "cancelled_DTD_energy": 5.4227730971188576e-08,
+          "Cars_CE_slope": -0.0002476973384884388,
+          "parameter_cost": 0.003221552837514242,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a2_selected2_r1",
+    "anchor": 2,
+    "groups": [
+      "transformer.resblocks.8.mlp.c_fc.weight",
+      "transformer.resblocks.6.attn.out_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.014659447091432382,
+          0.36335740411058465
+        ],
+        [
+          -0.06120185153354488,
+          -0.05191297769258682
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 0.0,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.041556805285872515,
+          0.05258744324133796
+        ],
+        "condition_number": 1.265435176731821,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.014659447091432392,
+            0.3633574041105848
+          ],
+          [
+            -0.06120185153354489,
+            -0.05191297769258679
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.6929336958343216e-16,
+        "relative_T_change": 4.545970065357596e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00010531332842352248,
+          "cancelled_DTD_energy": 2.1338674060364496e-09,
+          "Cars_CE_slope": -0.00018348983137560346,
+          "parameter_cost": 0.002315901084491832,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.041556805285872515,
+          0.05258744324133796
+        ],
+        "condition_number": 1.265435176731821,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.01465944708924255,
+            0.36335740406538747
+          ],
+          [
+            -0.06120185152725853,
+            -0.05191297768942977
+          ]
+        ],
+        "damping": 5.258744324133796e-12,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.5793728743021135e-11,
+        "relative_T_change": 1.229681472813292e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0001053133284235225,
+          "cancelled_DTD_energy": 2.13386740581322e-09,
+          "Cars_CE_slope": -0.00018348983137498638,
+          "parameter_cost": 0.0023159010844908644,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.041556805285872515,
+          0.05258744324133796
+        ],
+        "condition_number": 1.265435176731821,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.014659446872449116,
+            0.3633573995908623
+          ],
+          [
+            -0.06120185090490887,
+            -0.05191297737688056
+          ]
+        ],
+        "damping": 5.258744324133796e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.5793774344391085e-09,
+        "relative_T_change": 1.2296826973294277e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0001053133284235225,
+          "cancelled_DTD_energy": 2.1338673837135113e-09,
+          "Cars_CE_slope": -0.00018348983131389641,
+          "parameter_cost": 0.002315901084395071,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.041556805285872515,
+          0.05258744324133796
+        ],
+        "condition_number": 1.265435176731821,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.014659425193136429,
+            0.36335695213889857
+          ],
+          [
+            -0.06120178867000707,
+            -0.05191294612196543
+          ]
+        ],
+        "damping": 5.2587443241337956e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.5793718881785134e-07,
+        "relative_T_change": 1.2296812080132955e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00010531332842352809,
+          "cancelled_DTD_energy": 2.133865173744904e-09,
+          "Cars_CE_slope": -0.00018348982520490647,
+          "parameter_cost": 0.002315901074815773,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.041556805285872515,
+          0.05258744324133796
+        ],
+        "condition_number": 1.265435176731821,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.01465725756927489,
+            0.36331221252593826
+          ],
+          [
+            -0.061195565822862244,
+            -0.05190982068817729
+          ]
+        ],
+        "damping": 5.258744324133796e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.5788100700480557e-05,
+        "relative_T_change": 0.0001229530345140785,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00010531332847945898,
+          "cancelled_DTD_energy": 2.133644200212098e-09,
+          "Cars_CE_slope": -0.00018348921437915416,
+          "parameter_cost": 0.0023159001170390244,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a2_selected4_r1",
+    "anchor": 2,
+    "groups": [
+      "transformer.resblocks.7.mlp.c_proj.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -2.275461280157245,
+          -1.2456916215207252
+        ],
+        [
+          0.4566382577365236,
+          -0.47676204434073327
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 1.1482672707796386e-16,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.275461280157244,
+            -1.2456916215207257
+          ],
+          [
+            0.4566382577365236,
+            -0.4767620443407332
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 9.945640348601413e-16,
+        "relative_T_change": 3.715487440479347e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001053133284342623,
+          "cancelled_DTD_energy": 3.223717297838956e-07,
+          "Cars_CE_slope": -0.0009267468494456208,
+          "parameter_cost": 0.006690361757031532,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.2754612756659602,
+            -1.24569161923959
+          ],
+          [
+            0.4566382571198476,
+            -0.47676204458187066
+          ]
+        ],
+        "damping": 5.891119677907073e-12,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.080713801927932e-09,
+        "relative_T_change": 1.8980505686984643e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001053133284499579,
+          "cancelled_DTD_energy": 3.223717294268701e-07,
+          "Cars_CE_slope": -0.0009267468486209674,
+          "parameter_cost": 0.006690361747002374,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.2754608310288917,
+            -1.2456913934072384
+          ],
+          [
+            0.45663819606893624,
+            -0.4767620684544647
+          ]
+        ],
+        "damping": 5.891119677907073e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.080712586312565e-07,
+        "relative_T_change": 1.8980501145694718e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.001053133284499581,
+          "cancelled_DTD_energy": 3.223716845683716e-07,
+          "Cars_CE_slope": -0.0009267467533064511,
+          "parameter_cost": 0.006690360655401804,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.275416368192701,
+            -1.2456688106124636
+          ],
+          [
+            0.45663209109455455,
+            -0.4767644556555325
+          ]
+        ],
+        "damping": 5.891119677907073e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 5.080614143133003e-05,
+        "relative_T_change": 1.8980133382147634e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0010531332845202111,
+          "cancelled_DTD_energy": 3.2236719880455207e-07,
+          "Cars_CE_slope": -0.0009267372220416317,
+          "parameter_cost": 0.00669025149764686,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.270978773866713,
+            -1.2434149270509716
+          ],
+          [
+            0.4560227588551778,
+            -0.4770025934187718
+          ]
+        ],
+        "damping": 5.8911196779070735e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.005070789197467127,
+        "relative_T_change": 0.0018943429398346242,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0010531334900251766,
+          "cancelled_DTD_energy": 3.219194811214477e-07,
+          "Cars_CE_slope": -0.0009257859601552403,
+          "parameter_cost": 0.006679358696858174,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a2_selected5_r1",
+    "anchor": 2,
+    "groups": [
+      "transformer.resblocks.5.attn.out_proj.bias",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.8094284883139904,
+          -0.29638442639469587
+        ],
+        [
+          0.24003295093113963,
+          0.0947546891833403
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 1.0549551340470664e-16,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.8094284883139903,
+            -0.29638442639469587
+          ],
+          [
+            0.24003295093113963,
+            0.09475468918334032
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.1188630228279524e-16,
+        "relative_T_change": 1.2434786286077834e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0010531332829905584,
+          "cancelled_DTD_energy": 1.6022014007699587e-07,
+          "Cars_CE_slope": -0.0008949112088874689,
+          "parameter_cost": 0.006387815807195169,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.8094284866973852,
+            -0.2963844258010744
+          ],
+          [
+            0.24003295070147598,
+            0.0947546890983346
+          ]
+        ],
+        "damping": 5.891119677907073e-12,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.739474101077704e-09,
+        "relative_T_change": 1.9332115063020226e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0010531332829905584,
+          "cancelled_DTD_energy": 1.6022013986191075e-07,
+          "Cars_CE_slope": -0.0008949112082232331,
+          "parameter_cost": 0.006387815801732044,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.8094283266534865,
+            -0.2963843670325534
+          ],
+          [
+            0.24003292796477782,
+            0.09475468068277017
+          ]
+        ],
+        "damping": 5.891119677907073e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.739473941729016e-07,
+        "relative_T_change": 1.9332113292055558e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0010531332829905593,
+          "cancelled_DTD_energy": 1.6022011856848494e-07,
+          "Cars_CE_slope": -0.0008949111424638982,
+          "parameter_cost": 0.006387815260882684,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.8094123225772005,
+            -0.29637849029561814
+          ],
+          [
+            0.24003065433708723,
+            0.09475383914180455
+          ]
+        ],
+        "damping": 5.891119677907073e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.739440234885441e-05,
+        "relative_T_change": 1.9331738681948974e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0010531332830003186,
+          "cancelled_DTD_energy": 1.6021798926660955e-07,
+          "Cars_CE_slope": -0.0008949045666589177,
+          "parameter_cost": 0.006387761177301434,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.8078150444546235,
+            -0.29579196592692003
+          ],
+          [
+            0.23980371198342293,
+            0.09466983951115332
+          ]
+        ],
+        "damping": 5.8911196779070735e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.001736076166309079,
+        "relative_T_change": 0.0019294351197560546,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0010531333802163783,
+          "cancelled_DTD_energy": 1.6000546529448903e-07,
+          "Cars_CE_slope": -0.000894248268704438,
+          "parameter_cost": 0.006382366336057222,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a2_selected7_r1",
+    "anchor": 2,
+    "groups": [
+      "conv1.weight",
+      "transformer.resblocks.9.attn.out_proj.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -2.695550917069098,
+          -2.0748653787595024
+        ],
+        [
+          0.4322716522806717,
+          -0.4276317261016843
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 0.0,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.695550917069097,
+            -2.0748653787595024
+          ],
+          [
+            0.4322716522806717,
+            -0.42763172610168426
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 8.899114524108741e-16,
+        "relative_T_change": 2.5753145887207603e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0031593998457684173,
+          "cancelled_DTD_energy": 3.38646447808071e-07,
+          "Cars_CE_slope": -0.001719034119494142,
+          "parameter_cost": 0.006690361721354786,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.6955509117752006,
+            -2.074865374870409
+          ],
+          [
+            0.4322716515645701,
+            -0.4276317265519726
+          ]
+        ],
+        "damping": 5.891119677907073e-12,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 6.623138087042519e-09,
+        "relative_T_change": 1.9166698093910594e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0031593998457684173,
+          "cancelled_DTD_energy": 3.3864644732392034e-07,
+          "Cars_CE_slope": -0.0017190341184982548,
+          "parameter_cost": 0.006690361709558898,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.695550387679487,
+            -2.0748649898502394
+          ],
+          [
+            0.4322715806705268,
+            -0.42763177113050105
+          ]
+        ],
+        "damping": 5.891119677907073e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 6.623136583906738e-07,
+        "relative_T_change": 1.9166693743986233e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0031593998457684178,
+          "cancelled_DTD_energy": 3.386463993930078e-07,
+          "Cars_CE_slope": -0.0017190340199054474,
+          "parameter_cost": 0.006690360541766158,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.6954979791341063,
+            -2.0748264885850296
+          ],
+          [
+            0.43226449140366563,
+            -0.42763622888336317
+          ]
+        ],
+        "damping": 5.891119677907073e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 6.623008254595202e-05,
+        "relative_T_change": 1.916632237181514e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0031593998457757747,
+          "cancelled_DTD_energy": 3.386416063937959e-07,
+          "Cars_CE_slope": -0.001719024160817948,
+          "parameter_cost": 0.006690243764887723,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.0030095472308634655,
+          0.05891119677907073
+        ],
+        "condition_number": 19.57477064155215,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -2.690267364103167,
+            -2.070983866090953
+          ],
+          [
+            0.4315569367274642,
+            -0.42808100619167544
+          ]
+        ],
+        "damping": 5.8911196779070735e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.00661019995621635,
+        "relative_T_change": 0.0019129256439488521,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0031593999190587356,
+          "cancelled_DTD_energy": 3.381632251072961e-07,
+          "Cars_CE_slope": -0.0017180401807085652,
+          "parameter_cost": 0.006678589987584796,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a2_selected8_r1",
+    "anchor": 2,
+    "groups": [
+      "conv1.weight",
+      "transformer.resblocks.10.mlp.c_fc.weight"
+    ],
+    "current": {
+      "T": [
+        [
+          -1.3267289941239155,
+          -0.7443899070738185
+        ],
+        [
+          0.6813142921736574,
+          0.5936159968932259
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 3.2909327460041797e-17,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.002452862262856279,
+          0.05640299224007428
+        ],
+        "condition_number": 22.994765378466386,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.3267289941239149,
+            -0.7443899070738172
+          ],
+          [
+            0.6813142921736575,
+            0.593615996893226
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.3999379669858416e-15,
+        "relative_T_change": 7.911785810503897e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0031593998511696094,
+          "cancelled_DTD_energy": 8.578590055511346e-07,
+          "Cars_CE_slope": -0.0015751810090031126,
+          "parameter_cost": 0.005627724961083587,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.002452862262856279,
+          0.05640299224007428
+        ],
+        "condition_number": 22.994765378466386,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.3267289911933866,
+            -0.7443899054623621
+          ],
+          [
+            0.6813142923038114,
+            0.5936159969427934
+          ]
+        ],
+        "damping": 5.640299224007428e-12,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.3472658381252318e-09,
+        "relative_T_change": 1.8917159893222242e-09,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0031593998511696094,
+          "cancelled_DTD_energy": 8.578590052873054e-07,
+          "Cars_CE_slope": -0.0015751810084590702,
+          "parameter_cost": 0.005627724954219045,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.002452862262856279,
+          0.05640299224007428
+        ],
+        "condition_number": 22.994765378466386,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.3267287010712128,
+            -0.7443897459282967
+          ],
+          [
+            0.6813143051890457,
+            0.5936160018499763
+          ]
+        ],
+        "damping": 5.640299224007428e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.3472635915156755e-07,
+        "relative_T_change": 1.8917147196449935e-07,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.00315939985116961,
+          "cancelled_DTD_energy": 8.578589791682223e-07,
+          "Cars_CE_slope": -0.001575180954598878,
+          "parameter_cost": 0.005627724274629701,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.002452862262856279,
+          0.05640299224007428
+        ],
+        "condition_number": 22.994765378466386,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.3266996895194982,
+            -0.7443737928874201
+          ],
+          [
+            0.681315593666064,
+            0.5936164925429844
+          ]
+        ],
+        "damping": 5.640299224007427e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 3.347187467864728e-05,
+        "relative_T_change": 1.891671698165784e-05,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.003159399851173058,
+          "cancelled_DTD_energy": 8.57856367303036e-07,
+          "Cars_CE_slope": -0.0015751755687015427,
+          "parameter_cost": 0.005627656317584221,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.002452862262856279,
+          0.05640299224007428
+        ],
+        "condition_number": 22.994765378466386,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -1.3238051776402884,
+            -0.7427821384820394
+          ],
+          [
+            0.6814439782288039,
+            0.5936653095867954
+          ]
+        ],
+        "damping": 5.640299224007428e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.0033395917249399755,
+        "relative_T_change": 0.0018873789443074342,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.0031593998854978064,
+          "cancelled_DTD_energy": 8.575956111899727e-07,
+          "Cars_CE_slope": -0.0015746381953952856,
+          "parameter_cost": 0.005620879459310404,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a2_selected10_r1",
+    "anchor": 2,
+    "groups": [
+      "conv1.weight",
+      "transformer.resblocks.5.mlp.c_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          0.564564773267159,
+          -0.8376411299441796
+        ],
+        [
+          -0.1880693871091933,
+          0.1727401714867353
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 0.0,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.10317612013244701,
+          0.1063125811969888
+        ],
+        "condition_number": 1.0303990987499387,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.5645647732671588,
+            -0.8376411299441793
+          ],
+          [
+            -0.18806938710919321,
+            0.17274017148673518
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 4.236704743275018e-16,
+        "relative_T_change": 4.0662700775111564e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010530277804390609,
+          "cancelled_DTD_energy": 2.0163379378564236e-07,
+          "Cars_CE_slope": -0.00407743725095034,
+          "parameter_cost": 0.006689691492995896,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.10317612013244701,
+          0.1063125811969888
+        ],
+        "condition_number": 1.0303990987499387,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.5645647732093306,
+            -0.8376411298585352
+          ],
+          [
+            -0.1880693870893561,
+            0.1727401714680492
+          ]
+        ],
+        "damping": 1.063125811969888e-11,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.0687267364520603e-10,
+        "relative_T_change": 1.0257338693165264e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010530277804390609,
+          "cancelled_DTD_energy": 2.0163379376518522e-07,
+          "Cars_CE_slope": -0.004077437250951759,
+          "parameter_cost": 0.006689691492981301,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.10317612013244701,
+          0.1063125811969888
+        ],
+        "condition_number": 1.0303990987499387,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.5645647674843227,
+            -0.8376411213797385
+          ],
+          [
+            -0.18806938512547527,
+            0.17274016961812927
+          ]
+        ],
+        "damping": 1.063125811969888e-09,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.0687266904441206e-08,
+        "relative_T_change": 1.0257338251593995e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010530277804390609,
+          "cancelled_DTD_energy": 2.0163379173990911e-07,
+          "Cars_CE_slope": -0.004077437251092147,
+          "parameter_cost": 0.006689691491536373,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.10317612013244701,
+          0.1063125811969888
+        ],
+        "condition_number": 1.0303990987499387,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.5645641949841081,
+            -0.8376402735009267
+          ],
+          [
+            -0.1880691887375991,
+            0.17273998462633722
+          ]
+        ],
+        "damping": 1.063125811969888e-07,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.0687256102910805e-06,
+        "relative_T_change": 1.0257327884588853e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010530277804390614,
+          "cancelled_DTD_energy": 2.0163358921251907e-07,
+          "Cars_CE_slope": -0.00407743726513092,
+          "parameter_cost": 0.006689691347043711,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.10317612013244701,
+          0.1063125811969888
+        ],
+        "condition_number": 1.0303990987499387,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            0.5645069508264163,
+            -0.8375554942886071
+          ],
+          [
+            -0.1880495520185286,
+            0.17272148744067747
+          ]
+        ],
+        "damping": 1.063125811969888e-05,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.00010686170762974457,
+        "relative_T_change": 0.00010256286205837436,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010530277804439886,
+          "cancelled_DTD_energy": 2.0161333852836436e-07,
+          "Cars_CE_slope": -0.004077438668874063,
+          "parameter_cost": 0.006689676899961222,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  },
+  {
+    "parent": "a2_selected11_r1",
+    "anchor": 2,
+    "groups": [
+      "conv1.weight",
+      "transformer.resblocks.4.attn.out_proj.bias"
+    ],
+    "current": {
+      "T": [
+        [
+          -0.48588624788136464,
+          0.4783772290855815
+        ],
+        [
+          -0.28173714867248867,
+          0.13094040135492105
+        ]
+      ],
+      "damping": 0.0,
+      "regularized_Schur_identity_relative_error": 1.3163730984016719e-16,
+      "Schur_includes_damping_cost": false,
+      "raw_source_energy_computed_separately": true
+    },
+    "variants": [
+      {
+        "eigenvalues": [
+          0.020815340448500984,
+          0.04815106792941408
+        ],
+        "condition_number": 2.31324911781021,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.48588624788136475,
+            0.47837722908558156
+          ],
+          [
+            -0.2817371486724888,
+            0.1309404013549211
+          ]
+        ],
+        "damping": null,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.7554167342883506e-16,
+        "relative_T_change": 2.342740246387888e-16,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010531332843468778,
+          "cancelled_DTD_energy": 3.039215742135012e-08,
+          "Cars_CE_slope": -0.004036544616499794,
+          "parameter_cost": 0.006690361747151212,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.020815340448500984,
+          0.04815106792941408
+        ],
+        "condition_number": 2.31324911781021,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.48588624781557194,
+            0.478377229026512
+          ],
+          [
+            -0.2817371485919919,
+            0.1309404013076678
+          ]
+        ],
+        "damping": 4.815106792941408e-12,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.2857095404034185e-10,
+        "relative_T_change": 1.7158794414074375e-10,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010531332843468778,
+          "cancelled_DTD_energy": 3.03921574143205e-08,
+          "Cars_CE_slope": -0.00403654461651296,
+          "parameter_cost": 0.006690361747125974,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.020815340448500984,
+          0.04815106792941408
+        ],
+        "condition_number": 2.31324911781021,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.48588624130209007,
+            0.47837722317863524
+          ],
+          [
+            -0.28173714062281247,
+            0.130940396629598
+          ]
+        ],
+        "damping": 4.815106792941408e-10,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.2857092709732485e-08,
+        "relative_T_change": 1.715879081831907e-08,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010531332843468778,
+          "cancelled_DTD_energy": 3.03921567183885e-08,
+          "Cars_CE_slope": -0.004036544617816412,
+          "parameter_cost": 0.006690361744627464,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.020815340448500984,
+          0.04815106792941408
+        ],
+        "condition_number": 2.31324911781021,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.4858855899549521,
+            0.47837663839180067
+          ],
+          [
+            -0.2817363437068567,
+            0.13093992882386524
+          ]
+        ],
+        "damping": 4.815106792941408e-08,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 1.2857066439841736e-06,
+        "relative_T_change": 1.7158755759105426e-06,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.010531332843468782,
+          "cancelled_DTD_energy": 3.039208712534942e-08,
+          "Cars_CE_slope": -0.0040365447481613,
+          "parameter_cost": 0.0066903614947773395,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      },
+      {
+        "eigenvalues": [
+          0.020815340448500984,
+          0.04815106792941408
+        ],
+        "condition_number": 2.31324911781021,
+        "numerical_rank": 2,
+        "numerical_nullity": 0,
+        "relative_rank_tolerance": 1e-10,
+        "Cars_Fisher_trace_in_source_nullspace": 0.0,
+        "raw_Cars_trace_before_roundoff_clamp": 0.0,
+        "T": [
+          [
+            -0.4858204656915601,
+            0.47831816812612865
+          ],
+          [
+            -0.2816566720562399,
+            0.13089316074717336
+          ]
+        ],
+        "damping": 4.8151067929414084e-06,
+        "Cars_CE_gradient_norm_in_source_nullspace": 0.0,
+        "source_nullspace_Cars_effect_not_assumed_zero": true,
+        "T_change_Frobenius": 0.00012854436669956388,
+        "relative_T_change": 0.00017155246126532826,
+        "fixed_driver_direction_diagnostic": {
+          "source_response": 0.01053133284350736,
+          "cancelled_DTD_energy": 3.038512943068386e-08,
+          "Cars_CE_slope": -0.004036557779638224,
+          "parameter_cost": 0.006690336518383449,
+          "global_rescaling_only_if_needed_for_R": true
+        }
+      }
+    ]
+  }
+]

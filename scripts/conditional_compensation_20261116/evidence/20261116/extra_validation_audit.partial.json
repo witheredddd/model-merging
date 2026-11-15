@@ -1,0 +1,3036 @@
+{
+  "points": [
+    {
+      "id": "a0_selected1_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        20,
+        21
+      ],
+      "jn": [
+        48,
+        49
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 4.576967803906964e-09,
+        "complementarity_absolute": 1.8051574672948305e-13,
+        "complementarity_relative": 1.3083327558279428e-08,
+        "predicted_Cars_CE": -1.378054999019061e-05,
+        "Cars_CE_slope": -1.3797388005870767e-05,
+        "DTD_CE_slope": -1.1163719009813197e-05,
+        "source_response": 0.0001264564501771883,
+        "cost": 0.0019867108941224697,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.0.attn.out_proj.weight",
+        "transformer.resblocks.1.ln_2.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 4,
+      "actual_parameter_cost": 0.001986759731431229,
+      "metrics": {
+        "DTD": {
+          "CE_change": 1.7983030407390058e-06,
+          "CI95": [
+            -1.5538386086860778e-05,
+            2.2198056944854326e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 1.3639079750522661e-08,
+          "selected_parent_minus_control_CE": -4.95303886101716e-06,
+          "parent_minus_control_CI95": [
+            -2.5979046480513892e-05,
+            1.4636354466628604e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": -2.9393970318391654e-06,
+          "CI95": [
+            -1.8591255804462345e-05,
+            9.398606606195236e-06
+          ],
+          "accuracy": 0.97,
+          "KL": 1.2500053961324894e-08,
+          "selected_parent_minus_control_CE": -5.701523235640085e-05,
+          "parent_minus_control_CI95": [
+            -0.00013788340427468997,
+            2.612593249760499e-05
+          ]
+        }
+      },
+      "rho_cancel": -0.0357097216338293,
+      "DTD_joint_linear_energy": 2.7318512973995677e-08,
+      "DTD_separate_linear_energy": 2.637661151900823e-08,
+      "finite_DTD_energy_reduction": -8.039450116600744e-10,
+      "finite_rho_energy_reduction": -0.030367220285449692,
+      "finite_additivity_error": 0.01963965962098264,
+      "eta_C_independent_response_norm": 0.9555228373943261,
+      "parameter_fraction_outside_G": 0.9970935980012038,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected1_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        20,
+        21
+      ],
+      "jn": [
+        48,
+        49
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 4.576967803906964e-09,
+        "complementarity_absolute": 1.8051574672948305e-13,
+        "complementarity_relative": 1.3083327558279428e-08,
+        "predicted_Cars_CE": -1.378054999019061e-05,
+        "Cars_CE_slope": -1.3797388005870767e-05,
+        "DTD_CE_slope": -1.1163719009813197e-05,
+        "source_response": 0.0001264564501771883,
+        "cost": 0.0019867108941224697,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.0.attn.out_proj.weight",
+        "transformer.resblocks.1.ln_2.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 5,
+      "actual_parameter_cost": 0.001986759731431229,
+      "metrics": {
+        "DTD": {
+          "CE_change": 4.836257050337619e-06,
+          "CI95": [
+            -6.343448925883471e-06,
+            1.842316702084968e-05
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.2177887160403265e-08,
+          "selected_parent_minus_control_CE": -1.615034264196209e-05,
+          "parent_minus_control_CI95": [
+            -3.596870126375734e-05,
+            3.737909899134636e-07
+          ]
+        },
+        "Cars": {
+          "CE_change": -7.81549961874583e-06,
+          "CI95": [
+            -1.916235660795612e-05,
+            1.655259819492664e-06
+          ],
+          "accuracy": 0.978,
+          "KL": 1.0943628767528656e-08,
+          "selected_parent_minus_control_CE": -0.00011982503041277192,
+          "parent_minus_control_CI95": [
+            -0.0001948792805273985,
+            -4.959342677690987e-05
+          ]
+        }
+      },
+      "rho_cancel": 0.009420713280550736,
+      "DTD_joint_linear_energy": 2.433052178360292e-08,
+      "DTD_separate_linear_energy": 2.456191251906703e-08,
+      "finite_DTD_energy_reduction": 2.2596352108865683e-10,
+      "finite_rho_energy_reduction": 0.009192308229023562,
+      "finite_additivity_error": 0.022485391313047356,
+      "eta_C_independent_response_norm": 0.8968132918405882,
+      "parameter_fraction_outside_G": 0.9970935980012038,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected1_r1_pinv",
+      "kind": "damping_pinv",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [
+        238,
+        239
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 1.0851284451647419e-09,
+        "complementarity_absolute": 1.1603460914850685e-13,
+        "complementarity_relative": 1.0380195024675918e-09,
+        "predicted_Cars_CE": -0.00011129816176628817,
+        "Cars_CE_slope": -0.0001117846137501926,
+        "DTD_CE_slope": -9.385558846032529e-07,
+        "source_response": 0.00012645645059991645,
+        "cost": 0.0024792714767565196,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.0024792760470558764,
+      "metrics": {
+        "DTD": {
+          "CE_change": -3.1547358202781567e-06,
+          "CI95": [
+            -1.653101656763163e-05,
+            1.0043994595185987e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 8.002379673787467e-09,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        },
+        "Cars": {
+          "CE_change": -5.9954629388240014e-05,
+          "CI95": [
+            -0.00013911885572446905,
+            2.1488616026402058e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 6.29509638684776e-07,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "rho_cancel": 0.870386464130729,
+      "DTD_joint_linear_energy": 1.5967840687315617e-08,
+      "DTD_separate_linear_energy": 1.2319578028810887e-07,
+      "finite_DTD_energy_reduction": 1.0729210790670372e-07,
+      "finite_rho_energy_reduction": 0.870195409249391,
+      "finite_additivity_error": 0.02012987623446151,
+      "eta_C_independent_response_norm": 0.7726283158769222,
+      "parameter_fraction_outside_G": 0.9971640817147707,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected1_r1_pinv",
+      "kind": "damping_pinv",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [
+        238,
+        239
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 1.0851284451647419e-09,
+        "complementarity_absolute": 1.1603460914850685e-13,
+        "complementarity_relative": 1.0380195024675918e-09,
+        "predicted_Cars_CE": -0.00011129816176628817,
+        "Cars_CE_slope": -0.0001117846137501926,
+        "DTD_CE_slope": -9.385558846032529e-07,
+        "source_response": 0.00012645645059991645,
+        "cost": 0.0024792714767565196,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.0024792760470558764,
+      "metrics": {
+        "DTD": {
+          "CE_change": -1.131408559162447e-05,
+          "CI95": [
+            -2.2216383542160212e-05,
+            -4.836078625669963e-07
+          ],
+          "accuracy": 0.9525,
+          "KL": 9.058045872844219e-09,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00012764053003151777,
+          "CI95": [
+            -0.00020230341138333262,
+            -5.986080168847847e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 5.398270327893525e-07,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "rho_cancel": 0.8310544815829406,
+      "DTD_joint_linear_energy": 1.8099126417426154e-08,
+      "DTD_separate_linear_energy": 1.0712995874058419e-07,
+      "finite_DTD_energy_reduction": 8.901092576142711e-08,
+      "finite_rho_energy_reduction": 0.8308928936360962,
+      "finite_additivity_error": 0.01644241100383411,
+      "eta_C_independent_response_norm": 0.8685562162604595,
+      "parameter_fraction_outside_G": 0.9971640817147707,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected1_r1_perturbed",
+      "kind": "damping_perturbed",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [
+        238,
+        239
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 1.0849241228018137e-09,
+        "complementarity_absolute": 1.1598149380862451e-13,
+        "complementarity_relative": 1.037544046043245e-09,
+        "predicted_Cars_CE": -0.00011129819386075455,
+        "Cars_CE_slope": -0.00011178464591544712,
+        "DTD_CE_slope": -9.38488761499951e-07,
+        "source_response": 0.00012645645060000164,
+        "cost": 0.002479271302109979,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.0024792760418168207,
+      "metrics": {
+        "DTD": {
+          "CE_change": -3.1389391455566567e-06,
+          "CI95": [
+            -1.64548461651319e-05,
+            1.0094937478702876e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 7.994073246211906e-09,
+          "selected_parent_minus_control_CE": -1.579667472150159e-08,
+          "parent_minus_control_CI95": [
+            -1.3278126721625484e-07,
+            9.220248297119049e-08
+          ]
+        },
+        "Cars": {
+          "CE_change": -5.996111388129927e-05,
+          "CI95": [
+            -0.00013911920422160582,
+            2.1523618786128515e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 6.294583591589645e-07,
+          "selected_parent_minus_control_CE": 6.484493059250665e-09,
+          "parent_minus_control_CI95": [
+            -5.0855874172793274e-08,
+            6.845464353574622e-08
+          ]
+        }
+      },
+      "rho_cancel": 0.8703863206382284,
+      "DTD_joint_linear_energy": 1.5967834942710604e-08,
+      "DTD_separate_linear_energy": 1.2319559957974743e-07,
+      "finite_DTD_energy_reduction": 1.0727174412766862e-07,
+      "finite_rho_energy_reduction": 0.870291237497634,
+      "finite_additivity_error": 0.021579903074995244,
+      "eta_C_independent_response_norm": 0.7726283131242455,
+      "parameter_fraction_outside_G": 0.9971640810363397,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected1_r1_perturbed",
+      "kind": "damping_perturbed",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [
+        238,
+        239
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 1.0849241228018137e-09,
+        "complementarity_absolute": 1.1598149380862451e-13,
+        "complementarity_relative": 1.037544046043245e-09,
+        "predicted_Cars_CE": -0.00011129819386075455,
+        "Cars_CE_slope": -0.00011178464591544712,
+        "DTD_CE_slope": -9.38488761499951e-07,
+        "source_response": 0.00012645645060000164,
+        "cost": 0.002479271302109979,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.0024792760418168207,
+      "metrics": {
+        "DTD": {
+          "CE_change": -1.1331893674324378e-05,
+          "CI95": [
+            -2.2263620556266072e-05,
+            -4.869983037268759e-07
+          ],
+          "accuracy": 0.9525,
+          "KL": 9.063320387877069e-09,
+          "selected_parent_minus_control_CE": 1.7808082699905226e-08,
+          "parent_minus_control_CI95": [
+            -3.8151548015269765e-08,
+            7.19867409435978e-08
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00012763469918239555,
+          "CI95": [
+            -0.00020230843915770304,
+            -5.9880834136160245e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 5.3979986345992e-07,
+          "selected_parent_minus_control_CE": -5.830849122201297e-09,
+          "parent_minus_control_CI95": [
+            -4.992850670120616e-08,
+            3.623436271572266e-08
+          ]
+        }
+      },
+      "rho_cancel": 0.8310541087910674,
+      "DTD_joint_linear_energy": 1.8099141830815093e-08,
+      "DTD_separate_linear_energy": 1.0712981358293106e-07,
+      "finite_DTD_energy_reduction": 8.895947030761762e-08,
+      "finite_rho_energy_reduction": 0.8307297812819162,
+      "finite_additivity_error": 0.016708341238437695,
+      "eta_C_independent_response_norm": 0.8685562060689911,
+      "parameter_fraction_outside_G": 0.9971640810363397,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected1_r1_driver_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.606737562845788e-09,
+        "complementarity_absolute": 1.8040706869507961e-13,
+        "complementarity_relative": 2.981954818790916e-09,
+        "predicted_Cars_CE": -6.035718431568201e-05,
+        "Cars_CE_slope": -6.049959830317909e-05,
+        "DTD_CE_slope": -4.682521459974853e-14,
+        "source_response": 0.00012645645064309434,
+        "cost": 0.001285630700552334,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "single_role": "driver",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.001285630462326149,
+      "metrics": {
+        "DTD": {
+          "CE_change": -5.311271431306033e-06,
+          "CI95": [
+            -2.1939999031048623e-05,
+            8.543871819084021e-06
+          ],
+          "accuracy": 0.92,
+          "KL": 1.0627347837154796e-08,
+          "selected_parent_minus_control_CE": 2.1565356110278756e-06,
+          "parent_minus_control_CI95": [
+            -1.051791698023394e-05,
+            1.627437060263343e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": -2.8109164206139772e-05,
+          "CI95": [
+            -6.854247713694564e-05,
+            1.676777177653623e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 1.8225813788917655e-07,
+          "selected_parent_minus_control_CE": -3.184546518210025e-05,
+          "parent_minus_control_CI95": [
+            -6.952066471414927e-05,
+            6.716900015659388e-06
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected1_r1_driver_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.606737562845788e-09,
+        "complementarity_absolute": 1.8040706869507961e-13,
+        "complementarity_relative": 2.981954818790916e-09,
+        "predicted_Cars_CE": -6.035718431568201e-05,
+        "Cars_CE_slope": -6.049959830317909e-05,
+        "DTD_CE_slope": -4.682521459974853e-14,
+        "source_response": 0.00012645645064309434,
+        "cost": 0.001285630700552334,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "single_role": "driver",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.001285630462326149,
+      "metrics": {
+        "DTD": {
+          "CE_change": -1.0467252152928096e-05,
+          "CI95": [
+            -2.133982642545089e-05,
+            7.394201427514558e-08
+          ],
+          "accuracy": 0.9525,
+          "KL": 9.704159108706817e-09,
+          "selected_parent_minus_control_CE": -8.468334386963746e-07,
+          "parent_minus_control_CI95": [
+            -1.037969947406608e-05,
+            9.820210795346621e-06
+          ]
+        },
+        "Cars": {
+          "CE_change": -6.316683036807447e-05,
+          "CI95": [
+            -0.00010420984434522365,
+            -2.5428075224024175e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 1.686204846334839e-07,
+          "selected_parent_minus_control_CE": -6.44736996634433e-05,
+          "parent_minus_control_CI95": [
+            -9.82705511976092e-05,
+            -3.307866534339715e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected1_r1_compensator_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        238,
+        239
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.5103239764698297e-09,
+        "complementarity_absolute": 1.750525833475828e-13,
+        "complementarity_relative": 5.344553072264889e-07,
+        "predicted_Cars_CE": -3.232343839421792e-07,
+        "Cars_CE_slope": -3.2753455898118686e-07,
+        "DTD_CE_slope": -7.096240562225478e-14,
+        "source_response": 0.00012645645002517728,
+        "cost": 0.00032962754375996916,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "single_role": "compensator",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.00032969309794480205,
+      "metrics": {
+        "DTD": {
+          "CE_change": -4.720111453974896e-06,
+          "CI95": [
+            -2.0868337617415183e-05,
+            8.84681596232304e-06
+          ],
+          "accuracy": 0.92,
+          "KL": 1.0320981621931515e-08,
+          "selected_parent_minus_control_CE": 1.565375633696738e-06,
+          "parent_minus_control_CI95": [
+            -1.6763972917700683e-05,
+            2.1305094993687667e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": 5.458513183892598e-06,
+          "CI95": [
+            -3.162867123230711e-06,
+            1.3961761481675818e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 6.083050034558735e-09,
+          "selected_parent_minus_control_CE": -6.541314257213263e-05,
+          "parent_minus_control_CI95": [
+            -0.00014475828492463514,
+            1.7026666542029486e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected1_r1_compensator_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected1_r1",
+      "im": [
+        238,
+        239
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.5103239764698297e-09,
+        "complementarity_absolute": 1.750525833475828e-13,
+        "complementarity_relative": 5.344553072264889e-07,
+        "predicted_Cars_CE": -3.232343839421792e-07,
+        "Cars_CE_slope": -3.2753455898118686e-07,
+        "DTD_CE_slope": -7.096240562225478e-14,
+        "source_response": 0.00012645645002517728,
+        "cost": 0.00032962754375996916,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "single_role": "compensator",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.00032969309794480205,
+      "metrics": {
+        "DTD": {
+          "CE_change": -5.323786402392475e-06,
+          "CI95": [
+            -1.6046035930433825e-05,
+            4.146333643984316e-06
+          ],
+          "accuracy": 0.9525,
+          "KL": 8.301473079578103e-09,
+          "selected_parent_minus_control_CE": -5.990299189231996e-06,
+          "parent_minus_control_CI95": [
+            -2.0189638565673496e-05,
+            8.603705176283022e-06
+          ]
+        },
+        "Cars": {
+          "CE_change": 6.452187223648284e-06,
+          "CI95": [
+            2.565004498825983e-07,
+            1.2554208394200429e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 5.447527044068435e-09,
+          "selected_parent_minus_control_CE": -0.00013409271725516603,
+          "parent_minus_control_CI95": [
+            -0.00020739315506119763,
+            -6.587122891555304e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected2_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        248,
+        249
+      ],
+      "jn": [
+        272,
+        273
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 9.683919647618669e-10,
+        "complementarity_absolute": 3.046073385463801e-14,
+        "complementarity_relative": 8.819676126442807e-09,
+        "predicted_Cars_CE": -3.4430812675591036e-06,
+        "Cars_CE_slope": -3.453724764712372e-06,
+        "DTD_CE_slope": -9.144557139003026e-15,
+        "source_response": 0.00012645645062601008,
+        "cost": 0.0010466373729662852,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.mlp.c_proj.weight",
+        "transformer.resblocks.10.mlp.c_proj.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 4,
+      "actual_parameter_cost": 0.0010466376397143219,
+      "metrics": {
+        "DTD": {
+          "CE_change": 9.27508225267211e-06,
+          "CI95": [
+            -9.08910563946023e-06,
+            2.7070912905593564e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 8.166020853888704e-09,
+          "selected_parent_minus_control_CE": 2.639687875100338e-06,
+          "parent_minus_control_CI95": [
+            -2.1279115138493558e-05,
+            3.090810249132351e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": 1.4948648528752837e-06,
+          "CI95": [
+            -1.2126637099839522e-05,
+            1.526218159383912e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 1.1432025894309318e-08,
+          "selected_parent_minus_control_CE": -4.5992212948989174e-05,
+          "parent_minus_control_CI95": [
+            -8.34265414670861e-05,
+            -3.134843463793518e-06
+          ]
+        }
+      },
+      "rho_cancel": 0.6795604196223658,
+      "DTD_joint_linear_energy": 1.6345002097635882e-08,
+      "DTD_separate_linear_energy": 5.100806235725779e-08,
+      "finite_DTD_energy_reduction": 3.4731114405476186e-08,
+      "finite_rho_energy_reduction": 0.6801538517065338,
+      "finite_additivity_error": 0.01496730068216134,
+      "eta_C_independent_response_norm": 0.9834222769800152,
+      "parameter_fraction_outside_G": 0.9997320317624139,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected2_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        248,
+        249
+      ],
+      "jn": [
+        272,
+        273
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 9.683919647618669e-10,
+        "complementarity_absolute": 3.046073385463801e-14,
+        "complementarity_relative": 8.819676126442807e-09,
+        "predicted_Cars_CE": -3.4430812675591036e-06,
+        "Cars_CE_slope": -3.453724764712372e-06,
+        "DTD_CE_slope": -9.144557139003026e-15,
+        "source_response": 0.00012645645062601008,
+        "cost": 0.0010466373729662852,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.mlp.c_proj.weight",
+        "transformer.resblocks.10.mlp.c_proj.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 5,
+      "actual_parameter_cost": 0.0010466376397143219,
+      "metrics": {
+        "DTD": {
+          "CE_change": -9.453810263552798e-07,
+          "CI95": [
+            -1.1869225822806744e-05,
+            8.933639159556393e-06
+          ],
+          "accuracy": 0.9525,
+          "KL": 9.847188356731361e-09,
+          "selected_parent_minus_control_CE": -1.7797472542017793e-06,
+          "parent_minus_control_CI95": [
+            -1.3837784032112653e-05,
+            1.0714112760116698e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": 2.9314394263819743e-06,
+          "CI95": [
+            -6.0858269783072e-06,
+            1.2468491173521946e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 9.99430034363813e-09,
+          "selected_parent_minus_control_CE": -7.946629515792977e-05,
+          "parent_minus_control_CI95": [
+            -0.00011032947163495647,
+            -5.033752129119594e-05
+          ]
+        }
+      },
+      "rho_cancel": 0.6083032829244839,
+      "DTD_joint_linear_energy": 1.9732179833468868e-08,
+      "DTD_separate_linear_energy": 5.0376168533637885e-08,
+      "finite_DTD_energy_reduction": 3.0683455601796045e-08,
+      "finite_rho_energy_reduction": 0.6090659206196757,
+      "finite_additivity_error": 0.014006648829264097,
+      "eta_C_independent_response_norm": 0.9899963525732416,
+      "parameter_fraction_outside_G": 0.9997320317624139,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected2_r1_pinv",
+      "kind": "damping_pinv",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        220,
+        221
+      ],
+      "jn": [
+        200,
+        201
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 4.904262768370439e-10,
+        "complementarity_absolute": 4.438611934603333e-14,
+        "complementarity_relative": 4.794393759801855e-10,
+        "predicted_Cars_CE": -9.246296600139665e-05,
+        "Cars_CE_slope": -9.25792114076749e-05,
+        "DTD_CE_slope": -4.37177031187317e-06,
+        "source_response": 0.00012645645061963985,
+        "cost": 0.0018889686980515551,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.0018889695259624235,
+      "metrics": {
+        "DTD": {
+          "CE_change": 1.1924621291121082e-05,
+          "CI95": [
+            -3.9119632077549884e-06,
+            3.0198535251914932e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 1.3387687937739535e-08,
+          "selected_parent_minus_control_CE": -9.851163348634801e-09,
+          "parent_minus_control_CI95": [
+            -2.7321934069179454e-08,
+            1.8022441189129986e-09
+          ]
+        },
+        "Cars": {
+          "CE_change": -4.4486179578180574e-05,
+          "CI95": [
+            -8.849500281495184e-05,
+            4.0691575261821196e-07
+          ],
+          "accuracy": 0.97,
+          "KL": 1.45207821546005e-07,
+          "selected_parent_minus_control_CE": -1.1168517933318376e-08,
+          "parent_minus_control_CI95": [
+            -3.346176772680881e-08,
+            2.2459685337458638e-10
+          ]
+        }
+      },
+      "rho_cancel": 0.08557391174246048,
+      "DTD_joint_linear_energy": 2.6784253001690312e-08,
+      "DTD_separate_linear_energy": 2.9290779589117294e-08,
+      "finite_DTD_energy_reduction": 2.5050247976922616e-09,
+      "finite_rho_energy_reduction": 0.0855524168337338,
+      "finite_additivity_error": 0.014098246886736557,
+      "eta_C_independent_response_norm": 0.8127243578766863,
+      "parameter_fraction_outside_G": 0.9870583676296844,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected2_r1_pinv",
+      "kind": "damping_pinv",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        220,
+        221
+      ],
+      "jn": [
+        200,
+        201
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 4.904262768370439e-10,
+        "complementarity_absolute": 4.438611934603333e-14,
+        "complementarity_relative": 4.794393759801855e-10,
+        "predicted_Cars_CE": -9.246296600139665e-05,
+        "Cars_CE_slope": -9.25792114076749e-05,
+        "DTD_CE_slope": -4.37177031187317e-06,
+        "source_response": 0.00012645645061963985,
+        "cost": 0.0018889686980515551,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.0018889695259624235,
+      "metrics": {
+        "DTD": {
+          "CE_change": -2.7264813755429404e-06,
+          "CI95": [
+            -1.1149985272493124e-05,
+            5.029415347558022e-06
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.0636588666743161e-08,
+          "selected_parent_minus_control_CE": 1.3530949858811927e-09,
+          "parent_minus_control_CI95": [
+            -1.2719934434232694e-08,
+            1.8238905655349896e-08
+          ]
+        },
+        "Cars": {
+          "CE_change": -7.652467250781846e-05,
+          "CI95": [
+            -0.00010653940033402264,
+            -4.979794879765491e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 1.1088673934613301e-07,
+          "selected_parent_minus_control_CE": -1.0183223729306484e-08,
+          "parent_minus_control_CI95": [
+            -2.6218523603669726e-08,
+            -7.2173820962912e-10
+          ]
+        }
+      },
+      "rho_cancel": 0.07210381460293613,
+      "DTD_joint_linear_energy": 2.1278899368578356e-08,
+      "DTD_separate_linear_energy": 2.2932413887953118e-08,
+      "finite_DTD_energy_reduction": 1.6597585729851998e-09,
+      "finite_rho_energy_reduction": 0.07237386269520817,
+      "finite_additivity_error": 0.01673489839672464,
+      "eta_C_independent_response_norm": 0.762311522646839,
+      "parameter_fraction_outside_G": 0.9870583676296844,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected2_r1_perturbed",
+      "kind": "damping_perturbed",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        220,
+        221
+      ],
+      "jn": [
+        200,
+        201
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 4.904365563240403e-10,
+        "complementarity_absolute": 4.4387068490393645e-14,
+        "complementarity_relative": 4.794497778198247e-10,
+        "predicted_Cars_CE": -9.246293709800165e-05,
+        "Cars_CE_slope": -9.257918252091488e-05,
+        "DTD_CE_slope": -4.371742995553459e-06,
+        "source_response": 0.00012645645061963896,
+        "cost": 0.0018889686876805208,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.0018889695160093133,
+      "metrics": {
+        "DTD": {
+          "CE_change": 1.1997270825229393e-05,
+          "CI95": [
+            -3.913564676159649e-06,
+            3.030078972807264e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 1.3407456032635864e-08,
+          "selected_parent_minus_control_CE": -8.250069745694356e-08,
+          "parent_minus_control_CI95": [
+            -2.062318799287737e-07,
+            4.703214511912467e-08
+          ]
+        },
+        "Cars": {
+          "CE_change": -4.4515412192712766e-05,
+          "CI95": [
+            -8.864586884144627e-05,
+            3.8888345682701403e-07
+          ],
+          "accuracy": 0.97,
+          "KL": 1.4527700630408306e-07,
+          "selected_parent_minus_control_CE": 1.8064096598884772e-08,
+          "parent_minus_control_CI95": [
+            -7.61974496644596e-08,
+            1.1406026646642327e-07
+          ]
+        }
+      },
+      "rho_cancel": 0.08557331545286093,
+      "DTD_joint_linear_energy": 2.6784248882772046e-08,
+      "DTD_separate_linear_energy": 2.9290755984485168e-08,
+      "finite_DTD_energy_reduction": 2.4682278121240747e-09,
+      "finite_rho_energy_reduction": 0.0842878183992945,
+      "finite_additivity_error": 0.013661480408745222,
+      "eta_C_independent_response_norm": 0.8127242993662496,
+      "parameter_fraction_outside_G": 0.9870583631347131,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected2_r1_perturbed",
+      "kind": "damping_perturbed",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        220,
+        221
+      ],
+      "jn": [
+        200,
+        201
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 4.904365563240403e-10,
+        "complementarity_absolute": 4.4387068490393645e-14,
+        "complementarity_relative": 4.794497778198247e-10,
+        "predicted_Cars_CE": -9.246293709800165e-05,
+        "Cars_CE_slope": -9.257918252091488e-05,
+        "DTD_CE_slope": -4.371742995553459e-06,
+        "source_response": 0.00012645645061963896,
+        "cost": 0.0018889686876805208,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight",
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.0018889695160093133,
+      "metrics": {
+        "DTD": {
+          "CE_change": -2.7376957065078064e-06,
+          "CI95": [
+            -1.1113699548529267e-05,
+            4.98051510635205e-06
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.0640511861055737e-08,
+          "selected_parent_minus_control_CE": 1.2567425950747796e-08,
+          "parent_minus_control_CI95": [
+            -7.00963349014746e-08,
+            9.289569562978193e-08
+          ]
+        },
+        "Cars": {
+          "CE_change": -7.652035617150431e-05,
+          "CI95": [
+            -0.0001065232451561358,
+            -4.9776479204913814e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 1.1087582804503563e-07,
+          "selected_parent_minus_control_CE": -1.4499560043481845e-08,
+          "parent_minus_control_CI95": [
+            -6.419922514264937e-08,
+            3.570894801243414e-08
+          ]
+        }
+      },
+      "rho_cancel": 0.07210322668663487,
+      "DTD_joint_linear_energy": 2.1278895637821756e-08,
+      "DTD_separate_linear_energy": 2.293239533729421e-08,
+      "finite_DTD_energy_reduction": 1.6079098232995284e-09,
+      "finite_rho_energy_reduction": 0.07024778541965446,
+      "finite_additivity_error": 0.016160059199759918,
+      "eta_C_independent_response_norm": 0.7623114726278353,
+      "parameter_fraction_outside_G": 0.9870583631347131,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected2_r1_driver_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        220,
+        221
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 1.0461520538740388e-10,
+        "stationarity_relative_residual": 8.825229996766175e-10,
+        "complementarity_absolute": 5.630541812042574e-14,
+        "complementarity_relative": 6.591907979315153e-10,
+        "predicted_Cars_CE": -8.530250612949094e-05,
+        "Cars_CE_slope": -8.541596499390974e-05,
+        "DTD_CE_slope": -2.6368167122262e-12,
+        "source_response": 0.00012645645066230687,
+        "cost": 0.0018441239992934195,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "single_role": "driver",
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.0018441240106911617,
+      "metrics": {
+        "DTD": {
+          "CE_change": 1.8761833783062523e-05,
+          "CI95": [
+            2.136553795912699e-06,
+            3.934056145660968e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 1.3270509854464322e-08,
+          "selected_parent_minus_control_CE": -6.847063655290074e-06,
+          "parent_minus_control_CI95": [
+            -1.0902575864888605e-05,
+            -3.370883491756986e-06
+          ]
+        },
+        "Cars": {
+          "CE_change": -4.103056002101153e-05,
+          "CI95": [
+            -8.447170467979656e-05,
+            4.355960696718029e-06
+          ],
+          "accuracy": 0.97,
+          "KL": 1.4594895134895151e-07,
+          "selected_parent_minus_control_CE": -3.4667880751023614e-06,
+          "parent_minus_control_CI95": [
+            -7.29650383923264e-06,
+            -4.651754176344148e-07
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected2_r1_driver_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        220,
+        221
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 1.0461520538740388e-10,
+        "stationarity_relative_residual": 8.825229996766175e-10,
+        "complementarity_absolute": 5.630541812042574e-14,
+        "complementarity_relative": 6.591907979315153e-10,
+        "predicted_Cars_CE": -8.530250612949094e-05,
+        "Cars_CE_slope": -8.541596499390974e-05,
+        "DTD_CE_slope": -2.6368167122262e-12,
+        "source_response": 0.00012645645066230687,
+        "cost": 0.0018441239992934195,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "single_role": "driver",
+      "groups": [
+        "transformer.resblocks.8.mlp.c_fc.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.0018441240106911617,
+      "metrics": {
+        "DTD": {
+          "CE_change": 1.1736852983536535e-06,
+          "CI95": [
+            -7.3068870254884036e-06,
+            9.042229470686817e-06
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.030243621731816e-08,
+          "selected_parent_minus_control_CE": -3.898813578910712e-06,
+          "parent_minus_control_CI95": [
+            -5.980435094684418e-06,
+            -1.839012839007985e-06
+          ]
+        },
+        "Cars": {
+          "CE_change": -7.661396946665773e-05,
+          "CI95": [
+            -0.00010788229054524469,
+            -4.944179265739368e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 1.1293232016068856e-07,
+          "selected_parent_minus_control_CE": 7.911373510994119e-08,
+          "parent_minus_control_CI95": [
+            -2.0737177123444934e-06,
+            2.152031646506943e-06
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected2_r1_compensator_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        200,
+        201
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 1.2097142935633471e-10,
+        "complementarity_absolute": 1.3318538909259952e-14,
+        "complementarity_relative": 5.290531707836995e-10,
+        "predicted_Cars_CE": -2.5164219156714323e-05,
+        "Cars_CE_slope": -2.517429181934752e-05,
+        "DTD_CE_slope": -1.590791603482866e-05,
+        "source_response": 0.0001264564506111039,
+        "cost": 0.000301697864870044,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "single_role": "compensator",
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.00030169881793665594,
+      "metrics": {
+        "DTD": {
+          "CE_change": -2.376216491152577e-05,
+          "CI95": [
+            -4.389663942279616e-05,
+            -6.275167386654996e-06
+          ],
+          "accuracy": 0.92,
+          "KL": 9.202812260486518e-09,
+          "selected_parent_minus_control_CE": 3.567693503929822e-05,
+          "parent_minus_control_CI95": [
+            7.578674264434224e-06,
+            6.81652222571904e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": -1.4427615806006146e-05,
+          "CI95": [
+            -3.018323417391964e-05,
+            -1.1969477383761484e-06
+          ],
+          "accuracy": 0.97,
+          "KL": 1.0570839855702011e-08,
+          "selected_parent_minus_control_CE": -3.0069732290107753e-05,
+          "parent_minus_control_CI95": [
+            -7.741830413154116e-05,
+            2.0944472290475325e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected2_r1_compensator_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected2_r1",
+      "im": [
+        200,
+        201
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.0001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 1.2097142935633471e-10,
+        "complementarity_absolute": 1.3318538909259952e-14,
+        "complementarity_relative": 5.290531707836995e-10,
+        "predicted_Cars_CE": -2.5164219156714323e-05,
+        "Cars_CE_slope": -2.517429181934752e-05,
+        "DTD_CE_slope": -1.590791603482866e-05,
+        "source_response": 0.0001264564506111039,
+        "cost": 0.000301697864870044,
+        "R": 0.006690361757031531,
+        "ell": 0.0001264564506490776,
+        "passed": true
+      },
+      "single_role": "compensator",
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.00030169881793665594,
+      "metrics": {
+        "DTD": {
+          "CE_change": -6.628463759190715e-06,
+          "CI95": [
+            -1.7147116050992187e-05,
+            4.881450066688752e-06
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.0551842160929093e-08,
+          "selected_parent_minus_control_CE": 3.903335478633657e-06,
+          "parent_minus_control_CI95": [
+            -1.0541189515852169e-05,
+            1.5975404838327397e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": 4.043171529525186e-06,
+          "CI95": [
+            -5.632653548711908e-06,
+            1.4116404119311965e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 1.0834945806876523e-08,
+          "selected_parent_minus_control_CE": -8.057802726107298e-05,
+          "parent_minus_control_CI95": [
+            -0.00011576165872692558,
+            -4.7930600469108555e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected4_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        248,
+        249
+      ],
+      "jn": [
+        6,
+        7
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 3.522826474977592e-11,
+        "stationarity_relative_residual": 9.126408448804706e-11,
+        "complementarity_absolute": 9.880398800189419e-15,
+        "complementarity_relative": 1.268949683130315e-10,
+        "predicted_Cars_CE": -7.7296863433017e-05,
+        "Cars_CE_slope": -7.78628099407055e-05,
+        "DTD_CE_slope": -1.6200853352696562e-14,
+        "source_response": 0.0012645645065353242,
+        "cost": 0.0041519925501819245,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.mlp.c_proj.weight",
+        "conv1.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 4,
+      "actual_parameter_cost": 0.0041519920082461964,
+      "metrics": {
+        "DTD": {
+          "CE_change": -1.81500419320167e-05,
+          "CI95": [
+            -0.00018673415583172177,
+            0.00013496549696735745
+          ],
+          "accuracy": 0.92,
+          "KL": 7.665019839702669e-07,
+          "selected_parent_minus_control_CE": -0.00018237758359860676,
+          "parent_minus_control_CI95": [
+            -0.00042987127033791874,
+            4.681034505425432e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": -2.5702221078261958e-05,
+          "CI95": [
+            -0.00011874075808168552,
+            5.674731975053764e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 5.578911682292927e-07,
+          "selected_parent_minus_control_CE": -0.000262903639076409,
+          "parent_minus_control_CI95": [
+            -0.0005344495757065442,
+            -3.37327566623939e-05
+          ]
+        }
+      },
+      "rho_cancel": -0.009390944463759805,
+      "DTD_joint_linear_energy": 1.5297885487102163e-06,
+      "DTD_separate_linear_energy": 1.515556046050045e-06,
+      "finite_DTD_energy_reduction": -1.2927150645346285e-08,
+      "finite_rho_energy_reduction": -0.008501909808123723,
+      "finite_additivity_error": 0.0016140562927914265,
+      "eta_C_independent_response_norm": 0.8779158879023738,
+      "parameter_fraction_outside_G": 0.9848493003093247,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected4_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        248,
+        249
+      ],
+      "jn": [
+        6,
+        7
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 3.522826474977592e-11,
+        "stationarity_relative_residual": 9.126408448804706e-11,
+        "complementarity_absolute": 9.880398800189419e-15,
+        "complementarity_relative": 1.268949683130315e-10,
+        "predicted_Cars_CE": -7.7296863433017e-05,
+        "Cars_CE_slope": -7.78628099407055e-05,
+        "DTD_CE_slope": -1.6200853352696562e-14,
+        "source_response": 0.0012645645065353242,
+        "cost": 0.0041519925501819245,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.mlp.c_proj.weight",
+        "conv1.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 5,
+      "actual_parameter_cost": 0.0041519920082461964,
+      "metrics": {
+        "DTD": {
+          "CE_change": -9.180986408502818e-05,
+          "CI95": [
+            -0.0001926472167078714,
+            7.437522619655557e-07
+          ],
+          "accuracy": 0.9525,
+          "KL": 8.198819368468655e-07,
+          "selected_parent_minus_control_CE": 4.5285567753717843e-05,
+          "parent_minus_control_CI95": [
+            -0.00011952907642838902,
+            0.00021240393912746108
+          ]
+        },
+        "Cars": {
+          "CE_change": -2.9223909068947506e-06,
+          "CI95": [
+            -7.052164257459856e-05,
+            6.664188474478656e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 5.140946896645305e-07,
+          "selected_parent_minus_control_CE": -0.00023894620792466308,
+          "parent_minus_control_CI95": [
+            -0.0004243854670214611,
+            -6.988374776488367e-05
+          ]
+        }
+      },
+      "rho_cancel": -0.0034817326326566627,
+      "DTD_joint_linear_energy": 1.637130255706058e-06,
+      "DTD_separate_linear_energy": 1.6314499830614856e-06,
+      "finite_DTD_energy_reduction": -5.518326314001441e-09,
+      "finite_rho_energy_reduction": -0.003376321675709118,
+      "finite_additivity_error": 0.0016820938650451479,
+      "eta_C_independent_response_norm": 0.9371947544793859,
+      "parameter_fraction_outside_G": 0.9848493003093247,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected4_r1_pinv",
+      "kind": "damping_pinv",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        200,
+        201
+      ],
+      "jn": [
+        236,
+        237
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.8891064268363276e-10,
+        "complementarity_absolute": 1.941635400095676e-13,
+        "complementarity_relative": 3.5237159993912875e-10,
+        "predicted_Cars_CE": -0.0005476495323057694,
+        "Cars_CE_slope": -0.0005510192650120181,
+        "DTD_CE_slope": -0.00011767902594254679,
+        "source_response": 0.001264564506452022,
+        "cost": 0.0066903617568317905,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.006689692433742726,
+      "metrics": {
+        "DTD": {
+          "CE_change": -0.0002005276255306235,
+          "CI95": [
+            -0.0004137459925951932,
+            -1.7125215296040635e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 1.0647330304879356e-06,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00028860586015467095,
+          "CI95": [
+            -0.0005669805426050452,
+            -7.395564252450933e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 3.259808567658456e-06,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "rho_cancel": 0.1399126223608301,
+      "DTD_joint_linear_energy": 2.1300280475271905e-06,
+      "DTD_separate_linear_energy": 2.4765251797716698e-06,
+      "finite_DTD_energy_reduction": 3.4458208535120884e-07,
+      "finite_rho_energy_reduction": 0.13925825841883394,
+      "finite_additivity_error": 0.0019483798195056314,
+      "eta_C_independent_response_norm": 0.893696602491609,
+      "parameter_fraction_outside_G": 0.9997399287861133,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected4_r1_pinv",
+      "kind": "damping_pinv",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        200,
+        201
+      ],
+      "jn": [
+        236,
+        237
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.8891064268363276e-10,
+        "complementarity_absolute": 1.941635400095676e-13,
+        "complementarity_relative": 3.5237159993912875e-10,
+        "predicted_Cars_CE": -0.0005476495323057694,
+        "Cars_CE_slope": -0.0005510192650120181,
+        "DTD_CE_slope": -0.00011767902594254679,
+        "source_response": 0.001264564506452022,
+        "cost": 0.0066903617568317905,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.006689692433742726,
+      "metrics": {
+        "DTD": {
+          "CE_change": -4.652429633131035e-05,
+          "CI95": [
+            -0.00016390678471162097,
+            9.468143091815002e-05
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.116800395117994e-06,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00024186859883155786,
+          "CI95": [
+            -0.0004366999911280963,
+            -7.15082371879288e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 3.636267170910645e-06,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "rho_cancel": 0.1867431878896748,
+      "DTD_joint_linear_energy": 2.2339077407416536e-06,
+      "DTD_separate_linear_energy": 2.746866312677876e-06,
+      "finite_DTD_energy_reduction": 5.10658072299593e-07,
+      "finite_rho_energy_reduction": 0.18609623254123603,
+      "finite_additivity_error": 0.002034250432066395,
+      "eta_C_independent_response_norm": 0.9534734197525798,
+      "parameter_fraction_outside_G": 0.9997399287861133,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected4_r1_perturbed",
+      "kind": "damping_perturbed",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        200,
+        201
+      ],
+      "jn": [
+        236,
+        237
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.894727788386119e-10,
+        "complementarity_absolute": 1.946075605078354e-13,
+        "complementarity_relative": 3.5317768606611886e-10,
+        "predicted_Cars_CE": -0.000547649159973558,
+        "Cars_CE_slope": -0.0005510188445806926,
+        "DTD_CE_slope": -0.00011768797925843969,
+        "source_response": 0.001264564506451177,
+        "cost": 0.006690361756829267,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.006690361521766961,
+      "metrics": {
+        "DTD": {
+          "CE_change": -0.0002006336838915404,
+          "CI95": [
+            -0.00041378330656552826,
+            -1.7268875322923046e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 1.0647982658910076e-06,
+          "selected_parent_minus_control_CE": 1.0605836091692392e-07,
+          "parent_minus_control_CI95": [
+            -2.2835671425738242e-08,
+            2.3652599484789214e-07
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.0002886854462660076,
+          "CI95": [
+            -0.0005671243167129968,
+            -7.399239202010616e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 3.2605445330168102e-06,
+          "selected_parent_minus_control_CE": 7.958611133661563e-08,
+          "parent_minus_control_CI95": [
+            -1.9313410378592325e-08,
+            1.9972102871494606e-07
+          ]
+        }
+      },
+      "rho_cancel": 0.13992519065813616,
+      "DTD_joint_linear_energy": 2.1304428422420936e-06,
+      "DTD_separate_linear_energy": 2.4770436467873378e-06,
+      "finite_DTD_energy_reduction": 3.4480464144795154e-07,
+      "finite_rho_energy_reduction": 0.13932834282121948,
+      "finite_additivity_error": 0.001944282697165479,
+      "eta_C_independent_response_norm": 0.8937013572816197,
+      "parameter_fraction_outside_G": 0.9997399578445921,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected4_r1_perturbed",
+      "kind": "damping_perturbed",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        200,
+        201
+      ],
+      "jn": [
+        236,
+        237
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 2.894727788386119e-10,
+        "complementarity_absolute": 1.946075605078354e-13,
+        "complementarity_relative": 3.5317768606611886e-10,
+        "predicted_Cars_CE": -0.000547649159973558,
+        "Cars_CE_slope": -0.0005510188445806926,
+        "DTD_CE_slope": -0.00011768797925843969,
+        "source_response": 0.001264564506451177,
+        "cost": 0.006690361756829267,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.006690361521766961,
+      "metrics": {
+        "DTD": {
+          "CE_change": -4.652341875043033e-05,
+          "CI95": [
+            -0.00016394201829721195,
+            9.469258727625553e-05
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.1170354658867997e-06,
+          "selected_parent_minus_control_CE": -8.775808800076766e-10,
+          "parent_minus_control_CI95": [
+            -9.439680406518673e-08,
+            8.609318940862562e-08
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.0002418442767452449,
+          "CI95": [
+            -0.000436642617064602,
+            -7.151161413570915e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 3.6361460415703097e-06,
+          "selected_parent_minus_control_CE": -2.4322086312966152e-08,
+          "parent_minus_control_CI95": [
+            -7.06601011026275e-08,
+            1.882265114536376e-08
+          ]
+        }
+      },
+      "rho_cancel": 0.18674597413647537,
+      "DTD_joint_linear_energy": 2.234360223521397e-06,
+      "DTD_separate_linear_energy": 2.7474321091111994e-06,
+      "finite_DTD_energy_reduction": 5.107613035151148e-07,
+      "finite_rho_energy_reduction": 0.18609498746391684,
+      "finite_additivity_error": 0.0019397866586056557,
+      "eta_C_independent_response_norm": 0.9534759018031275,
+      "parameter_fraction_outside_G": 0.9997399578445921,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected4_r1_driver_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        200,
+        201
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 8.829437181390176e-10,
+        "stationarity_relative_residual": 7.3900155999160895e-09,
+        "complementarity_absolute": 2.6189019978822533e-12,
+        "complementarity_relative": 1.0403093901683647e-08,
+        "predicted_Cars_CE": -0.00025073588092756004,
+        "Cars_CE_slope": -0.00025174260875011494,
+        "DTD_CE_slope": -0.0001584948970929459,
+        "source_response": 0.0012645645076073153,
+        "cost": 0.0030154911321280103,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "single_role": "driver",
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.0030154913759685544,
+      "metrics": {
+        "DTD": {
+          "CE_change": -0.0002342866764829131,
+          "CI95": [
+            -0.00043492659646600753,
+            -5.925371229242331e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 9.200410760285575e-07,
+          "selected_parent_minus_control_CE": 3.37590509522896e-05,
+          "parent_minus_control_CI95": [
+            -2.9193465672023725e-05,
+            8.857695027764718e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00014288783495434795,
+          "CI95": [
+            -0.00029959376745830336,
+            -1.1186907000873474e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 1.0582621851657667e-06,
+          "selected_parent_minus_control_CE": -0.00014571802520032303,
+          "parent_minus_control_CI95": [
+            -0.00033077237387103353,
+            5.2311190859886416e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected4_r1_driver_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        200,
+        201
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 8.829437181390176e-10,
+        "stationarity_relative_residual": 7.3900155999160895e-09,
+        "complementarity_absolute": 2.6189019978822533e-12,
+        "complementarity_relative": 1.0403093901683647e-08,
+        "predicted_Cars_CE": -0.00025073588092756004,
+        "Cars_CE_slope": -0.00025174260875011494,
+        "DTD_CE_slope": -0.0001584948970929459,
+        "source_response": 0.0012645645076073153,
+        "cost": 0.0030154911321280103,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "single_role": "driver",
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.0030154913759685544,
+      "metrics": {
+        "DTD": {
+          "CE_change": -6.395153288684051e-05,
+          "CI95": [
+            -0.00016875341869481035,
+            5.104434245876421e-05
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.0545477042709566e-06,
+          "selected_parent_minus_control_CE": 1.742723655553017e-05,
+          "parent_minus_control_CI95": [
+            -2.728958995178685e-05,
+            5.935903939472018e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": 4.172296143336206e-05,
+          "CI95": [
+            -5.47464955873267e-05,
+            0.00014164680459203294
+          ],
+          "accuracy": 0.978,
+          "KL": 1.0790959873096512e-06,
+          "selected_parent_minus_control_CE": -0.00028359156026491994,
+          "parent_minus_control_CI95": [
+            -0.0004682639649810465,
+            -0.0001151625096393859
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected4_r1_compensator_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 5.954992055023922e-10,
+        "stationarity_relative_residual": 3.0673834538696225e-09,
+        "complementarity_absolute": 6.833384180378705e-13,
+        "complementarity_relative": 2.170450973294088e-09,
+        "predicted_Cars_CE": -0.00031098033550726073,
+        "Cars_CE_slope": -0.00031483706678744715,
+        "DTD_CE_slope": -2.782673769939966e-12,
+        "source_response": 0.0006580734314400336,
+        "cost": 0.0066903617610156365,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "single_role": "compensator",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.006690361458579306,
+      "metrics": {
+        "DTD": {
+          "CE_change": -2.7152081722566956e-05,
+          "CI95": [
+            -0.00011351962209991299,
+            4.4736317365249626e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 2.862994013407795e-07,
+          "selected_parent_minus_control_CE": -0.00017337554380805653,
+          "parent_minus_control_CI95": [
+            -0.0003809356055819482,
+            -7.837875899120368e-08
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00014187829121041333,
+          "CI95": [
+            -0.00035148020679789347,
+            9.330800402099939e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 4.921759583315358e-06,
+          "selected_parent_minus_control_CE": -0.0001467275689442576,
+          "parent_minus_control_CI95": [
+            -0.0003359642646615315,
+            1.812224910771991e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected4_r1_compensator_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected4_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 5.954992055023922e-10,
+        "stationarity_relative_residual": 3.0673834538696225e-09,
+        "complementarity_absolute": 6.833384180378705e-13,
+        "complementarity_relative": 2.170450973294088e-09,
+        "predicted_Cars_CE": -0.00031098033550726073,
+        "Cars_CE_slope": -0.00031483706678744715,
+        "DTD_CE_slope": -2.782673769939966e-12,
+        "source_response": 0.0006580734314400336,
+        "cost": 0.0066903617610156365,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "single_role": "compensator",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.006690361458579306,
+      "metrics": {
+        "DTD": {
+          "CE_change": -5.4240772149808884e-05,
+          "CI95": [
+            -0.00011096739173158192,
+            4.5363897551489504e-07
+          ],
+          "accuracy": 0.9525,
+          "KL": 2.627506475899621e-07,
+          "selected_parent_minus_control_CE": 7.716475818498525e-06,
+          "parent_minus_control_CI95": [
+            -0.00011097517142187554,
+            0.00012783432162145593
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00032440626199270326,
+          "CI95": [
+            -0.0005372011643211689,
+            -0.00012711980407490922
+          ],
+          "accuracy": 0.978,
+          "KL": 4.557970032822434e-06,
+          "selected_parent_minus_control_CE": 8.253766316114546e-05,
+          "parent_minus_control_CI95": [
+            -3.8420177008660145e-05,
+            0.00020053647929930098
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected5_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        238,
+        239
+      ],
+      "jn": [
+        164,
+        165
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 3.070564690013669e-09,
+        "complementarity_absolute": 3.4417038447934106e-12,
+        "complementarity_relative": 1.4874568113972145e-06,
+        "predicted_Cars_CE": -1.84038667060194e-06,
+        "Cars_CE_slope": -2.313817664097763e-06,
+        "DTD_CE_slope": -1.036041519327855e-12,
+        "source_response": 0.0012645644817391969,
+        "cost": 0.003629026475878904,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.bias",
+        "transformer.resblocks.6.attn.out_proj.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 4,
+      "actual_parameter_cost": 0.003629039623060061,
+      "metrics": {
+        "DTD": {
+          "CE_change": -5.4058752397064936e-05,
+          "CI95": [
+            -0.00021909044997440988,
+            8.534504957987805e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 1.0517518387232162e-06,
+          "selected_parent_minus_control_CE": -0.00013141932051945925,
+          "parent_minus_control_CI95": [
+            -0.00034626963063007134,
+            8.252125479710325e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": 3.25809929315792e-05,
+          "CI95": [
+            -5.72663290167454e-05,
+            0.00012376956974360296
+          ],
+          "accuracy": 0.97,
+          "KL": 7.196021853794876e-07,
+          "selected_parent_minus_control_CE": -0.00039421987036873635,
+          "parent_minus_control_CI95": [
+            -0.0006537868165979196,
+            -0.00016528694049491025
+          ]
+        }
+      },
+      "rho_cancel": -0.001971804005008382,
+      "DTD_joint_linear_energy": 2.0985387091171997e-06,
+      "DTD_separate_linear_energy": 2.0944089451709867e-06,
+      "finite_DTD_energy_reduction": -4.050931001789439e-09,
+      "finite_rho_energy_reduction": -0.0019288671395884275,
+      "finite_additivity_error": 0.0016590278464876287,
+      "eta_C_independent_response_norm": 0.9339051835079148,
+      "parameter_fraction_outside_G": 0.9997635428521258,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected5_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        238,
+        239
+      ],
+      "jn": [
+        164,
+        165
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 3.070564690013669e-09,
+        "complementarity_absolute": 3.4417038447934106e-12,
+        "complementarity_relative": 1.4874568113972145e-06,
+        "predicted_Cars_CE": -1.84038667060194e-06,
+        "Cars_CE_slope": -2.313817664097763e-06,
+        "DTD_CE_slope": -1.036041519327855e-12,
+        "source_response": 0.0012645644817391969,
+        "cost": 0.003629026475878904,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.bias",
+        "transformer.resblocks.6.attn.out_proj.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 5,
+      "actual_parameter_cost": 0.003629039623060061,
+      "metrics": {
+        "DTD": {
+          "CE_change": -6.067153017576313e-05,
+          "CI95": [
+            -0.00016836784985051008,
+            3.54379773943723e-05
+          ],
+          "accuracy": 0.9525,
+          "KL": 8.367999632071046e-07,
+          "selected_parent_minus_control_CE": -1.3168735893675015e-05,
+          "parent_minus_control_CI95": [
+            -0.00015401009725641567,
+            0.00013773407021010404
+          ]
+        },
+        "Cars": {
+          "CE_change": 5.246541203488639e-05,
+          "CI95": [
+            -9.0617114118769e-06,
+            0.0001124524493533544
+          ],
+          "accuracy": 0.978,
+          "KL": 5.918219364013606e-07,
+          "selected_parent_minus_control_CE": -0.00035723703277764843,
+          "parent_minus_control_CI95": [
+            -0.0005072029817247509,
+            -0.00021637357861817834
+          ]
+        }
+      },
+      "rho_cancel": 0.007012463197423905,
+      "DTD_joint_linear_energy": 1.6719122133163924e-06,
+      "DTD_separate_linear_energy": 1.6837192324688753e-06,
+      "finite_DTD_energy_reduction": 1.1860772789560329e-08,
+      "finite_rho_energy_reduction": 0.00703564863727645,
+      "finite_additivity_error": 0.0016628458668151859,
+      "eta_C_independent_response_norm": 0.9750222392657323,
+      "parameter_fraction_outside_G": 0.9997635428521258,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected5_r1_pinv",
+      "kind": "damping_pinv",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        202,
+        203
+      ],
+      "jn": [
+        236,
+        237
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 4.377074258599123e-10,
+        "stationarity_relative_residual": 2.060282667377592e-09,
+        "complementarity_absolute": 2.02711888395705e-12,
+        "complementarity_relative": 3.882610622090177e-09,
+        "predicted_Cars_CE": -0.000518794369196309,
+        "Cars_CE_slope": -0.0005221020290893255,
+        "DTD_CE_slope": -0.00013101754061077125,
+        "source_response": 0.001264564505244047,
+        "cost": 0.0066903617599599514,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.006690347031984126,
+      "metrics": {
+        "DTD": {
+          "CE_change": -0.00018547807291652418,
+          "CI95": [
+            -0.00037313920019836497,
+            -1.2804503008642115e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 9.725886898229628e-07,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.0003616388774371572,
+          "CI95": [
+            -0.0006044717128681696,
+            -0.00014275638810329016
+          ],
+          "accuracy": 0.97,
+          "KL": 3.6252355062683806e-06,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "rho_cancel": 0.12883172986627392,
+      "DTD_joint_linear_energy": 1.9476337968025997e-06,
+      "DTD_separate_linear_energy": 2.235657408072994e-06,
+      "finite_DTD_energy_reduction": 2.8717428132474964e-07,
+      "finite_rho_energy_reduction": 0.1286283687176451,
+      "finite_additivity_error": 0.0019292696202587477,
+      "eta_C_independent_response_norm": 0.7961818408441832,
+      "parameter_fraction_outside_G": 0.998281685677346,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected5_r1_pinv",
+      "kind": "damping_pinv",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        202,
+        203
+      ],
+      "jn": [
+        236,
+        237
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 4.377074258599123e-10,
+        "stationarity_relative_residual": 2.060282667377592e-09,
+        "complementarity_absolute": 2.02711888395705e-12,
+        "complementarity_relative": 3.882610622090177e-09,
+        "predicted_Cars_CE": -0.000518794369196309,
+        "Cars_CE_slope": -0.0005221020290893255,
+        "DTD_CE_slope": -0.00013101754061077125,
+        "source_response": 0.001264564505244047,
+        "cost": 0.0066903617599599514,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.006690347031984126,
+      "metrics": {
+        "DTD": {
+          "CE_change": -7.384026606943813e-05,
+          "CI95": [
+            -0.0002069211521304638,
+            6.798433943708774e-05
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.0326286580693392e-06,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.0003047716207427621,
+          "CI95": [
+            -0.00046643314933587807,
+            -0.00015429767193337365
+          ],
+          "accuracy": 0.978,
+          "KL": 3.123334799964425e-06,
+          "selected_parent_minus_control_CE": 0.0,
+          "parent_minus_control_CI95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "rho_cancel": 0.1747455396560004,
+      "DTD_joint_linear_energy": 2.0665490809476856e-06,
+      "DTD_separate_linear_energy": 2.5041356093807275e-06,
+      "finite_DTD_energy_reduction": 4.3636313071138067e-07,
+      "finite_rho_energy_reduction": 0.1744358647806486,
+      "finite_additivity_error": 0.0020031944206137142,
+      "eta_C_independent_response_norm": 0.8794537701390828,
+      "parameter_fraction_outside_G": 0.998281685677346,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected5_r1_perturbed",
+      "kind": "damping_perturbed",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        202,
+        203
+      ],
+      "jn": [
+        236,
+        237
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 4.361879746284103e-10,
+        "stationarity_relative_residual": 2.0539903291206734e-09,
+        "complementarity_absolute": 2.0210097804547613e-12,
+        "complementarity_relative": 3.870904636306638e-09,
+        "predicted_Cars_CE": -0.0005187951259575828,
+        "Cars_CE_slope": -0.0005221027047525191,
+        "DTD_CE_slope": -0.00013102182166231988,
+        "source_response": 0.0012645645052445516,
+        "cost": 0.006690361759949786,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.006690353049344143,
+      "metrics": {
+        "DTD": {
+          "CE_change": -0.00018551325373997686,
+          "CI95": [
+            -0.0003732492677747687,
+            -1.2779701090912683e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 9.726736263005602e-07,
+          "selected_parent_minus_control_CE": 3.518082345269903e-08,
+          "parent_minus_control_CI95": [
+            -5.77760139017858e-08,
+            1.4399717793993536e-07
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00036165054801418284,
+          "CI95": [
+            -0.0006044697983452458,
+            -0.00014283193261241452
+          ],
+          "accuracy": 0.97,
+          "KL": 3.6248174136558262e-06,
+          "selected_parent_minus_control_CE": 1.1670577025653508e-08,
+          "parent_minus_control_CI95": [
+            -6.690962995481191e-08,
+            8.349125134614511e-08
+          ]
+        }
+      },
+      "rho_cancel": 0.12883165339693675,
+      "DTD_joint_linear_energy": 1.947644166491778e-06,
+      "DTD_separate_linear_energy": 2.235669115029494e-06,
+      "finite_DTD_energy_reduction": 2.867283853459529e-07,
+      "finite_rho_energy_reduction": 0.12844453072019477,
+      "finite_additivity_error": 0.0019885925787478187,
+      "eta_C_independent_response_norm": 0.796188482081835,
+      "parameter_fraction_outside_G": 0.9982817147252518,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected5_r1_perturbed",
+      "kind": "damping_perturbed",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        202,
+        203
+      ],
+      "jn": [
+        236,
+        237
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 4.361879746284103e-10,
+        "stationarity_relative_residual": 2.0539903291206734e-09,
+        "complementarity_absolute": 2.0210097804547613e-12,
+        "complementarity_relative": 3.870904636306638e-09,
+        "predicted_Cars_CE": -0.0005187951259575828,
+        "Cars_CE_slope": -0.0005221027047525191,
+        "DTD_CE_slope": -0.00013102182166231988,
+        "source_response": 0.0012645645052445516,
+        "cost": 0.006690361759949786,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.bias",
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.006690353049344143,
+      "metrics": {
+        "DTD": {
+          "CE_change": -7.391733700068812e-05,
+          "CI95": [
+            -0.00020686448439075788,
+            6.785635628193639e-05
+          ],
+          "accuracy": 0.9525,
+          "KL": 1.032600407928821e-06,
+          "selected_parent_minus_control_CE": 7.707093124998967e-08,
+          "parent_minus_control_CI95": [
+            -3.432433379668323e-08,
+            1.8551691966276268e-07
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00030478137784392125,
+          "CI95": [
+            -0.00046644614618375805,
+            -0.00015433739681566957
+          ],
+          "accuracy": 0.978,
+          "KL": 3.1234799867396684e-06,
+          "selected_parent_minus_control_CE": 9.757101159183967e-09,
+          "parent_minus_control_CI95": [
+            -4.489802525849152e-08,
+            6.66554368372514e-08
+          ]
+        }
+      },
+      "rho_cancel": 0.17474383626675608,
+      "DTD_joint_linear_energy": 2.0665656198232467e-06,
+      "DTD_separate_linear_energy": 2.504150481560348e-06,
+      "finite_DTD_energy_reduction": 4.362825556816073e-07,
+      "finite_rho_energy_reduction": 0.17441323841118114,
+      "finite_additivity_error": 0.0020316184393774626,
+      "eta_C_independent_response_norm": 0.87945750174463,
+      "parameter_fraction_outside_G": 0.9982817147252518,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected5_r1_driver_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        202,
+        203
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 1.1252239250328734e-09,
+        "complementarity_absolute": 7.786982457744172e-13,
+        "complementarity_relative": 2.9539001025022387e-09,
+        "predicted_Cars_CE": -0.00026283810853819367,
+        "Cars_CE_slope": -0.0002636169872890368,
+        "DTD_CE_slope": -0.00015306867379786407,
+        "source_response": 0.001264564505840809,
+        "cost": 0.004128442335021995,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "single_role": "driver",
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.bias"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.0041284062958398945,
+      "metrics": {
+        "DTD": {
+          "CE_change": -0.00019746503568396776,
+          "CI95": [
+            -0.000381561923591151,
+            -3.758936588270131e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 8.652399004215842e-07,
+          "selected_parent_minus_control_CE": 1.1986962767443616e-05,
+          "parent_minus_control_CI95": [
+            -5.2370266879223116e-05,
+            7.036140243734168e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.0002388929960629333,
+          "CI95": [
+            -0.00039324059724075777,
+            -0.00011537326797572185
+          ],
+          "accuracy": 0.97,
+          "KL": 8.018020514805712e-07,
+          "selected_parent_minus_control_CE": -0.00012274588137422388,
+          "parent_minus_control_CI95": [
+            -0.00028989074717201274,
+            5.8889563823276057e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected5_r1_driver_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        202,
+        203
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 0,
+        "stationarity_relative_residual": 1.1252239250328734e-09,
+        "complementarity_absolute": 7.786982457744172e-13,
+        "complementarity_relative": 2.9539001025022387e-09,
+        "predicted_Cars_CE": -0.00026283810853819367,
+        "Cars_CE_slope": -0.0002636169872890368,
+        "DTD_CE_slope": -0.00015306867379786407,
+        "source_response": 0.001264564505840809,
+        "cost": 0.004128442335021995,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "single_role": "driver",
+      "groups": [
+        "transformer.resblocks.7.mlp.c_proj.bias"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.0041284062958398945,
+      "metrics": {
+        "DTD": {
+          "CE_change": -8.472790267453393e-05,
+          "CI95": [
+            -0.00019698665558642132,
+            4.112698741906879e-05
+          ],
+          "accuracy": 0.9525,
+          "KL": 9.955398092620698e-07,
+          "selected_parent_minus_control_CE": 1.0887636605095788e-05,
+          "parent_minus_control_CI95": [
+            -3.3281618424546546e-05,
+            5.3623115532836226e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": -3.99652028558644e-05,
+          "CI95": [
+            -0.00010403091141285952,
+            2.565914768859265e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 6.787567797340835e-07,
+          "selected_parent_minus_control_CE": -0.00026480641788689775,
+          "parent_minus_control_CI95": [
+            -0.0004294491301035039,
+            -0.0001132825772236575
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected5_r1_compensator_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 5.954992055023922e-10,
+        "stationarity_relative_residual": 3.0673834538696225e-09,
+        "complementarity_absolute": 6.833384180378705e-13,
+        "complementarity_relative": 2.170450973294088e-09,
+        "predicted_Cars_CE": -0.00031098033550726073,
+        "Cars_CE_slope": -0.00031483706678744715,
+        "DTD_CE_slope": -2.782673769939966e-12,
+        "source_response": 0.0006580734314400336,
+        "cost": 0.0066903617610156365,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "single_role": "compensator",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 4,
+      "actual_parameter_cost": 0.006690361458579306,
+      "metrics": {
+        "DTD": {
+          "CE_change": -2.7152081722566956e-05,
+          "CI95": [
+            -0.00011351962209991299,
+            4.4736317365249626e-05
+          ],
+          "accuracy": 0.92,
+          "KL": 2.862994013407795e-07,
+          "selected_parent_minus_control_CE": -0.00015832599119395722,
+          "parent_minus_control_CI95": [
+            -0.00035004889330960223,
+            1.6113812410957226e-05
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00014187829121041333,
+          "CI95": [
+            -0.00035148020679789347,
+            9.330800402099939e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 4.921759583315358e-06,
+          "selected_parent_minus_control_CE": -0.00021976058622674377,
+          "parent_minus_control_CI95": [
+            -0.0003941750545028313,
+            -9.15815977782338e-05
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected5_r1_compensator_reoptimized",
+      "kind": "same_budget_single",
+      "anchor": 0,
+      "parent": "a0_selected5_r1",
+      "im": [
+        236,
+        237
+      ],
+      "jn": [],
+      "radius": 0.006690361757031531,
+      "ell": 0.001264564506490776,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 5.954992055023922e-10,
+        "stationarity_relative_residual": 3.0673834538696225e-09,
+        "complementarity_absolute": 6.833384180378705e-13,
+        "complementarity_relative": 2.170450973294088e-09,
+        "predicted_Cars_CE": -0.00031098033550726073,
+        "Cars_CE_slope": -0.00031483706678744715,
+        "DTD_CE_slope": -2.782673769939966e-12,
+        "source_response": 0.0006580734314400336,
+        "cost": 0.0066903617610156365,
+        "R": 0.006690361757031531,
+        "ell": 0.001264564506490776,
+        "passed": true
+      },
+      "single_role": "compensator",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight"
+      ],
+      "probe": 5,
+      "actual_parameter_cost": 0.006690361458579306,
+      "metrics": {
+        "DTD": {
+          "CE_change": -5.4240772149808884e-05,
+          "CI95": [
+            -0.00011096739173158192,
+            4.5363897551489504e-07
+          ],
+          "accuracy": 0.9525,
+          "KL": 2.627506475899621e-07,
+          "selected_parent_minus_control_CE": -1.9599493919629256e-05,
+          "parent_minus_control_CI95": [
+            -0.00014516780684255124,
+            0.00011827479877008813
+          ]
+        },
+        "Cars": {
+          "CE_change": -0.00032440626199270326,
+          "CI95": [
+            -0.0005372011643211689,
+            -0.00012711980407490922
+          ],
+          "accuracy": 0.978,
+          "KL": 4.557970032822434e-06,
+          "selected_parent_minus_control_CE": 1.9634641249941244e-05,
+          "parent_minus_control_CI95": [
+            -6.59877708506477e-05,
+            0.00011411991319293561
+          ]
+        }
+      }
+    },
+    {
+      "id": "a0_selected7_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected7_r1",
+      "im": [
+        92,
+        93
+      ],
+      "jn": [
+        164,
+        165
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.003793693519472327,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 9.89142101559537e-12,
+        "stationarity_relative_residual": 1.6127308453155427e-10,
+        "complementarity_absolute": 2.088441507991835e-14,
+        "complementarity_relative": 2.2154644447544937e-10,
+        "predicted_Cars_CE": -9.395846201672398e-05,
+        "Cars_CE_slope": -9.426653237142179e-05,
+        "DTD_CE_slope": -7.693233691668038e-14,
+        "source_response": 0.0005602349369123531,
+        "cost": 0.006690361757097708,
+        "R": 0.006690361757031531,
+        "ell": 0.003793693519472327,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.3.attn.out_proj.weight",
+        "transformer.resblocks.6.attn.out_proj.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 4,
+      "actual_parameter_cost": 0.006689692167932347,
+      "metrics": {
+        "DTD": {
+          "CE_change": 5.072713168490907e-05,
+          "CI95": [
+            -3.19432288242718e-05,
+            0.00014865459586017123
+          ],
+          "accuracy": 0.92,
+          "KL": 2.05630882143944e-07,
+          "selected_parent_minus_control_CE": 2.1365581022162182e-05,
+          "parent_minus_control_CI95": [
+            -0.0005263644071837689,
+            0.000498767749199446
+          ]
+        },
+        "Cars": {
+          "CE_change": -2.5240646343966605e-05,
+          "CI95": [
+            -7.901375814077679e-05,
+            1.844524370801619e-05
+          ],
+          "accuracy": 0.97,
+          "KL": 1.7089605537077108e-07,
+          "selected_parent_minus_control_CE": -0.0004913361561609719,
+          "parent_minus_control_CI95": [
+            -0.0009222530604150013,
+            -9.517365454929461e-05
+          ]
+        }
+      },
+      "rho_cancel": 0.07542450718950691,
+      "DTD_joint_linear_energy": 4.112115629080239e-07,
+      "DTD_separate_linear_energy": 4.447571519098318e-07,
+      "finite_DTD_energy_reduction": 3.384472559290001e-08,
+      "finite_rho_energy_reduction": 0.07603510819242847,
+      "finite_additivity_error": 0.0044747540121025785,
+      "eta_C_independent_response_norm": 0.9794767931560945,
+      "parameter_fraction_outside_G": 0.9970132373076813,
+      "belongs_to_Q_by_construction": true
+    },
+    {
+      "id": "a0_selected7_r1_random",
+      "kind": "matched_random_pair",
+      "anchor": 0,
+      "parent": "a0_selected7_r1",
+      "im": [
+        92,
+        93
+      ],
+      "jn": [
+        164,
+        165
+      ],
+      "radius": 0.006690361757031531,
+      "ell": 0.003793693519472327,
+      "audit": {
+        "status": "Solved",
+        "primal_relative_violation": 9.89142101559537e-12,
+        "stationarity_relative_residual": 1.6127308453155427e-10,
+        "complementarity_absolute": 2.088441507991835e-14,
+        "complementarity_relative": 2.2154644447544937e-10,
+        "predicted_Cars_CE": -9.395846201672398e-05,
+        "Cars_CE_slope": -9.426653237142179e-05,
+        "DTD_CE_slope": -7.693233691668038e-14,
+        "source_response": 0.0005602349369123531,
+        "cost": 0.006690361757097708,
+        "R": 0.006690361757031531,
+        "ell": 0.003793693519472327,
+        "passed": true
+      },
+      "groups": [
+        "transformer.resblocks.3.attn.out_proj.weight",
+        "transformer.resblocks.6.attn.out_proj.weight"
+      ],
+      "support_size_log_mismatch": 0.0,
+      "exact_support_size_match": true,
+      "random_seed": 202611160154,
+      "probe": 5,
+      "actual_parameter_cost": 0.006689692167932347,
+      "metrics": {
+        "DTD": {
+          "CE_change": 7.276405208647422e-05,
+          "CI95": [
+            1.8814804417602224e-05,
+            0.00013765987044184468
+          ],
+          "accuracy": 0.9525,
+          "KL": 2.2881186863752898e-07,
+          "selected_parent_minus_control_CE": -6.739731316898358e-05,
+          "parent_minus_control_CI95": [
+            -0.0003782851007677212,
+            0.00025455228544834943
+          ]
+        },
+        "Cars": {
+          "CE_change": -2.2972622852733694e-05,
+          "CI95": [
+            -6.379847628713313e-05,
+            1.558525135030355e-05
+          ],
+          "accuracy": 0.978,
+          "KL": 2.1102894876513172e-07,
+          "selected_parent_minus_control_CE": -0.0005022659291458752,
+          "parent_minus_control_CI95": [
+            -0.0008620046549256889,
+            -0.00017982452455892899
+          ]
+        }
+      },
+      "rho_cancel": 0.06783511534773229,
+      "DTD_joint_linear_energy": 4.569121390987802e-07,
+      "DTD_separate_linear_energy": 4.901623592796305e-07,
+      "finite_DTD_energy_reduction": 3.350929559670382e-08,
+      "finite_rho_energy_reduction": 0.06822697083264168,
+      "finite_additivity_error": 0.003949507102205428,
+      "eta_C_independent_response_norm": 0.9313061423429618,
+      "parameter_fraction_outside_G": 0.9970132373076813,
+      "belongs_to_Q_by_construction": true
+    }
+  ],
+  "individual_CIs_not_multiplicity_corrected": true,
+  "main_results_unchanged": true
+}
