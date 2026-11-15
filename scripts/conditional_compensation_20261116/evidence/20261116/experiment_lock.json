@@ -1,0 +1,38 @@
+{
+  "stage": "Conditional functional compensation, DTD protected, Cars CE descent",
+  "candidate_rank": 304,
+  "tensor_groups": 152,
+  "metric": "Parameter Euclidean I; original block support retained",
+  "radius_primary": 0.006690361757031531,
+  "radius_sensitivity_factors": [
+    0.3333333333333333,
+    1,
+    3.3333333333333335
+  ],
+  "source_norm_fractions": [
+    0.01,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "source_reference": "R*||J_D(-h_C/||h_C||)||, h_C in full304 coordinate space",
+  "source_CE_linear_budget": 0.0,
+  "source_budget_is_squared_for_energy_constraint": true,
+  "damping": "Zero if numerically nonsingular2x2;1e-8*block max eigenvalue if condition>1e10",
+  "pair_count": 11476,
+  "directed_pair_count": 22952,
+  "single_control_dimension": "at most2",
+  "conditional_pair_control_dimension": "at most2",
+  "unconstrained_pair4D_is_upper_bound_only": true,
+  "full304_is_upper_bound": true,
+  "true_fitness": "Per-task negative normalized top1 Pareto; CE gradient used only to construct directions",
+  "data_roles": "p0 local geometry and candidate selection;p4 frozen diagnostic;p5 frozen final training-side evaluation",
+  "p4_p5_previously_consumed_in_prior_stage": true,
+  "official_Test_opened": false,
+  "no_sparse_penalty": true,
+  "no_group_count_preset": true,
+  "no_trajectory_clustering": true,
+  "multi_group_expansion": "Only after pair/full-space comparison; no automatic grouping or EC-z learning",
+  "space_path": "/media/shangxueyuan/data1/compromise_geometry_20261115/private/space.pt",
+  "space_sha256": "c6aad66ba2c7f35e29e7ea80262ffc91ecbc104de2a536be696941a262e01f9b"
+}

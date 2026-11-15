@@ -1,0 +1,18 @@
+{
+  "index": 0,
+  "source_id": "linear_Global_EC_018",
+  "path": "/media/shangxueyuan/data1/conditional_compensation_20261116/private/anchor0/geometry.npz",
+  "p0_metrics": {
+    "DTD": {
+      "E": 0.19821996827191352,
+      "CE": 0.19428595202223586,
+      "accuracy": 0.97
+    },
+    "Cars": {
+      "E": 0.035142987480137604,
+      "CE": 0.11550535390903884,
+      "accuracy": 0.97
+    }
+  },
+  "seconds": 2447.7620717850514
+}

@@ -1,0 +1,16 @@
+{
+  "analyze.py": "7ab902fa17305049de925378b75653b0eb47a01cca9b61a5f340f76817c2acda",
+  "cache.py": "68f3e91a90e5ba22988323baa274d9896a20622d25b5c329d60138936fa19573",
+  "program.py": "215436fe2003be40db59ac93d2cf990f72479610b71567514838ca32b2dd7e97",
+  "run.py": "7dee4f2d75474daa7fcf0583934f75184f607c27ac4c686f83b793684321dcff",
+  "RUNNING.md": "f162cbe22fc4fdf463b66582cf011257b1c812b70bee8abaff17acf220576175",
+  "supplement.py": "491bd2d011b65cd622d3378d8880cf05d9d2f0f4b3c982a690b9954e211a2f59",
+  "test_program.py": "807f54a487b6f3c0263c56226059fc28d9b52510b8fb732f2a1a40eb47e2c370",
+  "evidence/20261116/anchor0_ready.json": "1a9c8a75a27b15b3ea77867053d01fcad1bc93ef64aff85f11d1ebcbe16d3839",
+  "evidence/20261116/anchor_selection_lock.json": "3f2129bffe0010535dccc3d408800d9f1d4808e75f770b058072e0dc1c374fc3",
+  "evidence/20261116/experiment_lock.json": "1a9db6433cc06cf4bc0b2758fac9aeb08241c2a2c501d98c5f300116e6a67b9a",
+  "evidence/20261116/extra_audit_status.json": "478b20966b76b3064ebf44a78edef326a3d3d0b08d514ec93e7588d4586898b3",
+  "evidence/20261116/extra_preregistration.json": "3ff1aa33f08ad3164c111fe573cd72ae843e4974df2cb917d6f4e156dafb88fc",
+  "evidence/20261116/publish_snapshot.json": "21de9b4b9bb4c747699d9025707e1da89e7b7b0d62e56481f9f4bf067b4568eb",
+  "evidence/20261116/status.json": "81557df89b7109a0b1afc789fdfe70da254938415adf31ee1f7d63d38f8f9940"
+}

@@ -1,0 +1,4 @@
+{
+  "stage": "waiting_for_main_candidate_lock; no_GPU_use",
+  "main_untouched": true
+}

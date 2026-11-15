@@ -1,0 +1,20 @@
+{
+  "time_utc": "2026-11-15T18:04:17.678716+00:00",
+  "main_program_unchanged": true,
+  "source_sha256": "491bd2d011b65cd622d3378d8880cf05d9d2f0f4b3c982a690b9954e211a2f59",
+  "random_seed": 202611160154,
+  "random_rule": "One outcome-independent matched pair per selected pair/budget/anchor; exact ordered tensor sizes and ranks when possible; deterministic nearest20 fallback explicitly mismatched",
+  "damping_grid_relative": [
+    0,
+    1e-10,
+    1e-08,
+    1e-06,
+    0.0001
+  ],
+  "undamped": "Minimum-norm numerical pseudoinverse at relative rank tolerance1e-10",
+  "controls": "Same-budget reoptimized driver/compensator, pinv/current/perturbed maps; main original-proportion ablations unchanged",
+  "freeze_trigger": "Main all_candidates_frozen exists, before first held model file if timing permits; actual timing recorded, never silently claimed",
+  "GPU_policy": "Wait for main complete and release before any supplemental model calls",
+  "p4_p5_status": "Previously consumed training-side probes, exploratory reused evaluation",
+  "p6": "Unopened; preserve candidate bank and protocol, no confirmation claim"
+}
