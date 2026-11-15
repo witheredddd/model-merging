@@ -1,0 +1,8 @@
+{
+  "stage": "CPU_reachability",
+  "anchor": 2,
+  "tau": 3.0,
+  "factor": 3.3333333333333335,
+  "records": 2374,
+  "seconds": 198.2186661302112
+}

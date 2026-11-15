@@ -1,8 +1,9 @@
 {
-  "stage": "CPU_reachability",
-  "anchor": 2,
-  "tau": 3.0,
-  "factor": 3.3333333333333335,
-  "records": 2374,
-  "seconds": 198.2186661302112
+  "stage": "functional_reachability_complete",
+  "time_utc": "2026-11-15T22:12:09.828608+00:00",
+  "independent_optimization_cases": 2160,
+  "audit_records": 2376,
+  "failed_final": 0,
+  "initial_failed_retained": 87,
+  "no_new_GPU_evaluation": true
 }

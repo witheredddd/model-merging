@@ -13,11 +13,13 @@
   "evidence/20261116/first_solver_attempt.json": "6a84a74989f7ec6f703e1a63ef0060d68149b3234a9db917bc44ebcda4c4e5c6",
   "evidence/20261116/functional_omissions.json": "fdbca1565e689d00646baa7d174412b5f1d1d862640c09e45ac9ab96dc19f845",
   "evidence/20261116/initial_run_source.py": "dcc6ea99c6704a5a520bc4a3ca46653b3deaa3d0357eaaa0bd6c2b1a045a050a",
+  "evidence/20261116/last_compute_status.json": "59d7cd71c6d6f596d25bbf9a19542984da4f95d139c8c64e50a34f78cc5f936f",
   "evidence/20261116/optimal_motion_spectra.json": "d779cdd21ab429050599c705e0f63a08dbf76c4167531bcb1eefab4a87415bc4",
   "evidence/20261116/programs.json": "9e91d4fc17a2e43f96b38c06ffc72461ffccb5112497617de7646cf9035397cb",
   "evidence/20261116/reachability.png": "649328966ba42285684e27034a17e436d6a7ada9a30305f116968238bf6175a6",
   "evidence/20261116/reachable_spectra.json": "c0968753ba32fad48ad74a4de84855fd7466d228aa547670236fe73c2bedd1d7",
   "evidence/20261116/REPORT.md": "08075f7e0770dfe4aa3406c5d4b782b38ef368ede05e387e77f5a489a303b779",
-  "evidence/20261116/status.json": "59d7cd71c6d6f596d25bbf9a19542984da4f95d139c8c64e50a34f78cc5f936f",
+  "evidence/20261116/SHA256SUMS.json": "7f476da4b1837b76ad21d75da06c8e3846953e96edd2548171c81b0798117a0b",
+  "evidence/20261116/status.json": "3448887e12421dbe7d9e4518f517f915802ccfd5e7b05f9b98e8719786de455f",
   "evidence/20261116/summary.json": "8fbdb3047528071cb659f6fb54ef0d739ec46fb05b195ef303a00a8259261b51"
 }

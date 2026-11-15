@@ -1,17 +1,20 @@
 {
-  "domain_rank_audit.json": "2b492b46c50f409d2b738069bb7a8b33c47a86175c51ddfc07334809c3cda033",
-  "initial_run_source.py": "dcc6ea99c6704a5a520bc4a3ca46653b3deaa3d0357eaaa0bd6c2b1a045a050a",
+  "analysis_complete.json": "a513de3574237f610eed14b0bf7b7a528e086e302a456785c889132913e82d03",
   "capacity_gaps.json": "6c8444315d07fea762ee49d7fbc34081bc32f1bb6b837d77fb9b84e4187d5afd",
-  "reachable_spectra.json": "c0968753ba32fad48ad74a4de84855fd7466d228aa547670236fe73c2bedd1d7",
   "complete.json": "1c2801f765a9d3063781d4efe2ea0fe70b7985a2bae688911c584a5e84548cf0",
-  "summary.json": "8fbdb3047528071cb659f6fb54ef0d739ec46fb05b195ef303a00a8259261b51",
-  "REPORT.md": "08075f7e0770dfe4aa3406c5d4b782b38ef368ede05e387e77f5a489a303b779",
+  "direction_normalized_motion_spectra.json": "bfb06b38f136d468f06bc37401659769326bdb11d05db174c6e2366778ff8f5d",
+  "domain_rank_audit.json": "2b492b46c50f409d2b738069bb7a8b33c47a86175c51ddfc07334809c3cda033",
   "existing_finite_validation.json": "865add4a8fd2b0fc824e6a77a83b556453542aaa471ee54cf3d6ba4c9d5ac418",
+  "experiment_lock.json": "32784ed1c0c02e24cb3520e14b1279090bbfb8a0204fa4fec50ddf4e6dd1e605",
+  "first_solver_attempt.json": "6a84a74989f7ec6f703e1a63ef0060d68149b3234a9db917bc44ebcda4c4e5c6",
   "functional_omissions.json": "fdbca1565e689d00646baa7d174412b5f1d1d862640c09e45ac9ab96dc19f845",
-  "status.json": "59d7cd71c6d6f596d25bbf9a19542984da4f95d139c8c64e50a34f78cc5f936f",
+  "initial_run_source.py": "dcc6ea99c6704a5a520bc4a3ca46653b3deaa3d0357eaaa0bd6c2b1a045a050a",
+  "last_compute_status.json": "59d7cd71c6d6f596d25bbf9a19542984da4f95d139c8c64e50a34f78cc5f936f",
   "optimal_motion_spectra.json": "d779cdd21ab429050599c705e0f63a08dbf76c4167531bcb1eefab4a87415bc4",
   "programs.json": "9e91d4fc17a2e43f96b38c06ffc72461ffccb5112497617de7646cf9035397cb",
-  "experiment_lock.json": "32784ed1c0c02e24cb3520e14b1279090bbfb8a0204fa4fec50ddf4e6dd1e605",
   "reachability.png": "649328966ba42285684e27034a17e436d6a7ada9a30305f116968238bf6175a6",
-  "first_solver_attempt.json": "6a84a74989f7ec6f703e1a63ef0060d68149b3234a9db917bc44ebcda4c4e5c6"
+  "reachable_spectra.json": "c0968753ba32fad48ad74a4de84855fd7466d228aa547670236fe73c2bedd1d7",
+  "REPORT.md": "08075f7e0770dfe4aa3406c5d4b782b38ef368ede05e387e77f5a489a303b779",
+  "status.json": "3448887e12421dbe7d9e4518f517f915802ccfd5e7b05f9b98e8719786de455f",
+  "summary.json": "8fbdb3047528071cb659f6fb54ef0d739ec46fb05b195ef303a00a8259261b51"
 }
