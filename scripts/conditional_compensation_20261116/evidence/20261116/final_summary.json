@@ -1,0 +1,142 @@
+{
+  "snapshot_time_utc": "2026-11-15T21:22:23.643268+00:00",
+  "main_complete": true,
+  "supplement_complete": true,
+  "main_evaluation_points": 837,
+  "supplement_evaluation_points": 330,
+  "supplement_models": 165,
+  "data_roles": {
+    "p0": "discovery and selection",
+    "p4": "reused training-side stability",
+    "p5": "reused training-side heldout, not fresh blind",
+    "p6": "unopened"
+  },
+  "comparison_scope": "Cars CE only; counts do not imply Pareto dominance, multiple-testing significance or population generalization",
+  "supplement_p5_comparisons": {
+    "matched_random_pair": {
+      "n": 24,
+      "parent_Cars_CE_lower": 23,
+      "equal": 0,
+      "higher": 1,
+      "individual_uncorrected_CI_wholly_favors_parent": 20,
+      "max_abs_CE_difference": 0.004427785749958332
+    },
+    "same_budget_single": {
+      "n": 48,
+      "parent_Cars_CE_lower": 41,
+      "equal": 0,
+      "higher": 7,
+      "individual_uncorrected_CI_wholly_favors_parent": 33,
+      "max_abs_CE_difference": 0.004129879901352685
+    },
+    "damping_pinv": {
+      "n": 24,
+      "parent_Cars_CE_lower": 2,
+      "equal": 20,
+      "higher": 2,
+      "individual_uncorrected_CI_wholly_favors_parent": 1,
+      "max_abs_CE_difference": 6.132519298711524e-08
+    },
+    "damping_perturbed": {
+      "n": 24,
+      "parent_Cars_CE_lower": 13,
+      "equal": 0,
+      "higher": 11,
+      "individual_uncorrected_CI_wholly_favors_parent": 2,
+      "max_abs_CE_difference": 3.819609001196132e-07
+    }
+  },
+  "primary_p5_comparisons": {
+    "matched_single": {
+      "n": 24,
+      "pair_Cars_CE_lower": 20,
+      "individual_uncorrected_CI_wholly_favors_pair": 12,
+      "pair_both_CE_lower": 6
+    },
+    "global2D_local": {
+      "n": 24,
+      "pair_Cars_CE_lower": 23,
+      "individual_uncorrected_CI_wholly_favors_pair": 17,
+      "pair_both_CE_lower": 15
+    },
+    "joint4D_upper": {
+      "n": 24,
+      "pair_Cars_CE_lower": 8,
+      "individual_uncorrected_CI_wholly_favors_pair": 2,
+      "pair_both_CE_lower": 2
+    },
+    "full304_upper": {
+      "n": 24,
+      "pair_Cars_CE_lower": 0,
+      "individual_uncorrected_CI_wholly_favors_pair": 0,
+      "pair_both_CE_lower": 0
+    }
+  },
+  "strict_budget_preselected_pairs": [
+    {
+      "anchor": 0,
+      "id": "a0_selected1_r1",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "DTD_linear_rho_cancel": 0.8310544985280958,
+      "DTD_finite_rho_cancel": 0.8308928936360962,
+      "Cars_CE_change": -0.00012764053003151777,
+      "DTD_CE_change": -1.131408559162447e-05,
+      "Cars_accuracy_change": 0.0,
+      "eta_C_independent_norm_fraction": 0.8685562120944611
+    },
+    {
+      "anchor": 1,
+      "id": "a1_selected1_r1",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "DTD_linear_rho_cancel": 0.8318378173625037,
+      "DTD_finite_rho_cancel": 0.831675937763842,
+      "Cars_CE_change": -0.0001460272465825806,
+      "DTD_CE_change": -9.339570461607971e-06,
+      "Cars_accuracy_change": 0.0,
+      "eta_C_independent_norm_fraction": 0.8811413618713426
+    },
+    {
+      "anchor": 2,
+      "id": "a2_selected1_r1",
+      "groups": [
+        "transformer.resblocks.9.attn.out_proj.weight",
+        "transformer.resblocks.9.attn.out_proj.bias"
+      ],
+      "DTD_linear_rho_cancel": 0.8062754731256258,
+      "DTD_finite_rho_cancel": 0.806632426349758,
+      "Cars_CE_change": -0.0002770255507437895,
+      "DTD_CE_change": -4.809793017088644e-06,
+      "Cars_accuracy_change": 0.0020000000000000018,
+      "eta_C_independent_norm_fraction": 0.8768225884985679
+    }
+  ],
+  "cross_anchor_p5": {
+    "n": 45,
+    "Cars_CE_down": 45,
+    "DTD_CE_nonincreasing": 22,
+    "not_a_new_anchor_source_budget_feasibility_claim": true
+  },
+  "services": {
+    "conditional-pilot-20261116": {
+      "MainPID": "0",
+      "Result": "success",
+      "ActiveState": "inactive"
+    },
+    "conditional-audit-20261116": {
+      "MainPID": "0",
+      "Result": "success",
+      "ActiveState": "inactive"
+    },
+    "conditional-extra-audit-20261116": {
+      "MainPID": "0",
+      "Result": "success",
+      "ActiveState": "inactive"
+    }
+  }
+}

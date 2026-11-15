@@ -1,6 +1,6 @@
 # 条件功能补偿：固定锚点的第二阶段先导
 
-Main result update: completed at 2026-11-16 04:23 Asia/Shanghai. All 3 anchors, 279 models and 837 evaluation points are saved; paired audit has 48 records. Supplementary controls are still running. extra_validation_audit.partial.json is explicitly incomplete. See [main report](evidence/20261116/REPORT.md), finite_results.json, and publish_snapshot.json in the same evidence directory. The historical 02:26 snapshot is preserved as publish_snapshot_0226.json. Raw checkpoints, full Jacobians and images remain on A100.
+FINAL update: main and supplemental audits completed. Main: 3 anchors, 279 models, 837 evaluation points. Supplement: 165 models, 330 evaluation points. Read [final_summary.json](evidence/20261116/final_summary.json) for complete counts and scope, and extra_audit_complete.json for the completion marker. extra_validation_audit.json is complete; the earlier .partial.json and publish_snapshot files are historical snapshots, not live status. Main report and paired statistics remain in the same evidence directory. p4/p5 were reused; p6 remains unopened. Cars-only wins are not Pareto-dominance claims.
 
 本目录是运行源码与状态证据快照。执行还依赖服务器既有compromise_geometry_20261115的space/context和其CLIP运行环境，不能把本目录单独视为完整离线复现包。
 
