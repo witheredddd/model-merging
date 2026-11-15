@@ -1,0 +1,27 @@
+{
+  "mode_ranks": [
+    1,
+    3
+  ],
+  "second_mode_coefficients": [
+    0.006640797057447844,
+    7.810609875392937e-06,
+    0.0008127991112850012
+  ],
+  "second_update_span_relative_error": 7.144959024837502e-15,
+  "full_visual_parameters": 86192640,
+  "first_two_trajectory_changes": [
+    {
+      "CE_target_change": -4.038106748038839e-06,
+      "CE_protected_change": -0.0021621634823153213,
+      "active_controls": 1
+    },
+    {
+      "CE_target_change": -0.0021426809090455967,
+      "CE_protected_change": -4.588785905132453e-06,
+      "active_controls": 3
+    }
+  ],
+  "suite_complete": false,
+  "time_utc": "2026-11-15T23:02:18.625017+00:00"
+}
