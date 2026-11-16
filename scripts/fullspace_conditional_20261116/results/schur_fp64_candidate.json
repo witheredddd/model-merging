@@ -1,0 +1,151 @@
+{
+  "rows": [
+    {
+      "target": "DTD",
+      "protected": "Cars",
+      "gamma": 0.1,
+      "lambda_physical": 943.1876210105444,
+      "target_info": {
+        "defined": true,
+        "gradient_norm": 22.026770347413215,
+        "reference_CE_slope": -22.026770347413215,
+        "reference_is_not_executed_update": true
+      },
+      "solver": {
+        "solver": "CG exact output Schur for explicit Euclidean M",
+        "solver_info": 80,
+        "parameter_dimension": 86192640,
+        "numerical_system_dimension": 68200,
+        "response_relative_residual": 0.005224935801079179,
+        "response_residual_norm": 0.29175360522296245,
+        "stationarity_residual_norm": 17.09698723255771,
+        "stationarity_relative_residual": 0.00911129710899242,
+        "target_constraint_numerically_satisfied": false,
+        "parameter_norm": 1.0896026126771188,
+        "metric_certificate": "Identity SPD",
+        "target_ridge": 0.0,
+        "structural_rank_truncation": false,
+        "note": "Smaller output linear system represents a full-P parameter solution; no fixed parameter dictionary"
+      },
+      "protected_response_energy": 337.550333622357,
+      "reference_protected_energy": 931.202156797626,
+      "target_CE_slope": -22.01838632188845,
+      "finite": [
+        {
+          "scale": 0.001,
+          "tasks": {
+            "DTD": {
+              "CE": 0.181123812041726,
+              "Top1": 0.96,
+              "CE_change": -0.004535322725011032,
+              "Top1_change": 0.0050000000000000044,
+              "KL": 0.0004161908777129202
+            },
+            "Cars": {
+              "CE": 0.08065734488651456,
+              "Top1": 0.97,
+              "CE_change": 0.0014048559620979534,
+              "Top1_change": 0.0,
+              "KL": 0.00036405048157539023
+            }
+          }
+        },
+        {
+          "scale": 0.01,
+          "tasks": {
+            "DTD": {
+              "CE": 0.28948715448691936,
+              "Top1": 0.95,
+              "CE_change": 0.10382801972018232,
+              "Top1_change": -0.0050000000000000044,
+              "KL": 0.0918829936262963
+            },
+            "Cars": {
+              "CE": 0.3354621405830444,
+              "Top1": 0.9,
+              "CE_change": 0.2562096516586278,
+              "Top1_change": -0.06999999999999995,
+              "KL": 0.22167429523458543
+            }
+          }
+        },
+        {
+          "scale": 0.1,
+          "tasks": {
+            "DTD": {
+              "CE": 4.2023602756141605,
+              "Top1": 0.085,
+              "CE_change": 4.016701140847424,
+              "Top1_change": -0.87,
+              "KL": 3.8440013931797283
+            },
+            "Cars": {
+              "CE": 8.195379640310327,
+              "Top1": 0.006666666666666667,
+              "CE_change": 8.11612715138591,
+              "Top1_change": -0.9633333333333333,
+              "KL": 8.073598644459775
+            }
+          }
+        },
+        {
+          "scale": 1.0,
+          "tasks": {
+            "DTD": {
+              "CE": 4.863915809392325,
+              "Top1": 0.025,
+              "CE_change": 4.6782566746255885,
+              "Top1_change": -0.9299999999999999,
+              "KL": 4.506371571519678
+            },
+            "Cars": {
+              "CE": 8.4631416266724,
+              "Top1": 0.0033333333333333335,
+              "CE_change": 8.383889137747984,
+              "Top1_change": -0.9666666666666667,
+              "KL": 8.34172634436481
+            }
+          }
+        }
+      ],
+      "numerical_iterations": 80,
+      "motion_file": "/media/shangxueyuan/data1/fullspace_fp64_schur_check_20261116/DTD_gamma0.1.pt"
+    }
+  ],
+  "scales": {
+    "DTD": 12415.851120372574,
+    "Cars": 9431.876210105444
+  },
+  "spectrum_history": {
+    "DTD": [
+      3117.9600438010766,
+      10877.12351012597,
+      12144.551140943604,
+      12352.363838686988,
+      12399.513942671329,
+      12411.561821696934,
+      12414.76037362176,
+      12415.6195306868
+    ],
+    "Cars": [
+      3768.3793136009776,
+      6665.559121175795,
+      7422.934218583074,
+      7788.321719971031,
+      8058.536913912679,
+      8328.00579685622,
+      8641.485633421024,
+      9015.447644007638
+    ]
+  },
+  "elapsed_seconds": 1161.355549375061,
+  "operator_counts": {
+    "JVP_calls": 183,
+    "VJP_calls": 182,
+    "seconds": {
+      "J": 569.0193287907168,
+      "JT": 523.9626533854753
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  }
+}

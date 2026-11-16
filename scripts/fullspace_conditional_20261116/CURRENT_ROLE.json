@@ -1,0 +1,13 @@
+{
+  "research_object": "Full-parameter conditional lifting of an anchor-tagged family of task functional demands",
+  "CE_unit_gradient_is_unique_demand": false,
+  "general_parameter_metric": "Explicit SPD operator supplied to ConditionalMotion",
+  "running_legacy_core_test_role": "One CE-induced demand per direction, Euclidean M explicitly selected in an earlier user instruction; numerical baseline only",
+  "new_demand_sources_implemented": ["CE unit-gradient response", "Current-anchor full-motion JVP", "Current-anchor expert probability product-sphere Log"],
+  "expert_log_parameter_reachability_guaranteed": false,
+  "minimal_support_delta_or_fixed_group_count_added": false,
+  "new_structure_learning_or_EC_launched": false,
+  "numerical_acceptance_complete": false,
+  "derivative_status": "FP64 consistency measured on two tasks and three complete directions; full error curves retained",
+  "open_numerical_issues": ["FP32 derivative resolution is direction/step dependent; FP64 reference is available", "Three FP32 full KKT candidates exhausted 80 iterations; full-size FP64 Schur convergence remains under validation"]
+}

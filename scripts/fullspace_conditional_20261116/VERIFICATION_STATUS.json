@@ -1,0 +1,23 @@
+{
+  "architecture": "frozen",
+  "stage_A": "closed",
+  "parameter_domain": "All 86192640 common visual parameters, 152 tensors, no dictionary or support filter",
+  "software_tests_passed": 10,
+  "derivatives": {
+    "status": "FP64 validated on measured directions; raw curves retained, not an all-direction theorem",
+    "tasks": ["DTD", "Cars"],
+    "direction_types": ["full random", "CE gradient", "full expert difference"],
+    "central_difference_steps_per_case": 8,
+    "best_FP64_relative_errors_range": [1.4781765192609331e-9, 4.2204779820865604e-7]
+  },
+  "conditional_solver": {
+    "small_dense_reference_and_KKT_Schur_equivalence": "passed",
+    "three_saved_FP32_full_size_KKT_candidates": "not_converged_in_80_iterations",
+    "full_size_FP64_Schur_convergence": "not_converged_in_80_iterations; primal0.00522494 dual0.00911130",
+    "output_diagonal_preconditioned_FP64_Schur": "running_same_80_iteration_budget"
+  },
+  "demand_consistency": "raw amplitude retained; task/probe/anchor/sample-lock/head/embedding/precision identity checked; source reachability separated from measured residual",
+  "structure_learning_started": false,
+  "EC_started": false,
+  "complete_numerical_acceptance": false
+}

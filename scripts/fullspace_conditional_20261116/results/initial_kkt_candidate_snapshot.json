@@ -1,0 +1,161 @@
+{
+  "rows": [
+    {
+      "target": "DTD",
+      "protected": "Cars",
+      "gamma": 0.01,
+      "lambda_physical": 94.32514646920336,
+      "target_info": {
+        "defined": true,
+        "gradient_norm": 22.027628079317427,
+        "reference_CE_slope": -22.027628079317427,
+        "reference_is_not_executed_update": true
+      },
+      "solver": {
+        "solver": "MINRES on full KKT",
+        "solver_info": 80,
+        "solver_reported_convergence": false,
+        "parameter_dimension": 86192640,
+        "output_dimension": 9400,
+        "response_residual_norm": 0.47963478199841275,
+        "response_relative_residual": 0.008584759366525984,
+        "stationarity_residual_norm": 37.25473908324824,
+        "stationarity_relative_residual": 0.07653658365679292,
+        "achieved_response_norm": 55.87116429789868,
+        "target_response_norm": 55.870498114207216,
+        "parameter_norm": 1.3511107217761102,
+        "regularization": 94.32514646920336,
+        "protection_weights": {
+          "Cars": 1.0
+        },
+        "numerical_block_scaling": {
+          "parameter": 9526.83979338954,
+          "response": 111.62126650953994
+        },
+        "objective": 132.6393038519757,
+        "reachability": "Residual is reported; solver exhaustion is not proof of unreachability",
+        "search_domain": "All common visual parameters, not an expert dictionary"
+      },
+      "protected_response_energy": 93.08802157728495,
+      "reference_protected_energy": 931.3218698147624,
+      "target_CE_slope": -22.023224739223863,
+      "finite": [
+        {
+          "scale": 0.001,
+          "tasks": {
+            "DTD": {
+              "CE": 0.18122694109223922,
+              "Top1": 0.96,
+              "CE_change": -0.004432251640533319,
+              "Top1_change": 0.0050000000000000044,
+              "KL": 0.0003746338466869143
+            },
+            "Cars": {
+              "CE": 0.08010917077084415,
+              "Top1": 0.97,
+              "CE_change": 0.0008567334145738459,
+              "Top1_change": 0.0,
+              "KL": 0.0003223911901598459
+            }
+          }
+        },
+        {
+          "scale": 0.01,
+          "tasks": {
+            "DTD": {
+              "CE": 0.26798339001042537,
+              "Top1": 0.955,
+              "CE_change": 0.08232419727765283,
+              "Top1_change": 0.0,
+              "KL": 0.07355986771392996
+            },
+            "Cars": {
+              "CE": 0.23036307401880354,
+              "Top1": 0.93,
+              "CE_change": 0.15111063666253324,
+              "Top1_change": -0.039999999999999925,
+              "KL": 0.12643687167010312
+            }
+          }
+        },
+        {
+          "scale": 0.1,
+          "tasks": {
+            "DTD": {
+              "CE": 4.150986442198797,
+              "Top1": 0.1,
+              "CE_change": 3.9653272494660246,
+              "Top1_change": -0.855,
+              "KL": 3.791896066013667
+            },
+            "Cars": {
+              "CE": 8.167957861887446,
+              "Top1": 0.006666666666666667,
+              "CE_change": 8.088705424531176,
+              "Top1_change": -0.9633333333333333,
+              "KL": 8.046998957695202
+            }
+          }
+        },
+        {
+          "scale": 1.0,
+          "tasks": {
+            "DTD": {
+              "CE": 4.876957074116816,
+              "Top1": 0.02,
+              "CE_change": 4.691297881384044,
+              "Top1_change": -0.9349999999999999,
+              "KL": 4.522736821656346
+            },
+            "Cars": {
+              "CE": 8.387407544240157,
+              "Top1": 0.0033333333333333335,
+              "CE_change": 8.308155106883886,
+              "Top1_change": -0.9666666666666667,
+              "KL": 8.26849341752662
+            }
+          }
+        }
+      ],
+      "numerical_iterations": 80,
+      "motion_file": "/media/shangxueyuan/data1/fullspace_conditional_core_20261116_r1/DTD_gamma0.01.pt"
+    }
+  ],
+  "scales": {
+    "DTD": 12459.30713719374,
+    "Cars": 9432.514646920336
+  },
+  "spectrum_history": {
+    "DTD": [
+      3121.51297651394,
+      10912.051667621738,
+      12186.85432501717,
+      12395.77374250138,
+      12443.03795915243,
+      12455.049293472895,
+      12458.236478609844,
+      12459.080343360714
+    ],
+    "Cars": [
+      3768.3745201346846,
+      6665.563194075711,
+      7422.9459439620405,
+      7788.37938934192,
+      8058.685217781899,
+      8328.282641816571,
+      8641.924494161616,
+      9016.031481022233
+    ]
+  },
+  "elapsed_seconds": 1221.171116353944,
+  "operator_counts": {
+    "JVP_calls": 183,
+    "VJP_calls": 180,
+    "seconds": {
+      "J": 444.1849801139906,
+      "JT": 411.65055871522054
+    },
+    "peak_allocated_bytes": 7958544384,
+    "peak_reserved_bytes": 9258926080
+  }
+}
