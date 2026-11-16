@@ -1,0 +1,152 @@
+[
+  {
+    "probe": 0,
+    "step": 0,
+    "metrics": {
+      "DTD": {
+        "CE_change": -0.0021621634823153213,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -4.038106748038839e-06,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": 0.0
+  },
+  {
+    "probe": 0,
+    "step": 1,
+    "metrics": {
+      "DTD": {
+        "CE_change": -0.0021426809090455967,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -4.588785905132453e-06,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": 0.0
+  },
+  {
+    "probe": 0,
+    "step": 2,
+    "metrics": {
+      "DTD": {
+        "CE_change": -5.073227355434362e-06,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -0.0003370743840423601,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": 0.0
+  },
+  {
+    "probe": 0,
+    "step": 3,
+    "metrics": {
+      "DTD": {
+        "CE_change": -0.0002692081908544641,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -9.34815150982482e-08,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": 0.0
+  },
+  {
+    "probe": 0,
+    "step": 4,
+    "metrics": {
+      "DTD": {
+        "CE_change": -1.9899366593967294e-06,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -0.00022799549852037249,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": 0.0
+  },
+  {
+    "probe": 4,
+    "step": 0,
+    "metrics": {
+      "DTD": {
+        "CE_change": -0.0030717317282774603,
+        "Top1_change": 0.0050000000000000044
+      },
+      "Cars": {
+        "CE_change": -8.964864039112674e-05,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": null
+  },
+  {
+    "probe": 4,
+    "step": 1,
+    "metrics": {
+      "DTD": {
+        "CE_change": -0.0030479159825978486,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -8.704172480837602e-05,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": null
+  },
+  {
+    "probe": 4,
+    "step": 2,
+    "metrics": {
+      "DTD": {
+        "CE_change": -1.9238199882753992e-05,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -0.00016745714106070064,
+        "Top1_change": -0.0033333333333332993
+      }
+    },
+    "saved_response_error": null
+  },
+  {
+    "probe": 4,
+    "step": 3,
+    "metrics": {
+      "DTD": {
+        "CE_change": -0.00038316313202318986,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -1.1054895669784792e-05,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": null
+  },
+  {
+    "probe": 4,
+    "step": 4,
+    "metrics": {
+      "DTD": {
+        "CE_change": 4.101568651143639e-05,
+        "Top1_change": 0.0
+      },
+      "Cars": {
+        "CE_change": -9.495972860616708e-05,
+        "Top1_change": 0.0
+      }
+    },
+    "saved_response_error": null
+  }
+]

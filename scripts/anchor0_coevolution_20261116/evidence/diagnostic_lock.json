@@ -1,0 +1,21 @@
+{
+  "scope": "Parameter and actual functional coevolution only; no counterfactual optimization or training",
+  "full304_refresh": false,
+  "coordinate_JVPs": false,
+  "expected_mode_task_JVP_requests": 50,
+  "fixed_joint_normalization": {
+    "DTD": 5.567890824042325,
+    "Cars": 4.23516118238015
+  },
+  "normalization_definition": "Initial anchor Frobenius norms sqrt(trace(K_D)),sqrt(trace(K_C)); same constants for p0 and p4",
+  "input_checkpoint_hashes": [
+    "86173745b762bb5d8208ea897efbb9b87fb5efc187b4a6717a9b468f705db296",
+    "d0631e65a1b650b1dae7daa5191219a00bffce1508177239423186d8cdb45986",
+    "f6951df0009c90da82bd5766ba963bd5bf9e2ca66aaf4111b9ed068d6397c06d",
+    "1fc2493399582c33a9fb530a4f048d668e0914dea58913a538c9517fee015357",
+    "b721d55d082ec462ff3fb93261b45999b2a20d83088fda8646edbccb40c30720"
+  ],
+  "cache_checkpoint_alignment_validated": true,
+  "p4": "Previously used exploratory stability data; finite trajectories only, no new p4 mode JVPs",
+  "p6_and_Test_opened": false
+}

@@ -1,0 +1,28 @@
+{
+  "done": true,
+  "training_started": false,
+  "coordinate_JVP_calls": 0,
+  "full304_refreshes": 0,
+  "mode_task_JVP_requests": 50,
+  "mode_JVP_cache_hits": 18,
+  "new_mode_task_JVPs": 32,
+  "cost": {
+    "task_JVP_calls": 32,
+    "dataset_forward_calls": 24,
+    "forward_batches": 476,
+    "forward_images": 14000,
+    "full_calibrations": 0,
+    "synchronized_seconds": 81.99106668867171,
+    "cuda_event_seconds": 81.99118774414063,
+    "solver_calls": 0,
+    "full_dimension_solver_calls": 0,
+    "counterfactual_teacher_hits": 0,
+    "counterfactual_teacher_misses": 0,
+    "dataset_forward_calls_batches": 204,
+    "task_JVP_calls_batches": 272,
+    "wall_seconds": 87.58651926601306,
+    "timing_definition": "CUDA event intervals and synchronized wrapper wall time; not summed hardware kernel-active time"
+  },
+  "wall_seconds_including_input_checks": 129.03177025308833,
+  "original_checkpoint_hashes_unchanged": true
+}

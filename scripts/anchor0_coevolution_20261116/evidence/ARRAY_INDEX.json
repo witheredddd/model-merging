@@ -1,0 +1,37 @@
+{
+  "mode_response_step1.npz": {
+    "bytes": 3180182,
+    "sha256": "b3e306dcd2edbac106e9897561c5180fac56ee06a8367b8fa7457f32e8330428",
+    "server_path": "/media/shangxueyuan/data1/anchor0_coevolution_20261116/mode_response_step1.npz"
+  },
+  "mode_response_step0.npz": {
+    "bytes": 1059327,
+    "sha256": "b11375f14b2d7e81606bd36529983f7cdd93f312c80e0569b012a2c39129343f",
+    "server_path": "/media/shangxueyuan/data1/anchor0_coevolution_20261116/mode_response_step0.npz"
+  },
+  "actual_trajectory_p0.npz": {
+    "bytes": 5110904,
+    "sha256": "4444fdabc48f8c7909649fa43b1392d3d53b9f06086ad797d45d63cf583f2896",
+    "server_path": "/media/shangxueyuan/data1/anchor0_coevolution_20261116/actual_trajectory_p0.npz"
+  },
+  "mode_response_step4.npz": {
+    "bytes": 9540674,
+    "sha256": "aa65953efee7739fa6556f5c6421e86f2b95caea8f6d119c8f9df4b759057383",
+    "server_path": "/media/shangxueyuan/data1/anchor0_coevolution_20261116/mode_response_step4.npz"
+  },
+  "actual_trajectory_p4.npz": {
+    "bytes": 5111162,
+    "sha256": "4b71d2d59e20d5d7e91f7ee02d02a55e7bc6332d38cc5987a69de85745986851",
+    "server_path": "/media/shangxueyuan/data1/anchor0_coevolution_20261116/actual_trajectory_p4.npz"
+  },
+  "mode_response_step2.npz": {
+    "bytes": 5301115,
+    "sha256": "eae3758e9bf9e4a91bfe9228b7b4b90a435dee1d7b8c1eb9fee92ec25df8cc26",
+    "server_path": "/media/shangxueyuan/data1/anchor0_coevolution_20261116/mode_response_step2.npz"
+  },
+  "mode_response_step3.npz": {
+    "bytes": 7421586,
+    "sha256": "627e4b5688777dc00bcc09d372caf9c3d6f2e5d44c9596d1dc3ed7cb1913fb6b",
+    "server_path": "/media/shangxueyuan/data1/anchor0_coevolution_20261116/mode_response_step3.npz"
+  }
+}

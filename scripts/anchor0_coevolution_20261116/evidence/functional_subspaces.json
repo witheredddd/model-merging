@@ -1,0 +1,62 @@
+[
+  {
+    "step": 1,
+    "scope": "Same persistent modes across adjacent parameter points",
+    "rank_A": 1,
+    "rank_B": 1,
+    "principal_angles_degrees": [
+      0.6602129893835207
+    ],
+    "matched_sin_Frobenius": 0.011522635435060562,
+    "projector_Frobenius": 0.016295467306543455,
+    "unmatched_dimensions": 0
+  },
+  {
+    "step": 2,
+    "scope": "Same persistent modes across adjacent parameter points",
+    "rank_A": 3,
+    "rank_B": 3,
+    "principal_angles_degrees": [
+      0.13302195712353732,
+      0.4877293065399893,
+      0.689331325911923
+    ],
+    "matched_sin_Frobenius": 0.014919489440232714,
+    "projector_Frobenius": 0.02109934431005928,
+    "unmatched_dimensions": 0
+  },
+  {
+    "step": 3,
+    "scope": "Same persistent modes across adjacent parameter points",
+    "rank_A": 5,
+    "rank_B": 5,
+    "principal_angles_degrees": [
+      0.06435805980177495,
+      0.28250361009928143,
+      0.3163617813274397,
+      0.3928821386549242,
+      0.737480183340277
+    ],
+    "matched_sin_Frobenius": 0.016393411384136452,
+    "projector_Frobenius": 0.023183784712992893,
+    "unmatched_dimensions": 0
+  },
+  {
+    "step": 4,
+    "scope": "Same persistent modes across adjacent parameter points",
+    "rank_A": 7,
+    "rank_B": 7,
+    "principal_angles_degrees": [
+      0.016480294448712882,
+      0.03388364684669827,
+      0.042246544857296134,
+      0.04342566909550232,
+      0.04674128219624619,
+      0.06425129258803501,
+      0.08592086634652385
+    ],
+    "matched_sin_Frobenius": 0.0023921597383153607,
+    "projector_Frobenius": 0.0033830247453869094,
+    "unmatched_dimensions": 0
+  }
+]

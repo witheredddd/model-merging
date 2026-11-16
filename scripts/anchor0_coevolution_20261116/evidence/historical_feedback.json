@@ -1,0 +1,227 @@
+{
+  "cases": [
+    {
+      "step": 2,
+      "with_history": [
+        [
+          "transformer.resblocks.9.attn.out_proj.weight",
+          []
+        ],
+        [
+          "transformer.resblocks.6.ln_2.weight",
+          [
+            "transformer.resblocks.8.mlp.c_fc.weight",
+            "transformer.resblocks.9.attn.out_proj.weight"
+          ]
+        ]
+      ],
+      "without_history": [
+        [
+          "transformer.resblocks.9.attn.out_proj.weight",
+          []
+        ],
+        [
+          "transformer.resblocks.6.ln_2.weight",
+          [
+            "transformer.resblocks.8.mlp.c_fc.weight",
+            "transformer.resblocks.9.attn.out_proj.weight"
+          ]
+        ]
+      ],
+      "different": false,
+      "gate_audit": [
+        {
+          "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+          "novelty": 0.9852669015077188,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "novelty": 0.9991991863532053,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9995850756383687,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.9994776370107548,
+          "blocked": false
+        }
+      ],
+      "scope": "Same-point CPU counterfactual, never used for actual updates"
+    },
+    {
+      "step": 3,
+      "with_history": [
+        [
+          "transformer.resblocks.6.ln_2.weight",
+          []
+        ],
+        [
+          "transformer.resblocks.7.ln_2.bias",
+          []
+        ]
+      ],
+      "without_history": [
+        [
+          "transformer.resblocks.6.ln_2.weight",
+          []
+        ],
+        [
+          "transformer.resblocks.7.ln_2.bias",
+          []
+        ]
+      ],
+      "different": false,
+      "gate_audit": [
+        {
+          "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+          "novelty": 0.9852669015077188,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "novelty": 0.9991991863532053,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9995850756383687,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.9994776370107548,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9852895512183536,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.9693910289533326,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.969390602689738,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9941902698338708,
+          "blocked": false
+        }
+      ],
+      "scope": "Same-point CPU counterfactual, never used for actual updates"
+    },
+    {
+      "step": 4,
+      "with_history": [
+        [
+          "transformer.resblocks.7.ln_2.bias",
+          [
+            "transformer.resblocks.7.attn.in_proj_bias",
+            "transformer.resblocks.7.mlp.c_fc.weight",
+            "transformer.resblocks.6.mlp.c_proj.weight"
+          ]
+        ],
+        [
+          "transformer.resblocks.6.ln_2.weight",
+          [
+            "transformer.resblocks.7.attn.in_proj_bias",
+            "transformer.resblocks.6.mlp.c_proj.bias"
+          ]
+        ]
+      ],
+      "without_history": [
+        [
+          "transformer.resblocks.7.ln_2.bias",
+          [
+            "transformer.resblocks.7.attn.in_proj_bias",
+            "transformer.resblocks.7.mlp.c_fc.weight",
+            "transformer.resblocks.6.mlp.c_proj.weight"
+          ]
+        ],
+        [
+          "transformer.resblocks.6.ln_2.weight",
+          [
+            "transformer.resblocks.7.attn.in_proj_bias",
+            "transformer.resblocks.6.mlp.c_proj.bias"
+          ]
+        ]
+      ],
+      "different": false,
+      "gate_audit": [
+        {
+          "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+          "novelty": 0.9852669015077188,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "novelty": 0.9991991863532053,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9995850756383687,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.9994776370107548,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9852895512183536,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.9693910289533326,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.969390602689738,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9941902698338708,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.9186321846688071,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9895597550027175,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "novelty": 0.9748355341735667,
+          "blocked": false
+        },
+        {
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "novelty": 0.9908565499616476,
+          "blocked": false
+        }
+      ],
+      "scope": "Same-point CPU counterfactual, never used for actual updates"
+    }
+  ],
+  "changed_choices": 0,
+  "scope": "r2 steps2..4 logged same-point with/without-history comparisons; r1 gaps not invented"
+}

@@ -1,0 +1,584 @@
+{
+  "checkpoints": [
+    {
+      "step": 0,
+      "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step000.pt",
+      "sha256": "86173745b762bb5d8208ea897efbb9b87fb5efc187b4a6717a9b468f705db296",
+      "rank": 1,
+      "before_alignment_error": 0.0,
+      "z": [
+        0.006690361717763959
+      ],
+      "span_residual": 4.210307543803617e-16,
+      "parameter_update_outside_current_old_modes": 1.0,
+      "new_modes": [
+        0
+      ],
+      "supports": [
+        {
+          "mode": 0,
+          "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+          "compensators": [
+            "transformer.resblocks.7.mlp.c_proj.bias",
+            "proj",
+            "transformer.resblocks.11.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.out_proj.weight"
+          ],
+          "source_task": "Cars"
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step001.pt",
+      "sha256": "d0631e65a1b650b1dae7daa5191219a00bffce1508177239423186d8cdb45986",
+      "rank": 3,
+      "before_alignment_error": 0.0,
+      "z": [
+        0.006640797057447855,
+        7.810609875399599e-06,
+        0.0008127991112850018
+      ],
+      "span_residual": 4.2335080432386813e-16,
+      "parameter_update_outside_current_old_modes": 0.12149837739327159,
+      "new_modes": [
+        1,
+        2
+      ],
+      "supports": [
+        {
+          "mode": 0,
+          "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+          "compensators": [
+            "transformer.resblocks.7.mlp.c_proj.bias",
+            "proj",
+            "transformer.resblocks.11.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.out_proj.weight"
+          ],
+          "source_task": "Cars"
+        },
+        {
+          "mode": 1,
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "compensators": [
+            "transformer.resblocks.9.attn.out_proj.bias",
+            "transformer.resblocks.10.attn.in_proj_weight",
+            "transformer.resblocks.7.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.in_proj_weight",
+            "transformer.resblocks.7.attn.out_proj.bias",
+            "transformer.resblocks.11.attn.out_proj.weight",
+            "transformer.resblocks.7.ln_2.bias",
+            "transformer.resblocks.6.ln_2.weight"
+          ],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 2,
+          "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+          "compensators": [
+            "transformer.resblocks.5.mlp.c_fc.weight",
+            "transformer.resblocks.8.attn.out_proj.weight",
+            "transformer.resblocks.11.attn.in_proj_bias",
+            "transformer.resblocks.10.attn.in_proj_weight",
+            "transformer.resblocks.11.attn.out_proj.weight",
+            "transformer.resblocks.9.attn.out_proj.bias",
+            "transformer.resblocks.7.attn.out_proj.weight",
+            "transformer.resblocks.6.mlp.c_proj.weight"
+          ],
+          "source_task": "Cars"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/adaptive/checkpoints/step002.pt",
+      "sha256": "f6951df0009c90da82bd5766ba963bd5bf9e2ca66aaf4111b9ed068d6397c06d",
+      "rank": 5,
+      "before_alignment_error": 2.168404344971009e-19,
+      "z": [
+        6.110163257180677e-05,
+        0.0056132146770841345,
+        4.027393334953607e-05,
+        -0.001748412134297602,
+        0.002457605778547172
+      ],
+      "span_residual": 8.148951955352263e-16,
+      "parameter_update_outside_current_old_modes": 0.4390728985282846,
+      "new_modes": [
+        3,
+        4
+      ],
+      "supports": [
+        {
+          "mode": 0,
+          "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+          "compensators": [
+            "transformer.resblocks.7.mlp.c_proj.bias",
+            "proj",
+            "transformer.resblocks.11.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.out_proj.weight"
+          ],
+          "source_task": "Cars"
+        },
+        {
+          "mode": 1,
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "compensators": [
+            "transformer.resblocks.9.attn.out_proj.bias",
+            "transformer.resblocks.10.attn.in_proj_weight",
+            "transformer.resblocks.7.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.in_proj_weight",
+            "transformer.resblocks.7.attn.out_proj.bias",
+            "transformer.resblocks.11.attn.out_proj.weight",
+            "transformer.resblocks.7.ln_2.bias",
+            "transformer.resblocks.6.ln_2.weight"
+          ],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 2,
+          "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+          "compensators": [
+            "transformer.resblocks.5.mlp.c_fc.weight",
+            "transformer.resblocks.8.attn.out_proj.weight",
+            "transformer.resblocks.11.attn.in_proj_bias",
+            "transformer.resblocks.10.attn.in_proj_weight",
+            "transformer.resblocks.11.attn.out_proj.weight",
+            "transformer.resblocks.9.attn.out_proj.bias",
+            "transformer.resblocks.7.attn.out_proj.weight",
+            "transformer.resblocks.6.mlp.c_proj.weight"
+          ],
+          "source_task": "Cars"
+        },
+        {
+          "mode": 3,
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "compensators": [],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 4,
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "compensators": [
+            "transformer.resblocks.8.mlp.c_fc.weight",
+            "transformer.resblocks.9.attn.out_proj.weight"
+          ],
+          "source_task": "DTD"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/adaptive/checkpoints/step003.pt",
+      "sha256": "1fc2493399582c33a9fb530a4f048d668e0914dea58913a538c9517fee015357",
+      "rank": 7,
+      "before_alignment_error": 0.0,
+      "z": [
+        0.0008276969739354686,
+        0.0005623143757207867,
+        9.806390423009858e-05,
+        0.0005526865331842207,
+        -0.0015810512299135877,
+        -0.0018047383664060225,
+        0.00017613908688651525
+      ],
+      "span_residual": 4.069711400046244e-16,
+      "parameter_update_outside_current_old_modes": 0.14726990329221432,
+      "new_modes": [
+        5,
+        6
+      ],
+      "supports": [
+        {
+          "mode": 0,
+          "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+          "compensators": [
+            "transformer.resblocks.7.mlp.c_proj.bias",
+            "proj",
+            "transformer.resblocks.11.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.out_proj.weight"
+          ],
+          "source_task": "Cars"
+        },
+        {
+          "mode": 1,
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "compensators": [
+            "transformer.resblocks.9.attn.out_proj.bias",
+            "transformer.resblocks.10.attn.in_proj_weight",
+            "transformer.resblocks.7.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.in_proj_weight",
+            "transformer.resblocks.7.attn.out_proj.bias",
+            "transformer.resblocks.11.attn.out_proj.weight",
+            "transformer.resblocks.7.ln_2.bias",
+            "transformer.resblocks.6.ln_2.weight"
+          ],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 2,
+          "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+          "compensators": [
+            "transformer.resblocks.5.mlp.c_fc.weight",
+            "transformer.resblocks.8.attn.out_proj.weight",
+            "transformer.resblocks.11.attn.in_proj_bias",
+            "transformer.resblocks.10.attn.in_proj_weight",
+            "transformer.resblocks.11.attn.out_proj.weight",
+            "transformer.resblocks.9.attn.out_proj.bias",
+            "transformer.resblocks.7.attn.out_proj.weight",
+            "transformer.resblocks.6.mlp.c_proj.weight"
+          ],
+          "source_task": "Cars"
+        },
+        {
+          "mode": 3,
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "compensators": [],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 4,
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "compensators": [
+            "transformer.resblocks.8.mlp.c_fc.weight",
+            "transformer.resblocks.9.attn.out_proj.weight"
+          ],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 5,
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "compensators": [],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 6,
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "compensators": [],
+          "source_task": "DTD"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/adaptive/checkpoints/step004.pt",
+      "sha256": "b721d55d082ec462ff3fb93261b45999b2a20d83088fda8646edbccb40c30720",
+      "rank": 9,
+      "before_alignment_error": 0.0,
+      "z": [
+        -0.00048295557515639785,
+        0.0040663607310274935,
+        6.398349401685877e-06,
+        -0.001498608896987274,
+        0.07153801107706731,
+        0.05285917348223245,
+        0.011244029690429596,
+        -0.010225826294638142,
+        0.01698732857741906
+      ],
+      "span_residual": 2.1626957533335912e-14,
+      "parameter_update_outside_current_old_modes": 0.18792886623588984,
+      "new_modes": [
+        7,
+        8
+      ],
+      "supports": [
+        {
+          "mode": 0,
+          "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+          "compensators": [
+            "transformer.resblocks.7.mlp.c_proj.bias",
+            "proj",
+            "transformer.resblocks.11.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.out_proj.weight"
+          ],
+          "source_task": "Cars"
+        },
+        {
+          "mode": 1,
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "compensators": [
+            "transformer.resblocks.9.attn.out_proj.bias",
+            "transformer.resblocks.10.attn.in_proj_weight",
+            "transformer.resblocks.7.mlp.c_proj.weight",
+            "transformer.resblocks.6.attn.in_proj_weight",
+            "transformer.resblocks.7.attn.out_proj.bias",
+            "transformer.resblocks.11.attn.out_proj.weight",
+            "transformer.resblocks.7.ln_2.bias",
+            "transformer.resblocks.6.ln_2.weight"
+          ],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 2,
+          "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+          "compensators": [
+            "transformer.resblocks.5.mlp.c_fc.weight",
+            "transformer.resblocks.8.attn.out_proj.weight",
+            "transformer.resblocks.11.attn.in_proj_bias",
+            "transformer.resblocks.10.attn.in_proj_weight",
+            "transformer.resblocks.11.attn.out_proj.weight",
+            "transformer.resblocks.9.attn.out_proj.bias",
+            "transformer.resblocks.7.attn.out_proj.weight",
+            "transformer.resblocks.6.mlp.c_proj.weight"
+          ],
+          "source_task": "Cars"
+        },
+        {
+          "mode": 3,
+          "driver": "transformer.resblocks.9.attn.out_proj.weight",
+          "compensators": [],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 4,
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "compensators": [
+            "transformer.resblocks.8.mlp.c_fc.weight",
+            "transformer.resblocks.9.attn.out_proj.weight"
+          ],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 5,
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "compensators": [],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 6,
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "compensators": [],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 7,
+          "driver": "transformer.resblocks.7.ln_2.bias",
+          "compensators": [
+            "transformer.resblocks.7.attn.in_proj_bias",
+            "transformer.resblocks.7.mlp.c_fc.weight",
+            "transformer.resblocks.6.mlp.c_proj.weight"
+          ],
+          "source_task": "DTD"
+        },
+        {
+          "mode": 8,
+          "driver": "transformer.resblocks.6.ln_2.weight",
+          "compensators": [
+            "transformer.resblocks.7.attn.in_proj_bias",
+            "transformer.resblocks.6.mlp.c_proj.bias"
+          ],
+          "source_task": "DTD"
+        }
+      ]
+    }
+  ],
+  "subspaces": [
+    {
+      "step": 1,
+      "scope": "same persistent modes only",
+      "rank_A": 1,
+      "rank_B": 1,
+      "principal_angles_degrees": [
+        0.08055308034138482
+      ],
+      "matched_sin_Frobenius": 0.0014059160114117215,
+      "projector_Frobenius": 0.0019882654908959436,
+      "unmatched_dimensions": 0
+    },
+    {
+      "step": 2,
+      "scope": "same persistent modes only",
+      "rank_A": 3,
+      "rank_B": 3,
+      "principal_angles_degrees": [
+        0.07940780857639312,
+        0.0871138593642367,
+        0.2896430923653832
+      ],
+      "matched_sin_Frobenius": 0.005457798924413262,
+      "projector_Frobenius": 0.007718493259610526,
+      "unmatched_dimensions": 0
+    },
+    {
+      "step": 3,
+      "scope": "same persistent modes only",
+      "rank_A": 5,
+      "rank_B": 5,
+      "principal_angles_degrees": [
+        1.4787793334710982e-06,
+        0.00028234747569178925,
+        0.03310207426283301,
+        0.05614117032537735,
+        0.19490332369160113
+      ],
+      "matched_sin_Frobenius": 0.0035868455038946755,
+      "projector_Frobenius": 0.005072565557832355,
+      "unmatched_dimensions": 0
+    },
+    {
+      "step": 4,
+      "scope": "same persistent modes only",
+      "rank_A": 7,
+      "rank_B": 7,
+      "principal_angles_degrees": [
+        8.537736462515939e-07,
+        8.537736462515939e-07,
+        1.4787793334710982e-06,
+        0.005346578575125619,
+        0.010014507146588022,
+        0.01646798301629615,
+        0.060317879748542975
+      ],
+      "matched_sin_Frobenius": 0.0011091173954353966,
+      "projector_Frobenius": 0.00156852886281788,
+      "unmatched_dimensions": 0
+    }
+  ],
+  "modes": [
+    {
+      "step": 1,
+      "mode": 0,
+      "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.0014059163590712284,
+      "map_absolute_change": 0.002592595891491448,
+      "map_relative_change": 0.004855062041436351
+    },
+    {
+      "step": 2,
+      "mode": 0,
+      "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.0013859276006241202,
+      "map_absolute_change": 0.0025165502401740805,
+      "map_relative_change": 0.004712937030637694
+    },
+    {
+      "step": 2,
+      "mode": 1,
+      "driver": "transformer.resblocks.9.attn.out_proj.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.005054966669369753,
+      "map_absolute_change": 0.03692996828822432,
+      "map_relative_change": 0.020802854884132575
+    },
+    {
+      "step": 2,
+      "mode": 2,
+      "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+      "supports_unchanged": true,
+      "direction_change": 0.001520769682555812,
+      "map_absolute_change": 0.0018618571937666895,
+      "map_relative_change": 0.006096533706146492
+    },
+    {
+      "step": 3,
+      "mode": 0,
+      "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.0034015129594672706,
+      "map_absolute_change": 0.011215744870330025,
+      "map_relative_change": 0.02100566378862139
+    },
+    {
+      "step": 3,
+      "mode": 1,
+      "driver": "transformer.resblocks.9.attn.out_proj.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.0006716630344419224,
+      "map_absolute_change": 0.0021018816977392894,
+      "map_relative_change": 0.0011778825644620306
+    },
+    {
+      "step": 3,
+      "mode": 2,
+      "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+      "supports_unchanged": true,
+      "direction_change": 0.00058096779419985,
+      "map_absolute_change": 0.0007618398857077316,
+      "map_relative_change": 0.0024924333078231685
+    },
+    {
+      "step": 3,
+      "mode": 3,
+      "driver": "transformer.resblocks.9.attn.out_proj.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.0,
+      "map_absolute_change": 0.0,
+      "map_relative_change": null
+    },
+    {
+      "step": 3,
+      "mode": 4,
+      "driver": "transformer.resblocks.6.ln_2.weight",
+      "supports_unchanged": true,
+      "direction_change": 1.6269325285480124e-05,
+      "map_absolute_change": 3.7457996321014545e-05,
+      "map_relative_change": 0.000319289215704875
+    },
+    {
+      "step": 4,
+      "mode": 0,
+      "driver": "transformer.resblocks.8.mlp.c_fc.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.0001748155402860001,
+      "map_absolute_change": 0.0003954854713117663,
+      "map_relative_change": 0.000739465034922655
+    },
+    {
+      "step": 4,
+      "mode": 1,
+      "driver": "transformer.resblocks.9.attn.out_proj.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.00035702362031037765,
+      "map_absolute_change": 0.0023214479753835963,
+      "map_relative_change": 0.001301117727107035
+    },
+    {
+      "step": 4,
+      "mode": 2,
+      "driver": "transformer.resblocks.8.mlp.c_fc.bias",
+      "supports_unchanged": true,
+      "direction_change": 9.334740113081692e-05,
+      "map_absolute_change": 0.00011663931451610979,
+      "map_relative_change": 0.0003817971665491046
+    },
+    {
+      "step": 4,
+      "mode": 3,
+      "driver": "transformer.resblocks.9.attn.out_proj.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.0,
+      "map_absolute_change": 0.0,
+      "map_relative_change": null
+    },
+    {
+      "step": 4,
+      "mode": 4,
+      "driver": "transformer.resblocks.6.ln_2.weight",
+      "supports_unchanged": true,
+      "direction_change": 7.35932712282255e-05,
+      "map_absolute_change": 0.00012342790179664654,
+      "map_relative_change": 0.0010518703866743227
+    },
+    {
+      "step": 4,
+      "mode": 5,
+      "driver": "transformer.resblocks.6.ln_2.weight",
+      "supports_unchanged": true,
+      "direction_change": 0.0,
+      "map_absolute_change": 0.0,
+      "map_relative_change": null
+    },
+    {
+      "step": 4,
+      "mode": 6,
+      "driver": "transformer.resblocks.7.ln_2.bias",
+      "supports_unchanged": true,
+      "direction_change": 0.0,
+      "map_absolute_change": 0.0,
+      "map_relative_change": null
+    }
+  ]
+}
