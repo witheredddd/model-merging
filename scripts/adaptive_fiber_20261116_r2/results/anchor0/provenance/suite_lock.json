@@ -1,0 +1,51 @@
+{
+  "created_unix": 1794784943.3988712,
+  "source_hashes": {
+    "resume_state.py": "1bc876e070b329cbb37805a8c88f5c8335857d8dd2f25ecdc83ee05de77cc64a",
+    "fiber_core.py": "c32c4790dda7de7a1f2b119e995c338782e87948a27815a3423b7551910c45c4",
+    "test_review_fixes.py": "ef25e9872195a1f74410afb18b607628dccf2ece49210081e62bcea0b3ae989d",
+    "run_a100.py": "5c4b04da2a8e06add7ba40241fc74d772672326bc59be9706eb7df34486e75e8",
+    "run_comparators_a100.py": "ce1012e746c835c7cd736c9ba3d7454036fcddaf856c71601359412e3bf7bdbd",
+    "test_fiber_core.py": "6ea3048cf774f5ef8df89473e252f2104968b0bcab2ccde71784d47726a1cc71",
+    "fast_online.py": "fbf9cbc61266f7491fcebff9e8f5f0fab52ad191145636d081925aee908194b9",
+    "run_fast_suite.py": "aa4ecf57d3637a0fc9bcd7a950536319f6ed98d05318a98b9657231aa438894b",
+    "run_suite.py": "c196a31ac98e449036675f26f6a243f72782f9d7d96b57897fdf36a05972bebe",
+    "verify_files.py": "332e6fabf24f3289c14ec6276486e0e117f8453e1ca066c439a7452d34f21867",
+    "fast_comparators.py": "4aebe8f83dfd3cf76aca2f8930c2056949fc7b2228b6731c478adacabd3f7381",
+    "test_resume.py": "818998004acf03870e96338d25304ecdbcd2145e3d8deac43d04a9229c1de8ea",
+    "test_runner_mock.py": "014388832f05c367f6c85c564bf88300cd9f27d4fb3fe537f54a19cd037ef1f3",
+    "preflight.py": "a28f55bcfb96fa3d18296ea4854811d6e3063779da793f1983db0a0692093e97"
+  },
+  "anchors_in_order": [
+    0,
+    1,
+    2
+  ],
+  "steps": 5,
+  "anchor0_resume": {
+    "passed": true,
+    "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step001.pt",
+    "checkpoint_sha256": "d0631e65a1b650b1dae7daa5191219a00bffce1508177239423186d8cdb45986",
+    "exact_full_visual_equality": true,
+    "parameters": 86192640,
+    "next_step": 2,
+    "restored_modes": 3,
+    "restored_actual_trajectories": 2,
+    "budget_references": {
+      "Cars": 1.8901287440275198,
+      "DTD": 0.6041977279665391
+    },
+    "time_unix": 1794784792.5074997
+  },
+  "arms": [
+    "static_pair2d",
+    "dynamic_pair2d",
+    "global2d"
+  ],
+  "full304_dynamic": "Deferred to independent cost experiment; previous local capacity retained",
+  "full_refresh": "Exception-only, maximum1 per anchor for failed local reliability; no periodic calibration",
+  "dimension_ablation": "Predicted capacity online; actual finite audit only at frozen endpoint",
+  "initial_anchor0_prefix": "Two accepted r1 updates preserved; r2 cost counters exclude inherited r1 work",
+  "p4_p5": "Reused exploratory final evaluation, no decisions",
+  "p6_and_test_opened": false
+}

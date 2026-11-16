@@ -1,0 +1,24 @@
+{
+  "anchor": 0,
+  "total_step_limit": 5,
+  "resumed_at_step": 2,
+  "source_references": {
+    "Cars": 1.8901287440275198,
+    "DTD": 0.6041977279665391
+  },
+  "R": 0.006690361757031531,
+  "taus": [
+    0.01,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "periodic_full_refresh": false,
+  "calibration_limit": 1,
+  "reliability_tolerance": 0.2,
+  "driver_screen": 2,
+  "compensator_screen": 4,
+  "step_policy": "Same shared budgets and finite CE/source guards; trust shrink is a logged numerical policy",
+  "inactive_columns": "Aged estimates used for screening/approximate teacher only; learned support and control directions exactly refreshed",
+  "old_checkpoint_event_gaps": "r1 omitted unfinished step events; restored modes and finite history are exact, missing old event traces are not invented"
+}

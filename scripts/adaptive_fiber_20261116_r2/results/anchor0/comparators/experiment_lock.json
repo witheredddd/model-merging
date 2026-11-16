@@ -1,0 +1,28 @@
+{
+  "args": {
+    "output": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/anchor0/comparators",
+    "anchors": [
+      0
+    ],
+    "arms": [
+      "static_pair2d",
+      "dynamic_pair2d",
+      "global2d"
+    ],
+    "steps": 5,
+    "taus": [
+      0.01,
+      0.1,
+      0.3,
+      1.0
+    ],
+    "radius_factor": 1.0,
+    "backtracks": 6,
+    "max_stalls": 2,
+    "heldout": true
+  },
+  "source_sha256": "4aebe8f83dfd3cf76aca2f8930c2056949fc7b2228b6731c478adacabd3f7381",
+  "budget_rule": "Frozen initial-anchor source references, identical to adaptive arm",
+  "global_refresh": "Exact composite JVP on G; full304 refreshed only for full304 arm",
+  "last_step_refresh": "Omitted because no subsequent update uses it"
+}

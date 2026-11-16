@@ -1,0 +1,12 @@
+{
+  "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step001.pt",
+  "sha256": "d0631e65a1b650b1dae7daa5191219a00bffce1508177239423186d8cdb45986",
+  "exact_parameter_equality": true,
+  "next_step": 2,
+  "modes": 3,
+  "histories": 2,
+  "references": {
+    "Cars": 1.8901287440275198,
+    "DTD": 0.6041977279665391
+  }
+}

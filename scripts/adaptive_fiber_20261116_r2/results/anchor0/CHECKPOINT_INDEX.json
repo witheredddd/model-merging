@@ -1,0 +1,88 @@
+{
+  "anchor": 0,
+  "checkpoints_remain_on_server": true,
+  "files": [
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_dynamic_pair2d_step000.pt",
+      "bytes": 344794845
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_global2d_step003.pt",
+      "bytes": 344794797
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_dynamic_pair2d_step003.pt",
+      "bytes": 344794845
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_global2d_step000.pt",
+      "bytes": 344794797
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_dynamic_pair2d_step001.pt",
+      "bytes": 344794845
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_global2d_step001.pt",
+      "bytes": 344794797
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_static_pair2d_step003.pt",
+      "bytes": 344794837
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_static_pair2d_step002.pt",
+      "bytes": 344794837
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_dynamic_pair2d_step004.pt",
+      "bytes": 344794845
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_dynamic_pair2d_step002.pt",
+      "bytes": 344794845
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_global2d_step002.pt",
+      "bytes": 344794797
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_global2d_step004.pt",
+      "bytes": 344794797
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_static_pair2d_step004.pt",
+      "bytes": 344794837
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_static_pair2d_step000.pt",
+      "bytes": 344794837
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/comparators/checkpoints/anchor0_static_pair2d_step001.pt",
+      "bytes": 344794837
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/adaptive/checkpoints/step002.pt",
+      "bytes": 346487897
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/adaptive/checkpoints/step003.pt",
+      "bytes": 347053461
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/adaptive/checkpoints/step004.pt",
+      "bytes": 347620049
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step001.pt",
+      "bytes": 344818861,
+      "role": "Inherited accepted r1 prefix"
+    },
+    {
+      "server_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step000.pt",
+      "bytes": 344803949,
+      "role": "Inherited accepted r1 prefix"
+    }
+  ]
+}

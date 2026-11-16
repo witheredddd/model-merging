@@ -1,0 +1,771 @@
+{
+  "D": 86192640,
+  "tensors": 152,
+  "parameter_keys": [
+    "class_embedding",
+    "positional_embedding",
+    "proj",
+    "conv1.weight",
+    "ln_pre.weight",
+    "ln_pre.bias",
+    "transformer.resblocks.0.ln_1.weight",
+    "transformer.resblocks.0.ln_1.bias",
+    "transformer.resblocks.0.attn.in_proj_weight",
+    "transformer.resblocks.0.attn.in_proj_bias",
+    "transformer.resblocks.0.attn.out_proj.weight",
+    "transformer.resblocks.0.attn.out_proj.bias",
+    "transformer.resblocks.0.ln_2.weight",
+    "transformer.resblocks.0.ln_2.bias",
+    "transformer.resblocks.0.mlp.c_fc.weight",
+    "transformer.resblocks.0.mlp.c_fc.bias",
+    "transformer.resblocks.0.mlp.c_proj.weight",
+    "transformer.resblocks.0.mlp.c_proj.bias",
+    "transformer.resblocks.1.ln_1.weight",
+    "transformer.resblocks.1.ln_1.bias",
+    "transformer.resblocks.1.attn.in_proj_weight",
+    "transformer.resblocks.1.attn.in_proj_bias",
+    "transformer.resblocks.1.attn.out_proj.weight",
+    "transformer.resblocks.1.attn.out_proj.bias",
+    "transformer.resblocks.1.ln_2.weight",
+    "transformer.resblocks.1.ln_2.bias",
+    "transformer.resblocks.1.mlp.c_fc.weight",
+    "transformer.resblocks.1.mlp.c_fc.bias",
+    "transformer.resblocks.1.mlp.c_proj.weight",
+    "transformer.resblocks.1.mlp.c_proj.bias",
+    "transformer.resblocks.2.ln_1.weight",
+    "transformer.resblocks.2.ln_1.bias",
+    "transformer.resblocks.2.attn.in_proj_weight",
+    "transformer.resblocks.2.attn.in_proj_bias",
+    "transformer.resblocks.2.attn.out_proj.weight",
+    "transformer.resblocks.2.attn.out_proj.bias",
+    "transformer.resblocks.2.ln_2.weight",
+    "transformer.resblocks.2.ln_2.bias",
+    "transformer.resblocks.2.mlp.c_fc.weight",
+    "transformer.resblocks.2.mlp.c_fc.bias",
+    "transformer.resblocks.2.mlp.c_proj.weight",
+    "transformer.resblocks.2.mlp.c_proj.bias",
+    "transformer.resblocks.3.ln_1.weight",
+    "transformer.resblocks.3.ln_1.bias",
+    "transformer.resblocks.3.attn.in_proj_weight",
+    "transformer.resblocks.3.attn.in_proj_bias",
+    "transformer.resblocks.3.attn.out_proj.weight",
+    "transformer.resblocks.3.attn.out_proj.bias",
+    "transformer.resblocks.3.ln_2.weight",
+    "transformer.resblocks.3.ln_2.bias",
+    "transformer.resblocks.3.mlp.c_fc.weight",
+    "transformer.resblocks.3.mlp.c_fc.bias",
+    "transformer.resblocks.3.mlp.c_proj.weight",
+    "transformer.resblocks.3.mlp.c_proj.bias",
+    "transformer.resblocks.4.ln_1.weight",
+    "transformer.resblocks.4.ln_1.bias",
+    "transformer.resblocks.4.attn.in_proj_weight",
+    "transformer.resblocks.4.attn.in_proj_bias",
+    "transformer.resblocks.4.attn.out_proj.weight",
+    "transformer.resblocks.4.attn.out_proj.bias",
+    "transformer.resblocks.4.ln_2.weight",
+    "transformer.resblocks.4.ln_2.bias",
+    "transformer.resblocks.4.mlp.c_fc.weight",
+    "transformer.resblocks.4.mlp.c_fc.bias",
+    "transformer.resblocks.4.mlp.c_proj.weight",
+    "transformer.resblocks.4.mlp.c_proj.bias",
+    "transformer.resblocks.5.ln_1.weight",
+    "transformer.resblocks.5.ln_1.bias",
+    "transformer.resblocks.5.attn.in_proj_weight",
+    "transformer.resblocks.5.attn.in_proj_bias",
+    "transformer.resblocks.5.attn.out_proj.weight",
+    "transformer.resblocks.5.attn.out_proj.bias",
+    "transformer.resblocks.5.ln_2.weight",
+    "transformer.resblocks.5.ln_2.bias",
+    "transformer.resblocks.5.mlp.c_fc.weight",
+    "transformer.resblocks.5.mlp.c_fc.bias",
+    "transformer.resblocks.5.mlp.c_proj.weight",
+    "transformer.resblocks.5.mlp.c_proj.bias",
+    "transformer.resblocks.6.ln_1.weight",
+    "transformer.resblocks.6.ln_1.bias",
+    "transformer.resblocks.6.attn.in_proj_weight",
+    "transformer.resblocks.6.attn.in_proj_bias",
+    "transformer.resblocks.6.attn.out_proj.weight",
+    "transformer.resblocks.6.attn.out_proj.bias",
+    "transformer.resblocks.6.ln_2.weight",
+    "transformer.resblocks.6.ln_2.bias",
+    "transformer.resblocks.6.mlp.c_fc.weight",
+    "transformer.resblocks.6.mlp.c_fc.bias",
+    "transformer.resblocks.6.mlp.c_proj.weight",
+    "transformer.resblocks.6.mlp.c_proj.bias",
+    "transformer.resblocks.7.ln_1.weight",
+    "transformer.resblocks.7.ln_1.bias",
+    "transformer.resblocks.7.attn.in_proj_weight",
+    "transformer.resblocks.7.attn.in_proj_bias",
+    "transformer.resblocks.7.attn.out_proj.weight",
+    "transformer.resblocks.7.attn.out_proj.bias",
+    "transformer.resblocks.7.ln_2.weight",
+    "transformer.resblocks.7.ln_2.bias",
+    "transformer.resblocks.7.mlp.c_fc.weight",
+    "transformer.resblocks.7.mlp.c_fc.bias",
+    "transformer.resblocks.7.mlp.c_proj.weight",
+    "transformer.resblocks.7.mlp.c_proj.bias",
+    "transformer.resblocks.8.ln_1.weight",
+    "transformer.resblocks.8.ln_1.bias",
+    "transformer.resblocks.8.attn.in_proj_weight",
+    "transformer.resblocks.8.attn.in_proj_bias",
+    "transformer.resblocks.8.attn.out_proj.weight",
+    "transformer.resblocks.8.attn.out_proj.bias",
+    "transformer.resblocks.8.ln_2.weight",
+    "transformer.resblocks.8.ln_2.bias",
+    "transformer.resblocks.8.mlp.c_fc.weight",
+    "transformer.resblocks.8.mlp.c_fc.bias",
+    "transformer.resblocks.8.mlp.c_proj.weight",
+    "transformer.resblocks.8.mlp.c_proj.bias",
+    "transformer.resblocks.9.ln_1.weight",
+    "transformer.resblocks.9.ln_1.bias",
+    "transformer.resblocks.9.attn.in_proj_weight",
+    "transformer.resblocks.9.attn.in_proj_bias",
+    "transformer.resblocks.9.attn.out_proj.weight",
+    "transformer.resblocks.9.attn.out_proj.bias",
+    "transformer.resblocks.9.ln_2.weight",
+    "transformer.resblocks.9.ln_2.bias",
+    "transformer.resblocks.9.mlp.c_fc.weight",
+    "transformer.resblocks.9.mlp.c_fc.bias",
+    "transformer.resblocks.9.mlp.c_proj.weight",
+    "transformer.resblocks.9.mlp.c_proj.bias",
+    "transformer.resblocks.10.ln_1.weight",
+    "transformer.resblocks.10.ln_1.bias",
+    "transformer.resblocks.10.attn.in_proj_weight",
+    "transformer.resblocks.10.attn.in_proj_bias",
+    "transformer.resblocks.10.attn.out_proj.weight",
+    "transformer.resblocks.10.attn.out_proj.bias",
+    "transformer.resblocks.10.ln_2.weight",
+    "transformer.resblocks.10.ln_2.bias",
+    "transformer.resblocks.10.mlp.c_fc.weight",
+    "transformer.resblocks.10.mlp.c_fc.bias",
+    "transformer.resblocks.10.mlp.c_proj.weight",
+    "transformer.resblocks.10.mlp.c_proj.bias",
+    "transformer.resblocks.11.ln_1.weight",
+    "transformer.resblocks.11.ln_1.bias",
+    "transformer.resblocks.11.attn.in_proj_weight",
+    "transformer.resblocks.11.attn.in_proj_bias",
+    "transformer.resblocks.11.attn.out_proj.weight",
+    "transformer.resblocks.11.attn.out_proj.bias",
+    "transformer.resblocks.11.ln_2.weight",
+    "transformer.resblocks.11.ln_2.bias",
+    "transformer.resblocks.11.mlp.c_fc.weight",
+    "transformer.resblocks.11.mlp.c_fc.bias",
+    "transformer.resblocks.11.mlp.c_proj.weight",
+    "transformer.resblocks.11.mlp.c_proj.bias",
+    "ln_post.weight",
+    "ln_post.bias"
+  ],
+  "parameter_shapes": [
+    [
+      768
+    ],
+    [
+      197,
+      768
+    ],
+    [
+      768,
+      512
+    ],
+    [
+      768,
+      3,
+      16,
+      16
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      3072,
+      768
+    ],
+    [
+      3072
+    ],
+    [
+      768,
+      3072
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ],
+    [
+      768
+    ]
+  ],
+  "parameter_order_sha256": "9fdff2dbae2dbe4866fcf6e41e83a67153965f706be79a569a3203b08f5c7020",
+  "sources": [
+    {
+      "task": "DTD",
+      "path": "/home/shangxueyuan/merging/tsv/results/EXPERTS8_FD_REVIEWED_20261110/DTD/adaptive_dynamics/epoch08.pt",
+      "sha256": "07c71f3bada9e9ce26a829ecf306644f565705627cd4df4826bf413c9e9ca91c",
+      "provenance": {
+        "task": "DTD",
+        "arm": "adaptive_dynamics",
+        "seed": 42,
+        "steps": 216,
+        "train_n": 3760,
+        "batch_size": 128,
+        "geometry_batch_prefix": 32,
+        "warmup": 36,
+        "warmup_window_ends": [
+          7,
+          14,
+          22,
+          29,
+          36
+        ],
+        "max_components": 8,
+        "birth_penalty": 0.0002,
+        "lr_warmup": 20,
+        "lr_total_steps": 216,
+        "lr_base": 1e-05,
+        "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+        "head_sha256": "39df3961a63bccbcdbad61ff8bcb5cba86d3db17e211993fe233597fc402b79d"
+      },
+      "historical_metrics": {
+        "checkpoint_sha256": "07c71f3bada9e9ce26a829ecf306644f565705627cd4df4826bf413c9e9ca91c",
+        "split": "DTD_test",
+        "provenance": {
+          "task": "DTD",
+          "n": 1880,
+          "split": "dtd/val"
+        },
+        "ce": 0.7278291681979565,
+        "accuracy": 0.8207446808510638,
+        "n": 1880
+      },
+      "decoder_relative_endpoint_error": 0.6851961612701416
+    },
+    {
+      "task": "Cars",
+      "path": "/home/shangxueyuan/merging/tsv/results/EXPERTS8_FD_REVIEWED_20261110/Cars/adaptive_dynamics/epoch08.pt",
+      "sha256": "530890b41037c93abd787409f0fe9bfa6c014c82271e179086d0c7954a34402c",
+      "provenance": {
+        "task": "Cars",
+        "arm": "adaptive_dynamics",
+        "seed": 42,
+        "steps": 1088,
+        "train_n": 8144,
+        "batch_size": 128,
+        "geometry_batch_prefix": 32,
+        "warmup": 36,
+        "warmup_window_ends": [
+          7,
+          14,
+          22,
+          29,
+          36
+        ],
+        "max_components": 8,
+        "birth_penalty": 0.0002,
+        "lr_warmup": 20,
+        "lr_total_steps": 1088,
+        "lr_base": 1e-05,
+        "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+        "head_sha256": "2e516ac770aa7c415c7fc0e12cfe1d2ac6b64bdc3d4bd8bae7ce2da2153306c2"
+      },
+      "historical_metrics": {
+        "checkpoint_sha256": "530890b41037c93abd787409f0fe9bfa6c014c82271e179086d0c7954a34402c",
+        "split": "Cars_test",
+        "provenance": {
+          "task": "Cars",
+          "n": 8041,
+          "split": "test"
+        },
+        "ce": 0.4835918470633414,
+        "accuracy": 0.8707872155204577,
+        "n": 8041
+      },
+      "decoder_relative_endpoint_error": 1.1116145849227905
+    }
+  ],
+  "base_sha256": "3a381398c0af297b467cee275ec67bcb3efe488acb969fee4205cac13a91258a",
+  "anchor": "Full arithmetic mean of original audited DTD/Cars experts",
+  "Fisher": "Exact predictive distribution Fisher J_logits^T(diag(p)-pp^T)J_logits, per-sample mean; equal task weights; frozen heads",
+  "domain": "All 86192640 visual parameters /152 tensors; no endpoint tangent restriction",
+  "activity": "Phase1 matrix-free constrained response compensation; no selected parameter subspace",
+  "numerical": "FP32 network and FVP, FP64 projected matrices/whitening; no ridge masquerading as G; relative G cutoff1e-6",
+  "probes": "See probes.json: 200/300 discovery,200/300 independent repeat,400/500 reserved performance; disjoint stratified training-side IDs",
+  "official_test_opened": false,
+  "smoke": false,
+  "training": false,
+  "source_hashes": {
+    "test_math.py": "0c0d0f00337dc7bc5128ac8666f800cfd3c28cb712819511a123971a2a84abb4",
+    "run.py": "539a48d5f403d9a264ba8038c99ce8c866b8489e4826eb41e64349d682aacebf",
+    "audited_context.py": "03fd3190a162de9f810424190a1956280147d8a13be103f7b14c6dcadac6bdb6"
+  }
+}

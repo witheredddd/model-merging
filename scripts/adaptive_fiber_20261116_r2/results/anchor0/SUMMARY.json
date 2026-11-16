@@ -1,0 +1,181 @@
+{
+  "anchor": 0,
+  "all_results_complete": true,
+  "experiment_stopped": true,
+  "comparisons": [
+    {
+      "method": "adaptive",
+      "held_p5": {
+        "DTD": {
+          "CE": 0.21417954069556314,
+          "Top1": 0.9575,
+          "CE_change": -0.005138477864432306,
+          "Top1_change": 0.0050000000000000044,
+          "KL": 8.360407189272999e-05
+        },
+        "Cars": {
+          "CE": 0.07883483333166136,
+          "Top1": 0.978,
+          "CE_change": -0.0006337468106984573,
+          "Top1_change": 0.0,
+          "KL": 1.1149979842018918e-05
+        }
+      },
+      "cost": {
+        "task_JVP_calls": 406,
+        "dataset_forward_calls": 196,
+        "forward_batches": 5141,
+        "forward_images": 151300,
+        "full_calibrations": 0,
+        "synchronized_seconds": 1098.5854728813283,
+        "cuda_event_seconds": 1098.5737678222667,
+        "solver_calls": 708,
+        "full_dimension_solver_calls": 48,
+        "counterfactual_teacher_hits": 24,
+        "counterfactual_teacher_misses": 24,
+        "task_JVP_calls_batches": 3451,
+        "dataset_forward_calls_batches": 1690,
+        "wall_seconds": 1172.5375618170947,
+        "timing_definition": "CUDA event intervals and synchronized wrapper wall time; not summed hardware kernel-active time",
+        "teacher_cache_hits": 48,
+        "teacher_cache_misses": 24,
+        "teacher_hit_rate": 0.6666666666666666,
+        "all_teacher_cache_hit_rate": 0.6
+      },
+      "rank_trajectory": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "method": "static_pair2d",
+      "held_p5": {
+        "DTD": {
+          "CE": 0.21818665901459122,
+          "Top1": 0.9525,
+          "initial_CE": 0.21931801855999544,
+          "initial_Top1": 0.9525,
+          "CE_change": -0.0011313595454042202,
+          "Top1_change": 0.0,
+          "KL": 6.320360626772885e-06
+        },
+        "Cars": {
+          "CE": 0.0783204370828428,
+          "Top1": 0.978,
+          "initial_CE": 0.07946858014235982,
+          "initial_Top1": 0.978,
+          "CE_change": -0.0011481430595170206,
+          "Top1_change": 0.0,
+          "KL": 3.505953013309805e-05
+        }
+      },
+      "cost": {
+        "task_JVP_calls": 32,
+        "dataset_forward_calls": 32,
+        "forward_batches": 568,
+        "forward_images": 16800,
+        "full_calibrations": 0,
+        "synchronized_seconds": 97.1421460765414,
+        "cuda_event_seconds": 97.14126092529297,
+        "solver_calls": 20,
+        "full_dimension_solver_calls": 0,
+        "counterfactual_teacher_hits": 0,
+        "counterfactual_teacher_misses": 0,
+        "dataset_forward_calls_batches": 296,
+        "task_JVP_calls_batches": 272,
+        "wall_seconds": 101.67329193884507,
+        "timing_definition": "CUDA event intervals and synchronized wrappers, not kernel-active utilization"
+      },
+      "accepted_steps": 5
+    },
+    {
+      "method": "dynamic_pair2d",
+      "held_p5": {
+        "DTD": {
+          "CE": 0.21742793549002237,
+          "Top1": 0.955,
+          "initial_CE": 0.21931801855999544,
+          "initial_Top1": 0.9525,
+          "CE_change": -0.0018900830699730697,
+          "Top1_change": 0.0024999999999999467,
+          "KL": 1.3577407707834269e-05
+        },
+        "Cars": {
+          "CE": 0.0787168352858621,
+          "Top1": 0.978,
+          "initial_CE": 0.07946858014235982,
+          "initial_Top1": 0.978,
+          "CE_change": -0.0007517448564977186,
+          "Top1_change": 0.0,
+          "KL": 1.5904507771472474e-05
+        }
+      },
+      "cost": {
+        "task_JVP_calls": 32,
+        "dataset_forward_calls": 34,
+        "forward_batches": 585,
+        "forward_images": 17300,
+        "full_calibrations": 0,
+        "synchronized_seconds": 103.56332305679098,
+        "cuda_event_seconds": 103.56231469726565,
+        "solver_calls": 20,
+        "full_dimension_solver_calls": 0,
+        "counterfactual_teacher_hits": 0,
+        "counterfactual_teacher_misses": 0,
+        "dataset_forward_calls_batches": 313,
+        "task_JVP_calls_batches": 272,
+        "wall_seconds": 107.90911551890895,
+        "timing_definition": "CUDA event intervals and synchronized wrappers, not kernel-active utilization"
+      },
+      "accepted_steps": 5
+    },
+    {
+      "method": "global2d",
+      "held_p5": {
+        "DTD": {
+          "CE": 0.21913214633976735,
+          "Top1": 0.9525,
+          "initial_CE": 0.21931801855999544,
+          "initial_Top1": 0.9525,
+          "CE_change": -0.00018587222022808936,
+          "Top1_change": 0.0,
+          "KL": 2.878314006378189e-07
+        },
+        "Cars": {
+          "CE": 0.0794250158143366,
+          "Top1": 0.978,
+          "initial_CE": 0.07946858014235982,
+          "initial_Top1": 0.978,
+          "CE_change": -4.356432802321564e-05,
+          "Top1_change": 0.0,
+          "KL": 3.063332201991847e-07
+        }
+      },
+      "cost": {
+        "task_JVP_calls": 16,
+        "dataset_forward_calls": 98,
+        "forward_batches": 993,
+        "forward_images": 29300,
+        "full_calibrations": 0,
+        "synchronized_seconds": 117.79927423549816,
+        "cuda_event_seconds": 117.79785485839852,
+        "solver_calls": 20,
+        "full_dimension_solver_calls": 0,
+        "counterfactual_teacher_hits": 0,
+        "counterfactual_teacher_misses": 0,
+        "dataset_forward_calls_batches": 857,
+        "task_JVP_calls_batches": 136,
+        "wall_seconds": 123.17102171806619,
+        "timing_definition": "CUDA event intervals and synchronized wrappers, not kernel-active utilization"
+      },
+      "accepted_steps": 5
+    }
+  ],
+  "inherited_prefix_cost_excluded_from_adaptive_cost": true,
+  "feedback_changed_birth_steps": [],
+  "dimension_converged": false,
+  "data_role": "p5 reused training-side exploratory evaluation; not untouched validation; no p6 or Test opened"
+}

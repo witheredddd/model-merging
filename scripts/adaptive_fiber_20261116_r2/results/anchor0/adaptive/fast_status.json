@@ -1,0 +1,25 @@
+{
+  "stage": "complete",
+  "anchor": 0,
+  "cost": {
+    "task_JVP_calls": 406,
+    "dataset_forward_calls": 196,
+    "forward_batches": 5141,
+    "forward_images": 151300,
+    "full_calibrations": 0,
+    "synchronized_seconds": 1098.5854728813283,
+    "cuda_event_seconds": 1098.5737678222667,
+    "solver_calls": 708,
+    "full_dimension_solver_calls": 48,
+    "counterfactual_teacher_hits": 24,
+    "counterfactual_teacher_misses": 24,
+    "task_JVP_calls_batches": 3451,
+    "dataset_forward_calls_batches": 1690,
+    "wall_seconds": 1172.5469170249999,
+    "timing_definition": "CUDA event intervals and synchronized wrapper wall time; not summed hardware kernel-active time",
+    "teacher_cache_hits": 48,
+    "teacher_cache_misses": 24,
+    "teacher_hit_rate": 0.6666666666666666,
+    "all_teacher_cache_hit_rate": 0.6
+  }
+}

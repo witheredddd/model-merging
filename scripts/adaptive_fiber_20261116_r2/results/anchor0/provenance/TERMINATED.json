@@ -1,0 +1,20 @@
+{
+  "status": "terminated_at_user_request",
+  "time_utc": "2026-11-16T00:36:24.265699+00:00",
+  "retained_anchor": 1,
+  "retained_path": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/anchor1",
+  "other_anchors": "Archived without deletion; excluded from retained deliverable",
+  "remaining_work": "Cancelled",
+  "services": {
+    "adaptive-fiber-20261116-r2": {
+      "MainPID": "0",
+      "LoadState": "not-found",
+      "ActiveState": "inactive"
+    },
+    "adaptive-fiber-20261116-r1": {
+      "MainPID": "0",
+      "LoadState": "not-found",
+      "ActiveState": "inactive"
+    }
+  }
+}

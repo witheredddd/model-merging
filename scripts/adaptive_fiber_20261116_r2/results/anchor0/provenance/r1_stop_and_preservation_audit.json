@@ -1,0 +1,35 @@
+{
+  "old_service_stopped_after_resume_verified": true,
+  "resume_verified": {
+    "passed": true,
+    "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step001.pt",
+    "checkpoint_sha256": "d0631e65a1b650b1dae7daa5191219a00bffce1508177239423186d8cdb45986",
+    "exact_full_visual_equality": true,
+    "parameters": 86192640,
+    "next_step": 2,
+    "restored_modes": 3,
+    "restored_actual_trajectories": 2,
+    "budget_references": {
+      "Cars": 1.8901287440275198,
+      "DTD": 0.6041977279665391
+    },
+    "time_unix": 1794784792.5074997
+  },
+  "time_unix": 1794784833.7918253,
+  "preserved_files_sha256": {
+    "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step001.pt": "d0631e65a1b650b1dae7daa5191219a00bffce1508177239423186d8cdb45986",
+    "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/anchor0_live.json": "f0f98eecb15e3386596f8f64df14a06c98b41d5df6d7d5312753d6f523bd0b8b",
+    "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/finite_trajectories/anchor0_step000.npz": "429bc9aef46a06e7f371cbe16d2b5f949a4313d959803c98e83230cacfb2a725",
+    "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/finite_trajectories/anchor0_step001.npz": "dfdc21539b594cd201babca93159d8d2b4c2bb97fb6bb4f445a0cd414289b320"
+  },
+  "after_stop_checkpoints": [
+    "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step000.pt",
+    "/media/shangxueyuan/data1/adaptive_fiber_20261116_r1/main/checkpoints/anchor0_adaptive_step001.pt"
+  ],
+  "old_progress_at_stop": {
+    "stage": "relinearization",
+    "column": 272,
+    "refresh_count": 304,
+    "time_unix": 1794784831.2728648
+  }
+}
