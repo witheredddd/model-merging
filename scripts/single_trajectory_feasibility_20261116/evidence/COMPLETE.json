@@ -1,0 +1,10 @@
+{
+  "done": true,
+  "new_seed_runs": 0,
+  "new_trajectories": 0,
+  "new_JVPs": 0,
+  "dataset_forward_calls": 4,
+  "wall_seconds": 44.55091745918617,
+  "product_sphere_log_per_sample": true,
+  "parameter_updates_written": false
+}

@@ -1,0 +1,209 @@
+{
+  "scope": "Feasibility on the single existing trajectory only; no ensemble FPCA fitted",
+  "fpca_centered_single_curve_covariance": [
+    [
+      0.0
+    ]
+  ],
+  "arc_progress": [
+    0.0,
+    0.27586206836319055,
+    0.5517241372897155,
+    0.8275862062410304,
+    0.8620689649635112,
+    1.0
+  ],
+  "parameter_temporal_energy_spectrum": {
+    "singular_values": [
+      0.01851998633753875,
+      0.014639702264302782,
+      0.005383497221128216,
+      0.0011545368009121355,
+      0.0007489691236514381
+    ],
+    "cumulative_energy": [
+      0.5831309637670384,
+      0.9475065471563626,
+      0.9967800872059016,
+      0.9990462981892041,
+      1.0
+    ],
+    "participation_rank": 2.104176899018581
+  },
+  "probes": {
+    "0": {
+      "log_increment_spectrum": {
+        "singular_values": [
+          0.0015225360127206935,
+          0.0006923024029988296,
+          9.7036816979484e-05,
+          1.1023798702517264e-05,
+          8.114367033091447e-06
+        ],
+        "cumulative_energy": [
+          0.8258333547714374,
+          0.9965787303289757,
+          0.9999332501054029,
+          0.9999765433186537,
+          1.0
+        ],
+        "participation_rank": 1.4061415260257908
+      },
+      "arc_weighted_velocity_spectrum": {
+        "singular_values": [
+          0.0029762146171399225,
+          0.0014552625027734899,
+          0.00023670897793778397,
+          5.416102080368776e-05,
+          1.6489547544941236e-05
+        ],
+        "cumulative_energy": [
+          0.8027141538189081,
+          0.9946318883663261,
+          0.999709528179407,
+          0.9999753594777373,
+          1.0
+        ],
+        "participation_rank": 1.4679798008225384
+      },
+      "time_centered_velocity_spectrum": {
+        "singular_values": [
+          0.002212079908943841,
+          0.00023815181856146346,
+          5.959217218141955e-05,
+          1.652275409618307e-05,
+          3.420976102256905e-19
+        ],
+        "cumulative_energy": [
+          0.9877790681536466,
+          0.9992280271666409,
+          0.9999448909308936,
+          1.0,
+          1.0
+        ],
+        "participation_rank": 1.0247591199649604
+      },
+      "prefix_unseen_direction_residual": [
+        0.011925328310053702,
+        0.9991830642141423,
+        0.07405953561770821,
+        0.32793556330477797
+      ],
+      "definition": "Prefix subspace uses past increments only; geometric expressibility test, not future amplitude prediction or population FPCA"
+    },
+    "4": {
+      "log_increment_spectrum": {
+        "singular_values": [
+          0.0016719633410811126,
+          0.0008028110248707966,
+          0.00010821898904931531,
+          1.1865415426613913e-05,
+          8.647739642036382e-06
+        ],
+        "cumulative_energy": [
+          0.8098341124650946,
+          0.9965448181487553,
+          0.9999375497938623,
+          0.9999783355446058,
+          1.0
+        ],
+        "participation_rank": 1.4477988381239153
+      },
+      "arc_weighted_velocity_spectrum": {
+        "singular_values": [
+          0.0032693766705325722,
+          0.0016958575225025062,
+          0.00026269295131990813,
+          5.592990492540642e-05,
+          1.8311010039398015e-05
+        ],
+        "cumulative_energy": [
+          0.7837974212580366,
+          0.9946857941925614,
+          0.9997460299513098,
+          0.9999754133978783,
+          1.0
+        ],
+        "participation_rank": 1.5178238910641642
+      },
+      "time_centered_velocity_spectrum": {
+        "singular_values": [
+          0.0024099360284551615,
+          0.00026761678771516424,
+          5.96110073958447e-05,
+          1.8311976696838252e-05,
+          4.912486115502408e-19
+        ],
+        "cumulative_energy": [
+          0.9871657817997165,
+          0.9993390102123887,
+          0.9999430033253882,
+          1.0,
+          1.0
+        ],
+        "participation_rank": 1.026014772513088
+      },
+      "prefix_unseen_direction_residual": [
+        0.01220450499861667,
+        0.9974092525628971,
+        0.06871644469863886,
+        0.30935918277621094
+      ],
+      "definition": "Prefix subspace uses past increments only; geometric expressibility test, not future amplitude prediction or population FPCA"
+    }
+  },
+  "common_reference_fit": [
+    {
+      "step": 0,
+      "relative_log_prediction_error": 0.006078994651234883,
+      "cosine": 0.9999886661684758,
+      "actual_response_outside_current_old_mode_span": 1.0
+    },
+    {
+      "step": 1,
+      "relative_log_prediction_error": 0.006033247914740804,
+      "cosine": 0.9999890594462302,
+      "actual_response_outside_current_old_mode_span": 0.008933750532618483
+    },
+    {
+      "step": 2,
+      "relative_log_prediction_error": 0.006381047798337802,
+      "cosine": 0.9999830512176967,
+      "actual_response_outside_current_old_mode_span": 0.061112029546456385
+    },
+    {
+      "step": 3,
+      "relative_log_prediction_error": 0.004310707819802687,
+      "cosine": 0.99999100804558,
+      "actual_response_outside_current_old_mode_span": 0.022034090873845457
+    },
+    {
+      "step": 4,
+      "relative_log_prediction_error": 0.003396050547606994,
+      "cosine": 0.9999959567332548,
+      "actual_response_outside_current_old_mode_span": 0.12023844734867306
+    }
+  ],
+  "observed_task_budget_sequence": [
+    {
+      "target": "Cars",
+      "tau": 1.0
+    },
+    {
+      "target": "DTD",
+      "tau": 1.0
+    },
+    {
+      "target": "Cars",
+      "tau": 0.1
+    },
+    {
+      "target": "DTD",
+      "tau": 0.3
+    },
+    {
+      "target": "Cars",
+      "tau": 0.1
+    }
+  ]
+}
