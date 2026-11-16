@@ -1,0 +1,42 @@
+{
+  "status": {
+    "stage": "dispatch",
+    "case_id": "GTSRB_CE_gamma0.1",
+    "family": "CE",
+    "iterations": 1,
+    "control_count": 0,
+    "structure_module": "online_conditional_control_space"
+  },
+  "phase": "RUNNING",
+  "generation": 92,
+  "tasks": [
+    "Cars",
+    "DTD",
+    "EuroSAT",
+    "GTSRB",
+    "MNIST",
+    "RESISC45",
+    "SUN397",
+    "SVHN"
+  ],
+  "catalog_count": 2346,
+  "started_by_task": {
+    "Cars": 3,
+    "DTD": 3,
+    "EuroSAT": 4,
+    "GTSRB": 3,
+    "MNIST": 3,
+    "RESISC45": 3,
+    "SUN397": 3,
+    "SVHN": 3
+  },
+  "started_by_family": {
+    "CE": 9,
+    "expert_motion_JVP": 8,
+    "class_CE": 8
+  },
+  "certified": 0,
+  "control_modes": 0,
+  "external_linger": "Linger=yes",
+  "service": "Restart=on-failure\nResult=success\nNRestarts=0\nActiveState=active\n"
+}

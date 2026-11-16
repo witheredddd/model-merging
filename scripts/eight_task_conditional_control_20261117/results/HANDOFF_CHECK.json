@@ -1,0 +1,11 @@
+{
+  "case_id": "EuroSAT_CE_gamma0.1",
+  "iterations": 27,
+  "original_vs_restored_recursive_residual_difference": 5.323576568477265e-15,
+  "requested_numeric_tolerance": 1e-05,
+  "source_checkpoint": {
+    "file": "checkpoints/000000000002/cg.npz",
+    "sha256": "d495dce7028dcd086ed4349c2bdc7a2c4832b99fdaeb7dbb6947df5b54bbe62c"
+  },
+  "model_and_probes_hashes_match": true
+}

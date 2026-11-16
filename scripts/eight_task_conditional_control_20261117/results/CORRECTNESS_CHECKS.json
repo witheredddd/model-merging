@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/shangxueyuan/merging/afg_env/bin/python",
+    "-m",
+    "unittest",
+    "test_recovery",
+    "test_session",
+    "test_controls_math",
+    "-v"
+  ],
+  "returncode": 0,
+  "output": "test_fresh_process_after_abrupt_exit_matches_continuous_run (test_recovery.TestProcessRecovery) ... ok\ntest_unresolved_ce_never_blocks_expert_and_class_dispatch (test_recovery.TestProcessRecovery) ... ok\ntest_split_session_has_identical_fullspace_optimum_and_residuals (test_session.TestSession) ... ok\ntest_nonzero_gap_identity_and_all_component_interactions (test_controls_math.TestApprovedRules) ... ok\ntest_residual_birth_redundancy_cost_identity_and_actual_solver_seed (test_controls_math.TestApprovedRules) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 5.691s\n\nOK\n",
+  "elapsed_seconds": 7.507714851293713,
+  "synthetic_correctness_checks_not_real_method_effectiveness": true
+}
