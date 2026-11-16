@@ -75,7 +75,8 @@ class ConditionalMotion:
                       search_domain='All common visual parameters, not an expert dictionary')
 
     def solve_exact_response_schur_euclidean(self,y,*,relative_tolerance,max_iterations,
-                    protected_diagonal_scale,target_diagonal_scale,callback=None):
+                    protected_diagonal_scale,target_diagonal_scale,callback=None,
+                    initial_scaled_solution=None,krylov_state=None,checkpointable=False):
         """Exact elimination of rho I; no target ridge, support restriction or rank cutoff."""
         if not getattr(self.metric,'is_identity',False):
             raise ValueError('This Schur identity requires explicit M=I; use full KKT for general M')
@@ -100,7 +101,22 @@ class ConditionalMotion:
             return scales*np.r_[z[:protected_size]+p,g.tensor_to_numpy(g.jvp(self.target,v))]
         rhs=np.r_[np.zeros(protected_size),-g.tensor_to_numpy(y)]*scales
         A=LinearOperator((len(rhs),len(rhs)),matvec=apply,dtype=np.float64)
-        x,info=cg(A,rhs,rtol=relative_tolerance,atol=0.,maxiter=max_iterations,callback=callback)
+        if checkpointable:
+            from iterative import continuing_cg
+            if initial_scaled_solution is not None:raise ValueError('Use full Krylov state for continuation')
+            def checkpoint_callback(x,state):
+                self.schur_krylov_state=state
+                if callback is not None:callback(x)
+            x,info,state=continuing_cg(A,rhs,rtol=relative_tolerance,max_iterations=max_iterations,
+                state=krylov_state,callback=checkpoint_callback)
+            self.schur_krylov_state=state
+        else:
+            x,info=cg(A,rhs,x0=initial_scaled_solution,rtol=relative_tolerance,atol=0.,
+                      maxiter=max_iterations,callback=callback)
+        # The output iterate is numerical solver state, never a parameter/control basis.
+        # Caller may continue this exact same operator after a wall-time checkpoint.
+        self.last_schur_state=dict(scaled_solution=x.copy(),protected_tasks=tasks,
+            protected_lengths=lengths,regularization=rho)
         z=scales*x;v=-transpose(z)/rho
         nu=g.numpy_to_tensor(z[protected_size:])
         Av=self.protected_cost(v);jt=g.vjp(self.target,nu)

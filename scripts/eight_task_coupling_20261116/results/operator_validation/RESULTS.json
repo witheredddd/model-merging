@@ -1,0 +1,183 @@
+{
+  "rows": [
+    {
+      "task": "DTD",
+      "defined": true,
+      "source": "Full CE unit-gradient direction",
+      "finite_difference": [
+        {
+          "step": 1e-07,
+          "relative_error": 4.028769393772694e-06
+        },
+        {
+          "step": 1e-08,
+          "relative_error": 4.045734713110737e-08
+        }
+      ],
+      "adjoint_relative_error": 1.013170236409555e-14,
+      "requested_numeric_accuracy_met": true,
+      "gradient_norm": 26.738131410001586,
+      "response_norm": 79.95371198306498,
+      "output_coordinates": "e61f29d953e645866a125153fea1895ab91cf4296573e8736dd1f9b4efc760ee",
+      "output_dimension": 9400
+    },
+    {
+      "task": "SUN397",
+      "defined": true,
+      "source": "Full CE unit-gradient direction",
+      "finite_difference": [
+        {
+          "step": 1e-07,
+          "relative_error": 5.904907185612134e-07
+        },
+        {
+          "step": 1e-08,
+          "relative_error": 1.107474684847819e-08
+        }
+      ],
+      "adjoint_relative_error": 2.3621306942075303e-14,
+      "requested_numeric_accuracy_met": true,
+      "gradient_norm": 36.74048131838813,
+      "response_norm": 63.0876495411238,
+      "output_coordinates": "1362dae0dbc36df4d8605f9d6e6d4d088e65c9284f3623fd40fa8cf8e06d65e8",
+      "output_dimension": 157609
+    },
+    {
+      "task": "Cars",
+      "defined": true,
+      "source": "Full CE unit-gradient direction",
+      "finite_difference": [
+        {
+          "step": 1e-07,
+          "relative_error": 6.598094978490447e-09
+        },
+        {
+          "step": 1e-08,
+          "relative_error": 4.595027623669027e-09
+        }
+      ],
+      "adjoint_relative_error": 1.3100190528839728e-15,
+      "requested_numeric_accuracy_met": true,
+      "gradient_norm": 24.928102163351525,
+      "response_norm": 64.26190759046179,
+      "output_coordinates": "94498b97a270e61f7655db8257f771a72dfc5648f97a105e30f675881538ab40",
+      "output_dimension": 58800
+    },
+    {
+      "task": "EuroSAT",
+      "defined": true,
+      "source": "Full CE unit-gradient direction",
+      "finite_difference": [
+        {
+          "step": 1e-07,
+          "relative_error": 1.364360386015815e-09
+        },
+        {
+          "step": 1e-08,
+          "relative_error": 8.03403132794446e-09
+        }
+      ],
+      "adjoint_relative_error": 3.1877195574339003e-15,
+      "requested_numeric_accuracy_met": true,
+      "gradient_norm": 85.6893828871768,
+      "response_norm": 120.46006911766646,
+      "output_coordinates": "19dfaaa18b3b4e82e06dfe733f195cf9210ae7e5df750f05f2c35b27a8fab8d8",
+      "output_dimension": 2000
+    },
+    {
+      "task": "GTSRB",
+      "defined": true,
+      "source": "Full CE unit-gradient direction",
+      "finite_difference": [
+        {
+          "step": 1e-07,
+          "relative_error": 2.8914398507231794e-07
+        },
+        {
+          "step": 1e-08,
+          "relative_error": 1.3695377751766343e-08
+        }
+      ],
+      "adjoint_relative_error": 2.366397228607789e-15,
+      "requested_numeric_accuracy_met": true,
+      "gradient_norm": 72.04085839511623,
+      "response_norm": 90.97583561264193,
+      "output_coordinates": "5cad59c4f9acf29023f469e3c702f9c8584dfa56077b8a25969086ef39e2b97f",
+      "output_dimension": 8600
+    },
+    {
+      "task": "MNIST",
+      "defined": true,
+      "source": "Full CE unit-gradient direction",
+      "finite_difference": [
+        {
+          "step": 1e-07,
+          "relative_error": 1.6430317302740496e-09
+        },
+        {
+          "step": 1e-08,
+          "relative_error": 6.830545769553321e-09
+        }
+      ],
+      "adjoint_relative_error": 3.919129415636298e-15,
+      "requested_numeric_accuracy_met": true,
+      "gradient_norm": 64.39735159793693,
+      "response_norm": 104.80064047313532,
+      "output_coordinates": "5b0a16180208161ffec546e7fa89ffd78526bd55f4bbcdfc2107a53cd6d85753",
+      "output_dimension": 2000
+    },
+    {
+      "task": "RESISC45",
+      "defined": true,
+      "source": "Full CE unit-gradient direction",
+      "finite_difference": [
+        {
+          "step": 1e-07,
+          "relative_error": 4.577509586999889e-05
+        },
+        {
+          "step": 1e-08,
+          "relative_error": 4.5865574974185183e-07
+        }
+      ],
+      "adjoint_relative_error": 2.0669786961445845e-15,
+      "requested_numeric_accuracy_met": true,
+      "gradient_norm": 67.23249805208023,
+      "response_norm": 70.62816616399647,
+      "output_coordinates": "4b5243858e0a9e073926706f433f81713ea3bd1e07df0a946713ae10f6b3f11a",
+      "output_dimension": 9000
+    },
+    {
+      "task": "SVHN",
+      "defined": true,
+      "source": "Full CE unit-gradient direction",
+      "finite_difference": [
+        {
+          "step": 1e-07,
+          "relative_error": 2.5872076634353763e-08
+        },
+        {
+          "step": 1e-08,
+          "relative_error": 8.260752925648329e-09
+        }
+      ],
+      "adjoint_relative_error": 2.3276901596696165e-15,
+      "requested_numeric_accuracy_met": true,
+      "gradient_norm": 36.94629237249836,
+      "response_norm": 89.9230287020787,
+      "output_coordinates": "842fccc4298906300b3159d53f5a9dbaf4a17c228b4ec609a87ed6391c885c86",
+      "output_dimension": 2000
+    }
+  ],
+  "elapsed_seconds": 113.74665711214766,
+  "operator_counts": {
+    "JVP_calls": 8,
+    "VJP_calls": 8,
+    "seconds": {
+      "J": 19.58716876618564,
+      "JT": 16.629589209798723
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  },
+  "eight_task_structure_learned": false
+}

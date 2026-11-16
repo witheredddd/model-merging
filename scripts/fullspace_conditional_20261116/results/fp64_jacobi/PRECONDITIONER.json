@@ -1,0 +1,8 @@
+{
+  "probes": 11,
+  "elapsed_seconds": 62.68610802106559,
+  "full_parameter_dimension": 86192640,
+  "numerical_estimation_seconds": 60.0,
+  "seed": 1,
+  "interpretation": "Only estimates diag(J J^T) for congruence scaling; no search-space truncation"
+}

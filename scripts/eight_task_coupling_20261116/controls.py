@@ -30,6 +30,14 @@ class FunctionalControls:
         path=self.folder/f'motion{n:06d}.pt'
         torch.save(dict(direction=b.detach().cpu()),path)
         self.columns.append(dict(file=str(path),full_motion_norm=magnitude,source=provenance))
+        context=getattr(self.g,'c',None)
+        if context is not None and hasattr(context,'sizes'):
+            offset=0;parts=[]
+            for key,size in zip(context.keys,context.sizes):
+                value=float(b[offset:offset+size].square().sum());offset+=size
+                parts.append(dict(tensor=key,unit_motion_energy=value))
+            self.columns[-1]['all_tensor_energies']=parts
+            self.columns[-1]['native_tensors_are_reporting_units_not_preselected_blocks']=True
         for task in self.g.tasks:
             self.responses[task].append(self.g.tensor_to_numpy(self.g.jvp(task,b)))
         self.events.append(dict(event='full_motion_entered_control',index=n,
@@ -53,13 +61,16 @@ class FunctionalControls:
         H=regularization*np.asarray(parameter_metric_gram)
         for task,weight in protected_weights.items():
             Y=np.column_stack(self.responses[task]);H=H+weight*(Y.T@Y)
-        U,s,Vt=np.linalg.svd(A,full_matrices=False)
+        U,s,Vt=np.linalg.svd(A,full_matrices=(A.shape[0]<n))
         # Default machine-precision linear dependence, never an energy/selection cutoff.
         _,_,rank,_=np.linalg.lstsq(A,y,rcond=None)
-        C=s[:rank,None]*Vt[:rank]
-        rhs=np.r_[np.zeros(n),U[:,:rank].T@y]
-        K=np.block([[H,C.T],[C,np.zeros((rank,rank))]])
-        solution=np.linalg.lstsq(K,rhs,rcond=None)[0];z=solution[:n]
+        # First solve the exact constraint in its machine-resolved image. Optimize
+        # only its coefficient nullspace; do not let objective units change rank
+        # by applying a second tolerance to a mixed-unit KKT matrix.
+        z=Vt[:rank].T@((U[:,:rank].T@y)/s[:rank])
+        Z=Vt[rank:].T
+        if Z.shape[1]:
+            z=z+Z@np.linalg.lstsq(Z.T@H@Z,-Z.T@H@z,rcond=None)[0]
         residual=float(np.linalg.norm(A@z-y));ynorm=float(np.linalg.norm(y))
         return dict(z=z,n_controls=n,response_residual=residual,
              relative_response_residual=residual/ynorm if ynorm else None,
@@ -75,3 +86,14 @@ class FunctionalControls:
         result=self.solve_demand(*args,**kwargs)
         if len(self.columns)!=before:raise RuntimeError('Held-out demand changed the learned structure')
         return dict(result,heldout=True,structure_updated=False)
+
+    def reexpress_at(self,geometry):
+        """Frozen learned columns on disjoint probes; no births or teacher leakage."""
+        if geometry.dimension!=self.g.dimension or geometry.tasks!=self.g.tasks:
+            raise ValueError('Full parameter/task coordinates differ')
+        other=FunctionalControls(geometry,self.folder)
+        other.columns=list(self.columns);other.parameter_gram=self.parameter_gram.copy()
+        for task in geometry.tasks:
+            other.responses[task]=[geometry.tensor_to_numpy(geometry.jvp(task,other._read(j)))
+                                  for j in range(len(other.columns))]
+        return other

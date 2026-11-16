@@ -32,7 +32,7 @@ class FullFunctionalGeometry:
         self.dimension=int(context.D)
         self.device=parameter_point.device
         self.probe=int(probe)
-        self.tasks=tuple(TASKS)
+        self.tasks=tuple(getattr(context,'task_names',TASKS))
         self.operator=(Float64Ops(context,self.point) if precision=='float64'
                        else GPUOps(context,float('inf')))
         self.output_dimensions={}
@@ -82,6 +82,21 @@ class FullFunctionalGeometry:
         # A caller-selected target construction, not an implicit default target.
         if step_size<=0:raise ValueError('CE descent step must be positive')
         return self.jvp(task,-step_size*self.ce_gradient(task))
+
+    def class_ce_gradient(self,task,label):
+        """Supervised new demand source, with no parameter support selection."""
+        batches=self.c.batches[task,self.probe]
+        total=sum(int((labels==label).sum()) for _,labels in batches)
+        if total==0:raise ValueError('Requested class is absent from the locked probe')
+        gradient=torch.zeros(self.dimension,device=self.device,dtype=torch.float64)
+        for x,labels in batches:
+            mask=labels==label
+            if not bool(mask.any()):continue
+            with torch.enable_grad():
+                leaf=self.point.detach().requires_grad_(True)
+                loss=F.cross_entropy(self.c.predict(leaf,x[mask],task),labels[mask],reduction='sum')/total
+                gradient+=torch.autograd.grad(loss,leaf)[0].detach().double()
+        return gradient
 
     def ce_unit_target(self,task):
         gradient=self.ce_gradient(task)

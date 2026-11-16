@@ -1,0 +1,159 @@
+{
+  "rows": [
+    {
+      "target": "DTD",
+      "protected": "Cars",
+      "gamma": 0.1,
+      "lambda_physical": 943.1876210105444,
+      "target_info": {
+        "defined": true,
+        "gradient_norm": 22.026770347413215,
+        "reference_CE_slope": -22.026770347413215,
+        "reference_is_not_executed_update": true
+      },
+      "solver": {
+        "solver": "CG exact output Schur for explicit Euclidean M",
+        "solver_info": 80,
+        "parameter_dimension": 86192640,
+        "numerical_system_dimension": 68200,
+        "response_relative_residual": 0.0034495174442395657,
+        "response_residual_norm": 0.1926165581648917,
+        "stationarity_residual_norm": 16.96979489943946,
+        "stationarity_relative_residual": 0.008679533840067116,
+        "target_constraint_numerically_satisfied": false,
+        "parameter_norm": 1.0890390891198034,
+        "metric_certificate": "Identity SPD",
+        "target_ridge": 0.0,
+        "structural_rank_truncation": false,
+        "note": "Smaller output linear system represents a full-P parameter solution; no fixed parameter dictionary",
+        "preconditioner": {
+          "probes": 11,
+          "elapsed_seconds": 62.68610802106559,
+          "full_parameter_dimension": 86192640,
+          "numerical_estimation_seconds": 60.0,
+          "seed": 1,
+          "interpretation": "Only estimates diag(J J^T) for congruence scaling; no search-space truncation"
+        }
+      },
+      "protected_response_energy": 369.67384219843086,
+      "reference_protected_energy": 931.202156797626,
+      "target_CE_slope": -22.02501551691247,
+      "finite": [
+        {
+          "scale": 0.001,
+          "tasks": {
+            "DTD": {
+              "CE": 0.18114880550886348,
+              "Top1": 0.96,
+              "CE_change": -0.004510329257873563,
+              "Top1_change": 0.0050000000000000044,
+              "KL": 0.0004243329571422944
+            },
+            "Cars": {
+              "CE": 0.0806699412371648,
+              "Top1": 0.97,
+              "CE_change": 0.001417452312748188,
+              "Top1_change": 0.0,
+              "KL": 0.00037343515646880897
+            }
+          }
+        },
+        {
+          "scale": 0.01,
+          "tasks": {
+            "DTD": {
+              "CE": 0.29578141168366806,
+              "Top1": 0.945,
+              "CE_change": 0.11012227691693102,
+              "Top1_change": -0.010000000000000009,
+              "KL": 0.09733641112084031
+            },
+            "Cars": {
+              "CE": 0.35319559668419886,
+              "Top1": 0.8966666666666666,
+              "CE_change": 0.27394310775978226,
+              "Top1_change": -0.07333333333333336,
+              "KL": 0.23910562365684263
+            }
+          }
+        },
+        {
+          "scale": 0.1,
+          "tasks": {
+            "DTD": {
+              "CE": 4.2016233190174015,
+              "Top1": 0.085,
+              "CE_change": 4.015964184250665,
+              "Top1_change": -0.87,
+              "KL": 3.8427089176666325
+            },
+            "Cars": {
+              "CE": 8.18477682084951,
+              "Top1": 0.006666666666666667,
+              "CE_change": 8.105524331925094,
+              "Top1_change": -0.9633333333333333,
+              "KL": 8.0626373237238
+            }
+          }
+        },
+        {
+          "scale": 1.0,
+          "tasks": {
+            "DTD": {
+              "CE": 4.8401543157551705,
+              "Top1": 0.03,
+              "CE_change": 4.654495180988434,
+              "Top1_change": -0.9249999999999999,
+              "KL": 4.482676900773087
+            },
+            "Cars": {
+              "CE": 8.417958255281937,
+              "Top1": 0.0033333333333333335,
+              "CE_change": 8.33870576635752,
+              "Top1_change": -0.9666666666666667,
+              "KL": 8.295784460558975
+            }
+          }
+        }
+      ],
+      "numerical_iterations": 80,
+      "motion_file": "/media/shangxueyuan/data1/fullspace_fp64_jacobi_check_20261116/DTD_gamma0.1.pt"
+    }
+  ],
+  "scales": {
+    "DTD": 12415.851120372574,
+    "Cars": 9431.876210105444
+  },
+  "spectrum_history": {
+    "DTD": [
+      3117.9600438010766,
+      10877.12351012597,
+      12144.551140943604,
+      12352.363838686988,
+      12399.513942671329,
+      12411.561821696934,
+      12414.76037362176,
+      12415.6195306868
+    ],
+    "Cars": [
+      3768.3793136009776,
+      6665.559121175795,
+      7422.934218583074,
+      7788.321719971031,
+      8058.536913912679,
+      8328.00579685622,
+      8641.485633421024,
+      9015.447644007638
+    ]
+  },
+  "elapsed_seconds": 1243.0862337066792,
+  "operator_counts": {
+    "JVP_calls": 205,
+    "VJP_calls": 182,
+    "seconds": {
+      "J": 637.4649575361982,
+      "JT": 535.8605513814837
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  }
+}

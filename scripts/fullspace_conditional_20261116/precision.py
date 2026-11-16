@@ -8,6 +8,7 @@ from torch.nn import functional as F
 class Float64Context:
     def __init__(self,context):
         self.original=context
+        self.task_names=tuple(getattr(context,'task_names',('DTD','Cars')))
         self.model=context.model.double()
         self.heads=[h.double() for h in context.heads]
         self.names=context.names;self.sizes=context.sizes;self.shapes=context.shapes
@@ -27,7 +28,7 @@ class Float64Context:
     def __getattr__(self,name):return getattr(self.original,name)
 
     def predict(self,point,x,task):
-        self.model.classification_head=self.heads[['DTD','Cars'].index(task)]
+        self.model.classification_head=self.heads[self.task_names.index(task)]
         parameters={name:value.view(shape) for name,value,shape in
                     zip(self.names,point.split(self.sizes),self.shapes)}
         return torch.func.functional_call(self.model,parameters,(x.double(),))

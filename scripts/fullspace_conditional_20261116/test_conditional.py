@@ -17,6 +17,27 @@ class DenseReferenceGeometry:
 
 
 class TestFullConditional(unittest.TestCase):
+    def test_joint_seven_protectors_and_continuation_match_dense_problem(self):
+        from geometry import EuclideanMetric
+        g=DenseReferenceGeometry()
+        rng=np.random.default_rng(9)
+        weights={f'P{i}':1. for i in range(7)}
+        for task in weights:g.J[task]=rng.normal(size=(2,5))
+        g.output_dimensions={t:len(J) for t,J in g.J.items()}
+        problem=ConditionalMotion(g,'target',weights,EuclideanMetric(),.3)
+        y=np.array([.2,-.7])
+        _,_=problem.solve_exact_response_schur_euclidean(y,relative_tolerance=1e-12,
+            max_iterations=2,protected_diagonal_scale=np.ones(14),target_diagonal_scale=np.ones(2),
+            checkpointable=True)
+        result,audit=problem.solve_exact_response_schur_euclidean(y,relative_tolerance=1e-12,
+            max_iterations=100,protected_diagonal_scale=np.ones(14),target_diagonal_scale=np.ones(2),
+            checkpointable=True,krylov_state=problem.schur_krylov_state)
+        A=.3*np.eye(5)+sum(g.J[t].T@g.J[t] for t in weights)
+        W=np.linalg.solve(A,g.J['target'].T)
+        reference=W@np.linalg.solve(g.J['target']@W,y)
+        np.testing.assert_allclose(result,reference,atol=1e-10)
+        self.assertTrue(audit['target_constraint_numerically_satisfied'])
+
     def test_CE_rowspace_slope_is_preserved_by_exact_response(self):
         from geometry import EuclideanMetric
         g=DenseReferenceGeometry()
