@@ -1,0 +1,77 @@
+{
+  "protocol": {
+    "protocol_id": "user_frozen_DTD_Cars_anchor0_two_charts_v11_20261116",
+    "domain": {
+      "kind": "original_radius_joint_motion",
+      "source": "User explicit reply: ||Bz||<=R and ||QBz||<=R; R=original r2 .003*norm(aD-aC); deterministic radial map; enclosing box derived from Gram, no independent arbitrary amplitude bounds"
+    },
+    "ec": {
+      "pop_size": 50,
+      "seed": 1,
+      "termination": {
+        "kind": "n_gen",
+        "value": 50
+      },
+      "source": "User explicit reply selecting original production NSGA-II pop_size=50, n_gen=50, seed=1"
+    },
+    "max_charts": 2,
+    "branch": {
+      "kind": "pareto_arc",
+      "fraction": 0.25,
+      "source": "User explicit reply: original cache.select exact duplicate objective removal, DTD accuracy ascending, normalized-objective Euclidean arc 25%, first stable argmin"
+    },
+    "population_transition": {
+      "kind": "fresh",
+      "source": "User explicit reply: no population migration or projection; initialize NSGA-II anew with seed=1 in chart 2"
+    },
+    "learn_at_ec_anchors": true,
+    "data": "p0 only; do not open p4/p5/p6 or official Test",
+    "execution_scope_source": "User explicit reply: two charts, one move, original mode birth at the new anchor; no metric-based early stopping",
+    "n_objectives": 2
+  },
+  "protocol_sha256": "28d583812292082d2c1bd2598fa0915d4993f6fe18495adc5f2b5d199bf1ee8a",
+  "source": {
+    "source_hashes": {
+      "/home/shangxueyuan/merging/tsv/scripts/adaptive_fiber_20261116_r2/fiber_core.py": "c32c4790dda7de7a1f2b119e995c338782e87948a27815a3423b7551910c45c4",
+      "/home/shangxueyuan/merging/tsv/scripts/adaptive_fiber_20261116_r2/fast_online.py": "fbf9cbc61266f7491fcebff9e8f5f0fab52ad191145636d081925aee908194b9",
+      "/home/shangxueyuan/merging/tsv/scripts/adaptive_fiber_20261116_r2/run_a100.py": "5c4b04da2a8e06add7ba40241fc74d772672326bc59be9706eb7df34486e75e8",
+      "/home/shangxueyuan/merging/tsv/scripts/adaptive_fiber_20261116_r2/resume_state.py": "1bc876e070b329cbb37805a8c88f5c8335857d8dd2f25ecdc83ee05de77cc64a",
+      "/home/shangxueyuan/merging/tsv/scripts/compromise_geometry_20261115/space.py": "0a29085e1cfb601c71525e4d6cfa430146ea211a80328b3517b6809879fa77a9",
+      "/home/shangxueyuan/merging/tsv/scripts/compromise_geometry_20261115/baselines.py": "a0b535757ce8fa856f65886ec6e59e93c658d2ddf9a644c082df0e099f4c4f99"
+    },
+    "checkpoint": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/adaptive/checkpoints/step004.pt",
+    "checkpoint_sha256": "b721d55d082ec462ff3fb93261b45999b2a20d83088fda8646edbccb40c30720",
+    "exact_full_visual_equality": true,
+    "normalizer_protocol": "/media/shangxueyuan/data1/compromise_geometry_20261115/fitness_and_scope_audit.json",
+    "normalizer_protocol_sha256": "6bdca9c18f42c7511d895d04b29f4d22d4f0faf0f3adc7adefa419228b8eb4df",
+    "normalizer_path": "/home/shangxueyuan/merging/tsv/results/single_task/ViT-B-16/nonlinear_ft_accuracies.json",
+    "normalizers": [
+      0.8209219858156028,
+      0.8648648648648649
+    ],
+    "P": 86192640,
+    "d_E": 304,
+    "inherited_learning_next_step": 5,
+    "inherited_actual_responses": 5,
+    "original_run_lock": "/media/shangxueyuan/data1/adaptive_fiber_20261116_r2/archived_other_anchors/anchor0/adaptive/fast_lock.json",
+    "original_run_lock_sha256": "408c9184cbe4c1189194f7a6c1c2e43f32267eca07a29197ed9b573a4b66d220"
+  },
+  "prepared_path": "/media/shangxueyuan/data1/functional_group_ec_v11_20261116/prepared",
+  "design_sha256": "ae391679af1bdce645e8ec520079fe8d4ef9d916552f7f162051ceadd8e74630",
+  "code_hashes": {
+    "chart_loop.py": "50798039e7750449f3294f44c103b79b6773f95bd38afeb4d4d28afb80e58308",
+    "ec_adapter.py": "51dfd27b14b21e69482a3102c4c54ecadbf25d3d015254ec159877565cf52f26",
+    "chart_state.py": "3efbe03381ee4806286f22ed60e2a589c5138466de9d2821736064d99a12e857",
+    "monitor.py": "88b99b501cacf3d27d39c3731ef696ff618335c6570fd9a62aade35448acc3dd",
+    "control_domain.py": "40880aa1553e8d875c6b13a739b72b671cbe18efbff5a3eabfd3e01d40e52341",
+    "state_io.py": "b974514754e24bf4f8dae10d725bbd44aeab5b15398f91620ee6c4238e6b8771",
+    "legacy_adapter.py": "cd4c15e666aad5d67ccf83d1c687670c45f3c3d21b7086a607235c6186e66b6a",
+    "test_implementation.py": "317970e32c68bf0833ba082fe3007d3b7892a95e6775c513cf5280d1213b3668",
+    "decode_fitness.py": "ee6279920a56b5f4f97926e987e7873f70c80f935b10637845e75e57865a7c04",
+    "protocol.py": "1f435c4695dc1ec14345482d9892dfa0141c4b76beaa3a32b1ef1a14f86ffc4f"
+  },
+  "data_roles": "p0 geometry and EC; p4/p5 exploratory final only; p6/Test unopened",
+  "no_added_EC_constraints": true,
+  "input_dimension": 304,
+  "ec_dimension": "len(frozen_chart.modes_snapshot)"
+}

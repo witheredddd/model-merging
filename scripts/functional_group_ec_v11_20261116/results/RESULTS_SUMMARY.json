@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "charts": 2,
+  "evaluations": 5000,
+  "generations_per_chart": [
+    50,
+    50
+  ],
+  "mode_counts": [
+    9,
+    11
+  ],
+  "initial_anchor_p0": {
+    "DTD": {
+      "Top1": 0.97,
+      "CE": 0.18970483627600565
+    },
+    "Cars": {
+      "Top1": 0.97,
+      "CE": 0.11493156365230783
+    }
+  },
+  "unique_top1_pairs": [
+    [
+      0.97,
+      0.97
+    ]
+  ],
+  "unique_fitness_pairs": 1,
+  "unique_model_hashes": 5000,
+  "CE_ranges": {
+    "DTD": [
+      0.18927258744968867,
+      0.19009753307318594
+    ],
+    "Cars": [
+      0.11463649685702898,
+      0.1151124356927307
+    ]
+  },
+  "wall_seconds": 10153.809965464287,
+  "data_scope": "p0 exploratory fitness only; no heldout performance evaluation",
+  "finished_Asia_Shanghai": "2026-11-16T18:47:37.942488+08:00",
+  "server_result_directory": "/media/shangxueyuan/data1/functional_group_ec_v11_20261116/ec",
+  "accuracy_improvement": false,
+  "metric_threshold_early_stopping": false
+}

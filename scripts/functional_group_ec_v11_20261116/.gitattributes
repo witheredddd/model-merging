@@ -1,0 +1,5 @@
+* -text
+*.gz binary
+# Preserve executed-source EOF bytes and the supplied Markdown's hard line breaks.
+*.py whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+*.md whitespace=-blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol

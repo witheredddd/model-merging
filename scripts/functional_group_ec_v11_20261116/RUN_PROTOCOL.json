@@ -1,0 +1,26 @@
+{
+  "protocol_id": "user_frozen_DTD_Cars_anchor0_two_charts_v11_20261116",
+  "domain": {
+    "kind": "original_radius_joint_motion",
+    "source": "User explicit reply: ||Bz||<=R and ||QBz||<=R; R=original r2 .003*norm(aD-aC); deterministic radial map; enclosing box derived from Gram, no independent arbitrary amplitude bounds"
+  },
+  "ec": {
+    "pop_size": 50,
+    "seed": 1,
+    "termination": {"kind": "n_gen", "value": 50},
+    "source": "User explicit reply selecting original production NSGA-II pop_size=50, n_gen=50, seed=1"
+  },
+  "max_charts": 2,
+  "branch": {
+    "kind": "pareto_arc",
+    "fraction": 0.25,
+    "source": "User explicit reply: original cache.select exact duplicate objective removal, DTD accuracy ascending, normalized-objective Euclidean arc 25%, first stable argmin"
+  },
+  "population_transition": {
+    "kind": "fresh",
+    "source": "User explicit reply: no population migration or projection; initialize NSGA-II anew with seed=1 in chart 2"
+  },
+  "learn_at_ec_anchors": true,
+  "data": "p0 only; do not open p4/p5/p6 or official Test",
+  "execution_scope_source": "User explicit reply: two charts, one move, original mode birth at the new anchor; no metric-based early stopping"
+}
