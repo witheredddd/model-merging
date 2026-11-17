@@ -23,3 +23,5 @@ scripts/coordination_audit_20261117/** -text whitespace=blank-at-eol,blank-at-eo
 scripts/functional_control_r3_20261117/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 scripts/functional_space_20261117/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+scripts/functional_space_diagnostic_20261117/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

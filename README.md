@@ -1,6 +1,10 @@
 # model-merging — functional geometry / TFPML
 
-## Current research: conditional functional-space identification
+## Current research: shared conditional-space diagnostics
+
+[Source, tests and numerical policy](scripts/functional_space_diagnostic_20261117). Four iterations are now a resumable checkpoint quantum, not the end of a solve. The common WLS report separates finite full-space reference, undamped restricted optimum and damping. Shared coordinates grow from full-parameter projection residuals across global and class-conditional task demands, without a tensor-selected support, mode-count cap or explained-energy cutoff. Held-out probes never enrich the space; all learned coordinates participate in new-position comparisons. Recorded normal-training positions remain immutable. Source and tests do not establish low-dimensional reuse before the independent experiments finish.
+
+## Earlier observation prototype: conditional functional-space identification
 
 [Space-identification source and tests](scripts/functional_space_20261117). Existing ordinary-training parameter positions supply the carrier. Task functional demands and protection constraints generate the motions and drive/compensation modes to be studied. No new CE optimization, accuracy acceptance gate, synthetic training path, or trajectory-PCA substitute is used. Counterfactual mode-controlled models are observed without changing the input carrier. Earlier controlled-update experiments remain archived separately.
 
