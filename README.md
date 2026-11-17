@@ -1,5 +1,9 @@
 # model-merging — functional geometry / TFPML
 
+## Protective mechanism verification
+
+[Conditional graphs, selection spectra and fixed-response comparisons](scripts/protective_mechanism_20261118). The shared residual bank is a numerical baseline, not discovered protective groups. Arbitrary parameter supports and reoptimized removals are supported; automatic support discovery and EC integration remain unfinished.
+
 ## Current research: adaptive conditional functional spaces
 
 [Adaptive entry, streaming algebra, tests and method](scripts/functional_space_diagnostic_20261117). The current entry is `adaptive.py`. It retains existing shared coordinates and CG states, evaluates candidate extensions by their actual improvement of the same functional WLS, and schedules tasks, positions, independent probes, refinement and regional diagnostics without a unified numerical admission gate. New-position demands are regenerated at that position, not copied from an old tangent space. Parameter algebra uses disk-backed blocks and incremental Gram updates, with no mode-count cap. Frozen, accumulated and evolving spaces remain distinct. Runtime cost, uncertainty and provisional structure are recorded; source tests do not establish successful low-dimensional coupling.
