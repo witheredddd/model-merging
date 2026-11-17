@@ -3,18 +3,19 @@ import argparse,json,time
 from pathlib import Path
 import numpy as np
 from bootstrap import R3
-from graphs import mechanism_report,exact_control
+from graphs import mechanism_report,exact_control,joint_mode_curve
 from io_state import Transactions,atomic_json,digest
 
 def observe(source,output):
     state=Transactions(source).load();records=[]
+    code_hashes={p.name:digest(p) for p in Path(__file__).parent.glob('*.py')}
     for key,ps in state.get('adaptive',{}).get('position_states',{}).items():
         item=ps.get('coupling') or ps.get('completed_coupling')
         if not item:continue
         destination=output/f'position{key}.json'
         if destination.exists():
             old=json.loads(destination.read_text())
-            if old.get('source_observation_index')==item['region_index']:
+            if old.get('source_observation_index')==item['region_index'] and old.get('mechanism_code_hashes')==code_hashes:
                 records.append(dict(position=key,regions=old['observed_region_count'],graphs=len(old['graphs'])));continue
         folder=source/item['output_folder'];files=sorted(f for f in folder.glob('[0-9]*.npz') if int(f.stem)<item['region_index'])
         if len(files)<2:continue
@@ -42,6 +43,9 @@ def observe(source,output):
         record=dict(position=int(key),target=target,region_ids=ids,observed_region_count=len(rows),
             source_observation_index=item['region_index'],
             joint_graph_family_fixed_target=exact_control(Y,G,target,y,weights,rho,family),
+            same_span_comparison_role='Coordinate-equivalence sanity check only; not evidence for or against compensation',
+            combined_selective_mode_diagnostics=joint_mode_curve(Y,G,target,y,weights,rho,family),
+            mechanism_code_hashes=code_hashes,
             source_control_file=item['motion_file'],source_control_sha256=digest(source/item['motion_file']),
             parameter_mode_recipe='Partition source control by region_ids; multiply region vectors by graph joint_modes coefficients',
             complete_parameter_partition=False,graphs=reports,

@@ -72,6 +72,19 @@ def mechanism_report(Y,G,target,y,weights,rho,drivers,include_ablations=True):
         uncompensated_driver=exact_control(Y,G,target,y,weights,rho,E),
         protected_graph=exact_control(Y,G,target,y,weights,rho,graph['L']),
         selective_modes=exact_control(Y,G,target,y,weights,rho,graph['joint_modes']))
+    A=rho*G.copy()
+    for t,w in weights.items():A+=w*(Y[t].T@Y[t])
+    fixed_driver=[]
+    for j in range(len(M)):
+        raw=E[:,j];joint=graph['L'][:,j]
+        fixed_driver.append(dict(driver_coordinate=int(M[j]),
+            raw_protected_energies={t:float(np.linalg.norm(Y[t]@raw)**2) for t in weights},
+            compensated_protected_energies={t:float(np.linalg.norm(Y[t]@joint)**2) for t in weights},
+            raw_joint_cost=float(raw@A@raw),compensated_joint_cost=float(joint@A@joint),
+            raw_target_response_norm=float(np.linalg.norm(Y[target]@raw)),
+            compensated_target_response_norm=float(np.linalg.norm(Y[target]@joint)),
+            target_response_change_norm=float(np.linalg.norm(Y[target]@(joint-raw))),
+            fixed_driver_amplitude=1.,target_preservation_is_not_assumed=True))
     # Removal changes the feasible space; all remaining coefficients reoptimize.
     ablations=[]
     for i in range(r if include_ablations else 0):
@@ -79,9 +92,33 @@ def mechanism_report(Y,G,target,y,weights,rho,drivers,include_ablations=True):
         if not remaining.shape[1]:result=dict(reachable=bool(np.linalg.norm(y)==0),reason='No coordinates remain')
         else:result=exact_control(Y,G,target,y,weights,rho,remaining)
         ablations.append(dict(removed_coordinate=i,reoptimized_remaining=result))
-    return dict(graph=graph,fixed_target_comparisons=fixed_target,reoptimized_removals=ablations,
+    return dict(graph=graph,fixed_driver_compensation=fixed_driver,fixed_target_comparisons=fixed_target,reoptimized_removals=ablations,
         requested_target=y,soft_WLS_separate=restricted_problem(Y,G,target,y,weights,rho,problem='weighted_ls'),
         exact_and_soft_objectives_are_distinct=True)
+
+
+def joint_mode_curve(Y,G,target,y,weights,rho,family):
+    """Every spectral prefix is a diagnostic; no dimension is selected here."""
+    A=rho*G.copy()
+    for t,w in weights.items():A+=w*(Y[t].T@Y[t])
+    F=Y[target].T@Y[target];S=family.T@A@family
+    values,U=eigh(family.T@F@family,S);order=np.argsort(values)[::-1]
+    values=values[order];B=family@U[:,order];R={t:a@B for t,a in Y.items()}
+    rhs=R[target].T@y;coeff=rhs/(1+values)
+    response={t:np.zeros(a.shape[0]) for t,a in Y.items()};curve=[]
+    for j in range(B.shape[1]):
+        for t in Y:response[t]+=coeff[j]*R[t][:,j]
+        z=B[:,:j+1]@coeff[:j+1]
+        energies={t:float(response[t]@response[t]) for t in weights}
+        error=float(np.linalg.norm(response[target]-y)/max(np.linalg.norm(y),np.finfo(float).tiny))
+        penalty=float(rho*z@G@z)
+        curve.append(dict(joint_degrees=j+1,target_relative_error=error,protected_energies=energies,
+            parameter_regularization=penalty,objective=float(.5*(np.linalg.norm(response[target]-y)**2+
+                sum(weights[t]*energies[t] for t in weights)+penalty))))
+    return dict(selective_values=values,joint_modes=B,requested_WLS_amplitudes=coeff,
+        complete_prefix_curve=curve,automatically_selected_dimension=None,
+        scope='Joint control diagnostic within observed regional span, not full-parameter optimum',
+        no_single_mode_full_task_requirement=True,no_fixed_count_or_explained_fraction_cutoff=True)
 
 
 def metric_split(Y,G,target,delta_responses,delta_norm2,cross_parameter,B,weights,rho):

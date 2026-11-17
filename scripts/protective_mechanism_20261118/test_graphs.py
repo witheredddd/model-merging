@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 import torch
 from bootstrap import R3
-from graphs import conditional_graph,mechanism_report,metric_split,ArbitrarySupportSchur
+from graphs import conditional_graph,mechanism_report,metric_split,ArbitrarySupportSchur,joint_mode_curve
 from test_research import Geometry
 
 
@@ -11,6 +11,7 @@ class GraphTests(unittest.TestCase):
         Y={'T':np.array([[1.,0.]]),'P':np.array([[1.,1.]])};G=np.eye(2)
         r=mechanism_report(Y,G,'T',np.ones(1),{'P':1.},.01,[0])
         self.assertAlmostEqual(r['graph']['T'][0,0],-1/1.01)
+        self.assertLess(r['fixed_driver_compensation'][0]['compensated_joint_cost'],r['fixed_driver_compensation'][0]['raw_joint_cost'])
         raw=r['fixed_target_comparisons']['uncompensated_driver'];joint=r['fixed_target_comparisons']['selective_modes']
         self.assertTrue(joint['reachable']);self.assertLess(joint['protected_energies']['P'],raw['protected_energies']['P']*.001)
         self.assertFalse(r['reoptimized_removals'][0]['reoptimized_remaining']['reachable'])
@@ -36,5 +37,13 @@ class GraphTests(unittest.TestCase):
         split=metric_split(Y,G,'T',{t:a@d for t,a in Y.items()},d@d,d,B,{'P':1.},.2)
         self.assertLess(abs(split['protection_metric_cross_term']),1e-12)
         self.assertFalse(split['EC_executed'])
+
+    def test_joint_curve_keeps_every_prefix_without_choosing_a_dimension(self):
+        Y={'T':np.eye(3),'P':np.array([[1.,1.,0.]])};G=np.eye(3)
+        curve=joint_mode_curve(Y,G,'T',np.ones(3),{'P':1.},.1,np.eye(3))
+        self.assertEqual(len(curve['complete_prefix_curve']),3)
+        self.assertIsNone(curve['automatically_selected_dimension'])
+        obj=[r['objective'] for r in curve['complete_prefix_curve']]
+        self.assertTrue(all(a>=b-1e-12 for a,b in zip(obj,obj[1:])))
 
 if __name__=='__main__':unittest.main()
