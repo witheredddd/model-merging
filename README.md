@@ -1,6 +1,10 @@
 # model-merging — functional geometry / TFPML
 
-## Current functional-control implementation: r3
+## Current research: conditional functional-space identification
+
+[Space-identification source and tests](scripts/functional_space_20261117). Existing ordinary-training parameter positions supply the carrier. Task functional demands and protection constraints generate the motions and drive/compensation modes to be studied. No new CE optimization, accuracy acceptance gate, synthetic training path, or trajectory-PCA substitute is used. Counterfactual mode-controlled models are observed without changing the input carrier. Earlier controlled-update experiments remain archived separately.
+
+## Earlier experimental controlled-update implementation: r3
 
 [Protected compensation graphs, selectivity modes and discrete real-model control](scripts/functional_control_r3_20261117). This revision separates exact-response and joint weighted-fit objectives, constructs full-complement compensation actions after full-space motion, uses graph-specific spectral modes for real parameter updates, and rebuilds geometry at committed new anchors. Numerical uncertainty affects actuation; candidate histories are retained. Earlier r1/r2 code remains historical. Only source, tests and method notes are published; model resources and experiment artifacts remain external.
 
