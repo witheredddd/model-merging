@@ -24,6 +24,8 @@ class AdaptiveTests(unittest.TestCase):
             disk.gram(entries[:6],'g');before=disk.stats['dot_products']
             G,_=disk.gram(entries,'g');self.assertEqual(disk.stats['dot_products']-before,7)
             np.testing.assert_allclose(G,Q.T@Q,atol=1e-14)
+            before=disk.stats['dot_products'];disk.gram(entries[:4],'frozen_branch')
+            self.assertEqual(disk.stats['dot_products'],before)
             v=rng.normal(size=2003);res=disk.innovation(entries,v,Path('q.npy'),'g')
             expected=v-Q@(Q.T@v);expected/=np.linalg.norm(expected)
             np.testing.assert_allclose(np.load(Path(f)/'q.npy'),expected,atol=1e-14)

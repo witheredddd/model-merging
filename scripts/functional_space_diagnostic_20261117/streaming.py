@@ -2,6 +2,7 @@
 from pathlib import Path
 import math
 import mmap
+import sqlite3
 import numpy as np
 import torch
 from bootstrap import R3
@@ -14,6 +15,16 @@ class DiskAlgebra:
         self.root=Path(root);self.block=int(block_elements)
         if self.block<1:raise ValueError('Positive I/O block required')
         self.stats=dict(dot_products=0,read_elements=0,max_working_elements=0)
+        folder=self.root/'stream_gram';folder.mkdir(exist_ok=True,parents=True)
+        self.pairs=sqlite3.connect(folder/'parameter_pairs.sqlite')
+        self.pairs.execute('CREATE TABLE IF NOT EXISTS products (a TEXT,b TEXT,value REAL,error REAL,PRIMARY KEY(a,b))')
+        self.seeded={}
+
+    def identity(self,e):return e['id']+':'+e.get('motion_sha256',e['motion_file'])
+
+    def remember_pair(self,a,b,value,error):
+        ka,kb=sorted((self.identity(a),self.identity(b)))
+        with self.pairs:self.pairs.execute('INSERT OR REPLACE INTO products VALUES (?,?,?,?)',(ka,kb,value,error))
 
     def open(self,entry):
         path=self.root/entry['motion_file']
@@ -43,20 +54,33 @@ class DiskAlgebra:
 
     def gram(self,entries,label):
         folder=self.root/'stream_gram';folder.mkdir(exist_ok=True)
-        cache=folder/(label+'.npz');identities=[e['id']+':'+e.get('motion_sha256',e['motion_file']) for e in entries]
+        cache=folder/(label+'.npz');identities=[self.identity(e) for e in entries]
         r=len(entries);G=np.zeros((r,r));E=np.zeros_like(G);prefix=0
         if cache.exists():
             with np.load(cache) as z:
                 old=list(z['identities'])
                 if old==identities[:len(old)]:
                     prefix=len(old);G[:prefix,:prefix]=z['G'];E[:prefix,:prefix]=z['E']
+        seeded=self.seeded.get(label,[])
+        seed_start=len(seeded) if seeded==identities[:len(seeded)] else 0
+        with self.pairs:
+            for j in range(seed_start,prefix):
+                for i in range(j+1):
+                    ka,kb=sorted((identities[i],identities[j]))
+                    self.pairs.execute('INSERT OR IGNORE INTO products VALUES (?,?,?,?)',(ka,kb,G[i,j],E[i,j]))
         for j in range(prefix,r):
             b=self.open(entries[j])
             for i in range(j+1):
-                a=b if i==j else self.open(entries[i]);value,error=self.dot(a,b)
+                ka,kb=sorted((identities[i],identities[j]))
+                cached=self.pairs.execute('SELECT value,error FROM products WHERE a=? AND b=?',(ka,kb)).fetchone()
+                if cached is not None:value,error=cached
+                else:
+                    a=b if i==j else self.open(entries[i]);value,error=self.dot(a,b)
+                    self.pairs.execute('INSERT OR REPLACE INTO products VALUES (?,?,?,?)',(ka,kb,value,error))
+                    self.release(a)
                 G[i,j]=G[j,i]=value;E[i,j]=E[j,i]=error
-                self.release(a)
             self.release(b)
+        self.pairs.commit();self.seeded[label]=list(identities)
         temp=cache.with_suffix('.tmp')
         with temp.open('wb') as f:np.savez(f,G=G,E=E,identities=np.asarray(identities,dtype=str))
         temp.replace(cache)

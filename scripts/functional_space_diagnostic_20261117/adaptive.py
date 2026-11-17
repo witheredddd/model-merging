@@ -174,8 +174,11 @@ class AdaptiveRunner(Runner):
         entry=dict(id=label,motion_file=innovation['motion_file'],motion_sha256=innovation['motion_sha256'])
         with self.timed('candidate_functional_JVPs'):
             q=self.load_motion(entry);newY={t:self.g.tensor_to_numpy(self.g.jvp(t,q)) for t in self.g.tasks}
-        cross=np.array([self.disk.dot(self.disk.open(e),self.disk.open(entry))[0] for e in bank])
-        norm2=self.disk.dot(self.disk.open(entry),self.disk.open(entry))[0]
+        pairs=[self.disk.dot(self.disk.open(e),self.disk.open(entry)) for e in bank]
+        cross=np.array([p[0] for p in pairs])
+        norm2,norm_error=self.disk.dot(self.disk.open(entry),self.disk.open(entry))
+        for old,(value,error) in zip(bank,pairs):self.disk.remember_pair(old,entry,value,error)
+        self.disk.remember_pair(entry,entry,norm2,norm_error)
         target=condition['target'];weights,rho=self.settings(target);y=self.demand(condition)
         signal=functional_signal(Y,G,target,y,weights,rho,newY,cross,norm2)
         question=refinement_question(signal,ref['certificate'],innovation['norm'])
@@ -220,7 +223,7 @@ class AdaptiveRunner(Runner):
                 if not unseen:continue
                 sid=unseen[0];ps['seen_sources'].append(sid);c=a['shared_sources'][sid]
                 # Crucially regenerate at the NEW anchor. Never load an old y0.
-                return dict(role=role,condition=c,key=f'regenerated_p{self.state["position"]}_{c["id"]}',
+                return dict(role=role,condition=c,key=f'study_p{self.state["position"]}_{c["id"]}',
                     source=sid,refining=False,geometry_policy='Same functional demand generator at current position')
             if role=='validate':
                 if ps['validation_cursor']>=len(self.state['conditions']):continue
