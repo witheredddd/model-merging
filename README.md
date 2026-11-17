@@ -1,8 +1,8 @@
 # model-merging — functional geometry / TFPML
 
-## Current research: shared conditional-space diagnostics
+## Current research: adaptive conditional functional spaces
 
-[Source, tests and numerical policy](scripts/functional_space_diagnostic_20261117). Four iterations are now a resumable checkpoint quantum, not the end of a solve. The common WLS report separates finite full-space reference, undamped restricted optimum and damping. Shared coordinates grow from full-parameter projection residuals across global and class-conditional task demands, without a tensor-selected support, mode-count cap or explained-energy cutoff. Held-out probes never enrich the space; all learned coordinates participate in new-position comparisons. Recorded normal-training positions remain immutable. Source and tests do not establish low-dimensional reuse before the independent experiments finish.
+[Adaptive entry, streaming algebra, tests and method](scripts/functional_space_diagnostic_20261117). The current entry is `adaptive.py`. It retains existing shared coordinates and CG states, evaluates candidate extensions by their actual improvement of the same functional WLS, and schedules tasks, positions, independent probes, refinement and regional diagnostics without a unified numerical admission gate. New-position demands are regenerated at that position, not copied from an old tangent space. Parameter algebra uses disk-backed blocks and incremental Gram updates, with no mode-count cap. Frozen, accumulated and evolving spaces remain distinct. Runtime cost, uncertainty and provisional structure are recorded; source tests do not establish successful low-dimensional coupling.
 
 ## Earlier observation prototype: conditional functional-space identification
 
