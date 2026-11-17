@@ -14,3 +14,8 @@ functional_geometry_dtd_v2_2/** -text
 functional_geometry_dtd_v2_2/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 functional_geometry_sun397_v2_*/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve exact runtime and diagnostic source bytes.
+scripts/eight_task_online_repair_r1_20261117/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+scripts/eight_task_online_repair_r2_20261117/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+scripts/coordination_audit_20261117/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

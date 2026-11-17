@@ -1,5 +1,9 @@
 # model-merging — functional geometry / TFPML
 
+## A100 control source update (2026-11-17)
+
+Runtime source: [r1](scripts/eight_task_online_repair_r1_20261117), [r2](scripts/eight_task_online_repair_r2_20261117). [Diagnostic source and tests](scripts/coordination_audit_20261117). This update publishes code and usage notes only; experiment artifacts remain outside this update.
+
 当前发布 **`functional-geometry-v2.4.0-sun397-metric`**。文件校验见 [SHA256SUMS](SHA256SUMS)。
 
 [SUN397 参数度量改版](functional_geometry_sun397_v2_4)。归档时已完成 4/20 轮。最低验证 CE 对应第 3 轮，准确率 66.05%，CE 1.1958。本轮训练进行中，测试结果待完成后生成。
