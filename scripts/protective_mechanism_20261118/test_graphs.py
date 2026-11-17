@@ -1,8 +1,12 @@
 import unittest
 import numpy as np
 import torch
+import tempfile
+from pathlib import Path
 from bootstrap import R3
-from graphs import conditional_graph,mechanism_report,metric_split,ArbitrarySupportSchur,joint_mode_curve
+from graphs import conditional_graph,mechanism_report,metric_split,ArbitrarySupportSchur,joint_mode_curve,combined_reuse
+from control_math import restricted_problem
+from observe import input_fingerprint
 from test_research import Geometry
 
 
@@ -45,5 +49,41 @@ class GraphTests(unittest.TestCase):
         self.assertIsNone(curve['automatically_selected_dimension'])
         obj=[r['objective'] for r in curve['complete_prefix_curve']]
         self.assertTrue(all(a>=b-1e-12 for a,b in zip(obj,obj[1:])))
+
+    def test_full_spectrum_endpoint_equals_complete_WLS_and_invertible_basis_change(self):
+        rng=np.random.default_rng(91);Y={'T':rng.normal(size=(8,4)),'P':rng.normal(size=(6,4))}
+        G=np.eye(4);y=rng.normal(size=8);C=rng.normal(size=(4,4))+3*np.eye(4)
+        ref=restricted_problem(Y,G,'T',y,{'P':1.},.2,problem='weighted_ls')
+        a=joint_mode_curve(Y,G,'T',y,{'P':1.},.2,np.eye(4))
+        b=joint_mode_curve(Y,G,'T',y,{'P':1.},.2,C)
+        self.assertAlmostEqual(a['complete_prefix_curve'][-1]['objective'],ref['objective'])
+        self.assertAlmostEqual(b['complete_prefix_curve'][-1]['objective'],ref['objective'])
+        np.testing.assert_allclose(a['joint_modes']@a['requested_WLS_amplitudes'],ref['z'],atol=1e-12)
+        np.testing.assert_allclose(b['joint_modes']@b['requested_WLS_amplitudes'],ref['z'],atol=1e-12)
+
+    def test_fixed_response_prefix_is_distinct_from_soft_WLS(self):
+        Y={'T':np.eye(2),'P':np.array([[1.,0.]])};y=np.ones(2)
+        c=joint_mode_curve(Y,np.eye(2),'T',y,{'P':1.},10.,np.eye(2))
+        self.assertFalse(c['fixed_response_prefix_curve'][0]['reachable'])
+        self.assertTrue(c['fixed_response_prefix_curve'][-1]['reachable'])
+        self.assertLess(c['fixed_response_prefix_curve'][-1]['target_relative_error'],1e-12)
+        self.assertGreater(c['complete_prefix_curve'][-1]['target_relative_error'],.5)
+
+    def test_cache_fingerprint_detects_replaced_data_without_index_change(self):
+        with tempfile.TemporaryDirectory() as d:
+            f=Path(d)/'region.npz';control=Path(d)/'control.bin';control.write_bytes(b'old')
+            np.savez(f,value=np.ones(2));a=input_fingerprint([f],control,dict(index=7))
+            np.savez(f,value=np.zeros(2));b=input_fingerprint([f],control,dict(index=7));self.assertNotEqual(a,b)
+            control.write_bytes(b'new');self.assertNotEqual(b,input_fingerprint([f],control,dict(index=7)))
+
+    def test_reuse_requires_same_physical_coordinates_and_recomputes_compensation(self):
+        Y={'T':np.eye(2),'P':np.array([[1.,1.]])};G=np.eye(2);w={'P':1.}
+        graphs=[conditional_graph(Y,G,'T',w,.1,[i]) for i in range(2)]
+        family=np.column_stack([g['joint_modes'] for g in graphs]);old=joint_mode_curve(Y,G,'T',np.ones(2),w,.1,family)
+        new=dict(Y,P=np.array([[1.,2.]]))
+        result=combined_reuse(new,G,'T',np.ones(2),w,.1,graphs,old['joint_modes'],'same','same')
+        self.assertTrue(result['same_new_demand_for_all_cases'])
+        self.assertEqual(len(result['frozen_compensation_and_modes']),2)
+        with self.assertRaises(ValueError):combined_reuse(new,G,'T',np.ones(2),w,.1,graphs,old['joint_modes'],'old','different')
 
 if __name__=='__main__':unittest.main()

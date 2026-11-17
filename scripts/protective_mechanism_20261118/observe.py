@@ -3,8 +3,11 @@ import argparse,json,time
 from pathlib import Path
 import numpy as np
 from bootstrap import R3
-from graphs import mechanism_report,exact_control,joint_mode_curve
+from graphs import mechanism_report,exact_control,joint_mode_curve,combined_reuse
 from io_state import Transactions,atomic_json,digest
+
+def input_fingerprint(files,control,configuration):
+    return dict(source_files={str(f):digest(f) for f in files},source_control_sha256=digest(control),configuration=configuration)
 
 def observe(source,output):
     state=Transactions(source).load();records=[]
@@ -12,12 +15,17 @@ def observe(source,output):
     for key,ps in state.get('adaptive',{}).get('position_states',{}).items():
         item=ps.get('coupling') or ps.get('completed_coupling')
         if not item:continue
+        folder=source/item['output_folder'];files=sorted(f for f in folder.glob('[0-9]*.npz') if int(f.stem)<item['region_index'])
+        scale_file=next(Path(p) for p in state['source_hashes'] if p.endswith('/SCALES.json'))
+        scale_sha=digest(scale_file)
+        assert scale_sha==state['source_hashes'][str(scale_file)]
+        fingerprint=input_fingerprint(files,source/item['motion_file'],dict(condition=item['condition'],
+            gamma=state['gamma'],scale_sha256=scale_sha,probe=item.get('probe',0)))
         destination=output/f'position{key}.json'
         if destination.exists():
             old=json.loads(destination.read_text())
-            if old.get('source_observation_index')==item['region_index'] and old.get('mechanism_code_hashes')==code_hashes:
+            if old.get('source_observation_index')==item['region_index'] and old.get('mechanism_code_hashes')==code_hashes and old.get('input_fingerprint')==fingerprint:
                 records.append(dict(position=key,regions=old['observed_region_count'],graphs=len(old['graphs'])));continue
-        folder=source/item['output_folder'];files=sorted(f for f in folder.glob('[0-9]*.npz') if int(f.stem)<item['region_index'])
         if len(files)<2:continue
         rows=[];norms=[];ids=[]
         for file in files:
@@ -40,12 +48,24 @@ def observe(source,output):
         for i,report in enumerate(reports):
             report.update(graph_id=f'position{key}_{target}_driver_region{ids[i]}',revision=item['region_index'])
         family=np.column_stack([r['graph']['joint_modes'] for r in reports])
+        joint=joint_mode_curve(Y,G,target,y,weights,rho,family)
+        identity=dict(control_sha256=fingerprint['source_control_sha256'],region_ids=ids)
+        cross_demands={}
+        for new_target in Y:
+            if new_target==target:continue
+            new_weights={t:1. for t in Y if t!=new_target}
+            new_rho=state['gamma']*sum(scales[t] for t in new_weights)
+            cross_demands[new_target]=combined_reuse(Y,G,new_target,Y[new_target]@np.ones(len(rows)),new_weights,new_rho,
+                [r['graph'] for r in reports],joint['joint_modes'],identity,identity)
         record=dict(position=int(key),target=target,region_ids=ids,observed_region_count=len(rows),
             source_observation_index=item['region_index'],
             joint_graph_family_fixed_target=exact_control(Y,G,target,y,weights,rho,family),
             same_span_comparison_role='Coordinate-equivalence sanity check only; not evidence for or against compensation',
-            combined_selective_mode_diagnostics=joint_mode_curve(Y,G,target,y,weights,rho,family),
-            mechanism_code_hashes=code_hashes,
+            combined_selective_mode_diagnostics=joint,
+            cross_target_demand_reuse=cross_demands,
+            cross_target_scope='Different target demand on the SAME frozen physical regional directions and samples',
+            cross_position_reuse_completed=False,
+            mechanism_code_hashes=code_hashes,input_fingerprint=fingerprint,
             source_control_file=item['motion_file'],source_control_sha256=digest(source/item['motion_file']),
             parameter_mode_recipe='Partition source control by region_ids; multiply region vectors by graph joint_modes coefficients',
             complete_parameter_partition=False,graphs=reports,

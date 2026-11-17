@@ -84,6 +84,8 @@ def mechanism_report(Y,G,target,y,weights,rho,drivers,include_ablations=True):
             raw_target_response_norm=float(np.linalg.norm(Y[target]@raw)),
             compensated_target_response_norm=float(np.linalg.norm(Y[target]@joint)),
             target_response_change_norm=float(np.linalg.norm(Y[target]@(joint-raw))),
+            raw_requested_target_relative_error=float(np.linalg.norm(Y[target]@raw-y)/max(np.linalg.norm(y),np.finfo(float).tiny)),
+            compensated_requested_target_relative_error=float(np.linalg.norm(Y[target]@joint-y)/max(np.linalg.norm(y),np.finfo(float).tiny)),
             fixed_driver_amplitude=1.,target_preservation_is_not_assumed=True))
     # Removal changes the feasible space; all remaining coefficients reoptimize.
     ablations=[]
@@ -115,8 +117,29 @@ def joint_mode_curve(Y,G,target,y,weights,rho,family):
         curve.append(dict(joint_degrees=j+1,target_relative_error=error,protected_energies=energies,
             parameter_regularization=penalty,objective=float(.5*(np.linalg.norm(response[target]-y)**2+
                 sum(weights[t]*energies[t] for t in weights)+penalty))))
+    # Reduce only output coordinates for the exact-response comparison. No
+    # parameter modes are removed, and infeasibility is never replaced by WLS.
+    Q,K=np.linalg.qr(R[target],mode='reduced');projected=Q.T@y
+    outside=float(np.linalg.norm(y-Q@projected));fixed=[]
+    H=B.T@A@B;fixed_reference=exact_control(Y,G,target,y,weights,rho,family)
+    for k in range(1,B.shape[1]+1):
+        try:
+            if outside>1e-10*max(np.linalg.norm(y),np.finfo(float).tiny):raise UnreachableResponse()
+            sol=restricted_problem({target:K[:,:k]},H[:k,:k],target,projected,{},1.,problem='exact')
+            z=sol['z'];base=B[:,:k]@z
+            energies={t:float(np.linalg.norm(Y[t]@base)**2) for t in weights}
+            protected=sum(weights[t]*energies[t] for t in weights);regularization=float(rho*base@G@base)
+            fixed.append(dict(joint_degrees=k,reachable=True,
+                target_relative_error=float(np.linalg.norm(R[target][:,:k]@z-y)/max(np.linalg.norm(y),np.finfo(float).tiny)),
+                protected_energies=energies,parameter_regularization=regularization,
+                protection_plus_regularization=protected+regularization,
+                reference_scope='Complete observed regional span, not full parameter space'))
+        except UnreachableResponse:
+            fixed.append(dict(joint_degrees=k,reachable=False,reason='Specified response not reachable; no soft fallback'))
     return dict(selective_values=values,joint_modes=B,requested_WLS_amplitudes=coeff,
-        complete_prefix_curve=curve,automatically_selected_dimension=None,
+        complete_prefix_curve=curve,WLS_curve_definition='Fixed-weight soft fit; responses differ between prefixes; not a Pareto frontier',
+        fixed_response_prefix_curve=fixed,fixed_response_full_observed_reference=fixed_reference,
+        automatically_selected_dimension=None,
         scope='Joint control diagnostic within observed regional span, not full-parameter optimum',
         no_single_mode_full_task_requirement=True,no_fixed_count_or_explained_fraction_cutoff=True)
 
@@ -135,3 +158,43 @@ def metric_split(Y,G,target,delta_responses,delta_norm2,cross_parameter,B,weight
         remainder_parameter_norm_squared=float(delta_norm2-2*coeff@cross_parameter+coeff@G@coeff),
         metric='A_P = protected Fisher + rho parameter metric',EC_executed=False,
         requires_verified_protective_modes=True)
+
+
+def ordered_reuse_curve(Y,G,target,y,weights,rho,B):
+    """Evaluate frozen ordering without optimizing its spectrum on the new demand."""
+    responses={t:a@B for t,a in Y.items()};gram=B.T@G@B
+    H=rho*gram.copy()
+    for t,w in weights.items():H+=w*(responses[t].T@responses[t])
+    normal=H+responses[target].T@responses[target];rhs=responses[target].T@y
+    Q,K=np.linalg.qr(responses[target],mode='reduced');yp=Q.T@y
+    outside=np.linalg.norm(y-Q@yp);rows=[]
+    for k in range(1,B.shape[1]+1):
+        z=quadratic_solve(normal[:k,:k],rhs[:k]);res=responses[target][:,:k]@z-y
+        energies={t:float(np.linalg.norm(responses[t][:,:k]@z)**2) for t in weights}
+        row=dict(joint_degrees=k,WLS=dict(target_relative_error=float(np.linalg.norm(res)/max(np.linalg.norm(y),np.finfo(float).tiny)),
+            protected_energies=energies,objective=float(.5*(res@res+z@H[:k,:k]@z))))
+        try:
+            if outside>1e-10*max(np.linalg.norm(y),np.finfo(float).tiny):raise UnreachableResponse()
+            exact=restricted_problem({target:K[:,:k]},H[:k,:k],target,yp,{},1.,problem='exact')
+            ez=exact['z'];row['fixed_response']=dict(reachable=True,
+                protected_energies={t:float(np.linalg.norm(responses[t][:,:k]@ez)**2) for t in weights},
+                protection_plus_regularization=float(ez@H[:k,:k]@ez))
+        except UnreachableResponse:row['fixed_response']=dict(reachable=False)
+        rows.append(row)
+    return rows
+
+
+def combined_reuse(Y,G,target,y,weights,rho,old_graphs,old_modes,old_basis_identity,new_basis_identity):
+    if old_basis_identity!=new_basis_identity:
+        raise ValueError('Frozen physical coordinates must match; local coefficients on different region motions cannot be reused')
+    old_family=np.column_stack([g['joint_modes'] for g in old_graphs])
+    mixing=np.linalg.solve(old_family,old_modes)
+    updated=[conditional_graph(Y,G,target,weights,rho,g['driver_coordinates']) for g in old_graphs]
+    updated_family=np.column_stack([g['L']@old['driver_spectral_axes'] for g,old in zip(updated,old_graphs)])
+    adjusted=updated_family@mixing
+    rebuilt=joint_mode_curve(Y,G,target,y,weights,rho,updated_family)
+    return dict(frozen_compensation_and_modes=ordered_reuse_curve(Y,G,target,y,weights,rho,old_modes),
+        recomputed_compensation_frozen_mode_mixing=ordered_reuse_curve(Y,G,target,y,weights,rho,adjusted),
+        rebuilt_compensation_and_spectrum=rebuilt,
+        same_new_demand_for_all_cases=True,physical_basis_identity=old_basis_identity,
+        exact_response_and_WLS_separate=True)
