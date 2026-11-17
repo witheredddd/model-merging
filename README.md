@@ -1,5 +1,9 @@
 # model-merging — functional geometry / TFPML
 
+## Current functional-control implementation: r3
+
+[Protected compensation graphs, selectivity modes and discrete real-model control](scripts/functional_control_r3_20261117). This revision separates exact-response and joint weighted-fit objectives, constructs full-complement compensation actions after full-space motion, uses graph-specific spectral modes for real parameter updates, and rebuilds geometry at committed new anchors. Numerical uncertainty affects actuation; candidate histories are retained. Earlier r1/r2 code remains historical. Only source, tests and method notes are published; model resources and experiment artifacts remain external.
+
 ## A100 control source update (2026-11-17)
 
 Runtime source: [r1](scripts/eight_task_online_repair_r1_20261117), [r2](scripts/eight_task_online_repair_r2_20261117). [Diagnostic source and tests](scripts/coordination_audit_20261117). This update publishes code and usage notes only; experiment artifacts remain outside this update.

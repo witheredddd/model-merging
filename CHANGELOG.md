@@ -1,5 +1,12 @@
 # 迭代记录
 
+## Functional control r3
+
+- Correct unreachable-response WLS objectives and keep exact response as a separate explicit primitive.
+- Implement parameter-support compensation/Schur actions, graph-specific selective modes, uncertainty-aware actuation, real model anchor commits and discrete rebuilding.
+- Add regression coverage for research objectives and the production closed loop.
+- Preserve old experiments; publish source and usage notes only.
+
 ## functional-geometry-v2.4.0-sun397-metric
 
 - SUN397 20 维参数度量训练，记录实际位移和同批 CE 抽查。
