@@ -46,10 +46,20 @@ class Engine:
             self.state=self.store.load()
             if self.state['source_hashes']!=self.codes:raise ValueError('Explicit code migration required')
         else:self.initialize()
+        if digest(self.source/'PROTOCOL.json')!=self.state['source_protocol_sha256']:
+            raise ValueError('Source protocol identity changed; explicit data/operator migration required')
+        for name,key in [('SCALES.json','scales_sha256'),('PRECONDITIONER.npz','preconditioner_sha256')]:
+            expected=self.protocol.get(key)
+            if expected and digest(self.source/name)!=expected:raise ValueError('Numerical cache identity changed: '+name)
         s=self.state;anchor=s.get('anchor')
         checkpoint=self.out/anchor['file'] if anchor else Path(self.protocol['checkpoint'])
         if anchor and digest(checkpoint)!=anchor['sha256']:raise ValueError('Anchor checksum mismatch')
         self.g,self.identity=load_eight_geometry(self.out/'runtime',self.protocol['inventory'],checkpoint)
+        expected=self.protocol.get('source',{})
+        for key in ('parameter_dimension','inventory_sha256','probe_sha256'):
+            if key in expected and self.identity[key]!=expected[key]:raise ValueError('Geometry identity changed: '+key)
+        if not anchor and 'checkpoint_sha256' in expected and self.identity['checkpoint_sha256']!=expected['checkpoint_sha256']:
+            raise ValueError('Initial anchor identity changed')
         with np.load(self.source/'PRECONDITIONER.npz') as z:self.diagonals={t:z[t].copy() for t in self.g.tasks}
         self.scales=json.loads((self.source/'SCALES.json').read_text())['scales']
         free,_=torch.cuda.mem_get_info() if self.g.device.type=='cuda' else (2**30,2**30)

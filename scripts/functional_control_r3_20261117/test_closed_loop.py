@@ -70,6 +70,14 @@ class ClosedLoopTest(unittest.TestCase):
                 np.testing.assert_allclose(restored.g.point,actual,atol=0.)
                 self.assertEqual(len(restored.state['updates']),1)
                 restored.writer_lock.close()
+                protocol=json.loads((source/'PROTOCOL.json').read_text());protocol['gammas']=[2.]
+                atomic_json(source/'PROTOCOL.json',protocol)
+                changed=Engine.__new__(Engine)
+                try:
+                    with self.assertRaisesRegex(ValueError,'Source protocol identity changed'):
+                        changed.__init__(out,source,4)
+                finally:
+                    if hasattr(changed,'writer_lock'):changed.writer_lock.close()
 
 
 if __name__=='__main__':unittest.main()

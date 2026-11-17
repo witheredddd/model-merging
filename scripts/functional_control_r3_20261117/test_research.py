@@ -111,6 +111,14 @@ class ResearchTests(unittest.TestCase):
         after=np.linalg.norm(A@np.linalg.lstsq(A,y,rcond=None)[0]-y)
         self.assertLessEqual(after,before+1e-14)
 
+    def test_dense_scaled_collinearity_uses_roundoff_bounds(self):
+        rng=np.random.default_rng(57);q=rng.normal(size=10000);q/=np.linalg.norm(q)
+        for scale in (1e-100,1.,1e100):
+            independent,info=independent_column([q],scale*q)
+            self.assertFalse(independent);self.assertIn('roundoff',info['rule'])
+        independent,info=independent_column([q],q+1e-5*rng.normal(size=q.shape))
+        self.assertTrue(independent);self.assertGreater(info['residual_norm_lower'],info['machine_cutoff'])
+
     def test_spectrum_constructs_modes_and_quality_changes_actuation(self):
         Y={'T':np.array([[1.,.5],[.3,2.]]),'P':np.array([[.6,.4]])};G=np.eye(2);g=np.array([-.7,-1.2])
         modes,source=graphwise_modes(Y,G,'T',{'P':1.},.8,g,[0.,0.],['one','one'],1.)

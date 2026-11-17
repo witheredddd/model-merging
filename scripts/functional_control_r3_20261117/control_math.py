@@ -1,5 +1,6 @@
 """Explicit PDF (9) versus (14), and uncertainty-aware actuation, not CG feedback."""
 from dataclasses import dataclass
+import math
 import numpy as np
 from scipy.linalg import eigh
 
@@ -31,12 +32,39 @@ def independent_column(columns,v):
     if magnitude==0:return False,dict(relative_residual=0.,reason='exact zero')
     if not len(columns):return True,dict(relative_residual=1.,machine_cutoff=0.)
     Q=np.column_stack([canonical(c)[0] for c in columns])
-    G=Q.T@Q;r=u.copy()
-    for _ in range(2):r-=Q@np.linalg.lstsq(G,Q.T@r,rcond=None)[0]
-    relative=float(np.linalg.norm(r))
-    cutoff=np.finfo(float).eps*(Q.shape[1]+1)*max(1.,float(np.linalg.norm(G,2)))
-    return relative>cutoff,dict(relative_residual=relative,machine_cutoff=cutoff,
-        rule='unit candidate; small coordinate Gram roundoff, not eps times full P')
+    eps=np.finfo(float).eps
+    def dot_bound(a,b):
+        # Extended accumulation or compensated fsum gives a data-dependent
+        # absolute dot error. It is not a blanket eps*full-model-P cutoff.
+        ld=np.longdouble;el=np.finfo(ld).eps
+        if el<eps:
+            products=a.astype(ld)*b.astype(ld)
+            total=np.sum(products,dtype=ld);absolute=np.sum(np.abs(products),dtype=ld)
+            gamma=len(a)*el/(1-len(a)*el)
+            error=(gamma+el)*absolute/(1-gamma)+eps*abs(total)
+            return float(total),float(error)
+        products=a*b;total=math.fsum(products)
+        return total,eps*(math.fsum(np.abs(products))+abs(total))*2
+    k=Q.shape[1];G=np.empty((k,k));E=np.empty((k,k))
+    for i in range(k):
+        for j in range(i+1):G[i,j],E[i,j]=dot_bound(Q[:,i],Q[:,j]);G[j,i]=G[i,j];E[j,i]=E[i,j]
+    eigenvalues=np.linalg.eigvalsh(G);gram_error=float(np.linalg.norm(E,2))
+    lower=float(eigenvalues[0]-gram_error)
+    if lower<=0:return False,dict(relative_residual=None,reason='Numerical coordinate Gram unresolved; observation retained')
+    r=u.copy();bound=4*eps;qnorm=float(np.sqrt(max(0.,eigenvalues[-1]+gram_error)))
+    gamma=k*eps/(1-k*eps)
+    for _ in range(2):
+        pairs=[dot_bound(Q[:,j],r) for j in range(k)];rhs=np.array([x[0] for x in pairs]);error=np.array([x[1] for x in pairs])
+        step=np.linalg.solve(G,rhs)
+        solve_error=(np.linalg.norm(error)+gram_error*np.linalg.norm(step)+np.linalg.norm(G@step-rhs))/lower
+        update=Q@step
+        bound+=qnorm*solve_error+gamma*float(np.linalg.norm(np.abs(Q)@np.abs(step)))+eps*(np.linalg.norm(r)+np.linalg.norm(update))
+        r-=update
+    squared,error=dot_bound(r,r);lo=np.sqrt(max(0.,squared-error));hi=np.sqrt(max(0.,squared+error))
+    return bool(lo>bound),dict(relative_residual=float(np.linalg.norm(r)),machine_cutoff=float(bound),
+        residual_norm_lower=float(lo),residual_norm_upper=float(hi),
+        coordinate_gram_lower_bound=lower,
+        rule='unit candidate; data-dependent dot/solve/update roundoff bounds; no full-P blanket threshold')
 
 
 def restricted_problem(Y,gram,target,y,protection,rho,*,problem,target_weight=1.,rtol=1e-10):
@@ -102,21 +130,6 @@ def selective_modes(Y,gram,target,protection,rho,CE_slopes,parameter_errors,refe
     A_errors=np.sqrt(rho)*errors
     confidence=float(reference_confidence)/(1.+A_errors*A_errors)
     return FunctionalModes(U,values,slopes,errors,A_errors,confidence)
-
-
-def resolved_selective_modes(Y,gram,target,protection,rho,CE_slopes,parameter_errors,reference_confidence=1.):
-    """Numerical coordinate reduction, not deletion of graph observations."""
-    G=np.asarray(gram);scales=np.sqrt(np.diag(G))
-    C=G/scales[:,None]/scales[None,:]
-    w,V=np.linalg.eigh(.5*(C+C.T));cut=np.finfo(float).eps*len(w)*max(1.,float(w[-1]));keep=w>cut
-    if not np.any(keep):raise ArithmeticError('No resolvable parameter coordinate; observations retained')
-    R=(V[:,keep]/scales[:,None])/np.sqrt(w[keep])
-    reduced=selective_modes({t:a@R for t,a in Y.items()},R.T@G@R,target,protection,rho,
-        np.asarray(CE_slopes)@R,np.abs(R).T@np.asarray(parameter_errors),reference_confidence)
-    reduced.axes=R@reduced.axes
-    return reduced,dict(input_graph_columns=len(w),resolved_parameter_coordinates=int(sum(keep)),
-        normalized_gram_eigenvalues=w,machine_cutoff=cut,
-        graph_observations_deleted=False,full_parameter_dimension_not_used_as_rank_cutoff=True)
 
 
 def actuate(Y,gram,target,y,protection,rho,modes,target_weight,reference_confidence):
