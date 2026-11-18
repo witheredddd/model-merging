@@ -58,3 +58,13 @@ with np.load(region, allow_pickle=False) as z:
 不包含图像、图像ID列表、模型权重、原始参数轨迹、完整参数方向或大Krylov状态。服务器绝对路径替换为`$RUN`、`$MECHANISM`、`$RESOURCE`。这些文件仍留在A100；快照中保留来源哈希及相对引用，因此有些引用文件有意不随包发布。
 
 JSON使用gzip，数组使用无损NPZ压缩。`MANIFEST.json`中的原文件哈希与发布文件哈希分开，重新压缩和路径清理会改变文件字节，但不会降精度。运行中尚未落盘的数据不在本快照内；使用捕获时间和文件清单确定覆盖范围。这里不包含源码目录之外新设计方案的验证结论。
+
+## 直接重算多区域驱动
+
+`numeric_configuration.json`包含原数值尺度、正则规则、152个区域的名称与形状。`reanalyze_regions.py`可直接调用仓库中的保护机制模块，不需要模型权重。例如在仓库根目录执行：
+
+```bash
+python data/functional_space_20261119/reanalyze_regions.py --position 1 --target DTD --drivers 0,3 --output experiment.json
+```
+
+驱动ID是此快照中实际存在的区域ID，可指定任意组合，不是自动分组结果。默认目标为已观测区域响应之和；可用`--demand`指定同位置、同probe和同任务坐标的需求NPZ。不可把不同采样坐标混用。运行依赖仓库数值模块以及NumPy、SciPy、PyTorch。
