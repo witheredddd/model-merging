@@ -1,0 +1,137 @@
+file,added,gain,source_confidence,before_target_error,after_target_error,before_protected,after_protected,reason
+run\functional_updates\candidate_p0_t0.json.gz,True,5.1632845044459525,0.9598885720905583,0.9288954143471532,0.6769874156730817,0.10863640406328365,0.36826248897338737,
+run\functional_updates\candidate_p0_t12.json.gz,True,0.43576284708495727,0.9480762516470923,0.9794893863312419,0.8537819514063193,0.01637342145470281,0.04068241255689539,
+run\functional_updates\candidate_p0_t3.json.gz,True,1.1744579397343102,0.933907792799274,0.9877155256627073,0.8665179432899218,0.04098944018270173,0.11021295679280588,
+run\functional_updates\candidate_p0_t6.json.gz,True,0.5405059014884674,0.9093623928914407,0.8993312198465411,0.847144801576245,0.138686981058476,0.19429122985166197,
+run\functional_updates\candidate_p0_t9.json.gz,True,0.11397683503425604,0.8087942529012435,0.9815772039899303,0.9393944055772129,0.008522054705720867,0.012365234162498025,
+run\functional_updates\candidate_p1_t13.json.gz,True,1.4834827261240768,0.9470144126301488,1.0,0.9530052256818259,0.0,0.10474823258263803,
+run\functional_updates\candidate_p1_t16.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t17.json.gz,True,0.870353718165263,0.9153234126593507,0.9982916025852477,0.8623042325641396,0.0014090458664972171,0.061184445747093384,
+run\functional_updates\candidate_p1_t21.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t22.json.gz,True,0.11707827770682044,0.9288780357739851,0.9984528835148279,0.9275448041288832,0.0027946236920847224,0.02442889942650628,
+run\functional_updates\candidate_p1_t26.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t27.json.gz,True,0.6491354482444462,0.8904915516359785,0.998213143510105,0.8565257038537788,0.0026556259766822325,0.0413843472229798,
+run\functional_updates\candidate_p1_t31.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t32.json.gz,True,0.35395294363795937,0.8935050869901511,0.993668918752797,0.9076899246176733,0.014572696813624691,0.06279869139005075,
+run\functional_updates\candidate_p1_t36.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t37.json.gz,True,0.02712725563118165,0.9446293605405872,0.9928280404692992,0.8894587094043461,0.0009620976470763247,0.005710554973512479,
+run\functional_updates\candidate_p1_t41.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t42.json.gz,True,0.37013997982153946,0.9026187902103732,0.991703671532596,0.9243062716709731,0.022447810481270022,0.042232360836078044,
+run\functional_updates\candidate_p1_t46.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t47.json.gz,True,0.034249510015640194,0.9475666260556329,0.9881767419524938,0.92238531745599,0.0029297034333986838,0.006813450124095806,
+run\functional_updates\candidate_p1_t51.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t52.json.gz,True,0.06902612687840204,0.9480902916569555,0.996235057224905,0.9714096862413398,0.0008298536630777856,0.0030558537109784075,
+run\functional_updates\candidate_p1_t56.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t57.json.gz,True,0.0058118686516672735,0.9603212828782507,0.9963980382963983,0.9815447770763459,0.00010011864619564148,0.0003660620709512035,
+run\functional_updates\candidate_p1_t61.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t62.json.gz,True,0.04118517118688125,0.9513662382073755,0.9990125145405155,0.9576669654250191,0.0004548622433754231,0.005430035094983341,
+run\functional_updates\candidate_p1_t66.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t67.json.gz,True,6.200118232151503,0.9629320673082516,0.9772845034273053,0.6783467246290023,0.043505309572653576,0.3654003608388195,
+run\functional_updates\candidate_p1_t71.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t72.json.gz,True,1.0837104922587981,0.9317572857219397,0.9825468493897913,0.8693482128475192,0.05303070778628226,0.10353407851793064,
+run\functional_updates\candidate_p1_t76.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t77.json.gz,True,0.17040120914283285,0.8740152666613277,0.8601369664650044,0.8437026670025728,0.25053837081895514,0.21626938005702928,
+run\functional_updates\candidate_p1_t81.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t82.json.gz,True,0.12772778484948022,0.8278586165140989,0.9925677563764199,0.9436135036905782,0.004899000326138773,0.010226763366263656,
+run\functional_updates\candidate_p1_t86.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p1_t87.json.gz,True,0.40200333195206994,0.9510027888894966,0.9731202764146997,0.856767775804672,0.017355020003831607,0.039154187730363034,
+run\functional_updates\candidate_p1_t91.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t100.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t101.json.gz,True,0.08616602575215171,0.9604990654178204,0.9975045770565586,0.9316960623093068,0.0006887782326311595,0.01271816117234607,
+run\functional_updates\candidate_p2_t105.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t106.json.gz,True,0.44249257975514444,0.9205364749138868,0.9984248608760878,0.8642775620660699,0.001182581983245367,0.02596171353589545,
+run\functional_updates\candidate_p2_t110.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t111.json.gz,True,0.254467599908236,0.9453056180479709,0.9938172818924363,0.914485072319755,0.008859416170539716,0.04435339340429588,
+run\functional_updates\candidate_p2_t115.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t116.json.gz,True,0.03321152518803766,0.9313861573836145,0.9915457765762318,0.8715931377250412,0.0010351691235418001,0.006411278987987791,
+run\functional_updates\candidate_p2_t120.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t121.json.gz,True,0.3005705350951442,0.9556012602184373,0.9929180169460797,0.9191073580458469,0.013194531828741913,0.02538220505565591,
+run\functional_updates\candidate_p2_t125.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t126.json.gz,True,0.04766396594025657,0.9652794332310595,0.9873639065050887,0.911791048376983,0.003972005815842472,0.007473152671270022,
+run\functional_updates\candidate_p2_t130.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t131.json.gz,True,0.05792078486010643,0.9614610668067854,0.9919311698527475,0.9710903353883145,0.0010376494896368815,0.003385972228489747,
+run\functional_updates\candidate_p2_t135.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t136.json.gz,True,0.0046552739025796375,0.9610576958606301,0.9994106959394918,0.9863582577666062,2.638549052917777e-05,0.00029000316194501767,
+run\functional_updates\candidate_p2_t140.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t141.json.gz,True,0.041097069327794555,0.9623579964552612,0.998947679155199,0.9576235441974079,0.00035108500888360295,0.005633266877134815,
+run\functional_updates\candidate_p2_t145.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t146.json.gz,True,5.2464801137475625,0.9299055241007378,0.9328270098107765,0.6791318190033838,0.08372498858567497,0.3679134389533833,
+run\functional_updates\candidate_p2_t150.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t151.json.gz,True,1.0237452676254666,0.9246268336169119,0.9787302476789522,0.8708743854026783,0.04923254086579876,0.09878453529547418,
+run\functional_updates\candidate_p2_t155.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t156.json.gz,True,0.09970273874652236,0.8050742480557813,0.8515444286508517,0.8418700891125754,0.26390032823820886,0.2398505302864292,
+run\functional_updates\candidate_p2_t160.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t161.json.gz,True,0.1227302935540151,0.9366298782682387,0.990453559306634,0.9432011219584672,0.00504967998934806,0.009346095862333911,
+run\functional_updates\candidate_p2_t165.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t166.json.gz,True,0.22020530806059035,0.8855288681887189,0.9203694792403642,0.8567034728629873,0.025922524337783776,0.03842670988425409,
+run\functional_updates\candidate_p2_t170.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t92.json.gz,True,0.8482687219759875,0.9577898197856912,1.0,0.9624097925902003,0.0,0.03690744415188411,
+run\functional_updates\candidate_p2_t95.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p2_t96.json.gz,True,0.05498048658120691,0.964890885067546,0.9988568593310839,0.9742075731452071,0.00037499532556685184,0.00932611730400594,
+run\functional_updates\candidate_p3_t171.json.gz,True,0.5778509484727259,0.991970862325813,1.0,0.9647149099933678,0.0,0.03608967298424966,
+run\functional_updates\candidate_p3_t174.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t175.json.gz,True,0.08799131805638227,0.9892580335922954,0.9984278611316568,0.9649493779925031,0.0007297119876822903,0.036481010452886306,
+run\functional_updates\candidate_p3_t179.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t180.json.gz,True,0.13126313407948542,0.9905988198674861,0.991711987858851,0.9094208355769631,0.005341775681125947,0.034815282656980036,
+run\functional_updates\candidate_p3_t184.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t185.json.gz,True,0.3709196601763658,0.9874848122254234,0.9980065758653662,0.8713885049251652,0.0031266164187195586,0.032107785387296986,
+run\functional_updates\candidate_p3_t189.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t190.json.gz,True,0.2510427743925545,0.9791529165557731,0.9897476584376674,0.9054063333360235,0.018533692920174066,0.06726849672912572,
+run\functional_updates\candidate_p3_t194.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t195.json.gz,True,0.08064779900863395,0.9859789557851389,0.9835265272550382,0.8348343047382912,0.0052681499720032225,0.023499100785673306,
+run\functional_updates\candidate_p3_t199.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t200.json.gz,True,0.2484987485745216,0.9880577374494864,0.9911083340986144,0.9236107777778798,0.01842134256472903,0.0353077359987708,
+run\functional_updates\candidate_p3_t204.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t205.json.gz,True,0.07519850428383545,0.9847827855808455,0.987999738205405,0.9028664200350381,0.006590072254204975,0.0098728666423481,
+run\functional_updates\candidate_p3_t209.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t210.json.gz,True,0.051118275702747074,0.9891261111938102,0.9870701383033155,0.9684233374120808,0.002978614484176557,0.007874567083534099,
+run\functional_updates\candidate_p3_t214.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t215.json.gz,True,0.0049507943530961995,0.9909552034475728,0.9996138899551548,0.9858166449217632,6.287451203758557e-05,0.00045590618831710785,
+run\functional_updates\candidate_p3_t219.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t220.json.gz,True,0.03597555541075281,0.9900075662436946,0.9950571423360964,0.9583815481340604,0.0013481336170859907,0.004828179400079919,
+run\functional_updates\candidate_p3_t224.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t225.json.gz,True,6.411493670804333,0.9897696585024044,0.9801268220695147,0.6786381544268927,0.08733918977902733,0.38108945975031294,
+run\functional_updates\candidate_p3_t229.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t230.json.gz,True,0.923630982395669,0.9826719981501008,0.9851493681423744,0.8808117269441269,0.03077443222930513,0.0779205774767088,
+run\functional_updates\candidate_p3_t234.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t235.json.gz,True,0.11275423520326022,0.9480543333107805,0.8268624633814385,0.8166851212730637,0.4716239041050023,0.3999454096065219,
+run\functional_updates\candidate_p3_t239.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t240.json.gz,True,0.1324415271245778,0.9891096616085915,0.9975796039164597,0.9442482626114406,0.0037094696893191894,0.009280307983046573,
+run\functional_updates\candidate_p3_t244.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p3_t245.json.gz,True,0.18716287567761025,0.9787619320564505,0.900911423961953,0.8500113919349046,0.027079035449486373,0.04273021768704577,
+run\functional_updates\candidate_p3_t249.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t250.json.gz,True,0.3458874759101729,0.9222832885166828,1.0,0.9698188973667724,0.0,0.024885541817718293,
+run\functional_updates\candidate_p4_t253.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t254.json.gz,True,0.1210838213457397,0.9667098375568505,0.9994212558683043,0.9448953607240904,0.00018869387578052197,0.03429149328905314,
+run\functional_updates\candidate_p4_t258.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t259.json.gz,True,0.08229633275431714,0.9505658945461143,0.9950708378531559,0.9259914890091004,0.005648715104951173,0.02089621699047698,
+run\functional_updates\candidate_p4_t263.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t264.json.gz,True,0.2708053946700555,0.9347230769169188,0.9985663011904089,0.8839129833475438,0.00332093852478201,0.01806887075975103,
+run\functional_updates\candidate_p4_t268.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t269.json.gz,True,0.17054768881206805,0.9315613349393982,0.9911091023120652,0.9105101913368182,0.01356365277976571,0.04130934869584226,
+run\functional_updates\candidate_p4_t273.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t274.json.gz,True,0.0797373643291503,0.9469310710376234,0.9833248070212848,0.8290415031910108,0.0053160480460335315,0.021034442530652644,
+run\functional_updates\candidate_p4_t278.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t279.json.gz,True,0.16038516291813343,0.9411346273599641,0.9949546275561066,0.9301601562998982,0.007455887040308084,0.012532508110738234,
+run\functional_updates\candidate_p4_t283.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t284.json.gz,True,0.08980168905303043,0.956182076424684,0.9892824002661808,0.8875396654477622,0.005520161770693897,0.007850683966887241,
+run\functional_updates\candidate_p4_t288.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t289.json.gz,True,0.03288963344791718,0.9235951244989723,0.9805238423877339,0.9684173518188656,0.0046558234712220275,0.008561703897586367,
+run\functional_updates\candidate_p4_t293.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t294.json.gz,True,0.01130807817069035,0.9670389987091159,0.9897028756064947,0.9680758798367565,0.0004864496039349507,0.0007190222549823016,
+run\functional_updates\candidate_p4_t298.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t299.json.gz,True,0.03584246395140522,0.9622141862312998,0.9975289795061617,0.9608031618326194,0.0007988409838607326,0.0024447574649962443,
+run\functional_updates\candidate_p4_t303.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t304.json.gz,True,6.747509707954087,0.9646558198356622,0.9947013686025429,0.6786682640256154,0.05483159354220396,0.37767996465478143,
+run\functional_updates\candidate_p4_t308.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t309.json.gz,True,0.8042947356046684,0.9168311225112685,0.9744942715655314,0.8823098055511114,0.036300658813350005,0.07193642279614967,
+run\functional_updates\candidate_p4_t313.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t314.json.gz,True,0.12975364070823403,0.810329750282056,0.820597132610941,0.8091944120219369,0.4507623010153642,0.41816457411996816,
+run\functional_updates\candidate_p4_t318.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t319.json.gz,True,0.1538335959459043,0.9372661733978153,0.9980872225904095,0.9382505231791495,0.004434570950901785,0.009786807947301936,
+run\functional_updates\candidate_p4_t323.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p4_t324.json.gz,True,0.05999332346222985,0.8243436396708224,0.8647839250841038,0.8494145200498469,0.03155515424750249,0.039155833332759925,
+run\functional_updates\candidate_p4_t328.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p5_t329.json.gz,True,0.4680552186318554,0.9861168917164517,1.0,0.9651203140546679,0.0,0.03704369580623813,
+run\functional_updates\candidate_p5_t332.json.gz,False,,,,,,,No machine-resolved missing parameter component
+run\functional_updates\candidate_p5_t333.json.gz,True,0.06980234499884652,0.9843055539289588,0.9966398345340759,0.964942534815513,0.0013517650934122068,0.01849013014050502,

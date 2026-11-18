@@ -27,3 +27,5 @@ scripts/functional_space_20261117/** -text whitespace=blank-at-eol,blank-at-eof,
 scripts/functional_space_diagnostic_20261117/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 scripts/protective_mechanism_20261118/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+data/functional_space_20261119/** -text

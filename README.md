@@ -1,5 +1,9 @@
 # model-merging — functional geometry / TFPML
 
+## Core numerical data (2026-11-19)
+
+[Core data snapshot, CSV indexes, functional responses and scope](data/functional_space_20261119). Published at the owner request for independent analysis and new experiments. Includes numerical diagnostics and derived responses, excludes weights, images and parameter trajectories. This snapshot is incomplete research evidence, not a successful grouping claim.
+
 ## Protective mechanism verification
 
 [Conditional graphs, selection spectra and fixed-response comparisons](scripts/protective_mechanism_20261118). The shared residual bank is a numerical baseline, not discovered protective groups. Arbitrary parameter supports and reoptimized removals are supported; automatic support discovery and EC integration remain unfinished.
