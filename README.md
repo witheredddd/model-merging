@@ -1,5 +1,9 @@
 # model-merging — functional geometry / TFPML
 
+## Current DTD-only pilot: self functional flow (2026-11-19)
+
+[Implementation, sampling plan and evidence limits](scripts/self_fiber_flow_20261119). Discovers DTD's own Fisher-sensitive directions, generates new physical parameter paths, relocates horizontal directions, and evaluates held-out functional responses, frozen-basis paths and finite loops. Initial candidate block and pilot plane do not set a dimension cap. CE/accuracy are observations only. Original training positions and existing experiments remain separate. The real A100 run is in numerical discovery; source tests do not establish continuous control or an integrable manifold. JEPA is deferred until real geometric evidence supports it.
+
 ## Core numerical data (2026-11-19)
 
 [Core data snapshot, CSV indexes, functional responses and scope](data/functional_space_20261119). Published at the owner request for independent analysis and new experiments. Includes numerical diagnostics and derived responses, excludes weights, images and parameter trajectories. This snapshot is incomplete research evidence, not a successful grouping claim.
@@ -8,7 +12,7 @@
 
 [Conditional graphs, selection spectra and fixed-response comparisons](scripts/protective_mechanism_20261118). The shared residual bank is a numerical baseline, not discovered protective groups. Arbitrary parameter supports and reoptimized removals are supported; automatic support discovery and EC integration remain unfinished.
 
-## Current research: adaptive conditional functional spaces
+## Earlier research: adaptive conditional functional spaces
 
 [Adaptive entry, streaming algebra, tests and method](scripts/functional_space_diagnostic_20261117). The current entry is `adaptive.py`. It retains existing shared coordinates and CG states, evaluates candidate extensions by their actual improvement of the same functional WLS, and schedules tasks, positions, independent probes, refinement and regional diagnostics without a unified numerical admission gate. New-position demands are regenerated at that position, not copied from an old tangent space. Parameter algebra uses disk-backed blocks and incremental Gram updates, with no mode-count cap. Frozen, accumulated and evolving spaces remain distinct. Runtime cost, uncertainty and provisional structure are recorded; source tests do not establish successful low-dimensional coupling.
 

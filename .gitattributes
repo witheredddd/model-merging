@@ -29,3 +29,5 @@ scripts/functional_space_diagnostic_20261117/** -text whitespace=blank-at-eol,bl
 scripts/protective_mechanism_20261118/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 data/functional_space_20261119/** -text
+
+scripts/self_fiber_flow_20261119/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
