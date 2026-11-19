@@ -33,3 +33,9 @@ data/functional_space_20261119/** -text
 scripts/self_fiber_flow_20261119/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 data/self_fiber_flow_DTD_20261119/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+scripts/task_substructure_20261120/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+scripts/task_substructure_large_20261120/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+scripts/task_substructure_campaign_20261120/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

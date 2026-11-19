@@ -1,6 +1,10 @@
 # model-merging — functional geometry / TFPML
 
-## Current DTD-only pilot: self functional flow (2026-11-19)
+## Current experiment: task-driven parameter substructures (2026-11-20)
+
+[Local sufficiency, full-complement substitution and signed DTD/Cars compatibility](scripts/task_substructure_20261120), [expanded repeated profile](scripts/task_substructure_large_20261120), and [server-owned unattended controller and all-metric reports](scripts/task_substructure_campaign_20261120). The pilot is running; the queued expansion covers three data resamplings and all 17 real training positions. Every resolved demand-family rank is reported without a dimension cap. Full-complement Fisher solves, common-objective finite probes, fixed-driver compensation, ordinary expert-increment baselines and negative outcomes are kept distinct. Neither necessary physical groups nor a successful end-to-end trained expert/EC frontier are claimed. The controller runs independently of the desktop and writes explicit completion, failure or resource-hold states.
+
+## Earlier DTD-only pilot: self functional flow (2026-11-19)
 
 [Implementation, sampling plan and evidence limits](scripts/self_fiber_flow_20261119). Discovers DTD's own Fisher-sensitive directions, generates new physical parameter paths, relocates horizontal directions, and evaluates held-out functional responses, frozen-basis paths and finite loops. Initial candidate block and pilot plane do not set a dimension cap. CE/accuracy are observations only. Original training positions and existing experiments remain separate. The A100 run has completed two physical transitions and is updating geometry after a third; source tests do not establish continuous control or an integrable manifold. JEPA is deferred until real geometric evidence supports it.
 
