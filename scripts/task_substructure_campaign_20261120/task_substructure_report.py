@@ -99,3 +99,8 @@ with (out/'REPORT.md').open('a',encoding='utf8') as f:
     f.write('\nFisher comparisons include common-objective, budget-feasible native scaling as well as individually normalized direction probes. These are distinct experiments: use `fisher_common_objective` to compare the same quadratic objective, and `fisher_freeze` only to compare directions at equal parameter norm. The unscaled quadratic optimum need not lie in a region where the nonlinear CE approximation is accurate; inspect recorded finite response errors. Approximate paired intervals do not include a multiple-comparison correction.\n')
     f.write('\nNumerical residual bounds and deletion intervals are algebraic bounds for an ideal fixed Jacobian and exact projector. Floating-point operator error, uncertainty in data sampling and error of the nonlinear quadratic approximation are not enclosed by these bounds. The projected-gradient arithmetic floor is a conservative numerical heuristic, not a formally verified interval.\n')
 print(json.dumps({k:v for k,v in summary.items() if k not in ('selections','status')},indent=2))
+if root.name.startswith('large_seed'):
+    config=json.loads((root/'CONFIG.json').read_text())
+    if a.anchor==config['anchors'][-1]:
+        from task_substructure_aggregate import main as aggregate
+        aggregate(root.parent)
