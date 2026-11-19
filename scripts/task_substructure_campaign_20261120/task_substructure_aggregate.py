@@ -13,7 +13,7 @@ def hypervolume(points,reference):
 
 def main(root):
     root=Path(root);out=root/'analysis';out.mkdir(exist_ok=True)
-    keys=['anchor','family','method','demand','radius_index','sign','alpha','mixture_weight','driver_amplitude','compensated','task_probe']
+    keys=['anchor','family','method','demand','radius_index','sign','alpha','mixture_weight','coefficient_DTD','coefficient_Cars','driver_amplitude','compensated','task_probe']
     metrics=['delta_CE','delta_weighted_CE','delta_Top1','prediction_flip_rate','margin_mean','relative_Log_JVP_error','parameter_norm','case_wall_seconds']
     groups=defaultdict(lambda:defaultdict(list));hvs=[];selection=[]
     runs=sorted(root.glob('large_seed*'))
@@ -40,7 +40,7 @@ def main(root):
                         hvs.append(dict(seed=run.name,anchor=key[0],family=key[1],method=key[2],probe=key[3],
                             candidates=len(points),reference_DTD=ref[0],reference_Cars=ref[1],
                             hypervolume_CE_nats_squared=hypervolume(points+[(0.,0.)],ref),noop_added_to_every_family=True,
-                            original_scale_is_different_budget=key[1]=='expert_increment_original_scale'))
+                            original_scale_is_different_budget=key[1].endswith('_original_scale')))
             file=folder/'selection_and_final_evaluation.csv'
             if file.exists():
                 with file.open(newline='',encoding='utf8') as f:

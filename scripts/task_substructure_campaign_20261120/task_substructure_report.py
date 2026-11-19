@@ -26,11 +26,12 @@ for r in records:
         row.update(paired_CE_lower=m.get('paired_weighted_CE_approx95',[None,None])[0],paired_CE_upper=m.get('paired_weighted_CE_approx95',[None,None])[1])
         rows.append(row)
         for cls,c in m['per_class'].items():perclass.append(dict(case=r['case'],anchor=r['anchor'],task_probe=key,label=cls,**c))
-    if r.get('family') in ('compatibility','expert_increment_matched','expert_increment_original_scale'):
+    if r.get('family') in ('compatibility','expert_increment_matched','expert_increment_original_scale','expert_grid_matched','expert_grid_original_scale'):
         for probe in (2,3):
             d=r['metrics'][f'DTD_p{probe}'];c=r['metrics'][f'Cars_p{probe}']
             compat.append(dict(case=r['case'],anchor=r['anchor'],family=r['family'],method=r['method'],probe=probe,
                 mixture_weight=r['mixture_weight'],parameter_norm=r['parameter_norm'],DTD_delta_CE=d['delta_CE'],Cars_delta_CE=c['delta_CE'],
+                coefficient_DTD=r.get('coefficient_DTD'),coefficient_Cars=r.get('coefficient_Cars'),
                 DTD_Top1=d['Top1'],Cars_Top1=c['Top1']))
 for x in compat:
     pool=[y for y in compat if y['anchor']==x['anchor'] and y['family']==x['family'] and y['probe']==x['probe'] and y['method']==x['method']]
@@ -60,6 +61,7 @@ for f in sorted((root/'bases').glob('a[0-9]*.json')):
     r=json.loads(f.read_text());vals=np.array(r['singular_values_squared']);total=vals.sum()
     for i,tail in enumerate(r['proxy_tail_losses']):ranks.append(dict(anchor=int(f.stem[1:]),rank=i,
         proxy_tail=tail,proxy_energy_retained=1-2*tail/total,sample_rank_bound=r['sample_demand_rank_bound'],
+        actual_resolved_basis_rank=len(r['basis']),rank_above_resolved_is_redundant=i>len(r['basis']),
         not_intrinsic_dimension=True))
 csvwrite('rank_curves.csv',ranks)
 # Choose within each rank family using selection data; never choose by final evaluation.

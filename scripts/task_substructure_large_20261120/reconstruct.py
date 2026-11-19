@@ -10,7 +10,24 @@ import torch
 def reconstruct(root,case):
     root=Path(root);r=json.loads((root/'evaluations'/f'{case}.json').read_text())
     def js(name):return json.loads((root/name).read_text())
-    def load(ref):return torch.load(root/ref['file'],map_location='cpu',mmap=True,weights_only=True)['vector'].double()
+    basis_cache={}
+    def load(ref):
+        path=root/ref['file']
+        if path.exists():return torch.load(path,map_location='cpu',mmap=True,weights_only=True)['vector'].double()
+        if ref['file'] in basis_cache:return basis_cache[ref['file']]
+        match=re.match(r'a(\d+)_mode',path.name)
+        if path.parent.name!='bases' or not match:raise FileNotFoundError(path)
+        meta=js(f'bases/a{match.group(1)}.json');known=[]
+        for recipe,output in zip(meta['basis_reconstruction'],meta['basis']):
+            if output['file'] in basis_cache:v=basis_cache[output['file']]
+            else:
+                v=combine(meta['gradients'],recipe['input_coefficients'])
+                for coefficients in recipe['orthogonalization_passes']:
+                    for b,c in zip(known,coefficients):v-=float(c)*b
+                v/=recipe['normalization'];basis_cache[output['file']]=v
+            known.append(v)
+            if output['file']==ref['file']:return v
+        raise KeyError(ref['file'])
     anchor=r['anchor'];demand=r['demand'];cfg=js('CONFIG.json');first=cfg['anchors'][0]
     initial=js(f'bases/a{first}.json');family=r['family'];method=r['method']
     def gradient(task,probe,demand):return load(js(f'gradients/a{anchor}_{task}_p{probe}_{demand}.json'))
@@ -63,14 +80,15 @@ def reconstruct(root,case):
     if family in ('naive_freeze','naive_freeze_common_objective'):
         key=case.removesuffix('_naive_r1').removesuffix('_naive_native_r1');prefix=key[:-(len(method)+1)]
         return P(load(js(f'solves/{prefix}_full.json')['vector']),method)
-    if family.startswith('expert_increment_'):
+    if family.startswith(('expert_increment_','expert_grid_')):
         trace=next(Path(k).parent for k in cfg['inputs'] if k.endswith('/trace.json'))
         rows=json.loads((trace/'trace.json').read_text())['rows'];row=next(x for x in rows if x['step']==anchor)
         visual=torch.load(trace/row['checkpoint'],map_location='cpu',mmap=True,weights_only=True)['visual']
         names=[x['name'] for x in js('PARAMETER_REGIONS.json')];point=torch.cat([visual[k].reshape(-1) for k in names]).double()
         inventory=next(Path(k) for k in cfg['inputs'] if k.endswith('INVENTORY.json'))
         tasks=json.loads(inventory.read_text())['tasks'];v=torch.zeros_like(point)
-        for task,w in [('DTD',r['mixture_weight']),('Cars',1-r['mixture_weight'])]:
+        weights=[('DTD',r['coefficient_DTD']),('Cars',r['coefficient_Cars'])] if family.startswith('expert_grid_') else [('DTD',r['mixture_weight']),('Cars',1-r['mixture_weight'])]
+        for task,w in weights:
             row=next(t for t in tasks if t['task']==task)
             visual=torch.load(row['expert_path'],map_location='cpu',mmap=True,weights_only=False)['visual']
             v+=w*(torch.cat([visual[k].reshape(-1) for k in names]).double()-point)

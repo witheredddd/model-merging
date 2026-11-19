@@ -40,6 +40,8 @@ All constructed, selection and final-evaluation metrics are retained: mean/weigh
 
 Signed compatibility uses DTD/Cars gradient inner products, cosine, all-region contributions, exact **first-order** two-task reachable Gram ellipses and nine finite mixture controls per domain. The supplement adds nine ordinary expert-increment coefficient controls at matched parameter radius, plus a separately labelled original-scale family. These are sampled local comparisons, not EC search or a global nonlinear Pareto proof.
 
+The expert supplement includes both a nine-point convex-average line and an independent 3-by-3 two-coefficient grid over `{0,0.5,1}^2`. Each family is compared separately with the same number of evaluations. Radius normalization can yield repeated directions; a zero increment at an expert endpoint is recorded as a no-op. Neither duplicates nor zero motions are counted as new controllable freedoms.
+
 ## Unattended execution
 
 The companion `task_substructure_campaign_20261120` controller owns subsequent jobs. It finishes the pilot, runs `task_substructure_supplement.py`, generates all tables, then schedules the larger profile. Source/input hashes are frozen; explicit migrations are recorded. Each evaluation is atomic and can be skipped on resume. Failed jobs have up to three recorded attempts; unresolved failure stops with `FAILED`, not success.

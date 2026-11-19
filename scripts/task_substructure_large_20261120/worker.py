@@ -135,11 +135,26 @@ class Experiment:
         for name in BUILD:
             self.status('GRADIENT_CONSTRUCTION',demand=name);refs.append(self.grad('DTD',0,name))
         gram=np.array([[float(self.load(a,'cpu')@self.load(b,'cpu')) for b in refs] for a in refs])
-        values,C,report=gram_modes(gram/len(BUILD));basis=[]
+        values,C,report=gram_modes(gram/len(BUILD));basis=[];basis_recipes=[]
         for j in range(C.shape[1]):
-            basis.append(self.save_vector(f'bases/a{self.anchor}_mode{j}',self.combine(refs,C[:,j]/np.sqrt(len(BUILD)))))
+            v=self.combine(refs,C[:,j]/np.sqrt(len(BUILD)))
+            passes=[]
+            for _ in range(2):
+                coefficients=[]
+                for r in basis:
+                    b=self.load(r);coefficient=float(b@v);coefficients.append(coefficient);v-=coefficient*b
+                passes.append(coefficients)
+            norm=float(v.norm())
+            if not norm:
+                report.setdefault('arithmetic_dependent_columns',[]).append(j);continue
+            ref=self.save_vector(f'bases/a{self.anchor}_mode{j}',v/norm);basis.append(ref)
+            basis_recipes.append(dict(file=ref['file'],input_coefficients=C[:,j]/np.sqrt(len(BUILD)),
+                orthogonalization_passes=passes,normalization=norm))
+        physical_gram=np.array([[float(self.load(a,'cpu')@self.load(b,'cpu')) for b in basis] for a in basis])
         info=dict(gradients=refs,basis=basis,mean_gradient=refs[0],singular_values_squared=values,
-            weighted_gram=gram/len(BUILD),sample_demand_rank_bound=len(BUILD),not_intrinsic_dimension=True,**report)
+            weighted_gram=gram/len(BUILD),physical_basis_gram=physical_gram,basis_reconstruction=basis_recipes,
+            max_orthogonality_error=float(np.max(np.abs(physical_gram-np.eye(len(basis))))),
+            sample_demand_rank_bound=len(BUILD),not_intrinsic_dimension=True,**report)
         centering=np.eye(len(BUILD))-np.ones_like(gram)/len(BUILD)
         mean_removed=gram-np.outer(gram[:,0],gram[0,:])/gram[0,0]
         info.update(centered_family_spectrum=np.linalg.eigvalsh(centering@gram@centering/len(BUILD))[::-1],
@@ -154,6 +169,12 @@ class Experiment:
         self.status('FINITE_INTERVENTION',case=key)
         v=self.load(ref);delta=scale*v;point=self.point+delta;arrays={};metrics={}
         norm=float(delta.norm())
+        rounded_point=point.float().double();rounded_delta=rounded_point-self.point
+        rounding=dict(parameter_float32_changed_fraction=float((rounded_delta!=0).double().mean()),
+            parameter_float32_step_norm=float(rounded_delta.norm()),
+            parameter_float32_rounding_relative_error=float((rounded_point-point).norm())/norm if norm else None,
+            actual_model_precision='float64',float32_metrics_evaluated=False)
+        del rounded_point,rounded_delta
         for task in ('DTD','Cars'):
             for probe in (0,2,3):
                 if (task,probe) not in self.baselines:self.baselines[task,probe]=self.logits(self.point,task,probe)
@@ -183,7 +204,7 @@ class Experiment:
         dest.parent.mkdir(exist_ok=True,parents=True);arr=dest.with_suffix('.npz');np.savez_compressed(arr,**arrays)
         after=self.g.operator.audit()
         r=dict(case=key,anchor=self.anchor,demand=demand,vector=ref,scale=scale,parameter_norm=norm,
-            process_id=os.getpid(),case_wall_seconds=time.monotonic()-case_started,
+            process_id=os.getpid(),case_wall_seconds=time.monotonic()-case_started,**rounding,
             case_JVP_calls=after['JVP_calls']-before['JVP_calls'],case_VJP_calls=after['VJP_calls']-before['VJP_calls'],
             case_J_host_seconds=after['seconds']['J']-before['seconds']['J'],case_JT_host_seconds=after['seconds']['JT']-before['seconds']['JT'],
             metrics=metrics,arrays=str(arr.relative_to(self.out)),array_sha256=digest(arr),
@@ -410,6 +431,7 @@ class Experiment:
                         reconstruction='t * full + (1-t) * restricted' if compensated else 't * fixed_region(full) + restricted'))
                 # The retained base solutions and affine recipe exactly specify the action.
                 path=self.out/ref['file']
+                if not path.resolve().is_relative_to(self.out.resolve()):raise ValueError('Unsafe temporary control path')
                 if path.exists():path.unlink()
     def compatibility(self,basis,rhos):
         gD=self.load(self.grad('DTD',0,'mean'));gC=self.load(self.grad('Cars',0,'mean'))
@@ -442,6 +464,7 @@ class Experiment:
         archived=json.loads(old_index.read_text())['records'] if old_index.exists() else []
         for file,r in live.items():
             p=self.out/file
+            if not p.resolve().is_relative_to(self.out.resolve()):raise ValueError('Unsafe archive path')
             if p.parts[-2] not in ('controls','compatibility','expert_baselines'):continue
             if p.exists():
                 if digest(p)!=r['vector']['sha256']:raise ValueError('Control changed before archival')
@@ -450,7 +473,19 @@ class Experiment:
                     original_bytes=p.stat().st_size))
                 p.unlink()
         atomic_json(self.out/f'CONTROL_ARCHIVE_a{step}.json',dict(records=archived,
-            original_training_and_flow_data_untouched=True,gradient_basis_solver_vectors_retained=True))
+            original_training_and_flow_data_untouched=True,construction_gradients_and_solver_vectors_retained=True,
+            anchor0_basis_retained=True,later_bases_recipe_archived=True))
+        if step!=self.a.anchors[0]:
+            meta=json.loads((self.out/f'bases/a{step}.json').read_text())
+            for ref in meta['basis']:
+                path=self.out/ref['file']
+                if not path.resolve().is_relative_to(self.out.resolve()):raise ValueError('Unsafe basis archive path')
+                if path.exists():
+                    if digest(path)!=ref['sha256']:raise ValueError('Basis changed before recipe archival')
+                    path.unlink()
+            atomic_json(self.out/f'BASIS_ARCHIVE_a{step}.json',dict(basis=meta['basis'],
+                construction_gradients_retained=True,coefficients_and_both_projection_passes_retained=True,
+                normalization_scalars_retained=True,reference_file=f'bases/a{step}.json'))
     def run(self):
         self.status('START');initial=None;fisher=self.fisher_baseline()
         first_meta=self.out/f'bases/a{self.a.anchors[0]}.json'

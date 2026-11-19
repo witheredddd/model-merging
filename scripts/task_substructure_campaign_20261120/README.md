@@ -29,6 +29,8 @@ python task_substructure_campaign.py \
 
 `--skip-large` is a smoke-test option, not used in the deployed campaign.
 
+Expert baselines include a nine-point convex mixture and an independent nine-point two-coefficient grid, separately at matched radius and original scale. The grid is not restricted to coefficients summing to one. Normalized duplicates and exact-zero expert-endpoint increments are labelled rather than treated as discoveries.
+
 ## Reports and interpretation
 
 `analysis/anchor_*/all_metrics.csv` contains every scalar case metric; `per_class_part*.csv.gz` contains every class outcome in bounded shards. Separate files cover common-objective finite tests, conditional driver curves, deletion gaps, all native regions, all resolved ranks, signed compatibility and selection-versus-final evaluation. Raw case JSON and NPZ retain actual logits and functional responses. `SUMMARY.json`, `REPORT.md` and `analysis/INDEX.json` describe coverage, assumptions and unfinished claims.
