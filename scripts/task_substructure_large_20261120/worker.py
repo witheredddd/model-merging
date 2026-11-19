@@ -168,6 +168,13 @@ class Experiment:
         case_started=time.monotonic();before=self.g.operator.audit();before=dict(before,seconds=dict(before['seconds']))
         self.status('FINITE_INTERVENTION',case=key)
         v=self.load(ref);delta=scale*v;point=self.point+delta;arrays={};metrics={}
+        shared=self.out/'linear_responses'/f'a{self.anchor}_baseline.npz';responses={}
+        if not self.baselines and shared.exists():
+            with np.load(shared) as saved:
+                for task in ('DTD','Cars'):
+                    for probe in (0,2,3):
+                        prefix=f'{task}_p{probe}'
+                        self.baselines[task,probe]=(torch.from_numpy(saved[prefix+'_baseline'].copy()),torch.from_numpy(saved[prefix+'_labels'].copy()))
         norm=float(delta.norm())
         rounded_point=point.float().double();rounded_delta=rounded_point-self.point
         rounding=dict(parameter_float32_changed_fraction=float((rounded_delta!=0).double().mean()),
@@ -198,9 +205,15 @@ class Experiment:
                     first_order_weighted_CE=float(sample_weights@slope/sample_weights.sum()),
                     CE_linearization_error=metric['delta_weighted_CE']-float(sample_weights@slope/sample_weights.sum()))
                 metrics[f'{task}_p{probe}']=metric
-                arrays[f'{task}_p{probe}_predicted_response']=predicted;arrays[f'{task}_p{probe}_actual_Log']=actual
-                arrays[f'{task}_p{probe}_logits']=z.numpy();arrays[f'{task}_p{probe}_labels']=y.numpy()
-                arrays[f'{task}_p{probe}_baseline']=base.numpy()
+                arrays[f'{task}_p{probe}_logits']=z.numpy()
+                responses[f'{task}_p{probe}']=str(response_file.relative_to(self.out))
+        if not shared.exists():
+            shared.parent.mkdir(exist_ok=True);payload={}
+            for (task,probe),(base,labels) in self.baselines.items():
+                payload[f'{task}_p{probe}_baseline']=base.numpy();payload[f'{task}_p{probe}_labels']=labels.numpy()
+            temporary=shared.with_suffix('.tmp')
+            with temporary.open('wb') as f:np.savez_compressed(f,**payload)
+            temporary.replace(shared)
         dest.parent.mkdir(exist_ok=True,parents=True);arr=dest.with_suffix('.npz');np.savez_compressed(arr,**arrays)
         after=self.g.operator.audit()
         r=dict(case=key,anchor=self.anchor,demand=demand,vector=ref,scale=scale,parameter_norm=norm,
@@ -208,6 +221,8 @@ class Experiment:
             case_JVP_calls=after['JVP_calls']-before['JVP_calls'],case_VJP_calls=after['VJP_calls']-before['VJP_calls'],
             case_J_host_seconds=after['seconds']['J']-before['seconds']['J'],case_JT_host_seconds=after['seconds']['JT']-before['seconds']['JT'],
             metrics=metrics,arrays=str(arr.relative_to(self.out)),array_sha256=digest(arr),
+            shared_baseline_file=str(shared.relative_to(self.out)),shared_linear_response_files=responses,
+            repeated_baselines_and_derivable_responses_deduplicated=True,
             physical_full_parameter_evaluation=True,parameter_state_recipe='theta = exact recorded anchor + scale * vector',
             official_test=False,accuracy_acceptance=False,**metadata)
         atomic_json(dest,r);return r

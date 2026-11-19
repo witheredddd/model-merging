@@ -53,6 +53,7 @@ regions=[]
 for f in sorted((root/'regions').glob('a[0-9]*.json')):
     if a.anchor is not None and f.stem!=f'a{a.anchor}':continue
     value=json.loads(f.read_text())
+    if isinstance(value,dict):value=value.get('regions',[])
     if isinstance(value,list):regions.extend(dict(anchor=int(f.stem[1:]),**r) for r in value)
 csvwrite('regions.csv',regions)
 ranks=[]

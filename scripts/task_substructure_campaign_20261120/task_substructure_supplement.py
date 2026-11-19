@@ -3,7 +3,7 @@ import argparse,json,sys
 from pathlib import Path
 import torch
 import numpy as np
-from task_substructure_utils import intervention_scale
+from task_substructure_utils import intervention_scale,archive_completed_controls
 
 p=argparse.ArgumentParser()
 p.add_argument('--scripts',type=Path,required=True)
@@ -63,6 +63,7 @@ for step in a.anchors:
                         original_scale_has_different_parameter_budget=suffix=='original_scale'))
     del increments
     if hasattr(e,'archive_controls'):e.archive_controls(step)
+    else:archive_completed_controls(e.out,step)
 atomic_json(a.output/'SUPPLEMENT_COMPLETE.json',dict(anchors=a.anchors,full_complement_all_resolved_ranks=True,
     expert_increment_baselines=True,final_controlled_training=False,EC_search=False))
 e.status('COMPLETE')

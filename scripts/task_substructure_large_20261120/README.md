@@ -25,3 +25,5 @@ The supervisor starts a job only with at least 120 GiB free. The worker checks a
 `ANCHOR_COMPLETE_*.json` allows an interrupted run to skip finished anchors. The supplement has its own completion marker. `COMPLETE` requires the worker, supplement and per-anchor reports to finish. Negative and uncertain results remain in all tables.
 
 Per-evaluation timing fields and append-only `TIMING_HISTORY.jsonl` carry process IDs. Combine segments across restarts instead of interpreting one process's final operator counters as the complete campaign cost. Reported J/JT timings are host-measured; case wall time includes synchronous output transfer and metric computation.
+
+Repeated baseline logits/labels and unscaled JVP arrays are shared per anchor/control in `linear_responses/`; each case keeps its actual next logits in full precision. Derived scaled responses and sphere Logs can be recovered with `observations.functional_observation(ROOT, CASE, task, probe)`, without the model or a GPU. This avoids hundreds of gigabytes of duplicate arrays without quantizing observations or dropping metrics; the reconstruction path has a numerical regression test.

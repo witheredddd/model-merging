@@ -5,6 +5,34 @@ import torch
 from worker import Experiment
 
 class WorkerTests(unittest.TestCase):
+    def test_actual_evaluation_deduplicates_without_losing_functional_metrics(self):
+        import numpy as np
+        from observations import functional_observation
+        with tempfile.TemporaryDirectory() as folder:
+            e=Experiment.__new__(Experiment);e.out=Path(folder);e.anchor=0;e.verified=set();e.baselines={}
+            e.point=torch.zeros(5,dtype=torch.float64);e.classes={'DTD':2,'Cars':2};e.status=lambda *a,**kw:None
+            e.g=SimpleNamespace(operator=SimpleNamespace(audit=lambda:dict(JVP_calls=0,VJP_calls=0,seconds={'J':0.,'JT':0.})))
+            def logits(point,task,probe):
+                n=4+probe;W=torch.arange(n*2*5,dtype=torch.float64).reshape(n,2,5)/100
+                return torch.einsum('ncd,d->nc',W,point),torch.arange(n)%2
+            e.logits=logits
+            def j(v,task,probe):
+                def f(point):
+                    z,y=logits(point,task,probe);return (2*z.softmax(-1).sqrt()/np.sqrt(len(y))).reshape(-1)
+                return torch.func.jvp(f,(e.point,),(v,))[1]
+            e.j=j;e.load=lambda r,*a:torch.load(e.out/r['file'],map_location='cpu',weights_only=True)['vector']
+            v=torch.ones(5,dtype=torch.float64);v/=v.norm();ref=e.save_vector('controls/one',v)
+            first=e.evaluate('one',ref,.01,'mean',dict(family='test',method='test'))
+            obs=functional_observation(e.out,'one');error=float(np.linalg.norm(obs['actual_Log']-obs['JVP'])/np.linalg.norm(obs['JVP']))
+            self.assertAlmostEqual(error,first['metrics']['DTD_p3']['relative_Log_JVP_error'],places=13)
+            with np.load(e.out/first['arrays']) as z:self.assertTrue(all(k.endswith('_logits') for k in z.files))
+            e.baselines={};original=e.logits
+            def no_baseline_recompute(point,*args):
+                self.assertFalse(torch.equal(point,e.point));return original(point,*args)
+            e.logits=no_baseline_recompute
+            second=e.evaluate('two',ref,.02,'mean',dict(family='test',method='test'))
+            self.assertEqual(first['shared_baseline_file'],second['shared_baseline_file'])
+
     def test_physical_basis_is_orthogonal_even_with_dependent_demands(self):
         from worker import BUILD
         import numpy as np
