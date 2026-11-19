@@ -49,6 +49,8 @@ for f in sorted((root/'deletions').glob('*.json')):
         restricted_stationarity=r['restricted']['relative_stationarity'],full_stationarity=r['full']['relative_stationarity'],
         full_q=r['full']['q'],restricted_q=r['restricted']['q'],full_norm=r['full_norm'],restricted_norm=r['restricted_norm']))
 csvwrite('deletions.csv',deletions)
+from task_substructure_substitution import finite_gaps
+csvwrite('finite_substitution_gaps.csv',finite_gaps(root,records))
 regions=[]
 for f in sorted((root/'regions').glob('a[0-9]*.json')):
     if a.anchor is not None and f.stem!=f'a{a.anchor}':continue
@@ -101,6 +103,7 @@ with (out/'REPORT.md').open('a',encoding='utf8') as f:
     f.write('\nFreezing the span used to construct a training gradient can trivially remove that same gradient. This is a construction identity, not evidence of irreplaceable physical parameters. Independent demands, independent images, later positions and actual finite outcomes must support any stronger interpretation. The arithmetic-resolution test is a numerical safeguard, not a statistical discovery threshold.\n')
     f.write('\nFisher comparisons include common-objective, budget-feasible native scaling as well as individually normalized direction probes. These are distinct experiments: use `fisher_common_objective` to compare the same quadratic objective, and `fisher_freeze` only to compare directions at equal parameter norm. The unscaled quadratic optimum need not lie in a region where the nonlinear CE approximation is accurate; inspect recorded finite response errors. Approximate paired intervals do not include a multiple-comparison correction.\n')
     f.write('\nNumerical residual bounds and deletion intervals are algebraic bounds for an ideal fixed Jacobian and exact projector. Floating-point operator error, uncertainty in data sampling and error of the nonlinear quadratic approximation are not enclosed by these bounds. The projected-gradient arithmetic floor is a conservative numerical heuristic, not a formally verified interval.\n')
+    f.write('\n`finite_substitution_gaps.csv` reports paired real finite CE/Top-1 differences between full and reoptimized-complement actions at the same objective and radius bound, with approximate paired intervals. These are outcomes of the selected proxy-optimal actions, not globally optimal nonlinear CE deletion gaps. The small pilot final Cars probe covers only 104 of 196 classes; it cannot represent a complete Cars evaluation. The expanded probes cover every class.\n')
 print(json.dumps({k:v for k,v in summary.items() if k not in ('selections','status')},indent=2))
 if root.name.startswith('large_seed'):
     config=json.loads((root/'CONFIG.json').read_text())
