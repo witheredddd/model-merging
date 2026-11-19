@@ -2,7 +2,11 @@
 
 ## Current DTD-only pilot: self functional flow (2026-11-19)
 
-[Implementation, sampling plan and evidence limits](scripts/self_fiber_flow_20261119). Discovers DTD's own Fisher-sensitive directions, generates new physical parameter paths, relocates horizontal directions, and evaluates held-out functional responses, frozen-basis paths and finite loops. Initial candidate block and pilot plane do not set a dimension cap. CE/accuracy are observations only. Original training positions and existing experiments remain separate. The real A100 run is in numerical discovery; source tests do not establish continuous control or an integrable manifold. JEPA is deferred until real geometric evidence supports it.
+[Implementation, sampling plan and evidence limits](scripts/self_fiber_flow_20261119). Discovers DTD's own Fisher-sensitive directions, generates new physical parameter paths, relocates horizontal directions, and evaluates held-out functional responses, frozen-basis paths and finite loops. Initial candidate block and pilot plane do not set a dimension cap. CE/accuracy are observations only. Original training positions and existing experiments remain separate. The A100 run has completed two physical transitions and is updating geometry after a third; source tests do not establish continuous control or an integrable manifold. JEPA is deferred until real geometric evidence supports it.
+
+## DTD self-flow data snapshot (2026-11-19 18:00 CST)
+
+[Functional arrays, historical solver states, path observations and verification tool](data/self_fiber_flow_DTD_20261119). Includes two complete transitions and a third pending transition, 648 generations of numerical state, held-out functional responses and vector provenance indexes. This is partial pilot evidence; full model/parameter vectors remain on the A100 and are excluded from Git.
 
 ## Core numerical data (2026-11-19)
 

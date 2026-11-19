@@ -31,3 +31,5 @@ scripts/protective_mechanism_20261118/** -text whitespace=blank-at-eol,blank-at-
 data/functional_space_20261119/** -text
 
 scripts/self_fiber_flow_20261119/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+data/self_fiber_flow_DTD_20261119/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
