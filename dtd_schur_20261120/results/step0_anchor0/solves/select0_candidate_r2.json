@@ -1,0 +1,39 @@
+{
+  "task_name": "select0_candidate_r2",
+  "lambda_value": 1.0,
+  "beta": 0.0018062257475068132,
+  "iterations": 8,
+  "dual_cg_info": 0,
+  "projected_gradient_norm": 31.63209263961593,
+  "gradient_norm": 49.27932189125271,
+  "residual_norm": 0.0007833188586059901,
+  "relative_stationarity": 2.476342199456523e-05,
+  "objective": -448.07027232079946,
+  "objective_gap_upper": 3.0679421712389557e-07,
+  "objective_relative_gap": 6.847011196142105e-10,
+  "arithmetic_resolution": 1.1866202258761559e-10,
+  "projected_gradient_numerically_unresolved": false,
+  "arithmetic_resolution_is_heuristic": true,
+  "wall_seconds": 9.134493478108197,
+  "operator": {
+    "JVP_calls": 21,
+    "VJP_calls": 16,
+    "seconds": {
+      "J": 45.48592791520059,
+      "JT": 30.624711182899773
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  },
+  "history": [
+    {
+      "source": "checkpoint",
+      "iterations": 8,
+      "residual_norm": 0.0007833188586059901,
+      "relative_stationarity": 2.476342199456523e-05,
+      "objective": -448.07027232079946
+    }
+  ],
+  "reused_checkpoint": true,
+  "converged": true,
+  "note": "forbid 2 candidate direction(s)"
+}

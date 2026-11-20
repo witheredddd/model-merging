@@ -1,0 +1,40 @@
+{
+  "task_name": "driver_g0_at_half_x",
+  "lambda_value": 1.0,
+  "beta": 0.0018062257475068132,
+  "iterations": 8,
+  "dual_cg_info": 8,
+  "projected_gradient_norm": 34.065950380167195,
+  "gradient_norm": 43.32839177940549,
+  "residual_norm": 0.0011571375540108673,
+  "relative_stationarity": 3.396756999577324e-05,
+  "objective": -445.5485360430061,
+  "objective_gap_upper": 6.694836594511264e-07,
+  "objective_relative_gap": 1.5026054521397982e-09,
+  "arithmetic_resolution": 1.0433249498357037e-10,
+  "projected_gradient_numerically_unresolved": false,
+  "arithmetic_resolution_is_heuristic": true,
+  "wall_seconds": 54.57258478924632,
+  "operator": {
+    "JVP_calls": 121,
+    "VJP_calls": 116,
+    "seconds": {
+      "J": 296.49363214708865,
+      "JT": 264.6332749440335
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  },
+  "history": [
+    {
+      "iterations": 8,
+      "residual_norm": 0.0011571375540108673,
+      "relative_stationarity": 3.396756999577324e-05,
+      "objective": -445.5485360430061,
+      "dual_true_relative": 5.303658387470669e-05
+    }
+  ],
+  "converged": true,
+  "converged_on": "objective_gap",
+  "stalled_at_dual_stagnation": false,
+  "note": "linearity verification solve"
+}

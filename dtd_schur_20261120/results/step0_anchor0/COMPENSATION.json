@@ -1,0 +1,46 @@
+{
+  "rows": [
+    {
+      "amplitude": 0.25,
+      "driver_norm": 2.048234056271675,
+      "complement_norm": 27.028792222957218,
+      "compensation_norm": 0.44201949228763293,
+      "compensation_over_driver": 0.2158051668627289,
+      "q_joint": -467.1632567303871,
+      "q_full": -490.0921651753927,
+      "q_complement_only": -449.32986042729215,
+      "joint_minus_full": 22.928908445005618
+    },
+    {
+      "amplitude": 0.5,
+      "driver_norm": 4.09646811254335,
+      "complement_norm": 26.990295050700215,
+      "compensation_norm": 0.8840389845752659,
+      "compensation_over_driver": 0.2158051668627289,
+      "q_joint": -479.901439636954,
+      "q_full": -490.0921651753927,
+      "q_complement_only": -449.32986042729215,
+      "joint_minus_full": 10.190725538438699
+    },
+    {
+      "amplitude": 1.0,
+      "driver_norm": 8.1929362250867,
+      "complement_norm": 26.934905793363114,
+      "compensation_norm": 1.7680779691505317,
+      "compensation_over_driver": 0.2158051668627289,
+      "q_joint": -490.09216526050295,
+      "q_full": -490.0921651753927,
+      "q_complement_only": -449.32986042729215,
+      "joint_minus_full": -8.511022997481632e-08
+    }
+  ],
+  "driver_source": "orthogonal projection of the unrestricted g0 motion onto the selected modes",
+  "driver_norm": 8.1929362250867,
+  "driver_leak_into_complement": 1.06278594423889e-15,
+  "complement_at_zero_norm": 27.074452046216134,
+  "compensation_unit_norm": 1.7680779691505317,
+  "linearity_relative_error": 2.1810231178224008e-07,
+  "linearity_model": "n(t x) = n(0) + t (n(x) - n(0)) for one common quadratic",
+  "compensation_separate_from_complement_own_motion": true,
+  "amplitude_sweep_uses_one_compensator_solve": true
+}

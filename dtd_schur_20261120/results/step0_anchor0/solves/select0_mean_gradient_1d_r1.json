@@ -1,0 +1,40 @@
+{
+  "task_name": "select0_mean_gradient_1d_r1",
+  "lambda_value": 1.0,
+  "beta": 0.0018062257475068132,
+  "iterations": 8,
+  "dual_cg_info": 8,
+  "projected_gradient_norm": 31.322111384959296,
+  "gradient_norm": 49.27932189125271,
+  "residual_norm": 0.0007872919374984558,
+  "relative_stationarity": 2.513534058487861e-05,
+  "objective": -442.8439336149167,
+  "objective_gap_upper": 3.0991429742503623e-07,
+  "objective_relative_gap": 6.998273520317161e-10,
+  "arithmetic_resolution": 1.1866202258761559e-10,
+  "projected_gradient_numerically_unresolved": false,
+  "arithmetic_resolution_is_heuristic": true,
+  "wall_seconds": 54.225792351644486,
+  "operator": {
+    "JVP_calls": 36,
+    "VJP_calls": 31,
+    "seconds": {
+      "J": 82.95248921355233,
+      "JT": 65.14790162350982
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  },
+  "history": [
+    {
+      "iterations": 8,
+      "residual_norm": 0.0007872919374984558,
+      "relative_stationarity": 2.513534058487861e-05,
+      "objective": -442.8439336149167,
+      "dual_true_relative": 4.966166839265141e-05
+    }
+  ],
+  "converged": true,
+  "converged_on": "objective_gap",
+  "stalled_at_dual_stagnation": false,
+  "note": "forbid 1 mean_gradient_1d direction(s)"
+}

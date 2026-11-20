@@ -1,0 +1,15 @@
+{
+  "selected_rank": 2,
+  "full_q": -490.0921651753927,
+  "restricted_q": -449.32986042729215,
+  "proxy_deletion": 40.762304748100576,
+  "schur_energy": 40.761707208620315,
+  "schur_identity_error": 0.0005975394802604228,
+  "full_norm": 28.153406831251765,
+  "restricted_norm": 27.074452046216134,
+  "forbidden_motion_norm": 8.38155486882111,
+  "full_stationarity": 3.703506018835582e-05,
+  "restricted_stationarity": 3.479401471285315e-05,
+  "restricted_converged": true,
+  "identity_holds_only_for_converged_common_quadratic": true
+}

@@ -1,0 +1,10 @@
+{
+  "adjointness": {
+    "jvp_dot": 0.030533855238406342,
+    "vjp_dot": 0.03053385523840653,
+    "relative_error": 6.1358165859724046e-15,
+    "passed": true
+  },
+  "precision": "float64 model, inputs, parameters, logits and embedding",
+  "probe": "constructor probe 0 (DTD construction pool) for every JVP/VJP in this run"
+}

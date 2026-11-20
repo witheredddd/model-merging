@@ -1,0 +1,40 @@
+{
+  "task_name": "select0_existing_fisher_r1",
+  "lambda_value": 1.0,
+  "beta": 0.0018062257475068132,
+  "iterations": 8,
+  "dual_cg_info": 8,
+  "projected_gradient_norm": 31.865854591037227,
+  "gradient_norm": 49.27932189125271,
+  "residual_norm": 0.0006798202304521747,
+  "relative_stationarity": 2.1333814491307723e-05,
+  "objective": -453.5054389714451,
+  "objective_gap_upper": 2.3107777286602397e-07,
+  "objective_relative_gap": 5.095369382782061e-10,
+  "arithmetic_resolution": 1.1866202258761559e-10,
+  "projected_gradient_numerically_unresolved": false,
+  "arithmetic_resolution_is_heuristic": true,
+  "wall_seconds": 54.33157037803903,
+  "operator": {
+    "JVP_calls": 48,
+    "VJP_calls": 43,
+    "seconds": {
+      "J": 113.13249839656055,
+      "JT": 93.27144157979637
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  },
+  "history": [
+    {
+      "iterations": 8,
+      "residual_norm": 0.0006798202304521747,
+      "relative_stationarity": 2.1333814491307723e-05,
+      "objective": -453.5054389714451,
+      "dual_true_relative": 4.261838948722398e-05
+    }
+  ],
+  "converged": true,
+  "converged_on": "objective_gap",
+  "stalled_at_dual_stagnation": false,
+  "note": "forbid 1 existing_fisher direction(s)"
+}

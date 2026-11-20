@@ -1,0 +1,39 @@
+{
+  "task_name": "g3_full",
+  "lambda_value": 1.0,
+  "beta": 0.0018062257475068132,
+  "iterations": 8,
+  "dual_cg_info": 0,
+  "projected_gradient_norm": 39.22394658708457,
+  "gradient_norm": 53.33628491325856,
+  "residual_norm": 0.0013235528507875227,
+  "relative_stationarity": 3.374349003481803e-05,
+  "objective": -581.0606618584899,
+  "objective_gap_upper": 8.758960744138891e-07,
+  "objective_relative_gap": 1.5074090054769578e-09,
+  "arithmetic_resolution": 1.2843097677121268e-10,
+  "projected_gradient_numerically_unresolved": false,
+  "arithmetic_resolution_is_heuristic": true,
+  "wall_seconds": 8.108268580399454,
+  "operator": {
+    "JVP_calls": 10,
+    "VJP_calls": 9,
+    "seconds": {
+      "J": 21.2989471280016,
+      "JT": 16.619243810418993
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  },
+  "history": [
+    {
+      "source": "checkpoint",
+      "iterations": 8,
+      "residual_norm": 0.0013235528507875227,
+      "relative_stationarity": 3.374349003481803e-05,
+      "objective": -581.0606618584899
+    }
+  ],
+  "reused_checkpoint": true,
+  "converged": true,
+  "note": "unrestricted motion inside the 48 matrices"
+}

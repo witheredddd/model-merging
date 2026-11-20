@@ -1,0 +1,40 @@
+{
+  "task_name": "driver_g0_at_x",
+  "lambda_value": 1.0,
+  "beta": 0.0018062257475068132,
+  "iterations": 8,
+  "dual_cg_info": 8,
+  "projected_gradient_norm": 33.98251623155487,
+  "gradient_norm": 42.765690199772514,
+  "residual_norm": 0.001123157827181021,
+  "relative_stationarity": 3.3051049531703e-05,
+  "objective": -443.2339811501457,
+  "objective_gap_upper": 6.307417523789961e-07,
+  "objective_relative_gap": 1.4230446653532461e-09,
+  "arithmetic_resolution": 1.0297753909152617e-10,
+  "projected_gradient_numerically_unresolved": false,
+  "arithmetic_resolution_is_heuristic": true,
+  "wall_seconds": 53.69220038782805,
+  "operator": {
+    "JVP_calls": 109,
+    "VJP_calls": 104,
+    "seconds": {
+      "J": 266.34512473177165,
+      "JT": 236.3866729219444
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  },
+  "history": [
+    {
+      "iterations": 8,
+      "residual_norm": 0.001123157827181021,
+      "relative_stationarity": 3.3051049531703e-05,
+      "objective": -443.2339811501457,
+      "dual_true_relative": 5.1728784120579146e-05
+    }
+  ],
+  "converged": true,
+  "converged_on": "objective_gap",
+  "stalled_at_dual_stagnation": false,
+  "note": "complement optimum when the full candidate motion is forced"
+}

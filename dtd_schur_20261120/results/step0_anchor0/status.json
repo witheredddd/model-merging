@@ -1,0 +1,15 @@
+{
+  "stage": "COMPLETE",
+  "anchor": 0,
+  "elapsed_seconds": 661.2512162667699,
+  "selected_rank": 2,
+  "operator": {
+    "JVP_calls": 130,
+    "VJP_calls": 116,
+    "seconds": {
+      "J": 317.6051268908195,
+      "JT": 264.6332749440335
+    },
+    "precision": "Float64 model, inputs, parameters, logits and embedding"
+  }
+}

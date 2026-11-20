@@ -1,0 +1,52 @@
+{
+  "h_gram_eigenvalues": [
+    395.6547813910333,
+    315.6831318280299,
+    287.4327195803741,
+    236.52807016851241
+  ],
+  "cumulative_fraction": [
+    0.3202907769921771,
+    0.575842839881553,
+    0.8085256063167345,
+    1.0
+  ],
+  "kept_modes": 3,
+  "rank_bound": 4,
+  "rank_is_bounded_by_the_number_of_construction_demands": true,
+  "modes": [
+    {
+      "index": 0,
+      "norm": 1.0,
+      "outside_active_domain_norm": 0.0
+    },
+    {
+      "index": 1,
+      "norm": 0.9999999999999999,
+      "outside_active_domain_norm": 0.0
+    },
+    {
+      "index": 2,
+      "norm": 0.9999999999999999,
+      "outside_active_domain_norm": 0.0
+    }
+  ],
+  "euclidean_gram": [
+    [
+      1.0,
+      2.168404344971009e-18,
+      -1.0842021724855044e-18
+    ],
+    [
+      2.168404344971009e-18,
+      1.0,
+      -3.2526065174565133e-19
+    ],
+    [
+      -1.0842021724855044e-18,
+      -3.2526065174565133e-19,
+      1.0
+    ]
+  ],
+  "max_orthonormality_error": 2.168404344971009e-18
+}

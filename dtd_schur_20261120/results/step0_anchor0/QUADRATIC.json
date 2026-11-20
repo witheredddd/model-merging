@@ -1,0 +1,10 @@
+{
+  "lambda_value": 1.0,
+  "alpha": 1.0,
+  "kappa": 553.6406517182747,
+  "beta": 0.0018062257475068132,
+  "kappa_definition": "||J g||^2 / ||g||^2 on the DTD construction probe",
+  "objective": "g^T v + lambda/2 ||v||^2 + beta/2 ||Jv||^2",
+  "hessian": "lambda I + beta J^T J, applied matrix-free",
+  "not_the_true_network_CE_hessian": true
+}

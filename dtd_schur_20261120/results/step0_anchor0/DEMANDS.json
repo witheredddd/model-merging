@@ -1,0 +1,56 @@
+{
+  "chunks": [
+    {
+      "index": 0,
+      "images": 59,
+      "gradient_norm": 44.65377363254873,
+      "active_gradient_norm": 35.97994557222877
+    },
+    {
+      "index": 1,
+      "images": 47,
+      "gradient_norm": 59.13058680727836,
+      "active_gradient_norm": 45.27143183201817
+    },
+    {
+      "index": 2,
+      "images": 47,
+      "gradient_norm": 59.59810342593306,
+      "active_gradient_norm": 42.62649441540734
+    },
+    {
+      "index": 3,
+      "images": 47,
+      "gradient_norm": 53.33628491325856,
+      "active_gradient_norm": 39.22394658708457
+    }
+  ],
+  "cosine_between_demands": [
+    [
+      1.0,
+      0.049455761504734935,
+      0.13107609951311022,
+      -0.010971461785173227
+    ],
+    [
+      0.049455761504734935,
+      1.0,
+      0.06378530796009443,
+      0.0633541996045041
+    ],
+    [
+      0.13107609951311022,
+      0.06378530796009443,
+      1.0,
+      -0.05967597368600691
+    ],
+    [
+      -0.010971461785173227,
+      0.0633541996045041,
+      -0.05967597368600691,
+      0.9999999999999999
+    ]
+  ],
+  "probe": 0,
+  "role": "independent data-batch estimates of one DTD task, not distinct semantic functions"
+}

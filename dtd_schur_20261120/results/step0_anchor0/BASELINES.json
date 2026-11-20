@@ -1,0 +1,16 @@
+{
+  "mean_gradient_1d": {
+    "modes": 1,
+    "source": "mean CE gradient on the DTD construction probe"
+  },
+  "existing_fisher": {
+    "modes": 2,
+    "source": "/media/shangxueyuan/data1/self_fiber_flow_DTD_20261119/flows/a0_axis0_1_step0_7581c35bbf29_h1.75214132628e-05.json"
+  },
+  "random_coordinates": {
+    "modes": 2,
+    "seed": 20261120,
+    "note": "active-domain random directions; a null control"
+  },
+  "all_built_without_selection_or_evaluation_images": true
+}

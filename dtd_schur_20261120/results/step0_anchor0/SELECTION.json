@@ -1,0 +1,151 @@
+{
+  "rows": [
+    {
+      "select_demand": 0,
+      "images": 106,
+      "family": "candidate",
+      "rank": 1,
+      "restricted_q": -450.2193694806212,
+      "full_q": -454.4244132417731,
+      "proxy_deletion": 4.205043761151899,
+      "schur_energy": 4.204984427618669,
+      "schur_identity_error": 5.933353322973289e-05,
+      "stationarity_ratio": 2.535311463452376e-05,
+      "converged": true,
+      "iterations": 8,
+      "normalized_deletion": 0.009253560413169609
+    },
+    {
+      "select_demand": 0,
+      "images": 106,
+      "family": "candidate",
+      "rank": 2,
+      "restricted_q": -448.07027232079946,
+      "full_q": -454.4244132417731,
+      "proxy_deletion": 6.354140920973634,
+      "schur_energy": 6.354007546259101,
+      "schur_identity_error": 0.00013337471453311878,
+      "stationarity_ratio": 2.476342199456523e-05,
+      "converged": true,
+      "iterations": 8,
+      "normalized_deletion": 0.013982833527020393
+    },
+    {
+      "select_demand": 0,
+      "images": 106,
+      "family": "candidate",
+      "rank": 3,
+      "restricted_q": -447.23211262162295,
+      "full_q": -454.4244132417731,
+      "proxy_deletion": 7.192300620150149,
+      "schur_energy": 7.192163005682648,
+      "schur_identity_error": 0.00013761446750137907,
+      "stationarity_ratio": 2.429167760178568e-05,
+      "converged": true,
+      "iterations": 8,
+      "normalized_deletion": 0.015827276023402247
+    },
+    {
+      "select_demand": 0,
+      "images": 106,
+      "family": "mean_gradient_1d",
+      "rank": 1,
+      "restricted_q": -442.8439336149167,
+      "full_q": -454.4244132417731,
+      "proxy_deletion": 11.580479626856402,
+      "schur_energy": 11.580172533421575,
+      "schur_identity_error": 0.0003070934348272658,
+      "stationarity_ratio": 2.513534058487861e-05,
+      "converged": true,
+      "iterations": 8,
+      "normalized_deletion": 0.02548384129330458
+    },
+    {
+      "select_demand": 0,
+      "images": 106,
+      "family": "existing_fisher",
+      "rank": 1,
+      "restricted_q": -453.5054389714451,
+      "full_q": -454.4244132417731,
+      "proxy_deletion": 0.9189742703280217,
+      "schur_energy": 0.9190249274904574,
+      "schur_identity_error": -5.065716243568552e-05,
+      "stationarity_ratio": 2.1333814491307723e-05,
+      "converged": true,
+      "iterations": 8,
+      "normalized_deletion": 0.0020222819099269835
+    },
+    {
+      "select_demand": 0,
+      "images": 106,
+      "family": "existing_fisher",
+      "rank": 2,
+      "restricted_q": -453.216411287442,
+      "full_q": -454.4244132417731,
+      "proxy_deletion": 1.2080019543311096,
+      "schur_energy": 1.2081059804705154,
+      "schur_identity_error": -0.00010402613940585503,
+      "stationarity_ratio": 2.2105872288094396e-05,
+      "converged": true,
+      "iterations": 8,
+      "normalized_deletion": 0.0026583121837875407
+    },
+    {
+      "select_demand": 0,
+      "images": 106,
+      "family": "random_coordinates",
+      "rank": 1,
+      "restricted_q": -454.42439058125035,
+      "full_q": -454.4244132417731,
+      "proxy_deletion": 2.2660522745354683e-05,
+      "schur_energy": 2.2660046102724618e-05,
+      "schur_identity_error": 4.766426300654677e-10,
+      "stationarity_ratio": 2.548351804498809e-05,
+      "converged": true,
+      "iterations": 8,
+      "normalized_deletion": 4.9866429014451566e-08
+    },
+    {
+      "select_demand": 0,
+      "images": 106,
+      "family": "random_coordinates",
+      "rank": 2,
+      "restricted_q": -454.42438957956017,
+      "full_q": -454.4244132417731,
+      "proxy_deletion": 2.3662212925046333e-05,
+      "schur_energy": 2.3661825450285177e-05,
+      "schur_identity_error": 3.8747476115578495e-10,
+      "stationarity_ratio": 2.548351908645112e-05,
+      "converged": true,
+      "iterations": 8,
+      "normalized_deletion": 5.207073439616685e-08
+    }
+  ],
+  "rank_advantages": [
+    {
+      "rank": 1,
+      "candidate_deletion": 4.205043761151899,
+      "best_matched_baseline": 11.580479626856402,
+      "advantage": -7.375435865704503
+    },
+    {
+      "rank": 2,
+      "candidate_deletion": 6.354140920973634,
+      "best_matched_baseline": 1.2080019543311096,
+      "advantage": 5.146138966642525
+    },
+    {
+      "rank": 3,
+      "candidate_deletion": 7.192300620150149,
+      "best_matched_baseline": null,
+      "advantage": null
+    }
+  ],
+  "selected_rank": 2,
+  "rule": "largest proxy-deletion advantage over dimension-matched baselines on the independent demand; deletion itself is monotone in rank and never selects",
+  "selection_probe": 2,
+  "evaluation_probe": 3,
+  "official_test_opened": false,
+  "baselines_rank_matched_on_the_same_demand": true,
+  "h_spectrum_is_flat_so_no_low_rank_claim": true
+}
