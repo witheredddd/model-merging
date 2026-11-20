@@ -1,0 +1,16 @@
+{
+  "arm": "reference",
+  "steps": 2,
+  "rank": null,
+  "p3_initial_ce": 2.2089163835984733,
+  "p3_final_ce": 2.208800707251668,
+  "p3_delta_ce": -0.00011567634680531569,
+  "p3_initial_top1": 0.39361702127659576,
+  "p3_final_top1": 0.39361702127659576,
+  "p3_n": 94,
+  "p2_count": 106,
+  "p3_count": 94,
+  "final_parameter_hash": "173507f38ec69512c1bd2b619c1531c2514e22949c512f964efe48a410b88f34",
+  "arm_semantics": "ordinary bias-corrected AdamW reference, radius and CE-guarded",
+  "scientific_scope": "A100 training-side smoke pilot only; no official Val/Test or EC"
+}

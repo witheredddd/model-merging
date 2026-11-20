@@ -1,0 +1,16 @@
+{
+  "arm": "online",
+  "steps": 2,
+  "rank": 2,
+  "p3_initial_ce": 2.2089163835984733,
+  "p3_final_ce": 2.2088022246160217,
+  "p3_delta_ce": -0.00011415898245159539,
+  "p3_initial_top1": 0.39361702127659576,
+  "p3_final_top1": 0.39361702127659576,
+  "p3_n": 94,
+  "p2_count": 106,
+  "p3_count": 94,
+  "final_parameter_hash": "ced0efe2e3447de357f114250d934b4fe0ee03d97dda5cd087f42d7f88864577",
+  "arm_semantics": "actual writeback in learned online modes",
+  "scientific_scope": "A100 training-side smoke pilot only; no official Val/Test or EC"
+}
