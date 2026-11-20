@@ -1,0 +1,70 @@
+{
+  "probe": 3,
+  "images": 94,
+  "anchor_step": 0,
+  "arms": [
+    {
+      "state": "online_dtd_two_online",
+      "mean_delta": -0.00020286590026395712,
+      "se": 0.0001514538569048984,
+      "ci_low": -0.000499715459797558,
+      "ci_high": 9.398365926964372e-05,
+      "improved": 54,
+      "worsened": 40
+    },
+    {
+      "state": "online_dtd_two_frozen",
+      "mean_delta": -0.00013836952368880237,
+      "se": 0.0001750061104394583,
+      "ci_low": -0.0004813815001501406,
+      "ci_high": 0.0002046424527725359,
+      "improved": 49,
+      "worsened": 45
+    },
+    {
+      "state": "online_dtd_two_reference",
+      "mean_delta": -0.00011567634680504868,
+      "se": 7.992356815577e-05,
+      "ci_low": -0.0002723265403903579,
+      "ci_high": 4.097384678026052e-05,
+      "improved": 57,
+      "worsened": 37
+    }
+  ],
+  "paired_differences": [
+    {
+      "first": "online_dtd_two_online",
+      "second": "online_dtd_two_frozen",
+      "mean_difference": -6.449637657515475e-05,
+      "se": 5.771122497548295e-05,
+      "t": -1.1175707429976456,
+      "ci_low": -0.00017761037752710133,
+      "ci_high": 4.861762437679182e-05,
+      "first_better": 46,
+      "second_better": 48
+    },
+    {
+      "first": "online_dtd_two_online",
+      "second": "online_dtd_two_reference",
+      "mean_difference": -8.718955345890843e-05,
+      "se": 7.184624256396528e-05,
+      "t": -1.2135575967147185,
+      "ci_low": -0.00022800818888428037,
+      "ci_high": 5.362908196646352e-05,
+      "first_better": 53,
+      "second_better": 41
+    },
+    {
+      "first": "online_dtd_two_frozen",
+      "second": "online_dtd_two_reference",
+      "mean_difference": -2.2693176883753685e-05,
+      "se": 0.0001034716024140949,
+      "t": -0.21931792254395802,
+      "ci_low": -0.0002254975176153797,
+      "ci_high": 0.0001801111638478723,
+      "first_better": 47,
+      "second_better": 47
+    }
+  ],
+  "note": "negative delta means lower CE than the anchor; differences are paired on identical p3 images"
+}

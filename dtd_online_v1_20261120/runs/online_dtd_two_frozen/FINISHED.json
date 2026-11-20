@@ -1,0 +1,16 @@
+{
+  "arm": "frozen",
+  "steps": 2,
+  "rank": 1,
+  "p3_initial_ce": 2.2089163835984733,
+  "p3_final_ce": 2.208778014074784,
+  "p3_delta_ce": -0.00013836952368917466,
+  "p3_initial_top1": 0.39361702127659576,
+  "p3_final_top1": 0.39361702127659576,
+  "p3_n": 94,
+  "p2_count": 106,
+  "p3_count": 94,
+  "final_parameter_hash": "40ed32bf3900b03e550bda74ac07287b19e26d0f178e88aca03c9f43e82dd5b5",
+  "arm_semantics": "allow first mode only, subsequent control in frozen span",
+  "scientific_scope": "A100 training-side smoke pilot only; no official Val/Test or EC"
+}

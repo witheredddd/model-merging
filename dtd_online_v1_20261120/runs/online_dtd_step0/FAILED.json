@@ -1,0 +1,4 @@
+{
+  "error": "ValueError('Cannot assign protection cost without a protect task')",
+  "type": "ValueError"
+}
