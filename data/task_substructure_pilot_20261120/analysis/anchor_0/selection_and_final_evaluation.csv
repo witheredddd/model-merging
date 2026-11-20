@@ -1,0 +1,4 @@
+anchor,demand,selected_on_probe2,selection_delta,final_evaluation_delta
+0,cos_4,full_gradient,-0.02626463381684596,-0.009871836971673709
+0,mean,full_gradient,-0.022908197123341356,-0.0078096057168597355
+0,sin_4,full_gradient,-0.020226906610209205,-0.006407126196001922

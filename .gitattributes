@@ -39,3 +39,5 @@ scripts/task_substructure_20261120/** -text whitespace=blank-at-eol,blank-at-eof
 scripts/task_substructure_large_20261120/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 scripts/task_substructure_campaign_20261120/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+data/task_substructure_pilot_20261120/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

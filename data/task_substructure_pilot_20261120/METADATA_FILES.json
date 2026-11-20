@@ -1,0 +1,26 @@
+[
+  {
+    "file": "calibration_a25.json.gz",
+    "bytes": 227,
+    "sha256": "5a56a1af836c73fc35d383caff021857fd7589564d497f6c5e411ebf07fbe5ec",
+    "source_sha256": "24b688f426b06ac0f1f1dd36f14372e19a1d2bae5333857c05808d97d7c6efd6"
+  },
+  {
+    "file": "SUPPLEMENT_COMPLETE.json.gz",
+    "bytes": 147,
+    "sha256": "361829cb244e5fd1cdb9eef8cc4263016d141e1ab949315fcf133d49cd911c85",
+    "source_sha256": "5e133d4546014ebae9aefea3c50338aea76045c69123132c0760c7c4f9c61382"
+  },
+  {
+    "file": "status.json.gz",
+    "bytes": 239,
+    "sha256": "85cc4a0b2a105cd4e38cc62d4495d8b1baaaffdb5514315718ffdb05200b0d1d",
+    "source_sha256": "9a056b0c8197eb462a0710a7ac6124520a9990dbe0a968c12b97d6be0c5d1952"
+  },
+  {
+    "file": "gradient_timing.jsonl.gz",
+    "bytes": 452,
+    "sha256": "68e5556ab565fc3036f2ccd19755723c0b9880c3fd18ef62bd6f167f84c3622a",
+    "source_sha256": "431d34318f21466a535976e0de61e8c9af89c5e233704c522ab57dbd3e971ce7"
+  }
+]
