@@ -1,0 +1,21 @@
+{
+  "source": "Original step0 raw vectors, no new Schur/CG solve",
+  "all_p3_cases_predeclared": true,
+  "p3_not_used_for_model_or_rank_selection": true,
+  "original_config_sha256": "c241a3758e9a0708b67458381acccbd67d6d3299ea59f65ea16895133fc3fe49",
+  "parameter_domain": "48 Transformer matrices",
+  "radii_functional": [
+    0.0025,
+    0.01,
+    0.04
+  ],
+  "original_beta_used": true,
+  "active_kappa_audit_only": true,
+  "changed_original_files": false,
+  "finite_rows": 86,
+  "warnings": [
+    "Independent normalization is a direction comparison, not a common-quadratic Schur gap",
+    "Pooled task motion is rank one by construction; only independent demands can establish reusability",
+    "The held-out data are training-side development samples, not official test"
+  ]
+}

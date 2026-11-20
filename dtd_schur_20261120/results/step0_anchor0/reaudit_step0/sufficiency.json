@@ -1,0 +1,84 @@
+{
+  "numerical": {
+    "pooled_stationarity_ratio": 3.574736623195762e-05,
+    "original_kappa": 553.6406517182747,
+    "active_gradient_kappa": 317.1943426933263,
+    "lambda_value": 1.0,
+    "beta": 0.0018062257475068132
+  },
+  "construction_counts": [
+    59,
+    47,
+    47,
+    47
+  ],
+  "construction_weights": [
+    0.295,
+    0.235,
+    0.235,
+    0.235
+  ],
+  "selection_rows": [
+    {
+      "family": "candidate_r1",
+      "rank": 1,
+      "selection_q": -5.753201313398954,
+      "full_q": -454.4244132417731,
+      "selection_retention": 0.012660414242176742,
+      "construction_q": -111.8386741995913
+    },
+    {
+      "family": "candidate_r2",
+      "rank": 2,
+      "selection_q": -8.995845609377941,
+      "full_q": -454.4244132417731,
+      "selection_retention": 0.01979613186977208,
+      "construction_q": -146.41261330665765
+    },
+    {
+      "family": "candidate_r3",
+      "rank": 3,
+      "selection_q": -9.751646971464758,
+      "full_q": -454.4244132417731,
+      "selection_retention": 0.021459337762904186,
+      "construction_q": -162.13559167487415
+    },
+    {
+      "family": "mean_gradient_raw_r1",
+      "rank": 1,
+      "selection_q": -13.634803965427787,
+      "full_q": -454.4244132417731,
+      "selection_retention": 0.030004558663914677,
+      "construction_q": -157.71204607958896
+    },
+    {
+      "family": "mean_regularized_r1",
+      "rank": 1,
+      "selection_q": -11.580174627953923,
+      "full_q": -454.4244132417731,
+      "selection_retention": 0.025483170116991003,
+      "construction_q": -175.97579277501205
+    },
+    {
+      "family": "mean_regularized_plus_candidate_r2",
+      "rank": 2,
+      "selection_q": -11.85117973616705,
+      "full_q": -454.4244132417731,
+      "selection_retention": 0.02607954016295713,
+      "construction_q": -175.97579277578336
+    },
+    {
+      "family": "mean_regularized_plus_candidate_r3",
+      "rank": 3,
+      "selection_q": -11.851509311401177,
+      "full_q": -454.4244132417731,
+      "selection_retention": 0.026080265421601963,
+      "construction_q": -175.97579277590052
+    }
+  ],
+  "old_rank": 2,
+  "interpretation": "retention is restricted-domain sufficiency, not Schur deletion; rank is not selected from probe3",
+  "full_q_provenance": "SELECTION.json full optimum, probe2 gradient with fixed probe0 H",
+  "old_random_control": "dense isotropic random directions, not random coordinate supports",
+  "no_new_CG": true
+}

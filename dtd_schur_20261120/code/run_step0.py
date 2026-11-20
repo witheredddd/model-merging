@@ -32,7 +32,8 @@ from math_core import class_weights, metric_stats  # noqa: E402
 from conditional_schur_core import (  # noqa: E402
     mask_projector, orthogonal_complement_projector,
     construct_metric_motion_modes, hessian_action, quadratic_objective)
-from schur_resumable import solve_resumable, project_onto, mode_diagnostics  # noqa: E402
+from schur_resumable import (solve_resumable, project_onto, mode_diagnostics,  # noqa: E402
+                             tensor_digest)
 
 ACTIVE_SUFFIX = ('attn.in_proj_weight', 'attn.out_proj.weight',
                  'mlp.c_fc.weight', 'mlp.c_proj.weight')
@@ -144,6 +145,19 @@ if int(active.sum()) != EXPECTED_ACTIVE_DIM or len(active_names) != EXPECTED_ACT
     raise ValueError(f'Active domain mismatch: {int(active.sum())} values, '
                      f'{len(active_names)} tensors')
 P_D = mask_projector(active)
+MASK_ID = 'mask:' + hashlib.sha256(
+    np.ascontiguousarray(active.cpu().numpy()).tobytes()).hexdigest()
+POINT_ID = tensor_digest(point)
+MODE_IDS = {}
+
+
+def subspace_id(family, modes):
+    key = (family, len(modes))
+    if key not in MODE_IDS:
+        MODE_IDS[key] = f'{family}[{len(modes)}]:' + tensor_digest(list(modes))
+    return f'{MASK_ID}|{MODE_IDS[key]}'
+
+
 active_report = dict(tensors=len(active_names), coordinates=int(active.sum()),
                      total_coordinates=int(CTX.D), names=active_names,
                      selection_rule='Transformer attention/MLP weight matrices only; '
@@ -240,11 +254,17 @@ atomic_json(out / 'QUADRATIC.json', dict(
 status('QUADRATIC_READY', kappa=kappa, beta=beta)
 
 
-def solve(label, g, projector, note=None):
+def solve(label, g, projector, note=None, projector_id=None):
+    # A checkpoint is reusable only under the exact system that produced it.
+    identity = dict(task='DTD', probe=0, anchor=a.anchor, lam=a.lam, beta=beta,
+                    gradient=tensor_digest(g), subspace=projector_id or MASK_ID,
+                    parameter_point=POINT_ID,
+                    output_coordinates=GEO.output_coordinate_ids['DTD'],
+                    dimension=int(g.numel()))
     result, report = solve_resumable(
         GEO, g, projector, lam=a.lam, beta=beta, task='DTD',
         rtol=a.rtol, maxiter=a.maxiter, checkpoint=out / 'solves' / (label + '.npz'),
-        task_name=label, audit=GEO.operator.audit,
+        task_name=label, audit=GEO.operator.audit, identity=identity,
         progress=lambda extra: status('SOLVING', case=label, **extra))
     report['note'] = note
     atomic_json(out / 'solves' / (label + '.json'), report)
@@ -384,7 +404,8 @@ for k, batches in enumerate(select_chunks):
         for r in range(1, upper + 1):
             P_N = orthogonal_complement_projector(P_D, pool[:r])
             restricted, report = solve(f'select{k}_{family}_r{r}', g_select, P_N,
-                                       note=f'forbid {r} {family} direction(s)')
+                                       note=f'forbid {r} {family} direction(s)',
+                                       projector_id=subspace_id(family, pool[:r]))
             gap = restricted.q - full_select.q
             difference = restricted.vector - full_select.vector
             schur = .5 * float(torch.dot(difference, hessian_action(GEO, difference,
@@ -410,23 +431,33 @@ for row in selection_rows:
 # Proxy deletion grows monotonically with the size of the forbidden subspace, so
 # it can never select a rank by itself. Rank is chosen where the candidate space
 # is most distinctive against dimension-matched alternatives built from
-# construction-only data; the flat H spectrum already says no low-rank claim is
-# available, and that is reported as such.
+# construction-only data. Only ranks at which EVERY baseline family is present
+# are comparable: otherwise the comparison set changes with the rank and the
+# advantage stops meaning anything.
+family_at_rank = {}
+for row in selection_rows:
+    family_at_rank.setdefault(row['rank'], set()).add(row['family'])
+baseline_families = {row['family'] for row in selection_rows if row['family'] != 'candidate'}
+complete_ranks = sorted(rank for rank, families in family_at_rank.items()
+                        if baseline_families <= families)
 advantages = []
-for rank in sorted({row['rank'] for row in candidate_rows}):
+for rank in sorted(family_at_rank):
     own = next(row for row in candidate_rows if row['rank'] == rank)['proxy_deletion']
     matched = [row['proxy_deletion'] for row in selection_rows
                if row['family'] != 'candidate' and row['rank'] == rank]
     advantages.append(dict(rank=rank, candidate_deletion=own,
                            best_matched_baseline=max(matched) if matched else None,
-                           advantage=own - max(matched) if matched else None))
-scored = [row for row in advantages if row['advantage'] is not None]
+                           advantage=(own - max(matched)) if rank in complete_ranks else None,
+                           comparable=rank in complete_ranks))
+scored = [row for row in advantages if row['comparable']]
 selected_rank = int(max(scored, key=lambda row: row['advantage'])['rank']) if scored \
     else int(min(row['rank'] for row in candidate_rows))
 atomic_json(out / 'SELECTION.json', dict(
-    rows=selection_rows, rank_advantages=advantages, selected_rank=selected_rank,
-    rule='largest proxy-deletion advantage over dimension-matched baselines on the '
-         'independent demand; deletion itself is monotone in rank and never selects',
+    rows=selection_rows, rank_advantages=advantages,
+    comparable_ranks=complete_ranks, selected_rank=selected_rank,
+    rule='largest proxy-deletion advantage over dimension-matched baselines at ranks '
+         'where every baseline family exists; deletion itself is monotone in rank '
+         'and never selects',
     selection_probe=2, evaluation_probe=3, official_test_opened=False,
     baselines_rank_matched_on_the_same_demand=True,
     h_spectrum_is_flat_so_no_low_rank_claim=True))
@@ -438,7 +469,8 @@ P_N = orthogonal_complement_projector(P_D, selected_modes)
 g0 = gradients[0]
 full0 = motions[0]
 rest0, rest0_report = solve('deletion_g0_restricted', g0, P_N,
-                            note='forbid the selected candidate motion space')
+                            note='forbid the selected candidate motion space',
+                            projector_id=subspace_id('candidate', selected_modes))
 gap = rest0.q - full0.q
 difference = rest0.vector - full0.vector
 schur_energy = .5 * float(torch.dot(difference, hessian_action(GEO, difference,
@@ -467,14 +499,16 @@ if x_leak > 1e-9 * max(x_norm, 1.):
     raise ValueError('Driver is not fully inside the forbidden motion space')
 effective_g = g0 + hessian_action(GEO, x_unit, a.lam, beta, 'DTD')
 nx_unit, nx_report = solve('driver_g0_at_x', effective_g, P_N,
-                           note='complement optimum when the full candidate motion is forced')
+                           note='complement optimum when the full candidate motion is forced',
+                           projector_id=subspace_id('candidate', selected_modes))
 del effective_g
 compensation_unit = nx_unit.vector - rest0.vector
 
 half_x = .5 * x_unit
 half_g = g0 + hessian_action(GEO, half_x, a.lam, beta, 'DTD')
 nx_half, _ = solve('driver_g0_at_half_x', half_g, P_N,
-                   note='linearity verification solve')
+                   note='linearity verification solve',
+                   projector_id=subspace_id('candidate', selected_modes))
 del half_g
 predicted_half = rest0.vector + .5 * compensation_unit
 linearity_error = float(torch.linalg.vector_norm(nx_half.vector - predicted_half)) / max(
@@ -595,8 +629,8 @@ lines += ['', 'Rank advantages against dimension-matched baselines:', '',
           '| rank | candidate deletion | best matched baseline | advantage |',
           '|---:|---:|---:|---:|']
 for row in advantages:
-    base = 'n/a' if row['best_matched_baseline'] is None else f"{row['best_matched_baseline']:.6g}"
-    adv = 'n/a' if row['advantage'] is None else f"{row['advantage']:.6g}"
+    base = 'absent' if row['best_matched_baseline'] is None else f"{row['best_matched_baseline']:.6g}"
+    adv = 'not comparable' if not row['comparable'] else f"{row['advantage']:.6g}"
     lines.append(f"| {row['rank']} | {row['candidate_deletion']:.6g} | {base} | {adv} |")
 lines += ['', f'Selected rank: {selected_rank}. Deletion grows monotonically with the '
           'size of the forbidden subspace, so the rank is chosen by the advantage over '

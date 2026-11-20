@@ -14,7 +14,10 @@ differences demanded by the real problem:
    yardstick here: its natural scale is ||P g||, while the quantity the
    experiment reports is q.
 """
+import json
 import time
+from pathlib import Path
+
 import numpy as np
 import torch
 from scipy.sparse.linalg import LinearOperator
@@ -29,6 +32,39 @@ def _norm(v):
     return float(torch.linalg.vector_norm(v))
 
 
+def tensor_digest(tensors):
+    """sha256 over one or more float64 parameter vectors."""
+    import hashlib
+    h = hashlib.sha256()
+    for t in (tensors if isinstance(tensors, (list, tuple)) else [tensors]):
+        h.update(np.ascontiguousarray(t.detach().cpu().double().numpy()).tobytes())
+    return h.hexdigest()
+
+
+def checkpoint_identity(checkpoint, identity):
+    """Fail closed: a checkpoint is reusable only under the identity that made it.
+
+    The dual system depends on the gradient, the projector (hence the modes), the
+    anchor, lambda/beta and the Jacobian. Reusing a checkpoint across any of those
+    silently solves a different problem, so every one of them is recorded.
+    """
+    path = Path(str(checkpoint) + '.identity.json')
+    if checkpoint.exists():
+        if not path.exists():
+            raise ValueError(f'unidentified checkpoint {checkpoint}; refusing to reuse it')
+        stored = json.loads(path.read_text())
+        if stored != identity:
+            differing = sorted(set(stored) | set(identity))
+            differing = [k for k in differing if stored.get(k) != identity.get(k)]
+            raise ValueError(f'checkpoint identity mismatch for {checkpoint}: {differing}')
+        return
+    if path.exists():
+        raise ValueError(f'identity record without checkpoint: {path}')
+    tmp = path.with_suffix('.tmp')
+    tmp.write_text(json.dumps(identity, indent=2, sort_keys=True))
+    tmp.replace(path)
+
+
 def arithmetic_floor(dimension, g_norm):
     """Conservative resolution heuristic; not a verified interval."""
     return float(np.finfo(float).eps * (np.log2(max(dimension, 2)) + 16) * 256
@@ -37,10 +73,10 @@ def arithmetic_floor(dimension, g_norm):
 
 def solve_resumable(geometry, g, project, *, lam=1., beta=1., task='DTD',
                     rtol=1e-3, maxiter=200, chunk=8, checkpoint=None,
-                    task_name='solve', audit=None, progress=None):
+                    task_name='solve', audit=None, progress=None, identity=None):
     """min_{v=project(v)} g^T v + lam/2 ||v||^2 + beta/2 ||Jv||^2.
 
-    Stops when 0.5*residual^2 <= rtol*|q|, i.e. when the reported objective is
+    Stops when 0.5*residual^2/lam <= rtol*|q|: q is determined to rtol relative.
     determined to the requested relative accuracy.
     """
     if lam <= 0 or beta < 0:
@@ -57,8 +93,8 @@ def solve_resumable(geometry, g, project, *, lam=1., beta=1., task='DTD',
                       iterations=int(iterations), dual_cg_info=int(info),
                       projected_gradient_norm=pg_norm, gradient_norm=g_norm,
                       residual_norm=residual, relative_stationarity=ratio,
-                      objective=q, objective_gap_upper=.5 * residual * residual,
-                      objective_relative_gap=(.5 * residual * residual
+                      objective=q, objective_gap_upper=.5 * residual * residual / lam,
+                      objective_relative_gap=(.5 * residual * residual / lam
                                               / max(abs(q), np.finfo(float).tiny)),
                       arithmetic_resolution=floor,
                       projected_gradient_numerically_unresolved=bool(pg_norm <= floor),
@@ -110,6 +146,8 @@ def solve_resumable(geometry, g, project, *, lam=1., beta=1., task='DTD',
         temp.replace(checkpoint)
 
     state = None
+    if checkpoint is not None:
+        checkpoint_identity(checkpoint, identity if identity is not None else {})
     if checkpoint is not None and checkpoint.exists():
         with np.load(checkpoint) as saved:
             state = {k: saved[k].copy() for k in saved.files}
@@ -118,7 +156,7 @@ def solve_resumable(geometry, g, project, *, lam=1., beta=1., task='DTD',
         history.append(dict(source='checkpoint', iterations=int(state['iterations']),
                             residual_norm=residual, relative_stationarity=ratio,
                             objective=q))
-        if .5 * residual * residual <= rtol * max(abs(q), np.finfo(float).tiny):
+        if .5 * residual * residual / lam <= rtol * max(abs(q), np.finfo(float).tiny):
             return finish(v, q, residual, ratio, int(state['iterations']), 0,
                           dict(reused_checkpoint=True, converged=True))
 
@@ -141,7 +179,7 @@ def solve_resumable(geometry, g, project, *, lam=1., beta=1., task='DTD',
         state = dict(x=x, r=true_r, p=true_r, rr=true_rr, iterations=iterations)
         dual_relative = float(np.sqrt(true_rr)) / rhs_norm
         v, q, residual, ratio = evaluate(x)
-        gap = .5 * residual * residual
+        gap = .5 * residual * residual / lam
         history.append(dict(iterations=iterations, residual_norm=residual,
                             relative_stationarity=ratio, objective=q,
                             dual_true_relative=dual_relative))

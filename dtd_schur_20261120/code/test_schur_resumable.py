@@ -16,7 +16,8 @@ from bootstrap import CORE
 sys.path.insert(0, str(CORE))
 
 from conditional_schur_core import mask_projector, orthogonal_complement_projector
-from schur_resumable import solve_resumable, project_onto, mode_diagnostics
+from schur_resumable import (solve_resumable, project_onto, mode_diagnostics,
+                             checkpoint_identity)
 
 
 class DenseGeometry:
@@ -148,6 +149,31 @@ class ResumableTests(unittest.TestCase):
         inside[2] = 1.
         good = orthogonal_complement_projector(p_active, [inside])
         self.assertLess(float(torch.linalg.vector_norm(good(good(probe)) - good(probe))), 1e-12)
+
+
+    def test_checkpoint_identity_fails_closed(self):
+        """A checkpoint may only be reused under the system that produced it.
+
+        Reusing one across a changed gradient, projector, anchor or lambda/beta
+        silently solves a different problem, so an unmatched or missing identity
+        record must raise rather than fall back to the stored state.
+        """
+        import tempfile
+        d = Path(tempfile.mkdtemp())
+        ck = d / 'solve.npz'
+        good = dict(gradient='aa', subspace='mask:bb', lam=1., beta=.0018)
+        checkpoint_identity(ck, good)                      # records before solving
+        self.assertTrue(Path(str(ck) + '.identity.json').exists())
+        ck.write_bytes(b'')                                # pretend the solve ran
+        checkpoint_identity(ck, dict(good))                # same identity: accepted
+        with self.assertRaises(ValueError):
+            checkpoint_identity(ck, dict(good, beta=.002))
+        with self.assertRaises(ValueError):
+            checkpoint_identity(ck, dict(good, gradient='cc'))
+        orphan = d / 'orphan.npz'
+        orphan.write_bytes(b'')
+        with self.assertRaises(ValueError):
+            checkpoint_identity(orphan, good)              # no record: refuse
 
 
 if __name__ == '__main__':
