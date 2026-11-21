@@ -1,0 +1,1477 @@
+{
+  "anchor": "pretrained visual tower (models/checkpoints/ViT-B-16/pretrained.pt)",
+  "anchor_note": "task arithmetic is defined as theta_0 + sum_k (theta_k - theta_0), so both gradients and both deltas live at this one point",
+  "tasks": [
+    "DTD",
+    "Cars"
+  ],
+  "train_probe": 0,
+  "heldout_probe": 1,
+  "probe_disjoint": true,
+  "dimension": 86192640,
+  "tensors": 152,
+  "key_order": [
+    "class_embedding",
+    "positional_embedding",
+    "proj",
+    "conv1.weight",
+    "ln_pre.weight",
+    "ln_pre.bias",
+    "transformer.resblocks.0.ln_1.weight",
+    "transformer.resblocks.0.ln_1.bias",
+    "transformer.resblocks.0.attn.in_proj_weight",
+    "transformer.resblocks.0.attn.in_proj_bias",
+    "transformer.resblocks.0.attn.out_proj.weight",
+    "transformer.resblocks.0.attn.out_proj.bias",
+    "transformer.resblocks.0.ln_2.weight",
+    "transformer.resblocks.0.ln_2.bias",
+    "transformer.resblocks.0.mlp.c_fc.weight",
+    "transformer.resblocks.0.mlp.c_fc.bias",
+    "transformer.resblocks.0.mlp.c_proj.weight",
+    "transformer.resblocks.0.mlp.c_proj.bias",
+    "transformer.resblocks.1.ln_1.weight",
+    "transformer.resblocks.1.ln_1.bias",
+    "transformer.resblocks.1.attn.in_proj_weight",
+    "transformer.resblocks.1.attn.in_proj_bias",
+    "transformer.resblocks.1.attn.out_proj.weight",
+    "transformer.resblocks.1.attn.out_proj.bias",
+    "transformer.resblocks.1.ln_2.weight",
+    "transformer.resblocks.1.ln_2.bias",
+    "transformer.resblocks.1.mlp.c_fc.weight",
+    "transformer.resblocks.1.mlp.c_fc.bias",
+    "transformer.resblocks.1.mlp.c_proj.weight",
+    "transformer.resblocks.1.mlp.c_proj.bias",
+    "transformer.resblocks.2.ln_1.weight",
+    "transformer.resblocks.2.ln_1.bias",
+    "transformer.resblocks.2.attn.in_proj_weight",
+    "transformer.resblocks.2.attn.in_proj_bias",
+    "transformer.resblocks.2.attn.out_proj.weight",
+    "transformer.resblocks.2.attn.out_proj.bias",
+    "transformer.resblocks.2.ln_2.weight",
+    "transformer.resblocks.2.ln_2.bias",
+    "transformer.resblocks.2.mlp.c_fc.weight",
+    "transformer.resblocks.2.mlp.c_fc.bias",
+    "transformer.resblocks.2.mlp.c_proj.weight",
+    "transformer.resblocks.2.mlp.c_proj.bias",
+    "transformer.resblocks.3.ln_1.weight",
+    "transformer.resblocks.3.ln_1.bias",
+    "transformer.resblocks.3.attn.in_proj_weight",
+    "transformer.resblocks.3.attn.in_proj_bias",
+    "transformer.resblocks.3.attn.out_proj.weight",
+    "transformer.resblocks.3.attn.out_proj.bias",
+    "transformer.resblocks.3.ln_2.weight",
+    "transformer.resblocks.3.ln_2.bias",
+    "transformer.resblocks.3.mlp.c_fc.weight",
+    "transformer.resblocks.3.mlp.c_fc.bias",
+    "transformer.resblocks.3.mlp.c_proj.weight",
+    "transformer.resblocks.3.mlp.c_proj.bias",
+    "transformer.resblocks.4.ln_1.weight",
+    "transformer.resblocks.4.ln_1.bias",
+    "transformer.resblocks.4.attn.in_proj_weight",
+    "transformer.resblocks.4.attn.in_proj_bias",
+    "transformer.resblocks.4.attn.out_proj.weight",
+    "transformer.resblocks.4.attn.out_proj.bias",
+    "transformer.resblocks.4.ln_2.weight",
+    "transformer.resblocks.4.ln_2.bias",
+    "transformer.resblocks.4.mlp.c_fc.weight",
+    "transformer.resblocks.4.mlp.c_fc.bias",
+    "transformer.resblocks.4.mlp.c_proj.weight",
+    "transformer.resblocks.4.mlp.c_proj.bias",
+    "transformer.resblocks.5.ln_1.weight",
+    "transformer.resblocks.5.ln_1.bias",
+    "transformer.resblocks.5.attn.in_proj_weight",
+    "transformer.resblocks.5.attn.in_proj_bias",
+    "transformer.resblocks.5.attn.out_proj.weight",
+    "transformer.resblocks.5.attn.out_proj.bias",
+    "transformer.resblocks.5.ln_2.weight",
+    "transformer.resblocks.5.ln_2.bias",
+    "transformer.resblocks.5.mlp.c_fc.weight",
+    "transformer.resblocks.5.mlp.c_fc.bias",
+    "transformer.resblocks.5.mlp.c_proj.weight",
+    "transformer.resblocks.5.mlp.c_proj.bias",
+    "transformer.resblocks.6.ln_1.weight",
+    "transformer.resblocks.6.ln_1.bias",
+    "transformer.resblocks.6.attn.in_proj_weight",
+    "transformer.resblocks.6.attn.in_proj_bias",
+    "transformer.resblocks.6.attn.out_proj.weight",
+    "transformer.resblocks.6.attn.out_proj.bias",
+    "transformer.resblocks.6.ln_2.weight",
+    "transformer.resblocks.6.ln_2.bias",
+    "transformer.resblocks.6.mlp.c_fc.weight",
+    "transformer.resblocks.6.mlp.c_fc.bias",
+    "transformer.resblocks.6.mlp.c_proj.weight",
+    "transformer.resblocks.6.mlp.c_proj.bias",
+    "transformer.resblocks.7.ln_1.weight",
+    "transformer.resblocks.7.ln_1.bias",
+    "transformer.resblocks.7.attn.in_proj_weight",
+    "transformer.resblocks.7.attn.in_proj_bias",
+    "transformer.resblocks.7.attn.out_proj.weight",
+    "transformer.resblocks.7.attn.out_proj.bias",
+    "transformer.resblocks.7.ln_2.weight",
+    "transformer.resblocks.7.ln_2.bias",
+    "transformer.resblocks.7.mlp.c_fc.weight",
+    "transformer.resblocks.7.mlp.c_fc.bias",
+    "transformer.resblocks.7.mlp.c_proj.weight",
+    "transformer.resblocks.7.mlp.c_proj.bias",
+    "transformer.resblocks.8.ln_1.weight",
+    "transformer.resblocks.8.ln_1.bias",
+    "transformer.resblocks.8.attn.in_proj_weight",
+    "transformer.resblocks.8.attn.in_proj_bias",
+    "transformer.resblocks.8.attn.out_proj.weight",
+    "transformer.resblocks.8.attn.out_proj.bias",
+    "transformer.resblocks.8.ln_2.weight",
+    "transformer.resblocks.8.ln_2.bias",
+    "transformer.resblocks.8.mlp.c_fc.weight",
+    "transformer.resblocks.8.mlp.c_fc.bias",
+    "transformer.resblocks.8.mlp.c_proj.weight",
+    "transformer.resblocks.8.mlp.c_proj.bias",
+    "transformer.resblocks.9.ln_1.weight",
+    "transformer.resblocks.9.ln_1.bias",
+    "transformer.resblocks.9.attn.in_proj_weight",
+    "transformer.resblocks.9.attn.in_proj_bias",
+    "transformer.resblocks.9.attn.out_proj.weight",
+    "transformer.resblocks.9.attn.out_proj.bias",
+    "transformer.resblocks.9.ln_2.weight",
+    "transformer.resblocks.9.ln_2.bias",
+    "transformer.resblocks.9.mlp.c_fc.weight",
+    "transformer.resblocks.9.mlp.c_fc.bias",
+    "transformer.resblocks.9.mlp.c_proj.weight",
+    "transformer.resblocks.9.mlp.c_proj.bias",
+    "transformer.resblocks.10.ln_1.weight",
+    "transformer.resblocks.10.ln_1.bias",
+    "transformer.resblocks.10.attn.in_proj_weight",
+    "transformer.resblocks.10.attn.in_proj_bias",
+    "transformer.resblocks.10.attn.out_proj.weight",
+    "transformer.resblocks.10.attn.out_proj.bias",
+    "transformer.resblocks.10.ln_2.weight",
+    "transformer.resblocks.10.ln_2.bias",
+    "transformer.resblocks.10.mlp.c_fc.weight",
+    "transformer.resblocks.10.mlp.c_fc.bias",
+    "transformer.resblocks.10.mlp.c_proj.weight",
+    "transformer.resblocks.10.mlp.c_proj.bias",
+    "transformer.resblocks.11.ln_1.weight",
+    "transformer.resblocks.11.ln_1.bias",
+    "transformer.resblocks.11.attn.in_proj_weight",
+    "transformer.resblocks.11.attn.in_proj_bias",
+    "transformer.resblocks.11.attn.out_proj.weight",
+    "transformer.resblocks.11.attn.out_proj.bias",
+    "transformer.resblocks.11.ln_2.weight",
+    "transformer.resblocks.11.ln_2.bias",
+    "transformer.resblocks.11.mlp.c_fc.weight",
+    "transformer.resblocks.11.mlp.c_fc.bias",
+    "transformer.resblocks.11.mlp.c_proj.weight",
+    "transformer.resblocks.11.mlp.c_proj.bias",
+    "ln_post.weight",
+    "ln_post.bias"
+  ],
+  "tensors_offsets": [
+    {
+      "name": "class_embedding",
+      "shape": [
+        768
+      ],
+      "offset": 0,
+      "numel": 768
+    },
+    {
+      "name": "positional_embedding",
+      "shape": [
+        197,
+        768
+      ],
+      "offset": 768,
+      "numel": 151296
+    },
+    {
+      "name": "proj",
+      "shape": [
+        768,
+        512
+      ],
+      "offset": 152064,
+      "numel": 393216
+    },
+    {
+      "name": "conv1.weight",
+      "shape": [
+        768,
+        3,
+        16,
+        16
+      ],
+      "offset": 545280,
+      "numel": 589824
+    },
+    {
+      "name": "ln_pre.weight",
+      "shape": [
+        768
+      ],
+      "offset": 1135104,
+      "numel": 768
+    },
+    {
+      "name": "ln_pre.bias",
+      "shape": [
+        768
+      ],
+      "offset": 1135872,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.0.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 1136640,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.0.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 1137408,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.0.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 1138176,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.0.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 2907648,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.0.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 2909952,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.0.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 3499776,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.0.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 3500544,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.0.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 3501312,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.0.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 3502080,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.0.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 5861376,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.0.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 5864448,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.0.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 8223744,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.1.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 8224512,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.1.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 8225280,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.1.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 8226048,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.1.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 9995520,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.1.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 9997824,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.1.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 10587648,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.1.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 10588416,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.1.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 10589184,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.1.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 10589952,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.1.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 12949248,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.1.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 12952320,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.1.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 15311616,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.2.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 15312384,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.2.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 15313152,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.2.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 15313920,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.2.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 17083392,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.2.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 17085696,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.2.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 17675520,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.2.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 17676288,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.2.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 17677056,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.2.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 17677824,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.2.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 20037120,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.2.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 20040192,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.2.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 22399488,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.3.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 22400256,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.3.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 22401024,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.3.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 22401792,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.3.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 24171264,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.3.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 24173568,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.3.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 24763392,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.3.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 24764160,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.3.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 24764928,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.3.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 24765696,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.3.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 27124992,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.3.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 27128064,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.3.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 29487360,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.4.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 29488128,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.4.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 29488896,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.4.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 29489664,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.4.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 31259136,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.4.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 31261440,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.4.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 31851264,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.4.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 31852032,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.4.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 31852800,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.4.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 31853568,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.4.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 34212864,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.4.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 34215936,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.4.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 36575232,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.5.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 36576000,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.5.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 36576768,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.5.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 36577536,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.5.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 38347008,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.5.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 38349312,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.5.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 38939136,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.5.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 38939904,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.5.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 38940672,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.5.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 38941440,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.5.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 41300736,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.5.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 41303808,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.5.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 43663104,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.6.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 43663872,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.6.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 43664640,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.6.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 43665408,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.6.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 45434880,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.6.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 45437184,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.6.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 46027008,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.6.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 46027776,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.6.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 46028544,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.6.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 46029312,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.6.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 48388608,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.6.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 48391680,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.6.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 50750976,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.7.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 50751744,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.7.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 50752512,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.7.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 50753280,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.7.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 52522752,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.7.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 52525056,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.7.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 53114880,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.7.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 53115648,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.7.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 53116416,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.7.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 53117184,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.7.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 55476480,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.7.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 55479552,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.7.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 57838848,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.8.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 57839616,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.8.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 57840384,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.8.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 57841152,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.8.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 59610624,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.8.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 59612928,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.8.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 60202752,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.8.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 60203520,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.8.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 60204288,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.8.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 60205056,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.8.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 62564352,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.8.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 62567424,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.8.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 64926720,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.9.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 64927488,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.9.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 64928256,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.9.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 64929024,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.9.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 66698496,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.9.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 66700800,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.9.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 67290624,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.9.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 67291392,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.9.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 67292160,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.9.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 67292928,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.9.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 69652224,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.9.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 69655296,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.9.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 72014592,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.10.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 72015360,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.10.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 72016128,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.10.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 72016896,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.10.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 73786368,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.10.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 73788672,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.10.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 74378496,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.10.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 74379264,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.10.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 74380032,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.10.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 74380800,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.10.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 76740096,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.10.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 76743168,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.10.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 79102464,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.11.ln_1.weight",
+      "shape": [
+        768
+      ],
+      "offset": 79103232,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.11.ln_1.bias",
+      "shape": [
+        768
+      ],
+      "offset": 79104000,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.11.attn.in_proj_weight",
+      "shape": [
+        2304,
+        768
+      ],
+      "offset": 79104768,
+      "numel": 1769472
+    },
+    {
+      "name": "transformer.resblocks.11.attn.in_proj_bias",
+      "shape": [
+        2304
+      ],
+      "offset": 80874240,
+      "numel": 2304
+    },
+    {
+      "name": "transformer.resblocks.11.attn.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "offset": 80876544,
+      "numel": 589824
+    },
+    {
+      "name": "transformer.resblocks.11.attn.out_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 81466368,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.11.ln_2.weight",
+      "shape": [
+        768
+      ],
+      "offset": 81467136,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.11.ln_2.bias",
+      "shape": [
+        768
+      ],
+      "offset": 81467904,
+      "numel": 768
+    },
+    {
+      "name": "transformer.resblocks.11.mlp.c_fc.weight",
+      "shape": [
+        3072,
+        768
+      ],
+      "offset": 81468672,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.11.mlp.c_fc.bias",
+      "shape": [
+        3072
+      ],
+      "offset": 83827968,
+      "numel": 3072
+    },
+    {
+      "name": "transformer.resblocks.11.mlp.c_proj.weight",
+      "shape": [
+        768,
+        3072
+      ],
+      "offset": 83831040,
+      "numel": 2359296
+    },
+    {
+      "name": "transformer.resblocks.11.mlp.c_proj.bias",
+      "shape": [
+        768
+      ],
+      "offset": 86190336,
+      "numel": 768
+    },
+    {
+      "name": "ln_post.weight",
+      "shape": [
+        768
+      ],
+      "offset": 86191104,
+      "numel": 768
+    },
+    {
+      "name": "ln_post.bias",
+      "shape": [
+        768
+      ],
+      "offset": 86191872,
+      "numel": 768
+    }
+  ],
+  "arrays": {
+    "g_d_train": {
+      "file": "g_d_train.npy",
+      "sha256": "1ab8b365e8252514ec9989595aeb978ae62f9b517e706ac3f97f6fa1ca827ab3",
+      "norm": 28.437015347488455
+    },
+    "g_d_heldout": {
+      "file": "g_d_heldout.npy",
+      "sha256": "80ecc635fe047714b573e9ed6196771c2679379769b0c8ae3b7462d7bebe4a9e",
+      "norm": 38.25914861388497
+    },
+    "u_d": {
+      "file": "u_d.npy",
+      "sha256": "15e06abbb4f7e910b6db49a4056b6a238c12e2b4ac3681243097cb0b3efcbdc1",
+      "norm": 1.0343229211801668
+    },
+    "g_c_train": {
+      "file": "g_c_train.npy",
+      "sha256": "8fe0008a88df903a4d2ec33f1690c2676cd53b45987f2f4593beff1470e44208",
+      "norm": 27.920850554114562
+    },
+    "g_c_heldout": {
+      "file": "g_c_heldout.npy",
+      "sha256": "01b1675aafe82c776a796659a6164316d151e2cb818d375a83c770dcd6081f13",
+      "norm": 28.03897835246785
+    },
+    "u_c": {
+      "file": "u_c.npy",
+      "sha256": "bea754948e34924c3388afeba14504a99a412827ff94a6ce280fdd9d44ee5d0d",
+      "norm": 1.99599222954764
+    }
+  },
+  "gradient_definition": "mean cross entropy over the probe",
+  "head_note": "each task is evaluated with its own trained classification head",
+  "inputs": {
+    "/media/shangxueyuan/data1/eight_task_coupling_20261116/INVENTORY.json": "bf5e680f285d1eadc560cf2d10b80aa2d368870d2d7755ef83e832144fc6e9cb",
+    "/media/shangxueyuan/data1/task_substructure_DTD_Cars_20261120/runtime/probes.json": "31c3c1667bc83349ce1dda459fb17ca67be0b7b2b88ac3a6179b624a4cb78eae"
+  },
+  "dataset": "training-side development probes only; no official validation or test"
+}

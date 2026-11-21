@@ -1,0 +1,1 @@
+ARCHIVED CONTROL COORDINATES ONLY: h_DTD/h_Cars are derivatives with respect to the 304D expert-recombination dictionary, NOT the original 85M physical parameters. Cross-anchor consistency is not independent-probe reproducibility. All gradients and metrics are local; no empirical merge improvement has been established.
