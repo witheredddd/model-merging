@@ -86,8 +86,10 @@ def compare(legacy, rows_a, rows_b):
                               key: maximum_change(old[key], a[key], ("weights",))["weights"]
                               for key in ("raw_hull", "unit_hull")},
                           A_to_B=ab, B_to_A=ba)
-            if not (ab["source_positive_all"] and ab["positive_all"]
-                    and ba["source_positive_all"] and ba["positive_all"]):
+            witnesses = [label for label, result in (("A_to_B", ab), ("B_to_A", ba))
+                         if result["source_positive_all"] and result["positive_all"]]
+            record["joint_witness_from_transfer"] = witnesses
+            if not witnesses:
                 record["joint_two_direction_witness"] = joint_mix(
                     ab["source_scores"] + ab["target_scores"], ba["target_scores"] + ba["source_scores"])
             comparisons.append(record)
