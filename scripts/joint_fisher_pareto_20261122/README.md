@@ -26,6 +26,8 @@
 
 可用 `--independent-probe-source <未裁剪的原始双探针清单>` 复验第二批数据。入口校验清单哈希和两批 ID 不重叠，从第二批选取与第一批相同的逐任务样本数并重新验证类别覆盖。检查点和 ε 网格来自同一原始协议，独立复验重新计算 JVP、VJP 和任务梯度。结果协议记录选定探针、实际样本数、SciPy 版本和直接依赖源码哈希。
 
+带双探针清单时，`--source-probe 0` 或 `1` 指定构造方向的批次。入口核对每个任务逐类别样本数。约化 QP 只用来源批次。方向按来源批次的图范数归一化，随后用目标批次的八个 VJP 内积直接检查同一个 (v)。`report_probe_transfer.py` 汇合双向结果，逐档对照旧第一批证书并导出公开报告。公开协议保留源代码指纹、样本数与检查结果，模型和数据资产路径留在原始协议中。
+
 运行时保留 `preview.json`、`stability.json` 和 `protocol.json` 原件。第一批报告中的 `certified_scan.json` 和 `certified_stability.json` 分别对应单块运行的 `preview.json` 和 `stability.json`；`block2_stability.json` 对应双块运行的 `stability.json`。
 
 ## 运行依赖和资源锁

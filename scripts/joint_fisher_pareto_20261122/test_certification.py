@@ -6,6 +6,7 @@ import torch
 
 from audit_projections import derivative_acceptance
 from graph_geometry import GraphSpace
+from report_probe_transfer import joint_mix
 from run import polytope
 from scan_epsilon import cross_shift_audit, independent_probe_lock, orthogonal_block, solve_grid
 
@@ -35,6 +36,23 @@ class CertificationTests(unittest.TestCase):
         self.assertTrue(result["qp_passed"])
         self.assertTrue(result["support_threshold_stable"])
         self.assertEqual(result["active_coefficients"], [0, 2])
+
+    def test_transfer_keeps_source_weights_and_can_detect_target_failure(self):
+        eye = np.eye(2)
+
+        def residual(epsilon, coefficients):
+            r = eye - (1 + epsilon) * coefficients
+            return np.linalg.norm(r, axis=0).tolist(), r
+
+        args = (eye, eye, eye, np.ones(2), np.ones(2), [1.], residual)
+        original = solve_grid(*args)[0]
+        transferred = solve_grid(*args, transfer_rhs=-eye)[0]
+        self.assertEqual(transferred["raw_hull"], original["raw_hull"])
+        self.assertTrue(transferred["transfer"]["source_positive_all"])
+        self.assertFalse(transferred["transfer"]["positive_all"])
+        mixed = joint_mix([2., -1.], [-1., 2.])
+        self.assertEqual(mixed["weights_on_fixed_A_B"], [.5, .5])
+        self.assertEqual(mixed["scores"], [.5, .5])
 
     def test_derivative_requires_one_shared_step(self):
         rows = [

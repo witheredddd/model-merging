@@ -1,6 +1,8 @@
 """Shared block Krylov Galerkin solves with full-space residual certificates."""
 import argparse
+from copy import copy
 import json
+import math
 import shutil
 from itertools import combinations
 from pathlib import Path
@@ -66,7 +68,8 @@ def gram_bounds(gram, correction, squared_error_bounds):
     return error, eig, unit_low, unit_high, d_low, d_high
 
 
-def solve_grid(parameter_gram, prediction_gram, rhs, rhs_norms, target_norms, shifts, residual, rtol=1e-5):
+def solve_grid(parameter_gram, prediction_gram, rhs, rhs_norms, target_norms, shifts, residual,
+               rtol=1e-5, transfer_rhs=None):
     rows = []
     for epsilon in shifts:
         system = prediction_gram + epsilon * parameter_gram
@@ -97,6 +100,19 @@ def solve_grid(parameter_gram, prediction_gram, rhs, rhs_norms, target_norms, sh
                    galerkin_passed=galerkin_ok, raw_hull=raw_hull, unit_hull=unit_hull,
                    exact_projection_tolerance_met=galerkin_ok and max(errors) <= rtol)
         rows.append(row)
+        if transfer_rhs is not None:
+            mixture = np.asarray(raw_hull["weights"])
+            motion = coefficients @ mixture
+            norm = math.sqrt(max(0., float(motion @ system @ motion)))
+            source_scores, target_scores = rhs.T @ motion, transfer_rhs.T @ motion
+            if norm > 0:
+                source_scores, target_scores = source_scores / norm, target_scores / norm
+            margin = float(target_scores.min())
+            row["transfer"] = dict(source_graph_norm_before_normalization=norm,
+                source_scores=source_scores.tolist(), target_scores=target_scores.tolist(),
+                minimum_target_score=margin,
+                source_positive_all=bool(norm > 0 and source_scores.min() > 1e-12 * max(abs(source_scores))),
+                positive_all=bool(norm > 0 and margin > 1e-12 * max(abs(target_scores))))
         if not galerkin_ok:
             row["certification"] = None
             continue
@@ -203,10 +219,10 @@ def independent_probe_lock(primary, historical, sample_summary):
 
 
 def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selected=(),
-         independent_probe_source=None):
+         independent_probe_source=None, source_probe=None):
     configure_runtime()
     from prepare import sha, write
-    from task_runtime import load_eight_geometry
+    from task_runtime import load_eight_geometry, probe_signatures
 
     output.mkdir(exist_ok=False, parents=True)
     (output / "runtime").mkdir()
@@ -232,7 +248,7 @@ def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selecte
         write(destination, new_lock)
         expected.pop("transformed_probe_sha256", None)
         expected["probe_sha256"] = sha(destination)
-        probe = 1
+        probe = 1 if source_probe is None else source_probe
     else:
         shutil.copy2(primary_file, destination)
     g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"],
@@ -240,26 +256,38 @@ def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selecte
     if provenance["parameter_dimension"] != lock["parameter_dimension"]:
         raise ValueError("Parameter dimension mismatch")
     joint = EmpiricalJoint(g, protocol)
+    other = None
+    if independent_probe_source is not None:
+        peer = copy(g)
+        peer.probe = 1 - probe
+        other = EmpiricalJoint(peer, protocol)
+        if joint.class_counts != other.class_counts:
+            raise ValueError("The probe batches differ in per-class sample counts")
     shifts = [*grid["epsilon_scan"], grid["gradient_baseline"]]
     write(output / "protocol.json", dict(epsilons=shifts, tasks=joint.tasks, source=provenance,
           calibration_sha256=sha(calibration / "reference.json"), script_sha256=sha(__file__),
           source_protocol_sha256=sha(source / "protocol.json"), probe_index=probe,
-          independent_probe_source_sha256=sha(independent_probe_source) if probe else None,
+          independent_probe_source_sha256=sha(independent_probe_source) if other else None,
           sample_counts={t: len(w) for t, w in zip(joint.tasks, joint.weights["original"])},
+          per_class_counts=joint.class_counts,
+          peer_per_class_counts=other.class_counts if other else None,
+          disjoint_id_check_passed=other is not None,
+          peer_transformed_probe_sha256=probe_signatures(g.c, peer.probe) if other else None,
           scipy_version=scipy.__version__,
           direct_source_sha256={name: sha(Path(__file__).with_name(name)) for name in
                                 ("run.py", "audit_projections.py")},
           max_blocks=max_blocks, full_relative_tolerance=rtol, reduced_relative_tolerance=1e-9,
           method="Shared block Krylov seeded by current full gradients; shifts reuse every JVP/VJP"))
     cases, stability = {}, {}
-    storage = g.device if max_blocks == 1 else torch.device("cpu")
+    storage = g.device if max_blocks == 1 and other is None else torch.device("cpu")
     for metric in joint.weights:
         charts, multipliers, _, jvp, vjp = joint.scaled(metric)
+        peer_charts, peer_multipliers, *_ = other.scaled(metric) if other else (None, None)
         for objective in ("geo", "ce"):
             name = f"{metric}_{objective}"
             if selected and name not in selected:
                 continue
-            seeds, images, fisher_columns, rhs_norms, target_norms = [], [], [], [], []
+            seeds, images, fisher_columns, rhs_norms, target_norms, peer_gradients = [], [], [], [], [], []
             for idx, task in enumerate(joint.tasks):
                 target = charts[idx] * joint.ideals[idx][objective].flatten()
                 grad = g.vjp(task, multipliers[idx] * target)
@@ -268,6 +296,9 @@ def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selecte
                     raise ValueError(f"Degenerate zero gradient for {name}/{task}")
                 seeds.append((grad / rhs_norms[-1]).to(storage))
                 target_norms.append(float(target.norm()))
+                if other:
+                    peer_target = peer_charts[idx] * other.ideals[idx][objective].flatten()
+                    peer_gradients.append(peer.vjp(task, peer_multipliers[idx] * peer_target).to(storage))
             q = orthogonal_block([], seeds)
             history = []
             start = 0
@@ -283,6 +314,8 @@ def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selecte
                 fg = (z @ z.T).cpu().numpy()
                 rhs = np.array([[float(direction @ seed) * norm for seed, norm in zip(seeds, rhs_norms)]
                                 for direction in q])
+                transfer_rhs = (np.array([[float(direction @ grad) for grad in peer_gradients] for direction in q])
+                                if other else None)
 
                 def residual(epsilon, coefficients):
                     errors = []
@@ -297,7 +330,7 @@ def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selecte
                     return errors, projected
 
                 result = solve_grid(pg, fg, rhs, np.array(rhs_norms), np.array(target_norms),
-                                    shifts, residual, rtol)
+                                    shifts, residual, rtol, transfer_rhs)
                 history.append(dict(block=block, dimension=len(q),
                     max_full_residual=[max(row["residual_relative"]) for row in result]))
                 cases[name] = result
@@ -325,8 +358,11 @@ if __name__ == "__main__":
     parser.add_argument("--case", action="append", default=[],
                         choices=("original_geo", "original_ce", "balanced_geo", "balanced_ce"))
     parser.add_argument("--independent-probe-source", type=Path)
+    parser.add_argument("--source-probe", type=int, choices=(0, 1))
     args = parser.parse_args()
     if args.max_blocks < 1 or not 0 < args.rtol < 1:
         parser.error("positive block budget and 0 < rtol < 1 required")
+    if args.source_probe is not None and args.independent_probe_source is None:
+        parser.error("--source-probe requires --independent-probe-source")
     main(args.source, args.baseline, args.calibration, args.output, args.max_blocks, args.rtol,
-         args.case, args.independent_probe_source)
+         args.case, args.independent_probe_source, args.source_probe)

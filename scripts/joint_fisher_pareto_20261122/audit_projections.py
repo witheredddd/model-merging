@@ -22,6 +22,7 @@ class EmpiricalJoint:
         self.lengths = [geometry.output_dimensions[t] for t in self.tasks]
         self.weights = {"original": [], "balanced": []}
         self.ideals = []
+        self.class_counts = {}
         for task in self.tasks:
             logits, labels = geometry.c.baseline(task, geometry.probe, geometry.point)
             directions, _ = ideal(logits.cuda(), labels.cuda())
@@ -30,6 +31,7 @@ class EmpiricalJoint:
             seen = torch.bincount(labels, minlength=len(counts))
             if len(counts) != logits.shape[-1] or not bool((seen > 0).all()):
                 raise ValueError(f"Incomplete class coverage for {task}")
+            self.class_counts[task] = seen.tolist()
             class_mass = {"original": counts / counts.sum(),
                           "balanced": torch.full_like(counts, 1 / len(counts))}
             for metric, mass in class_mass.items():
