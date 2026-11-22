@@ -22,6 +22,12 @@
 
 通过 Galerkin 验收的行记录完整 Gram 元素误差界、单位 Gram 元素区间、最小特征值区间及可达率和原始凸包距离区间。界使用实测残差和交叉项，假设 FP64 联合导数和残差计算准确到报告精度。只有逐项确认权重严格为正或为零时，才记录精确最小面。五档比较位于 `stability.json`。
 
+`residual_relative` 是完整方程残差，`projected_full_residual_relative` 是从完整残差独立点积得到的 Galerkin 正交残差。为兼容结果读取器，`orthogonality_residual_relative` 与后者保存相同数值。区间一致性单独验收。距离下界同时报告区间宽度和相对 FP64 工程误差底线的裕量，该底线不包含对模型浮点算子的严格舍入误差分析。
+
+可用 `--independent-probe-source <未裁剪的原始双探针清单>` 复验第二批数据。入口校验清单哈希和两批 ID 不重叠，从第二批选取与第一批相同的逐任务样本数并重新验证类别覆盖。检查点和 ε 网格来自同一原始协议，独立复验重新计算 JVP、VJP 和任务梯度。结果协议记录选定探针、实际样本数、SciPy 版本和直接依赖源码哈希。
+
+运行时保留 `preview.json`、`stability.json` 和 `protocol.json` 原件。第一批报告中的 `certified_scan.json` 和 `certified_stability.json` 分别对应单块运行的 `preview.json` 和 `stability.json`；`block2_stability.json` 对应双块运行的 `stability.json`。
+
 ## 运行依赖和资源锁
 
 FP64 路径复用仓库的 `scripts/eight_task_coupling_20261116`、`scripts/fullspace_conditional_20261116` 和 `scripts/fr_hst/task_data.py`。需要 CUDA、PyTorch、torchvision、open_clip_torch、NumPy、SciPy，以及对应的八个训练数据集、预训练权重、八个专家与分类头、坐标清单、检查点和探针锁。原数据、权重和私人运行产物保存在实验环境。

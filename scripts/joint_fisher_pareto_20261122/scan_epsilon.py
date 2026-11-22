@@ -8,6 +8,7 @@ from pathlib import Path
 from runtime_location import configure_runtime
 
 import numpy as np
+import scipy
 import torch
 
 from audit_projections import EmpiricalJoint
@@ -88,7 +89,7 @@ def solve_grid(parameter_gram, prediction_gram, rhs, rhs_norms, target_norms, sh
                    reachability=(norms / target_norms).tolist(),
                    parameter_fraction=(np.diag(parameter) / np.diag(gram)).tolist(),
                    graph_gram_eigenvalues=np.linalg.eigvalsh(gram).tolist(),
-                   residual_relative=errors, orthogonality_residual_relative=errors,
+                   residual_relative=errors, orthogonality_residual_relative=residual_relative.tolist(),
                    reduced_residual_relative=reduced_relative.tolist(),
                    projected_full_residual_relative=residual_relative.tolist(),
                    reduced_full_consistency_relative=consistency.tolist(),
@@ -119,10 +120,26 @@ def solve_grid(parameter_gram, prediction_gram, rhs, rhs_norms, target_norms, sh
             float(np.sqrt(max(0., mixture @ (gram + correction) @ mixture
                               + (mixture @ np.sqrt(squared_error_bounds)) ** 2))),
             float(1 / np.linalg.norm(1 / target_norms)))
+        numerical_floor = float(64 * np.finfo(float).eps * max(1., condition) * max(target_norms))
+        consistent = (distance_lower <= distance_upper + numerical_floor
+                      and np.all(unit_lo <= unit_hi + 64 * np.finfo(float).eps)
+                      and np.all(diagonal_lo <= diagonal_hi + numerical_floor * max(target_norms))
+                      and eig[0] <= eig[1] and unit_eig_lo <= unit_eig_hi)
+        row["interval_consistent"] = bool(consistent)
+        if not consistent:
+            row["certification"] = None
+            continue
+        # Round-off size inversions are conservatively widened, never swapped.
+        distance_upper = max(distance_upper, distance_lower)
+        unit_hi = np.maximum(unit_hi, unit_lo)
+        diagonal_hi = np.maximum(diagonal_hi, diagonal_lo)
         row["certification"] = dict(
                          exact_reachability_lower=(np.sqrt(diagonal_lo) / target_norms).tolist(),
                          exact_reachability_upper=np.minimum(1, np.sqrt(diagonal_hi) / target_norms).tolist(),
                          exact_raw_distance_bounds=[distance_lower, distance_upper],
+                         raw_distance_interval_width=distance_upper - distance_lower,
+                         distance_numerical_floor_heuristic=numerical_floor,
+                         distance_lower_to_numerical_floor=distance_lower / numerical_floor,
                          exact_gram_absolute_error_upper=bound.tolist(),
                          exact_gram_min_eigenvalue_bounds=eig,
                          exact_unit_gram_lower=unit_lo.tolist(), exact_unit_gram_upper=unit_hi.tolist(),
@@ -170,26 +187,68 @@ def orthogonal_block(q, actions):
     return new
 
 
-def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selected=()):
+def independent_probe_lock(primary, historical, sample_summary):
+    """Keep the original IDs and match its per-class sample count on split 1."""
+    for task, record in primary["tasks"].items():
+        source = historical["tasks"][task]
+        old_ids = record["ids"][0]
+        if not set(old_ids).issubset(source["ids"][0]):
+            raise ValueError(f"Primary {task} IDs do not match the historical split")
+        count = sample_summary[task]["samples"]
+        ids = source["ids"][1][:count]
+        if len(set(ids)) != count or set(ids) & set(source["ids"][0]):
+            raise ValueError(f"Missing or overlapping independent IDs for {task}")
+        record["ids"] = [old_ids, ids]
+    return primary
+
+
+def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selected=(),
+         independent_probe_source=None):
     configure_runtime()
     from prepare import sha, write
     from task_runtime import load_eight_geometry
 
     output.mkdir(exist_ok=False, parents=True)
     (output / "runtime").mkdir()
-    shutil.copy2(source / "runtime/probes.json", output / "runtime/probes.json")
     protocol = json.loads((source / "protocol.json").read_text())
     grid = json.loads((calibration / "reference.json").read_text())
     lock = protocol["source"]
     base = json.loads((baseline / "provenance.json").read_text())
-    g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"], lock["checkpoint"], expected=lock)
     for key in ("checkpoint_sha256", "probe_sha256", "inventory_sha256", "parameter_dimension"):
-        if len({provenance[key], lock[key], base[key], grid["provenance"][key]}) != 1:
+        if len({lock[key], base[key], grid["provenance"][key]}) != 1:
             raise ValueError(f"Mismatched source {key}")
+    primary_file = source / "runtime/probes.json"
+    if sha(primary_file) != lock["probe_sha256"]:
+        raise ValueError("Primary probe lock digest mismatch")
+    destination = output / "runtime/probes.json"
+    expected = dict(lock)
+    probe = 0
+    if independent_probe_source is not None:
+        if sha(independent_probe_source) != protocol["original_probe_sha256"]:
+            raise ValueError("Historical probe split digest mismatch")
+        new_lock = independent_probe_lock(json.loads(primary_file.read_text()),
+                                          json.loads(independent_probe_source.read_text()),
+                                          protocol["sample_summary"])
+        write(destination, new_lock)
+        expected.pop("transformed_probe_sha256", None)
+        expected["probe_sha256"] = sha(destination)
+        probe = 1
+    else:
+        shutil.copy2(primary_file, destination)
+    g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"],
+                                         lock["checkpoint"], probe=probe, expected=expected)
+    if provenance["parameter_dimension"] != lock["parameter_dimension"]:
+        raise ValueError("Parameter dimension mismatch")
     joint = EmpiricalJoint(g, protocol)
     shifts = [*grid["epsilon_scan"], grid["gradient_baseline"]]
     write(output / "protocol.json", dict(epsilons=shifts, tasks=joint.tasks, source=provenance,
           calibration_sha256=sha(calibration / "reference.json"), script_sha256=sha(__file__),
+          source_protocol_sha256=sha(source / "protocol.json"), probe_index=probe,
+          independent_probe_source_sha256=sha(independent_probe_source) if probe else None,
+          sample_counts={t: len(w) for t, w in zip(joint.tasks, joint.weights["original"])},
+          scipy_version=scipy.__version__,
+          direct_source_sha256={name: sha(Path(__file__).with_name(name)) for name in
+                                ("run.py", "audit_projections.py")},
           max_blocks=max_blocks, full_relative_tolerance=rtol, reduced_relative_tolerance=1e-9,
           method="Shared block Krylov seeded by current full gradients; shifts reuse every JVP/VJP"))
     cases, stability = {}, {}
@@ -265,7 +324,9 @@ if __name__ == "__main__":
     parser.add_argument("--rtol", type=float, default=1e-5)
     parser.add_argument("--case", action="append", default=[],
                         choices=("original_geo", "original_ce", "balanced_geo", "balanced_ce"))
+    parser.add_argument("--independent-probe-source", type=Path)
     args = parser.parse_args()
     if args.max_blocks < 1 or not 0 < args.rtol < 1:
         parser.error("positive block budget and 0 < rtol < 1 required")
-    main(args.source, args.baseline, args.calibration, args.output, args.max_blocks, args.rtol, args.case)
+    main(args.source, args.baseline, args.calibration, args.output, args.max_blocks, args.rtol,
+         args.case, args.independent_probe_source)

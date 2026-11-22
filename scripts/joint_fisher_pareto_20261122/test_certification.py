@@ -5,11 +5,37 @@ import numpy as np
 import torch
 
 from audit_projections import derivative_acceptance
+from graph_geometry import GraphSpace
 from run import polytope
-from scan_epsilon import cross_shift_audit, orthogonal_block, solve_grid
+from scan_epsilon import cross_shift_audit, independent_probe_lock, orthogonal_block, solve_grid
 
 
 class CertificationTests(unittest.TestCase):
+    def test_independent_probe_preserves_primary_count_and_rejects_overlap(self):
+        primary = {"tasks": {"DTD": {"ids": [[3, 9], []]}}}
+        historical = {"tasks": {"DTD": {"ids": [[3, 9, 13], [1, 8, 20]]}}}
+        summary = {"DTD": {"samples": 2}}
+        self.assertEqual(independent_probe_lock(primary, historical, summary)["tasks"]["DTD"]["ids"],
+                         [[3, 9], [1, 8]])
+        historical["tasks"]["DTD"]["ids"][1][0] = 13
+        with self.assertRaisesRegex(ValueError, "overlapping"):
+            independent_probe_lock(primary, historical, summary)
+
+    def test_graph_point_keeps_nonzero_parameter_displacement(self):
+        reference = torch.tensor([1., 2.], dtype=torch.float64)
+        prediction = torch.tensor([0., 2.], dtype=torch.float64)
+        coordinates, value = GraphSpace(4., reference).point(reference + torch.tensor([2., -1.]), prediction)
+        torch.testing.assert_close(coordinates, torch.tensor([4., -2.], dtype=torch.float64))
+        torch.testing.assert_close(value, prediction)
+
+    def test_unit_gram_active_set(self):
+        angles = np.deg2rad([-30., 0., 30.])
+        gram = np.cos(angles[:, None] - angles[None, :])
+        result = polytope(.99 * gram + .01 * np.eye(3))
+        self.assertTrue(result["qp_passed"])
+        self.assertTrue(result["support_threshold_stable"])
+        self.assertEqual(result["active_coefficients"], [0, 2])
+
     def test_derivative_requires_one_shared_step(self):
         rows = [
             dict(step=1e-3, joint=8e-6, per_task=[1e-7, 2e-5]),
@@ -51,6 +77,10 @@ class CertificationTests(unittest.TestCase):
         rows = run(seeds)
         self.assertTrue(all(row["galerkin_passed"] for row in rows))
         for row in rows:
+            self.assertEqual(row["orthogonality_residual_relative"], row["projected_full_residual_relative"])
+            self.assertLess(max(row["orthogonality_residual_relative"]), 1e-12)
+            self.assertGreater(max(row["residual_relative"]), 1e-3)
+            self.assertTrue(row["interval_consistent"])
             exact = h.T @ np.linalg.solve(f + row["epsilon"] * identity, h)
             c = row["certification"]
             self.assertTrue(np.all(np.abs(exact - row["graph_gram"])
