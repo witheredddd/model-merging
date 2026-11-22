@@ -1,10 +1,12 @@
 """Eight-task resource/coordinate inventory; no expert-space or structural limits."""
-import argparse,hashlib,json,sys,time
+import argparse,hashlib,json,os,sys,time
 from pathlib import Path
 import numpy as np
 import torch
 
-ROOT=Path('/home/shangxueyuan/merging/tsv')
+ROOT=Path(os.environ.get('TSV_ROOT',Path(__file__).resolve().parents[2])).resolve()
+COORDINATES=Path(os.environ.get('TSV_COORDINATES',
+    '/media/shangxueyuan/data1/DTD_Cars_joint_tangent_20261114_r1/config.json'))
 TASKS=['DTD','SUN397','Cars','EuroSAT','GTSRB','MNIST','RESISC45','SVHN']
 
 
@@ -35,7 +37,7 @@ def main(out):
     start=time.monotonic();out.mkdir(parents=True,exist_ok=True)
     sys.path[:0]=[str(ROOT),str(ROOT/'scripts/fr_hst')]
     from task_data import train_set
-    coordinate=json.loads(Path('/media/shangxueyuan/data1/DTD_Cars_joint_tangent_20261114_r1/config.json').read_text())
+    coordinate=json.loads(COORDINATES.read_text())
     expected_keys=coordinate['parameter_keys'];expected_shapes=coordinate['parameter_shapes']
     expert_root=ROOT/'results/EXPERTS8_FD_REVIEWED_20261110'
     plan=json.loads((expert_root/'queue.json').read_text())['plan']

@@ -1,10 +1,37 @@
 """Eight-task complete visual model, data probes and expert demand sources."""
-import json,sys
+import hashlib,json,sys
+from importlib.metadata import version
 from pathlib import Path
 import numpy as np
 import torch
 from torch.utils.data import DataLoader,Subset
-from prepare import ROOT,TASKS,labels,write,sha
+from prepare import COORDINATES,ROOT,TASKS,labels,write,sha
+
+
+def verify_inventory_assets(inventory):
+    checked={}
+    for row in inventory:
+        for kind in ('expert','head'):
+            path=Path(row[f'{kind}_path'])
+            expected=row[f'{kind}_sha256']
+            actual=sha(path)
+            if actual!=expected:
+                raise ValueError(f"{row['task']} {kind} SHA-256 mismatch")
+            checked.setdefault(row['task'],{})[kind]=dict(path=str(path),sha256=actual)
+    return checked
+
+
+def probe_signatures(context,probe):
+    signatures={}
+    for task in context.task_names:
+        digest=hashlib.sha256()
+        for images,labels_tensor in context.batches[task,probe]:
+            for tensor in (images,labels_tensor):
+                array=tensor.detach().cpu().contiguous().numpy()
+                digest.update(repr((array.shape,str(array.dtype))).encode())
+                digest.update(memoryview(array).cast('B'))
+        signatures[task]=digest.hexdigest()
+    return signatures
 
 
 def balanced_ids(y,count,rng,excluded):
@@ -40,7 +67,12 @@ class EightTaskContext:
         torch.backends.cuda.enable_flash_sdp(False);torch.backends.cuda.enable_mem_efficient_sdp(False)
         torch.backends.cuda.enable_cudnn_sdp(False)
         self.enc=ImageEncoder('ViT-B-16').cuda()
-        state=torch.load(ROOT/'models/checkpoints/ViT-B-16/pretrained.pt',map_location='cpu',weights_only=True)
+        pretrained=ROOT/'models/checkpoints/ViT-B-16/pretrained.pt'
+        coordinates=json.loads(COORDINATES.read_text())
+        self.pretrained_sha256=sha(pretrained)
+        if self.pretrained_sha256!=coordinates['base_sha256']:
+            raise ValueError('Pretrained checkpoint SHA-256 mismatch')
+        state=torch.load(pretrained,map_location='cpu',weights_only=True)
         expected=self.enc.state_dict()
         if not any(k.startswith('model.') for k in state):
             state={'model.'+k:v for k,v in state.items() if 'model.'+k in expected}
@@ -53,7 +85,6 @@ class EightTaskContext:
         self.names=['image_encoder.model.visual.'+k for k in self.keys]
         self.base=torch.cat([p.detach().cpu().reshape(-1) for _,p in items]).double()
         self.D=len(self.base);self.experts=ExpertSources(self,inventory)
-        coordinates=json.loads(Path('/media/shangxueyuan/data1/DTD_Cars_joint_tangent_20261114_r1/config.json').read_text())
         if self.keys!=coordinates['parameter_keys'] or self.D!=86192640:
             raise ValueError('Complete visual parameter order/count differs from audited coordinates')
         if [list(s) for s in self.shapes]!=coordinates['parameter_shapes']:
@@ -92,18 +123,39 @@ class EightTaskContext:
         return torch.cat(zs),torch.cat(ys)
 
 
-def load_eight_geometry(out,inventory_file,checkpoint,probe=0):
+def load_eight_geometry(out,inventory_file,checkpoint,probe=0,*,expected=None):
     from geometry import FullFunctionalGeometry
+    probe_path=Path(out)/'probes.json'
+    locked=dict(checkpoint_sha256=sha(checkpoint),inventory_sha256=sha(inventory_file))
+    if probe_path.exists():
+        locked['probe_sha256']=sha(probe_path)
+    if expected is not None and any(locked.get(key)!=expected[key] for key in
+                                   ('checkpoint_sha256','inventory_sha256','probe_sha256')):
+        raise ValueError('Checkpoint, inventory or probe SHA-256 mismatch')
     inventory=json.loads(Path(inventory_file).read_text())['tasks']
     if any(row['status']!='coordinate_head_and_training_metadata_checked' for row in inventory):
         raise ValueError('An expert/head resource has not passed coordinate checks')
+    resources=verify_inventory_assets(inventory)
     context=EightTaskContext(out,inventory)
     state=torch.load(checkpoint,map_location='cpu',mmap=True,weights_only=True)
     point=state['full_visual_flat'].cuda().double()
     geometry=FullFunctionalGeometry(context,point,probe,precision='float64')
+    probe_digests=probe_signatures(context,probe)
+    if expected is not None and 'transformed_probe_sha256' in expected:
+        if probe_digests!=expected['transformed_probe_sha256']:
+            raise ValueError('Transformed probe SHA-256 mismatch')
+    module_names=('task_runtime','geometry','precision','prepare','task_data',
+                  'src.models.modeling','src.utils.variables_and_paths',
+                  'src.datasets.cars','src.datasets.gtsrb','src.datasets.resisc45','src.datasets.svhn')
+    code={name:sha(sys.modules[name].__file__) for name in module_names}
     return geometry,dict(parameter_dimension=geometry.dimension,visual_tensors=len(context.keys),
-        tasks=list(geometry.tasks),checkpoint=str(checkpoint),checkpoint_sha256=sha(checkpoint),
+        tasks=list(geometry.tasks),checkpoint=str(checkpoint),checkpoint_sha256=locked['checkpoint_sha256'],
         source='Existing anchor0 complete visual state; not an asserted eight-task optimum',
         probe_file=str(Path(out)/'probes.json'),probe_sha256=sha(Path(out)/'probes.json'),
-        inventory_file=str(inventory_file),inventory_sha256=sha(inventory_file),
+        inventory_file=str(inventory_file),inventory_sha256=locked['inventory_sha256'],
+        verified_assets=resources,pretrained_sha256=context.pretrained_sha256,
+        coordinates_sha256=sha(COORDINATES),transformed_probe_sha256=probe_digests,
+        runtime_source_sha256=code,versions=dict(torch=torch.__version__,numpy=np.__version__,
+            torchvision=sys.modules['torchvision'].__version__,open_clip=version('open_clip_torch'),
+            cuda=torch.version.cuda),
         dictionary_projection=False,predefined_support=False,numerical_precision='float64')

@@ -2,8 +2,9 @@
 import argparse
 import json
 import shutil
-import sys
 from pathlib import Path
+
+from runtime_location import configure_runtime
 
 import numpy as np
 import torch
@@ -23,9 +24,7 @@ def snapshot(path, keys):
 
 
 def main(source, baseline, output):
-    root = Path("/home/shangxueyuan/merging/tsv/scripts")
-    sys.path[:0] = [str(root / "eight_task_coupling_20261116"),
-                    str(root / "fullspace_conditional_20261116")]
+    configure_runtime()
     from prepare import sha, write
     from task_runtime import load_eight_geometry
 
@@ -36,7 +35,7 @@ def main(source, baseline, output):
         shutil.copy2(source / "runtime/probes.json", destination_lock)
     protocol = json.loads((source / "protocol.json").read_text())
     lock = protocol["source"]
-    g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"], lock["checkpoint"])
+    g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"], lock["checkpoint"], expected=lock)
     baseline_source = json.loads((baseline / "provenance.json").read_text())
     for key in ("checkpoint_sha256", "probe_sha256", "inventory_sha256", "parameter_dimension"):
         if provenance[key] != lock[key] or provenance[key] != baseline_source[key]:

@@ -3,8 +3,9 @@ import argparse
 import json
 import math
 import shutil
-import sys
 from pathlib import Path
+
+from runtime_location import configure_runtime
 
 import torch
 
@@ -13,9 +14,7 @@ from calibrate_updates import snapshot
 
 
 def main(source, calibration, output):
-    root = Path("/home/shangxueyuan/merging/tsv/scripts")
-    sys.path[:0] = [str(root / "eight_task_coupling_20261116"),
-                    str(root / "fullspace_conditional_20261116")]
+    configure_runtime()
     from precision import Float64Ops
     from prepare import sha, write
     from run import ideal
@@ -26,7 +25,7 @@ def main(source, calibration, output):
     output.mkdir(parents=True, exist_ok=False)
     (output / "runtime").mkdir()
     shutil.copy2(source / "runtime/probes.json", output / "runtime/probes.json")
-    g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"], lock["checkpoint"])
+    g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"], lock["checkpoint"], expected=lock)
     for key in ("checkpoint_sha256", "inventory_sha256", "probe_sha256"):
         if provenance[key] != lock[key]:
             raise ValueError(f"Mismatched {key}")

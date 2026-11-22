@@ -3,9 +3,10 @@ import argparse
 import json
 import math
 import shutil
-import sys
 import time
 from pathlib import Path
+
+from runtime_location import configure_runtime
 
 import numpy as np
 import torch
@@ -93,13 +94,19 @@ def audit_derivative(joint, direction, generator):
             curve.append(dict(step=step, joint=float(delta.norm() / image.norm()), per_task=blocks))
         # Also independently confirm the normalization directly in both charts.
         norm = float(joint.direct_chart(center, metric).norm())
-        best_task = np.min([point["per_task"] for point in curve], axis=0)
-        audit[metric] = dict(adjoint_relative_error=adjoint_error, adjoint_pair=[lhs, rhs],
-                             prediction_norm=norm, finite_difference=curve,
-                             minimum_per_task_relative_error=best_task.tolist(),
-                             passed=bool(adjoint_error < 1e-9 and abs(norm - 2) < 1e-10
-                                         and np.max(best_task) < 1e-5))
+        audit[metric] = derivative_acceptance(curve, norm, adjoint_error)
+        audit[metric]["adjoint_pair"] = [lhs, rhs]
     return audit
+
+
+def derivative_acceptance(curve, norm, adjoint_error, tolerance=1e-5):
+    finite = [row for row in curve if np.isfinite(row["joint"]) and np.isfinite(row["per_task"]).all()]
+    common = min(finite, key=lambda row: row["joint"], default=None)
+    passed = (common is not None and adjoint_error < 1e-9 and abs(norm - 2) < 1e-10
+              and common["joint"] < tolerance and max(common["per_task"]) < tolerance)
+    return dict(adjoint_relative_error=adjoint_error, prediction_norm=norm,
+                finite_difference=curve, best_common_step=common, tolerance=tolerance,
+                passed=bool(passed))
 
 
 def solve(tangent, rhs, target, rtol, max_steps, iteration_status):
@@ -157,9 +164,7 @@ def solve(tangent, rhs, target, rtol, max_steps, iteration_status):
 
 
 def main(args):
-    root = Path("/home/shangxueyuan/merging/tsv/scripts")
-    sys.path[:0] = [str(root / "eight_task_coupling_20261116"),
-                    str(root / "fullspace_conditional_20261116")]
+    configure_runtime()
     from prepare import sha, write
     from task_runtime import load_eight_geometry
 
@@ -170,7 +175,7 @@ def main(args):
     out.mkdir(parents=True, exist_ok=False)
     (out / "runtime").mkdir()
     shutil.copy2(args.source / "runtime/probes.json", out / "runtime/probes.json")
-    g, source = load_eight_geometry(out / "runtime", lock["inventory_file"], lock["checkpoint"])
+    g, source = load_eight_geometry(out / "runtime", lock["inventory_file"], lock["checkpoint"], expected=lock)
     for key in ("checkpoint_sha256", "probe_sha256", "inventory_sha256", "parameter_dimension"):
         if source[key] != lock[key]:
             raise ValueError(f"Provenance differs for {key}")

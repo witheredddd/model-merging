@@ -16,9 +16,6 @@ class EuclideanMetric:
 
 class FullFunctionalGeometry:
     def __init__(self, context, parameter_point, probe,precision='native'):
-        path=Path('/home/shangxueyuan/merging/tsv/scripts/projected_fiber_1b_20261115_r1')
-        sys.path.insert(0,str(path))
-        from gpu_runtime import GPUOps,TASKS
         if parameter_point.numel()!=context.D:
             raise ValueError('Full parameter point and common visual coordinate count differ')
         self.precision=precision
@@ -26,15 +23,24 @@ class FullFunctionalGeometry:
             from precision import Float64Context,Float64Ops
             context=Float64Context(context)
             parameter_point=parameter_point.double()
-        elif precision!='native':raise ValueError('Unknown numerical precision')
+            tasks=context.task_names
+            operator=Float64Ops
+        elif precision=='native':
+            path=Path(__file__).resolve().parents[1]/'projected_fiber_1b_20261115_r1'
+            sys.path.insert(0,str(path))
+            from gpu_runtime import GPUOps,TASKS
+            tasks=getattr(context,'task_names',TASKS)
+            operator=GPUOps
+        else:
+            raise ValueError('Unknown numerical precision')
         self.c=context
         self.point=parameter_point.detach().clone()
         self.dimension=int(context.D)
         self.device=parameter_point.device
         self.probe=int(probe)
-        self.tasks=tuple(getattr(context,'task_names',TASKS))
-        self.operator=(Float64Ops(context,self.point) if precision=='float64'
-                       else GPUOps(context,float('inf')))
+        self.tasks=tuple(tasks)
+        self.operator=(operator(context,self.point) if precision=='float64'
+                       else operator(context,float('inf')))
         self.output_dimensions={}
         self.output_coordinate_ids={}
         for task in self.tasks:

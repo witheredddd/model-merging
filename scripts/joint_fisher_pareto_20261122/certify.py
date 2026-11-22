@@ -1,4 +1,4 @@
-"""Bound the exact empirical projection using feasible directions from the A100."""
+"""Bound undamped reachability from the response bank emitted by run.py."""
 import argparse
 import json
 from pathlib import Path
@@ -10,6 +10,8 @@ from run import polytope
 
 def certify(folder):
     protocol = json.loads((folder / "protocol.json").read_text())
+    if "undamped" not in protocol.get("method", "") or "zero-start" not in protocol["method"]:
+        raise ValueError("Expected undamped CGLS output from run.py")
     records = json.loads((folder / "results.json").read_text())
     datasets = {}
     for case in records:
@@ -97,6 +99,8 @@ def certify(folder):
             witness_bank_order=bank_order,
             qp=lower,
         )
+    for certificate in result.values():
+        certificate["scope"] = "undamped run.py only; reachability_lower_bound is a subspace lower bound"
     (folder / "certificates.json").write_text(json.dumps(result, indent=2, allow_nan=False))
 
 

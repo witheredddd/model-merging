@@ -3,9 +3,10 @@ import argparse
 import hashlib
 import json
 import math
-import sys
 import time
 from pathlib import Path
+
+from runtime_location import configure_runtime
 
 import numpy as np
 import torch
@@ -38,16 +39,32 @@ def polytope(gram):
                    constraints=[{"type": "eq", "fun": lambda a: a.sum() - 1,
                                  "jac": lambda a: np.ones_like(a)}],
                    options={"ftol": 1e-14, "maxiter": 500})
-    a = np.maximum(fit.x, 0)
+    feasible = (np.isfinite(fit.x).all() and fit.x.min() >= -1e-10
+                and abs(fit.x.sum() - 1) <= 1e-10)
+    a = np.maximum(fit.x, 0) if feasible else np.full(n, 1 / n)
     a /= a.sum()
     scores = gram @ a
     energy = float(a @ scores)
+    gap = max(0., energy - float(scores.min()))
+    multipliers = (scores - energy) / scale
+    stationarity = float(np.max(np.abs(multipliers[a > 1e-8])))
+    dual_violation = max(0., -float(multipliers.min()))
+    complementarity = float(np.max(np.abs(a * multipliers)))
+    acceptance = bool(fit.success and feasible and
+                      max(gap / scale, stationarity, dual_violation, complementarity) <= 1e-7)
+    supports = {str(tol): np.flatnonzero(a > tol).tolist()
+                for tol in (1e-9, 1e-8, 1e-7, 1e-6)}
+    stable_support = all(support == supports["1e-08"] for support in supports.values())
     centered = np.eye(n) - np.ones((n, n)) / n
     eigenvalues = np.linalg.eigvalsh(centered @ gram @ centered)
     return dict(distance=math.sqrt(max(energy, 0)), weights=a.tolist(),
                 aff_dim_numerical=int(np.sum(eigenvalues > 1e-10 * scale)),
-                active_coefficients=np.flatnonzero(a > 1e-8).tolist(),
-                dual_gap=max(0., energy - float(scores.min())), success=bool(fit.success))
+                active_coefficients=supports["1e-08"] if acceptance and stable_support else None,
+                support_by_threshold=supports, support_threshold_stable=stable_support,
+                dual_gap=gap, scaled_dual_gap=gap / scale, success=bool(fit.success),
+                qp_passed=acceptance, simplex_feasible=bool(feasible), solver_message=str(fit.message),
+                scaled_kkt=dict(active_stationarity=stationarity, dual_violation=dual_violation,
+                                complementarity=complementarity))
 
 
 def project(jvp, vjp, target, steps, rtol):
@@ -106,9 +123,7 @@ def summarize(vertices, targets, lengths, fits, tau_b, tau_eta, rtol):
 
 
 def main(args):
-    root = Path("/home/shangxueyuan/merging/tsv/scripts")
-    sys.path[:0] = [str(root / "eight_task_coupling_20261116"),
-                    str(root / "fullspace_conditional_20261116")]
+    root = configure_runtime()
     from prepare import write, sha
     from task_runtime import load_eight_geometry
 

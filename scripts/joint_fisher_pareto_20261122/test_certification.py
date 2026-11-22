@@ -1,0 +1,84 @@
+import unittest
+from unittest.mock import patch
+
+import numpy as np
+import torch
+
+from audit_projections import derivative_acceptance
+from run import polytope
+from scan_epsilon import cross_shift_audit, orthogonal_block, solve_grid
+
+
+class CertificationTests(unittest.TestCase):
+    def test_derivative_requires_one_shared_step(self):
+        rows = [
+            dict(step=1e-3, joint=8e-6, per_task=[1e-7, 2e-5]),
+            dict(step=1e-4, joint=9e-6, per_task=[2e-5, 1e-7]),
+        ]
+        self.assertFalse(derivative_acceptance(rows, 2, 1e-15)["passed"])
+        rows.append(dict(step=1e-5, joint=1e-6, per_task=[2e-6, 3e-6]))
+        self.assertEqual(derivative_acceptance(rows, 2, 1e-15)["best_common_step"]["step"], 1e-5)
+
+    def test_failed_qp_keeps_feasible_witness_but_no_active_set(self):
+        with patch("run.minimize") as minimize:
+            minimize.return_value.x = np.array([np.nan, 0.])
+            minimize.return_value.success = False
+            minimize.return_value.message = "failed"
+            result = polytope(np.eye(2))
+        self.assertEqual(result["weights"], [.5, .5])
+        self.assertFalse(result["qp_passed"])
+        self.assertIsNone(result["active_coefficients"])
+
+    def test_shift_bounds_and_independent_orthogonality_gate(self):
+        rng = np.random.default_rng(12)
+        j = rng.normal(size=(10, 6))
+        h = j.T[:, :3]
+        f = j.T @ j
+        identity = np.eye(6)
+        seeds, _ = np.linalg.qr(h)
+
+        def run(q, corrupt=False):
+            def residual(epsilon, c):
+                delta = h - (f + epsilon * identity) @ q @ c
+                projected = q.T @ delta
+                if corrupt:
+                    projected[0, 0] += .1
+                return (np.linalg.norm(delta, axis=0) / np.linalg.norm(h, axis=0)).tolist(), projected
+
+            return solve_grid(q.T @ q, q.T @ f @ q, q.T @ h, np.linalg.norm(h, axis=0),
+                              np.ones(3), [.1, 1, 10], residual)
+
+        rows = run(seeds)
+        self.assertTrue(all(row["galerkin_passed"] for row in rows))
+        for row in rows:
+            exact = h.T @ np.linalg.solve(f + row["epsilon"] * identity, h)
+            c = row["certification"]
+            self.assertTrue(np.all(np.abs(exact - row["graph_gram"])
+                                   <= np.array(c["exact_gram_absolute_error_upper"]) + 1e-12))
+            unit = exact / np.sqrt(np.outer(np.diag(exact), np.diag(exact)))
+            self.assertTrue(np.all(unit >= np.array(c["exact_unit_gram_lower"]) - 1e-12))
+            self.assertTrue(np.all(unit <= np.array(c["exact_unit_gram_upper"]) + 1e-12))
+            self.assertAlmostEqual(np.linalg.eigvalsh(exact)[0], np.clip(
+                np.linalg.eigvalsh(exact)[0], *c["exact_gram_min_eigenvalue_bounds"]), places=11)
+            lo, hi = c["exact_raw_distance_bounds"]
+            self.assertLessEqual(lo - 1e-12, polytope(exact)["distance"])
+            self.assertGreaterEqual(hi + 1e-12, polytope(exact)["distance"])
+        self.assertIsNone(run(seeds, corrupt=True)[0]["certification"])
+
+        basis = [torch.from_numpy(direction.copy()) for direction in seeds.T]
+        expansion = orthogonal_block(basis, [torch.from_numpy(f @ direction) for direction in seeds.T])
+        expanded = run(torch.stack(basis + expansion).numpy().T)
+        self.assertTrue(all(row["exact_projection_tolerance_met"] for row in expanded))
+        expected_faces = []
+        for row in expanded:
+            exact = h.T @ np.linalg.solve(f + row["epsilon"] * identity, h)
+            expected = polytope(exact)["active_coefficients"]
+            self.assertIsNotNone(expected)
+            self.assertEqual(row["certification"]["raw_weight_stability"]["minimum_face"], expected)
+            expected_faces.append(tuple(expected))
+        expected_stability = "same" if len(set(expected_faces)) == 1 else "changed"
+        self.assertEqual(cross_shift_audit(expanded)["minimum_face"]["raw"], expected_stability)
+
+
+if __name__ == "__main__":
+    unittest.main()

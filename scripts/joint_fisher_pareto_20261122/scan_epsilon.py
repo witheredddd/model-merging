@@ -1,9 +1,11 @@
-"""One shared full-gradient Galerkin step for all six shifts. Audit true residuals."""
+"""Shared block Krylov Galerkin solves with full-space residual certificates."""
 import argparse
 import json
 import shutil
-import sys
+from itertools import combinations
 from pathlib import Path
+
+from runtime_location import configure_runtime
 
 import numpy as np
 import torch
@@ -12,43 +14,164 @@ from audit_projections import EmpiricalJoint
 from run import polytope
 
 
-def solve_grid(parameter_gram, prediction_gram, rhs, rhs_norms, target_norms, shifts, residual):
+def weight_stability(gram, error, qp, eigenvalue_lower):
+    """Enclose optimizer weights using strong convexity and elementwise Gram bounds."""
+    if not qp["qp_passed"] or eigenvalue_lower <= 0:
+        return dict(certified=False, reason="Candidate QP or positive curvature not certified")
+    a = np.asarray(qp["weights"])
+    scores = gram @ a
+    gradient_error = np.linalg.norm(error @ a)
+    gap = qp["dual_gap"]
+    radius = min(np.sqrt(2), (gradient_error + np.sqrt(
+        gradient_error ** 2 + 2 * eigenvalue_lower * gap)) / eigenvalue_lower)
+    lo, hi = np.maximum(0, a - radius), np.minimum(1, a + radius)
+    active = np.flatnonzero(lo > 0)
+    inactive = []
+    for i in np.flatnonzero(lo == 0):
+        for j in active:
+            if i == j:
+                continue
+            margin = scores[i] - scores[j]
+            uncertainty = (np.linalg.norm(gram[i] - gram[j]) * radius
+                           + float(np.max(error[i] + error[j])))
+            if margin > uncertainty:
+                hi[i] = 0
+                inactive.append(i)
+                break
+    complete = len(active) + len(inactive) == len(a)
+    return dict(certified=complete, weight_intervals=np.column_stack((lo, hi)).tolist(),
+                weight_l2_radius=float(radius), definitely_positive=active.tolist(),
+                definitely_zero=inactive, minimum_face=active.tolist() if complete else None)
+
+
+def gram_bounds(gram, correction, squared_error_bounds):
+    center = gram + correction
+    radius = np.sqrt(np.outer(squared_error_bounds, squared_error_bounds))
+    low, high = center - radius, center + radius
+    np.fill_diagonal(low, np.maximum(0, np.diag(center)))
+    error = np.maximum(np.abs(low - gram), np.abs(high - gram))
+    # E^T E is PSD, with spectral norm bounded by its trace.
+    min_eig = np.linalg.eigvalsh(center)[0]
+    eig = [max(0., float(min_eig)), max(0., float(min_eig + squared_error_bounds.sum()))]
+    d_low, d_high = np.diag(low), np.maximum(0, np.diag(high))
+    denom_min = np.sqrt(np.outer(d_low, d_low))
+    denom_max = np.sqrt(np.outer(d_high, d_high))
+    valid = (denom_min > 0) & (denom_max > 0)
+    unit_low, unit_high = np.full_like(gram, -1.), np.ones_like(gram)
+    unit_low[valid] = np.maximum(-1, np.minimum(low[valid] / denom_min[valid], low[valid] / denom_max[valid]))
+    unit_high[valid] = np.minimum(1, np.maximum(high[valid] / denom_min[valid], high[valid] / denom_max[valid]))
+    np.fill_diagonal(unit_low, 1)
+    np.fill_diagonal(unit_high, 1)
+    return error, eig, unit_low, unit_high, d_low, d_high
+
+
+def solve_grid(parameter_gram, prediction_gram, rhs, rhs_norms, target_norms, shifts, residual, rtol=1e-5):
     rows = []
     for epsilon in shifts:
         system = prediction_gram + epsilon * parameter_gram
         coefficients = np.linalg.solve(system, rhs)
+        reduced = system @ coefficients - rhs
+        reduced_relative = np.linalg.norm(reduced, axis=0) / rhs_norms
+        condition = float(np.linalg.cond(system))
         gram = coefficients.T @ system @ coefficients
         gram = (gram + gram.T) / 2
         parameter = epsilon * coefficients.T @ parameter_gram @ coefficients
         norms = np.sqrt(np.diag(gram))
         unit = gram / np.outer(norms, norms)
-        errors = residual(epsilon, coefficients)
+        errors, projected_residual = residual(epsilon, coefficients)
+        residual_relative = np.linalg.norm(projected_residual, axis=0) / rhs_norms
+        consistency = np.linalg.norm(projected_residual + reduced, axis=0) / rhs_norms
+        galerkin_ok = bool(np.isfinite(condition) and condition * np.finfo(float).eps < 1e-5 and max(
+            np.max(reduced_relative), np.max(residual_relative), np.max(consistency)) <= 1e-9)
         raw_hull, unit_hull = polytope(gram), polytope(unit)
+        row = dict(epsilon=float(epsilon), graph_gram=gram.tolist(), unit_gram=unit.tolist(),
+                   reachability=(norms / target_norms).tolist(),
+                   parameter_fraction=(np.diag(parameter) / np.diag(gram)).tolist(),
+                   graph_gram_eigenvalues=np.linalg.eigvalsh(gram).tolist(),
+                   residual_relative=errors, orthogonality_residual_relative=errors,
+                   reduced_residual_relative=reduced_relative.tolist(),
+                   projected_full_residual_relative=residual_relative.tolist(),
+                   reduced_full_consistency_relative=consistency.tolist(),
+                   reduced_condition_number=condition if np.isfinite(condition) else None,
+                   galerkin_passed=galerkin_ok, raw_hull=raw_hull, unit_hull=unit_hull,
+                   exact_projection_tolerance_met=galerkin_ok and max(errors) <= rtol)
+        rows.append(row)
+        if not galerkin_ok:
+            row["certification"] = None
+            continue
+
         squared_error_bounds = (np.asarray(errors) * rhs_norms) ** 2 / epsilon
+        # Keep the measured cross term even when Galerkin orthogonality is
+        # numerically very accurate. r = H - G V and V = Q C.
+        cross = projected_residual.T @ coefficients
+        correction = cross + cross.T
+        bound, eig, unit_lo, unit_hi, diagonal_lo, diagonal_hi = gram_bounds(
+            gram, correction, squared_error_bounds)
+        unit_error = np.maximum(np.abs(unit_lo - unit), np.abs(unit_hi - unit))
+        unit_eig_lo = max(0., float(eig[0] / diagonal_hi.max()))
+        norm_lo = float(diagonal_lo.min())
+        unit_eig_hi = min(1., float(eig[1] / norm_lo)) if norm_lo > 0 else 1.
         mixture = np.asarray(raw_hull["weights"])
         candidate_distance = raw_hull["distance"]
-        distance_lower = (max(0., float((gram @ mixture).min() / candidate_distance))
+        distance_lower = (max(0., float(((gram + cross) @ mixture).min() / candidate_distance))
                           if candidate_distance > 0 else 0.)
         distance_upper = min(
-            float(np.sqrt(candidate_distance ** 2 + (mixture @ np.sqrt(squared_error_bounds)) ** 2)),
+            float(np.sqrt(max(0., mixture @ (gram + correction) @ mixture
+                              + (mixture @ np.sqrt(squared_error_bounds)) ** 2))),
             float(1 / np.linalg.norm(1 / target_norms)))
-        rows.append(dict(epsilon=float(epsilon), graph_gram=gram.tolist(), unit_gram=unit.tolist(),
-                         reachability=(norms / target_norms).tolist(),
-                         exact_reachability_upper=np.minimum(
-                             1, np.sqrt(norms ** 2 + squared_error_bounds) / target_norms).tolist(),
+        row["certification"] = dict(
+                         exact_reachability_lower=(np.sqrt(diagonal_lo) / target_norms).tolist(),
+                         exact_reachability_upper=np.minimum(1, np.sqrt(diagonal_hi) / target_norms).tolist(),
                          exact_raw_distance_bounds=[distance_lower, distance_upper],
-                         exact_gram_diagonal_error_upper=squared_error_bounds.tolist(),
-                         parameter_fraction=(np.diag(parameter) / np.diag(gram)).tolist(),
-                         graph_gram_eigenvalues=np.linalg.eigvalsh(gram).tolist(),
-                         residual_relative=errors, raw_hull=raw_hull, unit_hull=unit_hull,
-                         exact_projection_tolerance_met=max(errors) <= 1e-5))
+                         exact_gram_absolute_error_upper=bound.tolist(),
+                         exact_gram_min_eigenvalue_bounds=eig,
+                         exact_unit_gram_lower=unit_lo.tolist(), exact_unit_gram_upper=unit_hi.tolist(),
+                         exact_unit_gram_min_eigenvalue_bounds=[unit_eig_lo, unit_eig_hi],
+                         raw_weight_stability=weight_stability(gram, bound, raw_hull, eig[0]),
+                         unit_weight_stability=weight_stability(unit, unit_error, unit_hull, unit_eig_lo))
     return rows
 
 
-def main(source, baseline, calibration, output):
-    root = Path("/home/shangxueyuan/merging/tsv/scripts")
-    sys.path[:0] = [str(root / "eight_task_coupling_20261116"),
-                    str(root / "fullspace_conditional_20261116")]
+def cross_shift_audit(rows):
+    certs = [row["certification"] for row in rows]
+    if not all(cert is not None for cert in certs):
+        return None
+    pairs = []
+    for i, j in combinations(range(len(rows)), 2):
+        a, b = certs[i], certs[j]
+        lo = np.array(a["exact_unit_gram_lower"]) - np.array(b["exact_unit_gram_upper"])
+        hi = np.array(a["exact_unit_gram_upper"]) - np.array(b["exact_unit_gram_lower"])
+        pairs.append(dict(epsilons=[rows[i]["epsilon"], rows[j]["epsilon"]],
+                          maximum_element_change_bounds=[
+                              float(np.maximum(np.maximum(lo, -hi), 0).max()),
+                              float(np.maximum(np.abs(lo), np.abs(hi)).max())]))
+    faces = {}
+    for key in ("raw", "unit"):
+        reports = [cert[f"{key}_weight_stability"] for cert in certs]
+        known = [tuple(report["minimum_face"]) for report in reports if report["certified"]]
+        faces[key] = ("changed" if len(set(known)) > 1 else
+                      "same" if len(known) == len(reports) else "undetermined")
+    return dict(unit_gram_pairwise_bounds=pairs, minimum_face=faces)
+
+
+def orthogonal_block(q, actions):
+    new = []
+    for action in actions:
+        candidate = action.clone()
+        baseline = float(candidate.norm())
+        if baseline == 0:
+            continue
+        for _ in range(2):
+            for basis in (*q, *new):
+                candidate.add_(basis, alpha=-float(basis @ candidate) / float(basis @ basis))
+        size = float(candidate.norm())
+        if size > 1e-10 * baseline:
+            new.append(candidate / size)
+    return new
+
+
+def main(source, baseline, calibration, output, max_blocks=1, rtol=1e-5, selected=()):
+    configure_runtime()
     from prepare import sha, write
     from task_runtime import load_eight_geometry
 
@@ -59,7 +182,7 @@ def main(source, baseline, calibration, output):
     grid = json.loads((calibration / "reference.json").read_text())
     lock = protocol["source"]
     base = json.loads((baseline / "provenance.json").read_text())
-    g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"], lock["checkpoint"])
+    g, provenance = load_eight_geometry(output / "runtime", lock["inventory_file"], lock["checkpoint"], expected=lock)
     for key in ("checkpoint_sha256", "probe_sha256", "inventory_sha256", "parameter_dimension"):
         if len({provenance[key], lock[key], base[key], grid["provenance"][key]}) != 1:
             raise ValueError(f"Mismatched source {key}")
@@ -67,40 +190,68 @@ def main(source, baseline, calibration, output):
     shifts = [*grid["epsilon_scan"], grid["gradient_baseline"]]
     write(output / "protocol.json", dict(epsilons=shifts, tasks=joint.tasks, source=provenance,
           calibration_sha256=sha(calibration / "reference.json"), script_sha256=sha(__file__),
-          stage="exploratory one-block Krylov step seeded by the full gradients",
-          statement="Subspace Galerkin candidates; each shift has a measured full-space residual"))
-    cases = {}
+          max_blocks=max_blocks, full_relative_tolerance=rtol, reduced_relative_tolerance=1e-9,
+          method="Shared block Krylov seeded by current full gradients; shifts reuse every JVP/VJP"))
+    cases, stability = {}, {}
+    storage = g.device if max_blocks == 1 else torch.device("cpu")
     for metric in joint.weights:
-        charts, _, _, jvp, vjp = joint.scaled(metric)
+        charts, multipliers, _, jvp, vjp = joint.scaled(metric)
         for objective in ("geo", "ce"):
             name = f"{metric}_{objective}"
-            q, images, fisher_columns, rhs_norms, target_norms = [], [], [], [], []
+            if selected and name not in selected:
+                continue
+            seeds, images, fisher_columns, rhs_norms, target_norms = [], [], [], [], []
             for idx, task in enumerate(joint.tasks):
-                write(output / "status.json", dict(stage="evaluating_basis", task=task, case=name, finished=list(cases)))
-                grad = torch.load(baseline / "gradients" / f"{name}_{task}.pt",
-                                  weights_only=True, map_location="cpu", mmap=True).cuda()
+                target = charts[idx] * joint.ideals[idx][objective].flatten()
+                grad = g.vjp(task, multipliers[idx] * target)
                 rhs_norms.append(float(grad.norm()))
-                q.append(grad / rhs_norms[-1])
-                target_norms.append(float((charts[idx] * joint.ideals[idx][objective].flatten()).norm()))
-                images.append(jvp(q[-1]))
-                fisher_columns.append(vjp(images[-1]))
-            pg = np.array([[float(left @ right) for right in q] for left in q])
-            z = torch.stack(images)
-            fg = (z @ z.T).cpu().numpy()
-            rhs = pg * np.array(rhs_norms)[None, :]
+                if rhs_norms[-1] == 0:
+                    raise ValueError(f"Degenerate zero gradient for {name}/{task}")
+                seeds.append((grad / rhs_norms[-1]).to(storage))
+                target_norms.append(float(target.norm()))
+            q = orthogonal_block([], seeds)
+            history = []
+            start = 0
+            for block in range(1, max_blocks + 1):
+                for idx in range(start, len(q)):
+                    write(output / "status.json", dict(stage="evaluating_basis", block=block,
+                          basis_index=idx, case=name, finished=list(cases)))
+                    image = jvp(q[idx].to(g.device))
+                    images.append(image)
+                    fisher_columns.append(vjp(image).to(storage))
+                pg = np.array([[float(left @ right) for right in q] for left in q])
+                z = torch.stack(images)
+                fg = (z @ z.T).cpu().numpy()
+                rhs = np.array([[float(direction @ seed) * norm for seed, norm in zip(seeds, rhs_norms)]
+                                for direction in q])
 
-            def residual(epsilon, coefficients):
-                errors = []
-                for i, norm in enumerate(rhs_norms):
-                    vector = -norm * q[i]
-                    for j in range(len(q)):
-                        vector.add_(q[j], alpha=float(epsilon * coefficients[j, i]))
-                        vector.add_(fisher_columns[j], alpha=float(coefficients[j, i]))
-                    errors.append(float(vector.norm()) / norm)
-                return errors
+                def residual(epsilon, coefficients):
+                    errors = []
+                    projected = np.empty((len(q), len(rhs_norms)))
+                    for i, norm in enumerate(rhs_norms):
+                        vector = norm * seeds[i]
+                        for j in range(len(q)):
+                            vector.add_(q[j], alpha=-float(epsilon * coefficients[j, i]))
+                            vector.add_(fisher_columns[j], alpha=-float(coefficients[j, i]))
+                        errors.append(float(vector.norm()) / norm)
+                        projected[:, i] = [float(direction @ vector) for direction in q]
+                    return errors, projected
 
-            cases[name] = solve_grid(pg, fg, rhs, np.array(rhs_norms), np.array(target_norms), shifts, residual)
-            write(output / "preview.json", cases)
+                result = solve_grid(pg, fg, rhs, np.array(rhs_norms), np.array(target_norms),
+                                    shifts, residual, rtol)
+                history.append(dict(block=block, dimension=len(q),
+                    max_full_residual=[max(row["residual_relative"]) for row in result]))
+                cases[name] = result
+                stability[name] = dict(history=history, five_shift_comparison=cross_shift_audit(result[:-1]))
+                write(output / "preview.json", cases)
+                write(output / "stability.json", stability)
+                if block == max_blocks or all(row["exact_projection_tolerance_met"] for row in result):
+                    break
+                new = orthogonal_block(q, fisher_columns[start:])
+                if not new:
+                    break
+                start = len(q)
+                q.extend(new)
             print(name, [(row["epsilon"], max(row["residual_relative"])) for row in cases[name]], flush=True)
     write(output / "status.json", dict(stage="complete", finished=list(cases),
           passed={case: all(row["exact_projection_tolerance_met"] for row in rows) for case, rows in cases.items()}))
@@ -110,5 +261,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     for name in ("source", "baseline", "calibration", "output"):
         parser.add_argument(name, type=Path)
+    parser.add_argument("--max-blocks", type=int, default=1)
+    parser.add_argument("--rtol", type=float, default=1e-5)
+    parser.add_argument("--case", action="append", default=[],
+                        choices=("original_geo", "original_ce", "balanced_geo", "balanced_ce"))
     args = parser.parse_args()
-    main(args.source, args.baseline, args.calibration, args.output)
+    if args.max_blocks < 1 or not 0 < args.rtol < 1:
+        parser.error("positive block budget and 0 < rtol < 1 required")
+    main(args.source, args.baseline, args.calibration, args.output, args.max_blocks, args.rtol, args.case)

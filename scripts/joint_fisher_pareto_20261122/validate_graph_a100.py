@@ -2,8 +2,9 @@
 import argparse
 import json
 import shutil
-import sys
 from pathlib import Path
+
+from runtime_location import configure_runtime
 
 import torch
 
@@ -11,9 +12,7 @@ from graph_geometry import GraphSpace
 
 
 def main(source, out):
-    root = Path("/home/shangxueyuan/merging/tsv/scripts")
-    sys.path[:0] = [str(root / "eight_task_coupling_20261116"),
-                    str(root / "fullspace_conditional_20261116")]
+    configure_runtime()
     from prepare import sha, write
     from task_runtime import load_eight_geometry
 
@@ -22,7 +21,7 @@ def main(source, out):
     out.mkdir(parents=True, exist_ok=False)
     (out / "runtime").mkdir()
     shutil.copy2(source / "runtime/probes.json", out / "runtime/probes.json")
-    g, provenance = load_eight_geometry(out / "runtime", lock["inventory_file"], lock["checkpoint"])
+    g, provenance = load_eight_geometry(out / "runtime", lock["inventory_file"], lock["checkpoint"], expected=lock)
     for key in ("checkpoint_sha256", "probe_sha256", "inventory_sha256", "parameter_dimension"):
         if provenance[key] != lock[key]:
             raise ValueError(f"Provenance differs for {key}")

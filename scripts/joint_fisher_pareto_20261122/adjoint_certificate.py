@@ -3,9 +3,10 @@ import argparse
 import json
 import math
 import shutil
-import sys
 import time
 from pathlib import Path
+
+from runtime_location import configure_runtime
 
 import numpy as np
 import torch
@@ -14,9 +15,7 @@ from run import ideal, polytope
 
 
 def main(source, output):
-    root = Path("/home/shangxueyuan/merging/tsv/scripts")
-    sys.path[:0] = [str(root / "eight_task_coupling_20261116"),
-                    str(root / "fullspace_conditional_20261116")]
+    configure_runtime()
     from prepare import write, sha
     from task_runtime import load_eight_geometry
 
@@ -28,7 +27,7 @@ def main(source, output):
     output.mkdir(exist_ok=False, parents=True)
     (output / "runtime").mkdir()
     shutil.copy2(source / "runtime/probes.json", output / "runtime/probes.json")
-    g, point = load_eight_geometry(output / "runtime", provenance["inventory_file"], provenance["checkpoint"])
+    g, point = load_eight_geometry(output / "runtime", provenance["inventory_file"], provenance["checkpoint"], expected=provenance)
     for key in ("checkpoint_sha256", "probe_sha256", "inventory_sha256", "parameter_dimension"):
         if point[key] != provenance[key]:
             raise ValueError(f"Incompatible {key}")
@@ -62,7 +61,8 @@ def main(source, output):
             norms = np.sqrt(np.diag(gram))
             normalized_gram = gram / np.outer(norms, norms) if np.all(norms > 0) else gram
             qp = polytope(normalized_gram)
-            coeff = np.asarray(qp["weights"])
+            simplex = np.asarray(qp["weights"])
+            coeff = simplex.copy()
             if np.all(norms > 0):
                 coeff /= norms
             direction = torch.zeros_like(g.point)
@@ -85,7 +85,8 @@ def main(source, output):
             upper = float(np.sum(targets_norm ** -2) ** -0.5) if np.all(targets_norm > 0) else 0.
             cases[name] = dict(tasks=tasks, parameter_gradient_gram=gram.tolist(),
                                normalized_gram_eigenvalues=np.linalg.eigvalsh(normalized_gram).tolist(),
-                               adjoint_max_relative_error=adjoint_error, weights=coeff.tolist(),
+                               adjoint_max_relative_error=adjoint_error, simplex_weights=simplex.tolist(),
+                               parameter_combination_coefficients=coeff.tolist(), qp=qp,
                                normalized_common_direction_margins=margins.tolist(),
                                reaches_all_eight=bool(lower > 1e-10 * max(targets_norm) and adjoint_error < 1e-8),
                                distance_lower_bound=lower, distance_upper_bound=upper,
