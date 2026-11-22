@@ -1,0 +1,498 @@
+{
+  "original_geo": {
+    "history": [
+      {
+        "block": 1,
+        "dimension": 8,
+        "max_full_residual": [
+          2.022968788945755,
+          2.0197602456112906,
+          2.008624005170234,
+          1.9775877717051855,
+          1.8773219025139571,
+          0.47267810993799575
+        ]
+      }
+    ],
+    "five_shift_comparison": {
+      "unit_gram_pairwise_bounds": [
+        {
+          "epsilons": [
+            0.4171234256125823,
+            1.2513702768377468
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            4.171234256125823
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            4.171234256125823
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            4.171234256125823,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            4.171234256125823,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            12.513702768377469,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        }
+      ],
+      "minimum_face": {
+        "raw": "undetermined",
+        "unit": "undetermined"
+      }
+    }
+  },
+  "original_ce": {
+    "history": [
+      {
+        "block": 1,
+        "dimension": 8,
+        "max_full_residual": [
+          2.4330655917364594,
+          2.4249679350761983,
+          2.3970712947231645,
+          2.320995941265698,
+          2.0908879816074775,
+          0.4434863797948958
+        ]
+      }
+    ],
+    "five_shift_comparison": {
+      "unit_gram_pairwise_bounds": [
+        {
+          "epsilons": [
+            0.4171234256125823,
+            1.2513702768377468
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            4.171234256125823
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            4.171234256125823
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            4.171234256125823,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            4.171234256125823,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            12.513702768377469,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        }
+      ],
+      "minimum_face": {
+        "raw": "undetermined",
+        "unit": "undetermined"
+      }
+    }
+  },
+  "balanced_geo": {
+    "history": [
+      {
+        "block": 1,
+        "dimension": 8,
+        "max_full_residual": [
+          2.034401581604529,
+          2.030980159770574,
+          2.0191109747364773,
+          1.9860805150813643,
+          1.8798592240038487,
+          0.4788050138549114
+        ]
+      }
+    ],
+    "five_shift_comparison": {
+      "unit_gram_pairwise_bounds": [
+        {
+          "epsilons": [
+            0.4171234256125823,
+            1.2513702768377468
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            4.171234256125823
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            4.171234256125823
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            4.171234256125823,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            4.171234256125823,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            12.513702768377469,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        }
+      ],
+      "minimum_face": {
+        "raw": "undetermined",
+        "unit": "undetermined"
+      }
+    }
+  },
+  "balanced_ce": {
+    "history": [
+      {
+        "block": 1,
+        "dimension": 8,
+        "max_full_residual": [
+          2.3735947571943203,
+          2.3658391282364652,
+          2.339114300786267,
+          2.2661834447076217,
+          2.0451308836815274,
+          0.4395953393269484
+        ]
+      }
+    ],
+    "five_shift_comparison": {
+      "unit_gram_pairwise_bounds": [
+        {
+          "epsilons": [
+            0.4171234256125823,
+            1.2513702768377468
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            4.171234256125823
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            0.4171234256125823,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            4.171234256125823
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            1.2513702768377468,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            4.171234256125823,
+            12.513702768377469
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            4.171234256125823,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "epsilons": [
+            12.513702768377469,
+            41.712342561258225
+          ],
+          "maximum_element_change_bounds": [
+            0.0,
+            2.0
+          ]
+        }
+      ],
+      "minimum_face": {
+        "raw": "undetermined",
+        "unit": "undetermined"
+      }
+    }
+  }
+}
